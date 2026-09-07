@@ -1,0 +1,8 @@
+UnityProject/Library/
+UnityProject/Temp/
+UnityProject/Obj/
+UnityProject/Logs/
+UnityProject/UserSettings/
+Builds/
+.DS_Store
+*.blend1
