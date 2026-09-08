@@ -130,3 +130,16 @@ Throttle correction complete: 32/32 tests pass. Native virtual-gamepad sequence 
 Ownership: parent RaceHUD and presentation assets; gameplay HUD evidence harness and its Bootstrap hook; Astra independent native visual critique. Gameplay and vehicle rendering remain outside this step.
 
 HUD milestone complete: 32 existing tests passed; native02 covers 21 actual state/aspect views and a three-lap finish with zero player recoveries. Independent review rejects the first line-scaling implementation and accepts its responsive correction. Pointer Start/Resume/Restart/Quit and outside-click rejection verified at 1280×800. Final timer spacing and bright-gallery contrast are captured in a separate 360-frame native preview. Low-energy and physical-controller coverage remain open; no AAA certification is claimed.
+
+
+## Next-stage path — critique checkpoint, 2026-09-08
+
+The HUD milestone is complete; the whole game remains below the requested quality target. See [next-stage roadmap](next-stage-roadmap.md) for the evidence, sequence, scope and proposed acceptance gates.
+
+- [x] Conduct a harsh whole-game critique and define the next bounded path.
+- [ ] Diagnose opponent pace: compare solo versus traffic, log guard/brake/boost duty and checkpoint times, and observe every driver finish in an evidence mode.
+- [ ] Correct demonstrated pacing losses; align engine-load audio with throttle, add readable rival feedback and remove decorative boost-pad ambiguity. Obtain a continuous manual/audible race baseline.
+- [ ] Author and independently review one 10–15-second section: final-sector turn, warm gallery and exit skyline reveal. Keep course geometry and player/HUD form stable during comparison.
+- [ ] Expand the accepted standard around the existing circuit, verify the full audiovisual race and measure final-build performance.
+
+This checkpoint changes the plan and critique only. Implementation of these new milestones has not started. Prior HUD/ship acceptances remain narrowly scoped; they do not establish AAA quality.
