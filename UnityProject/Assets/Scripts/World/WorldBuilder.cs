@@ -211,10 +211,11 @@ namespace VectorRush
         }
         void BuildLighting()
         {
-            RenderSettings.fog=true;RenderSettings.fogColor=new Color(.028f,.045f,.075f);RenderSettings.fogMode=FogMode.ExponentialSquared;RenderSettings.fogDensity=.0015f;
-            RenderSettings.ambientMode=AmbientMode.Custom;var ambient=new SphericalHarmonicsL2();ambient.AddAmbientLight(new Color(.095f,.115f,.155f));RenderSettings.ambientProbe=ambient;
+            // Separate the distant city from the neutral foreground without lifting exposure or bloom.
+            RenderSettings.fog=true;RenderSettings.fogColor=new Color(.041f,.074f,.086f);RenderSettings.fogMode=FogMode.ExponentialSquared;RenderSettings.fogDensity=.0018f;
+            RenderSettings.ambientMode=AmbientMode.Custom;var ambient=new SphericalHarmonicsL2();ambient.AddAmbientLight(new Color(.14f,.16f,.18f));RenderSettings.ambientProbe=ambient;
             var moon=new GameObject("Midnight soft key");moon.transform.SetParent(transform);moon.transform.rotation=Quaternion.Euler(43,-28,0);
-            var light=moon.AddComponent<Light>();light.type=LightType.Directional;light.color=new Color(.64f,.74f,1);light.intensity=.62f;light.shadows=LightShadows.Soft;light.shadowStrength=.4f;RenderSettings.sun=light;
+            var light=moon.AddComponent<Light>();light.type=LightType.Directional;light.color=new Color(.78f,.85f,.92f);light.intensity=.78f;light.shadows=LightShadows.Soft;light.shadowStrength=.4f;RenderSettings.sun=light;
             var skyShader=Shader.Find("VectorRush/Night Sky");if(skyShader){var sky=new Material(skyShader);ownedMaterials.Add(sky);RenderSettings.skybox=sky;}
             var probeObject=new GameObject("Night architecture reflection environment");probeObject.transform.SetParent(transform);probeObject.transform.position=new Vector3(0,58,-170);
             coastalProbe=probeObject.AddComponent<ReflectionProbe>();coastalProbe.mode=ReflectionProbeMode.Realtime;coastalProbe.refreshMode=ReflectionProbeRefreshMode.ViaScripting;coastalProbe.timeSlicingMode=ReflectionProbeTimeSlicingMode.AllFacesAtOnce;coastalProbe.resolution=256;coastalProbe.size=new Vector3(1800,600,1800);coastalProbe.farClipPlane=1600;coastalProbe.intensity=.8f;coastalProbe.cullingMask=~(1<<8);
