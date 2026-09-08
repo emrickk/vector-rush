@@ -47,3 +47,7 @@ Vehicle controls now clear outside Racing, so a recovery button pressed during p
 ### Native pointer activation correction
 
 On this macOS setup the native IMGUI event carried desktop-offset coordinates. InputSystem supplied correct window pixels, but changing GUI.matrix reloaded the raw native event position. Applying normalized virtual-canvas coordinates after the matrix change repairs hit testing. Native pointer Start, camera-shake toggle, Resume and Restart all activated at 1280×800; an outside click did not activate. Evidence includes actual button activation logs. Keyboard checks from the earlier run are retained. A second resolution remains for the final build check.
+
+### Safe authoring regeneration
+
+The default Blender wrapper now shows versioned options instead of overwriting the live hero with the legacy generator. Explicit hero V2, environment V2, frozen inspection and legacy V1 operations write to fresh staging directories; publishing into Unity is a separate reviewed payload copy that preserves metadata. Current sources and the environment material helper are packaged with the selected CC0 texture manifests/provenance. Shell syntax and help were checked; these documentation changes did not trigger another geometry generation or studio render.

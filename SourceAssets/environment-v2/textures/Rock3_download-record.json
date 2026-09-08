@@ -1,0 +1,20 @@
+[
+  {
+    "file": "rock_3_diff_2k.jpg",
+    "bytes": 3274198,
+    "sha256": "2e7d3905a272ac7a83b0011e8d453909a6a69bb020bfa99ea1e203c9f7d549df",
+    "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/rock_3/rock_3_diff_2k.jpg"
+  },
+  {
+    "file": "rock_3_nor_gl_2k.png",
+    "bytes": 8784332,
+    "sha256": "04adb75b2c355b7052be97bbb5482f3e34f5c004483efd25ab1511a4dbbe02e4",
+    "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/rock_3/rock_3_nor_gl_2k.png"
+  },
+  {
+    "file": "rock_3_rough_2k.jpg",
+    "bytes": 1334746,
+    "sha256": "6e99d48bd19758e3bc7d008165fa14804da6c7a2a5f654f42a5b277198873c3a",
+    "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/rock_3/rock_3_rough_2k.jpg"
+  }
+]
