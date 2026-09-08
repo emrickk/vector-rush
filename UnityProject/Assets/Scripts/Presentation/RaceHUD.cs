@@ -10,8 +10,15 @@ namespace VectorRush
     {
         RaceDirector director;
         ChaseCamera chaseCamera;
-        Texture2D white, sideShade, bottomShade;
+        Texture2D white, sideShade, bottomShade, stroke;
         Font regular;
+        Vector2[] circuitPoints;
+        Vector2 circuitMin, circuitMax;
+        TrackPath circuit;
+        float displayedSpeed, lapNotice;
+        int observedLap = 1;
+        RacePhase observedPhase;
+        readonly Color faint = new Color(.62f, .76f, .80f, .25f);
         GUIStyle textStyle, numberStyle, buttonStyle;
         readonly Color ivory = new Color(.94f, .96f, .90f);
         readonly Color muted = new Color(.62f, .73f, .74f);
@@ -33,6 +40,16 @@ namespace VectorRush
         void Update()
         {
             if (director == null) return;
+            float speed = director.Player == null ? 0 : director.Player.SpeedKph;
+            displayedSpeed = Mathf.Lerp(displayedSpeed, speed, 1f - Mathf.Exp(-18f * Time.deltaTime));
+            if (director.Phase == RacePhase.Countdown && observedPhase != RacePhase.Countdown) {
+                observedLap = 1; lapNotice = 0; displayedSpeed = 0;
+            }
+            if (director.Phase == RacePhase.Racing && director.Lap > observedLap) {
+                observedLap = director.Lap; lapNotice = 3f;
+            }
+            if (director.Phase == RacePhase.Racing) lapNotice = Mathf.Max(0, lapNotice - Time.deltaTime);
+            observedPhase = director.Phase;
             bool accept = false, restart = false;
 #if ENABLE_LEGACY_INPUT_MANAGER
             accept = Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter);
@@ -58,10 +75,15 @@ namespace VectorRush
             white = Texture2D.whiteTexture;
             // The built-in font is present in native players. An OS font can return
             // a non-null Font but fail to load its face when IMGUI builds the mesh.
-            regular = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
+            regular = Resources.Load<Font>("Fonts/Rajdhani-SemiBold");
+            if (!regular) regular = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
             textStyle = new GUIStyle { font = regular, richText = false, clipping = TextClipping.Clip };
-            numberStyle = new GUIStyle(textStyle) { fontStyle = FontStyle.Bold };
+            numberStyle = new GUIStyle(textStyle) { fontStyle = FontStyle.Normal };
             buttonStyle = new GUIStyle { normal = { background = null }, hover = { background = null }, active = { background = null } };
+            stroke = new Texture2D(1, 16, TextureFormat.RGBA32, false);
+            stroke.wrapMode = TextureWrapMode.Clamp; stroke.filterMode = FilterMode.Bilinear;
+            for (int i = 0; i < 16; i++) stroke.SetPixel(0, i, new Color(1, 1, 1, Mathf.Clamp01(Mathf.Min(i, 15-i) / 2f)));
+            stroke.Apply(false, true);
             sideShade = Gradient(true);
             bottomShade = Gradient(false);
             ready = true;
@@ -125,8 +147,8 @@ namespace VectorRush
             if (director.Phase == RacePhase.Menu) DrawMenu();
             else
             {
-                DrawTelemetry();
-                if (director.Phase == RacePhase.Countdown) DrawCountdown();
+                if (director.Phase != RacePhase.Finished && director.Phase != RacePhase.Paused) DrawTelemetry();
+                if (director.Phase == RacePhase.Countdown || (director.Phase == RacePhase.Racing && director.RaceTime < .65f)) DrawCountdown();
                 if (director.Phase == RacePhase.Paused) DrawPause();
                 if (director.Phase == RacePhase.Finished) DrawResults();
             }
@@ -155,59 +177,153 @@ namespace VectorRush
 
         void DrawTelemetry()
         {
-            Box(60, 54, 6, 91, acid);
-            Box(66, 54, 220, 91, ink);
-            Text("POSITION", 88, 64, 170, 27, 15, muted);
-            Text(director.Position.ToString("00"), 86, 88, 83, 58, 46, ivory, true);
-            Text("/ " + (director.Racers == null ? 6 : director.Racers.Count).ToString("00"), 174, 108, 90, 31, 23, muted);
-            Box(302, 54, 189, 91, ink);
-            Text("LAP", 323, 64, 136, 27, 15, muted);
-            Text(Mathf.Clamp(director.Lap, 1, director.TotalLaps).ToString("00") + " / " + director.TotalLaps.ToString("00"), 321, 96, 150, 43, 31, ivory, true);
+            var player = director.Player;
+            bool boosting = player != null && player.IsBoosting && director.Phase == RacePhase.Racing;
+            Color energyColor = boosting ? acid : turquoise;
+            // Race order / lap: one compact header, away from the racing line.
+            Box(54, 48, 332, 112, new Color(.007f, .016f, .024f, .65f));
+            Box(54, 48, 3, 112, ivory);
+            Text("POS", 74, 59, 65, 25, 18, muted);
+            Text(director.Position.ToString("00"), 70, 77, 99, 80, 70, ivory, true);
+            Text("/ " + (director.Racers == null ? 6 : director.Racers.Count).ToString("00"), 167, 113, 64, 32, 25, muted);
+            Box(246, 69, 1, 67, faint);
+            Text("LAP", 267, 59, 91, 25, 18, muted);
+            Text(Mathf.Clamp(director.Lap, 1, director.TotalLaps).ToString(), 263, 88, 42, 61, 47, ivory, true);
+            Text("/ " + director.TotalLaps, 310, 107, 55, 36, 26, muted);
 
-            Text("NOCTURNE / MIDNIGHT", width * .5f - 210, 57, 420, 30, 19, ivory, false, TextAnchor.MiddleCenter);
-            Text("VECTOR RUSH", width * .5f - 210, 88, 420, 26, 13, muted, false, TextAnchor.MiddleCenter);
-            Box(width - 449, 54, 394, 128, ink);
-            Text("RACE TIME", width - 391, 57, 315, 26, 15, muted, false, TextAnchor.MiddleRight);
-            Text(TimeLabel(director.RaceTime), width - 440, 85, 364, 61, 43, ivory, true, TextAnchor.MiddleRight);
-            Text("BEST  " + TimeLabel(director.BestLap), width - 400, 147, 324, 28, 17, muted, false, TextAnchor.MiddleRight);
+            float tx = width - 368;
+            Box(tx - 16, 48, 330, 126, new Color(.007f, .016f, .024f, .65f));
+            Text("RACE TIME", tx, 57, 294, 24, 17, muted, false, TextAnchor.MiddleRight);
+            string raceClock = director.RaceTime <= 0 ? "00:00.000" : TimeLabel(director.RaceTime);
+            int fraction = raceClock.Length - 4;
+            Text(raceClock.Substring(0, fraction), tx, 78, 232, 54, 43, ivory, true, TextAnchor.MiddleRight);
+            Text(raceClock.Substring(fraction), tx + 238, 91, 56, 36, 27, muted, false, TextAnchor.MiddleLeft);
+            Box(tx, 136, 294, 1, faint);
+            Text("BEST LAP", tx, 143, 94, 24, 16, muted);
+            Text(director.BestLap > 0 ? TimeLabel(director.BestLap) : "--", tx + 100, 140, 194, 28, 21, ivory, false, TextAnchor.MiddleRight);
 
-            float speed = director.Player == null ? 0 : director.Player.SpeedKph;
-            Box(60, height - 230, 442, 185, ink);
-            Box(60, height - 230, 6, 185, turquoise);
-            Text(Mathf.RoundToInt(speed).ToString("000"), 68, height - 218, 430, 125, 108, ivory, true);
-            Text("KM/H", 78, height - 84, 130, 28, 18, muted);
-            Text(director.Player != null && director.Player.IsBoosting ? "BOOST ACTIVE" : "VECTOR / 01", 226, height - 84, 275, 28, 18, turquoise);
-
-            float charge = director.Player == null ? 0 : Mathf.Clamp01(director.Player.Boost01);
-            float bx = width - 445;
-            Box(bx - 20, height - 188, 410, 143, ink);
-            Text("ENERGY RESERVE", bx, height - 155, 320, 30, 16, muted);
-            Text(Mathf.RoundToInt(charge * 100) + "%", bx + 230, height - 166, 137, 40, 28, ivory, true, TextAnchor.MiddleRight);
-            for (int i = 0; i < 20; i++)
-            {
-                float segment = Mathf.Clamp01(charge * 20 - i);
-                Box(bx + i * 18.5f, height - 110, 14, 20, new Color(.30f, .45f, .45f, .50f));
-                if (segment > 0) Box(bx + i * 18.5f, height - 110, 14 * segment, 20, acid);
+            DrawCircuit();
+            float x = width - 410, y = height - 290;
+            // A single open instrument. The arc is speed; the independent bar is energy.
+            Vector2 center = new Vector2(x + 186, y + 121);
+            for (int i = 0; i < 45; i++) {
+                float a = Mathf.Lerp(150, 390, i / 45f);
+                float z = Mathf.Lerp(150, 390, (i + .70f) / 45f);
+                float maximum = player != null ? player.BoostSpeed * 3.6f : 388.8f;
+                Color c = i / 45f < Mathf.Clamp01(displayedSpeed / maximum) ? ivory : faint;
+                Line(Polar(center, 118, a), Polar(center, 118, z), i >= 33 ? 6 : 3, c);
             }
-            Text("SPACE / A   BOOST", bx, height - 76, 370, 26, 15, muted, false, TextAnchor.MiddleRight);
-            if (director.Player != null)
-            {
-                float progress = Mathf.Repeat(director.Player.RaceProgress, 1);
-                float lineWidth = Mathf.Min(500, width - 1080);
-                float x = (width - lineWidth) * .5f;
-                Box(x, height - 85, lineWidth, 2, new Color(.7f, .85f, .85f, .25f));
-                Box(x, height - 85, lineWidth * progress, 2, turquoise);
-                Box(x + lineWidth * progress - 3, height - 89, 6, 10, ivory);
-                for (int i = 0; i <= 4; i++) Box(x + lineWidth * i / 4, height - 84, 1, 7, muted);
-                Text("CIRCUIT PROGRESS", x, height - 60, lineWidth, 24, 12, muted, false, TextAnchor.MiddleCenter);
+            Text(Mathf.RoundToInt(displayedSpeed).ToString("000"), x + 33, y + 50, 303, 137, 116, ivory, true, TextAnchor.MiddleCenter);
+            Text("KM/H", x + 122, y + 170, 130, 27, 20, muted, false, TextAnchor.MiddleCenter);
+            float charge = player == null ? 0 : Mathf.Clamp01(player.Boost01);
+            Text(boosting ? "BOOST ENGAGED" : charge < .1f ? "BOOST RECHARGING" : "BOOST", x + 6, y + 220, 248, 27, 19, energyColor);
+            Text(Mathf.RoundToInt(charge * 100).ToString("00") + "%", x + 270, y + 215, 94, 33, 26, ivory, true, TextAnchor.MiddleRight);
+            for (int i = 0; i < 30; i++) {
+                float fill = Mathf.Clamp01(charge * 30 - i);
+                Box(x + 7 + i * 12, y + 257, 9, 7, faint);
+                if (fill > 0) Box(x + 7 + i * 12, y + 257, 9 * fill, 7, energyColor);
             }
+            if (boosting) {
+                Line(new Vector2(x + 8, y + 184), new Vector2(x + 24, y + 199), 3, acid);
+                Line(new Vector2(x + 24, y + 199), new Vector2(x + 40, y + 184), 3, acid);
+            }
+            if (lapNotice > 0) {
+                float alpha = Mathf.Clamp01(lapNotice) * Mathf.Clamp01((3f - lapNotice) * 5);
+                Color c = new Color(acid.r, acid.g, acid.b, alpha);
+                Text(director.Lap == director.TotalLaps ? "FINAL LAP" : "LAP " + director.Lap, width * .5f - 210, 190, 420, 57, 42, c, true, TextAnchor.MiddleCenter);
+                Text("LAST  " + TimeLabel(director.LastLap), width * .5f - 210, 248, 420, 28, 21, new Color(ivory.r, ivory.g, ivory.b, alpha), false, TextAnchor.MiddleCenter);
+            }
+        }
+
+        void PrepareCircuit()
+        {
+            if (circuitPoints != null) return;
+            circuit = VectorBootstrap.Instance != null ? VectorBootstrap.Instance.Track : FindAnyObjectByType<TrackPath>();
+            if (!circuit) return;
+            circuitPoints = new Vector2[161];
+            circuitMin = new Vector2(float.MaxValue, float.MaxValue);
+            circuitMax = new Vector2(float.MinValue, float.MinValue);
+            for (int i = 0; i < circuitPoints.Length; i++) {
+                Vector3 p = circuit.Evaluate(i / 160f).Position;
+                circuitPoints[i] = new Vector2(p.x, -p.z);
+                circuitMin = Vector2.Min(circuitMin, circuitPoints[i]);
+                circuitMax = Vector2.Max(circuitMax, circuitPoints[i]);
+            }
+        }
+
+        Vector2 MapPoint(Vector3 p)
+        {
+            float scale = 187f / Mathf.Max(circuitMax.x - circuitMin.x, circuitMax.y - circuitMin.y);
+            return new Vector2(148, height - 160) + (new Vector2(p.x, -p.z) - (circuitMin + circuitMax) * .5f) * scale;
+        }
+
+        void DrawCircuit()
+        {
+            PrepareCircuit();
+            if (circuitPoints == null) return;
+            Text("NOCTURNE", 54, height - 305, 240, 28, 21, ivory);
+            Text("CIRCUIT  /  01", 54, height - 278, 240, 22, 17, muted);
+            for (int i = 1; i < circuitPoints.Length; i++) {
+                Vector2 a = MapPoint(new Vector3(circuitPoints[i-1].x, 0, -circuitPoints[i-1].y));
+                Vector2 b = MapPoint(new Vector3(circuitPoints[i].x, 0, -circuitPoints[i].y));
+                Line(a, b, 7, new Color(.005f, .013f, .022f, .85f));
+                Line(a, b, 3, new Color(.68f, .79f, .82f, .65f));
+            }
+            var start = circuit.Evaluate(0);
+            Vector2 gate = MapPoint(start.Position);
+            Vector2 tangent = new Vector2(start.Forward.x, -start.Forward.z).normalized;
+            Vector2 across = new Vector2(-tangent.y, tangent.x) * 7;
+            Line(gate - across, gate + across, 3, ivory);
+            foreach (var racer in director.Racers) {
+                if (!racer || racer == director.Player) continue;
+                Vector2 dot = MapPoint(racer.transform.position);
+                Box(dot.x - 4, dot.y - 4, 8, 8, new Color(.04f, .10f, .13f));
+                Box(dot.x - 2.5f, dot.y - 2.5f, 5, 5, ivory);
+            }
+            if (director.Player) {
+                Vector2 p = MapPoint(director.Player.transform.position);
+                Vector3 f = director.Player.transform.forward;
+                Vector2 forward = new Vector2(f.x, -f.z).normalized;
+                Vector2 right = new Vector2(-forward.y, forward.x);
+                Line(p + forward * 8, p - forward * 5 + right * 5, 4, acid);
+                Line(p + forward * 8, p - forward * 5 - right * 5, 4, acid);
+            }
+            Box(55, height - 44, 6, 6, acid);
+            Text("YOU", 69, height - 52, 61, 24, 17, muted);
+            Box(134, height - 44, 5, 5, ivory);
+            Text("RIVALS", 147, height - 52, 100, 24, 17, muted);
+        }
+
+        static Vector2 Polar(Vector2 center, float radius, float angle)
+        {
+            float radians = angle * Mathf.Deg2Rad;
+            return center + new Vector2(Mathf.Cos(radians), Mathf.Sin(radians)) * radius;
+        }
+
+        void Line(Vector2 a, Vector2 b, float thickness, Color color)
+        {
+            if (Event.current.type != EventType.Repaint) return;
+            Matrix4x4 before = GUI.matrix;
+            Vector2 delta = b - a;
+            // Compose in virtual-canvas space. RotateAroundPivot mixes screen and
+            // GUI coordinates when the root canvas has a non-unit scale.
+            GUI.matrix = before * Matrix4x4.TRS(new Vector3(a.x, a.y, 0),
+                Quaternion.Euler(0, 0, Mathf.Atan2(delta.y, delta.x) * Mathf.Rad2Deg), Vector3.one);
+            Color previousColor = GUI.color;
+            GUI.color = color;
+            GUI.DrawTexture(new Rect(-.5f, -thickness * .5f, delta.magnitude + 1f, thickness), stroke);
+            GUI.color = previousColor;
+            GUI.matrix = before;
         }
 
         void DrawCountdown()
         {
-            string number = director.CountdownRemaining > .1f ? Mathf.CeilToInt(director.CountdownRemaining).ToString() : "GO";
-            Text("SYSTEMS READY", width * .5f - 300, height * .39f - 48, 600, 38, 20, ivory, false, TextAnchor.MiddleCenter);
-            Text(number, width * .5f - 220, height * .39f, 440, 175, 146, acid, true, TextAnchor.MiddleCenter);
+            bool go = director.Phase == RacePhase.Racing;
+            string number = go ? "GO" : Mathf.CeilToInt(director.CountdownRemaining).ToString();
+            for (int i = 0; i < 3; i++)
+                Box(width * .5f - 62 + i * 44, height * .32f + 174, 36, 4, go || director.CountdownRemaining <= 3 - i ? acid : faint);
+            Text(go ? "FULL THROTTLE" : "GET READY", width * .5f - 300, height * .32f - 34, 600, 38, 20, ivory, false, TextAnchor.MiddleCenter);
+            Text(number, width * .5f - 220, height * .32f, 440, 175, 146, acid, true, TextAnchor.MiddleCenter);
         }
 
         void DrawPause()
@@ -231,7 +347,7 @@ namespace VectorRush
             Text("RACE FINISHED", x - 7, y + 47, 1000, 111, 78, ivory, true);
             Text(director.Position.ToString("00"), x - 4, y + 181, 245, 165, 137, acid, true);
             Text("FINAL POSITION", x + 268, y + 231, 400, 40, 23, ivory);
-            Text("NOCTURNE CIRCUIT / 3 LAPS", x + 268, y + 276, 460, 32, 17, muted);
+            Text("NOCTURNE CIRCUIT / " + director.TotalLaps + " LAPS", x + 268, y + 276, 460, 32, 17, muted);
             Box(x, y + 379, 650, 1, muted);
             Text("TOTAL TIME", x, y + 407, 270, 28, 17, muted);
             Text(TimeLabel(director.RaceTime), x, y + 442, 300, 55, 36, ivory, true);
@@ -251,8 +367,8 @@ namespace VectorRush
 
         void Controls(float x, float y)
         {
-            Text("WASD / ARROWS   PILOT     SPACE   BOOST     Q / E   AIRBRAKES", x, y, 1170, 30, 17, ivory);
-            Text("R   RECOVER     ESC / P   PAUSE     CONTROLLER: STICK + RT / LT · A BOOST · LB / RB AIRBRAKES · Y RECOVER", x, y + 36, 1480, 29, 14, muted);
+            Text("WASD / ARROWS   PILOT     SPACE   BOOST     Q / E   AIRBRAKES", x, y, 1170, 30, 21, ivory);
+            Text("R   RECOVER     ESC / P   PAUSE     CONTROLLER: STICK + RT / LT · A BOOST · LB / RB AIRBRAKES · Y RECOVER", x, y + 36, 1640, 29, 18, muted);
         }
 
         bool Button(string label, string hint, float x, float y, float w, bool primary = false, float h = 64)
@@ -262,8 +378,8 @@ namespace VectorRush
             Box(x, y, w, h, primary ? (hover ? ivory : acid) : (hover ? new Color(.18f, .28f, .28f, .94f) : ink));
             if (!primary) Box(x, y + h - 1, w, 1, new Color(.44f, .63f, .63f, .35f));
             Color color = primary ? new Color(.04f, .095f, .10f) : ivory;
-            Text(label, x + 21, y + 1, w - 140, h - 2, primary ? 21 : 18, color, true, TextAnchor.MiddleLeft);
-            Text(hint, x + w - 137, y + 1, 116, h - 2, 14, primary ? color : muted, false, TextAnchor.MiddleRight);
+            Text(label, x + 21, y + 1, w - 140, h - 2, primary ? 24 : 22, color, true, TextAnchor.MiddleLeft);
+            Text(hint, x + w - 137, y + 1, 116, h - 2, 18, primary ? color : muted, false, TextAnchor.MiddleRight);
             if (inputEvidence && (Event.current.rawType == EventType.MouseDown || Event.current.rawType == EventType.MouseUp))
                 Debug.Log($"[InputEvidence] buttonProbe label={label} rect={rect} mouse={Event.current.mousePosition} contains={hover} type={Event.current.type} hotControl={GUIUtility.hotControl}");
             bool activated = GUI.Button(rect, GUIContent.none, buttonStyle);
@@ -298,9 +414,10 @@ namespace VectorRush
 
         void OnDestroy()
         {
+            if (stroke != null) Destroy(stroke);
             if (sideShade != null) Destroy(sideShade);
             if (bottomShade != null) Destroy(bottomShade);
-            // LegacyRuntime.ttf is shared engine-owned data, not a runtime asset.
+            // Font resources and whiteTexture are shared assets.
         }
     }
 }

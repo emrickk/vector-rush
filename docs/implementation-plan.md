@@ -120,3 +120,13 @@ User rejected the always-on flame appearance. Replace speed-driven plume intensi
 
 
 Throttle correction complete: 32/32 tests pass. Native virtual-gamepad sequence verifies off, quarter, full, coast release, boost and off-after-boost through normal physics. Response fell below 0.02 in 0.150 seconds at 242 km/h and subsequently reached zero; parent inspected quarter/full/release/boost PNGs. Updated native app is packaged separately from the previous lighting milestone.
+
+## Premium racing HUD pass
+
+- [x] Replace the boxed telemetry with a compact race header, unified speed/boost instrument, live circuit map and contextual lap/boost feedback. Keep the road and craft center clear. Bundle an open-license condensed font for native typography.
+- [x] Bring countdown, pause and results into the same visual language while preserving existing input handling.
+- [x] Inspect native menu/countdown/racing/boost/pause/results at 16:9, 16:10 and ultrawide; retain independent critique. Run relevant checks, package and push the completed HUD milestone.
+
+Ownership: parent RaceHUD and presentation assets; gameplay HUD evidence harness and its Bootstrap hook; Astra independent native visual critique. Gameplay and vehicle rendering remain outside this step.
+
+HUD milestone complete: 32 existing tests passed; native02 covers 21 actual state/aspect views and a three-lap finish with zero player recoveries. Independent review rejects the first line-scaling implementation and accepts its responsive correction. Pointer Start/Resume/Restart/Quit and outside-click rejection verified at 1280×800. Final timer spacing and bright-gallery contrast are captured in a separate 360-frame native preview. Low-energy and physical-controller coverage remain open; no AAA certification is claimed.

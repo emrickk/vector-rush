@@ -4,11 +4,17 @@ A playable, original anti-gravity racing prototype for Apple Silicon macOS. Pilo
 
 [Private GitHub repository](https://github.com/emrickk/vector-rush) · [Build brief](docs/GPT6-BUILD-PROMPT.md) · [Development history](docs/development-history.md) · [Ship art plan](docs/ship-art-plan.md)
 
-## Current night milestone — throttle-driven exhaust
+## Current night milestone — racing HUD
+
+The HUD now groups speed and boost in one instrument, adds the actual circuit map with live racer markers, and uses bundled Rajdhani typography. Compact position/lap and race-time panels keep the road center clear; actual lap transitions trigger a brief final-lap cue. Countdown, pause and results share the same typography.
 
 The native game now uses the corrected V3 ship with flush citron/07 paint, baked surface maps and authored engine anchors. The canopy, intake and nozzle contact artifacts are repaired. Recessed gallery panels and focused wall lighting create readable warm/cool corridors; plume length and brightness now follow actual throttle, strengthen during active boost, and extinguish after lift-off even at speed. A rival corridor guard prevents the repeated wall stalls observed in the earlier night candidate.
 
-[Earlier night-scene preview (before the throttle fix)](evidence/night-v4-motion-02/VectorRush-night-v4-current.mp4): 15 seconds at 1080p, silent, with automated steering at 24 simulation frames per second. It shows the road-gloss/lighting milestone, predates the throttle-response correction, and is separate from the real-time performance sample.
+[Current HUD preview](evidence/hud-motion-01/VectorRush-HUD-current.mp4): 15 seconds at 1080p, silent, with automated steering at 24 simulation frames per second.
+
+[Native HUD views](evidence/hud-native-02/): seven actual states at 1920×1080, 1280×800 and 1920×810, including an actual three-lap finish. The first rejected scaling pass is preserved separately. [Independent responsive-layout review](docs/hud-reviews/003-native-responsive-correction.md).
+
+[Earlier night-scene preview (before the throttle fix and HUD redesign)](evidence/night-v4-motion-02/VectorRush-night-v4-current.mp4): 15 seconds at 1080p, silent, with automated steering at 24 simulation frames per second. It shows the road-gloss/lighting milestone, predates the throttle-response correction, and is separate from the real-time performance sample.
 
 [Current native throttle check](evidence/throttle-native-01/throttle-evidence.json): [quarter throttle](evidence/throttle-native-01/02-quarter.png), [full throttle](evidence/throttle-native-01/03-full.png), [released while coasting](evidence/throttle-native-01/04-release-coasting.png), [boost](evidence/throttle-native-01/05-boost.png). Exhaust fell below 2% in 0.150 seconds while still at 242 km/h, then reached zero.
 
@@ -16,7 +22,7 @@ This is a playable prototype milestone, not AAA acceptance. Exterior buildings/w
 
 ## Play
 
-Open **[Builds/Vector Rush.app](Builds/Vector%20Rush.app)** or unpack **[the current night archive](Builds/VectorRush-macOS-throttle-fix-2026-09-07.zip)**. The **[VectorRush-macOS-2026-09-07.zip](Builds/VectorRush-macOS-2026-09-07.zip)** archive contains the earlier coastal delivery and is historical. Build products stay local and are excluded from Git; source and selected evidence are in the private repository.
+Open **[Builds/Vector Rush.app](Builds/Vector%20Rush.app)** or unpack **[the current night archive](Builds/VectorRush-macOS-HUD-2026-09-07.zip)**. The **[VectorRush-macOS-2026-09-07.zip](Builds/VectorRush-macOS-2026-09-07.zip)** archive contains the earlier coastal delivery and is historical. Build products stay local and are excluded from Git; source and selected evidence are in the private repository.
 
 | Action | Keyboard | Gamepad |
 |---|---|---|
@@ -33,6 +39,7 @@ Menus support the pointer. Pause includes Resume, Restart, camera shake and Quit
 
 ## Current validation
 
+- **21 native HUD phase/aspect captures complete**, with a real final-lap event and three-lap finish in 112.60 seconds, zero player recoveries. Native pointer Start/Resume/Restart/Quit and an outside-click rejection checked at 1280×800; keyboard Pause opened correctly.
 - **32/32 Unity tests passed**, including analog trigger/release at high coasting speed, player exclusion, rival edge correction and adjacent-traffic clearance.
 - **Three player laps in 112.60 seconds, zero recoveries across all six racers** during the observed race. Both restart launches and all three countdown-pause checks passed. Rivals had completed 2.27–2.74 laps when the player ended the race; their independent completion and competitive pacing are not established.
 - **1920×1080 on Apple M2 Max:** 3,529 frame intervals over the real-time sample, VSync enabled, mean **17.01 ms**, P95 **20.60 ms**, P99 **25.34 ms**, with 250.3 MiB Unity allocation. This is not a locked 60fps or isolated GPU claim. No build/bake ran during the sample; idle desktop apps remained open.
@@ -40,7 +47,7 @@ Menus support the pointer. Pause includes Resume, Restart, camera shake and Quit
 
 [Native race and metrics](evidence/night-v4-race-01/) · [Geometry review 009](docs/ship-reviews/009-native-contact-repair-control.md) · [Gallery/plume review 008](docs/ship-reviews/008-gallery-wash-and-plume-correction.md) · [Final review 010](docs/ship-reviews/010-night-playable-milestone.md)
 
-The full race/performance run preceded the road-gloss and throttle-driven presentation adjustments; gameplay code, geometry, light count and render settings are unchanged. The final native recording validates the road finish, and the six-stage virtual-gamepad run separately validates throttle-driven exhaust through normal physics. Earlier pointer and keyboard checks remain historical evidence because the UI/input path did not change in this iteration.
+The full race/performance sample preceded the road-gloss, throttle-driven presentation and HUD adjustments; gameplay code, geometry, light count and render settings are unchanged; the new HUD adds presentation drawing. The final native recording validates the road finish, and the six-stage virtual-gamepad run separately validates throttle-driven exhaust through normal physics. The current HUD has its own [native pointer check](evidence/hud-input-01/scope.md). Its motion recording is not a new performance measurement. Low-energy presentation and physical controller hardware still lack dedicated native coverage.
 
 ## Previous coastal delivery and evidence
 

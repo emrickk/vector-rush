@@ -1,0 +1,95 @@
+Mono path[0] = '/Users/anping/Documents/Stuff/AI Space/Vector Rush/Builds/Vector Rush.app/Contents/Resources/Data/Managed'
+Mono config path = '/Users/anping/Documents/Stuff/AI Space/Vector Rush/Builds/Vector Rush.app/Contents/MonoBleedingEdge/etc'
+CodeReloadManager initialized
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+ preferred device: Apple M2 Max (high power)
+Metal devices available: 1
+0: Apple M2 Max (high power)
+Using device Apple M2 Max (high power)
+Initialize engine version: 6000.6.0f1 (f7f8ed4d1e24)
+[EntityIdStore] init: VM path (explicit commit), pageSize=16384, blockCount=262144, entitiesPerBlock=1024, slots reserved=4294967296 bytes
+[Subsystems] Discovering subsystems at path /Users/anping/Documents/Stuff/AI Space/Vector Rush/Builds/Vector Rush.app/Contents/Resources/Data/UnitySubsystems
+GfxDevice: creating device client; kGfxThreadingModeThreaded
+Initializing Metal device caps: Apple M2 Max
+Mac GPU Family: 2
+Apple GPU Family: 8
+MSL Version: 3.0
+Has Float MSAA: 1
+Has Float Filtering: 1
+ReadWrite Texture Tier: 2
+Begin MonoManager ReloadAssembly
+- Finished resetting the current domain, in  0.006 seconds
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Metal RecreateSurface[0x10aec6780]: surface size 1280x800
+UnloadTime: 0.497791 ms
+[InputEvidence] enabled; original and InputSystem-corrected pointer coordinates are recorded; HUD uses InputSystem window coordinates.
+[InputEvidence] GUI frame=3378 type=mouseDown rawType=mouseDown button=0 raw=(1174.00, 1760.00) corrected=(440.00, 474.00) pointerCorrected=True virtual=(660.00, 711.00) rawDivScale=(1761.00, 2640.00) screen=1280x800 scale=0.6667 canvas=1920.0x1200.0 systemMouse=(440.00, 326.00) phase=Menu hotControl=0
+[InputEvidence] buttonProbe label=START RACE rect=(x:76.00, y:680.00, width:450.00, height:64.00) mouse=(660.00, 711.00) contains=False type=mouseDown hotControl=0
+[InputEvidence] buttonProbe label=CAMERA SHAKE rect=(x:76.00, y:765.00, width:450.00, height:49.00) mouse=(660.00, 711.00) contains=False type=mouseDown hotControl=0
+[InputEvidence] buttonProbe label=QUIT rect=(x:76.00, y:829.00, width:450.00, height:48.00) mouse=(660.00, 711.00) contains=False type=mouseDown hotControl=0
+[InputEvidence] InputSystem frame=3378 position=(440.00, 326.00) down=True up=False held=True screen=1280x800 phase=Menu
+[InputEvidence] GUI frame=3379 type=mouseUp rawType=mouseUp button=0 raw=(1174.00, 1760.00) corrected=(440.00, 474.00) pointerCorrected=True virtual=(660.00, 711.00) rawDivScale=(1761.00, 2640.00) screen=1280x800 scale=0.6667 canvas=1920.0x1200.0 systemMouse=(440.00, 326.00) phase=Menu hotControl=0
+[InputEvidence] buttonProbe label=START RACE rect=(x:76.00, y:680.00, width:450.00, height:64.00) mouse=(660.00, 711.00) contains=False type=mouseUp hotControl=0
+[InputEvidence] buttonProbe label=CAMERA SHAKE rect=(x:76.00, y:765.00, width:450.00, height:49.00) mouse=(660.00, 711.00) contains=False type=mouseUp hotControl=0
+[InputEvidence] buttonProbe label=QUIT rect=(x:76.00, y:829.00, width:450.00, height:48.00) mouse=(660.00, 711.00) contains=False type=mouseUp hotControl=0
+[InputEvidence] InputSystem frame=3379 position=(440.00, 326.00) down=False up=True held=False screen=1280x800 phase=Menu
+[InputEvidence] GUI frame=3938 type=mouseDown rawType=mouseDown button=0 raw=(1174.00, 1760.00) corrected=(190.00, 474.00) pointerCorrected=True virtual=(285.00, 711.00) rawDivScale=(1761.00, 2640.00) screen=1280x800 scale=0.6667 canvas=1920.0x1200.0 systemMouse=(190.00, 326.00) phase=Menu hotControl=0
+[InputEvidence] buttonProbe label=START RACE rect=(x:76.00, y:680.00, width:450.00, height:64.00) mouse=(285.00, 711.00) contains=True type=mouseDown hotControl=0
+[InputEvidence] InputSystem frame=3938 position=(190.00, 326.00) down=True up=False held=True screen=1280x800 phase=Menu
+[InputEvidence] GUI frame=3939 type=mouseUp rawType=mouseUp button=0 raw=(1174.00, 1760.00) corrected=(190.00, 474.00) pointerCorrected=True virtual=(285.00, 711.00) rawDivScale=(1761.00, 2640.00) screen=1280x800 scale=0.6667 canvas=1920.0x1200.0 systemMouse=(190.00, 326.00) phase=Menu hotControl=1
+[InputEvidence] buttonProbe label=START RACE rect=(x:76.00, y:680.00, width:450.00, height:64.00) mouse=(285.00, 711.00) contains=True type=mouseUp hotControl=1
+[InputEvidence] BUTTON_ACTIVATED label=START RACE frame=3939 phaseBeforeCallback=Menu
+[InputEvidence] InputSystem frame=3939 position=(190.00, 326.00) down=False up=True held=False screen=1280x800 phase=Countdown
+[InputEvidence] GUI frame=4820 type=mouseDown rawType=mouseDown button=0 raw=(1174.00, 1760.00) corrected=(580.00, 366.00) pointerCorrected=True virtual=(870.00, 549.00) rawDivScale=(1761.00, 2640.00) screen=1280x800 scale=0.6667 canvas=1920.0x1200.0 systemMouse=(580.00, 434.00) phase=Paused hotControl=0
+[InputEvidence] buttonProbe label=RESUME rect=(x:720.00, y:518.00, width:480.00, height:64.00) mouse=(870.00, 549.00) contains=True type=mouseDown hotControl=0
+[InputEvidence] GUI frame=4820 type=mouseUp rawType=mouseUp button=0 raw=(1174.00, 1760.00) corrected=(580.00, 366.00) pointerCorrected=True virtual=(870.00, 549.00) rawDivScale=(1761.00, 2640.00) screen=1280x800 scale=0.6667 canvas=1920.0x1200.0 systemMouse=(580.00, 434.00) phase=Paused hotControl=1
+[InputEvidence] buttonProbe label=RESUME rect=(x:720.00, y:518.00, width:480.00, height:64.00) mouse=(870.00, 549.00) contains=True type=mouseUp hotControl=1
+[InputEvidence] BUTTON_ACTIVATED label=RESUME frame=4820 phaseBeforeCallback=Paused
+[InputEvidence] InputSystem frame=4820 position=(580.00, 434.00) down=True up=True held=False screen=1280x800 phase=Racing
+VECTOR_RUSH_RECOVERY racer=KIRA reason=stalled raceTime=10.26 lap=0 from=0.09290 to=0.08333 speedKph=0.0 lateral=7.99 height=1.54 grounded=True airborneSeconds=0.00 stalledSeconds=4.50 impactAgo=4.96 impactSpeed=8.5 count=1
+[InputEvidence] GUI frame=6880 type=mouseDown rawType=mouseDown button=0 raw=(1174.00, 1760.00) corrected=(584.00, 422.00) pointerCorrected=True virtual=(876.00, 633.00) rawDivScale=(1761.00, 2640.00) screen=1280x800 scale=0.6667 canvas=1920.0x1200.0 systemMouse=(584.00, 378.00) phase=Paused hotControl=0
+[InputEvidence] buttonProbe label=RESUME rect=(x:720.00, y:518.00, width:480.00, height:64.00) mouse=(876.00, 633.00) contains=False type=mouseDown hotControl=0
+[InputEvidence] buttonProbe label=RESTART RACE rect=(x:720.00, y:603.00, width:480.00, height:64.00) mouse=(876.00, 633.00) contains=True type=mouseDown hotControl=0
+[InputEvidence] GUI frame=6880 type=mouseUp rawType=mouseUp button=0 raw=(1174.00, 1760.00) corrected=(584.00, 422.00) pointerCorrected=True virtual=(876.00, 633.00) rawDivScale=(1761.00, 2640.00) screen=1280x800 scale=0.6667 canvas=1920.0x1200.0 systemMouse=(584.00, 378.00) phase=Paused hotControl=2
+[InputEvidence] buttonProbe label=RESUME rect=(x:720.00, y:518.00, width:480.00, height:64.00) mouse=(876.00, 633.00) contains=False type=mouseUp hotControl=2
+[InputEvidence] buttonProbe label=RESTART RACE rect=(x:720.00, y:603.00, width:480.00, height:64.00) mouse=(876.00, 633.00) contains=True type=mouseUp hotControl=2
+[InputEvidence] BUTTON_ACTIVATED label=RESTART RACE frame=6880 phaseBeforeCallback=Paused
+[InputEvidence] InputSystem frame=6880 position=(584.00, 378.00) down=True up=True held=False screen=1280x800 phase=Countdown
+[InputEvidence] GUI frame=7948 type=mouseDown rawType=mouseDown button=0 raw=(1174.00, 1760.00) corrected=(570.00, 516.00) pointerCorrected=True virtual=(855.00, 774.00) rawDivScale=(1761.00, 2640.00) screen=1280x800 scale=0.6667 canvas=1920.0x1200.0 systemMouse=(570.00, 284.00) phase=Paused hotControl=0
+[InputEvidence] buttonProbe label=RESUME rect=(x:720.00, y:518.00, width:480.00, height:64.00) mouse=(855.00, 774.00) contains=False type=mouseDown hotControl=0
+[InputEvidence] buttonProbe label=RESTART RACE rect=(x:720.00, y:603.00, width:480.00, height:64.00) mouse=(855.00, 774.00) contains=False type=mouseDown hotControl=0
+[InputEvidence] buttonProbe label=CAMERA SHAKE rect=(x:720.00, y:679.00, width:480.00, height:49.00) mouse=(855.00, 774.00) contains=False type=mouseDown hotControl=0
+[InputEvidence] buttonProbe label=QUIT rect=(x:720.00, y:750.00, width:480.00, height:48.00) mouse=(855.00, 774.00) contains=True type=mouseDown hotControl=0
+[InputEvidence] InputSystem frame=7948 position=(570.00, 284.00) down=True up=False held=True screen=1280x800 phase=Paused
+[InputEvidence] GUI frame=7949 type=mouseUp rawType=mouseUp button=0 raw=(1174.00, 1760.00) corrected=(570.00, 516.00) pointerCorrected=True virtual=(855.00, 774.00) rawDivScale=(1761.00, 2640.00) screen=1280x800 scale=0.6667 canvas=1920.0x1200.0 systemMouse=(570.00, 284.00) phase=Paused hotControl=4
+[InputEvidence] buttonProbe label=RESUME rect=(x:720.00, y:518.00, width:480.00, height:64.00) mouse=(855.00, 774.00) contains=False type=mouseUp hotControl=4
+[InputEvidence] buttonProbe label=RESTART RACE rect=(x:720.00, y:603.00, width:480.00, height:64.00) mouse=(855.00, 774.00) contains=False type=mouseUp hotControl=4
+[InputEvidence] buttonProbe label=CAMERA SHAKE rect=(x:720.00, y:679.00, width:480.00, height:49.00) mouse=(855.00, 774.00) contains=False type=mouseUp hotControl=4
+[InputEvidence] buttonProbe label=QUIT rect=(x:720.00, y:750.00, width:480.00, height:48.00) mouse=(855.00, 774.00) contains=True type=mouseUp hotControl=4
+[InputEvidence] BUTTON_ACTIVATED label=QUIT frame=7949 phaseBeforeCallback=Paused
+[InputEvidence] InputSystem frame=7949 position=(570.00, 284.00) down=False up=True held=False screen=1280x800 phase=Paused
+Thread 0x170f53000 may have been prematurely finalized
+[Physics::Module] Cleanup current backend.
+[Physics::Module] Id: 0xf2b8ea05
+Input System module state changed to: ShutdownInProgress.
+Input Polling Thread exited.
+Input System module state changed to: Shutdown.
+Thread 0x16facb000 may have been prematurely finalized
+Thread 0x16fc6f000 may have been prematurely finalized
+Thread 0x16fb57000 may have been prematurely finalized
+Thread 0x16fe13000 may have been prematurely finalized
+Thread 0x16fbe3000 may have been prematurely finalized
+Thread 0x16fe9f000 may have been prematurely finalized
+Thread 0x16fd87000 may have been prematurely finalized
+Thread 0x16ff2b000 may have been prematurely finalized
+Thread 0x170043000 may have been prematurely finalized
+Thread 0x16fcfb000 may have been prematurely finalized
+Thread 0x16ffb7000 may have been prematurely finalized
+CodeReloadManager destroyed
