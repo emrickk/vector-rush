@@ -1,0 +1,1 @@
+Two mirrored wall-contact tests fail with the old zero-assistance behavior; all42 tests pass with bounded guard assistance. Coverage includes actual-player exclusion, inactive guard, blocked and outward targets. These are command/safety-boundary checks; native telemetry separately decides contact recovery and pace acceptance.

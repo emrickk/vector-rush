@@ -4,6 +4,29 @@ namespace VectorRush.Tests
 {
     public sealed class RivalCorridorGuardTests
     {
+        [TestCase(-1f)] [TestCase(1f)]
+        public void WallContactGetsBoundedInwardForceWhenCorrectionPathIsClear(float side)
+        {
+            float acceleration=HoverVehicle.RivalCorridorAcceleration(false,true,9f*side,4.6f*side,0f);
+            Assert.That(acceleration*side,Is.LessThan(0f).And.GreaterThanOrEqualTo(-6f));
+        }
+
+        [Test] public void BlockedInwardTargetDoesNotApplySideForce()
+        {
+            Assert.That(HoverVehicle.RivalCorridorAcceleration(false,true,8.9f,8.9f,2f),Is.Zero);
+        }
+
+        [Test] public void PlayerAndInactiveGuardNeverReceiveAssistance()
+        {
+            Assert.That(HoverVehicle.RivalCorridorAcceleration(true,true,9f,4.6f,0f),Is.Zero);
+            Assert.That(HoverVehicle.RivalCorridorAcceleration(false,false,9f,4.6f,0f),Is.Zero);
+        }
+
+        [Test] public void OutwardTargetCannotActivateRecoveryForce()
+        {
+            Assert.That(HoverVehicle.RivalCorridorAcceleration(false,true,5f,7f,0f),Is.Zero);
+        }
+
         [Test] public void PlayerIsExcludedEvenWhenGuardWasActive()
         {
             bool active=true; float lane=5.8f,speed=96f;

@@ -284,6 +284,8 @@ namespace VectorRush
                 }
             }
             AIResolvedTargetLane=targetLane;
+            float corridorAcceleration=RivalCorridorAcceleration(IsPlayer,aiEdgeGuard,currentLane,targetLane,Vector3.Dot(Body.linearVelocity,frame.Right));
+            if(corridorAcceleration!=0f)Body.AddForce(frame.Right*corridorAcceleration,ForceMode.Acceleration);
             Vector3 destination = target.Position + target.Right * targetLane;
             Vector3 direction = Vector3.ProjectOnPlane(destination - Body.position, frame.Up).normalized;
             float angle = Vector3.SignedAngle(transform.forward, direction, frame.Up);
@@ -302,6 +304,14 @@ namespace VectorRush
             brake = Mathf.Clamp01((speed - desiredSpeed) / 10f);
             leftBrake = angle < -32f ? .45f : 0f;
             rightBrake = angle > 32f ? .45f : 0f;
+        }
+
+        public static float RivalCorridorAcceleration(bool isPlayer,bool guardActive,float currentLane,float targetLane,float lateralSpeed)
+        {
+            // A long hull beside the wall needs lateral room before it can yaw inward.
+            // Only assist the collision-clear correction already chosen by the guard.
+            if(isPlayer || !guardActive || Mathf.Abs(targetLane)>=Mathf.Abs(currentLane)-.05f)return 0f;
+            return Mathf.Clamp((targetLane-currentLane)*3f-lateralSpeed*2f,-6f,6f);
         }
 
         public static float PursuitSteering(float speed,float angleDegrees,float chordDistance)

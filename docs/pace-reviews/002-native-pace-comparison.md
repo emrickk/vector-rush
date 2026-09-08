@@ -1,6 +1,6 @@
 # Pace review 002: native baseline and player-speed candidate
 
-2026-09-08. **Player speed reductions alone do not produce stable close racing.** The 60/82 m/s candidate improves proximity substantially, but still misses the proposed gates; the slower 55/75 candidate has a close first lap and then loses the field as several rivals move into sustained edge guarding. All six recovery counts remain zero in every run. Further blind speed reductions are not recommended. A bounded correction to AI path-following steering is the next candidate, with actual-player 60/82 restored as the better sustained comparison point.
+2026-09-08. **Player speed reductions and speed-aware pursuit steering have not yet produced stable close racing.** The 60/82 m/s candidate improves proximity, but misses the proposed gates; slower 55/75 and subsequent pursuit steering each have closer early laps followed by separation. All six recovery counts remain zero in every run. Candidate 03 telemetry shows rivals requesting inward steering while their long box colliders remain almost flush with the barrier. This supports a physical wall-lock hypothesis rather than another blind speed reduction or a claim that pursuit steering closed the cause.
 
 ## Evidence and calculation
 
@@ -83,3 +83,29 @@ One telemetry limitation matters: `AITargetLane` currently returns the reserved 
 The existing proportional command is `steering = clamp(angleDegrees / 26, −1, 1)`. Above 26 m/s, the subsequent yaw target is `steering × 1.12`, so its small-angle yaw gain is approximately **2.468 radians/second per radian of target-heading error**. For a no-slip pure-pursuit approximation, following a point at planar chord distance `L` calls for yaw rate `2 × forwardSpeed × sin(angle) / L`. Using the current lookahead estimate `12 + speed × 0.33` gives small-angle gains approximately **3.248 at 42 m/s** and **4.082 at 75 m/s**. The existing proportional controller therefore requires additional heading/lateral error to supply the necessary curve yaw, consistent with outward tracking bias.
 
 Test that speed-aware yaw command using the actual planar destination chord length and nonnegative forward speed, then convert through the existing 1.12 yaw scale, preserving its steering clamp, avoidance, braking and corridor guard. Account for the existing low-speed yaw multiplier when mapping desired yaw to steering. Hover slip, yaw response delay and wall contact make pure pursuit an approximation; the algebra does not prove the native behavior will be stable. Keep the rival guard and validate zero recoveries plus actual lateral/guard duty reduction. Restore player 60/82 for this candidate because it produced the better sustained prior result. Do not accept another isolated close first lap or a frozen finished-rival race gap as evidence of success.
+
+## Candidate 03: pursuit mapping does not close the problem
+
+Candidate 03 [native report](../../evidence/pace-candidate-03/pace-evidence.json) and [analysis with slip/contact-geometry diagnostics](../../evidence/pace-candidate-03/analysis.json): build GUID `aea49fc2e0c84f72ae6eb820453b0b70`, 1,208 samples, complete without error, player settings restored to 60/82, player finish **120.708 s**, all six recovery counts zero. The new steering function affects every AI-driven craft, including the testing player. This is a comparison at the same player speed settings as candidate 01, not a replay of identical player inputs or rival trajectories. The report now includes the final resolved target lane.
+
+Within 60 m after five seconds is **27.9%**, compared with 26.6% in candidate 01. Per-lap fractions are **69.7% / 15.6% / 2.5%**; nearest-gap means are **53.0 / 125.5 / 155.6 m**. The all-race mean is 113.3 m, worse than candidate 01's 81.5 m. At player finish, the nearest rival is 167.1 m behind and only one is within 200 m. Signed finish gaps are −751.5 / −611.9 / −167.1 / −914.0 / −1,021.9 m. No rival has finished, so physical and validated race gaps remain consistent. All proposed closeness gates still fail.
+
+Actual rival guard duties are **68.6% / 58.2% / 37.5% / 73.9% / 72.0%**. Which rival remains competitive changes, but persistent outer-edge guarding remains. The pursuit formula's unit checks can establish its mathematical mapping; these native results do not establish stable pack behavior or a solved steering root cause.
+
+### Slip hypothesis checked against native geometry
+
+I reconstructed planar hull heading from the native quaternion, projected velocity into the track plane, and reconstructed the normal pursuit destination using the recorded final target lane. Across all guarded samples, mean absolute hull-to-travel slip is 2.25–2.90° across the five rivals. This can affect curve tracking, but it is small in the sustained outer-edge state:
+
+| Rival | Guarded time with absolute lane >8 m, s | Mean absolute slip, degrees | Mean hull-to-target angle, degrees | Mean travel-to-target angle, degrees | Mean resolved lateral error, m |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| 1 | 31.83 | 0.89 | 13.12 | 13.90 | 4.35 |
+| 2 | 38.00 | 0.95 | 13.12 | 13.89 | 4.34 |
+| 3 | 23.16 | 1.45 | 12.87 | 14.01 | 4.11 |
+| 4 | 46.85 | 0.80 | 13.26 | 13.90 | 4.38 |
+| 5 | 43.08 | 0.85 | 12.92 | 13.60 | 4.24 |
+
+Median absolute slip in those outer-edge samples is only 0.18–0.37°. An approximately 13° inward target angle already exists; changing to velocity-heading pursuit would add roughly 0.7–1.1° on average in that state. The resolved target remains more than four meters inward while observed mean absolute lateral velocity is only 0.4–0.6 m/s. These data do not support travel-vector targeting as the main remedy for the sustained wall state.
+
+The craft box collider is 5.2 × 1.2 × 7.2 m, with local center (0, 0.12, 0.1); the barrier's inner lateral face is at ±11.7 m. Projecting the oriented collider onto the local track-right axis gives mean barrier clearance of **0.064–0.104 m** during these guarded outer-edge samples. Between **82% and 94%** of that time has projected clearance below 0.15 m. This approximates the local barrier plane; it is not recorded collision/contact telemetry. Nevertheless, the geometry supports a long-box yaw lock: turning inward initially sweeps the stern outward into the wall, while forward thrust cannot move the hull inward until it turns.
+
+The bounded next physical hypothesis is a rival-only lateral guard force toward the final clearance-approved inward target, using normal rigidbody acceleration with a small cap and lateral damping. This could create space to rotate without teleporting, changing colliders, or removing the guard. It must honor blocked corrections and adjacent-craft clearance and be validated natively for actual edge escape, contacts, recoveries and later-lap proximity. That force has not been implemented or accepted by this review. No root-cause closure is claimed for candidate 03.

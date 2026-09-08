@@ -1,0 +1,10 @@
+{
+  "parentCommit": "171a26a5dd0d464ce97762415c246c7cd888eea9",
+  "scope": "Guard-only collision-clear rival lateral acceleration, bounded6m/s\u00b2, retains60/82actualplayer and03pursuit. No pose/velocity assignment.",
+  "files": {
+    "UnityProject/Assets/Scripts/Gameplay/HoverVehicle.cs": "e68d3de384f4eed9923f11cfa5b783be5ec345ad801f50f70a8c8cc1f9adf625",
+    "UnityProject/Assets/Scripts/VectorBootstrap.cs": "b7eafe681f155b7addf1cdac108eac095cfa503d24a95105e56e02ba631a5cd6",
+    "UnityProject/Assets/Scripts/PaceEvidence.cs": "7c9634b01ac7ebc37e0f70089b4f08083bb5dddd71faefc635ea18e6ea9004f5",
+    "UnityProject/Assets/Scripts/EnvironmentEvidence.cs": "5b3af59fb6903e762222c0d21676ed8b0b840340bf330bb081849176ba6f61eb"
+  }
+}
