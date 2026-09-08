@@ -4,17 +4,15 @@ A playable, original anti-gravity racing prototype for Apple Silicon macOS. Pilo
 
 [Private GitHub repository](https://github.com/emrickk/vector-rush) · [Build brief](docs/GPT6-BUILD-PROMPT.md) · [Development history](docs/development-history.md) · [Ship art plan](docs/ship-art-plan.md)
 
-## Current checkpoint — ship iteration paused at user request
+## Current checkpoint — V3 finish integrated, night polish underway
 
-The local app contains the night scene candidate and the existing V2 ship. Its corrected native inspection rig was built and independently validated with eight [actual game screenshots](evidence/ship-native-v2-neutral-02/inspection-scope.json). The night scene's full final race/motion review is still pending.
+The native app now uses the coherent V3 ship with flush citron/07 paint, baked surface maps and authored engine anchors. Eight [calibrated native inspection views](evidence/ship-native-v3-01/inspection-scope.json) and [independent review 006](docs/ship-reviews/006-source-baked-native-finish.md) support advancing the material hierarchy and import. Local canopy/intake/nozzle surface overlaps remain under correction; the accepted primary shape stays fixed.
 
-[V3 pass 02](SourceAssets/hero-v3/pass-02/) is a staged Blender model and FBX, **not yet imported into the game**. The completed [rear clay render](evidence/ship-v3/pass-02/01-clay-rear-quarter.png) shows a more coherent hull and integrated intakes. Astra's preliminary assessment supports moving toward finish work, subject to the remaining views. Exact reference matching is not required; whole-game materials, lighting, propulsion, road and motion are the next priorities once shape readiness is confirmed.
-
-Optional authored-engine support and surface-import/baking preparation are saved in source, but those latest additions have not been compiled or exercised in a new native build. No V3 textures or anchor payloads have been selected for runtime. This is a recoverable work checkpoint, not a completed AAA delivery.
+[Native amber-gallery preview](evidence/night-v3-motion-02/VectorRush-V3-amber-candidate.mp4): 15 seconds at 1080p, recorded with automated steering at 24 simulation frames per second. This preserves the pass 03 baseline before the current gallery/plume correction and does not measure real-time performance. [Review 007](docs/ship-reviews/007-native-gallery-and-boost-stills.md) records black structural panels, weak attached exhaust and repeated road highlights as remaining issues. The night build's final race, performance and packaging checks are pending.
 
 ## Play
 
-Open **[Builds/Vector Rush.app](Builds/Vector%20Rush.app)** for the night candidate with V2. The **[VectorRush-macOS-2026-09-07.zip](Builds/VectorRush-macOS-2026-09-07.zip)** archive contains the earlier coastal delivery and is historical. Build products stay local and are excluded from Git; source and selected evidence are in the private repository.
+Open **[Builds/Vector Rush.app](Builds/Vector%20Rush.app)** for the current night development candidate. The **[VectorRush-macOS-2026-09-07.zip](Builds/VectorRush-macOS-2026-09-07.zip)** archive contains the earlier coastal delivery and is historical. Build products stay local and are excluded from Git; source and selected evidence are in the private repository.
 
 | Action | Keyboard | Gamepad |
 |---|---|---|
@@ -52,8 +50,8 @@ The slice includes one course, one craft shape, five AI rivals and original proc
 ## Project and editable sources
 
 - [UnityProject](UnityProject/) — Unity **6000.6.0f1**, URP **17.6.0**. Open `Assets/Scenes/Solstice.unity` and press Play.
-- [SourceAssets/hero-v2](SourceAssets/hero-v2/) — currently imported ship, export generator, engine anchors and inspection metadata.
-- [SourceAssets/hero-v3](SourceAssets/hero-v3/) — staged new ship, preserved rejected pass 01 and partial pass 02 evidence; not integrated.
+- [SourceAssets/hero-v2](SourceAssets/hero-v2/) — preserved previous ship, export generator, engine anchors and inspection metadata.
+- [SourceAssets/hero-v3](SourceAssets/hero-v3/) — current ship source, immutable finish/bake payloads and preserved earlier passes.
 - [SourceAssets/environment-v2](SourceAssets/environment-v2/) — editable tower/cliff kit, export scripts and texture sources.
 - [Asset regeneration guide](docs/asset-regeneration.md) — safe staged rebuilds that protect the reviewed live assets.
 - [Reference concept](references/solstice-chase-concept.png) — generated art direction, distinct from actual runtime and Blender inspection images.

@@ -97,3 +97,12 @@ The user explicitly assigned Astra as planner and harsh independent visual revie
 A successful compile or a flattering studio frame does not establish visual quality. The reference is directional; minor contour differences must not prevent progress on larger whole-game improvements. Reviewer remains independent from the asset implementation.
 
 Current status: V3 pass 03, baked surface maps and authored anchors are integrated and compiled. Eight calibrated native inspection views and gallery gameplay captures support advancing the materials and import; review 006 records localized overlapping surfaces and weak attached plumes. Next bounded step: correct those contacts without changing the accepted primary form, compare revised propulsion, and give gallery cassettes readable charcoal panels and focused wall lighting. Rebuild and inspect native gallery motion before race/performance and packaging.
+
+
+## Bounded native candidate corrections
+
+- [x] Native matched gallery/plume comparison: motion03 shows readable recessed charcoal construction and attached soft exhaust; preserve independent review 008.
+- [ ] Integrate pass04 contact correction and refreshed maps, then compare native canopy and nozzle views.
+- [ ] Validate periodic dampness texture against the matched amber interior.
+- [ ] Add a conservative rival-only outer-corridor steering guard; compare a full native race with the previously repeated wall stalls. Preserve player controls and collision shape.
+- [ ] Run current gameplay checks and an isolated real-time performance sample; save a current night preview and versioned local package.

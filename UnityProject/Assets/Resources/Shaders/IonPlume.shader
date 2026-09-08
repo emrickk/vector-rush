@@ -43,8 +43,10 @@ Shader "VectorRush/Ion Plume"
                     float displaced=side-drift;
                     float crossSection=exp(-displaced*displaced*5.2);
                     float sideFade=1-smoothstep(.62,.98,abs(side));
-                    float tail=(1-smoothstep(.42,1,along))*exp(-along*1.35);
-                    float cells=.76+.14*sin(along*24-_Time.y*12+side*4)+.10*sin(along*41+_Time.y*9-side*7);
+                    // Carry readable density beyond the aperture, then dissolve smoothly.
+                    // The Gaussian cross-section and zero-density borders remain unchanged.
+                    float tail=(1-smoothstep(.68,1,along))*exp(-along*.45);
+                    float cells=.84+.10*sin(along*24-_Time.y*12+side*4)+.06*sin(along*41+_Time.y*9-side*7);
                     // Density vanishes at sheet borders and along the tail. No edge-on
                     // brightness floor: the previous shell's floor revealed its triangles.
                     shape=crossSection*sideFade*tail*cells*pow(facing,.45);

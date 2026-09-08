@@ -1,0 +1,57 @@
+{
+  "scope": "Matched frame indices to motion02; actual physics with automated steering, 24 simulation fps, not performance.",
+  "frames": [
+    {
+      "image": "amber-entry.png",
+      "metadata": {
+        "frameIndex": 82,
+        "file": "frames/frame-0082.png",
+        "raceTime": 34.43022918701172,
+        "normalizedProgress": 0.8577256798744202,
+        "speedKph": 194.15484619140625,
+        "energy01": 1.0,
+        "isBoosting": false,
+        "isGrounded": true
+      }
+    },
+    {
+      "image": "amber-mid.png",
+      "metadata": {
+        "frameIndex": 105,
+        "file": "frames/frame-0105.png",
+        "raceTime": 35.39006805419922,
+        "normalizedProgress": 0.8859140872955322,
+        "speedKph": 190.5770263671875,
+        "energy01": 1.0,
+        "isBoosting": false,
+        "isGrounded": true
+      }
+    },
+    {
+      "image": "amber-exit.png",
+      "metadata": {
+        "frameIndex": 128,
+        "file": "frames/frame-0128.png",
+        "raceTime": 36.34990692138672,
+        "normalizedProgress": 0.9173769354820251,
+        "speedKph": 242.58787536621094,
+        "energy01": 1.0,
+        "isBoosting": false,
+        "isGrounded": true
+      }
+    },
+    {
+      "image": "observed-boost.png",
+      "metadata": {
+        "frameIndex": 146,
+        "file": "frames/frame-0146.png",
+        "raceTime": 37.09978103637695,
+        "normalizedProgress": 0.9498485922813416,
+        "speedKph": 334.4527282714844,
+        "energy01": 0.8435983657836914,
+        "isBoosting": true,
+        "isGrounded": true
+      }
+    }
+  ]
+}

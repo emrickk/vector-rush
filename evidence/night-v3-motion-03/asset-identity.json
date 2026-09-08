@@ -1,0 +1,12 @@
+{
+  "scope": "Native pass 03 ship/maps with revised gallery lighting and propulsion; no pass 04 surface correction yet. Simulation recording, not performance.",
+  "sha256": {
+    "UnityProject/Assets/Resources/Art/HeroShip.fbx": "0415a4a829347f6556f0f8ba1274ebbbd949b5bf6cf6ae128218c4bbd5eb436e",
+    "UnityProject/Assets/Resources/Art/HeroShipEngineAnchors.json": "ade72d97ffe3c6ce32b360544272cc993199cf3026840503577ff7f356a0718d",
+    "UnityProject/Assets/Scripts/World/NightTrackLighting.cs": "e454c5692f28068722783441e5ba8c21507983aad59fa3bd10ec2b8a5891af7b",
+    "UnityProject/Assets/Scripts/World/WorldBuilder.cs": "e536f08745fc9b26c12487f92f527aa016f5e2c37ab90dbca09de41145b8cabb",
+    "UnityProject/Assets/Scripts/Presentation/IonPropulsion.cs": "10304b63c5c1dcd473bc0af06bb03ef625923722549e8e9c338fb40fbc7a0bb6",
+    "UnityProject/Assets/Resources/Shaders/IonPlume.shader": "38700be86f2aa91fbd05081340d1958a95be402c7dbffc49b4d055be62a8fcb4",
+    "Builds/Vector Rush.app/Contents/Resources/Data/globalgamemanagers": "e2b13acd570d4c63ed24283d047e74db227979c57604ab7f07dc84c83a679ec0"
+  }
+}

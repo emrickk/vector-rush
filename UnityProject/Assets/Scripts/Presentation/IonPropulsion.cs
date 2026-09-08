@@ -25,8 +25,8 @@ namespace VectorRush
             vehicle = craft;
             var shader = Resources.Load<Shader>("Shaders/IonPlume");
             if (!shader) { Debug.LogError("Ion Plume shader missing from Resources"); enabled = false; return; }
-            plumeMaterial = CreateMaterial(shader, "Soft cyan plasma envelope", 0, new Color(.025f,.58f,1.1f,.17f));
-            innerMaterial = CreateMaterial(shader, "Soft pale ion spine", 0, new Color(.55f,.86f,1.1f,.14f));
+            plumeMaterial = CreateMaterial(shader, "Soft cyan plasma envelope", 0, new Color(.035f,.62f,1.1f,.38f));
+            innerMaterial = CreateMaterial(shader, "Soft pale ion spine", 0, new Color(.55f,.86f,1.1f,.30f));
             coreMaterial = CreateMaterial(shader, "Recessed pale plasma core", 1, new Color(.65f,.88f,1.05f,.95f));
             ringMaterial = CreateMaterial(shader, "Subtle nozzle rim accents", 2, new Color(.025f,.76f,1.3f,.18f));
             plumeMesh = CreatePlume(); ringMesh = CreateRing();
@@ -62,7 +62,7 @@ namespace VectorRush
                 if (craft.IsPlayer && i < 2)
                 {
                     var lamp = new GameObject("Nozzle reflected light"); lamp.transform.SetParent(anchor.transform,false); lamp.transform.localPosition = new Vector3(0,-.10f,-.3f);
-                    lights[i] = lamp.AddComponent<Light>(); lights[i].type = LightType.Point; lights[i].color = new Color(.06f,.62f,1f); lights[i].range = 3.6f; lights[i].shadows = LightShadows.None;
+                    lights[i] = lamp.AddComponent<Light>(); lights[i].type = LightType.Point; lights[i].color = new Color(.12f,.62f,1f); lights[i].range = 1.55f; lights[i].shadows = LightShadows.None;
                 }
             }
             var effects = craft.GetComponent<VehicleVFX>();
@@ -82,13 +82,15 @@ namespace VectorRush
             for (int i = 0; i < 3; i++)
             {
                 float size = jetLengthScales[i];
-                jets[i].localScale = new Vector3(1f + response*.08f,1f + response*.08f,(.30f + response*2.1f)*size);
-                SetIntensity(outerJets[i], (.55f + response*1.0f)*flicker);
-                SetIntensity(innerJets[i], (.75f + response*1.3f)*flicker);
+                // Keep an attached envelope at idle; density fades before the 1.4–2.8 m
+                // main-engine mesh ends. Smaller authored center engines retain their scale.
+                jets[i].localScale = new Vector3(1f + response*.08f,1f + response*.08f,(1.40f + response*1.40f)*size);
+                SetIntensity(outerJets[i], (.90f + response*1.50f)*flicker);
+                SetIntensity(innerJets[i], (1.05f + response*1.65f)*flicker);
                 SetIntensity(cores[i], (2.05f + response*1.45f)*flicker);
                 SetIntensity(rings[i*2], .45f + response*.25f);
                 SetIntensity(rings[i*2+1], .20f + response*.15f);
-                if (i < 2 && lights[i]) lights[i].intensity = .6f + response*2.5f;
+                if (i < 2 && lights[i]) lights[i].intensity = .12f + response*.55f;
             }
         }
 

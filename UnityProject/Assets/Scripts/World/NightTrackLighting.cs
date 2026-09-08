@@ -10,6 +10,8 @@ namespace VectorRush
         public void Build(WorldBuilder world,TrackPath track)
         {
             var housing=world.MakeMaterial("Anodized light housings",new Color(.025f,.04f,.063f),.64f,.7f);
+            var panel=world.MakeMaterial("Gallery charcoal ceramic panels",new Color(.17f,.20f,.23f),.34f,.18f);
+            var trim=world.MakeMaterial("Gallery folded aluminum returns",new Color(.095f,.12f,.145f),.48f,.55f);
             var cool=world.MakeMaterial("Cool white linear lamps",new Color(.35f,.65f,.78f),.3f,0,new Color(2.4f,5.1f,6.4f));
             var amber=world.MakeMaterial("Amber service lamps",new Color(.7f,.3f,.035f),.3f,0,new Color(6.5f,2.3f,.3f));
             var paint=world.MakeMaterial("Road technical stencils",new Color(.45f,.55f,.58f),.2f);
@@ -51,8 +53,24 @@ namespace VectorRush
                     // Solid overhead cassettes and inset side panels create two
                     // composed light corridors; their structure stays outside the driving envelope.
                     world.Box("Gallery overhead cassette",f.Position+f.Forward*6.2f+f.Up*15.45f,new Vector3(28.8f,.5f,12.2f),q,housing);
+                    world.Box("Gallery ceiling inset",f.Position+f.Forward*6.2f+f.Up*15.16f,new Vector3(24.5f,.06f,10.8f),q,panel);
                     for(int side=-1;side<=1;side+=2){
                         world.Box("Gallery acoustic side cassette",f.Position+f.Forward*6.2f+f.Right*side*14.65f+f.Up*7.4f,new Vector3(.35f,13.4f,11.9f),q,housing);
+                        // Separate faces, recessed joints and folded returns remain legible under local wall wash.
+                        for(int bay=0;bay<3;bay++){
+                            var center=f.Position+f.Forward*(2.3f+bay*3.9f)+f.Right*side*14.43f;
+                            world.Box("Gallery recessed ceramic face",center+f.Up*8.2f,new Vector3(.09f,9.1f,3.65f),q,panel);
+                            world.Box("Gallery panel folded return",center+f.Forward*1.83f+f.Up*8.2f,new Vector3(.19f,9.25f,.09f),q,trim);
+                            world.Box("Gallery upper service vent",center+f.Up*11.9f,new Vector3(.14f,.32f,2.4f),q,housing);
+                        }
+                        world.Box("Gallery lower structural rail",f.Position+f.Forward*6.2f+f.Right*side*14.27f+f.Up*3.45f,new Vector3(.35f,.27f,11.8f),q,trim);
+                        var wash=new GameObject("Gallery concealed wall wash");wash.transform.SetParent(transform,false);
+                        wash.transform.position=f.Position+f.Forward*6.2f+f.Right*side*11.5f+f.Up*13.7f;
+                        var target=f.Position+f.Forward*6.2f+f.Right*side*14.45f+f.Up*7.4f;
+                        wash.transform.rotation=Quaternion.LookRotation(target-wash.transform.position,f.Forward);
+                        var wl=wash.AddComponent<Light>();wl.type=LightType.Spot;
+                        wl.color=section==0?new Color(.64f,.79f,1):new Color(1,.58f,.29f);
+                        wl.intensity=125;wl.range=15;wl.spotAngle=100;wl.innerSpotAngle=58;wl.shadows=LightShadows.None;
                         world.Box("Gallery inset warm/cool line",f.Position+f.Forward*6.2f+f.Right*side*14.38f+f.Up*4.5f,new Vector3(.06f,.12f,9.6f),q,section==0?cool:amber);
                         world.Box("Gallery low safety band",f.Position+f.Forward*6.2f+f.Right*side*14.37f+f.Up*2.7f,new Vector3(.07f,.48f,2.4f),q,paint);
                     }
