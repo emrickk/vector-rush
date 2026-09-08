@@ -132,7 +132,7 @@ Ownership: parent RaceHUD and presentation assets; gameplay HUD evidence harness
 HUD milestone complete: 32 existing tests passed; native02 covers 21 actual state/aspect views and a three-lap finish with zero player recoveries. Independent review rejects the first line-scaling implementation and accepts its responsive correction. Pointer Start/Resume/Restart/Quit and outside-click rejection verified at 1280×800. Final timer spacing and bright-gallery contrast are captured in a separate 360-frame native preview. Low-energy and physical-controller coverage remain open; no AAA certification is claimed.
 
 
-## Next-stage path — critique checkpoint, 2026-09-08
+## Previous next-stage path — superseded priority, 2026-09-08
 
 The HUD milestone is complete; the whole game remains below the requested quality target. See [next-stage roadmap](next-stage-roadmap.md) for the evidence, sequence, scope and proposed acceptance gates.
 
@@ -143,3 +143,18 @@ The HUD milestone is complete; the whole game remains below the requested qualit
 - [ ] Expand the accepted standard around the existing circuit, verify the full audiovisual race and measure final-build performance.
 
 This checkpoint changes the plan and critique only. Implementation of these new milestones has not started. Prior HUD/ship acceptances remain narrowly scoped; they do not establish AAA quality.
+
+
+## Active visual-first environment plan — 2026-09-08
+
+User explicitly prioritizes city/track visuals and feeling. This order supersedes the AI-first sequence above. Detailed implementation and acceptance criteria: [visual environment plan](visual-environment-plan.md).
+
+- [x] Write the revised visual-first plan and preserve the prior critique/history.
+- [ ] Capture five fixed benchmark views and compose one 10–15-second final-sector/gallery/exit passage.
+- [ ] Author visible near/middle/far city layers with distinct architecture and an exit landmark.
+- [ ] Develop track construction and entry/interior/exit gallery variants with a visible ceiling.
+- [ ] Isolate and resolve or deliberately redesign the unstable road-sheen treatment.
+- [ ] Integrate surface lighting, depth and speed cues; independently inspect stills and continuously view native motion.
+- [ ] Expand the accepted design around the current circuit, profile the exact build and package the visual milestone.
+
+AI, handling, ship-form and HUD redesign work are deferred during this stage. No environment code or assets changed in the planning checkpoint.
