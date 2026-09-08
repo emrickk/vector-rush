@@ -182,11 +182,51 @@
     "existing_01_samples": 48,
     "priority": "side, top, chase first; existing images preserved"
   },
-  "completion_status": "resumed \u2014 partial evidence; source and export unchanged",
+  "completion_status": "practical form readiness approved; optional remaining captures stopped to prioritize finish",
   "completed_views": [
     {
       "file": "01-clay-rear-quarter.png",
       "samples": 48,
+      "denoising": false,
+      "threads": 4,
+      "resolution": [
+        1600,
+        1200
+      ]
+    },
+    {
+      "file": "02-neutral-rear-quarter.png",
+      "samples": 32,
+      "denoising": false,
+      "threads": 4,
+      "resolution": [
+        1600,
+        1200
+      ]
+    },
+    {
+      "file": "03-clay-front-quarter.png",
+      "samples": 32,
+      "denoising": false,
+      "threads": 4,
+      "resolution": [
+        1600,
+        1200
+      ]
+    },
+    {
+      "file": "05-clay-chase.png",
+      "samples": 32,
+      "denoising": false,
+      "threads": 4,
+      "resolution": [
+        1600,
+        1200
+      ]
+    },
+    {
+      "file": "06-neutral-chase.png",
+      "samples": 32,
       "denoising": false,
       "threads": 4,
       "resolution": [
@@ -216,11 +256,7 @@
     }
   ],
   "pending_views": [
-    "02-neutral-rear-quarter",
-    "03-clay-front-quarter",
     "04-neutral-front-quarter",
-    "05-clay-chase",
-    "06-neutral-chase",
     "09-C-perspective",
     "10-C-comparison-16x9"
   ]

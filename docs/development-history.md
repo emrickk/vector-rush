@@ -117,3 +117,10 @@ Saved optional authored-engine placement and validation with the original V2 fal
 At the user's request, resumed the saved geometry with side, top and chase renders, using 32 CPU samples without the stalled denoiser. Astra directly inspected these angles and the preserved rear clay view and cleared the coherent primary form for advancement. Major contours are now frozen; remaining broad panel and mount simplifications are secondary finish items. Review 005 preserves the bounded verdict and missing front/neutral/native evidence. This is readiness to proceed, not AAA acceptance.
 
 The previously saved engine-anchor and texture-import preparation compiled successfully in Unity's project preparation. New material mappings and replay telemetry are being prepared for the selected finish asset; native verification will follow payload selection. The finish revision will retain flush citron/07 markings in the baked color atlas and separate compact white static engine cores from dim cyan annuli.
+
+
+### V3 pass 03 — integrated finish and native review
+
+Baked flush livery and four coated material sets at 1024 pixels, preserving the exact selected source/export identity and metallic/smoothness packing. Integrated the FBX, authored engine anchors and calibrated material mapping. Native build succeeded; all eight inspection calibration assertions and the reflection probe passed. Source, baked preview and native images were independently reviewed in report 006. Material hierarchy and import are ready to advance, with no AAA or final visual acceptance.
+
+Two 360-frame native gameplay recordings preserve per-frame speed, progress and boost metadata. The second includes amber gallery entry, interior, exit and 32 boost frames. These use automated steering at 24 simulation frames per second and do not measure real-time performance. Gallery images show useful warm ship lighting but overly black structural panels; propulsion remains too faint beyond the nozzle. Canopy and intake artifacts also appear in Blender and are undergoing a bounded surface-contact correction. These limitations remain open.

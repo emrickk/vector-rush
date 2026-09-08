@@ -1,0 +1,17 @@
+{
+  "scope": "This clip ends before the amber gallery and contains no observed boost. Do not use as gallery interior or boost evidence.",
+  "progress_range": [
+    0.47582095861434937,
+    0.8434906601905823
+  ],
+  "last_frame": {
+    "frameIndex": 359,
+    "file": "frames/frame-0359.png",
+    "raceTime": 33.96030807495117,
+    "normalizedProgress": 0.8434906601905823,
+    "speedKph": 200.62368774414062,
+    "energy01": 1.0,
+    "isBoosting": false,
+    "isGrounded": true
+  }
+}

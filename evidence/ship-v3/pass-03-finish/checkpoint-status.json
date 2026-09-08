@@ -1,0 +1,39 @@
+{
+  "revision": "pass-03-finish",
+  "status": "immutable source/export; one finish preview ready for independent review",
+  "source_sha256": "e07cde687c143f73fba4a62cfbfae070286cc0edba0c426d259fd0efac83fcfc",
+  "fbx_sha256": "0415a4a829347f6556f0f8ba1274ebbbd949b5bf6cf6ae128218c4bbd5eb436e",
+  "technical_checks": {
+    "all_source_manifold": true,
+    "all_runtime_manifold_and_triangulated": true,
+    "all_fbx_manifold_with_valid_tangents": true,
+    "runtime_fbx_triangle_count_matches": true,
+    "major_source_geometry_matches_baseline": true,
+    "coated_glass_runtime_uvs_unchanged": true
+  },
+  "livery": {
+    "group": "SHIP_LIVERY",
+    "materials": [
+      "Graphite",
+      "Ivory"
+    ],
+    "images": [
+      {
+        "name": "ship-livery-mask.png",
+        "packed": true,
+        "size": [
+          2048,
+          4096
+        ],
+        "colorspace": "Non-Color"
+      }
+    ]
+  },
+  "coating_bake": "Parent owns coating bake/native integration; source dependency and UV contract cleared",
+  "visual_status": "Source rear view shows flush rear-readable07 and citron paint with basic material separation. Independent finish verdict and baked/native validation pending; oblique camera occludes compact cores.",
+  "completed_evidence": [
+    "01-neutral-rear-quarter.png",
+    "export-audit.json",
+    "capture-contract.json"
+  ]
+}

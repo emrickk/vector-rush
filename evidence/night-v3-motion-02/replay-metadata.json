@@ -1,0 +1,3612 @@
+{
+    "scope": "Actual native Unity gameplay through normal vehicle physics. The automatedSteering field records whether testing autopilot was enabled; boost is observed, never forced by recording. Time.captureFramerate=24 advances simulation at a fixed frame interval. This is not a real-time performance measurement. Delay is real time after the start screenshot. Telemetry is sampled at WaitForEndOfFrame immediately before each screenshot request; file records identify requested PNGs, not independently verified image writes. normalizedProgress is the current lap's 0–1 track position; energy01 is remaining boost energy.",
+    "startedUtc": "2026-09-08T04:17:48.5006630Z",
+    "finishedUtc": "2026-09-08T04:18:44.5883060Z",
+    "captureFramerate": 24,
+    "expectedFrames": 360,
+    "delaySeconds": 30.0,
+    "automatedSteering": true,
+    "allFramesRequested": true,
+    "frames": [
+        {
+            "frameIndex": 0,
+            "file": "frames/frame-0000.png",
+            "raceTime": 31.0106143951416,
+            "normalizedProgress": 0.7803008556365967,
+            "speedKph": 171.6685028076172,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 1,
+            "file": "frames/frame-0001.png",
+            "raceTime": 31.050615310668945,
+            "normalizedProgress": 0.7813338041305542,
+            "speedKph": 168.37059020996094,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 2,
+            "file": "frames/frame-0002.png",
+            "raceTime": 31.100616455078125,
+            "normalizedProgress": 0.7825976610183716,
+            "speedKph": 164.33070373535156,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 3,
+            "file": "frames/frame-0003.png",
+            "raceTime": 31.14061737060547,
+            "normalizedProgress": 0.7835906147956848,
+            "speedKph": 161.1127471923828,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 4,
+            "file": "frames/frame-0004.png",
+            "raceTime": 31.180618286132813,
+            "normalizedProgress": 0.7845664620399475,
+            "speedKph": 157.89801025390625,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 5,
+            "file": "frames/frame-0005.png",
+            "raceTime": 31.220619201660156,
+            "normalizedProgress": 0.7855252623558044,
+            "speedKph": 154.71656799316406,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 6,
+            "file": "frames/frame-0006.png",
+            "raceTime": 31.2606201171875,
+            "normalizedProgress": 0.7864672541618347,
+            "speedKph": 151.5843963623047,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 7,
+            "file": "frames/frame-0007.png",
+            "raceTime": 31.300621032714844,
+            "normalizedProgress": 0.7873727083206177,
+            "speedKph": 148.51693725585938,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 8,
+            "file": "frames/frame-0008.png",
+            "raceTime": 31.350622177124023,
+            "normalizedProgress": 0.7885209321975708,
+            "speedKph": 144.77305603027344,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 9,
+            "file": "frames/frame-0009.png",
+            "raceTime": 31.390623092651367,
+            "normalizedProgress": 0.7893853783607483,
+            "speedKph": 141.86598205566406,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 10,
+            "file": "frames/frame-0010.png",
+            "raceTime": 31.43062400817871,
+            "normalizedProgress": 0.7902566194534302,
+            "speedKph": 139.0322723388672,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 11,
+            "file": "frames/frame-0011.png",
+            "raceTime": 31.470624923706055,
+            "normalizedProgress": 0.7911131978034973,
+            "speedKph": 136.27720642089844,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 12,
+            "file": "frames/frame-0012.png",
+            "raceTime": 31.5106258392334,
+            "normalizedProgress": 0.7919551730155945,
+            "speedKph": 133.60487365722656,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 13,
+            "file": "frames/frame-0013.png",
+            "raceTime": 31.550626754760742,
+            "normalizedProgress": 0.7927829623222351,
+            "speedKph": 131.00460815429688,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 14,
+            "file": "frames/frame-0014.png",
+            "raceTime": 31.600627899169922,
+            "normalizedProgress": 0.7937899827957153,
+            "speedKph": 127.86795043945313,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 15,
+            "file": "frames/frame-0015.png",
+            "raceTime": 31.640628814697266,
+            "normalizedProgress": 0.7945870757102966,
+            "speedKph": 125.47322845458984,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 16,
+            "file": "frames/frame-0016.png",
+            "raceTime": 31.68062973022461,
+            "normalizedProgress": 0.7953342199325562,
+            "speedKph": 123.42530822753906,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 17,
+            "file": "frames/frame-0017.png",
+            "raceTime": 31.720630645751953,
+            "normalizedProgress": 0.7961072325706482,
+            "speedKph": 121.78453063964844,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 18,
+            "file": "frames/frame-0018.png",
+            "raceTime": 31.760631561279297,
+            "normalizedProgress": 0.7968729734420776,
+            "speedKph": 120.53925323486328,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 19,
+            "file": "frames/frame-0019.png",
+            "raceTime": 31.80063247680664,
+            "normalizedProgress": 0.797633707523346,
+            "speedKph": 119.71208190917969,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 20,
+            "file": "frames/frame-0020.png",
+            "raceTime": 31.85063362121582,
+            "normalizedProgress": 0.7985706329345703,
+            "speedKph": 119.52542114257813,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 21,
+            "file": "frames/frame-0021.png",
+            "raceTime": 31.890634536743164,
+            "normalizedProgress": 0.7992856502532959,
+            "speedKph": 120.19998168945313,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 22,
+            "file": "frames/frame-0022.png",
+            "raceTime": 31.930635452270508,
+            "normalizedProgress": 0.8000519275665283,
+            "speedKph": 121.87298583984375,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 23,
+            "file": "frames/frame-0023.png",
+            "raceTime": 31.97063636779785,
+            "normalizedProgress": 0.8008310794830322,
+            "speedKph": 123.41035461425781,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 24,
+            "file": "frames/frame-0024.png",
+            "raceTime": 32.01063537597656,
+            "normalizedProgress": 0.8016164898872375,
+            "speedKph": 123.26761627197266,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 25,
+            "file": "frames/frame-0025.png",
+            "raceTime": 32.050628662109375,
+            "normalizedProgress": 0.8023999929428101,
+            "speedKph": 122.21170806884766,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 26,
+            "file": "frames/frame-0026.png",
+            "raceTime": 32.10062026977539,
+            "normalizedProgress": 0.8033568263053894,
+            "speedKph": 120.35368347167969,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 27,
+            "file": "frames/frame-0027.png",
+            "raceTime": 32.1406135559082,
+            "normalizedProgress": 0.8041244745254517,
+            "speedKph": 119.08172607421875,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 28,
+            "file": "frames/frame-0028.png",
+            "raceTime": 32.180606842041016,
+            "normalizedProgress": 0.8048307299613953,
+            "speedKph": 118.10557556152344,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 29,
+            "file": "frames/frame-0029.png",
+            "raceTime": 32.22060012817383,
+            "normalizedProgress": 0.8055866360664368,
+            "speedKph": 117.32755279541016,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 30,
+            "file": "frames/frame-0030.png",
+            "raceTime": 32.26059341430664,
+            "normalizedProgress": 0.806339681148529,
+            "speedKph": 116.82592010498047,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 31,
+            "file": "frames/frame-0031.png",
+            "raceTime": 32.30058670043945,
+            "normalizedProgress": 0.8070918321609497,
+            "speedKph": 116.65774536132813,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 32,
+            "file": "frames/frame-0032.png",
+            "raceTime": 32.35057830810547,
+            "normalizedProgress": 0.8080183267593384,
+            "speedKph": 117.1351318359375,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 33,
+            "file": "frames/frame-0033.png",
+            "raceTime": 32.39057159423828,
+            "normalizedProgress": 0.8087756633758545,
+            "speedKph": 117.40423583984375,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 34,
+            "file": "frames/frame-0034.png",
+            "raceTime": 32.430564880371094,
+            "normalizedProgress": 0.8095316290855408,
+            "speedKph": 116.31607055664063,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 35,
+            "file": "frames/frame-0035.png",
+            "raceTime": 32.470558166503906,
+            "normalizedProgress": 0.8102797865867615,
+            "speedKph": 114.55137634277344,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 36,
+            "file": "frames/frame-0036.png",
+            "raceTime": 32.51055145263672,
+            "normalizedProgress": 0.8110170960426331,
+            "speedKph": 112.35789489746094,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 37,
+            "file": "frames/frame-0037.png",
+            "raceTime": 32.55054473876953,
+            "normalizedProgress": 0.811741292476654,
+            "speedKph": 110.04403686523438,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 38,
+            "file": "frames/frame-0038.png",
+            "raceTime": 32.60053634643555,
+            "normalizedProgress": 0.8126128911972046,
+            "speedKph": 107.73379516601563,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 39,
+            "file": "frames/frame-0039.png",
+            "raceTime": 32.64052963256836,
+            "normalizedProgress": 0.8133122324943542,
+            "speedKph": 106.45091247558594,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 40,
+            "file": "frames/frame-0040.png",
+            "raceTime": 32.68052291870117,
+            "normalizedProgress": 0.8140053153038025,
+            "speedKph": 105.88433074951172,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 41,
+            "file": "frames/frame-0041.png",
+            "raceTime": 32.720516204833984,
+            "normalizedProgress": 0.8146963119506836,
+            "speedKph": 106.11102294921875,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 42,
+            "file": "frames/frame-0042.png",
+            "raceTime": 32.7605094909668,
+            "normalizedProgress": 0.8153893947601318,
+            "speedKph": 107.17665100097656,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 43,
+            "file": "frames/frame-0043.png",
+            "raceTime": 32.80050277709961,
+            "normalizedProgress": 0.8160894513130188,
+            "speedKph": 109.21125030517578,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 44,
+            "file": "frames/frame-0044.png",
+            "raceTime": 32.850494384765625,
+            "normalizedProgress": 0.8169674873352051,
+            "speedKph": 113.17703247070313,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 45,
+            "file": "frames/frame-0045.png",
+            "raceTime": 32.89048767089844,
+            "normalizedProgress": 0.817700982093811,
+            "speedKph": 116.59481048583984,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 46,
+            "file": "frames/frame-0046.png",
+            "raceTime": 32.93048095703125,
+            "normalizedProgress": 0.8184472918510437,
+            "speedKph": 119.98204040527344,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 47,
+            "file": "frames/frame-0047.png",
+            "raceTime": 32.97047424316406,
+            "normalizedProgress": 0.8191874027252197,
+            "speedKph": 123.35071563720703,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 48,
+            "file": "frames/frame-0048.png",
+            "raceTime": 33.010467529296875,
+            "normalizedProgress": 0.8199418783187866,
+            "speedKph": 126.7038345336914,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 49,
+            "file": "frames/frame-0049.png",
+            "raceTime": 33.05046081542969,
+            "normalizedProgress": 0.8207156658172607,
+            "speedKph": 130.04917907714844,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 50,
+            "file": "frames/frame-0050.png",
+            "raceTime": 33.1004524230957,
+            "normalizedProgress": 0.821718692779541,
+            "speedKph": 134.20510864257813,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 51,
+            "file": "frames/frame-0051.png",
+            "raceTime": 33.140445709228516,
+            "normalizedProgress": 0.8225353360176086,
+            "speedKph": 137.50050354003906,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 52,
+            "file": "frames/frame-0052.png",
+            "raceTime": 33.18043899536133,
+            "normalizedProgress": 0.8233717083930969,
+            "speedKph": 140.77084350585938,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 53,
+            "file": "frames/frame-0053.png",
+            "raceTime": 33.22043228149414,
+            "normalizedProgress": 0.8242276310920715,
+            "speedKph": 144.01983642578125,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 54,
+            "file": "frames/frame-0054.png",
+            "raceTime": 33.26042556762695,
+            "normalizedProgress": 0.8251070976257324,
+            "speedKph": 147.25108337402344,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 55,
+            "file": "frames/frame-0055.png",
+            "raceTime": 33.300418853759766,
+            "normalizedProgress": 0.8260005116462708,
+            "speedKph": 150.46742248535156,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 56,
+            "file": "frames/frame-0056.png",
+            "raceTime": 33.35041046142578,
+            "normalizedProgress": 0.8271439671516418,
+            "speedKph": 154.47042846679688,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 57,
+            "file": "frames/frame-0057.png",
+            "raceTime": 33.390403747558594,
+            "normalizedProgress": 0.8280808925628662,
+            "speedKph": 157.66102600097656,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 58,
+            "file": "frames/frame-0058.png",
+            "raceTime": 33.430397033691406,
+            "normalizedProgress": 0.8290374875068665,
+            "speedKph": 160.84255981445313,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 59,
+            "file": "frames/frame-0059.png",
+            "raceTime": 33.47039031982422,
+            "normalizedProgress": 0.8300120830535889,
+            "speedKph": 164.01596069335938,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 60,
+            "file": "frames/frame-0060.png",
+            "raceTime": 33.51038360595703,
+            "normalizedProgress": 0.8310058116912842,
+            "speedKph": 167.1819305419922,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 61,
+            "file": "frames/frame-0061.png",
+            "raceTime": 33.550376892089844,
+            "normalizedProgress": 0.8320180177688599,
+            "speedKph": 170.3409423828125,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 62,
+            "file": "frames/frame-0062.png",
+            "raceTime": 33.60036849975586,
+            "normalizedProgress": 0.833310604095459,
+            "speedKph": 174.28021240234375,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 63,
+            "file": "frames/frame-0063.png",
+            "raceTime": 33.64036178588867,
+            "normalizedProgress": 0.8343653678894043,
+            "speedKph": 177.42391967773438,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 64,
+            "file": "frames/frame-0064.png",
+            "raceTime": 33.680355072021484,
+            "normalizedProgress": 0.8354397416114807,
+            "speedKph": 180.560546875,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 65,
+            "file": "frames/frame-0065.png",
+            "raceTime": 33.7203483581543,
+            "normalizedProgress": 0.8365329504013062,
+            "speedKph": 183.6896514892578,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 66,
+            "file": "frames/frame-0066.png",
+            "raceTime": 33.76034164428711,
+            "normalizedProgress": 0.837645411491394,
+            "speedKph": 186.81056213378906,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 67,
+            "file": "frames/frame-0067.png",
+            "raceTime": 33.80033493041992,
+            "normalizedProgress": 0.838776707649231,
+            "speedKph": 189.9225616455078,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 68,
+            "file": "frames/frame-0068.png",
+            "raceTime": 33.85032653808594,
+            "normalizedProgress": 0.8402183055877686,
+            "speedKph": 193.79859924316406,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 69,
+            "file": "frames/frame-0069.png",
+            "raceTime": 33.89031982421875,
+            "normalizedProgress": 0.841392457485199,
+            "speedKph": 196.8870391845703,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 70,
+            "file": "frames/frame-0070.png",
+            "raceTime": 33.93031311035156,
+            "normalizedProgress": 0.8425866961479187,
+            "speedKph": 199.38540649414063,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 71,
+            "file": "frames/frame-0071.png",
+            "raceTime": 33.970306396484375,
+            "normalizedProgress": 0.8437923192977905,
+            "speedKph": 200.9388427734375,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 72,
+            "file": "frames/frame-0072.png",
+            "raceTime": 34.01029968261719,
+            "normalizedProgress": 0.8450093269348145,
+            "speedKph": 201.80361938476563,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 73,
+            "file": "frames/frame-0073.png",
+            "raceTime": 34.05029296875,
+            "normalizedProgress": 0.8462278842926025,
+            "speedKph": 202.1692657470703,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 74,
+            "file": "frames/frame-0074.png",
+            "raceTime": 34.100284576416016,
+            "normalizedProgress": 0.847756564617157,
+            "speedKph": 202.13238525390625,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 75,
+            "file": "frames/frame-0075.png",
+            "raceTime": 34.14027786254883,
+            "normalizedProgress": 0.8489766716957092,
+            "speedKph": 201.8270721435547,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 76,
+            "file": "frames/frame-0076.png",
+            "raceTime": 34.18027114868164,
+            "normalizedProgress": 0.8502006530761719,
+            "speedKph": 201.35324096679688,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 77,
+            "file": "frames/frame-0077.png",
+            "raceTime": 34.22026443481445,
+            "normalizedProgress": 0.8514166474342346,
+            "speedKph": 200.76217651367188,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 78,
+            "file": "frames/frame-0078.png",
+            "raceTime": 34.260257720947266,
+            "normalizedProgress": 0.8526293635368347,
+            "speedKph": 200.0914306640625,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 79,
+            "file": "frames/frame-0079.png",
+            "raceTime": 34.30025100708008,
+            "normalizedProgress": 0.8538451194763184,
+            "speedKph": 199.0540008544922,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 80,
+            "file": "frames/frame-0080.png",
+            "raceTime": 34.350242614746094,
+            "normalizedProgress": 0.8553522229194641,
+            "speedKph": 197.18450927734375,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 81,
+            "file": "frames/frame-0081.png",
+            "raceTime": 34.390235900878906,
+            "normalizedProgress": 0.8565433621406555,
+            "speedKph": 195.61375427246094,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 82,
+            "file": "frames/frame-0082.png",
+            "raceTime": 34.43022918701172,
+            "normalizedProgress": 0.8577256798744202,
+            "speedKph": 194.15484619140625,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 83,
+            "file": "frames/frame-0083.png",
+            "raceTime": 34.47022247314453,
+            "normalizedProgress": 0.8589093685150146,
+            "speedKph": 192.90853881835938,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 84,
+            "file": "frames/frame-0084.png",
+            "raceTime": 34.510215759277344,
+            "normalizedProgress": 0.8600775599479675,
+            "speedKph": 191.94900512695313,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 85,
+            "file": "frames/frame-0085.png",
+            "raceTime": 34.550209045410156,
+            "normalizedProgress": 0.8612411022186279,
+            "speedKph": 191.3406524658203,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 86,
+            "file": "frames/frame-0086.png",
+            "raceTime": 34.60020065307617,
+            "normalizedProgress": 0.8627005815505981,
+            "speedKph": 191.17835998535156,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 87,
+            "file": "frames/frame-0087.png",
+            "raceTime": 34.640193939208984,
+            "normalizedProgress": 0.8638628125190735,
+            "speedKph": 191.62289428710938,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 88,
+            "file": "frames/frame-0088.png",
+            "raceTime": 34.6801872253418,
+            "normalizedProgress": 0.8650294542312622,
+            "speedKph": 192.6912841796875,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 89,
+            "file": "frames/frame-0089.png",
+            "raceTime": 34.72018051147461,
+            "normalizedProgress": 0.8662161231040955,
+            "speedKph": 194.02989196777344,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 90,
+            "file": "frames/frame-0090.png",
+            "raceTime": 34.76017379760742,
+            "normalizedProgress": 0.8673974275588989,
+            "speedKph": 194.32762145996094,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 91,
+            "file": "frames/frame-0091.png",
+            "raceTime": 34.800167083740234,
+            "normalizedProgress": 0.8685786128044128,
+            "speedKph": 193.78819274902344,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 92,
+            "file": "frames/frame-0092.png",
+            "raceTime": 34.85015869140625,
+            "normalizedProgress": 0.8700595498085022,
+            "speedKph": 192.6948699951172,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 93,
+            "file": "frames/frame-0093.png",
+            "raceTime": 34.89015197753906,
+            "normalizedProgress": 0.8712307810783386,
+            "speedKph": 191.8229522705078,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 94,
+            "file": "frames/frame-0094.png",
+            "raceTime": 34.930145263671875,
+            "normalizedProgress": 0.8724112510681152,
+            "speedKph": 191.13507080078125,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 95,
+            "file": "frames/frame-0095.png",
+            "raceTime": 34.97013854980469,
+            "normalizedProgress": 0.8735747337341309,
+            "speedKph": 190.74740600585938,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 96,
+            "file": "frames/frame-0096.png",
+            "raceTime": 35.0101318359375,
+            "normalizedProgress": 0.8747369050979614,
+            "speedKph": 190.75315856933594,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 97,
+            "file": "frames/frame-0097.png",
+            "raceTime": 35.05012512207031,
+            "normalizedProgress": 0.8759148716926575,
+            "speedKph": 191.2394561767578,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 98,
+            "file": "frames/frame-0098.png",
+            "raceTime": 35.10011672973633,
+            "normalizedProgress": 0.877372145652771,
+            "speedKph": 192.65731811523438,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 99,
+            "file": "frames/frame-0099.png",
+            "raceTime": 35.14011001586914,
+            "normalizedProgress": 0.8785498142242432,
+            "speedKph": 193.9761199951172,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 100,
+            "file": "frames/frame-0100.png",
+            "raceTime": 35.18010330200195,
+            "normalizedProgress": 0.8797482252120972,
+            "speedKph": 194.21194458007813,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 101,
+            "file": "frames/frame-0101.png",
+            "raceTime": 35.220096588134766,
+            "normalizedProgress": 0.88093101978302,
+            "speedKph": 193.6329345703125,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 102,
+            "file": "frames/frame-0102.png",
+            "raceTime": 35.26008987426758,
+            "normalizedProgress": 0.8821093440055847,
+            "speedKph": 192.73297119140625,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 103,
+            "file": "frames/frame-0103.png",
+            "raceTime": 35.30008316040039,
+            "normalizedProgress": 0.8832969069480896,
+            "speedKph": 191.81333923339844,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 104,
+            "file": "frames/frame-0104.png",
+            "raceTime": 35.350074768066406,
+            "normalizedProgress": 0.8847514986991882,
+            "speedKph": 190.9257354736328,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 105,
+            "file": "frames/frame-0105.png",
+            "raceTime": 35.39006805419922,
+            "normalizedProgress": 0.8859140872955322,
+            "speedKph": 190.5770263671875,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 106,
+            "file": "frames/frame-0106.png",
+            "raceTime": 35.43006134033203,
+            "normalizedProgress": 0.8870893716812134,
+            "speedKph": 190.6480712890625,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 107,
+            "file": "frames/frame-0107.png",
+            "raceTime": 35.470054626464844,
+            "normalizedProgress": 0.888251543045044,
+            "speedKph": 191.21017456054688,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 108,
+            "file": "frames/frame-0108.png",
+            "raceTime": 35.510047912597656,
+            "normalizedProgress": 0.8894181251525879,
+            "speedKph": 192.32867431640625,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 109,
+            "file": "frames/frame-0109.png",
+            "raceTime": 35.55004119873047,
+            "normalizedProgress": 0.8906069993972778,
+            "speedKph": 194.0751495361328,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 110,
+            "file": "frames/frame-0110.png",
+            "raceTime": 35.600032806396484,
+            "normalizedProgress": 0.8920930027961731,
+            "speedKph": 197.6056671142578,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 111,
+            "file": "frames/frame-0111.png",
+            "raceTime": 35.6400260925293,
+            "normalizedProgress": 0.893303632736206,
+            "speedKph": 200.66323852539063,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 112,
+            "file": "frames/frame-0112.png",
+            "raceTime": 35.68001937866211,
+            "normalizedProgress": 0.8945432305335999,
+            "speedKph": 203.68980407714844,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 113,
+            "file": "frames/frame-0113.png",
+            "raceTime": 35.72001266479492,
+            "normalizedProgress": 0.8957853317260742,
+            "speedKph": 206.6884307861328,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 114,
+            "file": "frames/frame-0114.png",
+            "raceTime": 35.760005950927734,
+            "normalizedProgress": 0.8970440626144409,
+            "speedKph": 209.66024780273438,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 115,
+            "file": "frames/frame-0115.png",
+            "raceTime": 35.79999923706055,
+            "normalizedProgress": 0.8983195424079895,
+            "speedKph": 212.60472106933594,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 116,
+            "file": "frames/frame-0116.png",
+            "raceTime": 35.84999084472656,
+            "normalizedProgress": 0.89994215965271,
+            "speedKph": 216.2460479736328,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 117,
+            "file": "frames/frame-0117.png",
+            "raceTime": 35.889984130859375,
+            "normalizedProgress": 0.9012544751167297,
+            "speedKph": 219.12779235839844,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 118,
+            "file": "frames/frame-0118.png",
+            "raceTime": 35.92997741699219,
+            "normalizedProgress": 0.902583658695221,
+            "speedKph": 221.98263549804688,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 119,
+            "file": "frames/frame-0119.png",
+            "raceTime": 35.969970703125,
+            "normalizedProgress": 0.9039294719696045,
+            "speedKph": 224.81210327148438,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 120,
+            "file": "frames/frame-0120.png",
+            "raceTime": 36.00996398925781,
+            "normalizedProgress": 0.9052948355674744,
+            "speedKph": 227.49368286132813,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 121,
+            "file": "frames/frame-0121.png",
+            "raceTime": 36.049957275390625,
+            "normalizedProgress": 0.9066721796989441,
+            "speedKph": 229.93460083007813,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 122,
+            "file": "frames/frame-0122.png",
+            "raceTime": 36.09994888305664,
+            "normalizedProgress": 0.9084129333496094,
+            "speedKph": 232.6823272705078,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 123,
+            "file": "frames/frame-0123.png",
+            "raceTime": 36.13994216918945,
+            "normalizedProgress": 0.9098203182220459,
+            "speedKph": 234.66317749023438,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 124,
+            "file": "frames/frame-0124.png",
+            "raceTime": 36.179935455322266,
+            "normalizedProgress": 0.9112408757209778,
+            "speedKph": 236.4711456298828,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 125,
+            "file": "frames/frame-0125.png",
+            "raceTime": 36.21992874145508,
+            "normalizedProgress": 0.9126700758934021,
+            "speedKph": 238.12313842773438,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 126,
+            "file": "frames/frame-0126.png",
+            "raceTime": 36.25992202758789,
+            "normalizedProgress": 0.9141089916229248,
+            "speedKph": 239.63433837890625,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 127,
+            "file": "frames/frame-0127.png",
+            "raceTime": 36.2999153137207,
+            "normalizedProgress": 0.9155566692352295,
+            "speedKph": 241.01828002929688,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 128,
+            "file": "frames/frame-0128.png",
+            "raceTime": 36.34990692138672,
+            "normalizedProgress": 0.9173769354820251,
+            "speedKph": 242.58787536621094,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 129,
+            "file": "frames/frame-0129.png",
+            "raceTime": 36.38990020751953,
+            "normalizedProgress": 0.9188439249992371,
+            "speedKph": 243.7284393310547,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 130,
+            "file": "frames/frame-0130.png",
+            "raceTime": 36.429893493652344,
+            "normalizedProgress": 0.9203154444694519,
+            "speedKph": 246.0079345703125,
+            "energy01": 0.9976999759674072,
+            "isBoosting": true,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 131,
+            "file": "frames/frame-0131.png",
+            "raceTime": 36.469886779785156,
+            "normalizedProgress": 0.9218114614486694,
+            "speedKph": 251.9208984375,
+            "energy01": 0.9884998798370361,
+            "isBoosting": true,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 132,
+            "file": "frames/frame-0132.png",
+            "raceTime": 36.50988006591797,
+            "normalizedProgress": 0.9233428239822388,
+            "speedKph": 257.7893371582031,
+            "energy01": 0.979299783706665,
+            "isBoosting": true,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 133,
+            "file": "frames/frame-0133.png",
+            "raceTime": 36.54987335205078,
+            "normalizedProgress": 0.9249091744422913,
+            "speedKph": 263.6109924316406,
+            "energy01": 0.970099687576294,
+            "isBoosting": true,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 134,
+            "file": "frames/frame-0134.png",
+            "raceTime": 36.5998649597168,
+            "normalizedProgress": 0.9269186854362488,
+            "speedKph": 270.8193664550781,
+            "energy01": 0.9585995674133301,
+            "isBoosting": true,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 135,
+            "file": "frames/frame-0135.png",
+            "raceTime": 36.63985824584961,
+            "normalizedProgress": 0.9285629987716675,
+            "speedKph": 276.5289001464844,
+            "energy01": 0.949399471282959,
+            "isBoosting": true,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 136,
+            "file": "frames/frame-0136.png",
+            "raceTime": 36.67985153198242,
+            "normalizedProgress": 0.9302412271499634,
+            "speedKph": 282.18560791015625,
+            "energy01": 0.9401993751525879,
+            "isBoosting": true,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 137,
+            "file": "frames/frame-0137.png",
+            "raceTime": 36.719844818115234,
+            "normalizedProgress": 0.9319532513618469,
+            "speedKph": 287.7879638671875,
+            "energy01": 0.9309992790222168,
+            "isBoosting": true,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 138,
+            "file": "frames/frame-0138.png",
+            "raceTime": 36.75983810424805,
+            "normalizedProgress": 0.933703601360321,
+            "speedKph": 293.33392333984375,
+            "energy01": 0.9217991828918457,
+            "isBoosting": true,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 139,
+            "file": "frames/frame-0139.png",
+            "raceTime": 36.79983139038086,
+            "normalizedProgress": 0.9354825019836426,
+            "speedKph": 298.82183837890625,
+            "energy01": 0.9125990867614746,
+            "isBoosting": true,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 140,
+            "file": "frames/frame-0140.png",
+            "raceTime": 36.849822998046875,
+            "normalizedProgress": 0.9377561211585999,
+            "speedKph": 305.5972595214844,
+            "energy01": 0.9010989665985107,
+            "isBoosting": true,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 141,
+            "file": "frames/frame-0141.png",
+            "raceTime": 36.88981628417969,
+            "normalizedProgress": 0.9396083354949951,
+            "speedKph": 310.947998046875,
+            "energy01": 0.8918988704681396,
+            "isBoosting": true,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 142,
+            "file": "frames/frame-0142.png",
+            "raceTime": 36.9298095703125,
+            "normalizedProgress": 0.9414927959442139,
+            "speedKph": 316.23492431640625,
+            "energy01": 0.8826987743377686,
+            "isBoosting": true,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 143,
+            "file": "frames/frame-0143.png",
+            "raceTime": 36.96980285644531,
+            "normalizedProgress": 0.9434144496917725,
+            "speedKph": 321.45635986328125,
+            "energy01": 0.8734986782073975,
+            "isBoosting": true,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 144,
+            "file": "frames/frame-0144.png",
+            "raceTime": 37.009796142578125,
+            "normalizedProgress": 0.945361852645874,
+            "speedKph": 326.6106262207031,
+            "energy01": 0.8642985820770264,
+            "isBoosting": true,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 145,
+            "file": "frames/frame-0145.png",
+            "raceTime": 37.04978942871094,
+            "normalizedProgress": 0.9473398923873901,
+            "speedKph": 331.19854736328125,
+            "energy01": 0.8550984859466553,
+            "isBoosting": true,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 146,
+            "file": "frames/frame-0146.png",
+            "raceTime": 37.09978103637695,
+            "normalizedProgress": 0.9498485922813416,
+            "speedKph": 334.4527282714844,
+            "energy01": 0.8435983657836914,
+            "isBoosting": true,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 147,
+            "file": "frames/frame-0147.png",
+            "raceTime": 37.139774322509766,
+            "normalizedProgress": 0.9518663883209229,
+            "speedKph": 335.8086242675781,
+            "energy01": 0.8343982696533203,
+            "isBoosting": true,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 148,
+            "file": "frames/frame-0148.png",
+            "raceTime": 37.17976760864258,
+            "normalizedProgress": 0.953896164894104,
+            "speedKph": 336.5973205566406,
+            "energy01": 0.8251981735229492,
+            "isBoosting": true,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 149,
+            "file": "frames/frame-0149.png",
+            "raceTime": 37.21976089477539,
+            "normalizedProgress": 0.9559248685836792,
+            "speedKph": 337.0629577636719,
+            "energy01": 0.8159980773925781,
+            "isBoosting": true,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 150,
+            "file": "frames/frame-0150.png",
+            "raceTime": 37.2597541809082,
+            "normalizedProgress": 0.9579603672027588,
+            "speedKph": 337.33978271484375,
+            "energy01": 0.806797981262207,
+            "isBoosting": true,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 151,
+            "file": "frames/frame-0151.png",
+            "raceTime": 37.299747467041016,
+            "normalizedProgress": 0.9599928259849548,
+            "speedKph": 337.50457763671875,
+            "energy01": 0.7975978851318359,
+            "isBoosting": true,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 152,
+            "file": "frames/frame-0152.png",
+            "raceTime": 37.34973907470703,
+            "normalizedProgress": 0.9625371098518372,
+            "speedKph": 337.6195373535156,
+            "energy01": 0.7860977649688721,
+            "isBoosting": true,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 153,
+            "file": "frames/frame-0153.png",
+            "raceTime": 37.389732360839844,
+            "normalizedProgress": 0.9645707607269287,
+            "speedKph": 337.66925048828125,
+            "energy01": 0.776897668838501,
+            "isBoosting": true,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 154,
+            "file": "frames/frame-0154.png",
+            "raceTime": 37.429725646972656,
+            "normalizedProgress": 0.9666069746017456,
+            "speedKph": 337.6972961425781,
+            "energy01": 0.7676975727081299,
+            "isBoosting": true,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 155,
+            "file": "frames/frame-0155.png",
+            "raceTime": 37.46971893310547,
+            "normalizedProgress": 0.9686405658721924,
+            "speedKph": 337.71221923828125,
+            "energy01": 0.7584974765777588,
+            "isBoosting": true,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 156,
+            "file": "frames/frame-0156.png",
+            "raceTime": 37.50971221923828,
+            "normalizedProgress": 0.9706749320030212,
+            "speedKph": 337.71905517578125,
+            "energy01": 0.7492973804473877,
+            "isBoosting": true,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 157,
+            "file": "frames/frame-0157.png",
+            "raceTime": 37.549705505371094,
+            "normalizedProgress": 0.9727078080177307,
+            "speedKph": 337.72113037109375,
+            "energy01": 0.7400972843170166,
+            "isBoosting": true,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 158,
+            "file": "frames/frame-0158.png",
+            "raceTime": 37.59969711303711,
+            "normalizedProgress": 0.9752479791641235,
+            "speedKph": 337.71966552734375,
+            "energy01": 0.7285971641540527,
+            "isBoosting": true,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 159,
+            "file": "frames/frame-0159.png",
+            "raceTime": 37.63969039916992,
+            "normalizedProgress": 0.9772778153419495,
+            "speedKph": 337.71673583984375,
+            "energy01": 0.7193970680236816,
+            "isBoosting": true,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 160,
+            "file": "frames/frame-0160.png",
+            "raceTime": 37.679683685302734,
+            "normalizedProgress": 0.9793084859848022,
+            "speedKph": 337.7128601074219,
+            "energy01": 0.7101969718933105,
+            "isBoosting": true,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 161,
+            "file": "frames/frame-0161.png",
+            "raceTime": 37.71967697143555,
+            "normalizedProgress": 0.9813346862792969,
+            "speedKph": 337.7084655761719,
+            "energy01": 0.7009968757629395,
+            "isBoosting": true,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 162,
+            "file": "frames/frame-0162.png",
+            "raceTime": 37.75967025756836,
+            "normalizedProgress": 0.9833637475967407,
+            "speedKph": 335.2261657714844,
+            "energy01": 0.6952968239784241,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 163,
+            "file": "frames/frame-0163.png",
+            "raceTime": 37.79966354370117,
+            "normalizedProgress": 0.9853485226631165,
+            "speedKph": 325.39886474609375,
+            "energy01": 0.7000969052314758,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 164,
+            "file": "frames/frame-0164.png",
+            "raceTime": 37.84965515136719,
+            "normalizedProgress": 0.9877464175224304,
+            "speedKph": 313.30621337890625,
+            "energy01": 0.7060970067977905,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 165,
+            "file": "frames/frame-0165.png",
+            "raceTime": 37.8896484375,
+            "normalizedProgress": 0.98960280418396,
+            "speedKph": 303.7789306640625,
+            "energy01": 0.7108970880508423,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 166,
+            "file": "frames/frame-0166.png",
+            "raceTime": 37.92964172363281,
+            "normalizedProgress": 0.9913917779922485,
+            "speedKph": 295.4055480957031,
+            "energy01": 0.715697169303894,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 167,
+            "file": "frames/frame-0167.png",
+            "raceTime": 37.969635009765625,
+            "normalizedProgress": 0.9931426644325256,
+            "speedKph": 288.5902099609375,
+            "energy01": 0.7204972505569458,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 168,
+            "file": "frames/frame-0168.png",
+            "raceTime": 38.00962829589844,
+            "normalizedProgress": 0.9948400259017944,
+            "speedKph": 283.0412292480469,
+            "energy01": 0.7252973318099976,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 169,
+            "file": "frames/frame-0169.png",
+            "raceTime": 38.04962158203125,
+            "normalizedProgress": 0.9965184926986694,
+            "speedKph": 278.5216369628906,
+            "energy01": 0.7300974130630493,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 170,
+            "file": "frames/frame-0170.png",
+            "raceTime": 38.099613189697266,
+            "normalizedProgress": 0.9985656142234802,
+            "speedKph": 274.029296875,
+            "energy01": 0.736097514629364,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 171,
+            "file": "frames/frame-0171.png",
+            "raceTime": 38.13960647583008,
+            "normalizedProgress": 0.00017229538934770972,
+            "speedKph": 271.175537109375,
+            "energy01": 0.7408975958824158,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 172,
+            "file": "frames/frame-0172.png",
+            "raceTime": 38.17959976196289,
+            "normalizedProgress": 0.0017876726342365146,
+            "speedKph": 268.82769775390625,
+            "energy01": 0.7456976771354675,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 173,
+            "file": "frames/frame-0173.png",
+            "raceTime": 38.2195930480957,
+            "normalizedProgress": 0.0033776629716157913,
+            "speedKph": 266.70416259765625,
+            "energy01": 0.7504977583885193,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 174,
+            "file": "frames/frame-0174.png",
+            "raceTime": 38.259586334228516,
+            "normalizedProgress": 0.004968279507011175,
+            "speedKph": 264.7740783691406,
+            "energy01": 0.755297839641571,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 175,
+            "file": "frames/frame-0175.png",
+            "raceTime": 38.29957962036133,
+            "normalizedProgress": 0.006537120323628187,
+            "speedKph": 263.0528564453125,
+            "energy01": 0.7600979208946228,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 176,
+            "file": "frames/frame-0176.png",
+            "raceTime": 38.349571228027344,
+            "normalizedProgress": 0.008491926826536655,
+            "speedKph": 261.1978759765625,
+            "energy01": 0.7660980224609375,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 177,
+            "file": "frames/frame-0177.png",
+            "raceTime": 38.389564514160156,
+            "normalizedProgress": 0.010053266771137714,
+            "speedKph": 259.9420471191406,
+            "energy01": 0.7708981037139893,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 178,
+            "file": "frames/frame-0178.png",
+            "raceTime": 38.42955780029297,
+            "normalizedProgress": 0.011599772609770298,
+            "speedKph": 258.87371826171875,
+            "energy01": 0.775698184967041,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 179,
+            "file": "frames/frame-0179.png",
+            "raceTime": 38.46955108642578,
+            "normalizedProgress": 0.013149729929864407,
+            "speedKph": 257.97509765625,
+            "energy01": 0.7804982662200928,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 180,
+            "file": "frames/frame-0180.png",
+            "raceTime": 38.509544372558594,
+            "normalizedProgress": 0.014688743278384209,
+            "speedKph": 257.2098388671875,
+            "energy01": 0.7852983474731445,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 181,
+            "file": "frames/frame-0181.png",
+            "raceTime": 38.549537658691406,
+            "normalizedProgress": 0.016225213184952736,
+            "speedKph": 256.1389465332031,
+            "energy01": 0.7900984287261963,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 182,
+            "file": "frames/frame-0182.png",
+            "raceTime": 38.59952926635742,
+            "normalizedProgress": 0.018140526488423347,
+            "speedKph": 254.25917053222656,
+            "energy01": 0.796098530292511,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 183,
+            "file": "frames/frame-0183.png",
+            "raceTime": 38.639522552490234,
+            "normalizedProgress": 0.019665135070681572,
+            "speedKph": 252.44032287597656,
+            "energy01": 0.8008986115455627,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 184,
+            "file": "frames/frame-0184.png",
+            "raceTime": 38.67951583862305,
+            "normalizedProgress": 0.02117723785340786,
+            "speedKph": 250.41526794433594,
+            "energy01": 0.8056986927986145,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 185,
+            "file": "frames/frame-0185.png",
+            "raceTime": 38.71950912475586,
+            "normalizedProgress": 0.022679483518004417,
+            "speedKph": 248.22833251953125,
+            "energy01": 0.8104987740516663,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 186,
+            "file": "frames/frame-0186.png",
+            "raceTime": 38.75950241088867,
+            "normalizedProgress": 0.024169709533452988,
+            "speedKph": 245.9744110107422,
+            "energy01": 0.815298855304718,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 187,
+            "file": "frames/frame-0187.png",
+            "raceTime": 38.799495697021484,
+            "normalizedProgress": 0.025649048388004303,
+            "speedKph": 243.72674560546875,
+            "energy01": 0.8200989365577698,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 188,
+            "file": "frames/frame-0188.png",
+            "raceTime": 38.8494873046875,
+            "normalizedProgress": 0.027481095865368843,
+            "speedKph": 241.00457763671875,
+            "energy01": 0.8260990381240845,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 189,
+            "file": "frames/frame-0189.png",
+            "raceTime": 38.88948059082031,
+            "normalizedProgress": 0.0289363581687212,
+            "speedKph": 239.14796447753906,
+            "energy01": 0.8308991193771362,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 190,
+            "file": "frames/frame-0190.png",
+            "raceTime": 38.929473876953125,
+            "normalizedProgress": 0.030378220602869987,
+            "speedKph": 238.07627868652344,
+            "energy01": 0.835699200630188,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 191,
+            "file": "frames/frame-0191.png",
+            "raceTime": 38.96946716308594,
+            "normalizedProgress": 0.03182307258248329,
+            "speedKph": 237.84243774414063,
+            "energy01": 0.8404992818832397,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 192,
+            "file": "frames/frame-0192.png",
+            "raceTime": 39.00946044921875,
+            "normalizedProgress": 0.03327087312936783,
+            "speedKph": 238.46969604492188,
+            "energy01": 0.8452993631362915,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 193,
+            "file": "frames/frame-0193.png",
+            "raceTime": 39.04945373535156,
+            "normalizedProgress": 0.03471696749329567,
+            "speedKph": 239.92544555664063,
+            "energy01": 0.8500994443893433,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 194,
+            "file": "frames/frame-0194.png",
+            "raceTime": 39.09944534301758,
+            "normalizedProgress": 0.036545298993587494,
+            "speedKph": 241.383056640625,
+            "energy01": 0.856099545955658,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 195,
+            "file": "frames/frame-0195.png",
+            "raceTime": 39.13943862915039,
+            "normalizedProgress": 0.038018859922885895,
+            "speedKph": 241.4022216796875,
+            "energy01": 0.8608996272087097,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 196,
+            "file": "frames/frame-0196.png",
+            "raceTime": 39.1794319152832,
+            "normalizedProgress": 0.0394926592707634,
+            "speedKph": 240.76361083984375,
+            "energy01": 0.8656997084617615,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 197,
+            "file": "frames/frame-0197.png",
+            "raceTime": 39.219425201416016,
+            "normalizedProgress": 0.04096319526433945,
+            "speedKph": 239.70387268066406,
+            "energy01": 0.8704997897148132,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 198,
+            "file": "frames/frame-0198.png",
+            "raceTime": 39.25941848754883,
+            "normalizedProgress": 0.04242798686027527,
+            "speedKph": 238.38241577148438,
+            "energy01": 0.875299870967865,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 199,
+            "file": "frames/frame-0199.png",
+            "raceTime": 39.29941177368164,
+            "normalizedProgress": 0.043870169669389725,
+            "speedKph": 236.96234130859375,
+            "energy01": 0.8800999522209167,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 200,
+            "file": "frames/frame-0200.png",
+            "raceTime": 39.349403381347656,
+            "normalizedProgress": 0.04569041356444359,
+            "speedKph": 236.06529235839844,
+            "energy01": 0.8861000537872314,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 201,
+            "file": "frames/frame-0201.png",
+            "raceTime": 39.38939666748047,
+            "normalizedProgress": 0.04712212085723877,
+            "speedKph": 236.27212524414063,
+            "energy01": 0.8909001350402832,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 202,
+            "file": "frames/frame-0202.png",
+            "raceTime": 39.42938995361328,
+            "normalizedProgress": 0.04857314005494118,
+            "speedKph": 237.2902069091797,
+            "energy01": 0.895700216293335,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 203,
+            "file": "frames/frame-0203.png",
+            "raceTime": 39.469383239746094,
+            "normalizedProgress": 0.05003201961517334,
+            "speedKph": 238.94546508789063,
+            "energy01": 0.9005002975463867,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 204,
+            "file": "frames/frame-0204.png",
+            "raceTime": 39.509376525878906,
+            "normalizedProgress": 0.05150042846798897,
+            "speedKph": 240.33616638183594,
+            "energy01": 0.9053003787994385,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 205,
+            "file": "frames/frame-0205.png",
+            "raceTime": 39.54936981201172,
+            "normalizedProgress": 0.05297413095831871,
+            "speedKph": 240.66416931152344,
+            "energy01": 0.9101004600524902,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 206,
+            "file": "frames/frame-0206.png",
+            "raceTime": 39.599361419677734,
+            "normalizedProgress": 0.05480609089136124,
+            "speedKph": 239.9910888671875,
+            "energy01": 0.9161005616188049,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 207,
+            "file": "frames/frame-0207.png",
+            "raceTime": 39.63935470581055,
+            "normalizedProgress": 0.05627155676484108,
+            "speedKph": 238.8988037109375,
+            "energy01": 0.9209006428718567,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 208,
+            "file": "frames/frame-0208.png",
+            "raceTime": 39.67934799194336,
+            "normalizedProgress": 0.057727959007024765,
+            "speedKph": 237.51092529296875,
+            "energy01": 0.9257007241249084,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 209,
+            "file": "frames/frame-0209.png",
+            "raceTime": 39.71934127807617,
+            "normalizedProgress": 0.0591735877096653,
+            "speedKph": 236.06626892089844,
+            "energy01": 0.9305008053779602,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 210,
+            "file": "frames/frame-0210.png",
+            "raceTime": 39.759334564208984,
+            "normalizedProgress": 0.06060953438282013,
+            "speedKph": 235.34902954101563,
+            "energy01": 0.935300886631012,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 211,
+            "file": "frames/frame-0211.png",
+            "raceTime": 39.7993278503418,
+            "normalizedProgress": 0.06202855706214905,
+            "speedKph": 235.48220825195313,
+            "energy01": 0.9401009678840637,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 212,
+            "file": "frames/frame-0212.png",
+            "raceTime": 39.84931945800781,
+            "normalizedProgress": 0.06382441520690918,
+            "speedKph": 236.77333068847656,
+            "energy01": 0.9461010694503784,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 213,
+            "file": "frames/frame-0213.png",
+            "raceTime": 39.889312744140625,
+            "normalizedProgress": 0.06526179611682892,
+            "speedKph": 238.31968688964844,
+            "energy01": 0.9509011507034302,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 214,
+            "file": "frames/frame-0214.png",
+            "raceTime": 39.92930603027344,
+            "normalizedProgress": 0.06669750064611435,
+            "speedKph": 239.7074432373047,
+            "energy01": 0.9557012319564819,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 215,
+            "file": "frames/frame-0215.png",
+            "raceTime": 39.96929931640625,
+            "normalizedProgress": 0.06814699620008469,
+            "speedKph": 240.9448699951172,
+            "energy01": 0.9605013132095337,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 216,
+            "file": "frames/frame-0216.png",
+            "raceTime": 40.00929260253906,
+            "normalizedProgress": 0.06960028409957886,
+            "speedKph": 242.046875,
+            "energy01": 0.9653013944625854,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 217,
+            "file": "frames/frame-0217.png",
+            "raceTime": 40.049285888671875,
+            "normalizedProgress": 0.07105650752782822,
+            "speedKph": 243.0279541015625,
+            "energy01": 0.9701014757156372,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 218,
+            "file": "frames/frame-0218.png",
+            "raceTime": 40.09927749633789,
+            "normalizedProgress": 0.07287959009408951,
+            "speedKph": 244.10601806640625,
+            "energy01": 0.9761015772819519,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 219,
+            "file": "frames/frame-0219.png",
+            "raceTime": 40.1392707824707,
+            "normalizedProgress": 0.07434109598398209,
+            "speedKph": 244.86524963378906,
+            "energy01": 0.9809016585350037,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 220,
+            "file": "frames/frame-0220.png",
+            "raceTime": 40.179264068603516,
+            "normalizedProgress": 0.07580593973398209,
+            "speedKph": 245.54307556152344,
+            "energy01": 0.9857017397880554,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 221,
+            "file": "frames/frame-0221.png",
+            "raceTime": 40.21925735473633,
+            "normalizedProgress": 0.07727420330047607,
+            "speedKph": 246.14759826660156,
+            "energy01": 0.9905018210411072,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 222,
+            "file": "frames/frame-0222.png",
+            "raceTime": 40.25925064086914,
+            "normalizedProgress": 0.07874910533428192,
+            "speedKph": 246.68807983398438,
+            "energy01": 0.9953019022941589,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 223,
+            "file": "frames/frame-0223.png",
+            "raceTime": 40.29924392700195,
+            "normalizedProgress": 0.08022408932447433,
+            "speedKph": 247.1739501953125,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 224,
+            "file": "frames/frame-0224.png",
+            "raceTime": 40.34923553466797,
+            "normalizedProgress": 0.08207391202449799,
+            "speedKph": 247.71730041503906,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 225,
+            "file": "frames/frame-0225.png",
+            "raceTime": 40.38922882080078,
+            "normalizedProgress": 0.08355478197336197,
+            "speedKph": 248.0969696044922,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 226,
+            "file": "frames/frame-0226.png",
+            "raceTime": 40.429222106933594,
+            "normalizedProgress": 0.0850369781255722,
+            "speedKph": 247.9822998046875,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 227,
+            "file": "frames/frame-0227.png",
+            "raceTime": 40.469215393066406,
+            "normalizedProgress": 0.08651702105998993,
+            "speedKph": 247.2985076904297,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 228,
+            "file": "frames/frame-0228.png",
+            "raceTime": 40.50920867919922,
+            "normalizedProgress": 0.08799780160188675,
+            "speedKph": 246.17770385742188,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 229,
+            "file": "frames/frame-0229.png",
+            "raceTime": 40.54920196533203,
+            "normalizedProgress": 0.08946510404348373,
+            "speedKph": 244.70924377441406,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 230,
+            "file": "frames/frame-0230.png",
+            "raceTime": 40.59919357299805,
+            "normalizedProgress": 0.09128860384225845,
+            "speedKph": 242.4818572998047,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 231,
+            "file": "frames/frame-0231.png",
+            "raceTime": 40.63918685913086,
+            "normalizedProgress": 0.09273228049278259,
+            "speedKph": 240.44850158691406,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 232,
+            "file": "frames/frame-0232.png",
+            "raceTime": 40.67918014526367,
+            "normalizedProgress": 0.09416913241147995,
+            "speedKph": 238.23495483398438,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 233,
+            "file": "frames/frame-0233.png",
+            "raceTime": 40.719173431396484,
+            "normalizedProgress": 0.09558653831481934,
+            "speedKph": 235.88491821289063,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 234,
+            "file": "frames/frame-0234.png",
+            "raceTime": 40.7591667175293,
+            "normalizedProgress": 0.09698978811502457,
+            "speedKph": 233.4461669921875,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 235,
+            "file": "frames/frame-0235.png",
+            "raceTime": 40.79916000366211,
+            "normalizedProgress": 0.09838344901800156,
+            "speedKph": 230.9473114013672,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 236,
+            "file": "frames/frame-0236.png",
+            "raceTime": 40.849151611328125,
+            "normalizedProgress": 0.10010050237178802,
+            "speedKph": 227.77236938476563,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 237,
+            "file": "frames/frame-0237.png",
+            "raceTime": 40.88914489746094,
+            "normalizedProgress": 0.10145556926727295,
+            "speedKph": 225.2119140625,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 238,
+            "file": "frames/frame-0238.png",
+            "raceTime": 40.92913818359375,
+            "normalizedProgress": 0.10279931128025055,
+            "speedKph": 222.64614868164063,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 239,
+            "file": "frames/frame-0239.png",
+            "raceTime": 40.96913146972656,
+            "normalizedProgress": 0.10412468761205673,
+            "speedKph": 220.0897674560547,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 240,
+            "file": "frames/frame-0240.png",
+            "raceTime": 41.009124755859375,
+            "normalizedProgress": 0.10543800890445709,
+            "speedKph": 217.65689086914063,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 241,
+            "file": "frames/frame-0241.png",
+            "raceTime": 41.04911804199219,
+            "normalizedProgress": 0.10673563182353973,
+            "speedKph": 215.4167938232422,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 242,
+            "file": "frames/frame-0242.png",
+            "raceTime": 41.0991096496582,
+            "normalizedProgress": 0.1083417683839798,
+            "speedKph": 212.93202209472656,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 243,
+            "file": "frames/frame-0243.png",
+            "raceTime": 41.139102935791016,
+            "normalizedProgress": 0.10961482673883438,
+            "speedKph": 211.2647247314453,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 244,
+            "file": "frames/frame-0244.png",
+            "raceTime": 41.17909622192383,
+            "normalizedProgress": 0.11088009923696518,
+            "speedKph": 209.97056579589844,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 245,
+            "file": "frames/frame-0245.png",
+            "raceTime": 41.21908950805664,
+            "normalizedProgress": 0.11213825643062592,
+            "speedKph": 209.07614135742188,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 246,
+            "file": "frames/frame-0246.png",
+            "raceTime": 41.25908279418945,
+            "normalizedProgress": 0.11339231580495834,
+            "speedKph": 208.62429809570313,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 247,
+            "file": "frames/frame-0247.png",
+            "raceTime": 41.299076080322266,
+            "normalizedProgress": 0.11464924365282059,
+            "speedKph": 208.67652893066406,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 248,
+            "file": "frames/frame-0248.png",
+            "raceTime": 41.34906768798828,
+            "normalizedProgress": 0.11622393131256104,
+            "speedKph": 209.5915985107422,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 249,
+            "file": "frames/frame-0249.png",
+            "raceTime": 41.389060974121094,
+            "normalizedProgress": 0.1174888014793396,
+            "speedKph": 211.07113647460938,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 250,
+            "file": "frames/frame-0250.png",
+            "raceTime": 41.429054260253906,
+            "normalizedProgress": 0.11876975744962692,
+            "speedKph": 211.65753173828125,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 251,
+            "file": "frames/frame-0251.png",
+            "raceTime": 41.46904754638672,
+            "normalizedProgress": 0.12004593014717102,
+            "speedKph": 211.26708984375,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 252,
+            "file": "frames/frame-0252.png",
+            "raceTime": 41.50904083251953,
+            "normalizedProgress": 0.12132982164621353,
+            "speedKph": 210.49942016601563,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 253,
+            "file": "frames/frame-0253.png",
+            "raceTime": 41.549034118652344,
+            "normalizedProgress": 0.12260091304779053,
+            "speedKph": 209.63467407226563,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 254,
+            "file": "frames/frame-0254.png",
+            "raceTime": 41.59902572631836,
+            "normalizedProgress": 0.12419385462999344,
+            "speedKph": 208.69007873535156,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 255,
+            "file": "frames/frame-0255.png",
+            "raceTime": 41.63901901245117,
+            "normalizedProgress": 0.12547218799591064,
+            "speedKph": 208.20211791992188,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 256,
+            "file": "frames/frame-0256.png",
+            "raceTime": 41.679012298583984,
+            "normalizedProgress": 0.1267366260290146,
+            "speedKph": 208.06553649902344,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 257,
+            "file": "frames/frame-0257.png",
+            "raceTime": 41.7190055847168,
+            "normalizedProgress": 0.12801876664161682,
+            "speedKph": 208.3771514892578,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 258,
+            "file": "frames/frame-0258.png",
+            "raceTime": 41.75899887084961,
+            "normalizedProgress": 0.12928980588912964,
+            "speedKph": 209.24037170410156,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 259,
+            "file": "frames/frame-0259.png",
+            "raceTime": 41.79899215698242,
+            "normalizedProgress": 0.1305873543024063,
+            "speedKph": 210.78245544433594,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 260,
+            "file": "frames/frame-0260.png",
+            "raceTime": 41.84898376464844,
+            "normalizedProgress": 0.13221554458141327,
+            "speedKph": 211.70416259765625,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 261,
+            "file": "frames/frame-0261.png",
+            "raceTime": 41.88897705078125,
+            "normalizedProgress": 0.13350945711135864,
+            "speedKph": 211.29164123535156,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 262,
+            "file": "frames/frame-0262.png",
+            "raceTime": 41.92897033691406,
+            "normalizedProgress": 0.1348229944705963,
+            "speedKph": 210.49095153808594,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 263,
+            "file": "frames/frame-0263.png",
+            "raceTime": 41.968963623046875,
+            "normalizedProgress": 0.1361108124256134,
+            "speedKph": 209.5966339111328,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 264,
+            "file": "frames/frame-0264.png",
+            "raceTime": 42.00895690917969,
+            "normalizedProgress": 0.13741806149482727,
+            "speedKph": 208.81065368652344,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 265,
+            "file": "frames/frame-0265.png",
+            "raceTime": 42.0489501953125,
+            "normalizedProgress": 0.13872316479682922,
+            "speedKph": 208.27993774414063,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 266,
+            "file": "frames/frame-0266.png",
+            "raceTime": 42.098941802978516,
+            "normalizedProgress": 0.14034076035022736,
+            "speedKph": 208.1468505859375,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 267,
+            "file": "frames/frame-0267.png",
+            "raceTime": 42.13893508911133,
+            "normalizedProgress": 0.1416204869747162,
+            "speedKph": 208.57838439941406,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 268,
+            "file": "frames/frame-0268.png",
+            "raceTime": 42.17892837524414,
+            "normalizedProgress": 0.14293040335178375,
+            "speedKph": 209.58718872070313,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 269,
+            "file": "frames/frame-0269.png",
+            "raceTime": 42.21892166137695,
+            "normalizedProgress": 0.14424796402454376,
+            "speedKph": 211.26638793945313,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 270,
+            "file": "frames/frame-0270.png",
+            "raceTime": 42.258914947509766,
+            "normalizedProgress": 0.14557626843452454,
+            "speedKph": 213.7259063720703,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 271,
+            "file": "frames/frame-0271.png",
+            "raceTime": 42.29890823364258,
+            "normalizedProgress": 0.1468908041715622,
+            "speedKph": 216.8074188232422,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 272,
+            "file": "frames/frame-0272.png",
+            "raceTime": 42.348899841308594,
+            "normalizedProgress": 0.14857341349124908,
+            "speedKph": 220.64292907714844,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 273,
+            "file": "frames/frame-0273.png",
+            "raceTime": 42.388893127441406,
+            "normalizedProgress": 0.14994390308856964,
+            "speedKph": 223.65928649902344,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 274,
+            "file": "frames/frame-0274.png",
+            "raceTime": 42.42888641357422,
+            "normalizedProgress": 0.15132777392864227,
+            "speedKph": 226.5502166748047,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 275,
+            "file": "frames/frame-0275.png",
+            "raceTime": 42.46887969970703,
+            "normalizedProgress": 0.15272387862205505,
+            "speedKph": 229.16616821289063,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 276,
+            "file": "frames/frame-0276.png",
+            "raceTime": 42.508872985839844,
+            "normalizedProgress": 0.1541176587343216,
+            "speedKph": 231.52603149414063,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 277,
+            "file": "frames/frame-0277.png",
+            "raceTime": 42.548866271972656,
+            "normalizedProgress": 0.15553607046604156,
+            "speedKph": 233.6524658203125,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 278,
+            "file": "frames/frame-0278.png",
+            "raceTime": 42.59885787963867,
+            "normalizedProgress": 0.15731611847877502,
+            "speedKph": 236.01422119140625,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 279,
+            "file": "frames/frame-0279.png",
+            "raceTime": 42.638851165771484,
+            "normalizedProgress": 0.1587531715631485,
+            "speedKph": 237.69027709960938,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 280,
+            "file": "frames/frame-0280.png",
+            "raceTime": 42.6788444519043,
+            "normalizedProgress": 0.16019690036773682,
+            "speedKph": 239.19606018066406,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 281,
+            "file": "frames/frame-0281.png",
+            "raceTime": 42.71883773803711,
+            "normalizedProgress": 0.16164088249206543,
+            "speedKph": 240.54795837402344,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 282,
+            "file": "frames/frame-0282.png",
+            "raceTime": 42.75883102416992,
+            "normalizedProgress": 0.16309703886508942,
+            "speedKph": 241.76101684570313,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 283,
+            "file": "frames/frame-0283.png",
+            "raceTime": 42.798824310302734,
+            "normalizedProgress": 0.16455714404582977,
+            "speedKph": 242.3121337890625,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 284,
+            "file": "frames/frame-0284.png",
+            "raceTime": 42.84881591796875,
+            "normalizedProgress": 0.16637970507144928,
+            "speedKph": 241.86329650878906,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 285,
+            "file": "frames/frame-0285.png",
+            "raceTime": 42.88880920410156,
+            "normalizedProgress": 0.16783173382282257,
+            "speedKph": 240.83335876464844,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 286,
+            "file": "frames/frame-0286.png",
+            "raceTime": 42.928802490234375,
+            "normalizedProgress": 0.16927692294120789,
+            "speedKph": 239.34292602539063,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 287,
+            "file": "frames/frame-0287.png",
+            "raceTime": 42.96879577636719,
+            "normalizedProgress": 0.17071087658405304,
+            "speedKph": 237.4811553955078,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 288,
+            "file": "frames/frame-0288.png",
+            "raceTime": 43.0087890625,
+            "normalizedProgress": 0.17213284969329834,
+            "speedKph": 235.31739807128906,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 289,
+            "file": "frames/frame-0289.png",
+            "raceTime": 43.04878234863281,
+            "normalizedProgress": 0.17353972792625427,
+            "speedKph": 232.9310760498047,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 290,
+            "file": "frames/frame-0290.png",
+            "raceTime": 43.09877395629883,
+            "normalizedProgress": 0.1752774715423584,
+            "speedKph": 229.73828125,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 291,
+            "file": "frames/frame-0291.png",
+            "raceTime": 43.13876724243164,
+            "normalizedProgress": 0.17665080726146698,
+            "speedKph": 226.71646118164063,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 292,
+            "file": "frames/frame-0292.png",
+            "raceTime": 43.17876052856445,
+            "normalizedProgress": 0.1780017912387848,
+            "speedKph": 223.2529754638672,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 293,
+            "file": "frames/frame-0293.png",
+            "raceTime": 43.218753814697266,
+            "normalizedProgress": 0.1793343871831894,
+            "speedKph": 219.6254119873047,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 294,
+            "file": "frames/frame-0294.png",
+            "raceTime": 43.25874710083008,
+            "normalizedProgress": 0.1806415170431137,
+            "speedKph": 215.982177734375,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 295,
+            "file": "frames/frame-0295.png",
+            "raceTime": 43.29874038696289,
+            "normalizedProgress": 0.1819303035736084,
+            "speedKph": 212.4075927734375,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 296,
+            "file": "frames/frame-0296.png",
+            "raceTime": 43.348731994628906,
+            "normalizedProgress": 0.18350866436958313,
+            "speedKph": 208.1105499267578,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 297,
+            "file": "frames/frame-0297.png",
+            "raceTime": 43.38872528076172,
+            "normalizedProgress": 0.1847507208585739,
+            "speedKph": 204.8452606201172,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 298,
+            "file": "frames/frame-0298.png",
+            "raceTime": 43.42871856689453,
+            "normalizedProgress": 0.1859697699546814,
+            "speedKph": 201.75502014160156,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 299,
+            "file": "frames/frame-0299.png",
+            "raceTime": 43.468711853027344,
+            "normalizedProgress": 0.18717439472675323,
+            "speedKph": 198.85281372070313,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 300,
+            "file": "frames/frame-0300.png",
+            "raceTime": 43.508705139160156,
+            "normalizedProgress": 0.18836188316345215,
+            "speedKph": 196.1494598388672,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 301,
+            "file": "frames/frame-0301.png",
+            "raceTime": 43.54869842529297,
+            "normalizedProgress": 0.18953052163124084,
+            "speedKph": 193.65562438964844,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 302,
+            "file": "frames/frame-0302.png",
+            "raceTime": 43.598690032958984,
+            "normalizedProgress": 0.19097568094730377,
+            "speedKph": 190.84873962402344,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 303,
+            "file": "frames/frame-0303.png",
+            "raceTime": 43.6386833190918,
+            "normalizedProgress": 0.19211450219154358,
+            "speedKph": 188.86656188964844,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 304,
+            "file": "frames/frame-0304.png",
+            "raceTime": 43.67867660522461,
+            "normalizedProgress": 0.19324442744255066,
+            "speedKph": 187.1361846923828,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 305,
+            "file": "frames/frame-0305.png",
+            "raceTime": 43.71866989135742,
+            "normalizedProgress": 0.19436463713645935,
+            "speedKph": 185.74220275878906,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 306,
+            "file": "frames/frame-0306.png",
+            "raceTime": 43.758663177490234,
+            "normalizedProgress": 0.19547735154628754,
+            "speedKph": 184.73886108398438,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 307,
+            "file": "frames/frame-0307.png",
+            "raceTime": 43.79865646362305,
+            "normalizedProgress": 0.19658581912517548,
+            "speedKph": 184.54083251953125,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 308,
+            "file": "frames/frame-0308.png",
+            "raceTime": 43.84864807128906,
+            "normalizedProgress": 0.19797497987747192,
+            "speedKph": 186.11679077148438,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 309,
+            "file": "frames/frame-0309.png",
+            "raceTime": 43.888641357421875,
+            "normalizedProgress": 0.1991005837917328,
+            "speedKph": 188.28794860839844,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 310,
+            "file": "frames/frame-0310.png",
+            "raceTime": 43.92863464355469,
+            "normalizedProgress": 0.20023520290851593,
+            "speedKph": 188.99977111816406,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 311,
+            "file": "frames/frame-0311.png",
+            "raceTime": 43.9686279296875,
+            "normalizedProgress": 0.20137189328670502,
+            "speedKph": 188.68943786621094,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 312,
+            "file": "frames/frame-0312.png",
+            "raceTime": 44.00862121582031,
+            "normalizedProgress": 0.20250599086284637,
+            "speedKph": 187.86297607421875,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 313,
+            "file": "frames/frame-0313.png",
+            "raceTime": 44.048614501953125,
+            "normalizedProgress": 0.20364151895046234,
+            "speedKph": 186.8254852294922,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 314,
+            "file": "frames/frame-0314.png",
+            "raceTime": 44.09860610961914,
+            "normalizedProgress": 0.2050446718931198,
+            "speedKph": 185.52882385253906,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 315,
+            "file": "frames/frame-0315.png",
+            "raceTime": 44.13859939575195,
+            "normalizedProgress": 0.2061716765165329,
+            "speedKph": 184.65634155273438,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 316,
+            "file": "frames/frame-0316.png",
+            "raceTime": 44.178592681884766,
+            "normalizedProgress": 0.2072872519493103,
+            "speedKph": 184.042724609375,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 317,
+            "file": "frames/frame-0317.png",
+            "raceTime": 44.21858596801758,
+            "normalizedProgress": 0.20840148627758026,
+            "speedKph": 184.24581909179688,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 318,
+            "file": "frames/frame-0318.png",
+            "raceTime": 44.25857925415039,
+            "normalizedProgress": 0.20953354239463806,
+            "speedKph": 185.6737823486328,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 319,
+            "file": "frames/frame-0319.png",
+            "raceTime": 44.2985725402832,
+            "normalizedProgress": 0.21066631376743317,
+            "speedKph": 188.04342651367188,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 320,
+            "file": "frames/frame-0320.png",
+            "raceTime": 44.34856414794922,
+            "normalizedProgress": 0.21211227774620056,
+            "speedKph": 189.29025268554688,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 321,
+            "file": "frames/frame-0321.png",
+            "raceTime": 44.38855743408203,
+            "normalizedProgress": 0.21326512098312378,
+            "speedKph": 189.01663208007813,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 322,
+            "file": "frames/frame-0322.png",
+            "raceTime": 44.428550720214844,
+            "normalizedProgress": 0.2144346833229065,
+            "speedKph": 188.16920471191406,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 323,
+            "file": "frames/frame-0323.png",
+            "raceTime": 44.468544006347656,
+            "normalizedProgress": 0.21558266878128052,
+            "speedKph": 187.079833984375,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 324,
+            "file": "frames/frame-0324.png",
+            "raceTime": 44.50853729248047,
+            "normalizedProgress": 0.2167467474937439,
+            "speedKph": 185.9728546142578,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 325,
+            "file": "frames/frame-0325.png",
+            "raceTime": 44.54853057861328,
+            "normalizedProgress": 0.21788586676120758,
+            "speedKph": 185.01638793945313,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 326,
+            "file": "frames/frame-0326.png",
+            "raceTime": 44.5985221862793,
+            "normalizedProgress": 0.21932707726955414,
+            "speedKph": 184.27780151367188,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 327,
+            "file": "frames/frame-0327.png",
+            "raceTime": 44.63851547241211,
+            "normalizedProgress": 0.2204732596874237,
+            "speedKph": 184.86572265625,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 328,
+            "file": "frames/frame-0328.png",
+            "raceTime": 44.67850875854492,
+            "normalizedProgress": 0.22165906429290771,
+            "speedKph": 186.5932159423828,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 329,
+            "file": "frames/frame-0329.png",
+            "raceTime": 44.718502044677734,
+            "normalizedProgress": 0.2228202223777771,
+            "speedKph": 189.23793029785156,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 330,
+            "file": "frames/frame-0330.png",
+            "raceTime": 44.75849533081055,
+            "normalizedProgress": 0.224028542637825,
+            "speedKph": 192.53025817871094,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 331,
+            "file": "frames/frame-0331.png",
+            "raceTime": 44.79848861694336,
+            "normalizedProgress": 0.22522300481796265,
+            "speedKph": 195.83779907226563,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 332,
+            "file": "frames/frame-0332.png",
+            "raceTime": 44.848480224609375,
+            "normalizedProgress": 0.2267620712518692,
+            "speedKph": 199.93035888671875,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 333,
+            "file": "frames/frame-0333.png",
+            "raceTime": 44.88847351074219,
+            "normalizedProgress": 0.22802075743675232,
+            "speedKph": 203.1688690185547,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 334,
+            "file": "frames/frame-0334.png",
+            "raceTime": 44.928466796875,
+            "normalizedProgress": 0.22927145659923553,
+            "speedKph": 206.37094116210938,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 335,
+            "file": "frames/frame-0335.png",
+            "raceTime": 44.96846008300781,
+            "normalizedProgress": 0.23055988550186157,
+            "speedKph": 209.53201293945313,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 336,
+            "file": "frames/frame-0336.png",
+            "raceTime": 45.008453369140625,
+            "normalizedProgress": 0.23184412717819214,
+            "speedKph": 212.64854431152344,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 337,
+            "file": "frames/frame-0337.png",
+            "raceTime": 45.04844665527344,
+            "normalizedProgress": 0.2331618070602417,
+            "speedKph": 215.71868896484375,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 338,
+            "file": "frames/frame-0338.png",
+            "raceTime": 45.09843826293945,
+            "normalizedProgress": 0.23482124507427216,
+            "speedKph": 219.49066162109375,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 339,
+            "file": "frames/frame-0339.png",
+            "raceTime": 45.138431549072266,
+            "normalizedProgress": 0.23617051541805267,
+            "speedKph": 222.45663452148438,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 340,
+            "file": "frames/frame-0340.png",
+            "raceTime": 45.17842483520508,
+            "normalizedProgress": 0.23752349615097046,
+            "speedKph": 225.366943359375,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 341,
+            "file": "frames/frame-0341.png",
+            "raceTime": 45.21841812133789,
+            "normalizedProgress": 0.2389017790555954,
+            "speedKph": 228.05523681640625,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 342,
+            "file": "frames/frame-0342.png",
+            "raceTime": 45.2584114074707,
+            "normalizedProgress": 0.24028511345386505,
+            "speedKph": 230.48843383789063,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 343,
+            "file": "frames/frame-0343.png",
+            "raceTime": 45.298404693603516,
+            "normalizedProgress": 0.24168847501277924,
+            "speedKph": 232.69113159179688,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 344,
+            "file": "frames/frame-0344.png",
+            "raceTime": 45.34839630126953,
+            "normalizedProgress": 0.24345476925373077,
+            "speedKph": 235.15438842773438,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 345,
+            "file": "frames/frame-0345.png",
+            "raceTime": 45.388389587402344,
+            "normalizedProgress": 0.2448769211769104,
+            "speedKph": 236.9175262451172,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 346,
+            "file": "frames/frame-0346.png",
+            "raceTime": 45.428382873535156,
+            "normalizedProgress": 0.24631239473819733,
+            "speedKph": 238.51614379882813,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 347,
+            "file": "frames/frame-0347.png",
+            "raceTime": 45.46837615966797,
+            "normalizedProgress": 0.2477557510137558,
+            "speedKph": 239.96682739257813,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 348,
+            "file": "frames/frame-0348.png",
+            "raceTime": 45.50836944580078,
+            "normalizedProgress": 0.24920471012592316,
+            "speedKph": 241.28475952148438,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 349,
+            "file": "frames/frame-0349.png",
+            "raceTime": 45.548362731933594,
+            "normalizedProgress": 0.25066277384757996,
+            "speedKph": 242.483642578125,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 350,
+            "file": "frames/frame-0350.png",
+            "raceTime": 45.59835433959961,
+            "normalizedProgress": 0.2524937391281128,
+            "speedKph": 243.8336944580078,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 351,
+            "file": "frames/frame-0351.png",
+            "raceTime": 45.63834762573242,
+            "normalizedProgress": 0.25396502017974854,
+            "speedKph": 244.80848693847656,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 352,
+            "file": "frames/frame-0352.png",
+            "raceTime": 45.678340911865234,
+            "normalizedProgress": 0.2554423213005066,
+            "speedKph": 245.70057678222656,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 353,
+            "file": "frames/frame-0353.png",
+            "raceTime": 45.71833419799805,
+            "normalizedProgress": 0.2569235563278198,
+            "speedKph": 245.54481506347656,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 354,
+            "file": "frames/frame-0354.png",
+            "raceTime": 45.75832748413086,
+            "normalizedProgress": 0.2583983540534973,
+            "speedKph": 243.2478485107422,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 355,
+            "file": "frames/frame-0355.png",
+            "raceTime": 45.79832077026367,
+            "normalizedProgress": 0.25985589623451233,
+            "speedKph": 239.64955139160156,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 356,
+            "file": "frames/frame-0356.png",
+            "raceTime": 45.84831237792969,
+            "normalizedProgress": 0.26164406538009644,
+            "speedKph": 234.15553283691406,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 357,
+            "file": "frames/frame-0357.png",
+            "raceTime": 45.8883056640625,
+            "normalizedProgress": 0.26304349303245544,
+            "speedKph": 229.33297729492188,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 358,
+            "file": "frames/frame-0358.png",
+            "raceTime": 45.92829895019531,
+            "normalizedProgress": 0.2644140422344208,
+            "speedKph": 225.1426239013672,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        },
+        {
+            "frameIndex": 359,
+            "file": "frames/frame-0359.png",
+            "raceTime": 45.968292236328125,
+            "normalizedProgress": 0.26576265692710876,
+            "speedKph": 222.4610595703125,
+            "energy01": 1.0,
+            "isBoosting": false,
+            "isGrounded": true
+        }
+    ]
+}

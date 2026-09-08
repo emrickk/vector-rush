@@ -1,0 +1,16 @@
+{
+  "scope": "Matched native fog-on/off title capture from last built Night03/V2 app, before V3 integration. No source changes applied during comparison. Atmosphere effect is subtle in viewed captures; this is not a final scene-quality pass.",
+  "build_identity": {
+    "UnityProject/Assets/Resources/Art/HeroShip.fbx": "61f634392f52c054a152641f16770b10b3c6eab7d37f5323cb627d2c084ee035",
+    "UnityProject/Assets/Scripts/Presentation/ShipInspection.cs": "d1f0a9b1228364e1fed682b7852b7c6f63d9af9e4896062f8885b04d7b29d347",
+    "UnityProject/Assets/Scripts/VectorBootstrap.cs": "cd28b84de740cd75b4172cb598d4c9462a1104a562d020d91f4585c88da7574a",
+    "Builds/Vector Rush.app/Contents/MacOS/Vector Rush": "1249efea28569ab24c40f9e6234ad048ec2099a69870f45ed2ab5e837acfa615",
+    "Builds/Vector Rush.app/Contents/Resources/Data/globalgamemanagers": "ce5202d1b91a8974655f22573b90f16020de1f91c6d50c7cc39f3bef03349a72"
+  },
+  "difference_mean_rgb_8bit": [
+    0.3646460262345679,
+    0.44110966435185184,
+    0.5590788966049383
+  ],
+  "analysis_limit": "Nonzero image difference includes some frame-dependent rendering; visual comparison remains the basis for atmosphere assessment."
+}

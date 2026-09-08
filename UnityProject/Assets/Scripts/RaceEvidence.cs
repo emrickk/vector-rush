@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using UnityEngine;
 using UnityEngine.Profiling;
@@ -14,6 +15,7 @@ namespace VectorRush
         readonly List<float> frames=new List<float>();
         string folder;float started;bool collecting;bool autopilot;bool quitAfter;bool recordReplay;bool quickEvidence;bool diagnosticRoad;bool diagnosticAO;bool inspectCoast;
         float nextTelemetry;bool capturedCrest,capturedDescent,diagnosticFog;
+        float recordDelaySeconds=18f;
         IEnumerator Start()
         {
             string[] args=Environment.GetCommandLineArgs();
@@ -22,6 +24,13 @@ namespace VectorRush
                 if(args[i]=="-autopilot")autopilot=true;
                 if(args[i]=="-quitAfterEvidence")quitAfter=true;
                 if(args[i]=="-recordReplay")recordReplay=true;
+                if(args[i]=="-recordDelaySeconds")
+                {
+                    if(i+1<args.Length && float.TryParse(args[i+1],NumberStyles.Float,CultureInfo.InvariantCulture,out float delay) &&
+                       !float.IsNaN(delay) && !float.IsInfinity(delay) && delay>=0f && delay<=120f)
+                    { recordDelaySeconds=delay; i++; }
+                    else { recordDelaySeconds=18f; Debug.LogWarning("Invalid -recordDelaySeconds: expected a finite number from 0 through 120. Using the default 18-second delay."); }
+                }
                 if(args[i]=="-quickEvidence")quickEvidence=true;
                 if(args[i]=="-diagnosticRoad")diagnosticRoad=true;
                 if(args[i]=="-diagnosticAO")diagnosticAO=true;
@@ -125,17 +134,58 @@ namespace VectorRush
         }
         IEnumerator RecordReplay()
         {
-            yield return new WaitForSecondsRealtime(18);
+            yield return new WaitForSecondsRealtime(recordDelaySeconds);
             string frameFolder=Path.Combine(folder,"frames");Directory.CreateDirectory(frameFolder);
             // Deterministic simulation-time capture. This mode does not collect performance measurements.
-            Time.captureFramerate=24;
-            for(int i=0;i<360;i++){
-                yield return new WaitForEndOfFrame();
-                ScreenCapture.CaptureScreenshot(Path.Combine(frameFolder,$"frame-{i:D04}.png"));
+            var director=VectorBootstrap.Instance.Director; var player=director.Player;
+            int originalCaptureFramerate=Time.captureFramerate;
+            var metadata=new ReplayMetadata
+            {
+                startedUtc=DateTime.UtcNow.ToString("o"), delaySeconds=recordDelaySeconds,
+                automatedSteering=player.AutopilotForTesting,
+                scope="Actual native Unity gameplay through normal vehicle physics. The automatedSteering field records whether testing autopilot was enabled; boost is observed, never forced by recording. Time.captureFramerate=24 advances simulation at a fixed frame interval. This is not a real-time performance measurement. Delay is real time after the start screenshot. Telemetry is sampled at WaitForEndOfFrame immediately before each screenshot request; file records identify requested PNGs, not independently verified image writes. normalizedProgress is the current lap's 0–1 track position; energy01 is remaining boost energy."
+            };
+            try
+            {
+                Time.captureFramerate=24;
+                for(int i=0;i<360;i++)
+                {
+                    yield return new WaitForEndOfFrame();
+                    string filename=$"frame-{i:D04}.png";
+                    var frame=new ReplayFrame
+                    {
+                        frameIndex=i, file="frames/"+filename, raceTime=director.RaceTime,
+                        normalizedProgress=player.TrackProgress, speedKph=player.SpeedKph,
+                        isBoosting=player.IsBoosting, energy01=player.Boost01, isGrounded=player.IsGrounded
+                    };
+                    ScreenCapture.CaptureScreenshot(Path.Combine(frameFolder,filename));
+                    metadata.frames.Add(frame);
+                }
+                metadata.allFramesRequested=true;
             }
-            Time.captureFramerate=0;
-            File.WriteAllText(Path.Combine(folder,"replay-info.txt"),"Actual native Unity gameplay, automated steering through normal vehicle physics. 360 frames at 24 simulation frames per second; 15 seconds. Separate capture run, not a real-time performance measurement.\n");
+            finally
+            {
+                Time.captureFramerate=originalCaptureFramerate;
+                metadata.finishedUtc=DateTime.UtcNow.ToString("o");
+                File.WriteAllText(Path.Combine(folder,"replay-metadata.json"),JsonUtility.ToJson(metadata,true));
+            }
+            File.WriteAllText(Path.Combine(folder,"replay-info.txt"),$"Actual native Unity gameplay through normal vehicle physics. Automated steering: {metadata.automatedSteering}. 360 frames at 24 simulation frames per second; 15 seconds. Separate capture run, not a real-time performance measurement. Per-frame propulsion context and capture scope are in replay-metadata.json.\n");
             if(quitAfter){yield return new WaitForSecondsRealtime(2);Application.Quit();}
+        }
+        [Serializable] sealed class ReplayMetadata
+        {
+            public string scope,startedUtc,finishedUtc;
+            public int captureFramerate=24,expectedFrames=360;
+            public float delaySeconds;
+            public bool automatedSteering,allFramesRequested;
+            public List<ReplayFrame> frames=new List<ReplayFrame>();
+        }
+        [Serializable] sealed class ReplayFrame
+        {
+            public int frameIndex;
+            public string file;
+            public float raceTime,normalizedProgress,speedKph,energy01;
+            public bool isBoosting,isGrounded;
         }
         void Update()
         {

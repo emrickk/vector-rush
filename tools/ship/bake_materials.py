@@ -35,13 +35,18 @@ scene.render.bake.margin = 16
 scene.render.bake.use_selected_to_active = False
 runtime_collection = bpy.data.collections.get('EXPORT_RUNTIME')
 if runtime_collection:
+    runtime_collection.hide_render = False
+    runtime_collection.hide_viewport = False
     runtime = [o for o in runtime_collection.all_objects if o.type == 'MESH']
 else:
     runtime = [o for o in scene.objects if o.type == 'MESH' and o.name.startswith('Kestrel07_')]
 if not runtime:
     raise RuntimeError('No EXPORT_RUNTIME collection or Kestrel07_ runtime meshes found.')
+studio_visibility = {}
 for o in scene.objects:
     if o.type == 'MESH':
+        if o.name.startswith('STUDIO'):
+            studio_visibility[o.name] = (o.hide_render, o.hide_get())
         o.hide_render = o not in runtime
         o.hide_set(o not in runtime)
 for o in runtime:
@@ -92,6 +97,9 @@ def save(image, name):
 
 
 def coating(obj, key, base, metallic, roughness, seed):
+    original_material = obj.data.materials[0]
+    original_livery = original_material.node_tree.nodes.get('SHIP_LIVERY') if original_material.use_nodes else None
+    livery_group = original_livery.node_tree if original_livery and original_livery.type == 'GROUP' else None
     panel_tones(obj.data, seed)
     mat = bpy.data.materials.new('Baked coating / ' + key)
     mat.use_nodes = True
@@ -126,7 +134,14 @@ def coating(obj, key, base, metallic, roughness, seed):
     tint.inputs[0].default_value = 1
     tint.inputs[2].default_value = (*base, 1)
     links.new(tone.outputs['Color'], tint.inputs[1])
-    links.new(tint.outputs[0], bsdf.inputs['Base Color'])
+    final_color = tint.outputs[0]
+    if livery_group:
+        livery = nodes.new('ShaderNodeGroup')
+        livery.name = 'SHIP_LIVERY'
+        livery.node_tree = livery_group
+        links.new(final_color, livery.inputs['BaseColor'])
+        final_color = livery.outputs['Color']
+    links.new(final_color, bsdf.inputs['Base Color'])
     obj.data.materials.clear()
     obj.data.materials.append(mat)
     bpy.ops.object.select_all(action='DESELECT')
@@ -137,7 +152,7 @@ def coating(obj, key, base, metallic, roughness, seed):
     records = [save(normal, key + '_Normal')]
     emission = nodes.new('ShaderNodeEmission')
     links.new(emission.outputs[0], output.inputs['Surface'])
-    links.new(tint.outputs[0], emission.inputs['Color'])
+    links.new(final_color, emission.inputs['Color'])
     color = image_node(mat, key + '_BaseColor', 'sRGB')
     bpy.ops.object.bake(type='EMIT')
     records.append(save(color, key + '_BaseColor'))
@@ -177,5 +192,10 @@ for key, (base, metallic, roughness, seed) in settings.items():
         raise RuntimeError(f'Expected one joined runtime object for {key}, found {len(candidates)}')
     manifest['materials'][key] = coating(candidates[0], key, base, metallic, roughness, seed)
 (out / 'material-manifest.json').write_text(json.dumps(manifest, indent=2) + '\n')
+for name, (hidden_render, hidden_view) in studio_visibility.items():
+    obj = bpy.data.objects.get(name)
+    if obj:
+        obj.hide_render = hidden_render
+        obj.hide_set(hidden_view)
 bpy.ops.wm.save_as_mainfile(filepath=str(out / 'Kestrel07-baked-materials.blend'))
 print('SHIP_MATERIAL_BAKE_COMPLETE', str(out))

@@ -1,0 +1,123 @@
+{
+  "revision": "pass-03-finish",
+  "resolution": [
+    1600,
+    1200
+  ],
+  "neutral_white_studio": true,
+  "bloom": false,
+  "view_transform": "AgX",
+  "views": [
+    [
+      "01-neutral-rear-quarter",
+      [
+        -8,
+        10,
+        6
+      ],
+      [
+        0,
+        0,
+        0.2
+      ],
+      9.6,
+      false,
+      "ORTHO"
+    ],
+    [
+      "02-neutral-chase",
+      [
+        0,
+        10,
+        4.4
+      ],
+      [
+        0,
+        -0.8,
+        0.05
+      ],
+      9.6,
+      false,
+      "ORTHO"
+    ],
+    [
+      "03-neutral-front-quarter",
+      [
+        9,
+        -11,
+        7
+      ],
+      [
+        0,
+        -0.1,
+        0.1
+      ],
+      9.6,
+      false,
+      "ORTHO"
+    ],
+    [
+      "04-livery-top",
+      [
+        0,
+        -0.001,
+        15
+      ],
+      [
+        0,
+        -0.2,
+        0
+      ],
+      10,
+      false,
+      "ORTHO"
+    ],
+    [
+      "05-engine-detail",
+      [
+        -3.5,
+        7,
+        2.8
+      ],
+      [
+        -1.15,
+        2.6,
+        0.02
+      ],
+      4.2,
+      false,
+      "ORTHO"
+    ]
+  ],
+  "perspective_focal_length_mm": 45,
+  "samples": 32,
+  "denoising": false,
+  "threads": 4,
+  "render_resume": {
+    "reason": "CPU OIDN denoiser delayed output; same saved geometry and lighting resumed without denoising",
+    "denoising": false,
+    "samples": 32,
+    "threads": 4,
+    "existing_01_samples": 32,
+    "priority": "side, top, chase first; existing images preserved"
+  },
+  "completion_status": "One bounded finish preview complete; further views intentionally deferred to parent baked/native review",
+  "completed_views": [
+    {
+      "file": "01-neutral-rear-quarter.png",
+      "samples": 32,
+      "threads": 4,
+      "denoising": false,
+      "resolution": [
+        1600,
+        1200
+      ]
+    }
+  ],
+  "deferred_views": [
+    "02-neutral-chase",
+    "03-neutral-front-quarter",
+    "04-livery-top",
+    "05-engine-detail"
+  ]
+}

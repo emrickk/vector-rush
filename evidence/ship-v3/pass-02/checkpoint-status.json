@@ -1,7 +1,7 @@
 {
   "revision": "pass-02",
-  "status": "staged geometry checkpoint; final hero approval pending",
-  "stop_reason": "User requested wrap-up; no further render/iteration started after stop instruction",
+  "status": "form ready to advance; major shape frozen",
+  "stop_reason": "After report005 accepted practical form readiness, remaining optional form views were stopped to prioritize finish/native work.",
   "source": "SourceAssets/hero-v3/pass-02/Kestrel07-v3.blend",
   "fbx": "SourceAssets/hero-v3/pass-02/HeroShip.fbx",
   "source_sha256": "9660afd26a8ca522bc119f8811a80b06997f61f63ec81cefeccdbd16dd2c5f23",
@@ -14,6 +14,12 @@
   "triangles": 38036,
   "completed_evidence": [
     "01-clay-rear-quarter.png",
+    "02-neutral-rear-quarter.png",
+    "03-clay-front-quarter.png",
+    "05-clay-chase.png",
+    "06-neutral-chase.png",
+    "07-clay-top.png",
+    "08-clay-side.png",
     "export-audit.json",
     "capture-contract.json"
   ],
@@ -23,11 +29,11 @@
     "all_fbx_manifold_with_valid_tangents": true,
     "runtime_fbx_triangle_count_matches": true
   },
-  "visual_status": "Independent reviewer judged the rear clay coherent enough to advance under updated practical target, conditional on unrendered side/top/chase confirmation. No overall gate/native/material approval.",
+  "visual_status": "Independent reviewer accepted practical form readiness across rear/top/side/chase in docs/ship-reviews/005-form-readiness-pass-02.md. Major shape frozen; finish/native/motion gates remain pending.",
   "pending": [
-    "Side/top/chase and remaining neutral views",
-    "Material finish, livery and baking",
-    "Native Unity import/material/propulsion verification",
+    "Optional form neutral-front and two perspective captures",
+    "Material finish, livery and baking (separate pass-03-finish)",
+    "Native Unity material/propulsion verification",
     "Native gameplay motion review"
   ],
   "runtime_uv_contract": "Unique SmartProject atlas AFTER joining by material; EXPORT_RUNTIME is exact FBX source. Do not re-unwrap after baking.",

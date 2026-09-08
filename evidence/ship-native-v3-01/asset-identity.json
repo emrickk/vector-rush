@@ -1,0 +1,131 @@
+{
+  "scope": "NativeV3candidate: pass03-finish FBX + pass03-maps-01 baked maps. Actual game inspection; no finalquality verdict.",
+  "files_sha256": {
+    "UnityProject/Assets/Resources/Art/HeroShip.fbx": "0415a4a829347f6556f0f8ba1274ebbbd949b5bf6cf6ae128218c4bbd5eb436e",
+    "UnityProject/Assets/Resources/Art/HeroShipEngineAnchors.json": "ade72d97ffe3c6ce32b360544272cc993199cf3026840503577ff7f356a0718d",
+    "UnityProject/Assets/Scripts/Presentation/ShipInspection.cs": "d1f0a9b1228364e1fed682b7852b7c6f63d9af9e4896062f8885b04d7b29d347",
+    "UnityProject/Assets/Scripts/VectorBootstrap.cs": "532076aab9339441d117f74d4b944b05f401584a3062fcb72c13ec697ef79aef",
+    "Builds/Vector Rush.app/Contents/MacOS/Vector Rush": "937fe4d8d786ec74e5a660fdf80a0a8a9aff51f18e8f81d580e676f199db4f2c",
+    "Builds/Vector Rush.app/Contents/Resources/Data/globalgamemanagers": "50e70f4844dc3d042be9ad6d6276388eb7d1a26eadaa5d1a9d4fc80c070fc402"
+  },
+  "map_manifest": {
+    "input_blend": "/Users/anping/Documents/Stuff/AI Space/Vector Rush/SourceAssets/hero-v3/pass-03-finish/Kestrel07-v3.blend",
+    "input_sha256": "e07cde687c143f73fba4a62cfbfae070286cc0edba0c426d259fd0efac83fcfc",
+    "size": 1024,
+    "scope": "Candidate coatings baked into existing runtime UVs. Geometry and UV coordinates are unchanged. No visual acceptance implied.",
+    "normal_convention": "Tangent space, OpenGL +Y; import as Unity NormalMap without green inversion.",
+    "packed_contract": "MetallicSmoothness RGB metallic, A 1 minus linear roughness; import linear. Occlusion green channel, linear. BaseColor sRGB.",
+    "materials": {
+      "Ivory": [
+        {
+          "file": "Ivory_Normal.png",
+          "sha256": "852392b95eaded0ce8e2e5a5b55036c3ede5d652234f429004783b1f5a339742",
+          "color_space": "Non-Color"
+        },
+        {
+          "file": "Ivory_BaseColor.png",
+          "sha256": "c4fcaeb7b6a8b00baca2c3c17a1f09e213ce46d752bc26c4456626930fd36056",
+          "color_space": "sRGB"
+        },
+        {
+          "file": "Ivory_Roughness.png",
+          "sha256": "cff394fe733ac6b50eae87ff816ce696bfde40af4cfd60bfeff5f8bd05578b63",
+          "color_space": "Non-Color"
+        },
+        {
+          "file": "Ivory_MetallicSmoothness.png",
+          "sha256": "f7d2eaa82f748454bef75030be7ee450de64738a2ef03686f02a304246efef53",
+          "color_space": "Non-Color"
+        },
+        {
+          "file": "Ivory_Occlusion.png",
+          "sha256": "a527cad19b3cb389f916e41e0092c7aae56ed48b29dadc0ea6f5a4045cc239c5",
+          "color_space": "Non-Color"
+        }
+      ],
+      "Graphite": [
+        {
+          "file": "Graphite_Normal.png",
+          "sha256": "44f6a1948824364de726804b36d6a2e500eff081aa8423ea8de72cfeb606f883",
+          "color_space": "Non-Color"
+        },
+        {
+          "file": "Graphite_BaseColor.png",
+          "sha256": "d14f767965a7d023fc1fa06c0c83b79d7e06dd831405139aeaff51885a1687c7",
+          "color_space": "sRGB"
+        },
+        {
+          "file": "Graphite_Roughness.png",
+          "sha256": "11a18830a2857649602309f3653499c6c01302edfefb8a9f369d5e22f2821cf8",
+          "color_space": "Non-Color"
+        },
+        {
+          "file": "Graphite_MetallicSmoothness.png",
+          "sha256": "1b31c11e867d83ac415df58ae0becd6ad544f3d987b6017312bdf565686c533e",
+          "color_space": "Non-Color"
+        },
+        {
+          "file": "Graphite_Occlusion.png",
+          "sha256": "67849ce65e004acc00541ddee1243340e3929d24345ce0e08405e63f221f6187",
+          "color_space": "Non-Color"
+        }
+      ],
+      "Metal": [
+        {
+          "file": "Metal_Normal.png",
+          "sha256": "28d0ec4e63ece9504a0b2e252deca7daaa68df530cf7645ae78b50091cc99527",
+          "color_space": "Non-Color"
+        },
+        {
+          "file": "Metal_BaseColor.png",
+          "sha256": "b206919faad0f67f4f07579d9b66f381a55dd8eac44b971682cc7cce29b32da7",
+          "color_space": "sRGB"
+        },
+        {
+          "file": "Metal_Roughness.png",
+          "sha256": "92b246390749a14058df7b008b94cdf3876e7f8d1153d61d9fff3a750c59793b",
+          "color_space": "Non-Color"
+        },
+        {
+          "file": "Metal_MetallicSmoothness.png",
+          "sha256": "fab7d63ba08b03dd42c6928a669a1c92c9283a68a35f10d7a4b3edccc3658f2b",
+          "color_space": "Non-Color"
+        },
+        {
+          "file": "Metal_Occlusion.png",
+          "sha256": "295b4e589c39131b061a6c86215ed3c6d4a437fc74b577e4eb3ce706ea8d3aa8",
+          "color_space": "Non-Color"
+        }
+      ],
+      "Ceramic": [
+        {
+          "file": "Ceramic_Normal.png",
+          "sha256": "46d3c88f2eab139838b87fd3a7ae56c1a5f009d1a06d46c279a19e59eb9609a2",
+          "color_space": "Non-Color"
+        },
+        {
+          "file": "Ceramic_BaseColor.png",
+          "sha256": "24e519f7ab40414851755d3c3c7daea25b97e2f5a043fe7e0a7240cb9152b6cc",
+          "color_space": "sRGB"
+        },
+        {
+          "file": "Ceramic_Roughness.png",
+          "sha256": "ab014c54ffd9723174406d0147298783ea51a07fc57c44a9099d6488c8a1c981",
+          "color_space": "Non-Color"
+        },
+        {
+          "file": "Ceramic_MetallicSmoothness.png",
+          "sha256": "a233028cb3b906844f6b5b12c44d0afc80cb6173e04aa0880dc659efa43272fb",
+          "color_space": "Non-Color"
+        },
+        {
+          "file": "Ceramic_Occlusion.png",
+          "sha256": "49c5029fa0f7a3f86f50ac9c63a52f207b0727179312045b3da434a4c06f615a",
+          "color_space": "Non-Color"
+        }
+      ]
+    }
+  },
+  "native_exit_code": 0,
+  "build_succeeded": true
+}

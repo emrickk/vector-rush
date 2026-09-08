@@ -1,0 +1,16 @@
+{
+  "size": [
+    2048,
+    4096
+  ],
+  "space": "Blender source/world metres",
+  "projection": "XY; U=(X+2.75)/5.5, V=(Y+3.6)/7.2; normal Z and position Z limit paint to upper surfaces",
+  "channels": {
+    "R": "graphite paint mask",
+    "G": "citron paint mask",
+    "B": "reserved"
+  },
+  "read_direction": "From rear: source -X is screen right; source -Y is screen up",
+  "number": "07, authored filled stencil glyphs",
+  "geometry": "No added plaque, text mesh or overlapping decal faces"
+}

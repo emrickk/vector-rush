@@ -1,0 +1,41 @@
+{
+  "scope": "Cycles inspection of the exact runtime meshes with baked maps, original fixed studio lights, no bloom. Not native game evidence.",
+  "blend": "/Users/anping/Documents/Stuff/AI Space/Vector Rush/SourceAssets/hero-v3/pass-03-maps-01/Kestrel07-baked-materials.blend",
+  "sha256": "31e9fa53449f1ca0b0441e3efc6d4470bae9c9ca7030490f6ace06d9864593b4",
+  "resolution": [
+    1600,
+    1200
+  ],
+  "samples": 32,
+  "denoising": false,
+  "projection": "ORTHO",
+  "ortho_scale": 9.6,
+  "views": [
+    [
+      "01-baked-rear",
+      [
+        -8,
+        10,
+        6
+      ],
+      [
+        0,
+        0,
+        0.2
+      ]
+    ],
+    [
+      "02-baked-chase",
+      [
+        0,
+        10,
+        4.4
+      ],
+      [
+        0,
+        -0.8,
+        0.05
+      ]
+    ]
+  ]
+}

@@ -1,0 +1,26 @@
+00:01.664  blend            | Read blend: "/Users/anping/Documents/Stuff/AI Space/Vector Rush/SourceAssets/hero-v3/pass-03-finish/Kestrel07-v3.blend"
+/Users/anping/Documents/Stuff/AI Space/Vector Rush/tools/ship/bake_materials.py:101: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  original_livery = original_material.node_tree.nodes.get('SHIP_LIVERY') if original_material.use_nodes else None
+/Users/anping/Documents/Stuff/AI Space/Vector Rush/tools/ship/bake_materials.py:105: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  mat.use_nodes = True
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Saved as "Kestrel07-baked-materials.blend"
+SHIP_MATERIAL_BAKE_COMPLETE /Users/anping/Documents/Stuff/AI Space/Vector Rush/SourceAssets/hero-v3/pass-03-maps-01
+Blender 5.2.0 LTS (hash fbe6228777e7 built 2026-07-14 01:31:22)
+
+Blender quit

@@ -29,17 +29,19 @@ namespace VectorRush
             var color=profile.Add<ColorAdjustments>();color.postExposure.Override(.3f);color.contrast.Override(3);color.saturation.Override(3);
             var vignette=profile.Add<Vignette>();vignette.intensity.Override(.16f);vignette.smoothness.Override(.65f);
             var volume=new GameObject("Race grade").AddComponent<Volume>();volume.isGlobal=true;volume.profile=profile;
-            var craftIvory=world.MakeMaterial("Craft pearl ceramic",new Color(.72f,.78f,.83f),.58f,.18f);
-            var craftCeramic=world.MakeMaterial("Craft thermal ceramic",new Color(.055f,.072f,.095f),.46f,.24f);
-            var craftGraphite=world.MakeMaterial("Craft carbon structure",new Color(.018f,.034f,.045f),.54f,.35f);
-            var craftGlass=world.MakeMaterial("Craft optical canopy",new Color(.015f,.07f,.10f),.86f,.22f);
+            var craftIvory=ShipSurfaceMaps.Create(world,"Craft pearl ceramic","Ivory",ShipSurfaceMaps.HasSurface("Ivory")?Color.white:new Color(.72f,.78f,.83f),.58f,.18f);
+            var craftCeramic=ShipSurfaceMaps.Create(world,"Craft thermal ceramic","Ceramic",ShipSurfaceMaps.HasSurface("Ceramic")?Color.white:new Color(.055f,.072f,.095f),.46f,.24f);
+            var craftGraphite=ShipSurfaceMaps.Create(world,"Craft carbon structure","Graphite",ShipSurfaceMaps.HasSurface("Graphite")?Color.white:new Color(.018f,.034f,.045f),.54f,.35f);
+            var craftMetal=ShipSurfaceMaps.HasSurface("Metal")?ShipSurfaceMaps.Create(world,"Craft exposed hardware","Metal",Color.white,.55f,.78f):world.Metal;
+            var craftGlass=world.MakeMaterial("Craft optical canopy",new Color(.008f,.014f,.019f),.87f,0f);
             var craftEngine=world.MakeMaterial("Nozzle integrated accent",new Color(.045f,.19f,.25f),.62f,.35f,new Color(.015f,.46f,.68f));
+            var craftEngineCore=world.MakeMaterial("Compact white ion core",new Color(.65f,.85f,.92f),.42f,0f,new Color(1.7f,2.6f,3.0f));
             var racers=new List<HoverVehicle>();
             GameObject ship=Resources.Load<GameObject>("Art/HeroShip");
             for(int i=0;i<6;i++){
                 Color teamColor=i==0?new Color(.56f,.75f,.006f):Color.HSVToRGB(i*.16f,.72f,.85f);
                 var teamPaint=world.MakeMaterial("Team accent "+i,teamColor,.6f,.25f);
-                var hullPaint=i==0?craftIvory:world.MakeMaterial("Team pearl hull "+i,Color.Lerp(new Color(.55f,.62f,.64f),teamColor,.48f),.65f,.3f);
+                var hullPaint=i==0?craftIvory:ShipSurfaceMaps.Create(world,"Team pearl hull "+i,"Ivory",Color.Lerp(new Color(.55f,.62f,.64f),teamColor,.48f),.65f,.3f);
                 var root=new GameObject(i==0?"VESPER 01 • player":"Rival "+i);root.transform.SetParent(transform);
                 root.AddComponent<Rigidbody>();var collider=root.AddComponent<BoxCollider>();collider.size=new Vector3(5.2f,1.2f,7.2f);collider.center=new Vector3(0,.12f,.1f);
                 GameObject art;
@@ -49,11 +51,12 @@ namespace VectorRush
                     var materials=renderer.sharedMaterials;
                     for(int k=0;k<materials.Length;k++){
                         string n=materials[k]?materials[k].name:"Ivory";
-                        if(n.Contains("Engine"))materials[k]=craftEngine;
+                        if(n.Contains("EngineCore"))materials[k]=craftEngineCore;
+                        else if(n.Contains("Engine"))materials[k]=craftEngine;
                         else if(n.Contains("Glass"))materials[k]=craftGlass;
                         else if(n.Contains("Graphite")||n.Contains("Ink"))materials[k]=craftGraphite;
                         else if(n.Contains("Ceramic"))materials[k]=craftCeramic;
-                        else if(n.Contains("Metal"))materials[k]=world.Metal;
+                        else if(n.Contains("Metal"))materials[k]=craftMetal;
                         else if(n.Contains("WhiteMark"))materials[k]=world.MakeMaterial("White number",new Color(.97f,.99f,.94f),.3f);
                         else if(n.Contains("Signal"))materials[k]=teamPaint;
                         else materials[k]=hullPaint;

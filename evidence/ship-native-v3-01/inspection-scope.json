@@ -1,0 +1,428 @@
+{
+    "scope": "Actual Unity screenshots of the currently imported ship and runtime materials. 00 is ordinary native chase/HUD with automated input through normal physics. Studio views use fixed neutral light, ACES, exposure 0, no bloom/vignette/fog and no propulsion effects. The explicitly named engine emission-OFF frame alone uses temporary material copies with emission disabled. All other ship materials remain unchanged. These views assess modeling and material response, not race performance or AAA acceptance.",
+    "startedUtc": "2026-09-08T04:12:25.1010980Z",
+    "finishedUtc": "2026-09-08T04:12:33.9079700Z",
+    "unityVersion": "6000.6.0f1",
+    "gpu": "Apple M2 Max",
+    "resourcePath": "Art/HeroShip",
+    "studioLighting": "Fixed key: white directional 2.2, soft shadows strength0.55. Shadowless spot fills: rear42/front34/port22. Neutral diffuse SH ambient0.20. HDR512 reflection probe sees three broad white cards on layer9 and excludes ship8. ACES; exposure0; bloom0; vignette0; fog off. No per-view lighting adjustments.",
+    "reflectionProbeCompleted": true,
+    "contextRaceTime": 1.439998745918274,
+    "contextSpeedKph": 224.05889892578125,
+    "totalTriangles": 37686,
+    "studioCalibrationChecks": 8,
+    "shipBoundsCenter": {
+        "x": 0.0,
+        "y": 0.10203635692596436,
+        "z": 0.08749985694885254
+    },
+    "shipBoundsSize": {
+        "x": 5.225553035736084,
+        "y": 1.5196771621704102,
+        "z": 6.885001182556152
+    },
+    "canonicalBoundsCenter": {
+        "x": 0.0,
+        "y": 0.10203635692596436,
+        "z": 0.08750033378601074
+    },
+    "canonicalBoundsSize": {
+        "x": 5.225553035736084,
+        "y": 1.5196771621704102,
+        "z": 6.885002136230469
+    },
+    "inspectedNozzleApertureWorld": {
+        "x": 1.6500003337860107,
+        "y": -0.004999999888241291,
+        "z": -3.3550007343292236
+    },
+    "originalVisualRotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": -0.013413600623607635,
+        "w": 0.9999100565910339
+    },
+    "meshes": [
+        {
+            "name": "Kestrel07_V3_Ceramic",
+            "vertices": 11541,
+            "triangles": 8138
+        },
+        {
+            "name": "Kestrel07_V3_Engine",
+            "vertices": 1466,
+            "triangles": 1900
+        },
+        {
+            "name": "Kestrel07_V3_EngineCore",
+            "vertices": 720,
+            "triangles": 468
+        },
+        {
+            "name": "Kestrel07_V3_Glass",
+            "vertices": 828,
+            "triangles": 1046
+        },
+        {
+            "name": "Kestrel07_V3_Graphite",
+            "vertices": 9328,
+            "triangles": 9034
+        },
+        {
+            "name": "Kestrel07_V3_Ivory",
+            "vertices": 9405,
+            "triangles": 10564
+        },
+        {
+            "name": "Kestrel07_V3_Metal",
+            "vertices": 7250,
+            "triangles": 6536
+        }
+    ],
+    "materials": [
+        {
+            "name": "Craft thermal ceramic",
+            "shader": "Universal Render Pipeline/Lit",
+            "baseColor": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+            },
+            "emission": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 1.0
+            },
+            "metallic": 0.23999999463558197,
+            "smoothness": 1.0
+        },
+        {
+            "name": "Nozzle integrated accent",
+            "shader": "Universal Render Pipeline/Lit",
+            "baseColor": {
+                "r": 0.044999971985816956,
+                "g": 0.18999996781349182,
+                "b": 0.2499999701976776,
+                "a": 1.0
+            },
+            "emission": {
+                "r": 0.014999999664723873,
+                "g": 0.46000000834465027,
+                "b": 0.6800000071525574,
+                "a": 1.0
+            },
+            "metallic": 0.3499999940395355,
+            "smoothness": 0.6200000047683716
+        },
+        {
+            "name": "Compact white ion core",
+            "shader": "Universal Render Pipeline/Lit",
+            "baseColor": {
+                "r": 0.6499999761581421,
+                "g": 0.8500000238418579,
+                "b": 0.9200000166893005,
+                "a": 1.0
+            },
+            "emission": {
+                "r": 1.7000000476837158,
+                "g": 2.5999999046325684,
+                "b": 3.0,
+                "a": 1.0
+            },
+            "metallic": 0.0,
+            "smoothness": 0.41999998688697815
+        },
+        {
+            "name": "Craft optical canopy",
+            "shader": "Universal Render Pipeline/Lit",
+            "baseColor": {
+                "r": 0.00800000037997961,
+                "g": 0.014000000432133675,
+                "b": 0.01899999938905239,
+                "a": 1.0
+            },
+            "emission": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 1.0
+            },
+            "metallic": 0.0,
+            "smoothness": 0.8700000047683716
+        },
+        {
+            "name": "Craft carbon structure",
+            "shader": "Universal Render Pipeline/Lit",
+            "baseColor": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+            },
+            "emission": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 1.0
+            },
+            "metallic": 0.3499999940395355,
+            "smoothness": 1.0
+        },
+        {
+            "name": "Craft pearl ceramic",
+            "shader": "Universal Render Pipeline/Lit",
+            "baseColor": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+            },
+            "emission": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 1.0
+            },
+            "metallic": 0.18000000715255737,
+            "smoothness": 1.0
+        },
+        {
+            "name": "Craft exposed hardware",
+            "shader": "Universal Render Pipeline/Lit",
+            "baseColor": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+            },
+            "emission": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 1.0
+            },
+            "metallic": 0.7799999713897705,
+            "smoothness": 1.0
+        }
+    ],
+    "views": [
+        {
+            "file": "00-native-gameplay-chase.png",
+            "studio": false,
+            "orthographic": false,
+            "width": 1920,
+            "height": 1080,
+            "position": {
+                "x": 21.998201370239258,
+                "y": 38.52870178222656,
+                "z": -224.5277099609375
+            },
+            "rotation": {
+                "x": 0.03954460844397545,
+                "y": 0.7041259407997131,
+                "z": -0.05502403900027275,
+                "w": 0.7068346738815308
+            },
+            "orthographicSize": 5.0,
+            "focalLengthMm": 50.0,
+            "verticalFov": 71.32295227050781,
+            "raceTime": 1.439998745918274,
+            "speedKph": 224.05889892578125,
+            "sensorSize": {
+                "x": 36.0,
+                "y": 24.0
+            }
+        },
+        {
+            "file": "01-studio-rear-three-quarter.png",
+            "studio": true,
+            "orthographic": false,
+            "width": 1920,
+            "height": 1080,
+            "position": {
+                "x": 8.262001991271973,
+                "y": 4.577287197113037,
+                "z": -11.272751808166504
+            },
+            "rotation": {
+                "x": 0.1460733711719513,
+                "y": -0.30557432770729065,
+                "z": 0.04750069975852966,
+                "w": 0.9396970868110657
+            },
+            "orthographicSize": 5.0,
+            "focalLengthMm": 50.0,
+            "verticalFov": 22.895193099975586,
+            "raceTime": 1.5499986410140991,
+            "speedKph": 0.0,
+            "sensorSize": {
+                "x": 36.0,
+                "y": 20.25
+            }
+        },
+        {
+            "file": "02-studio-front-three-quarter.png",
+            "studio": true,
+            "orthographic": false,
+            "width": 1920,
+            "height": 1080,
+            "position": {
+                "x": 8.262001991271973,
+                "y": 4.577287197113037,
+                "z": 11.44775104522705
+            },
+            "rotation": {
+                "x": -0.04750069975852966,
+                "y": 0.9396970868110657,
+                "z": -0.1460733711719513,
+                "w": -0.30557432770729065
+            },
+            "orthographicSize": 5.0,
+            "focalLengthMm": 50.0,
+            "verticalFov": 22.895193099975586,
+            "raceTime": 1.5499986410140991,
+            "speedKph": 0.0,
+            "sensorSize": {
+                "x": 36.0,
+                "y": 20.25
+            }
+        },
+        {
+            "file": "03-studio-starboard-side.png",
+            "studio": true,
+            "orthographic": false,
+            "width": 1920,
+            "height": 1080,
+            "position": {
+                "x": 14.458501815795898,
+                "y": 1.616736650466919,
+                "z": 0.08749985694885254
+            },
+            "rotation": {
+                "x": 0.03688756003975868,
+                "y": -0.7061439752578735,
+                "z": 0.03688756003975868,
+                "w": 0.7061439752578735
+            },
+            "orthographicSize": 5.0,
+            "focalLengthMm": 55.0,
+            "verticalFov": 20.8616943359375,
+            "raceTime": 1.5499986410140991,
+            "speedKph": 0.0,
+            "sensorSize": {
+                "x": 36.0,
+                "y": 20.25
+            }
+        },
+        {
+            "file": "04-studio-top-ORTHOGRAPHIC.png",
+            "studio": true,
+            "orthographic": true,
+            "width": 1920,
+            "height": 1080,
+            "position": {
+                "x": 0.0,
+                "y": 20.757038116455078,
+                "z": 0.08749985694885254
+            },
+            "rotation": {
+                "x": 0.7071068286895752,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.7071068286895752
+            },
+            "orthographicSize": 4.26870059967041,
+            "focalLengthMm": 55.0,
+            "verticalFov": 20.8616943359375,
+            "raceTime": 1.5499986410140991,
+            "speedKph": 0.0,
+            "sensorSize": {
+                "x": 36.0,
+                "y": 20.25
+            }
+        },
+        {
+            "file": "05-studio-engine-emission-OFF.png",
+            "studio": true,
+            "orthographic": false,
+            "width": 1920,
+            "height": 1080,
+            "position": {
+                "x": 1.9000003337860107,
+                "y": 0.17500001192092896,
+                "z": -7.555000305175781
+            },
+            "rotation": {
+                "x": 0.020172597840428352,
+                "y": -0.028050996363162994,
+                "z": 0.0005661995965056121,
+                "w": 0.9994027614593506
+            },
+            "orthographicSize": 4.26870059967041,
+            "focalLengthMm": 55.0,
+            "verticalFov": 20.8616943359375,
+            "raceTime": 1.5499986410140991,
+            "speedKph": 0.0,
+            "sensorSize": {
+                "x": 36.0,
+                "y": 20.25
+            }
+        },
+        {
+            "file": "06-studio-engine-emission-ON.png",
+            "studio": true,
+            "orthographic": false,
+            "width": 1920,
+            "height": 1080,
+            "position": {
+                "x": 1.9000003337860107,
+                "y": 0.17500001192092896,
+                "z": -7.555000305175781
+            },
+            "rotation": {
+                "x": 0.020172597840428352,
+                "y": -0.028050996363162994,
+                "z": 0.0005661995965056121,
+                "w": 0.9994027614593506
+            },
+            "orthographicSize": 4.26870059967041,
+            "focalLengthMm": 55.0,
+            "verticalFov": 20.8616943359375,
+            "raceTime": 1.5499986410140991,
+            "speedKph": 0.0,
+            "sensorSize": {
+                "x": 36.0,
+                "y": 20.25
+            }
+        },
+        {
+            "file": "07-studio-canopy-close.png",
+            "studio": true,
+            "orthographic": false,
+            "width": 1920,
+            "height": 1080,
+            "position": {
+                "x": 4.131000995635986,
+                "y": 3.54453706741333,
+                "z": 1.8087501525878906
+            },
+            "rotation": {
+                "x": 0.1651635318994522,
+                "y": -0.794310986995697,
+                "z": 0.2477453052997589,
+                "w": 0.5295406579971313
+            },
+            "orthographicSize": 4.26870059967041,
+            "focalLengthMm": 60.0,
+            "verticalFov": 19.15684700012207,
+            "raceTime": 1.5499986410140991,
+            "speedKph": 0.0,
+            "sensorSize": {
+                "x": 36.0,
+                "y": 20.25
+            }
+        }
+    ]
+}
