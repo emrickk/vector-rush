@@ -1,0 +1,1 @@
+Matched paused native title view. Only RenderSettings.fog is toggled; enabled Exp2 atmosphere versus disabled. Fog parameters are serialized in the bootstrap scene to preserve native variants. This diagnostic is not a performance measurement.

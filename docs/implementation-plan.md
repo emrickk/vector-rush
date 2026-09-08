@@ -256,7 +256,7 @@ The owner supplied a polished night-racing video, confirmed it represents the sa
 - [x] Update project entry points and retain previous plans as history.
 - [ ] Execute Tasks 1–8 in the linked production finish plan. First deliverable: baseline/acceptance record and the bounded lighting/road candidate; full-circuit expansion waits for the integrated benchmark gate.
 
-The new plan permits documented global lighting/material experiments in its environment stages and later bounded motion/racing work. Prior step-specific locks applied to their completed milestones. The current native build remains GUID `5c49b92643bd4d41820ba81857fdf8c7`.
+The new plan permits documented global lighting/material experiments in its environment stages and later bounded motion/racing work. Prior step-specific locks applied to their completed milestones. At the planning milestone, the accepted native build was GUID `5c49b92643bd4d41820ba81857fdf8c7`; the current paused checkpoint is identified in [HANDOFF.md](HANDOFF.md).
 
 ## Stage 1 execution — lighting and road response
 
@@ -265,3 +265,7 @@ The owner authorizes Stage 1 from the six-stage summary: lighting and road respo
 Task 1 baseline is complete: eight original-image selections, natural-crossing metadata, schematic lighting layout, independently inspected review020 and a fully decoded 15-second native clip. Fresh real-time baseline completes three laps in128.32s; mean8.35/P959.18/P999.31ms. Its conditions and evidence limits are retained. Proceed to the controlled lighting/road candidate (Task2).
 
 Task2 preserves A (modest broad-light improvement) and B (rejected darker road). Native diagnostics confirm a fog color-space mismatch; candidate C corrects the upload while preserving B lighting/materials. Next bounded experiment: two one-shot local256px reflection probes on the opening bends, with native verification of clustered blending and box projection. Roughness stays fixed for the probe comparison; source-linked response and global controls decide whether to retain it.
+
+## Owner wrap-up — 2026-09-08
+
+Work is paused. Task 1 is complete; Task 2 is partially delivered and its production road-response acceptance remains open. Preserve A/B/C/D and independent review021. The checkpoint combines A's direct-light/readable reflection-off road with C's accepted fog correction. Remove D's local probes and pipeline toggles. Do not initiate the roughness experiment, SSR, later city/craft/racing stages, releases or merges during wrap-up. Build and inspect the local checkpoint, record its exact limited validation in [HANDOFF.md](HANDOFF.md), push all completed work, then stop. Further work requires the owner to resume it.

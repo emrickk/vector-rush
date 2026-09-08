@@ -4,13 +4,13 @@ A playable, original anti-gravity racing prototype for Apple Silicon macOS. Pilo
 
 [Private GitHub repository](https://github.com/emrickk/vector-rush) · [Build brief](docs/GPT6-BUILD-PROMPT.md) · [Development history](docs/development-history.md) · [Ship art plan](docs/ship-art-plan.md)
 
-## Next planned milestone — production night finish
+## Stage 1 checkpoint — paused at owner request
 
 The owner has selected the supplied night-racing video as the target for a more coherent, polished version of this same game. The [production finish plan](docs/superpowers/plans/2026-09-08-night-production-finish.md) keeps the night direction and existing work. It starts with one representative 15-second opening-city passage: broad lighting and road response, connected construction, craft materials, then visible racing, motion and sound. Full-circuit rollout follows separate visual, watched-motion/manual-play and technical gates. The [design and acceptance criteria](docs/superpowers/specs/2026-09-08-night-production-finish-design.md) and [independent planning critique](docs/environment-reviews/019-production-finish-plan-critique.md) define the standard.
 
-This is the next implementation plan; its tasks have not started. The lighting/material build below remains the current playable delivery. The earlier coastal-restoration suggestion is historical, superseded by this chosen night direction.
+The baseline and lighting experiments are complete as a resumable checkpoint. The accepted fog correction adds city depth; the clearer reflection-off road is restored after the reflection candidates failed to show a worthwhile benefit. Stage 1 remains incomplete against its production road-response target. Work is paused at the owner's request; see the [current handoff](docs/HANDOFF.md) and [independent A/B/C review](docs/environment-reviews/021-stage1-lighting-road-native.md). The earlier coastal-restoration suggestion is superseded by the chosen night direction.
 
-## Current milestone — lighting and material depth
+## Previous accepted delivery — lighting and material depth
 
 The signal mast and thermal exchange works now use distinct ceramic, cast-concrete, satin-metal and service-coating finishes. Selective light reveals the thermal plant's recessed entrances and pipe supports, with a restrained warm fill beneath the mast's upper rooms. Independent native review accepts this pass; the mast's amber pane remains comparatively flat.
 
@@ -18,7 +18,7 @@ Two original landmarks now give the circuit distinct places: a split signal mast
 
 A native before/off/restored experiment identified the conspicuous L-shaped road band as the streetlamp family's moon shadow. Disabling casting on those three fixture mesh groups cleans up the satin road's light pools while retaining visible lamps, architectural shadows and vehicle grounding. Road geometry, surface material and racing physics remain unchanged by that correction.
 
-[Current 24-second lighting preview](evidence/lighting-depth-final/VectorRush-lighting-preview.mp4) · [Current 42.75-second full lap](evidence/lighting-depth-final/VectorRush-full-lap.mp4) · [Current local macOS archive](Builds/VectorRush-macOS-lighting-depth-2026-09-08.zip). Both videos are continuous excerpts of actual 1080p native rendering, with silent automated steering at 24 simulation frames per second. The full lap spans two recorded start-line crossings.
+[Previous accepted 24-second lighting preview](evidence/lighting-depth-final/VectorRush-lighting-preview.mp4) · [Previous accepted 42.75-second full lap](evidence/lighting-depth-final/VectorRush-full-lap.mp4) · [Previous accepted local macOS archive](Builds/VectorRush-macOS-lighting-depth-2026-09-08.zip). Both videos are continuous excerpts of actual 1080p native rendering, with silent automated steering at 24 simulation frames per second. The full lap spans two recorded start-line crossings.
 
 [Current lighting/material critique](docs/environment-reviews/016-lighting-material-native-critique.md) · [Independent landmark critique](docs/environment-reviews/012-landmarks-native-critique.md) · [Landmark correction verification](docs/environment-reviews/013-landmark-correction-verification.md) · [Road shadow experiment](docs/road-reviews/002-fixture-caster-native.md) · [Final road sample review](docs/road-reviews/003-final-road-verification.md).
 
@@ -26,7 +26,7 @@ The closer-racing preset remains53m/s cruise and 72 m/s boost. Its prior accepte
 
 ## Play
 
-Open **[Builds/Vector Rush.app](Builds/Vector%20Rush.app)** or unpack **[the current local archive](Builds/VectorRush-macOS-lighting-depth-2026-09-08.zip)**. Source, editable assets and selected evidence are pushed to GitHub. The native build is ready locally; no GitHub release has been published. Earlier archives are historical.
+The local **[Builds/Vector Rush.app](Builds/Vector%20Rush.app)** contains the Stage 1 checkpoint; consult its limited validation in the [handoff](docs/HANDOFF.md). The **[previous accepted local archive](Builds/VectorRush-macOS-lighting-depth-2026-09-08.zip)** retains the earlier fully checked lighting/material delivery. Source, editable assets and selected evidence are pushed to GitHub. No new native archive or GitHub release is part of this wrap-up.
 
 | Action | Keyboard | Gamepad |
 |---|---|---|
@@ -41,17 +41,17 @@ Open **[Builds/Vector Rush.app](Builds/Vector%20Rush.app)** or unpack **[the cur
 
 Menus support the pointer. Pause includes Resume, Restart, camera shake and Quit. Results supports another race.
 
-## Current validation
+## Previous accepted delivery validation
 
 - Build **5c49b92643bd4d41820ba81857fdf8c7** records a complete 1,440-frame native circuit at 1920×1080. All PNG chunk-CRC/decompression checks pass. Small camera drift remains against the previous build; exact anchor comparisons fail and are preserved as such.
-- **42/42 existing Unity tests pass** on the final source. The 193 source/resource/settings hashes and 189 app-file hashes remain unchanged after tests.
+- **42/42 existing Unity tests pass** on that delivery's source. The 193 source/resource/settings hashes and 189 app-file hashes remain unchanged after tests.
 - Independent review016 compares eight native views. Additional parent inspections cover the cool-gallery approach/interior, crest and station reveal. This is sampled visual acceptance, not subjective continuous playback or human driving assessment.
 - The 42.75-second full lap and 24-second lighting excerpt pass complete video decoding. Both are silent, continuous native rendering with automated steering at 24 simulation frames per second, separate from performance measurement.
 - Current local archive passes integrity checks: **56,664,092 bytes**, 441 ZIP entries. [Delivery manifest](evidence/lighting-depth-final/build-manifest.json).
 - Five station-context views each at **1280×800** and **1920×810** complete successfully on the same build; all 10 PNGs pass validation. The inspected warm-gallery and ultrawide reveal retain road, craft and HUD readability.
 - A separate real-time native race finishes **three laps in 128.32 seconds**, with **zero recoveries across all six racers**. Both restart launches and all three countdown-pause checks pass. The 60-second performance sample averages **8.35 ms**, with **P95 9.21 ms / P99 9.33 ms**, consistent with the prior accepted repeat. [Race/performance comparison](evidence/lighting-depth-final/performance-comparison.json).
 
-[Current evidence](evidence/lighting-depth-final/) · [Reviewed native circuit](evidence/lighting-depth-candidate-01/) · [Previous landmark milestone](evidence/landmarks-final/).
+[Previous accepted evidence](evidence/lighting-depth-final/) · [Reviewed native circuit](evidence/lighting-depth-candidate-01/) · [Previous landmark milestone](evidence/landmarks-final/).
 
 This remains a working prototype. Foundations and glazing are simplified, distant buildings still repeat, and ordinary road seams remain. The fixture experiment explains the selected current shadow shape; it does not retroactively resolve every earlier road artifact. Fine texture stability in motion, subjective handling and audio quality are outside the inspected evidence. Earlier physical-input checks remain historical coverage.
 

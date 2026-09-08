@@ -336,3 +336,11 @@ Review021 independently inspects all eight originals per candidate. A is a modes
 ### Local reflection candidate D preserved at owner wrap-up
 
 D adds two bounded one-shot local 256px probes and retained Forward+ blending/box-projection/atlas settings with C atmosphere and unchanged road roughness. Native GUID `5edbc3cfa5be45358031fe8050f71d28` completes 1,440 validated PNGs; 197 source and 189 app hashes remain unchanged, and all three probes report completed render IDs. The parent-inspected five primary originals do not establish the required road improvement. D is preserved as an unaccepted experiment, with no independent motion/performance acceptance. The owner then requests wrap-up and push; no roughness, SSR or later-stage experiment is initiated. Final checkpoint will retain C atmosphere and restore A's clearer road.
+
+### Owner-requested Stage 1 checkpoint and stop
+
+Preserved unaccepted D as commit `69ba4af`, then restored the clearer A reflection-off road with C's independently accepted fog correction. Removed D's two local probes and pipeline blending/box-projection toggles; kept the serialized reflection material and all comparison evidence. No roughness, SSR, later city/craft/racing work, release or merge was started.
+
+Final local GUID `40bed5f53c2449418e7fb56bf59739f6` builds successfully. Two short native runs exit zero: corrected fog readback and automated title-to-race smoke. All five 1920×1080 PNGs pass CRC/decompression, and all 197 source plus 189 app hashes remain unchanged. Parent inspected the title/fog and starting race: readable deck panels, player, nearby rival and HUD remain visible with layered city haze. Sixty document links resolve. A process audit confirms the project's Unity/game jobs are closed.
+
+This is a resumable checkpoint, not completion of Stage 1 or production acceptance. No fresh full-circuit/alternate-aspect capture, current test-suite/performance/three-lap run, watched motion or manual-with-audio pass is claimed for the combined checkpoint. Updated README, implementation plan, production plan/spec and `docs/HANDOFF.md` distinguish this local app from the previous accepted archive and explicitly hold further work until the owner resumes it. Source/evidence and this handoff are pushed; all project work stops.

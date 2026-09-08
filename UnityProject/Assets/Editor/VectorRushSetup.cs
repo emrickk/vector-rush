@@ -30,10 +30,6 @@ namespace VectorRush.Editor
             rendererData.renderingMode=RenderingMode.ForwardPlus;
             var lightSettings=new SerializedObject(pipeline);
             lightSettings.FindProperty("m_AdditionalLightsRenderingMode").intValue=(int)LightRenderingMode.PerPixel;
-            // Forward+ samples overlapping probe volumes per fragment through the retained atlas path.
-            lightSettings.FindProperty("m_ReflectionProbeBlending").boolValue=true;
-            lightSettings.FindProperty("m_ReflectionProbeBoxProjection").boolValue=true;
-            lightSettings.FindProperty("m_ReflectionProbeAtlas").boolValue=true;
             lightSettings.ApplyModifiedPropertiesWithoutUndo();pipeline.maxAdditionalLightsCount=8;
             rendererData.postProcessData=AssetDatabase.LoadAssetAtPath<PostProcessData>("Packages/com.unity.render-pipelines.universal/Runtime/Data/PostProcessData.asset");
             if(!rendererData.postProcessData)throw new Exception("URP post-processing resource is missing");

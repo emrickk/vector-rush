@@ -13,7 +13,6 @@ namespace VectorRush
         readonly List<Material> ownedMaterials=new List<Material>();
         Texture2D roadGrain,roadNormals,roadSmoothness;
         ReflectionProbe coastalProbe;
-        readonly List<ReflectionProbe> passageProbes=new List<ReflectionProbe>();
         public Material Ivory => ivory;
         public Material Signal => signal;
         public Material Graphite => graphite;
@@ -33,7 +32,7 @@ namespace VectorRush
         public void Build(TrackPath path)
         {
             track=path;track.Ensure();
-            road=MakeMaterial("Satin graphite running deck",new Color(.13f,.145f,.165f),.9f,0f,templateName:"RoadSurfaceReflections");
+            road=MakeMaterial("Satin graphite running deck",new Color(.13f,.145f,.165f),.9f,0f,templateName:"RoadSurface");
             const int textureSize=512;
             roadGrain=new Texture2D(textureSize,textureSize,TextureFormat.RGBA32,true){name="Deck aggregate",wrapMode=TextureWrapMode.Repeat,filterMode=FilterMode.Trilinear,anisoLevel=8};
             roadNormals=new Texture2D(textureSize,textureSize,TextureFormat.RGBA32,true,true){name="Deck fine relief",wrapMode=TextureWrapMode.Repeat,filterMode=FilterMode.Trilinear,anisoLevel=8};
@@ -221,46 +220,8 @@ namespace VectorRush
             var skyShader=Shader.Find("VectorRush/Night Sky");if(skyShader){var sky=new Material(skyShader);ownedMaterials.Add(sky);RenderSettings.skybox=sky;}
             var probeObject=new GameObject("Night architecture reflection environment");probeObject.transform.SetParent(transform);probeObject.transform.position=new Vector3(0,58,-170);
             coastalProbe=probeObject.AddComponent<ReflectionProbe>();coastalProbe.mode=ReflectionProbeMode.Realtime;coastalProbe.refreshMode=ReflectionProbeRefreshMode.ViaScripting;coastalProbe.timeSlicingMode=ReflectionProbeTimeSlicingMode.AllFacesAtOnce;coastalProbe.resolution=256;coastalProbe.size=new Vector3(1800,600,1800);coastalProbe.farClipPlane=1600;coastalProbe.intensity=.8f;coastalProbe.cullingMask=~(1<<8);
-            BuildPassageProbe("Mast bend reflection",.19f,.11f,.27f);
-            BuildPassageProbe("Crest descent reflection",.315f,.25f,.39f);
         }
-        void BuildPassageProbe(string name,float captureProgress,float start,float end)
-        {
-            var frame=track.Evaluate(captureProgress);
-            var probeObject=new GameObject(name);probeObject.transform.SetParent(transform);
-            probeObject.transform.position=frame.Position+frame.Up*5;
-            var bounds=new Bounds(track.Evaluate(start).Position,Vector3.zero);
-            for(int i=0;i<=24;i++){
-                var sample=track.Evaluate(Mathf.Lerp(start,end,i/24f));
-                bounds.Encapsulate(sample.Position-sample.Right*17);
-                bounds.Encapsulate(sample.Position+sample.Right*17);
-            }
-            // Overlapping local surroundings approximate broad reflections along the banked road.
-            // They are not exact reflection geometry for every pole and distant tower.
-            bounds.Expand(new Vector3(44,64,44));
-            var probe=probeObject.AddComponent<ReflectionProbe>();
-            probe.mode=ReflectionProbeMode.Realtime;probe.refreshMode=ReflectionProbeRefreshMode.ViaScripting;
-            probe.timeSlicingMode=ReflectionProbeTimeSlicingMode.AllFacesAtOnce;
-            probe.resolution=256;probe.hdr=true;probe.boxProjection=true;
-            probe.center=bounds.center-probeObject.transform.position;probe.size=bounds.size;
-            probe.blendDistance=20;probe.importance=10;probe.intensity=.8f;
-            probe.nearClipPlane=.3f;probe.farClipPlane=1200;probe.cullingMask=~(1<<8);
-            passageProbes.Add(probe);
-        }
-        IEnumerator Start()
-        {
-            yield return new WaitForEndOfFrame();
-            if(coastalProbe)yield return CaptureProbe(coastalProbe);
-            foreach(var probe in passageProbes)yield return CaptureProbe(probe);
-        }
-        IEnumerator CaptureProbe(ReflectionProbe probe)
-        {
-            int renderId=probe.RenderProbe();
-            for(int frame=0;frame<120&&!probe.IsFinishedRendering(renderId);frame++)yield return null;
-            if(probe.IsFinishedRendering(renderId))
-                Debug.Log($"VECTOR_PROBE_READY {probe.name} id={renderId} resolution={probe.resolution} box={probe.boxProjection} bounds={probe.bounds} blend={probe.blendDistance}");
-            else Debug.LogError($"VECTOR_PROBE_INCOMPLETE {probe.name} id={renderId}");
-        }
+        IEnumerator Start(){yield return new WaitForEndOfFrame();if(coastalProbe)coastalProbe.RenderProbe();}
         void OnDestroy(){foreach(var m in ownedMeshes)if(m)Destroy(m);foreach(var m in ownedMaterials)if(m)Destroy(m);if(roadGrain)Destroy(roadGrain);if(roadNormals)Destroy(roadNormals);if(roadSmoothness)Destroy(roadSmoothness);}
     }
 }

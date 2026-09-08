@@ -1,0 +1,57 @@
+{
+  "buildGuid": "40bed5f53c2449418e7fb56bf59739f6",
+  "scope": "Owner-requested paused checkpoint: successful build, native fog readback and automated title-to-race smoke only; not full Stage 1 or production acceptance.",
+  "nativeLaunchesExitedZero": 2,
+  "pngsValidated": {
+    "fog-readback/01-title.png": {
+      "width": 1920,
+      "height": 1080,
+      "sha256": "97b8d71bb692ee55e3cb9107a27af80328492139657b16831402fbb7826fb10a"
+    },
+    "fog-readback/fog-01-enabled.png": {
+      "width": 1920,
+      "height": 1080,
+      "sha256": "ab3e4bd268e9fa339a6084c4c5baf6d4bbefdcf4b987c11efda6c5deacfd430c"
+    },
+    "fog-readback/fog-02-disabled.png": {
+      "width": 1920,
+      "height": 1080,
+      "sha256": "78d467b0238e3149490e601b83a2b37c8f1735a1d124b7b3bbdb29546d2c0bc2"
+    },
+    "smoke/01-title.png": {
+      "width": 1920,
+      "height": 1080,
+      "sha256": "c1dfd418131083a4fda46ffe22fde2b7fa0764132b1dbcd6160230fd828bee7a"
+    },
+    "smoke/02-start.png": {
+      "width": 1920,
+      "height": 1080,
+      "sha256": "339ae3df1b05a2af3ef62c5e78cb0dbb0ffdd41b127eaa2633f84b7c75b91eae"
+    }
+  },
+  "sourceFilesUnchanged": 197,
+  "appFilesUnchanged": 189,
+  "shaderFogRGBA": [
+    0.0409999937,
+    0.0739999861,
+    0.08599998,
+    1.0
+  ],
+  "roadEnvironmentSampling": false,
+  "localPassageProbeSourcePresent": false,
+  "pipelineProbeBlending": false,
+  "pipelineProbeBoxProjection": false,
+  "projectNativeProcessesRemaining": [],
+  "parentInspected": [
+    "fog-readback/fog-01-enabled.png",
+    "smoke/02-start.png"
+  ],
+  "observations": "Fog retains layered city silhouettes; starting race has readable road panels, player, nearby rival and HUD. This is a short start view, not the five-crossing benchmark or sustained visible-racing acceptance.",
+  "pending": [
+    "New complete benchmark/circuit capture for the combined checkpoint",
+    "Production road-response acceptance",
+    "Current real-time race/performance and alternate aspects",
+    "Current test-suite run",
+    "Watched continuous motion and manual play with audio"
+  ]
+}

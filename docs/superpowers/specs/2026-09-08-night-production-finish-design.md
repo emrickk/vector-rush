@@ -1,6 +1,6 @@
 # Night racing production finish: design and acceptance
 
-**Direction confirmed by the owner:** retain the current night scene and bring the same racing concept toward the supplied video's integrated level of finish. This supersedes the earlier recommendation to try coastal restoration first. The owner requested a plan; implementation has not started.
+**Direction confirmed by the owner:** retain the current night scene and bring the same racing concept toward the supplied video's integrated level of finish. This supersedes the earlier recommendation to try coastal restoration first. The owner subsequently authorized Stage 1. Its partial implementation is now paused at the owner's wrap-up request; see [the handoff](../../HANDOFF.md).
 
 ## Global constraints
 
