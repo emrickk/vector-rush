@@ -1,0 +1,6 @@
+Native pointer verification at1280x800 via actual macOS window input. Outside click kept menu; Start entered countdown; Escape paused; camera shake changed ON to OFF; Resume advanced race time; Restart reset into countdown.
+
+[InputEvidence] BUTTON_ACTIVATED label=START RACE frame=4043 phaseBeforeCallback=Menu
+[InputEvidence] BUTTON_ACTIVATED label=CAMERA SHAKE frame=6585 phaseBeforeCallback=Paused
+[InputEvidence] BUTTON_ACTIVATED label=RESUME frame=8279 phaseBeforeCallback=Paused
+[InputEvidence] BUTTON_ACTIVATED label=RESTART RACE frame=9788 phaseBeforeCallback=Paused

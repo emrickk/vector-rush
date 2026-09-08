@@ -20,11 +20,14 @@ namespace VectorRush
         readonly Color ink = new Color(.025f, .065f, .08f, .91f);
         float width, height;
         bool ready;
+        bool inputEvidence;
 
         public void Initialize(RaceDirector raceDirector)
         {
             director = raceDirector;
             chaseCamera = FindAnyObjectByType<ChaseCamera>();
+            inputEvidence = System.Array.IndexOf(System.Environment.GetCommandLineArgs(), "-inputEvidence") >= 0;
+            if (inputEvidence) Debug.Log("[InputEvidence] enabled; original and InputSystem-corrected pointer coordinates are recorded; HUD uses InputSystem window coordinates.");
         }
 
         void Update()
@@ -36,6 +39,8 @@ namespace VectorRush
             restart = Input.GetKeyDown(KeyCode.R);
 #endif
 #if ENABLE_INPUT_SYSTEM
+            if (inputEvidence && Mouse.current != null && (Mouse.current.leftButton.wasPressedThisFrame || Mouse.current.leftButton.wasReleasedThisFrame))
+                Debug.Log($"[InputEvidence] InputSystem frame={Time.frameCount} position={Mouse.current.position.ReadValue()} down={Mouse.current.leftButton.wasPressedThisFrame} up={Mouse.current.leftButton.wasReleasedThisFrame} held={Mouse.current.leftButton.isPressed} screen={Screen.width}x{Screen.height} phase={director.Phase}");
             accept |= Gamepad.current != null && Gamepad.current.buttonSouth.wasPressedThisFrame;
 #if !ENABLE_LEGACY_INPUT_MANAGER
             accept |= Keyboard.current != null && (Keyboard.current.enterKey.wasPressedThisFrame || Keyboard.current.numpadEnterKey.wasPressedThisFrame);
@@ -83,11 +88,37 @@ namespace VectorRush
             Prepare();
             Matrix4x4 previous = GUI.matrix;
             Color previousColor = GUI.color;
+            Vector2 rawMouse = Event.current.mousePosition;
             float scale = Mathf.Min(Screen.width / 1920f, Screen.height / 1080f);
             if (scale <= 0) return;
+            Vector2 correctedMouse = rawMouse;
+            bool pointerCorrected = false;
+#if ENABLE_INPUT_SYSTEM
+            // On macOS the native IMGUI event can carry a desktop-origin offset.
+            // InputSystem reports player-window pixels; convert its bottom origin
+            // before the GUI matrix converts those pixels into our virtual canvas.
+            if (Mouse.current != null && (Event.current.isMouse || Event.current.type == EventType.Repaint || Event.current.type == EventType.Layout))
+            {
+                Vector2 playerMouse = Mouse.current.position.ReadValue();
+                correctedMouse = new Vector2(playerMouse.x, Screen.height - playerMouse.y);
+                Event.current.mousePosition = correctedMouse;
+                pointerCorrected = true;
+            }
+#endif
             width = Screen.width / scale;
             height = Screen.height / scale;
             GUI.matrix = Matrix4x4.Scale(new Vector3(scale, scale, 1));
+            // Changing GUI.matrix reloads the native event position. Apply the
+            // normalized pointer after that change, in the virtual canvas space.
+            if(pointerCorrected)Event.current.mousePosition=correctedMouse/scale;
+            if (inputEvidence && (Event.current.rawType == EventType.MouseDown || Event.current.rawType == EventType.MouseUp))
+            {
+                string systemMouse = "unavailable";
+#if ENABLE_INPUT_SYSTEM
+                if (Mouse.current != null) systemMouse = Mouse.current.position.ReadValue().ToString();
+#endif
+                Debug.Log($"[InputEvidence] GUI frame={Time.frameCount} type={Event.current.type} rawType={Event.current.rawType} button={Event.current.button} raw={rawMouse} corrected={correctedMouse} pointerCorrected={pointerCorrected} virtual={Event.current.mousePosition} rawDivScale={rawMouse / scale} screen={Screen.width}x{Screen.height} scale={scale:F4} canvas={width:F1}x{height:F1} systemMouse={systemMouse} phase={director.Phase} hotControl={GUIUtility.hotControl}");
+            }
             GUI.color = Color.white;
             GUI.DrawTexture(new Rect(0, height - 320, width, 320), bottomShade);
 
@@ -100,6 +131,7 @@ namespace VectorRush
                 if (director.Phase == RacePhase.Finished) DrawResults();
             }
             GUI.matrix = previous;
+            Event.current.mousePosition = rawMouse;
             GUI.color = previousColor;
         }
 
@@ -232,7 +264,12 @@ namespace VectorRush
             Color color = primary ? new Color(.04f, .095f, .10f) : ivory;
             Text(label, x + 21, y + 1, w - 140, h - 2, primary ? 21 : 18, color, true, TextAnchor.MiddleLeft);
             Text(hint, x + w - 137, y + 1, 116, h - 2, 14, primary ? color : muted, false, TextAnchor.MiddleRight);
-            return GUI.Button(rect, GUIContent.none, buttonStyle);
+            if (inputEvidence && (Event.current.rawType == EventType.MouseDown || Event.current.rawType == EventType.MouseUp))
+                Debug.Log($"[InputEvidence] buttonProbe label={label} rect={rect} mouse={Event.current.mousePosition} contains={hover} type={Event.current.type} hotControl={GUIUtility.hotControl}");
+            bool activated = GUI.Button(rect, GUIContent.none, buttonStyle);
+            if (inputEvidence && activated)
+                Debug.Log($"[InputEvidence] BUTTON_ACTIVATED label={label} frame={Time.frameCount} phaseBeforeCallback={director.Phase}");
+            return activated;
         }
 
         void Text(string value, float x, float y, float w, float h, int size, Color color, bool bold = false, TextAnchor align = TextAnchor.UpperLeft)
