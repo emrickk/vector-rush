@@ -56,6 +56,14 @@
 
 ## Evidence-driven corrections after final review
 - [x] Identify large within-quad normal differences and discontinuous banking numerically; implement continuous projected-curvature frames and12-column wide ribbons.
-- [ ] Rebuild and inspect crest/descent, rerun full race and completed restart launches.
+- [x] Rebuild and inspect crest/descent, rerun full race and completed restart launches (run04).
 - [ ] Gate paused vehicle input and run the paused-recovery regression.
 - [ ] Verify corrected pointer mapping at1280×800 and1080p, including outside-click non-activation.
+
+## Visual-first modeling and rendering milestones
+- [x] Restore URP postprocess resources and emissive shader retention; capture matched native road diagnostics.
+- [x] Replace opaque propulsion with additive, fading engine trails and recessed cores.
+- [x] Integrate reviewed Kestrel V2 and tower A/B models; capture native title, start, crest and descent (run06).
+- [ ] Add restrained ambient occlusion and verify contact/material depth in matched native captures.
+- [ ] Integrate the reviewed textured cliff once approved by the companion visual task.
+- [ ] Preserve final authoring sources, independent critique, current gameplay recording and delivery evidence.

@@ -11,8 +11,8 @@ namespace VectorRush
     public sealed class RaceEvidence : MonoBehaviour
     {
         readonly List<float> frames=new List<float>();
-        string folder;float started;bool collecting;bool autopilot;bool quitAfter;bool recordReplay;bool quickEvidence;
-        float nextTelemetry;
+        string folder;float started;bool collecting;bool autopilot;bool quitAfter;bool recordReplay;bool quickEvidence;bool diagnosticRoad;
+        float nextTelemetry;bool capturedCrest,capturedDescent;
         IEnumerator Start()
         {
             string[] args=Environment.GetCommandLineArgs();
@@ -22,6 +22,7 @@ namespace VectorRush
                 if(args[i]=="-quitAfterEvidence")quitAfter=true;
                 if(args[i]=="-recordReplay")recordReplay=true;
                 if(args[i]=="-quickEvidence")quickEvidence=true;
+                if(args[i]=="-diagnosticRoad")diagnosticRoad=true;
             }
             if(string.IsNullOrEmpty(folder))yield break;
             Directory.CreateDirectory(folder);
@@ -33,9 +34,36 @@ namespace VectorRush
             yield return new WaitForSecondsRealtime(4);
             yield return Capture("02-start.png");
             if(quickEvidence){yield return new WaitForSecondsRealtime(2);Application.Quit();yield break;}
+            if(diagnosticRoad){yield return DiagnoseRoad();yield break;}
             if(recordReplay){yield return RecordReplay();yield break;}
             started=Time.realtimeSinceStartup;collecting=true;
             if(autopilot)StartCoroutine(VerifyRace());
+        }
+        IEnumerator DiagnoseRoad()
+        {
+            var player=VectorBootstrap.Instance.Director.Player;
+            float deadline=Time.realtimeSinceStartup+90;
+            while((player.TrackProgress<.71f||player.TrackProgress>.75f)&&Time.realtimeSinceStartup<deadline)yield return null;
+            Time.timeScale=0;
+            var road=GameObject.Find("Running surface").GetComponent<MeshRenderer>();
+            var underbody=GameObject.Find("Track underbody").GetComponent<MeshRenderer>();
+            var original=road.sharedMaterial;var sun=RenderSettings.sun;var shadows=sun.shadows;
+            yield return Capture("diag-01-baseline.png");
+            sun.shadows=LightShadows.None;yield return null;yield return Capture("diag-02-no-shadows.png");sun.shadows=shadows;
+            var probes=FindObjectsByType<ReflectionProbe>(FindObjectsSortMode.None);var intensities=new float[probes.Length];
+            for(int i=0;i<probes.Length;i++){intensities[i]=probes[i].intensity;probes[i].intensity=0;}
+            float reflection=RenderSettings.reflectionIntensity;RenderSettings.reflectionIntensity=0;
+            yield return null;yield return Capture("diag-03-no-reflections.png");
+            for(int i=0;i<probes.Length;i++)probes[i].intensity=intensities[i];RenderSettings.reflectionIntensity=reflection;
+            var unlit=new Material(Shader.Find("Universal Render Pipeline/Unlit"));unlit.SetColor("_BaseColor",new Color(.17f,.20f,.23f));road.sharedMaterial=unlit;
+            yield return null;yield return Capture("diag-04-unlit-road.png");road.sharedMaterial=original;
+            underbody.enabled=false;yield return null;yield return Capture("diag-05-no-underbody.png");underbody.enabled=true;
+            var grain=original.GetTexture("_BaseMap");original.SetTexture("_BaseMap",null);yield return null;yield return Capture("diag-06-no-grain.png");original.SetTexture("_BaseMap",grain);
+            var mesh=road.GetComponent<MeshFilter>().sharedMesh;var normals=mesh.normals;var flat=new Vector3[normals.Length];for(int i=0;i<flat.Length;i++)flat[i]=Vector3.up;
+            mesh.normals=flat;yield return null;yield return Capture("diag-07-flat-normals.png");mesh.normals=normals;
+            Destroy(unlit);Time.timeScale=1;
+            File.WriteAllText(Path.Combine(folder,"diagnostic-scope.txt"),"Same paused native chase view; each condition is restored before the next. Baseline, no sun shadows, no reflection probe/ambient reflection, unlit road, hidden track underbody, no grain texture, flat road normals. Diagnostic changes are not delivery settings.\n");
+            if(quitAfter){yield return new WaitForSecondsRealtime(2);Application.Quit();}
         }
         IEnumerator RecordReplay()
         {
@@ -55,6 +83,9 @@ namespace VectorRush
         {
             if(!collecting)return;
             frames.Add(Time.unscaledDeltaTime*1000);
+            var progress=VectorBootstrap.Instance.Director.Player.TrackProgress;
+            if(!capturedCrest&&progress>=.30f&&progress<.33f){capturedCrest=true;StartCoroutine(Capture("05-crest.png"));}
+            if(!capturedDescent&&progress>=.72f&&progress<.75f){capturedDescent=true;StartCoroutine(Capture("06-city-descent.png"));}
             if(Time.realtimeSinceStartup-started>=60){collecting=false;WriteReport();StartCoroutine(Capture("03-race.png"));}
             if(Time.realtimeSinceStartup>nextTelemetry){nextTelemetry=Time.realtimeSinceStartup+5;WriteTelemetry();}
         }
@@ -81,6 +112,9 @@ namespace VectorRush
             File.WriteAllText(Path.Combine(folder,"race-verification.txt"),result);
             yield return Capture(finished?"04-results.png":"04-timeout.png");
             if(finished){
+                yield return VerifyRestartLaunch("results-to-racing",RacePhase.Finished);
+                director.TogglePause();
+                yield return VerifyRestartLaunch("paused-race-to-racing",RacePhase.Paused);
                 for(int i=0;i<3;i++){
                     director.RestartRace();yield return new WaitForSecondsRealtime(1);
                     director.TogglePause();float before=director.CountdownRemaining;yield return new WaitForSecondsRealtime(.5f);
@@ -90,6 +124,16 @@ namespace VectorRush
             }
             if(collecting){collecting=false;WriteReport();}
             if(quitAfter){yield return new WaitForSecondsRealtime(1);Application.Quit();}
+        }
+        IEnumerator VerifyRestartLaunch(string label,RacePhase expectedSource)
+        {
+            var d=VectorBootstrap.Instance.Director;
+            bool source=d.Phase==expectedSource;
+            d.RestartRace();
+            bool reset=d.Player.ProgressTracker.CompletedLaps==0&&Mathf.Abs(d.RaceTime)<.001f&&d.Player.Boost01>.999f&&d.Player.RecoveryCount==0;
+            yield return new WaitForSecondsRealtime(4.2f);
+            bool racing=d.Phase==RacePhase.Racing&&d.RaceTime>.2f&&d.Player.SpeedKph>10f;
+            File.AppendAllText(Path.Combine(folder,"race-verification.txt"),$"Restart launch {label}: expectedSource={source}, laps/time/energy/recovery reset={reset}, racing/movement={racing}, time={d.RaceTime:F2}, speedKph={d.Player.SpeedKph:F1}\n");
         }
         void WriteReport()
         {

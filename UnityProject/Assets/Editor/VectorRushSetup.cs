@@ -26,6 +26,10 @@ namespace VectorRush.Editor
                 AssetDatabase.CreateAsset(pipeline,pipelinePath);
             }
             GraphicsSettings.defaultRenderPipeline=pipeline;QualitySettings.renderPipeline=pipeline;
+            var rendererData=AssetDatabase.LoadAssetAtPath<UniversalRendererData>("Assets/Settings/VectorRenderer.asset");
+            rendererData.postProcessData=AssetDatabase.LoadAssetAtPath<PostProcessData>("Packages/com.unity.render-pipelines.universal/Runtime/Data/PostProcessData.asset");
+            if(!rendererData.postProcessData)throw new Exception("URP post-processing resource is missing");
+            EditorUtility.SetDirty(rendererData);
             pipeline.mainLightShadowmapResolution=4096;pipeline.shadowDistance=150;pipeline.shadowCascadeCount=4;
             var pipelineSettings=new SerializedObject(pipeline);pipelineSettings.FindProperty("m_SoftShadowsSupported").boolValue=true;pipelineSettings.ApplyModifiedPropertiesWithoutUndo();
             EditorUtility.SetDirty(pipeline);
@@ -38,10 +42,11 @@ namespace VectorRush.Editor
             var input=settings.FindProperty("activeInputHandler");if(input!=null){input.intValue=2;settings.ApplyModifiedPropertiesWithoutUndo();}
             var surface=AssetDatabase.LoadAssetAtPath<Material>("Assets/Resources/SurfaceLit.mat");
             if(!surface){surface=new Material(Shader.Find("Universal Render Pipeline/Lit"));surface.EnableKeyword("_EMISSION");surface.SetColor("_EmissionColor",Color.black);AssetDatabase.CreateAsset(surface,"Assets/Resources/SurfaceLit.mat");}
+            surface.SetColor("_EmissionColor",Color.white);surface.globalIlluminationFlags=MaterialGlobalIlluminationFlags.RealtimeEmissive;surface.EnableKeyword("_EMISSION");EditorUtility.SetDirty(surface);
             // The lit template retains only needed variants; these small shaders are used by name.
             var gs=new SerializedObject(AssetDatabase.LoadAllAssetsAtPath("ProjectSettings/GraphicsSettings.asset")[0]);
             var shaders=gs.FindProperty("m_AlwaysIncludedShaders");
-            foreach(string name in new[]{"Skybox/Procedural","VectorRush/Ocean"}){
+            foreach(string name in new[]{"Skybox/Procedural","VectorRush/Ocean","Universal Render Pipeline/Unlit","VectorRush/Ion Trail"}){
                 var shader=Shader.Find(name);if(!shader)continue;bool found=false;
                 for(int i=0;i<shaders.arraySize;i++)if(shaders.GetArrayElementAtIndex(i).objectReferenceValue==shader)found=true;
                 if(!found){int i=shaders.arraySize;shaders.InsertArrayElementAtIndex(i);shaders.GetArrayElementAtIndex(i).objectReferenceValue=shader;}

@@ -1,0 +1,1 @@
+Same paused native chase view; each condition is restored before the next. Baseline, no sun shadows, no reflection probe/ambient reflection, unlit road, hidden track underbody, no grain texture, flat road normals. Diagnostic changes are not delivery settings.
