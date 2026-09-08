@@ -1,0 +1,10 @@
+{
+  "parentCommit": "fc0ee3915bf43f7543a0c78c880ed5ab617c244f",
+  "scope": "Actual player cruise60/boost82; acceleration and rival policy unchanged. Applies with manual or automated input.",
+  "files": {
+    "UnityProject/Assets/Scripts/Gameplay/HoverVehicle.cs": "1bb8acf97bae95706ea27911220e53c978030d87dcfb8a5b9cd4c116e642899f",
+    "UnityProject/Assets/Scripts/VectorBootstrap.cs": "b7eafe681f155b7addf1cdac108eac095cfa503d24a95105e56e02ba631a5cd6",
+    "UnityProject/Assets/Scripts/PaceEvidence.cs": "884e1d5d7faa444534dca31fccfefbcf42ce10aeecd8cc75d1803a79ab05b133",
+    "UnityProject/Assets/Scripts/EnvironmentEvidence.cs": "5b3af59fb6903e762222c0d21676ed8b0b840340bf330bb081849176ba6f61eb"
+  }
+}

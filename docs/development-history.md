@@ -216,3 +216,7 @@ Final-source regression suite rerun: all 32 tests pass. Source hashes remain ide
 ## 2026-09-08 — Native pace baseline before final balance pass
 
 User requested closer racing, followed by one visual critique/improvement round and final publication. Added opt-in PaceEvidence recording actual all-racer state, guard duty, input requests, validated distance gaps and vehicle settings through an ordinary three-lap race. Read-only driver diagnostics do not change behavior. Native baseline completes in 112.60 simulation seconds, 1,127 samples, six original screenshots, zero recoveries. Capture runs at 24 simulation frames per second and makes no performance claim. Prior pose-based pace diagnosis and exact native fields are preserved before applying the authorized actual-player speed reduction. Expanded optional environment capture durations to accommodate the slower race.
+
+## 2026-09-08 — First player pace candidate, still too separated
+
+Actual player cruise60/boost82 completes three laps in 120.912 seconds with zero recoveries across the field. Duration-weighted nearest Euclidean rival under80m improves from1.28% to53.48% after5s, but under40m reaches only4.37%; nearest validated finish gap remains177.1m. This is an improvement but not close-racing acceptance. Preserve candidate01 and its actual settings before the next bounded 55/75 candidate; acceleration and rival safety remain unchanged.
