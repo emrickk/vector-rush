@@ -25,7 +25,7 @@ namespace VectorRush
                 go.transform.position=p+f.Up*12.4f-f.Right*side*4;
                 go.transform.rotation=Quaternion.LookRotation((f.Position+f.Forward*6-go.transform.position).normalized,f.Forward);
                 var light=go.AddComponent<Light>();light.type=LightType.Spot;light.color=warm?new Color(1,.48f,.12f):new Color(.74f,.86f,1);
-                light.intensity=warm?590:470;light.range=49;light.spotAngle=114;light.innerSpotAngle=78;light.shadows=LightShadows.None;
+                light.intensity=warm?540:390;light.range=41;light.spotAngle=98;light.innerSpotAngle=52;light.shadows=LightShadows.None;
                 // Repeated embedded edge reflectors and exposed deck engineering establish close-range scale.
                 for(int s=-1;s<=1;s+=2){
                     world.Box("Barrier service panel",f.Position+f.Right*s*11.59f+f.Up*.91f,new Vector3(.045f,.62f,2.3f),q,housing);
@@ -47,6 +47,21 @@ namespace VectorRush
                 }
                 world.Box("Gallery crown beam",f.Position+f.Up*15,new Vector3(29,.7f,1.1f),q,housing);
                 world.Box("Gallery ceiling strip",f.Position+f.Up*14.6f,new Vector3(24,.08f,.22f),q,section==0?cool:amber);
+                if(i<6){
+                    // Solid overhead cassettes and inset side panels create two
+                    // composed light corridors; their structure stays outside the driving envelope.
+                    world.Box("Gallery overhead cassette",f.Position+f.Forward*6.2f+f.Up*15.45f,new Vector3(28.8f,.5f,12.2f),q,housing);
+                    for(int side=-1;side<=1;side+=2){
+                        world.Box("Gallery acoustic side cassette",f.Position+f.Forward*6.2f+f.Right*side*14.65f+f.Up*7.4f,new Vector3(.35f,13.4f,11.9f),q,housing);
+                        world.Box("Gallery inset warm/cool line",f.Position+f.Forward*6.2f+f.Right*side*14.38f+f.Up*4.5f,new Vector3(.06f,.12f,9.6f),q,section==0?cool:amber);
+                        world.Box("Gallery low safety band",f.Position+f.Forward*6.2f+f.Right*side*14.37f+f.Up*2.7f,new Vector3(.07f,.48f,2.4f),q,paint);
+                    }
+                    var lamp=new GameObject("Gallery ceiling road pool");lamp.transform.SetParent(transform,false);
+                    lamp.transform.position=f.Position+f.Up*14.35f;
+                    lamp.transform.rotation=Quaternion.LookRotation(-f.Up+f.Forward*.28f,f.Forward);
+                    var light=lamp.AddComponent<Light>();light.type=LightType.Spot;light.color=section==0?new Color(.70f,.86f,1):new Color(1,.51f,.20f);
+                    light.intensity=section==0?320:390;light.range=32;light.spotAngle=100;light.innerSpotAngle=52;light.shadows=LightShadows.None;
+                }
             }
         }
         static void Add(Vector3 p,Vector3 size,Quaternion q,List<CombineInstance> list,Mesh mesh){list.Add(new CombineInstance{mesh=mesh,transform=Matrix4x4.TRS(p,q,size)});}

@@ -13,6 +13,7 @@ namespace VectorRush
         readonly List<Vector3> accepted=new List<Vector3>();
         public IReadOnlyList<Vector3> DistrictCenters => accepted;
         Material concrete,steel,trim,asphalt,warm,cyan,windows;
+        readonly Material[] facades=new Material[4];
         Vector3[] samples;
         float clearance;
 
@@ -27,6 +28,18 @@ namespace VectorRush
             var shader=Shader.Find("VectorRush/NightWindows");
             windows=shader?new Material(shader):world.MakeMaterial("Night / window fallback",new Color(.08f,.15f,.22f),.75f,.1f,new Color(.15f,.24f,.35f));
             if(shader){ownMaterials.Add(windows);windows.SetFloat("_Density",.53f);}
+            float[] cellWidths={2.1f,1.65f,3.3f,2.65f},floorHeights={3.4f,3.1f,3.8f,3.3f};
+            float[] densities={.49f,.36f,.57f,.4f},intensities={.86f,.57f,.70f,.48f};
+            for(int i=0;i<facades.Length;i++)
+            {
+                if(!shader){facades[i]=windows;continue;}
+                var facade=new Material(windows){name="Night / facade character "+i};ownMaterials.Add(facade);facades[i]=facade;
+                facade.SetFloat("_CellWidth",cellWidths[i]);facade.SetFloat("_FloorHeight",floorHeights[i]);
+                facade.SetFloat("_Density",densities[i]);facade.SetFloat("_Intensity",intensities[i]);
+                facade.SetFloat("_Seed",3+i*7);facade.SetFloat("_BandInterval",5+i*2);
+                if(i==1){facade.SetColor("_WarmColor",new Color(.54f,.46f,.32f));facade.SetColor("_CoolColor",new Color(.32f,.53f,.7f));}
+                if(i==3){facade.SetColor("_WarmColor",new Color(.62f,.38f,.22f));facade.SetColor("_CoolColor",new Color(.21f,.41f,.56f));}
+            }
             samples=new Vector3[720];for(int i=0;i<samples.Length;i++)samples[i]=track.Evaluate((float)i/samples.Length).Position;
             clearance=track.Width*.5f+30f;
             Box(Vector3.zero,Quaternion.identity,new Vector3(0,-1.15f,0),new Vector3(2400,.5f,2400),asphalt);
@@ -135,23 +148,55 @@ namespace VectorRush
 
         void SkylineTower(Vector3 c,Quaternion q,float w,float d,float h,int style)
         {
+            Material facade=facades[(Mathf.FloorToInt(Mathf.Abs(c.x+c.z)*.037f)+style)%4];
+            bool detailed=c.x*c.x+c.z*c.z<420f*420f;
             Box(c,q,new Vector3(0,4,0),new Vector3(w+8,8,d+8),steel);
             if(style==1)
             {
                 // Unequal paired blades with a deliberate vertical gap and linking floor.
-                Box(c,q,new Vector3(-w*.29f,h*.5f,0),new Vector3(w*.43f,h,d),windows);
-                Box(c,q,new Vector3(w*.29f,h*.38f,0),new Vector3(w*.43f,h*.76f,d*.87f),windows);
+                Box(c,q,new Vector3(-w*.29f,h*.5f,0),new Vector3(w*.43f,h,d),facade);
+                Box(c,q,new Vector3(w*.29f,h*.38f,0),new Vector3(w*.43f,h*.76f,d*.87f),facade);
                 Box(c,q,new Vector3(0,h*.63f,0),new Vector3(w*.65f,5,d*.57f),steel);
                 Box(c,q,new Vector3(-w*.29f,h+.8f,0),new Vector3(w*.44f,1.6f,d+1),concrete);
             }
             else
             {
                 float lower=h*.64f,upper=h*.24f;
-                Box(c,q,new Vector3(0,lower*.5f,0),new Vector3(w,lower,d),windows);
-                Box(c,q,new Vector3(style==2?w*.12f:0,lower+upper*.5f,0),new Vector3(w*.79f,upper,d*.81f),windows);
-                Box(c,q,new Vector3(style==2?w*.22f:0,h*.94f,0),new Vector3(w*.56f,h*.12f,d*.6f),steel);
+                Box(c,q,new Vector3(0,lower*.5f,0),new Vector3(w,lower,d),facade);
+                Box(c,q,new Vector3(style==2?w*.12f:0,lower+upper*.5f,0),new Vector3(w*.79f,upper,d*.81f),facade);
+                if(style==3)
+                {
+                    // An open mechanical crown replaces the repeated opaque roof block.
+                    Box(c,q,new Vector3(0,h*.88f+1,0),new Vector3(w*.64f,2,d*.64f),steel);
+                    for(int side=-1;side<=1;side+=2)Box(c,q,new Vector3(side*w*.27f,h*.945f,0),new Vector3(.65f,h*.13f,.65f),trim);
+                    Box(c,q,new Vector3(0,h*1.015f,0),new Vector3(w*.57f,.65f,1.2f),concrete);
+                }
+                else if(style==4)
+                    Box(c,q,new Vector3(w*.15f,h*.895f,-d*.15f),new Vector3(w*.5f,3,d*.48f),concrete);
+                else
+                    Box(c,q,new Vector3(style==2?w*.22f:-w*.12f,h*.94f,-d*.08f),new Vector3(w*.46f,h*.12f,d*.53f),steel);
                 Box(c,q,new Vector3(0,lower+.4f,0),new Vector3(w+1,.8f,d+1),concrete);
                 Box(c,q,new Vector3(style==2?w*.12f:0,lower+upper+.4f,0),new Vector3(w*.8f,.8f,d*.83f),trim);
+            }
+            if(detailed)
+            {
+                // Close buildings have a matte service elevation and deep construction
+                // breaks, so the camera reads volumes instead of equally luminous boxes.
+                Box(c,q,new Vector3(w*.505f,h*.32f,0),new Vector3(.42f,h*.64f,d*.96f),concrete);
+                Box(c,q,new Vector3(-w*.14f,h*.32f,d*.512f),new Vector3(w*.13f,h*.64f,.7f),steel);
+                for(int band=1;band<=2;band++)
+                    Box(c,q,new Vector3(0,h*.2f*band,0),new Vector3(w+.7f,2.3f,d+.7f),steel);
+                for(int fin=0;fin<5;fin++)
+                {
+                    float finX=-w*.42f+fin*w*.21f;
+                    if(style==1&&Mathf.Abs(finX)<w*.13f)continue;
+                    Box(c,q,new Vector3(finX,h*.31f,d*.54f),new Vector3(.38f,h*.6f,1.1f),concrete);
+                }
+                if(style==1)
+                {
+                    Box(c,q,new Vector3(-w*.29f,h*.84f,d*.51f),new Vector3(w*.4f,1.2f,.8f),trim);
+                    Box(c,q,new Vector3(w*.29f,h*.77f,0),new Vector3(w*.44f,1.5f,d*.9f),concrete);
+                }
             }
             for(int side=-1;side<=1;side+=2)
             {
@@ -196,7 +241,7 @@ namespace VectorRush
                     for(int m=0;m<mats.Length;m++)
                     {
                         string name=mats[m]?mats[m].name:"Ivory";
-                        mats[m]=name.Contains("Glass")?windows:name.Contains("Metal")?trim:name.Contains("Ivory")?concrete:steel;
+                        mats[m]=name.Contains("Glass")?facades[(index+i)%4]:name.Contains("Metal")?trim:name.Contains("Ivory")?concrete:steel;
                     }
                     renderer.sharedMaterials=mats;
                 }

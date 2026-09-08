@@ -81,3 +81,11 @@ The 60-second 1920×1080 standalone sample recorded mean16.67ms, P95 16.82ms, P9
 ### User-requested visual targets before proceeding
 
 Paused further implementation/native review to generate three coordinated original night-racing references with the built-in image generator: open city straight, amber enclosed light corridor, and close craft/material view. Saved all three images plus exact prompts and usage notes in `references/nocturne`. The amber corridor is the recommended primary target because the scene can be composed from a limited modular kit with controlled lighting. These are concept targets, explicitly not game screenshots or implementation evidence. Third native build completed while references generated; its atmosphere and corridor inspection remain pending.
+
+### Night candidate checkpoint before ship-first focus
+
+Built the atmosphere/facade/corridor candidate with explicit Exp2 fog retention, more varied facade families, finer road relief and enclosed overhead light cassettes. A native starting-grid capture is preserved in `evidence/ship-baseline-03`. This is a checkpoint, not scene acceptance: the full night03 fog-pair, race, corridor and motion reviews remain pending while the user prioritizes the ship.
+
+### Astra ship baseline and production gates
+
+The user explicitly requested Astra planning and a separate harsh visual reviewer for repeated asset correction. Astra inspected reference C/B, the neutral V2 studio set, night02 gameplay and a fresh night03 native baseline. It rejected the ship's padded large forms, bubble canopy, slab fins, unresolved connections, clipped graphics and dominant glowing nozzle rings. `docs/ship-art-plan.md` defines separate form, construction, materials, propulsion and native/motion gates; `docs/ship-reviews/001-baseline-rejected.md` preserves the negative verdict. A fresh V3 form candidate is being authored separately; no hero-quality pass is claimed.

@@ -74,6 +74,10 @@ namespace VectorRush.Editor
             PrepareCoastalMaterial();
             // The lit template retains only needed variants; these small shaders are used by name.
             var gs=new SerializedObject(AssetDatabase.LoadAllAssetsAtPath("ProjectSettings/GraphicsSettings.asset")[0]);
+            gs.FindProperty("m_FogStripping").intValue=1; // Custom: retain the runtime Exp2 mode.
+            gs.FindProperty("m_FogKeepLinear").boolValue=false;
+            gs.FindProperty("m_FogKeepExp").boolValue=false;
+            gs.FindProperty("m_FogKeepExp2").boolValue=true;
             var shaders=gs.FindProperty("m_AlwaysIncludedShaders");
             foreach(string name in new[]{"Skybox/Procedural","VectorRush/Ocean","Universal Render Pipeline/Unlit","VectorRush/Ion Trail","VectorRush/NightWindows","VectorRush/Night Sky"}){
                 var shader=Shader.Find(name);if(!shader)continue;bool found=false;
@@ -84,6 +88,10 @@ namespace VectorRush.Editor
             if(importer){importer.materialImportMode=ModelImporterMaterialImportMode.ImportStandard;importer.importCameras=false;importer.importLights=false;importer.globalScale=1;importer.SaveAndReimport();}
             var scene=EditorSceneManager.NewScene(NewSceneSetup.EmptyScene,NewSceneMode.Single);
             new GameObject("VECTOR RUSH").AddComponent<VectorBootstrap>();
+            // Runtime scenery uses Exp2 atmosphere. Keep that native shader variant
+            // by serializing the same fog mode into the bootstrap scene before build.
+            RenderSettings.fog=true;RenderSettings.fogMode=FogMode.ExponentialSquared;
+            RenderSettings.fogColor=new Color(.028f,.045f,.075f);RenderSettings.fogDensity=.0015f;
             EditorSceneManager.SaveScene(scene,"Assets/Scenes/Solstice.unity");
             EditorBuildSettings.scenes=new[]{new EditorBuildSettingsScene("Assets/Scenes/Solstice.unity",true)};
             AssetDatabase.SaveAssets();AssetDatabase.Refresh();Debug.Log("VECTOR_SETUP_COMPLETE");

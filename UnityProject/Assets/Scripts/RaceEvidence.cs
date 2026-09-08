@@ -13,7 +13,7 @@ namespace VectorRush
     {
         readonly List<float> frames=new List<float>();
         string folder;float started;bool collecting;bool autopilot;bool quitAfter;bool recordReplay;bool quickEvidence;bool diagnosticRoad;bool diagnosticAO;bool inspectCoast;
-        float nextTelemetry;bool capturedCrest,capturedDescent;
+        float nextTelemetry;bool capturedCrest,capturedDescent,diagnosticFog;
         IEnumerator Start()
         {
             string[] args=Environment.GetCommandLineArgs();
@@ -26,11 +26,13 @@ namespace VectorRush
                 if(args[i]=="-diagnosticRoad")diagnosticRoad=true;
                 if(args[i]=="-diagnosticAO")diagnosticAO=true;
                 if(args[i]=="-inspectCoast")inspectCoast=true;
+                if(args[i]=="-diagnosticFog")diagnosticFog=true;
             }
             if(string.IsNullOrEmpty(folder))yield break;
             Directory.CreateDirectory(folder);
             yield return new WaitForSecondsRealtime(3);
             yield return Capture("01-title.png");
+            if(diagnosticFog){yield return DiagnoseFog();yield break;}
             if(quickEvidence&&inspectCoast){yield return InspectCoast();yield return new WaitForSecondsRealtime(2);Application.Quit();yield break;}
             if(diagnosticAO){yield return DiagnoseAO();yield break;}
             var director=VectorBootstrap.Instance.Director;
@@ -43,6 +45,18 @@ namespace VectorRush
             if(recordReplay){yield return RecordReplay();yield break;}
             started=Time.realtimeSinceStartup;collecting=true;
             if(autopilot)StartCoroutine(VerifyRace());
+        }
+        IEnumerator DiagnoseFog()
+        {
+            Time.timeScale=0;
+            for(int i=0;i<5;i++)yield return null;
+            yield return Capture("fog-01-enabled.png");
+            RenderSettings.fog=false;
+            for(int i=0;i<5;i++)yield return null;
+            yield return Capture("fog-02-disabled.png");
+            RenderSettings.fog=true;Time.timeScale=1;
+            File.WriteAllText(Path.Combine(folder,"fog-diagnostic.txt"),"Matched paused native title view. Only RenderSettings.fog is toggled; enabled Exp2 atmosphere versus disabled. Fog parameters are serialized in the bootstrap scene to preserve native variants. This diagnostic is not a performance measurement.\n");
+            if(quitAfter){yield return new WaitForSecondsRealtime(2);Application.Quit();}
         }
         IEnumerator DiagnoseAO()
         {

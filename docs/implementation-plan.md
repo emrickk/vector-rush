@@ -79,3 +79,15 @@ The user rejected the daylight prototype's visual quality and asked for a more a
 - [ ] Verify the complete race and current performance, preserve critique and record a new preview; package the night build for review.
 
 Ownership: parent road, lighting, materials, rendering settings, integration, camera/HUD and runtime evidence; game_brief NightDistrict and NightWindows; gameplay IonPropulsion and VehicleVFX; independent critic reads actual captures after integration. Existing daytime source/history stays recoverable in Git.
+
+## Ship-first visual iteration
+
+The user explicitly assigned Astra as planner and harsh independent visual reviewer, authorized Blender tooling, and requested repeated correction until the ship meets the reference-level hero-asset target. Scene work is paused while the ship is addressed.
+
+- [x] Astra baseline critique and ranked ship art plan against reference C.
+- [ ] Rebuild primary form and construction in staged Blender source; review neutral renders and loop on visible failures.
+- [ ] Develop surface/material depth and readable livery after form acceptance; review and loop.
+- [ ] Integrate the reviewed asset and calibrated engine anchors; review native neutral views, ordinary chase views and propulsion.
+- [ ] Preserve each reviewed pass, its critique and source/export identity; validate the integrated race and package for review.
+
+A successful compile, a flattering studio frame, or a prototype-level acceptance does not meet this visual gate. Reviewer remains independent from the asset implementation.

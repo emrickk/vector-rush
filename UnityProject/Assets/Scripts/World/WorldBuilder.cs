@@ -43,7 +43,7 @@ namespace VectorRush
                 float patch=Mathf.PerlinNoise(x*.021f+2.7f,y*.009f+1.1f);
                 float streak=Mathf.PerlinNoise(x*.12f,y*.005f);
                 float shade=.88f+grain*.07f+patch*.03f;pixels[index]=new Color(shade,shade,shade,1);
-                normals[index]=new Color(.5f+(grain-.5f)*.2f,.5f+((float)random.NextDouble()-.5f)*.17f,1,1);
+                normals[index]=new Color(.5f+(grain-.5f)*.08f,.5f+((float)random.NextDouble()-.5f)*.065f,1,1);
                 masks[index]=new Color(0,0,0,Mathf.Lerp(.48f,.93f,Mathf.SmoothStep(.2f,.8f,patch*.65f+streak*.35f)));
             }
             roadGrain.SetPixels(pixels);roadGrain.Apply(true,true);roadNormals.SetPixels(normals);roadNormals.Apply(true,true);roadSmoothness.SetPixels(masks);roadSmoothness.Apply(true,true);

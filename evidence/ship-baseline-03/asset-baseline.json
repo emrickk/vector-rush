@@ -1,0 +1,10 @@
+{
+  "recorded_utc": "2026-09-08T03:07:19.826280+00:00",
+  "scope": "Existing V2 ship in night03 candidate native build. No user driving or visual acceptance. Captures are actual native rendering.",
+  "native_fbx": "UnityProject/Assets/Resources/Art/HeroShip.fbx",
+  "native_fbx_sha256": "61f634392f52c054a152641f16770b10b3c6eab7d37f5323cb627d2c084ee035",
+  "editable_source": "SourceAssets/hero-v2/Kestrel07-v2.blend",
+  "reference": "references/nocturne/C-craft-materials.png",
+  "reference_sha256": "775b0dd8e386d31af7d4efcc5f3589b9bcfec70db446bced974c4fa438b6d4ae",
+  "reference_is_generated_concept": true
+}
