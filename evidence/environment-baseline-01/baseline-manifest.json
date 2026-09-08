@@ -1,0 +1,58 @@
+{
+  "visualSourceCommit": "0320b3c",
+  "captureHarness": "EnvironmentEvidence.cs with Bootstrap opt-in registration; built before any live art source edits",
+  "sourceHashes": {
+    "UnityProject/Assets/Scripts/World/WorldBuilder.cs": "809582dd4dceb133d7b51437331729f7df29b53c83129cb51f671fc02d0a6445",
+    "UnityProject/Assets/Scripts/World/NightTrackLighting.cs": "e454c5692f28068722783441e5ba8c21507983aad59fa3bd10ec2b8a5891af7b",
+    "UnityProject/Assets/Scripts/World/NightDistrict.cs": "0867d9157e8ca4d978100152f79692700f10bd2ee982c01361843f7ffa734c05",
+    "UnityProject/Assets/Scripts/Gameplay/ChaseCamera.cs": "775e56cb04323b1db2d656527ea530d46c4e51023823f91c1d6d8bf7f70ed007",
+    "UnityProject/Assets/Scripts/Presentation/RaceHUD.cs": "be03dc7f0f6d539a4f0a358bb563f8d5757a7e4979f03c70ea49deebcaebbb74"
+  },
+  "frameCount": 264,
+  "captureFps": 24,
+  "audio": false,
+  "simulationSeconds": 11,
+  "performanceSample": false,
+  "anchors": [
+    {
+      "anchor": "01-approach",
+      "frame": 0,
+      "sha256": "28a13b5f98b6b07566d68d9c39d9782bd226995c2cf77de8052b4dba8a598fca",
+      "progress": 0.7166070342063904,
+      "rawSpeedKph": 116.84088897705078,
+      "boost": false
+    },
+    {
+      "anchor": "02-entry",
+      "frame": 170,
+      "sha256": "34bcc3765af42f4b46faa28d3b868aaa6566966a3121e3d18c428aa0e0b4f035",
+      "progress": 0.8483691811561584,
+      "rawSpeedKph": 202.0045166015625,
+      "boost": false
+    },
+    {
+      "anchor": "03-middle",
+      "frame": 190,
+      "sha256": "ae3a4190adcf8e11b089af44ab24b24329aa4ae685677da4c03d962a904cd826",
+      "progress": 0.8732876181602478,
+      "rawSpeedKph": 190.81077575683594,
+      "boost": false
+    },
+    {
+      "anchor": "04-exit",
+      "frame": 210,
+      "sha256": "7a1e969865382c2471a1dc194412b7d8505c5b0e06bef7fd98578f1cecd52436",
+      "progress": 0.8980010747909546,
+      "rawSpeedKph": 211.8712158203125,
+      "boost": false
+    },
+    {
+      "anchor": "05-reveal",
+      "frame": 240,
+      "sha256": "1caf07a7d4897202aa251f8f5121e9c16127ff74fb21d46f132ec19e7847d343",
+      "progress": 0.9468441605567932,
+      "rawSpeedKph": 330.2275695800781,
+      "boost": true
+    }
+  ]
+}

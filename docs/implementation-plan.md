@@ -150,7 +150,7 @@ This checkpoint changes the plan and critique only. Implementation of these new 
 User explicitly prioritizes city/track visuals and feeling. This order supersedes the AI-first sequence above. Detailed implementation and acceptance criteria: [visual environment plan](visual-environment-plan.md).
 
 - [x] Write the revised visual-first plan and preserve the prior critique/history.
-- [ ] Capture five fixed benchmark views and compose one 10–15-second final-sector/gallery/exit passage.
+- [x] Capture five fixed benchmark views and compose one 10–15-second final-sector/gallery/exit passage.
 - [ ] Author visible near/middle/far city layers with distinct architecture and an exit landmark.
 - [ ] Develop track construction and entry/interior/exit gallery variants with a visible ceiling.
 - [ ] Isolate and resolve or deliberately redesign the unstable road-sheen treatment.
@@ -158,3 +158,10 @@ User explicitly prioritizes city/track visuals and feeling. This order supersede
 - [ ] Expand the accepted design around the current circuit, profile the exact build and package the visual milestone.
 
 AI, handling, ship-form and HUD redesign work are deferred during this stage. No environment code or assets changed in the planning checkpoint.
+
+
+## Visual environment implementation — active
+
+User authorized implementation with “go.” First bounded step: lock five existing native chase-camera baseline selections and define the passage composition/asset contract. Parent owns the baseline, WorldBuilder and integration; game_brief inspects and then authors NightDistrict/Blender environment assets; gameplay owns an opt-in matched road-diagnostic harness plus Bootstrap registration; Astra owns independent benchmark direction/review. Environment production follows the baseline contract. Road diagnosis is isolated from art changes. No AI, handling or HUD redesign.
+
+Baseline step complete: unchanged-art native build, 264 frames / five anchors with full pose records, concept provenance, passage contract and first 12-condition road experiment. Native capture completion is not visual acceptance. Next bounded step: integrate the audited transit/service kit, rebuild the gallery and visible deck construction, and run the next isolated road-normal diagnostic. Parent owns WorldBuilder/RoadSurfaceEvidence; gallery author owns NightTrackLighting; city author owns NightDistrict and nominated Blender/live exports; critic owns review files. Validate the native benchmark before expansion.
