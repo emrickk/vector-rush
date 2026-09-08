@@ -1,0 +1,117 @@
+{
+  "review": "002-fixture-caster-native",
+  "buildGuid": "a1325c823e8b4541b20c143f42f12470",
+  "scope": "All three native original PNGs visually inspected; decoded RGB pixel comparison supports a one-pose caster-family A/B/A. No native motion review. Not pixel-identical restoration.",
+  "captureComplete": true,
+  "error": "",
+  "mode": "fixture-caster-A-B-A",
+  "targetProgress": 0.9458500146865845,
+  "actualProgress": 0.9462142586708069,
+  "raceTime": 41.95896530151367,
+  "images": [
+    {
+      "file": "00-baseline.png",
+      "size": [
+        1920,
+        1080
+      ],
+      "mode": "RGB",
+      "decoded": true,
+      "sha256": "2c6c3f9ec11cd3060fbc1fe9da627af5fec2c13eb0ed5a3d1974d65eef7d3f3f"
+    },
+    {
+      "file": "01-fixture-casters-off.png",
+      "size": [
+        1920,
+        1080
+      ],
+      "mode": "RGB",
+      "decoded": true,
+      "sha256": "6f1394745ffaa6a21c2e62763e0dffa844abb5338bd922e7dde36cdb1e41d3a0"
+    },
+    {
+      "file": "02-baseline-restored.png",
+      "size": [
+        1920,
+        1080
+      ],
+      "mode": "RGB",
+      "decoded": true,
+      "sha256": "31c0b288328d2f9aa926ecc8034955bb9575905f8554888452bf3fbad2ba53a0"
+    }
+  ],
+  "identicalViewFields": {
+    "cameraPosition": true,
+    "cameraRotation": true,
+    "raceTime": true,
+    "progress": true,
+    "material": true,
+    "lights": true,
+    "roadMeshEntityId": true,
+    "roadColliderMeshEntityId": true,
+    "enabledAdditionalLights": true,
+    "width": true,
+    "height": true,
+    "normalMode": true,
+    "noSunShadows": true
+  },
+  "casterNonShadowFieldsIdentical": true,
+  "casterShadowModesByView": [
+    [
+      "On",
+      "On",
+      "On"
+    ],
+    [
+      "Off",
+      "Off",
+      "Off"
+    ],
+    [
+      "On",
+      "On",
+      "On"
+    ]
+  ],
+  "originalAndRestoredCasterStatesEqual": true,
+  "harnessCasterRestorationVerified": true,
+  "recordedLightCount": 101,
+  "pixelUnits": "8-bit decoded RGB channel values, no exposure adjustment or image resampling",
+  "roadBandRegion": {
+    "x0": 780,
+    "y0": 690,
+    "x1Exclusive": 1610,
+    "y1Exclusive": 810,
+    "scope": "Manually selected rectangular region around the visible L-shaped road band. Contains some craft exhaust; not a semantic road mask."
+  },
+  "pixelComparisons": [
+    {
+      "a": "00-baseline.png",
+      "b": "01-fixture-casters-off.png",
+      "fullFrameMeanAbsoluteChannelDifference": 0.038426086676954734,
+      "fullFrameMaxChannelDifference": 80,
+      "fullFramePixelsAnyChannelDifferenceAbove2": 10792,
+      "roadBandRegionMeanAbsoluteChannelDifference": 0.4663654618473896,
+      "roadBandRegionPixelsAnyChannelDifferenceAbove2": 9609
+    },
+    {
+      "a": "00-baseline.png",
+      "b": "02-baseline-restored.png",
+      "fullFrameMeanAbsoluteChannelDifference": 0.010009805812757202,
+      "fullFrameMaxChannelDifference": 68,
+      "fullFramePixelsAnyChannelDifferenceAbove2": 396,
+      "roadBandRegionMeanAbsoluteChannelDifference": 0.01214524765729585,
+      "roadBandRegionPixelsAnyChannelDifferenceAbove2": 103
+    },
+    {
+      "a": "01-fixture-casters-off.png",
+      "b": "02-baseline-restored.png",
+      "fullFrameMeanAbsoluteChannelDifference": 0.03788676697530864,
+      "fullFrameMaxChannelDifference": 80,
+      "fullFramePixelsAnyChannelDifferenceAbove2": 10703,
+      "roadBandRegionMeanAbsoluteChannelDifference": 0.46318942436412314,
+      "roadBandRegionPixelsAnyChannelDifferenceAbove2": 9586
+    }
+  ],
+  "visualConclusion": "L-shaped fixture shadow is present in baseline, absent with the three fixture casters off, and present again after restoration. Thin transverse road seam remains. The native control supports the limited caster composition change, with moving exterior validation still required."
+}

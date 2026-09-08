@@ -43,7 +43,11 @@ namespace VectorRush
                     var text=label.AddComponent<TextMesh>();text.text=(i*31).ToString("D4")+"  //";text.fontSize=48;text.characterSize=.085f;text.anchor=TextAnchor.MiddleCenter;text.color=new Color(.22f,.37f,.43f);
                 }
             }
-            Combine("Track lighting steelwork",pools,housing);Combine("Cool linear road lamps",fixtures,cool);Combine("Amber linear road lamps",warmFixtures,amber);
+            // Native A/B/A isolates the pole-and-arm moon shadows as the sharp exterior road bands.
+            // Keep fixtures visible and lit while letting the satin deck's broad light pools read cleanly.
+            Combine("Track lighting steelwork",pools,housing,ShadowCastingMode.Off);
+            Combine("Cool linear road lamps",fixtures,cool,ShadowCastingMode.Off);
+            Combine("Amber linear road lamps",warmFixtures,amber,ShadowCastingMode.Off);
             var structure=world.MakeMaterial("Gallery cast charcoal structure",new Color(.16f,.18f,.20f),.29f,.12f);
             var ceiling=world.MakeMaterial("Gallery matte acoustic ceiling",new Color(.22f,.235f,.25f),.18f,.04f);
             var warmPanel=world.MakeMaterial("Warm gallery ceramic panels",new Color(.235f,.21f,.18f),.3f,.08f);
@@ -204,7 +208,7 @@ namespace VectorRush
             var mesh=new Mesh{name=name};mesh.SetVertices(vertices);mesh.SetTriangles(triangles,0);mesh.RecalculateNormals();mesh.RecalculateBounds();return mesh;
         }
         static void Add(Vector3 p,Vector3 size,Quaternion q,List<CombineInstance> list,Mesh mesh){list.Add(new CombineInstance{mesh=mesh,transform=Matrix4x4.TRS(p,q,size)});}
-        void Combine(string name,List<CombineInstance> instances,Material material){var mesh=new Mesh{name=name};mesh.CombineMeshes(instances.ToArray());meshes.Add(mesh);var go=new GameObject(name);go.transform.SetParent(transform,false);go.AddComponent<MeshFilter>().sharedMesh=mesh;go.AddComponent<MeshRenderer>().sharedMaterial=material;}
+        void Combine(string name,List<CombineInstance> instances,Material material,ShadowCastingMode castShadows=ShadowCastingMode.On){var mesh=new Mesh{name=name};mesh.CombineMeshes(instances.ToArray());meshes.Add(mesh);var go=new GameObject(name);go.transform.SetParent(transform,false);go.AddComponent<MeshFilter>().sharedMesh=mesh;var renderer=go.AddComponent<MeshRenderer>();renderer.sharedMaterial=material;renderer.shadowCastingMode=castShadows;}
         void OnDestroy(){foreach(var mesh in meshes)if(mesh)Destroy(mesh);}
     }
 }
