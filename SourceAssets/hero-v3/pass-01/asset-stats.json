@@ -1,0 +1,30 @@
+{
+  "revision": "pass-01",
+  "recipe_sha256": "722d027fa7f2a4836ada84d052cc11ac5eb9e5b63b1a1459f34a64f9e8f1b654",
+  "source_dimensions_xyz": [
+    5.14,
+    6.885,
+    1.515
+  ],
+  "source_forward": "-Y",
+  "source_up": "+Z",
+  "unity_mapping": "(X,Z,-Y)",
+  "source_meshes": 70,
+  "runtime_meshes": 6,
+  "triangles": 21176,
+  "nonmanifold_edges_by_source_mesh": {
+    "Nacelle / closed structural cavity shell -1": 8,
+    "Nacelle / closed structural cavity shell 1": 8
+  },
+  "materials_used": [
+    "Ivory",
+    "Graphite",
+    "Glass",
+    "Engine",
+    "Metal",
+    "Ceramic"
+  ],
+  "primary_form_only": true,
+  "studio_bloom": false,
+  "runtime_uv_policy": "Unique SmartProject atlas AFTER joining by material; EXPORT_RUNTIME is exact FBX source. Do not re-unwrap after baking."
+}
