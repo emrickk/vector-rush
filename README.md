@@ -4,6 +4,12 @@ A playable, original anti-gravity racing prototype for Apple Silicon macOS. Pilo
 
 [Private GitHub repository](https://github.com/emrickk/vector-rush) · [Build brief](docs/GPT6-BUILD-PROMPT.md) · [Development history](docs/development-history.md) · [Ship art plan](docs/ship-art-plan.md)
 
+## Next planned milestone — production night finish
+
+The owner has selected the supplied night-racing video as the target for a more coherent, polished version of this same game. The [production finish plan](docs/superpowers/plans/2026-09-08-night-production-finish.md) keeps the night direction and existing work. It starts with one representative 15-second opening-city passage: broad lighting and road response, connected construction, craft materials, then visible racing, motion and sound. Full-circuit rollout follows separate visual, watched-motion/manual-play and technical gates. The [design and acceptance criteria](docs/superpowers/specs/2026-09-08-night-production-finish-design.md) and [independent planning critique](docs/environment-reviews/019-production-finish-plan-critique.md) define the standard.
+
+This is the next implementation plan; its tasks have not started. The lighting/material build below remains the current playable delivery. The earlier coastal-restoration suggestion is historical, superseded by this chosen night direction.
+
 ## Current milestone — lighting and material depth
 
 The signal mast and thermal exchange works now use distinct ceramic, cast-concrete, satin-metal and service-coating finishes. Selective light reveals the thermal plant's recessed entrances and pipe supports, with a restrained warm fill beneath the mast's upper rooms. Independent native review accepts this pass; the mast's amber pane remains comparatively flat.

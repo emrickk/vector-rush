@@ -1,5 +1,9 @@
 # Visual environment plan — Nocturne Circuit
 
+**Current governing direction — 2026-09-08:** [Production night finish plan](superpowers/plans/2026-09-08-night-production-finish.md) and [acceptance spec](superpowers/specs/2026-09-08-night-production-finish-design.md). The owner selected improving the existing night scene toward the supplied racing video. The new primary benchmark is the opening city bends, mast and first gallery approach, with five natural crossings at .15, .22, .30, .37 and .43. The final station is now a control view, not the primary acceptance passage. Global light/material experiments and later bounded motion/racing work follow the new staged scope. The implementation described below is historical; the new production plan has not started.
+
+## Historical environment plan and completed bounded passes
+
 Date: 2026-09-08. Current playable baseline: `14b1212`; planning checkpoint: `6fa91de`.
 
 **User priority: visuals and feeling first.** This plan replaces the previous AI-first order. The current work targets the generated-looking city, underdeveloped track, repetitive gallery, black ceiling and diagonal road sheen. Implementation is active. Baseline, authored transit assets, both galleries and track construction are built; corrected composition has advanced to final verification. Full-circuit city expansion remains gated by benchmark acceptance. See the implementation plan and numbered reviews for current status.
@@ -98,3 +102,7 @@ AI pace, race-rule changes, new ship forms, another HUD redesign and new gamepla
 ## Lighting/material depth acceptance — 2026-09-08
 
 Candidate01 uses original ceramic/concrete/titanium/service finish maps with selective mast soffit and thermal portal/support fills. Review016 accepts the actual native images with no correction request. Its strongest benefit is the thermal service facade and connected pipework; the mast remains a subtler improvement. Keep the current light hierarchy. No new global exposure, geometry, road or race tuning is authorized by this bounded step. Preserve the small camera drift in comparisons and the limitations on fine texture, amber-pane depth and continuous motion. Final test/performance/package evidence is recorded separately.
+
+## Production finish plan supersedes prior next-step recommendations
+
+Retain the night circuit, original craft and landmarks, useful HUD and proven race/road corrections. Improve how lighting, road surfaces, connected construction and actual racing work together in ordinary camera views. Independent planning critique019 identifies six observable gates and explicitly rejects accepting isolated assets or sampled stills as proof of the entire moving experience. The earlier coastal comparison remains useful evidence about readability; restoring the coast is no longer the active proposal. See the linked production plan for ownership, iteration limits, rollout order and final delivery requirements.

@@ -1,5 +1,7 @@
 # Vector Rush Implementation Plan
 
+**Active next plan — 2026-09-08:** [Night Racing Production Finish](superpowers/plans/2026-09-08-night-production-finish.md), with [design/acceptance spec](superpowers/specs/2026-09-08-night-production-finish-design.md). The owner requested planning toward the supplied night video's finish. Keep the night game and its existing systems; prove the opening-city benchmark before wider rollout. This documentation milestone is complete; implementation has not started. Earlier sections below preserve the completed work and historical directions, rather than overriding the new plan.
+
 > For agentic workers: use subagent-driven-development with explicit ownership and independent review. User has requested parallel implementation. Do not change another owner's files without coordinating.
 
 **Goal:** A complete original anti-gravity racing slice with Blender sources and verified native gameplay.
@@ -242,3 +244,16 @@ The display blocker is resolved. The unchanged accepted build completes fresh16:
 User reports that the earlier bright coastal version feels more AAA-like and requests a review. Review only: compare representative actual native coastal/current views, preserve an independent visual critique, inspect source evolution for supported causes, and distinguish local correctness from overall visual quality. Do not alter the runtime, art assets or current build. Deliver a candid prioritized diagnosis and one proposed direction experiment; implementation awaits a subsequent user instruction.
 
 Comparative review complete in independent017 and parent018, with an unaltered coastal/current image comparison. Both reviews find stronger overall image hierarchy, visible grounding and identity in the coastal build; current HUD, gallery and service structure improvements remain useful. Source inspection confirms unchanged chase-camera code and a changed broad lighting environment. Recommended next experiment is one current-system coastal lighting/composition passage, or a deliberately restructured night alternative if the owner retains that direction. This is review output only; no implementation step has been started.
+
+## Production night finish — planning milestone
+
+The owner supplied a polished night-racing video, confirmed it represents the same concept at a higher level of finish, and requested a plan toward that standard. This supersedes the proposed coastal-restoration experiment. No game, shader, asset or build change is part of this planning step.
+
+- [x] Preserve a private-source-safe reference brief and define the intended night experience.
+- [x] Write the design/spec and an eight-task implementation plan with exact existing component ownership and native validation commands.
+- [x] Preserve independent planning critique 019 and incorporate its whole-image, connected-world, material, racing, watched/manual and effects-off gates.
+- [x] Set one ordinary opening passage and five natural progress crossings as the benchmark, including the current slowdown and thermal/station control views.
+- [x] Update project entry points and retain previous plans as history.
+- [ ] Execute Tasks 1–8 in the linked production finish plan. First deliverable: baseline/acceptance record and the bounded lighting/road candidate; full-circuit expansion waits for the integrated benchmark gate.
+
+The new plan permits documented global lighting/material experiments in its environment stages and later bounded motion/racing work. Prior step-specific locks applied to their completed milestones. The current native build remains GUID `5c49b92643bd4d41820ba81857fdf8c7`.
