@@ -1,0 +1,78 @@
+00:08.758  blend            | Read blend: "/Users/anping/Documents/Stuff/AI Space/Vector Rush/SourceAssets/hero-v3/pass-03-finish/Kestrel07-v3.blend"
+[
+  {
+    "a": "Canopy / controlled convex near-black glazing",
+    "b": "Canopy / narrow continuous sill",
+    "intersection_triangle_pairs": 313,
+    "positive_area_coplanar_pairs": 0,
+    "coplanar_overlap_area_sum_m2": 0,
+    "noncoplanar_intersection_pairs": 313,
+    "near_parallel_centroids_under_2mm": 145
+  },
+  {
+    "a": "Canopy / controlled convex near-black glazing",
+    "b": "Monocoque / continuous load-bearing center",
+    "intersection_triangle_pairs": 150,
+    "positive_area_coplanar_pairs": 0,
+    "coplanar_overlap_area_sum_m2": 0,
+    "noncoplanar_intersection_pairs": 150,
+    "near_parallel_centroids_under_2mm": 8
+  },
+  {
+    "a": "Armor / waisted center crown -1",
+    "b": "Nacelle / closed structural cavity shell -1",
+    "intersection_triangle_pairs": 279,
+    "positive_area_coplanar_pairs": 24,
+    "coplanar_overlap_area_sum_m2": 0.01476048284996676,
+    "noncoplanar_intersection_pairs": 255,
+    "near_parallel_centroids_under_2mm": 57
+  },
+  {
+    "a": "Armor / engine shoulder crown -1",
+    "b": "Nacelle / closed structural cavity shell -1",
+    "intersection_triangle_pairs": 158,
+    "positive_area_coplanar_pairs": 0,
+    "coplanar_overlap_area_sum_m2": 0,
+    "noncoplanar_intersection_pairs": 158,
+    "near_parallel_centroids_under_2mm": 24
+  },
+  {
+    "a": "Armor / aft changing lower return -1",
+    "b": "Nacelle / closed structural cavity shell -1",
+    "intersection_triangle_pairs": 176,
+    "positive_area_coplanar_pairs": 0,
+    "coplanar_overlap_area_sum_m2": 0,
+    "noncoplanar_intersection_pairs": 176,
+    "near_parallel_centroids_under_2mm": 20
+  },
+  {
+    "a": "Armor / waisted center crown 1",
+    "b": "Nacelle / closed structural cavity shell 1",
+    "intersection_triangle_pairs": 286,
+    "positive_area_coplanar_pairs": 25,
+    "coplanar_overlap_area_sum_m2": 0.047321229816569284,
+    "noncoplanar_intersection_pairs": 261,
+    "near_parallel_centroids_under_2mm": 65
+  },
+  {
+    "a": "Armor / engine shoulder crown 1",
+    "b": "Nacelle / closed structural cavity shell 1",
+    "intersection_triangle_pairs": 158,
+    "positive_area_coplanar_pairs": 0,
+    "coplanar_overlap_area_sum_m2": 0,
+    "noncoplanar_intersection_pairs": 158,
+    "near_parallel_centroids_under_2mm": 24
+  },
+  {
+    "a": "Armor / aft changing lower return 1",
+    "b": "Nacelle / closed structural cavity shell 1",
+    "intersection_triangle_pairs": 181,
+    "positive_area_coplanar_pairs": 0,
+    "coplanar_overlap_area_sum_m2": 0,
+    "noncoplanar_intersection_pairs": 181,
+    "near_parallel_centroids_under_2mm": 19
+  }
+]
+Blender 5.2.0 LTS (hash fbe6228777e7 built 2026-07-14 01:31:22)
+
+Blender quit

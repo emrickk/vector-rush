@@ -1,0 +1,24 @@
+{
+  "scope": "Pass04 contact-corrected geometry with unchanged pass03 maps, to isolate geometry repair. Gallery/plume update present. No final map or race validation claim.",
+  "sha256": {
+    "UnityProject/Assets/Resources/Art/HeroShip.fbx": "f2cfabf5a3ff1f5785debb1c2b81a238f39073f784fc8ec134b4e71c1c397386",
+    "UnityProject/Assets/Resources/Art/HeroShipEngineAnchors.json": "ade72d97ffe3c6ce32b360544272cc993199cf3026840503577ff7f356a0718d",
+    "Builds/Vector Rush.app/Contents/Resources/Data/globalgamemanagers": "e2b13acd570d4c63ed24283d047e74db227979c57604ab7f07dc84c83a679ec0",
+    "UnityProject/Assets/Resources/Art/ShipSurfaces/Graphite_Normal.png": "44f6a1948824364de726804b36d6a2e500eff081aa8423ea8de72cfeb606f883",
+    "UnityProject/Assets/Resources/Art/ShipSurfaces/Metal_Normal.png": "28d0ec4e63ece9504a0b2e252deca7daaa68df530cf7645ae78b50091cc99527",
+    "UnityProject/Assets/Resources/Art/ShipSurfaces/Graphite_MetallicSmoothness.png": "1b31c11e867d83ac415df58ae0becd6ad544f3d987b6017312bdf565686c533e",
+    "UnityProject/Assets/Resources/Art/ShipSurfaces/Ceramic_Occlusion.png": "49c5029fa0f7a3f86f50ac9c63a52f207b0727179312045b3da434a4c06f615a",
+    "UnityProject/Assets/Resources/Art/ShipSurfaces/Metal_BaseColor.png": "b206919faad0f67f4f07579d9b66f381a55dd8eac44b971682cc7cce29b32da7",
+    "UnityProject/Assets/Resources/Art/ShipSurfaces/Ceramic_Normal.png": "46d3c88f2eab139838b87fd3a7ae56c1a5f009d1a06d46c279a19e59eb9609a2",
+    "UnityProject/Assets/Resources/Art/ShipSurfaces/Metal_Occlusion.png": "295b4e589c39131b061a6c86215ed3c6d4a437fc74b577e4eb3ce706ea8d3aa8",
+    "UnityProject/Assets/Resources/Art/ShipSurfaces/Ceramic_BaseColor.png": "24e519f7ab40414851755d3c3c7daea25b97e2f5a043fe7e0a7240cb9152b6cc",
+    "UnityProject/Assets/Resources/Art/ShipSurfaces/Graphite_Occlusion.png": "67849ce65e004acc00541ddee1243340e3929d24345ce0e08405e63f221f6187",
+    "UnityProject/Assets/Resources/Art/ShipSurfaces/Metal_MetallicSmoothness.png": "fab7d63ba08b03dd42c6928a669a1c92c9283a68a35f10d7a4b3edccc3658f2b",
+    "UnityProject/Assets/Resources/Art/ShipSurfaces/Ceramic_MetallicSmoothness.png": "a233028cb3b906844f6b5b12c44d0afc80cb6173e04aa0880dc659efa43272fb",
+    "UnityProject/Assets/Resources/Art/ShipSurfaces/Ivory_MetallicSmoothness.png": "f7d2eaa82f748454bef75030be7ee450de64738a2ef03686f02a304246efef53",
+    "UnityProject/Assets/Resources/Art/ShipSurfaces/Graphite_BaseColor.png": "d14f767965a7d023fc1fa06c0c83b79d7e06dd831405139aeaff51885a1687c7",
+    "UnityProject/Assets/Resources/Art/ShipSurfaces/Ivory_Occlusion.png": "a527cad19b3cb389f916e41e0092c7aae56ed48b29dadc0ea6f5a4045cc239c5",
+    "UnityProject/Assets/Resources/Art/ShipSurfaces/Ivory_BaseColor.png": "c4fcaeb7b6a8b00baca2c3c17a1f09e213ce46d752bc26c4456626930fd36056",
+    "UnityProject/Assets/Resources/Art/ShipSurfaces/Ivory_Normal.png": "852392b95eaded0ce8e2e5a5b55036c3ede5d652234f429004783b1f5a339742"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "revision": "pass-04-contacts",
+  "resolution": [
+    1600,
+    1200
+  ],
+  "samples": 32,
+  "denoising": false,
+  "threads": 4,
+  "bloom": false,
+  "neutral_white_studio": true,
+  "views": [
+    [
+      "01-neutral-rear-quarter",
+      [
+        -8,
+        10,
+        6
+      ],
+      [
+        0,
+        0,
+        0.2
+      ],
+      9.6,
+      false,
+      "ORTHO"
+    ]
+  ],
+  "completion_status": "Geometry/audit revision; native before/after validation pending; no source render requested yet"
+}

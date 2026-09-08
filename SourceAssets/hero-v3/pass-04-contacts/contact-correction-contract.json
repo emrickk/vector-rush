@@ -1,0 +1,47 @@
+{
+  "source_moved_vertices": {
+    "Canopy / narrow continuous sill": 529,
+    "Nacelle / closed structural cavity shell -1": 318,
+    "Nacelle / closed structural cavity shell 1": 318
+  },
+  "runtime_moved_vertices": {
+    "Kestrel07_V3_Graphite": 1165
+  },
+  "unique_position_edits": 1165,
+  "sill_lowering_m": 0.04,
+  "sill_longitudinal_scale": 0.99,
+  "graphite_return_recess_m": 0.015,
+  "graphite_intake_expansion_m": 0.015,
+  "armor_and_glass_geometry_changed": false,
+  "uv_coordinates_changed": false,
+  "input_source_sha256": "e07cde687c143f73fba4a62cfbfae070286cc0edba0c426d259fd0efac83fcfc",
+  "all_runtime_uvs_identical": true,
+  "runtime_geometry_changed": [
+    "Kestrel07_V3_Graphite"
+  ],
+  "source_geometry_changed": [
+    "Canopy / narrow continuous sill",
+    "Nacelle / closed structural cavity shell -1",
+    "Nacelle / closed structural cavity shell 1"
+  ],
+  "before_runtime_uv_sha256": {
+    "Kestrel07_V3_Ivory": "fffa281b7f129421be38c1b49ba2ca1b752829ac9c07ce2f42ed23b7acdaf72c",
+    "Kestrel07_V3_Graphite": "fb8fe1b3cafb38785acaedb1d85688aeb134e69fcaf0c00b5648b1f733b53105",
+    "Kestrel07_V3_Glass": "d06006ff2e5cce199e90a6412d02d8b55f8ebcc3a4294837bf0314f02fce3216",
+    "Kestrel07_V3_Metal": "6a1f5909e7985a2247652d50c58c266829a1b7a506b3bb2280f838b3f9cea88b",
+    "Kestrel07_V3_Ceramic": "66af745273d9da2bd35e68fccf79b48f014a329e0ff424c32f6401ea623a5a89",
+    "Kestrel07_V3_Engine": "0ee63e477389d6c5b0b9bfec18f23d674da17b64a753d076f99136f95a39980b",
+    "Kestrel07_V3_EngineCore": "e0959f7b5d993cd8a1827c557acd612d3d67fdca090f94709d1f2eb9c77ff5d8"
+  },
+  "after_runtime_uv_sha256": {
+    "Kestrel07_V3_Ivory": "fffa281b7f129421be38c1b49ba2ca1b752829ac9c07ce2f42ed23b7acdaf72c",
+    "Kestrel07_V3_Graphite": "fb8fe1b3cafb38785acaedb1d85688aeb134e69fcaf0c00b5648b1f733b53105",
+    "Kestrel07_V3_Glass": "d06006ff2e5cce199e90a6412d02d8b55f8ebcc3a4294837bf0314f02fce3216",
+    "Kestrel07_V3_Metal": "6a1f5909e7985a2247652d50c58c266829a1b7a506b3bb2280f838b3f9cea88b",
+    "Kestrel07_V3_Ceramic": "66af745273d9da2bd35e68fccf79b48f014a329e0ff424c32f6401ea623a5a89",
+    "Kestrel07_V3_Engine": "0ee63e477389d6c5b0b9bfec18f23d674da17b64a753d076f99136f95a39980b",
+    "Kestrel07_V3_EngineCore": "e0959f7b5d993cd8a1827c557acd612d3d67fdca090f94709d1f2eb9c77ff5d8"
+  },
+  "textures_baked": false,
+  "native_validation_pending": true
+}

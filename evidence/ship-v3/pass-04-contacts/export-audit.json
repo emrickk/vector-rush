@@ -1,0 +1,1490 @@
+{
+  "source_sha256": "d015949dfc96e149d488b9df2a6d40efc287970ae1577af551723c8d2de5efaa",
+  "fbx_sha256": "f2cfabf5a3ff1f5785debb1c2b81a238f39073f784fc8ec134b4e71c1c397386",
+  "source_meshes": {
+    "Monocoque / continuous load-bearing center": {
+      "vertices": 232,
+      "polygons": 226,
+      "triangles": 460,
+      "ngons_over_quad": 2,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.0012755149509757757,
+        0.0012754526687785983,
+        0.6262151598930359,
+        0.9987245202064514
+      ],
+      "valid_tangents": false,
+      "tangent_error": "Error: Tangent space can only be computed for tris/quads, aborting\n"
+    },
+    "Nose / small ceramic lower keel": {
+      "vertices": 124,
+      "polygons": 118,
+      "triangles": 244,
+      "ngons_over_quad": 8,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.0013590811286121607,
+        0.001359007554128766,
+        0.998640775680542,
+        0.8516091704368591
+      ],
+      "valid_tangents": false,
+      "tangent_error": "Error: Tangent space can only be computed for tris/quads, aborting\n"
+    },
+    "Canopy / narrow continuous sill": {
+      "vertices": 529,
+      "polygons": 522,
+      "triangles": 1054,
+      "ngons_over_quad": 14,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.001356775755994022,
+        0.0013566927518695593,
+        0.7150548696517944,
+        0.9986432790756226
+      ],
+      "valid_tangents": false,
+      "tangent_error": "Error: Tangent space can only be computed for tris/quads, aborting\n"
+    },
+    "Canopy / controlled convex near-black glazing": {
+      "vertices": 525,
+      "polygons": 518,
+      "triangles": 1046,
+      "ngons_over_quad": 16,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.0013297346886247396,
+        0.0013297087280079722,
+        0.6922007203102112,
+        0.9986702799797058
+      ],
+      "valid_tangents": false,
+      "tangent_error": "Error: Tangent space can only be computed for tris/quads, aborting\n"
+    },
+    "Spine / aft avionics mantle": {
+      "vertices": 160,
+      "polygons": 154,
+      "triangles": 316,
+      "ngons_over_quad": 2,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.001658284105360508,
+        0.0016582064563408494,
+        0.9983417391777039,
+        0.9916431307792664
+      ],
+      "valid_tangents": false,
+      "tangent_error": "Error: Tangent space can only be computed for tris/quads, aborting\n"
+    },
+    "Center / formed rear cheek -1": {
+      "vertices": 120,
+      "polygons": 118,
+      "triangles": 236,
+      "ngons_over_quad": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.0015806553419679403,
+        0.0015806122682988644,
+        0.6452063918113708,
+        0.9984192252159119
+      ],
+      "valid_tangents": true
+    },
+    "Chassis / boxed crossmember -1 -1.15": {
+      "vertices": 56,
+      "polygons": 54,
+      "triangles": 108,
+      "ngons_over_quad": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.0015982778277248144,
+        0.0015982778277248144,
+        0.9984017610549927,
+        0.9115318655967712
+      ],
+      "valid_tangents": true
+    },
+    "Chassis / formed nacelle mounting saddle": {
+      "vertices": 156,
+      "polygons": 150,
+      "triangles": 308,
+      "ngons_over_quad": 2,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.0017610628856346011,
+        0.0017610789509490132,
+        0.9982388019561768,
+        0.9431886672973633
+      ],
+      "valid_tangents": false,
+      "tangent_error": "Error: Tangent space can only be computed for tris/quads, aborting\n"
+    },
+    "Chassis / seated central mounting flange": {
+      "vertices": 156,
+      "polygons": 150,
+      "triangles": 308,
+      "ngons_over_quad": 2,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.0015109285013750196,
+        0.0015107460785657167,
+        0.9984890222549438,
+        0.8018789887428284
+      ],
+      "valid_tangents": false,
+      "tangent_error": "Error: Tangent space can only be computed for tris/quads, aborting\n"
+    },
+    "Chassis / boxed crossmember -1 1.55": {
+      "vertices": 56,
+      "polygons": 54,
+      "triangles": 108,
+      "ngons_over_quad": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.0015982778277248144,
+        0.0015982778277248144,
+        0.9984017610549927,
+        0.9115318655967712
+      ],
+      "valid_tangents": true
+    },
+    "Chassis / formed nacelle mounting saddle.001": {
+      "vertices": 156,
+      "polygons": 150,
+      "triangles": 308,
+      "ngons_over_quad": 2,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.0017610767390578985,
+        0.001761034713126719,
+        0.9982388615608215,
+        0.9431885480880737
+      ],
+      "valid_tangents": false,
+      "tangent_error": "Error: Tangent space can only be computed for tris/quads, aborting\n"
+    },
+    "Chassis / seated central mounting flange.001": {
+      "vertices": 156,
+      "polygons": 150,
+      "triangles": 308,
+      "ngons_over_quad": 2,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.0015109366504475474,
+        0.001510909292846918,
+        0.9984890818595886,
+        0.8018792271614075
+      ],
+      "valid_tangents": false,
+      "tangent_error": "Error: Tangent space can only be computed for tris/quads, aborting\n"
+    },
+    "Nacelle / closed structural cavity shell -1": {
+      "vertices": 1509,
+      "polygons": 1480,
+      "triangles": 3014,
+      "ngons_over_quad": 42,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.002329482464119792,
+        0.002329456154257059,
+        0.9345220327377319,
+        0.9976705312728882
+      ],
+      "valid_tangents": false,
+      "tangent_error": "Error: Tangent space can only be computed for tris/quads, aborting\n"
+    },
+    "Armor / shaped forward crown -1": {
+      "vertices": 472,
+      "polygons": 470,
+      "triangles": 940,
+      "ngons_over_quad": 16,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.00131619768217206,
+        0.0013161521637812257,
+        0.9858710169792175,
+        0.9986839294433594
+      ],
+      "valid_tangents": false,
+      "tangent_error": "Error: Tangent space can only be computed for tris/quads, aborting\n"
+    },
+    "Armor / waisted center crown -1": {
+      "vertices": 507,
+      "polygons": 481,
+      "triangles": 1014,
+      "ngons_over_quad": 17,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.0017102462006732821,
+        0.001710271229967475,
+        0.9982897639274597,
+        0.8960976004600525
+      ],
+      "valid_tangents": false,
+      "tangent_error": "Error: Tangent space can only be computed for tris/quads, aborting\n"
+    },
+    "Armor / engine shoulder crown -1": {
+      "vertices": 372,
+      "polygons": 370,
+      "triangles": 740,
+      "ngons_over_quad": 4,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.0014103467110544443,
+        0.001410319353453815,
+        0.9659397006034851,
+        0.9985895752906799
+      ],
+      "valid_tangents": false,
+      "tangent_error": "Error: Tangent space can only be computed for tris/quads, aborting\n"
+    },
+    "Armor / forward changing lower return -1": {
+      "vertices": 470,
+      "polygons": 468,
+      "triangles": 936,
+      "ngons_over_quad": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.0018591588595882058,
+        0.0018590970430523157,
+        0.9981409907341003,
+        0.8807579278945923
+      ],
+      "valid_tangents": true
+    },
+    "Armor / aft changing lower return -1": {
+      "vertices": 710,
+      "polygons": 708,
+      "triangles": 1416,
+      "ngons_over_quad": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.0015404802979901433,
+        0.0015403995057567954,
+        0.6303934454917908,
+        0.9984595775604248
+      ],
+      "valid_tangents": true
+    },
+    "Intake / sloping interior ramp -1": {
+      "vertices": 96,
+      "polygons": 90,
+      "triangles": 188,
+      "ngons_over_quad": 2,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.001184578170068562,
+        0.001184635329991579,
+        0.6117281317710876,
+        0.9988152980804443
+      ],
+      "valid_tangents": false,
+      "tangent_error": "Error: Tangent space can only be computed for tris/quads, aborting\n"
+    },
+    "Intake / recessed guide -1 0": {
+      "vertices": 56,
+      "polygons": 54,
+      "triangles": 108,
+      "ngons_over_quad": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.0015364927239716053,
+        0.0015364817809313536,
+        0.8002914786338806,
+        0.9984635710716248
+      ],
+      "valid_tangents": true
+    },
+    "Intake / recessed guide -1 1": {
+      "vertices": 56,
+      "polygons": 54,
+      "triangles": 108,
+      "ngons_over_quad": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.0015364927239716053,
+        0.0015364817809313536,
+        0.8002914786338806,
+        0.9984635710716248
+      ],
+      "valid_tangents": true
+    },
+    "Nacelle / inner structural heat shield -1": {
+      "vertices": 590,
+      "polygons": 588,
+      "triangles": 1176,
+      "ngons_over_quad": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.001593568711541593,
+        0.0015934697585180402,
+        0.6558424830436707,
+        0.9984064102172852
+      ],
+      "valid_tangents": true
+    },
+    "Manifold / connected transfer line -1": {
+      "vertices": 56,
+      "polygons": 54,
+      "triangles": 108,
+      "ngons_over_quad": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.0011629564687609673,
+        0.0011629564687609673,
+        0.49808648228645325,
+        0.9988370537757874
+      ],
+      "valid_tangents": true
+    },
+    "Manifold / feed socket center -1": {
+      "vertices": 56,
+      "polygons": 54,
+      "triangles": 108,
+      "ngons_over_quad": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.0017190063372254372,
+        0.0017190107610076666,
+        0.9982810616493225,
+        0.8452214002609253
+      ],
+      "valid_tangents": true
+    },
+    "Manifold / feed socket nacelle -1": {
+      "vertices": 56,
+      "polygons": 54,
+      "triangles": 108,
+      "ngons_over_quad": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.0017616936238482594,
+        0.0017616819823160768,
+        0.9982383847236633,
+        0.90706467628479
+      ],
+      "valid_tangents": true
+    },
+    "Engine / recessed ceramic throat -1": {
+      "vertices": 480,
+      "polygons": 480,
+      "triangles": 960,
+      "ngons_over_quad": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.001996747450903058,
+        0.0019966987892985344,
+        0.8301302194595337,
+        0.9980032444000244
+      ],
+      "valid_tangents": true
+    },
+    "Engine / restrained machined lip -1": {
+      "vertices": 600,
+      "polygons": 600,
+      "triangles": 1200,
+      "ngons_over_quad": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.0018040538998320699,
+        0.0018041771836578846,
+        0.9618977308273315,
+        0.9981958270072937
+      ],
+      "valid_tangents": true
+    },
+    "Engine / internal stage collar -1": {
+      "vertices": 480,
+      "polygons": 480,
+      "triangles": 960,
+      "ngons_over_quad": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.0013828118098899722,
+        0.0013828040100634098,
+        0.9986172318458557,
+        0.8822696208953857
+      ],
+      "valid_tangents": true
+    },
+    "Engine / thin dim energizer -1": {
+      "vertices": 480,
+      "polygons": 480,
+      "triangles": 960,
+      "ngons_over_quad": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.0013073653681203723,
+        0.0013074208982288837,
+        0.9986928105354309,
+        0.8887728452682495
+      ],
+      "valid_tangents": true
+    },
+    "Engine / dark chamber rear -1": {
+      "vertices": 80,
+      "polygons": 42,
+      "triangles": 156,
+      "ngons_over_quad": 2,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.0010773483663797379,
+        0.0010773063404485583,
+        0.5470377802848816,
+        0.9989227056503296
+      ],
+      "valid_tangents": false,
+      "tangent_error": "Error: Tangent space can only be computed for tris/quads, aborting\n"
+    },
+    "Engine / compact thrust core -1": {
+      "vertices": 80,
+      "polygons": 42,
+      "triangles": 156,
+      "ngons_over_quad": 2,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.0011967022437602282,
+        0.0011966978199779987,
+        0.5927233099937439,
+        0.9988033175468445
+      ],
+      "valid_tangents": false,
+      "tangent_error": "Error: Tangent space can only be computed for tris/quads, aborting\n"
+    },
+    "Engine / internal fixed guide -1 0": {
+      "vertices": 56,
+      "polygons": 54,
+      "triangles": 108,
+      "ngons_over_quad": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.0006544392090290785,
+        0.0006544389179907739,
+        0.18100836873054504,
+        0.999345600605011
+      ],
+      "valid_tangents": true
+    },
+    "Engine / internal fixed guide -1 1": {
+      "vertices": 56,
+      "polygons": 54,
+      "triangles": 108,
+      "ngons_over_quad": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.0006544392090290785,
+        0.0006544389179907739,
+        0.18100836873054504,
+        0.999345600605011
+      ],
+      "valid_tangents": true
+    },
+    "Engine / internal fixed guide -1 2": {
+      "vertices": 56,
+      "polygons": 54,
+      "triangles": 108,
+      "ngons_over_quad": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.0006544392090290785,
+        0.0006544389179907739,
+        0.18100836873054504,
+        0.999345600605011
+      ],
+      "valid_tangents": true
+    },
+    "Engine / internal fixed guide -1 3": {
+      "vertices": 56,
+      "polygons": 54,
+      "triangles": 108,
+      "ngons_over_quad": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.0006544392090290785,
+        0.0006544389179907739,
+        0.18100836873054504,
+        0.999345600605011
+      ],
+      "valid_tangents": true
+    },
+    "Engine / internal fixed guide -1 4": {
+      "vertices": 56,
+      "polygons": 54,
+      "triangles": 108,
+      "ngons_over_quad": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.0006544392090290785,
+        0.0006544389179907739,
+        0.18100836873054504,
+        0.999345600605011
+      ],
+      "valid_tangents": true
+    },
+    "Center / formed rear cheek 1": {
+      "vertices": 120,
+      "polygons": 118,
+      "triangles": 236,
+      "ngons_over_quad": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.001375993131659925,
+        0.0013759961584582925,
+        0.5875215530395508,
+        0.9986239075660706
+      ],
+      "valid_tangents": true
+    },
+    "Chassis / boxed crossmember 1 -1.15": {
+      "vertices": 56,
+      "polygons": 54,
+      "triangles": 108,
+      "ngons_over_quad": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.0015982778277248144,
+        0.0015982778277248144,
+        0.9984017610549927,
+        0.9115318655967712
+      ],
+      "valid_tangents": true
+    },
+    "Chassis / formed nacelle mounting saddle.002": {
+      "vertices": 156,
+      "polygons": 150,
+      "triangles": 308,
+      "ngons_over_quad": 2,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.0017610597424209118,
+        0.001760975574143231,
+        0.9982389807701111,
+        0.9431886076927185
+      ],
+      "valid_tangents": false,
+      "tangent_error": "Error: Tangent space can only be computed for tris/quads, aborting\n"
+    },
+    "Chassis / seated central mounting flange.002": {
+      "vertices": 156,
+      "polygons": 150,
+      "triangles": 308,
+      "ngons_over_quad": 2,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.0015109267551451921,
+        0.0015106761129572988,
+        0.9984890222549438,
+        0.8018790483474731
+      ],
+      "valid_tangents": false,
+      "tangent_error": "Error: Tangent space can only be computed for tris/quads, aborting\n"
+    },
+    "Chassis / boxed crossmember 1 1.55": {
+      "vertices": 56,
+      "polygons": 54,
+      "triangles": 108,
+      "ngons_over_quad": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.0015982778277248144,
+        0.0015982778277248144,
+        0.9984017610549927,
+        0.9115318655967712
+      ],
+      "valid_tangents": true
+    },
+    "Chassis / formed nacelle mounting saddle.003": {
+      "vertices": 156,
+      "polygons": 150,
+      "triangles": 308,
+      "ngons_over_quad": 2,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.0017610554350540042,
+        0.0017610761569812894,
+        0.9982389807701111,
+        0.9431886672973633
+      ],
+      "valid_tangents": false,
+      "tangent_error": "Error: Tangent space can only be computed for tris/quads, aborting\n"
+    },
+    "Chassis / seated central mounting flange.003": {
+      "vertices": 156,
+      "polygons": 150,
+      "triangles": 308,
+      "ngons_over_quad": 2,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.001510931528173387,
+        0.0015108691295608878,
+        0.9984889626502991,
+        0.8018794059753418
+      ],
+      "valid_tangents": false,
+      "tangent_error": "Error: Tangent space can only be computed for tris/quads, aborting\n"
+    },
+    "Nacelle / closed structural cavity shell 1": {
+      "vertices": 1509,
+      "polygons": 1480,
+      "triangles": 3014,
+      "ngons_over_quad": 42,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.0023294673301279545,
+        0.002329461043700576,
+        0.9345288276672363,
+        0.9976705312728882
+      ],
+      "valid_tangents": false,
+      "tangent_error": "Error: Tangent space can only be computed for tris/quads, aborting\n"
+    },
+    "Armor / shaped forward crown 1": {
+      "vertices": 472,
+      "polygons": 470,
+      "triangles": 940,
+      "ngons_over_quad": 16,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.0013162080431357026,
+        0.0013161525130271912,
+        0.9858711957931519,
+        0.9986838698387146
+      ],
+      "valid_tangents": false,
+      "tangent_error": "Error: Tangent space can only be computed for tris/quads, aborting\n"
+    },
+    "Armor / waisted center crown 1": {
+      "vertices": 507,
+      "polygons": 481,
+      "triangles": 1014,
+      "ngons_over_quad": 17,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.001710265758447349,
+        0.0017102425917983055,
+        0.9982898831367493,
+        0.8960894346237183
+      ],
+      "valid_tangents": false,
+      "tangent_error": "Error: Tangent space can only be computed for tris/quads, aborting\n"
+    },
+    "Armor / engine shoulder crown 1": {
+      "vertices": 372,
+      "polygons": 370,
+      "triangles": 740,
+      "ngons_over_quad": 4,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.0014103555586189032,
+        0.0014103149296715856,
+        0.9659399390220642,
+        0.9985895752906799
+      ],
+      "valid_tangents": false,
+      "tangent_error": "Error: Tangent space can only be computed for tris/quads, aborting\n"
+    },
+    "Armor / forward changing lower return 1": {
+      "vertices": 470,
+      "polygons": 468,
+      "triangles": 936,
+      "ngons_over_quad": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.001859169453382492,
+        0.0018589559476822615,
+        0.9981409311294556,
+        0.8807579874992371
+      ],
+      "valid_tangents": true
+    },
+    "Armor / aft changing lower return 1": {
+      "vertices": 710,
+      "polygons": 708,
+      "triangles": 1416,
+      "ngons_over_quad": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.001540438155643642,
+        0.0015404373407363892,
+        0.6303935647010803,
+        0.99845951795578
+      ],
+      "valid_tangents": true
+    },
+    "Intake / sloping interior ramp 1": {
+      "vertices": 96,
+      "polygons": 90,
+      "triangles": 188,
+      "ngons_over_quad": 2,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.0011845779372379184,
+        0.0011845903936773539,
+        0.6117377281188965,
+        0.9988152980804443
+      ],
+      "valid_tangents": false,
+      "tangent_error": "Error: Tangent space can only be computed for tris/quads, aborting\n"
+    },
+    "Intake / recessed guide 1 0": {
+      "vertices": 56,
+      "polygons": 54,
+      "triangles": 108,
+      "ngons_over_quad": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.0015364927239716053,
+        0.0015364817809313536,
+        0.8002914786338806,
+        0.9984635710716248
+      ],
+      "valid_tangents": true
+    },
+    "Intake / recessed guide 1 1": {
+      "vertices": 56,
+      "polygons": 54,
+      "triangles": 108,
+      "ngons_over_quad": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.0015364927239716053,
+        0.0015364817809313536,
+        0.8002914786338806,
+        0.9984635710716248
+      ],
+      "valid_tangents": true
+    },
+    "Nacelle / inner structural heat shield 1": {
+      "vertices": 590,
+      "polygons": 588,
+      "triangles": 1176,
+      "ngons_over_quad": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.0016450941329821944,
+        0.0016450906405225396,
+        0.7068607807159424,
+        0.9983548521995544
+      ],
+      "valid_tangents": true
+    },
+    "Manifold / connected transfer line 1": {
+      "vertices": 56,
+      "polygons": 54,
+      "triangles": 108,
+      "ngons_over_quad": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.0011629564687609673,
+        0.0011629564687609673,
+        0.49808648228645325,
+        0.9988370537757874
+      ],
+      "valid_tangents": true
+    },
+    "Manifold / feed socket center 1": {
+      "vertices": 56,
+      "polygons": 54,
+      "triangles": 108,
+      "ngons_over_quad": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.0017190063372254372,
+        0.0017190107610076666,
+        0.9982810616493225,
+        0.8452214002609253
+      ],
+      "valid_tangents": true
+    },
+    "Manifold / feed socket nacelle 1": {
+      "vertices": 56,
+      "polygons": 54,
+      "triangles": 108,
+      "ngons_over_quad": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.0017616936238482594,
+        0.0017616819823160768,
+        0.9982383847236633,
+        0.90706467628479
+      ],
+      "valid_tangents": true
+    },
+    "Engine / recessed ceramic throat 1": {
+      "vertices": 480,
+      "polygons": 480,
+      "triangles": 960,
+      "ngons_over_quad": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.0019967341795563698,
+        0.001996708335354924,
+        0.8301300406455994,
+        0.9980031251907349
+      ],
+      "valid_tangents": true
+    },
+    "Engine / restrained machined lip 1": {
+      "vertices": 600,
+      "polygons": 600,
+      "triangles": 1200,
+      "ngons_over_quad": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.001807435299269855,
+        0.0018075609114021063,
+        0.968768298625946,
+        0.9981923699378967
+      ],
+      "valid_tangents": true
+    },
+    "Engine / internal stage collar 1": {
+      "vertices": 480,
+      "polygons": 480,
+      "triangles": 960,
+      "ngons_over_quad": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.0013827058719471097,
+        0.001382707618176937,
+        0.99861741065979,
+        0.882269561290741
+      ],
+      "valid_tangents": true
+    },
+    "Engine / thin dim energizer 1": {
+      "vertices": 480,
+      "polygons": 480,
+      "triangles": 960,
+      "ngons_over_quad": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.0013072957517579198,
+        0.0013072979636490345,
+        0.9986926913261414,
+        0.8887729644775391
+      ],
+      "valid_tangents": true
+    },
+    "Engine / dark chamber rear 1": {
+      "vertices": 80,
+      "polygons": 42,
+      "triangles": 156,
+      "ngons_over_quad": 2,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.0010773483663797379,
+        0.0010773063404485583,
+        0.5470377802848816,
+        0.9989227056503296
+      ],
+      "valid_tangents": false,
+      "tangent_error": "Error: Tangent space can only be computed for tris/quads, aborting\n"
+    },
+    "Engine / compact thrust core 1": {
+      "vertices": 80,
+      "polygons": 42,
+      "triangles": 156,
+      "ngons_over_quad": 2,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.0011967022437602282,
+        0.0011966978199779987,
+        0.5927233099937439,
+        0.9988033175468445
+      ],
+      "valid_tangents": false,
+      "tangent_error": "Error: Tangent space can only be computed for tris/quads, aborting\n"
+    },
+    "Engine / internal fixed guide 1 0": {
+      "vertices": 56,
+      "polygons": 54,
+      "triangles": 108,
+      "ngons_over_quad": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.0006544392090290785,
+        0.0006544389179907739,
+        0.18100836873054504,
+        0.999345600605011
+      ],
+      "valid_tangents": true
+    },
+    "Engine / internal fixed guide 1 1": {
+      "vertices": 56,
+      "polygons": 54,
+      "triangles": 108,
+      "ngons_over_quad": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.0006544392090290785,
+        0.0006544389179907739,
+        0.18100836873054504,
+        0.999345600605011
+      ],
+      "valid_tangents": true
+    },
+    "Engine / internal fixed guide 1 2": {
+      "vertices": 56,
+      "polygons": 54,
+      "triangles": 108,
+      "ngons_over_quad": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.0006544392090290785,
+        0.0006544389179907739,
+        0.18100836873054504,
+        0.999345600605011
+      ],
+      "valid_tangents": true
+    },
+    "Engine / internal fixed guide 1 3": {
+      "vertices": 56,
+      "polygons": 54,
+      "triangles": 108,
+      "ngons_over_quad": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.0006544392090290785,
+        0.0006544389179907739,
+        0.18100836873054504,
+        0.999345600605011
+      ],
+      "valid_tangents": true
+    },
+    "Engine / internal fixed guide 1 4": {
+      "vertices": 56,
+      "polygons": 54,
+      "triangles": 108,
+      "ngons_over_quad": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.0006544392090290785,
+        0.0006544389179907739,
+        0.18100836873054504,
+        0.999345600605011
+      ],
+      "valid_tangents": true
+    },
+    "Spine / integrated center chamber": {
+      "vertices": 416,
+      "polygons": 416,
+      "triangles": 832,
+      "ngons_over_quad": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.0022131416480988264,
+        0.0022130918223410845,
+        0.9068536758422852,
+        0.9977867603302002
+      ],
+      "valid_tangents": true
+    },
+    "Spine / narrow impulse collar": {
+      "vertices": 384,
+      "polygons": 384,
+      "triangles": 768,
+      "ngons_over_quad": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.0014100753469392657,
+        0.0014100397238507867,
+        0.9985898733139038,
+        0.9180040955543518
+      ],
+      "valid_tangents": true
+    },
+    "Spine / compact impulse core": {
+      "vertices": 80,
+      "polygons": 42,
+      "triangles": 156,
+      "ngons_over_quad": 2,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.0013463239884003997,
+        0.0013463135110214353,
+        0.6725677847862244,
+        0.9986537098884583
+      ],
+      "valid_tangents": false,
+      "tangent_error": "Error: Tangent space can only be computed for tris/quads, aborting\n"
+    }
+  },
+  "runtime_meshes": {
+    "Kestrel07_V3_Ivory": {
+      "vertices": 5302,
+      "polygons": 10564,
+      "triangles": 10564,
+      "ngons_over_quad": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "valid_tangents": true
+    },
+    "Kestrel07_V3_Graphite": {
+      "vertices": 4547,
+      "polygons": 9034,
+      "triangles": 9034,
+      "ngons_over_quad": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "valid_tangents": true
+    },
+    "Kestrel07_V3_Glass": {
+      "vertices": 525,
+      "polygons": 1046,
+      "triangles": 1046,
+      "ngons_over_quad": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.0,
+        0.0,
+        1.0,
+        0.9999999403953552
+      ],
+      "valid_tangents": true
+    },
+    "Kestrel07_V3_Metal": {
+      "vertices": 3280,
+      "polygons": 6536,
+      "triangles": 6536,
+      "ngons_over_quad": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "valid_tangents": true
+    },
+    "Kestrel07_V3_Ceramic": {
+      "vertices": 4280,
+      "polygons": 8468,
+      "triangles": 8468,
+      "ngons_over_quad": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "valid_tangents": true
+    },
+    "Kestrel07_V3_Engine": {
+      "vertices": 960,
+      "polygons": 1920,
+      "triangles": 1920,
+      "ngons_over_quad": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "valid_tangents": true
+    },
+    "Kestrel07_V3_EngineCore": {
+      "vertices": 240,
+      "polygons": 468,
+      "triangles": 468,
+      "ngons_over_quad": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "valid_tangents": true
+    }
+  },
+  "livery": {
+    "group": "SHIP_LIVERY",
+    "materials": [
+      "Graphite",
+      "Ivory"
+    ],
+    "images": [
+      {
+        "name": "ship-livery-mask.png",
+        "packed": true,
+        "size": [
+          2048,
+          4096
+        ],
+        "colorspace": "Non-Color"
+      }
+    ]
+  },
+  "reimported_fbx_meshes": {
+    "Kestrel07_V3_Ceramic": {
+      "vertices": 4280,
+      "polygons": 8468,
+      "triangles": 8468,
+      "ngons_over_quad": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "valid_tangents": true
+    },
+    "Kestrel07_V3_Engine": {
+      "vertices": 960,
+      "polygons": 1920,
+      "triangles": 1920,
+      "ngons_over_quad": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "valid_tangents": true
+    },
+    "Kestrel07_V3_EngineCore": {
+      "vertices": 240,
+      "polygons": 468,
+      "triangles": 468,
+      "ngons_over_quad": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "valid_tangents": true
+    },
+    "Kestrel07_V3_Glass": {
+      "vertices": 525,
+      "polygons": 1046,
+      "triangles": 1046,
+      "ngons_over_quad": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.0,
+        0.0,
+        1.0,
+        0.9999999403953552
+      ],
+      "valid_tangents": true
+    },
+    "Kestrel07_V3_Graphite": {
+      "vertices": 4547,
+      "polygons": 9034,
+      "triangles": 9034,
+      "ngons_over_quad": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "valid_tangents": true
+    },
+    "Kestrel07_V3_Ivory": {
+      "vertices": 5302,
+      "polygons": 10564,
+      "triangles": 10564,
+      "ngons_over_quad": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "valid_tangents": true
+    },
+    "Kestrel07_V3_Metal": {
+      "vertices": 3280,
+      "polygons": 6536,
+      "triangles": 6536,
+      "ngons_over_quad": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_bounds": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "valid_tangents": true
+    }
+  },
+  "all_source_manifold": true,
+  "all_runtime_manifold_and_triangulated": true,
+  "all_fbx_manifold_with_valid_tangents": true,
+  "runtime_fbx_triangle_count_matches": true,
+  "major_source_geometry_matches_baseline": false,
+  "coated_glass_runtime_uvs_unchanged": true
+}

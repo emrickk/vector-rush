@@ -1,0 +1,17 @@
+{
+  "source_moved_vertices": {
+    "Canopy / narrow continuous sill": 529,
+    "Nacelle / closed structural cavity shell -1": 318,
+    "Nacelle / closed structural cavity shell 1": 318
+  },
+  "runtime_moved_vertices": {
+    "Kestrel07_V3_Graphite": 1165
+  },
+  "unique_position_edits": 1165,
+  "sill_lowering_m": 0.04,
+  "sill_longitudinal_scale": 0.99,
+  "graphite_return_recess_m": 0.015,
+  "graphite_intake_expansion_m": 0.015,
+  "armor_and_glass_geometry_changed": false,
+  "uv_coordinates_changed": false
+}

@@ -129,3 +129,10 @@ Two 360-frame native gameplay recordings preserve per-frame speed, progress and 
 ### Native gallery and propulsion correction
 
 Added recessed charcoal faces, folded borders, vents and local warm/cool wall wash to the existing galleries. Increased the short attached plasma envelope and reduced nozzle point-light spill. Native build succeeded and motion03 completed all360 1080p frames. Its selected gallery/boost frames exactly match motion02 race times and progress; the32 observed boost frames are recorded in metadata. Parent and Astra directly compared the interior and boost stills: panel depth and attached exhaust improve, while black ceiling masses, repeated bays/windows and road sheen remain follow-ups. The encoded15-second video uses automated steering at24 simulation fps; no real-time performance claim is attached.
+
+
+### Pass04 — repair measured ship surface overlaps
+
+Recessed only three Graphite parts: canopy sill, buried intake openings and rear returns. All seven runtime UV arrays remain byte-equivalent; armor, glazing and engine geometry stay fixed. Source audits reduce targeted positive-area coplanar overlaps to zero and canopy near-parallel contacts within2 mm from145 to zero. FBX reimport remains manifold with valid tangents.
+
+The native control build kept exact pass03 maps to isolate geometry changes. All eight calibration checks and the reflection probe passed; parent and review009 confirm removal of the jagged canopy patch, intake-mouth serration and white/Graphite nozzle-border conflict. This is a targeted repair verdict; fresh maps and final race remain separate checks. The350-triangle native/export discrepancy is accounted for by332 duplicate-position triangles plus18 more collapsed at float32 centimeter precision, matching Ceramic330/Engine20 exactly. The precise importer operation is not instrumented.

@@ -1,0 +1,34 @@
+{
+  "revision": "pass-04-contacts",
+  "recipe_sha256": "c2727d6c130f44eec8de0d0fbb6c8bfcf7f80cc5f7be06697b887cc80eb2ab19",
+  "source_dimensions_xyz": [
+    5.2256,
+    6.885,
+    1.5197
+  ],
+  "source_forward": "-Y",
+  "source_up": "+Z",
+  "unity_mapping": "(X,Z,-Y)",
+  "source_meshes": 70,
+  "runtime_meshes": 7,
+  "triangles": 38036,
+  "nonmanifold_edges_by_source_mesh": {},
+  "materials_used": [
+    "Ivory",
+    "Graphite",
+    "Glass",
+    "Metal",
+    "Ceramic",
+    "Engine",
+    "EngineCore"
+  ],
+  "primary_form_only": false,
+  "studio_bloom": false,
+  "runtime_uv_policy": "Every pass03 runtime UV coordinate is preserved verbatim. Only Graphite vertex positions changed; exact final FBX is EXPORT_RUNTIME. No texture bake performed.",
+  "form_source_sha256": "9660afd26a8ca522bc119f8811a80b06997f61f63ec81cefeccdbd16dd2c5f23",
+  "finish_recipe_sha256": "a7cd3028f6cac7a8561ccbb7858367014249e88dbdbdc352431703144dd6dba7",
+  "finish_scope": "Flush authored paint shader, coating preview hierarchy, compact EngineCore separated from dim cyan Engine rings. Major shape unchanged. Parent owns baked coating maps/native material integration.",
+  "contact_source_sha256": "e07cde687c143f73fba4a62cfbfae070286cc0edba0c426d259fd0efac83fcfc",
+  "contact_recipe_sha256": "dea2e9595218095543f0f7dc6952f9ec1041d4dd9a6c77bc369cd67da788deea",
+  "contact_scope": "Only graphite sill and nacelle backing surfaces moved to resolve measured depth conflicts. Armor, glazing, engines and all runtime UVs unchanged."
+}

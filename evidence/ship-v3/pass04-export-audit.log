@@ -1,0 +1,18 @@
+00:05.119  blend            | Read blend: "/Users/anping/Documents/Stuff/AI Space/Vector Rush/SourceAssets/hero-v3/pass-04-contacts/Kestrel07-v3.blend"
+/Users/anping/Documents/Stuff/AI Space/Vector Rush/SourceAssets/hero-v3/verify_export.py:33: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  report['livery']={'group': 'SHIP_LIVERY','materials':[m.name for m in bpy.data.materials if m.use_nodes and m.node_tree.nodes.get('SHIP_LIVERY')],'images':[{'name':i.name,'packed':bool(i.packed_file),'size':list(i.size),'colorspace':i.colorspace_settings.name} for i in bpy.data.images if 'livery' in i.name]}
+00:17.774  blend            | Read blend: "/Users/anping/Documents/Stuff/AI Space/Vector Rush/SourceAssets/hero-v3/pass-03-finish/Kestrel07-v3.blend"
+FBX version: 7400
+{
+  "source_sha256": "d015949dfc96e149d488b9df2a6d40efc287970ae1577af551723c8d2de5efaa",
+  "fbx_sha256": "f2cfabf5a3ff1f5785debb1c2b81a238f39073f784fc8ec134b4e71c1c397386",
+  "all_source_manifold": true,
+  "all_runtime_manifold_and_triangulated": true,
+  "all_fbx_manifold_with_valid_tangents": true,
+  "runtime_fbx_triangle_count_matches": true,
+  "major_source_geometry_matches_baseline": false,
+  "coated_glass_runtime_uvs_unchanged": true
+}
+Blender 5.2.0 LTS (hash fbe6228777e7 built 2026-07-14 01:31:22)
+
+Blender quit

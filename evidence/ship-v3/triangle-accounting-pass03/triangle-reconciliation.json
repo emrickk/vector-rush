@@ -1,0 +1,105 @@
+{
+  "scope": "Read-only accounting from stored binary FBX, native JSON and current saved importer settings; no app/render or geometry mutation.",
+  "fbx": "SourceAssets/hero-v3/pass-03-finish/HeroShip.fbx",
+  "fbx_sha256": "0415a4a829347f6556f0f8ba1274ebbbd949b5bf6cf6ae128218c4bbd5eb436e",
+  "native_evidence": "evidence/ship-native-v3-01/inspection-scope.json",
+  "native_identity_fbx_sha256": "0415a4a829347f6556f0f8ba1274ebbbd949b5bf6cf6ae128218c4bbd5eb436e",
+  "method": "Parse FBX Geometry Vertices and PolygonVertexIndex arrays directly, map Geometry IDs through OO connections to seven Model objects, count duplicate-position triangles in exported doubles and after IEEE754 float32 conversion of FBX centimeter coordinates. Compare each native MeshFilter triangle index count.",
+  "export_total": 38036,
+  "native_total": 37686,
+  "difference": 350,
+  "exact_degenerate_total": 332,
+  "additional_float32_collapse_total": 18,
+  "all_per_mesh_differences_match": true,
+  "meshes": [
+    {
+      "runtime_object": "Kestrel07_V3_Ceramic",
+      "fbx_geometry_data_name": "Nose / small ceramic lower keel.001",
+      "fbx_triangles": 8468,
+      "native_triangles": 8138,
+      "difference": 330,
+      "exact_duplicate_position_degenerates": 324,
+      "duplicate_position_degenerates_after_float32_cm": 330,
+      "additional_float32_collapsed_triangles": 6,
+      "native_difference_matches_float32_degenerates": true
+    },
+    {
+      "runtime_object": "Kestrel07_V3_Engine",
+      "fbx_geometry_data_name": "Engine / thin dim energizer -1.002",
+      "fbx_triangles": 1920,
+      "native_triangles": 1900,
+      "difference": 20,
+      "exact_duplicate_position_degenerates": 8,
+      "duplicate_position_degenerates_after_float32_cm": 20,
+      "additional_float32_collapsed_triangles": 12,
+      "native_difference_matches_float32_degenerates": true
+    },
+    {
+      "runtime_object": "Kestrel07_V3_EngineCore",
+      "fbx_geometry_data_name": "Cylinder.005",
+      "fbx_triangles": 468,
+      "native_triangles": 468,
+      "difference": 0,
+      "exact_duplicate_position_degenerates": 0,
+      "duplicate_position_degenerates_after_float32_cm": 0,
+      "additional_float32_collapsed_triangles": 0,
+      "native_difference_matches_float32_degenerates": true
+    },
+    {
+      "runtime_object": "Kestrel07_V3_Glass",
+      "fbx_geometry_data_name": "Canopy / controlled convex near-black glazing.001",
+      "fbx_triangles": 1046,
+      "native_triangles": 1046,
+      "difference": 0,
+      "exact_duplicate_position_degenerates": 0,
+      "duplicate_position_degenerates_after_float32_cm": 0,
+      "additional_float32_collapsed_triangles": 0,
+      "native_difference_matches_float32_degenerates": true
+    },
+    {
+      "runtime_object": "Kestrel07_V3_Graphite",
+      "fbx_geometry_data_name": "Monocoque / continuous load-bearing center.001",
+      "fbx_triangles": 9034,
+      "native_triangles": 9034,
+      "difference": 0,
+      "exact_duplicate_position_degenerates": 0,
+      "duplicate_position_degenerates_after_float32_cm": 0,
+      "additional_float32_collapsed_triangles": 0,
+      "native_difference_matches_float32_degenerates": true
+    },
+    {
+      "runtime_object": "Kestrel07_V3_Ivory",
+      "fbx_geometry_data_name": "Center / formed rear cheek -1.001",
+      "fbx_triangles": 10564,
+      "native_triangles": 10564,
+      "difference": 0,
+      "exact_duplicate_position_degenerates": 0,
+      "duplicate_position_degenerates_after_float32_cm": 0,
+      "additional_float32_collapsed_triangles": 0,
+      "native_difference_matches_float32_degenerates": true
+    },
+    {
+      "runtime_object": "Kestrel07_V3_Metal",
+      "fbx_geometry_data_name": "Chassis / seated central mounting flange.004",
+      "fbx_triangles": 6536,
+      "native_triangles": 6536,
+      "difference": 0,
+      "exact_duplicate_position_degenerates": 0,
+      "duplicate_position_degenerates_after_float32_cm": 0,
+      "additional_float32_collapsed_triangles": 0,
+      "native_difference_matches_float32_degenerates": true
+    }
+  ],
+  "importer_context": {
+    "meta": "UnityProject/Assets/Resources/Art/HeroShip.fbx.meta",
+    "meshCompression": 0,
+    "keepQuads": 0,
+    "weldVertices": 1,
+    "generateMeshLods": 0,
+    "meshOptimizationFlags": -1,
+    "globalScale": 1
+  },
+  "native_counting": "RecordShip traverses MeshFilters and sums GetIndexCount(submesh)/3 where topology is Triangles; all seven staged model names are represented, with no missing renderer category.",
+  "conclusion": "The full350-triangle discrepancy is exactly accounted for by degenerate triangles, including18 that become duplicate-position triangles at float32 FBX centimeter precision. This strongly supports import-time degenerate removal, rather than a missing object or alternate asset.",
+  "limitation": "The precise Unity/FBX importer operation and its internal precision/order were not instrumented. Float32-centimeter conversion is a reproducing emulation, not a captured importer call trace. Importer context is the current saved meta file; native capture did not hash that meta."
+}

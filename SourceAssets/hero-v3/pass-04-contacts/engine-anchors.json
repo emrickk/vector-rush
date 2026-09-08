@@ -1,0 +1,99 @@
+{
+  "source_axes": {
+    "forward": "-Y",
+    "up": "+Z"
+  },
+  "unity_mapping": "(X,Z,-Y)",
+  "engines": [
+    {
+      "name": "left",
+      "source_exit": [
+        -1.65,
+        3.355,
+        -0.005
+      ],
+      "source_throat": [
+        -1.65,
+        2.56,
+        -0.005
+      ],
+      "unity_exit": [
+        -1.65,
+        -0.005,
+        -3.355
+      ],
+      "unity_throat": [
+        -1.65,
+        -0.005,
+        -2.56
+      ],
+      "unity_effect_direction": [
+        0,
+        0,
+        -1
+      ],
+      "opening_radius": 0.509,
+      "compact_core_radius": 0.14
+    },
+    {
+      "name": "right",
+      "source_exit": [
+        1.65,
+        3.355,
+        -0.005
+      ],
+      "source_throat": [
+        1.65,
+        2.56,
+        -0.005
+      ],
+      "unity_exit": [
+        1.65,
+        -0.005,
+        -3.355
+      ],
+      "unity_throat": [
+        1.65,
+        -0.005,
+        -2.56
+      ],
+      "unity_effect_direction": [
+        0,
+        0,
+        -1
+      ],
+      "opening_radius": 0.509,
+      "compact_core_radius": 0.14
+    },
+    {
+      "name": "center",
+      "source_exit": [
+        0,
+        2.88,
+        -0.01
+      ],
+      "source_throat": [
+        0,
+        2.59,
+        -0.01
+      ],
+      "unity_exit": [
+        0,
+        -0.01,
+        -2.88
+      ],
+      "unity_throat": [
+        0,
+        -0.01,
+        -2.59
+      ],
+      "unity_effect_direction": [
+        0,
+        0,
+        -1
+      ],
+      "opening_radius": 0.173,
+      "compact_core_radius": 0.074
+    }
+  ]
+}

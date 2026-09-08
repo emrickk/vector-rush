@@ -1,0 +1,115 @@
+{
+  "revision": "pass-04-contacts",
+  "status": "immutable staged correction; native visual validation pending",
+  "source_sha256": "d015949dfc96e149d488b9df2a6d40efc287970ae1577af551723c8d2de5efaa",
+  "fbx_sha256": "f2cfabf5a3ff1f5785debb1c2b81a238f39073f784fc8ec134b4e71c1c397386",
+  "confirmed_cause": "Competing graphite and glass/armor surfaces overlap or occupy effectively the same depth; diagnosed without consulting texture content or tangents.",
+  "comparisons": [
+    {
+      "pair": [
+        "Canopy / controlled convex near-black glazing",
+        "Canopy / narrow continuous sill"
+      ],
+      "coplanar_pairs_before": 30,
+      "coplanar_pairs_after": 0,
+      "near_parallel_under_2mm_before": 145,
+      "near_parallel_under_2mm_after": 0
+    },
+    {
+      "pair": [
+        "Canopy / controlled convex near-black glazing",
+        "Monocoque / continuous load-bearing center"
+      ],
+      "coplanar_pairs_before": 0,
+      "coplanar_pairs_after": 0,
+      "near_parallel_under_2mm_before": 8,
+      "near_parallel_under_2mm_after": 8
+    },
+    {
+      "pair": [
+        "Armor / waisted center crown -1",
+        "Nacelle / closed structural cavity shell -1"
+      ],
+      "coplanar_pairs_before": 24,
+      "coplanar_pairs_after": 0,
+      "near_parallel_under_2mm_before": 57,
+      "near_parallel_under_2mm_after": 35
+    },
+    {
+      "pair": [
+        "Armor / engine shoulder crown -1",
+        "Nacelle / closed structural cavity shell -1"
+      ],
+      "coplanar_pairs_before": 18,
+      "coplanar_pairs_after": 0,
+      "near_parallel_under_2mm_before": 24,
+      "near_parallel_under_2mm_after": 16
+    },
+    {
+      "pair": [
+        "Armor / aft changing lower return -1",
+        "Nacelle / closed structural cavity shell -1"
+      ],
+      "coplanar_pairs_before": 7,
+      "coplanar_pairs_after": 0,
+      "near_parallel_under_2mm_before": 20,
+      "near_parallel_under_2mm_after": 18
+    },
+    {
+      "pair": [
+        "Armor / waisted center crown 1",
+        "Nacelle / closed structural cavity shell 1"
+      ],
+      "coplanar_pairs_before": 25,
+      "coplanar_pairs_after": 0,
+      "near_parallel_under_2mm_before": 65,
+      "near_parallel_under_2mm_after": 43
+    },
+    {
+      "pair": [
+        "Armor / engine shoulder crown 1",
+        "Nacelle / closed structural cavity shell 1"
+      ],
+      "coplanar_pairs_before": 18,
+      "coplanar_pairs_after": 0,
+      "near_parallel_under_2mm_before": 24,
+      "near_parallel_under_2mm_after": 16
+    },
+    {
+      "pair": [
+        "Armor / aft changing lower return 1",
+        "Nacelle / closed structural cavity shell 1"
+      ],
+      "coplanar_pairs_before": 4,
+      "coplanar_pairs_after": 0,
+      "near_parallel_under_2mm_before": 19,
+      "near_parallel_under_2mm_after": 17
+    }
+  ],
+  "unchanged": [
+    "All armor/glass/engine source and runtime vertex positions",
+    "Every runtime UV coordinate and topology",
+    "Packed source livery and engine anchors"
+  ],
+  "changed": {
+    "Canopy / narrow continuous sill": 529,
+    "Nacelle / closed structural cavity shell -1": 318,
+    "Nacelle / closed structural cavity shell 1": 318
+  },
+  "runtime_changed": {
+    "Kestrel07_V3_Graphite": 1165
+  },
+  "export_checks": {
+    "all_source_manifold": true,
+    "all_runtime_manifold_and_triangulated": true,
+    "all_fbx_manifold_with_valid_tangents": true,
+    "runtime_fbx_triangle_count_matches": true,
+    "major_source_geometry_matches_baseline": false,
+    "coated_glass_runtime_uvs_unchanged": true
+  },
+  "expected_audit_difference": "major_source_geometry_matches_baseline is false by design because the three named Graphite parts were corrected; source/runtime change allowlists and all-UV identity passed in contact-correction-contract.json.",
+  "map_compatibility": "Existing maps retain exact atlas alignment for a controlled geometry A/B. Final Graphite rebake recommended because world-position procedural grain and contact AO change; there is no selected-high-to-low bake. Other material geometry/color/normal atlases remain compatible, although cross-material AO can change locally.",
+  "textures_baked": false,
+  "live_project_modified": false,
+  "native_validation_pending": true
+}
