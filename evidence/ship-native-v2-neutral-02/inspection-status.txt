@@ -1,0 +1,1 @@
+COMPLETE — eight actual native screenshots. Top view is explicitly orthographic; other studio views use a 50–60 mm perspective lens. Mesh payloads and native material mapping preserved; the labeled emission-OFF comparison uses temporary material copies.

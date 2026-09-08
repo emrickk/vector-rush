@@ -82,15 +82,15 @@ Ownership: parent road, lighting, materials, rendering settings, integration, ca
 
 ## Ship-first visual iteration
 
-The user explicitly assigned Astra as planner and harsh independent visual reviewer, authorized Blender tooling, and requested repeated correction until the ship meets the reference-level hero-asset target. Scene work is paused while the ship is addressed.
+The user explicitly assigned Astra as planner and harsh independent visual reviewer, authorized Blender tooling, and requested repeated visual correction. The user then clarified that exact reference replication is not expected: once the ship's shape is close and coherent, effort should shift to the materials, propulsion, lighting, road and motion that improve the whole game. Scene work is paused only for the current bounded shape pass.
 
 - [x] Astra baseline critique and ranked ship art plan against reference C.
 - [x] Preserve V3 form pass 01 and Astra rejection, including nine inspection views, staged export and topology audit.
 - [ ] Correct pass 01 compound hull shape, integrated intakes, canopy curvature and supported joints; repeat the same independent form review.
-- [ ] Calibrate a native neutral inspection rig against recorded origin, orientation and bounds before judging runtime materials.
+- [x] Calibrate a native neutral inspection rig against recorded origin, orientation and bounds before judging runtime materials.
 - [ ] Rebuild primary form and construction in staged Blender source; review neutral renders and loop on visible failures.
 - [ ] Develop surface/material depth and readable livery after form acceptance; review and loop.
 - [ ] Integrate the reviewed asset and calibrated engine anchors; review native neutral views, ordinary chase views and propulsion.
 - [ ] Preserve each reviewed pass, its critique and source/export identity; validate the integrated race and package for review.
 
-A successful compile, a flattering studio frame, or a prototype-level acceptance does not meet this visual gate. Reviewer remains independent from the asset implementation.
+A successful compile or a flattering studio frame does not establish visual quality. The reference is directional; minor contour differences must not prevent progress on larger whole-game improvements. Reviewer remains independent from the asset implementation.

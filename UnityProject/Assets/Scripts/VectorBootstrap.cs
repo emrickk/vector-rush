@@ -68,6 +68,7 @@ namespace VectorRush
             var hud=new GameObject("Vector interface").AddComponent<RaceHUD>();hud.Initialize(Director);
             var audio=new GameObject("Race sound").AddComponent<RaceAudio>();audio.Initialize(Director);
             gameObject.AddComponent<RaceEvidence>();
+            ShipInspection.TryStart(this);
         }
         void OnDestroy(){if(Instance==this)Instance=null;Time.timeScale=1;}
     }

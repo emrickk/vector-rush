@@ -1,0 +1,1 @@
+REJECTED CALIBRATION — parent visual and metadata inspection found ship remained offset/rotated by interpolated physics, while studio fixtures were built at world origin. Studio images01–07 are invalid for neutral-material acceptance. 00 is actual normal native gameplay. Retain failed run; fix pose and recapture separately.

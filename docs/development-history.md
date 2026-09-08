@@ -95,3 +95,13 @@ The user explicitly requested Astra planning and a separate harsh visual reviewe
 Rebuilt the craft in staged Blender source with a lower twin-nacelle layout, narrower canopy and integrated dark engine chambers. Preserved the editable blend, generation recipe snapshot, FBX, engine anchors, source hashes and nine rendered inspection views. Astra inspected the clay and simple neutral views and rejected Gate 1: the nacelles resemble chamfered beams, the canopy is a coarse wedge and the intakes are rectangular wells. Gate 2 also remains held for unsupported major joints and eight nonmanifold boundary edges per nacelle core recorded by the mesh audit. This candidate was not imported into the live game.
 
 The next bounded pass changes the compound nacelle silhouette and section, swept recessed intakes, canopy curvature, and supported seams/collar returns. The same cameras plus a recorded 16:9 reference comparison will be reviewed again. Surface texture work remains gated by form/construction acceptance; source geometry and screenshot counts alone do not establish quality.
+
+### Corrected native inspection calibration
+
+The first neutral inspection attempt inherited an interpolated Rigidbody pose, leaving the ship away from its studio floor and lights. Its images and metadata remain explicitly rejected. The corrected opt-in rig detaches the actual imported visual hierarchy, disables physics interpolation during inspection and asserts its canonical pose and bounds before capturing. The current V2 asset and its runtime materials remain unchanged.
+
+The standalone rebuilt successfully and exited normally after eight native 1920×1080 images in `evidence/ship-native-v2-neutral-02`. All eight calibration assertions passed; the reflection probe completed; rendered and canonical bounds agree at 5.2651 × 1.9973 × 7.2050 m. Parent viewed rear/front/side/top/engine/canopy images; Astra independently inspected all eight and found the setup suitable for native import/model/material diagnosis. V2 remains visually rejected. This validates the evidence setup, not the ship.
+
+### User clarification: close shape, then whole-game quality
+
+The user clarified that matching the reference completely is unrealistic and that once the shape is almost there, effort should move to other elements that make the whole game feel AAA. Astra and the asset worker were instructed to treat the reference as direction, advance when the primary shape is coherent and close, and prioritize material response, propulsion, lighting, road and motion over minor contour matching. Current pass 02 remains the bounded shape correction under review.
