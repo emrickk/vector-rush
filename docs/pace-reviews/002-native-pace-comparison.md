@@ -1,6 +1,6 @@
 # Pace review 002: native baseline and player-speed candidate
 
-2026-09-08. **The bounded lateral guard force greatly reduces the sustained outer-edge state, but stable close racing is not yet established.** Candidate 04 reduces rival time beyond eight meters lateral from 20–41% to 3–5%, with zero recoveries. At actual-player 60/82, however, rivals still trail and overall within-60 m time is 38.3%, below the proposed 50% gate. The physical wall-lock mitigation is supported by native evidence; balance acceptance remains open.
+2026-09-08. **Candidate 05 now meets the sustained-proximity and two-nearby-finish-rivals gates, with zero recoveries, but its nearest finish gap remains too large.** With the bounded lateral guard assistance and actual-player 55/75 settings, within-60 m time reaches 66.4% and two rivals finish within 200 m of the player. The nearest is still 160.4 m behind, and no rival is recorded ahead during the race. A final 53/72 calibration is recommended for measurement; complete acceptance remains open.
 
 ## Evidence and calculation
 
@@ -131,3 +131,20 @@ Post-launch within-30/40/60 m fractions are **20.6% / 25.6% / 38.3%**, with mean
 At finish, signed rival gaps are **−240.0 / −563.7 / −774.1 / −626.7 / −456.3 m**. No rival has finished first; there are no frozen-progress proximity artifacts. The nearest finish gap is 240.0 m, with no rivals within 200 m. All three proposed closeness gates still fail despite the physical improvement.
 
 The player averages 164.2 km/h after five seconds, versus 160.4 for the fastest rival and 156.6 for the next fastest. Increasing player speeds is not justified by these measurements. Retesting player 55/75 with the now-supported guard assistance is a bounded, evidence-based next balance experiment: the earlier setting produced roughly 158.2 km/h player mean, but its previous pack failed under the older prolonged wall state. That earlier failure cannot be assumed to recur or to be fixed without the new native run. Retain the physical assistance and verify sustained proximity, actual ranks and the same safety gates before wrapping the pace work.
+
+## Candidate 05: sustained proximity passes; nearest finish gap remains open
+
+Candidate 05 [native report](../../evidence/pace-candidate-05/pace-evidence.json) and [analysis](../../evidence/pace-candidate-05/analysis.json): build GUID `049ee37656b14137b55efd59abaa4d9a`, 1,257 samples, complete without error, player 55/75, pursuit plus the same lateral guard assistance as candidate 04. Player finish is **125.567 s** and all six recovery counts remain zero.
+
+| Metric | Candidate 04, 60/82 | Candidate 05, 55/75 |
+| --- | ---: | ---: |
+| Within 30 / 40 / 60 m after 5 s | 20.6% / 25.6% / 38.3% | 43.9% / 54.7% / 66.4% |
+| Within 60 m, player laps 1 / 2 / 3 | 76.1% / 23.5% / 18.8% | 82.7% / 77.3% / 40.7% |
+| Mean nearest gap after 5 s, m | 78.4 | 49.2 |
+| Cool / warm gallery within 60 m | 100% / 23.7% | 100% / 57.3% |
+| Nearest rival at player finish, m | 240.0 | 160.4 |
+| Rivals within 200 m at player finish | 0 | 2 |
+
+Candidate 05 passes the proposed overall within-60 m gate, two-rivals-within-200 m finish gate and zero-recovery gate. It **does not** pass the nearest-finish-rival-within-100 m gate. Per-lap nearest-gap means are 37.9 / 41.2 / 67.4 m, so the third lap still separates more than the earlier laps. Every observed close rival is behind; ahead-within-60 m remains 0%, and no observed rank change or actual pass is claimed.
+
+Signed rival gaps at player finish are **−552.0 / −449.3 / −190.5 / −160.4 / −288.7 m**. Physical and validated gaps agree; all rivals remain unfinished. Player mean speed after five seconds is **158.0 km/h**, compared with Rival 4 at **157.8**, Rival 3 at **156.5**, and Rival 5 at **154.7**. This near-equal pace preserves much of the launch separation. A final actual-player **53/72 m/s** candidate is justified as a small calibration intended to give the leading rivals enough pace to close that remaining gap; its exact effect and ability to produce a visible pass must be observed, not assumed. No further AI architecture change is indicated by candidate 05 alone.

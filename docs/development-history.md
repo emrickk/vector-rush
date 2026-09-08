@@ -238,3 +238,7 @@ Candidate04 adds bounded6m/s² lateral assistance only for rivals with active gu
 ## 2026-09-08 — Sustained proximity established; final finish-gap calibration
 
 Candidate05 uses player55/75 with pursuit and rail-recovery assistance retained. It completes125.567s with zero recoveries; nearest Euclidean proximity after5s is54.25% under40m and80.84% under80m. The nearest two rivals finish160.4/190.5m behind, so the intended finish-gap target remains unmet. Preserve this substantial proximity improvement and make a final small actual-player53/72 calibration, without additional AI or physics changes, before visual critique.
+
+## Final player pace calibration — candidate06
+
+Actual manual/test player preset53m/s cruise and72m/s boost, with controller fixes retained. Native race128.32s,1285 samples, six pack stills; zero recoveries for every racer. Nearest validated-progress rival within60m80.9% of post-start race, within30m56.0%; each lap remains close. Final nearest100.85m and second112.95m; no observed pass/rank change. Evidence and independent comparison preserve the narrow finish-target miss. Proceed to requested single visual pass.

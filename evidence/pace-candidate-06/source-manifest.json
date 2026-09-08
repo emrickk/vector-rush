@@ -1,0 +1,10 @@
+{
+  "parentCommit": "df176bf5cc922cd16db975debc632238ec1c123c",
+  "scope": "Actual player53/72; corrected pursuit and bounded guard-only lateral assistance unchanged from candidate05. Automated simulation at24Hz, not a performance run.",
+  "files": {
+    "UnityProject/Assets/Scripts/Gameplay/HoverVehicle.cs": "e68d3de384f4eed9923f11cfa5b783be5ec345ad801f50f70a8c8cc1f9adf625",
+    "UnityProject/Assets/Scripts/VectorBootstrap.cs": "9a5f74b7a5e90bf96f6b35570c7e9fcc7a993faceea8ade8f00e1d13af1b67d9",
+    "UnityProject/Assets/Scripts/PaceEvidence.cs": "7c9634b01ac7ebc37e0f70089b4f08083bb5dddd71faefc635ea18e6ea9004f5",
+    "UnityProject/Assets/Scripts/EnvironmentEvidence.cs": "5b3af59fb6903e762222c0d21676ed8b0b840340bf330bb081849176ba6f61eb"
+  }
+}
