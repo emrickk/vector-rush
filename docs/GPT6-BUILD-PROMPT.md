@@ -8,7 +8,11 @@ Work autonomously within this scope. Make reasonable creative and technical deci
 
 ## Platform and foundations
 
-Target Apple Silicon macOS on an M2 Max with 32 GB RAM. Inspect installed tools first. Use the installed supported Unity 6 LTS editor and choose URP unless a short, measured prototype demonstrates a compelling reason for another render pipeline. Record exact versions and pin dependencies. Use Blender for authored assets and a repeatable export workflow. Produce a standalone macOS build as well as a usable Unity project.
+Target Apple Silicon macOS on an M2 Max with 32 GB RAM. Inspect installed tools first. Prefer Unity 6 LTS for a new installation; if I have already installed a supported Unity 6 editor, use and pin that exact version. Choose URP unless a short, measured prototype demonstrates a compelling reason for another render pipeline. Record exact versions and pin dependencies. Use Blender for authored assets and a repeatable export workflow. Produce a standalone macOS build as well as a usable Unity project.
+
+## Version history
+
+Keep a Git commit for every completed plan step, including relevant tests, selected runtime evidence, critique findings and remaining issues. Update the plan and development log in each milestone commit, then push to the authorized private GitHub repository. Preserve corrective commits and review history. Keep Blender sources, export scripts and Unity metadata; exclude credentials, caches and temporary frames. If GitHub is connected after work has begun, save an honest combined checkpoint instead of inventing historical commits. Never squash or rewrite published history without my approval.
 
 ## Art direction before asset production
 

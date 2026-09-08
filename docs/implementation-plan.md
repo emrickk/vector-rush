@@ -41,14 +41,14 @@
 ## Task 5 — independent review and delivery
 - [x] A separate agent reviews actual images plus source for critical race/integration defects.
 - [x] Fix highest-impact findings; recapture and re-review up to three meaningful cycles. Initial three review cycles complete, followed by the user-directed modeling pass. Final deck artifact correction and remaining AAA gap are documented.
-- [ ] Record exact tools, compile/test logs, performance and remaining gaps. Deliver prompt, sources, build and controls, or precise external blocker if build cannot run.
+- [x] Record exact tools, tests, performance and remaining gaps; deliver prompt, sources, native build, archive and controls.
 
 ## GitHub milestones
 - [x] Preserve integrated source checkpoint and push to private `emrickk/vector-rush`.
 - [x] Complete second native race and collect current evidence (112.58 seconds, 3 laps, zero player recoveries).
 - [x] Final polish: team paint and grandstand roof improved, rebuilt and recaptured; road artifact diagnostics were inconclusive and are documented.
-- [ ] Verify menu/keyboard interaction and record a short native gameplay video.
-- [ ] Commit final evidence, critique, limitations and delivery documentation; push all completed steps.
+- [x] Verify native menu/keyboard interaction and record the current 15-second gameplay video.
+- [x] Commit final evidence, critique, limitations and delivery documentation; push all completed steps.
 
 ## Delivery input check
 - [x] Native keyboard Start, Resume, Pause and throttle verified at 1280×800; throttle taps reached21km/h.
@@ -58,7 +58,7 @@
 - [x] Identify large within-quad normal differences and discontinuous banking numerically; implement continuous projected-curvature frames and12-column wide ribbons.
 - [x] Rebuild and inspect crest/descent, rerun full race and completed restart launches (run04).
 - [x] Gate paused vehicle input and run the paused-recovery regression: 19/19 tests passed.
-- [ ] Verify corrected pointer mapping at1280×800 and1080p, including outside-click non-activation.
+- [x] Verify corrected pointer mapping at 1280×800 and 1080p, including outside-click non-activation.
 
 ## Visual-first modeling and rendering milestones
 - [x] Restore URP postprocess resources and emissive shader retention; capture matched native road diagnostics.
@@ -66,4 +66,4 @@
 - [x] Integrate reviewed Kestrel V2 and tower A/B models; capture native title, start, crest and descent (run06).
 - [x] Add restrained ambient occlusion and verify contact/material depth; retain matte deck after matched reflection diagnostics.
 - [x] Integrate the reviewed textured cliff into connected harbor districts, replacing the old radial geology; inspect native coastline and texture response (run09).
-- [ ] Preserve final authoring sources, independent critique, current gameplay recording and delivery evidence.
+- [x] Preserve final authoring sources, independent critique, current gameplay recording and delivery evidence.

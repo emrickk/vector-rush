@@ -4,3 +4,8 @@ Native pointer verification at1280x800 via actual macOS window input. Outside cl
 [InputEvidence] BUTTON_ACTIVATED label=CAMERA SHAKE frame=6585 phaseBeforeCallback=Paused
 [InputEvidence] BUTTON_ACTIVATED label=RESUME frame=8279 phaseBeforeCallback=Paused
 [InputEvidence] BUTTON_ACTIVATED label=RESTART RACE frame=9788 phaseBeforeCallback=Paused
+
+1920×1080 native check: outside click preserved Menu; pointer Start entered countdown; Escape paused; pointer Resume advanced time; pointer Quit closed the application.
+[InputEvidence] BUTTON_ACTIVATED label=START RACE frame=2391 phaseBeforeCallback=Menu
+[InputEvidence] BUTTON_ACTIVATED label=RESUME frame=3978 phaseBeforeCallback=Paused
+[InputEvidence] BUTTON_ACTIVATED label=QUIT frame=5150 phaseBeforeCallback=Paused

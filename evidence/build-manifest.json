@@ -1,0 +1,14 @@
+{
+  "product": "Vector Rush",
+  "native_source_commit": "df0c186edfff6757c71387b2264ececbea147f6b",
+  "unity": "6000.6.0f1",
+  "archive": "Builds/VectorRush-macOS-2026-09-07.zip",
+  "archive_bytes": 46728192,
+  "archive_sha256": "820fe6b395e3b271f853b70450f0859f99199a7dd06943b160ea3f87ba2b1c16",
+  "executable_sha256": "adf6337a856172c4c79ec725b4d501b1a2a8357018bcd963355eb5a57f98e461",
+  "archive_integrity": "unzip test passed",
+  "race_evidence": "evidence/run-09-coastal",
+  "inspection_evidence": "evidence/coast-inspection-10",
+  "recording": "evidence/gameplay-final/VectorRush-gameplay-current.mp4",
+  "runtime_notes": "Standalone native build. Last subsequent code change only corrected the optional inspection camera; normal gameplay and rendering match run09."
+}

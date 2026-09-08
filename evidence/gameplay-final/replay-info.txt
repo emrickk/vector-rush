@@ -1,0 +1,1 @@
+Actual native Unity gameplay, automated steering through normal vehicle physics. 360 frames at 24 simulation frames per second; 15 seconds. Separate capture run, not a real-time performance measurement.

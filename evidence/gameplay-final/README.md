@@ -1,0 +1,1 @@
+Current native Unity gameplay preview. Silent H.264, 1280×720, 360 frames, 24 fps, 15 seconds. Automated steering through ordinary vehicle physics. Fixed simulation-time recording; not the real-time performance sample. First, middle and last source frames visually inspected; video dimensions, codec, frame count and duration verified.
