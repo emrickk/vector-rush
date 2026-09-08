@@ -34,6 +34,7 @@ namespace VectorRush
         public float AIDesiredSpeed { get; private set; }
         public float AIBrakeInput => brake;
         public float AITargetLane => aiLane;
+        public float AIResolvedTargetLane { get; private set; }
 
         TrackPath track;
         int gridIndex;
@@ -282,10 +283,12 @@ namespace VectorRush
                     desiredSpeed=Mathf.Min(desiredSpeed,Mathf.Max(0f,leaderSpeed+(gap-(11f+speed*.32f))*1.6f));
                 }
             }
+            AIResolvedTargetLane=targetLane;
             Vector3 destination = target.Position + target.Right * targetLane;
             Vector3 direction = Vector3.ProjectOnPlane(destination - Body.position, frame.Up).normalized;
             float angle = Vector3.SignedAngle(transform.forward, direction, frame.Up);
-            steering = Mathf.Clamp(angle / 26f, -1f, 1f);
+            float forwardSpeed=Mathf.Max(0f,Vector3.Dot(Body.linearVelocity,Vector3.ProjectOnPlane(transform.forward,frame.Up).normalized));
+            steering = PursuitSteering(forwardSpeed,angle,Vector3.ProjectOnPlane(destination-Body.position,frame.Up).magnitude);
             float bend = Vector3.Angle(frame.Forward, target.Forward);
             // Reduce speed while badly misaligned, including after glancing wall contact.
             desiredSpeed *= Mathf.Lerp(1f, .45f, Mathf.InverseLerp(15f, 60f, Mathf.Abs(angle)));
@@ -299,6 +302,16 @@ namespace VectorRush
             brake = Mathf.Clamp01((speed - desiredSpeed) / 10f);
             leftBrake = angle < -32f ? .45f : 0f;
             rightBrake = angle > 32f ? .45f : 0f;
+        }
+
+        public static float PursuitSteering(float speed,float angleDegrees,float chordDistance)
+        {
+            // Pursue the target chord with the yaw rate needed at this speed.
+            // Normalize by the same low-speed authority used by the physical yaw controller.
+            float forwardSpeed=Mathf.Max(0f,speed);
+            float yawRate=2f*forwardSpeed*Mathf.Sin(angleDegrees*Mathf.Deg2Rad)/Mathf.Max(1f,chordDistance);
+            float authority=1.12f*Mathf.Lerp(.25f,1f,Mathf.Clamp01(forwardSpeed/26f));
+            return Mathf.Clamp(yawRate/authority,-1f,1f);
         }
 
         public static void ApplyRivalCorridorGuard(bool isPlayer,float currentLane,float lateralSpeed,float width,

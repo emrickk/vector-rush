@@ -124,7 +124,7 @@ namespace VectorRush
                     completedLaps=tracker!=null?tracker.CompletedLaps:0,nextCheckpoint=tracker!=null?tracker.NextCheckpoint:0,
                     hasStarted=tracker!=null&&tracker.HasStarted,grounded=racer.IsGrounded,boost=racer.IsBoosting,energy01=racer.Boost01,
                     recoveries=racer.RecoveryCount,throttle=racer.ThrottleInput,corridorGuard=racer.AICorridorGuardActive,
-                    aiDesiredSpeedMps=racer.AIDesiredSpeed,aiBrake=racer.AIBrakeInput,aiTargetLane=racer.AITargetLane,
+                    aiDesiredSpeedMps=racer.AIDesiredSpeed,aiBrake=racer.AIBrakeInput,aiTargetLane=racer.AITargetLane,aiResolvedTargetLane=racer.AIResolvedTargetLane,
                     lateralOffsetM=Vector3.Dot(racer.Body.position-frame.Position,frame.Right),heightAboveTrackM=Vector3.Dot(racer.Body.position-frame.Position,frame.Up),
                     raceGapToPlayerM=(racer.RaceProgress-player.RaceProgress)*length,
                     wrappedTrackGapToPlayerM=(Mathf.Repeat(racer.TrackProgress-player.TrackProgress+.5f,1)-.5f)*length,
@@ -256,7 +256,7 @@ namespace VectorRush
             public int index,completedLaps,nextCheckpoint,recoveries,progressRank,nearestOtherIndex,nearestTrackIndex;
             public string name;public bool isPlayer,hasStarted,grounded,boost,corridorGuard;
             public Vector3 position,velocity;public Quaternion rotation;
-            public float trackProgress,raceProgress,speedKph,cruiseSpeedSettingMps,boostSpeedSettingMps,energy01,throttle,aiDesiredSpeedMps,aiBrake,aiTargetLane,lateralOffsetM,heightAboveTrackM;
+            public float trackProgress,raceProgress,speedKph,cruiseSpeedSettingMps,boostSpeedSettingMps,energy01,throttle,aiDesiredSpeedMps,aiBrake,aiTargetLane,aiResolvedTargetLane,lateralOffsetM,heightAboveTrackM;
             public float raceGapToPlayerM,wrappedTrackGapToPlayerM,distanceToPlayerM,nearestOtherM,nearestWrappedTrackGapM;
         }
         [Serializable] sealed class RacerSummary

@@ -1,0 +1,10 @@
+{
+  "parentCommit": "4c043edf9ed449d6deaf345dd24b1761ef90c7ba",
+  "scope": "Speed/chord-aware pursuit steering; actual player cruise60/boost82 as candidate01. Collision avoidance, guard, steering limits and acceleration unchanged.",
+  "files": {
+    "UnityProject/Assets/Scripts/Gameplay/HoverVehicle.cs": "413539a529c9f26227981ca273cc9a3b77a635ed868b441bee1a6f41d5afa30c",
+    "UnityProject/Assets/Scripts/VectorBootstrap.cs": "b7eafe681f155b7addf1cdac108eac095cfa503d24a95105e56e02ba631a5cd6",
+    "UnityProject/Assets/Scripts/PaceEvidence.cs": "7c9634b01ac7ebc37e0f70089b4f08083bb5dddd71faefc635ea18e6ea9004f5",
+    "UnityProject/Assets/Scripts/EnvironmentEvidence.cs": "5b3af59fb6903e762222c0d21676ed8b0b840340bf330bb081849176ba6f61eb"
+  }
+}

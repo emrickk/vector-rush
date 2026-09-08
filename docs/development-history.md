@@ -224,3 +224,9 @@ Actual player cruise60/boost82 completes three laps in 120.912 seconds with zero
 ## 2026-09-08 — Second cap candidate exposes lateral-control weakness
 
 Actual player55/75 completes125.969s without recoveries, but closeness collapses across the race: within60m77.2% on lap1,26.1% on lap2,0% on lap3. Rival edge-guard duties rise sharply and nearest finish gap worsens to494.1m. Preserve this failed candidate. Further cap-only tuning is rejected: the next experiment corrects the AI pursuit steering gain to request curvature-appropriate yaw while retaining guard, collision avoidance and steering limits. Compare against the better60/82 player candidate; this is a controller hypothesis, not a proven sole cause of every edge interaction.
+
+## 2026-09-08 — Pursuit command corrected; native rail contact remains
+
+The speed-aware pursuit command passes37 tests after four known-radius regressions demonstrably failed the original response. Candidate03 (player60/82) completes120.708s with0 recoveries but still lacks sustained close racing. Native target telemetry shows an inward goal roughly4m away while bodies remain against the barrier. Collider projection puts82–94% of these outer-edge samples within0.15m of the wall. Changing yaw gain alone cannot free a long hull whose stern must sweep into that wall. Preserve the candidate as partial controller correctness, not pace acceptance.
+
+The next bounded physical correction is a rival-only lateral thruster during an active guard, toward the resolved collision-clear inward target, limited to6m/s². It does not assign position or velocity and is disabled for the actual player. Existing guard, clearance, turning limits and hover physics remain. Native proximity and recovery checks must demonstrate the outcome before visual review.

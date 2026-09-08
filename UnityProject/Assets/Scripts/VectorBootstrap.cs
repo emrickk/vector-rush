@@ -66,7 +66,7 @@ namespace VectorRush
                 var vehicle=root.AddComponent<HoverVehicle>();vehicle.VisualRoot=art.transform;
                 // The player uses the same pace preset in manual play and test driving.
                 // Keep acceleration responsive while bringing its straight-line pace into the rival field.
-                if(i==0){vehicle.CruiseSpeed=55f;vehicle.BoostSpeed=75f;}
+                if(i==0){vehicle.CruiseSpeed=60f;vehicle.BoostSpeed=82f;}
                 vehicle.Initialize(Track,i==0,i);racers.Add(vehicle);
                 root.AddComponent<IonPropulsion>().Initialize(vehicle);
             }
