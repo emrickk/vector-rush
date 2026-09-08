@@ -220,3 +220,7 @@ User requested closer racing, followed by one visual critique/improvement round 
 ## 2026-09-08 — First player pace candidate, still too separated
 
 Actual player cruise60/boost82 completes three laps in 120.912 seconds with zero recoveries across the field. Duration-weighted nearest Euclidean rival under80m improves from1.28% to53.48% after5s, but under40m reaches only4.37%; nearest validated finish gap remains177.1m. This is an improvement but not close-racing acceptance. Preserve candidate01 and its actual settings before the next bounded 55/75 candidate; acceleration and rival safety remain unchanged.
+
+## 2026-09-08 — Second cap candidate exposes lateral-control weakness
+
+Actual player55/75 completes125.969s without recoveries, but closeness collapses across the race: within60m77.2% on lap1,26.1% on lap2,0% on lap3. Rival edge-guard duties rise sharply and nearest finish gap worsens to494.1m. Preserve this failed candidate. Further cap-only tuning is rejected: the next experiment corrects the AI pursuit steering gain to request curvature-appropriate yaw while retaining guard, collision avoidance and steering limits. Compare against the better60/82 player candidate; this is a controller hypothesis, not a proven sole cause of every edge interaction.

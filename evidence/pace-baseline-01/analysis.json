@@ -1,5 +1,5 @@
 {
-  "scope": "Read-only analysis of completed native pace telemetry. Duration-weighted left-end sample states over race seconds >=5. Closeness uses absolute validated race-distance gaps, not Euclidean or wrapped proximity. Lap/gallery interval attribution uses the left-end player state and is approximate within the observed sample interval. First-observed lap crossings are not exact crossing times.",
+  "scope": "Read-only analysis of completed native pace telemetry. Duration-weighted left-end sample states over race seconds >=5. Closeness uses absolute validated race-distance gaps to unfinished rivals, not Euclidean or wrapped proximity. Finished rivals are excluded from active-racing proximity, with denominator retained if none remain. Physical gap independently unwraps TrackProgress and remains available after validated progress freezes. Lap/gallery interval attribution uses the left-end player state and is approximate within the observed sample interval. First-observed lap crossings are not exact crossing times.",
   "source": "evidence/pace-baseline-01/pace-evidence.json",
   "sourceSha256": "57cc4c6e30935ee7f6b2ffe26f709700daecb490a935ade2114b99aa7a43ff00",
   "buildGuid": "db45f4d51f4a4c1e98aca0a6d43f3fad",
@@ -13,10 +13,19 @@
   "overallAfter5s": {
     "measuredSeconds": 107.6031265258789,
     "intervals": 1077,
+    "activeRivalCoverageFraction": 1.0,
     "nearestAbsoluteValidatedGapMeanM": 280.12772115694685,
     "nearestAbsoluteValidatedGapMinM": 80.69085693359375,
     "nearestAbsoluteValidatedGapMaxM": 491.41046142578125,
+    "nearestAbsolutePhysicalGapMeanM": 280.12771159506195,
     "nearbyFractions": {
+      "30": 0.0,
+      "40": 0.0,
+      "60": 0.0,
+      "80": 0.0,
+      "100": 0.03986981979340682
+    },
+    "physicalNearbyFractions": {
       "30": 0.0,
       "40": 0.0,
       "60": 0.0,
@@ -29,10 +38,19 @@
     "1": {
       "measuredSeconds": 33.2095947265625,
       "intervals": 333,
+      "activeRivalCoverageFraction": 1.0,
       "nearestAbsoluteValidatedGapMeanM": 165.67333052543415,
       "nearestAbsoluteValidatedGapMinM": 80.69085693359375,
       "nearestAbsoluteValidatedGapMaxM": 289.8918151855469,
+      "nearestAbsolutePhysicalGapMeanM": 165.67333055731382,
       "nearbyFractions": {
+        "30": 0.0,
+        "40": 0.0,
+        "60": 0.0,
+        "80": 0.0,
+        "100": 0.1291830658915726
+      },
+      "physicalNearbyFractions": {
         "30": 0.0,
         "40": 0.0,
         "60": 0.0,
@@ -44,10 +62,19 @@
     "2": {
       "measuredSeconds": 37.19810485839844,
       "intervals": 372,
+      "activeRivalCoverageFraction": 1.0,
       "nearestAbsoluteValidatedGapMeanM": 276.45584314494783,
       "nearestAbsoluteValidatedGapMinM": 156.43797302246094,
       "nearestAbsoluteValidatedGapMaxM": 387.89166259765625,
+      "nearestAbsolutePhysicalGapMeanM": 276.45583278946225,
       "nearbyFractions": {
+        "30": 0.0,
+        "40": 0.0,
+        "60": 0.0,
+        "80": 0.0,
+        "100": 0.0
+      },
+      "physicalNearbyFractions": {
         "30": 0.0,
         "40": 0.0,
         "60": 0.0,
@@ -59,10 +86,19 @@
     "3": {
       "measuredSeconds": 37.19542694091797,
       "intervals": 372,
+      "activeRivalCoverageFraction": 1.0,
       "nearestAbsoluteValidatedGapMeanM": 385.989413163341,
       "nearestAbsoluteValidatedGapMinM": 265.7174987792969,
       "nearestAbsoluteValidatedGapMaxM": 491.41046142578125,
+      "nearestAbsolutePhysicalGapMeanM": 385.9893958294095,
       "nearbyFractions": {
+        "30": 0.0,
+        "40": 0.0,
+        "60": 0.0,
+        "80": 0.0,
+        "100": 0.0
+      },
+      "physicalNearbyFractions": {
         "30": 0.0,
         "40": 0.0,
         "60": 0.0,
@@ -76,10 +112,19 @@
     "cool": {
       "measuredSeconds": 5.830148696899414,
       "intervals": 58,
+      "activeRivalCoverageFraction": 1.0,
       "nearestAbsoluteValidatedGapMeanM": 182.70180825056642,
       "nearestAbsoluteValidatedGapMinM": 92.03905487060547,
       "nearestAbsoluteValidatedGapMaxM": 289.54541015625,
+      "nearestAbsolutePhysicalGapMeanM": 182.70179537882785,
       "nearbyFractions": {
+        "30": 0.0,
+        "40": 0.0,
+        "60": 0.0,
+        "80": 0.0,
+        "100": 0.13550564878134
+      },
+      "physicalNearbyFractions": {
         "30": 0.0,
         "40": 0.0,
         "60": 0.0,
@@ -91,10 +136,19 @@
     "warm": {
       "measuredSeconds": 4.210357666015625,
       "intervals": 42,
+      "activeRivalCoverageFraction": 1.0,
       "nearestAbsoluteValidatedGapMeanM": 266.40837901569597,
       "nearestAbsoluteValidatedGapMinM": 180.05764770507812,
       "nearestAbsoluteValidatedGapMaxM": 357.150390625,
+      "nearestAbsolutePhysicalGapMeanM": 266.40834278416975,
       "nearbyFractions": {
+        "30": 0.0,
+        "40": 0.0,
+        "60": 0.0,
+        "80": 0.0,
+        "100": 0.0
+      },
+      "physicalNearbyFractions": {
         "30": 0.0,
         "40": 0.0,
         "60": 0.0,
@@ -109,10 +163,19 @@
       "cool": {
         "measuredSeconds": 1.910043716430664,
         "intervals": 19,
+        "activeRivalCoverageFraction": 1.0,
         "nearestAbsoluteValidatedGapMeanM": 102.3055432304662,
         "nearestAbsoluteValidatedGapMinM": 92.03905487060547,
         "nearestAbsoluteValidatedGapMaxM": 114.39324951171875,
+        "nearestAbsolutePhysicalGapMeanM": 102.30554263335493,
         "nearbyFractions": {
+          "30": 0.0,
+          "40": 0.0,
+          "60": 0.0,
+          "80": 0.0,
+          "100": 0.41361256544502617
+        },
+        "physicalNearbyFractions": {
           "30": 0.0,
           "40": 0.0,
           "60": 0.0,
@@ -124,10 +187,19 @@
       "warm": {
         "measuredSeconds": 1.4197616577148438,
         "intervals": 14,
+        "activeRivalCoverageFraction": 1.0,
         "nearestAbsoluteValidatedGapMeanM": 184.00628973732532,
         "nearestAbsoluteValidatedGapMinM": 180.05764770507812,
         "nearestAbsoluteValidatedGapMaxM": 193.54684448242188,
+        "nearestAbsolutePhysicalGapMeanM": 184.00629045640554,
         "nearbyFractions": {
+          "30": 0.0,
+          "40": 0.0,
+          "60": 0.0,
+          "80": 0.0,
+          "100": 0.0
+        },
+        "physicalNearbyFractions": {
           "30": 0.0,
           "40": 0.0,
           "60": 0.0,
@@ -141,10 +213,19 @@
       "cool": {
         "measuredSeconds": 1.919677734375,
         "intervals": 19,
+        "activeRivalCoverageFraction": 1.0,
         "nearestAbsoluteValidatedGapMeanM": 162.9259753227234,
         "nearestAbsoluteValidatedGapMinM": 156.43797302246094,
         "nearestAbsoluteValidatedGapMaxM": 177.33790588378906,
+        "nearestAbsolutePhysicalGapMeanM": 162.92594624879774,
         "nearbyFractions": {
+          "30": 0.0,
+          "40": 0.0,
+          "60": 0.0,
+          "80": 0.0,
+          "100": 0.0
+        },
+        "physicalNearbyFractions": {
           "30": 0.0,
           "40": 0.0,
           "60": 0.0,
@@ -156,10 +237,19 @@
       "warm": {
         "measuredSeconds": 1.3802947998046875,
         "intervals": 14,
+        "activeRivalCoverageFraction": 1.0,
         "nearestAbsoluteValidatedGapMeanM": 271.2535472261733,
         "nearestAbsoluteValidatedGapMinM": 252.62936401367188,
         "nearestAbsoluteValidatedGapMaxM": 292.0069885253906,
+        "nearestAbsolutePhysicalGapMeanM": 271.2534977791374,
         "nearbyFractions": {
+          "30": 0.0,
+          "40": 0.0,
+          "60": 0.0,
+          "80": 0.0,
+          "100": 0.0
+        },
+        "physicalNearbyFractions": {
           "30": 0.0,
           "40": 0.0,
           "60": 0.0,
@@ -173,10 +263,19 @@
       "cool": {
         "measuredSeconds": 2.00042724609375,
         "intervals": 20,
+        "activeRivalCoverageFraction": 1.0,
         "nearestAbsoluteValidatedGapMeanM": 278.4431591796875,
         "nearestAbsoluteValidatedGapMinM": 268.3974304199219,
         "nearestAbsoluteValidatedGapMaxM": 289.54541015625,
+        "nearestAbsolutePhysicalGapMeanM": 278.4431501360827,
         "nearbyFractions": {
+          "30": 0.0,
+          "40": 0.0,
+          "60": 0.0,
+          "80": 0.0,
+          "100": 0.0
+        },
+        "physicalNearbyFractions": {
           "30": 0.0,
           "40": 0.0,
           "60": 0.0,
@@ -188,10 +287,19 @@
       "warm": {
         "measuredSeconds": 1.4103012084960938,
         "intervals": 14,
+        "activeRivalCoverageFraction": 1.0,
         "nearestAbsoluteValidatedGapMeanM": 344.6211506728585,
         "nearestAbsoluteValidatedGapMinM": 330.5369873046875,
         "nearestAbsoluteValidatedGapMaxM": 357.150390625,
+        "nearestAbsolutePhysicalGapMeanM": 344.6210901771857,
         "nearbyFractions": {
+          "30": 0.0,
+          "40": 0.0,
+          "60": 0.0,
+          "80": 0.0,
+          "100": 0.0
+        },
+        "physicalNearbyFractions": {
           "30": 0.0,
           "40": 0.0,
           "60": 0.0,
@@ -738,6 +846,21 @@
       -496.9356994628906,
       -1138.2447509765625
     ],
+    "rivalSignedUnwrappedPhysicalGapsM": [
+      -1352.1743985739913,
+      -476.64560839563194,
+      -1227.898534617506,
+      -496.9357001841446,
+      -1138.2447774563361
+    ],
+    "activeRivalsAtPlayerFinish": 5,
+    "nearestActiveRivalAbsoluteGapM": 476.64569091796875,
+    "activeRivalsWithin100M": 0,
+    "activeRivalsWithin200M": 0,
+    "firstObservedFinishTimes": {
+      "0": 112.6031265258789
+    },
+    "rivalFirstObservedFinishDelayFromPlayerSeconds": {},
     "nearestRivalAbsoluteGapM": 476.64569091796875,
     "rivalsWithin100M": 0,
     "rivalsWithin200M": 0,
