@@ -29,6 +29,21 @@ namespace VectorRush.Editor
             var rendererData=AssetDatabase.LoadAssetAtPath<UniversalRendererData>("Assets/Settings/VectorRenderer.asset");
             rendererData.postProcessData=AssetDatabase.LoadAssetAtPath<PostProcessData>("Packages/com.unity.render-pipelines.universal/Runtime/Data/PostProcessData.asset");
             if(!rendererData.postProcessData)throw new Exception("URP post-processing resource is missing");
+            ScreenSpaceAmbientOcclusion occlusion=null;
+            foreach(var feature in rendererData.rendererFeatures)if(feature is ScreenSpaceAmbientOcclusion existing)occlusion=existing;
+            if(!occlusion){
+                occlusion=ScriptableObject.CreateInstance<ScreenSpaceAmbientOcclusion>();occlusion.name="Craft and architecture contact depth";
+                AssetDatabase.AddObjectToAsset(occlusion,rendererData);rendererData.rendererFeatures.Add(occlusion);
+            }
+            var ao=new SerializedObject(occlusion);var aoSettings=ao.FindProperty("m_Settings");
+            aoSettings.FindPropertyRelative("Intensity").floatValue=.7f;
+            aoSettings.FindPropertyRelative("Radius").floatValue=.65f;
+            aoSettings.FindPropertyRelative("DirectLightingStrength").floatValue=.08f;
+            aoSettings.FindPropertyRelative("Falloff").floatValue=90f;
+            aoSettings.FindPropertyRelative("Downsample").boolValue=false;
+            aoSettings.FindPropertyRelative("Source").intValue=1;
+            aoSettings.FindPropertyRelative("Samples").intValue=1;
+            ao.ApplyModifiedPropertiesWithoutUndo();occlusion.SetActive(true);EditorUtility.SetDirty(occlusion);
             EditorUtility.SetDirty(rendererData);
             pipeline.mainLightShadowmapResolution=4096;pipeline.shadowDistance=150;pipeline.shadowCascadeCount=4;
             var pipelineSettings=new SerializedObject(pipeline);pipelineSettings.FindProperty("m_SoftShadowsSupported").boolValue=true;pipelineSettings.ApplyModifiedPropertiesWithoutUndo();
@@ -43,6 +58,14 @@ namespace VectorRush.Editor
             var surface=AssetDatabase.LoadAssetAtPath<Material>("Assets/Resources/SurfaceLit.mat");
             if(!surface){surface=new Material(Shader.Find("Universal Render Pipeline/Lit"));surface.EnableKeyword("_EMISSION");surface.SetColor("_EmissionColor",Color.black);AssetDatabase.CreateAsset(surface,"Assets/Resources/SurfaceLit.mat");}
             surface.SetColor("_EmissionColor",Color.white);surface.globalIlluminationFlags=MaterialGlobalIlluminationFlags.RealtimeEmissive;surface.EnableKeyword("_EMISSION");EditorUtility.SetDirty(surface);
+            var road=AssetDatabase.LoadAssetAtPath<Material>("Assets/Resources/RoadSurface.mat");
+            if(!road){road=new Material(surface);AssetDatabase.CreateAsset(road,"Assets/Resources/RoadSurface.mat");}
+            // A diffuse composite deck avoids the static harbor cubemap projecting
+            // large reflected silhouettes over the driving line. Other surfaces retain reflections.
+            road.SetFloat("_EnvironmentReflections",0);road.SetFloat("_SpecularHighlights",0);
+            road.EnableKeyword("_ENVIRONMENTREFLECTIONS_OFF");road.EnableKeyword("_SPECULARHIGHLIGHTS_OFF");
+            road.SetFloat("_Metallic",0);road.SetFloat("_Smoothness",.16f);road.SetColor("_EmissionColor",Color.black);road.EnableKeyword("_EMISSION");EditorUtility.SetDirty(road);
+            PrepareCoastalMaterial();
             // The lit template retains only needed variants; these small shaders are used by name.
             var gs=new SerializedObject(AssetDatabase.LoadAllAssetsAtPath("ProjectSettings/GraphicsSettings.asset")[0]);
             var shaders=gs.FindProperty("m_AlwaysIncludedShaders");
@@ -58,6 +81,26 @@ namespace VectorRush.Editor
             EditorSceneManager.SaveScene(scene,"Assets/Scenes/Solstice.unity");
             EditorBuildSettings.scenes=new[]{new EditorBuildSettingsScene("Assets/Scenes/Solstice.unity",true)};
             AssetDatabase.SaveAssets();AssetDatabase.Refresh();Debug.Log("VECTOR_SETUP_COMPLETE");
+        }
+        static void PrepareCoastalMaterial()
+        {
+            var cliffImporter=AssetImporter.GetAtPath("Assets/Resources/Art/Environment/Solstice_CoastalCliff_C.fbx") as ModelImporter;
+            if(cliffImporter){cliffImporter.importNormals=ModelImporterNormals.Import;cliffImporter.importTangents=ModelImporterTangents.CalculateMikk;cliffImporter.importCameras=false;cliffImporter.importLights=false;cliffImporter.SaveAndReimport();}
+            const string folder="Assets/Resources/Art/Environment/Textures/";
+            foreach(string name in new[]{"Rock3_CC0_Albedo.jpg","Rock3_CC0_NormalGL.png","Rock3_DERIVED_MetallicSmoothness.png"}){
+                var importer=AssetImporter.GetAtPath(folder+name) as TextureImporter;
+                if(!importer)throw new Exception("Missing coastal texture: "+name);
+                importer.textureType=name.Contains("Normal")?TextureImporterType.NormalMap:TextureImporterType.Default;
+                importer.sRGBTexture=name.Contains("Albedo");importer.wrapMode=TextureWrapMode.Repeat;importer.filterMode=FilterMode.Trilinear;
+                importer.anisoLevel=8;importer.maxTextureSize=2048;importer.mipmapEnabled=true;importer.SaveAndReimport();
+            }
+            const string path="Assets/Resources/CoastalRock.mat";
+            var rock=AssetDatabase.LoadAssetAtPath<Material>(path);
+            if(!rock){rock=new Material(Shader.Find("Universal Render Pipeline/Lit"));AssetDatabase.CreateAsset(rock,path);}
+            rock.SetColor("_BaseColor",Color.white);rock.SetTexture("_BaseMap",AssetDatabase.LoadAssetAtPath<Texture2D>(folder+"Rock3_CC0_Albedo.jpg"));
+            rock.SetTexture("_BumpMap",AssetDatabase.LoadAssetAtPath<Texture2D>(folder+"Rock3_CC0_NormalGL.png"));rock.SetFloat("_BumpScale",.75f);rock.EnableKeyword("_NORMALMAP");
+            rock.SetTexture("_MetallicGlossMap",AssetDatabase.LoadAssetAtPath<Texture2D>(folder+"Rock3_DERIVED_MetallicSmoothness.png"));rock.SetFloat("_Metallic",0);rock.SetFloat("_Smoothness",1);rock.SetFloat("_SmoothnessTextureChannel",0);rock.EnableKeyword("_METALLICSPECGLOSSMAP");
+            rock.SetTextureScale("_BaseMap",new Vector2(4,4));EditorUtility.SetDirty(rock);
         }
         [MenuItem("Vector Rush/Build macOS player")]
         public static void BuildMac()

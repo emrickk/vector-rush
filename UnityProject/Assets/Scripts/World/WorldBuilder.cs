@@ -19,11 +19,11 @@ namespace VectorRush
         public Material Engine => cyan;
         public Material Glass => glass;
         public Material Metal => metal;
-        public Material MakeMaterial(string name,Color color,float smooth=.5f,float metallic=0,Color? emission=null)
+        public Material MakeMaterial(string name,Color color,float smooth=.5f,float metallic=0,Color? emission=null,string templateName="SurfaceLit")
         {
             Shader shader=Shader.Find("Universal Render Pipeline/Lit");
             if(!shader) shader=Shader.Find("Standard");
-            var template=Resources.Load<Material>("SurfaceLit");
+            var template=Resources.Load<Material>(templateName);
             var m=template?new Material(template):new Material(shader);m.name=name;m.SetColor("_BaseColor",color);m.color=color;
             m.SetFloat("_Smoothness",smooth);m.SetFloat("_Metallic",metallic);
             m.EnableKeyword("_EMISSION");m.SetColor("_EmissionColor",emission??Color.black);
@@ -32,7 +32,7 @@ namespace VectorRush
         public void Build(TrackPath path)
         {
             track=path;track.Ensure();
-            road=MakeMaterial("Graphite composite running surface",new Color(.16f,.205f,.23f),.33f,.12f);
+            road=MakeMaterial("Graphite composite running surface",new Color(.16f,.205f,.23f),.16f,0f,templateName:"RoadSurface");
             roadGrain=new Texture2D(256,256,TextureFormat.RGBA32,true){name="Asphalt microaggregate",wrapMode=TextureWrapMode.Repeat,filterMode=FilterMode.Trilinear,anisoLevel=8};
             var grainRandom=new System.Random(419);var pixels=new Color[256*256];
             for(int i=0;i<pixels.Length;i++){float n=.78f+(float)grainRandom.NextDouble()*.22f;pixels[i]=new Color(n,n,n,1);}

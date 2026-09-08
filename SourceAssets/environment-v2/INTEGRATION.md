@@ -23,16 +23,18 @@ The strict shared material names are `Ivory`, `Graphite`, `Glass`, `Metal`, `Roc
 | Rock | dedicated shared URP Lit material retaining supplied textures | Warm gray stone; use the texture contract below instead of a flat-color replacement |
 | Vegetation | shared URP Lit material | Muted olive scrub, roughness about 0.9 |
 
-The cliff's surface textures are required for its intended appearance. **Do not replace Rock with the old flat `Basalt` material.** All maps are in `textures/` at 1024 × 1024:
+The cliff's selected surface uses **Rock 3 by Rob Tuytel / Poly Haven (CC0)**. Preserve `textures/Rock3_PROVENANCE.md` and `Rock3_download-record.json`; these are third-party scanned textures, not agent-authored imagery. The original maps were copied without alterations. **Do not replace Rock with the old flat Basalt material.**
 
-- `Solstice_Limestone_Albedo.png`: import as sRGB, Repeat; assign `_BaseMap`, set `_BaseColor` to white so the map is not multiplied by an extra dark tint.
-- `Solstice_Limestone_Normal.png`: import as Normal Map (non-color), Repeat; assign `_BumpMap` and use normal strength around 0.55. It supplies grain only; the actual fractures are modeled.
-- `Solstice_Limestone_Roughness.png`: non-color reference map, mean roughness approximately 0.85. URP Lit does not directly consume a roughness input.
-- `Solstice_Limestone_MetallicSmoothness.png`: non-color URP-ready packed texture; RGB=0 (non-metal), alpha=1−roughness. Assign `_MetallicGlossMap`, enable `_METALLICSPECGLOSSMAP`, use `_Smoothness=1` and metallic-alpha smoothness source. Do not also multiply the packed smoothness by 0.15.
+- `Rock3_CC0_Albedo.jpg`: sRGB, Repeat; assign `_BaseMap`, `_BaseColor=white`.
+- `Rock3_CC0_NormalGL.png`: import as Normal Map, Repeat; `_BumpMap`, normal strength **0.75**.
+- `Rock3_CC0_Roughness.jpg`: non-color reference map. URP Lit does not directly consume roughness.
+- `Rock3_DERIVED_MetallicSmoothness.png`: non-color packed derivative, RGB=0 and alpha=1−source roughness. Assign `_MetallicGlossMap`, enable `_METALLICSPECGLOSSMAP`, use `_Smoothness=1` and metallic-alpha smoothness source. This mask is an explicit derivative; source maps remain unchanged.
 
-UV0 uses a 10-metre repeating metric projection on the rock faces. Use texture scale (1,1); changing scale also changes grain size. UV0 is intentionally shared/overlapping for tiling; if using baked lighting, Unity should generate a separate UV1 lightmap channel. The FBX embeds source albedo/normal/roughness where supported, but the separate files and this explicit mapping remain authoritative.
+All selected maps are 2048×2048. Use **texture scale (4,4)** on all three runtime inputs. The cliff has a single metric UV0 channel, with 10 metres per UV unit, so this yields **2.5-metre tiles**. The source scan's documented width is 1.5 metres; the 2.5-metre trial deliberately enlarges features modestly for this prototype's chase distance. UV0 overlaps intentionally for tiling; generate a separate UV1 if baking lightmaps. Preserve sharp imported normals.
 
-No Blender-only procedural shading is required to read the modeled facade or geology. The mesh carries metric UV0 for textures; baked lightmaps require generated UV1. Preserve imported custom/split normals; Unity's indiscriminate normal recalculation can round off building walls. Generate secondary lightmap UVs only if these static objects are baked. Architecture may use simple compound box colliders if needed; distant coast does not need mesh collision.
+The older `Solstice_Limestone_*` procedural maps remain in this staging folder only to reproduce the rejected A/B material passes. They are superseded by the Rock 3 selection and should not be copied into the current runtime material.
+
+All final shader inputs are ordinary portable image maps and shared scalar PBR settings. The mesh carries metric UV0 for textures; baked lightmaps require generated UV1. Preserve imported custom/split normals; Unity's indiscriminate normal recalculation can round off building walls. Generate secondary lightmap UVs only if these static objects are baked. Architecture may use simple compound box colliders if needed; distant coast does not need mesh collision.
 
 ## Placement and visual validation
 
@@ -44,4 +46,8 @@ Inspect both models in a low chase-camera view at roughly 100, 200 and 350 metre
 
 ## Source and repeatability
 
-`build_environment.py` regenerates the editable `.blend`, separate FBX files, statistics and CPU-rendered inspections. The final `.blend` includes clearly named preview lights/ground/camera; those are excluded from the asset exports. The asset meshes remain separate and contain meaningful material groups. The staged file names should remain stable for review and integration.
+`build_environment.py` (with `rock3_material.py` and the supplied CC0 source maps) regenerates the editable `.blend`, separate FBX files, statistics and CPU-rendered inspections. The final `.blend` includes clearly named preview lights/ground/camera; those are excluded from the asset exports. The asset meshes remain separate and contain meaningful material groups. The staged file names should remain stable for review and integration.
+
+## Export audit and known limit
+
+`export_audit.json` records a Blender FBX round trip and the raw FBX global axes: +Y up, +Z front, UnitScaleFactor 100 (metres), local origins zero. All vertices are finite and the tower dimensions survive import. The accepted frozen Tower B FBX contains 52 zero-area cap tessellation triangles; these do not contribute visible area. This is recorded rather than silently changing the already handed-off tower file. Cliff C and Tower A contain no zero-area triangles. The kit remains a candidate for native visual evaluation, not an AAA quality certification.

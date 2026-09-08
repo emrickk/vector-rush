@@ -107,7 +107,10 @@ def finish(name,start):
  for p,i in zip(ob.data.polygons,ids):p.material_index=i
  bpy.ops.object.transform_apply(location=False,rotation=True,scale=True)
  # Metric box-projection UV0, overlapping for shared tiling; Unity can generate UV1 for baking.
+ if name=='Solstice_CoastalCliff_C':
+  for old_uv in list(ob.data.uv_layers):ob.data.uv_layers.remove(old_uv)
  uv=ob.data.uv_layers.new(name='MetricSurfaceUV')
+ if name=='Solstice_CoastalCliff_C':uv.active_render=True;ob.data.uv_layers.active_index=0
  for p in ob.data.polygons:
   normal=p.normal;axis=max(range(3),key=lambda k:abs(normal[k]));axes=[k for k in range(3) if k!=axis]
   for loop_id in p.loop_indices:
@@ -258,14 +261,14 @@ for j,k,s in [(4,20,1.05),(7,25,.85),(4,82,1.1),(9,110,.9),(14,133,1.3),(9,170,.
  x,y,z=verts[(L+j)*N+k]
  for dx,dy,ss in [(0,0,s),(s*.7,.5*s,s*.65),(-s*.5,s*.3,s*.6)]:plant(x+dx,y+dy,z-.05,ss)
 C=finish('Solstice_CoastalCliff_C',start)
-exec(compile(open(os.path.join(ROOT,'stone_texture.py')).read(),'stone_texture.py','exec'))
+exec(compile(open(os.path.join(ROOT,'rock3_material.py')).read(),'rock3_material.py','exec'))
 
 assets=[A,B,C]
 stats={}
 for ob in assets:
  bpy.ops.object.select_all(action='DESELECT');ob.select_set(True);bpy.context.view_layer.objects.active=ob
  # Bake export axis conversion into FBX basis. Blender -Y forward becomes Unity +Z.
- bpy.ops.export_scene.fbx(filepath=os.path.join(ROOT,'exports',ob.name+'.fbx'),use_selection=True,object_types={'MESH'},apply_unit_scale=True,apply_scale_options='FBX_SCALE_UNITS',axis_forward='-Z',axis_up='Y',bake_space_transform=True,use_mesh_modifiers=True,mesh_smooth_type='FACE',add_leaf_bones=False,path_mode='AUTO')
+ bpy.ops.export_scene.fbx(filepath=os.path.join(ROOT,'exports',ob.name+'.fbx'),use_selection=True,object_types={'MESH'},apply_unit_scale=True,apply_scale_options='FBX_SCALE_UNITS',axis_forward='-Z',axis_up='Y',bake_space_transform=True,use_mesh_modifiers=True,mesh_smooth_type='FACE',add_leaf_bones=False,path_mode='COPY',embed_textures=True)
  ob.data.calc_loop_triangles()
  stats[ob.name]={'vertices':len(ob.data.vertices),'triangles':len(ob.data.loop_triangles),'materials':[m.name for m in ob.data.materials],'dimensions_metres_blender_xyz':list(ob.dimensions),'origin':'local ground center; cliff underwater skirt extends -3m','fbx_axes':'Y up, -Z forward export convention for Unity; model front is Blender -Y','renderers':1}
 with open(os.path.join(ROOT,'asset_stats.json'),'w') as f:json.dump(stats,f,indent=2)
@@ -283,6 +286,7 @@ def render(name,pos,target,lens=55,res=(1600,1100)):
  cam.location=pos;cam.rotation_euler=(Vector(target)-cam.location).to_track_quat('-Z','Y').to_euler();cam.data.lens=lens;scene.render.resolution_x=res[0];scene.render.resolution_y=res[1];scene.render.filepath=os.path.join(ROOT,'renders',name+'.png');bpy.ops.render.render(write_still=True)
 
 bpy.ops.wm.save_as_mainfile(filepath=os.path.join(ROOT,'Solstice_Environment_Kit.blend'))
+bpy.ops.file.make_paths_relative()
 render('01-kit-hero',(-138,-190,118),(22,14,28),52)
 render('02-tower-A-medium',(-91,-85,48),(-31,5,36),57,(1100,1350))
 render('03-cliff-medium',(122,-79,63),(65,29,17),55,(1400,1050))

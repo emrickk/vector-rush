@@ -26,3 +26,5 @@ Run from this folder: `./tools/unity.sh prepare`, `./tools/unity.sh test`, `./to
 ## Asset provenance
 
 The concept in `references/` is generated with the built-in image tool; its prompt is alongside it. It is not runtime evidence. HeroShip is original procedural Blender geometry with editable source. Race audio is original synthesis. World geometry is project-authored C#. No Wipeout assets, branding, or music are included.
+
+The V2 ship, tower kit and cliff geometry have editable Blender sources in `SourceAssets/hero-v2` and `SourceAssets/environment-v2`. Current cliff surface maps are **Rock 3 by Rob Tuytel / Poly Haven (CC0)**, not agent-authored textures. Original albedo/normal/roughness maps, source URLs and hash manifests are retained; the Unity metallic/smoothness mask is explicitly labeled as a derivative. See `SourceAssets/environment-v2/textures/Rock3_PROVENANCE.md` and `docs/asset-regeneration.md`.

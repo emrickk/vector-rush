@@ -1,0 +1,1 @@
+Identical native starting grid. SSAO enabled versus disabled; 1 loaded feature(s). No changes to meshes, lighting, camera, or materials.

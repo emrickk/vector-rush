@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 using UnityEngine.Profiling;
+using UnityEngine.Rendering.Universal;
 
 namespace VectorRush
 {
@@ -11,7 +12,7 @@ namespace VectorRush
     public sealed class RaceEvidence : MonoBehaviour
     {
         readonly List<float> frames=new List<float>();
-        string folder;float started;bool collecting;bool autopilot;bool quitAfter;bool recordReplay;bool quickEvidence;bool diagnosticRoad;
+        string folder;float started;bool collecting;bool autopilot;bool quitAfter;bool recordReplay;bool quickEvidence;bool diagnosticRoad;bool diagnosticAO;bool inspectCoast;
         float nextTelemetry;bool capturedCrest,capturedDescent;
         IEnumerator Start()
         {
@@ -23,11 +24,15 @@ namespace VectorRush
                 if(args[i]=="-recordReplay")recordReplay=true;
                 if(args[i]=="-quickEvidence")quickEvidence=true;
                 if(args[i]=="-diagnosticRoad")diagnosticRoad=true;
+                if(args[i]=="-diagnosticAO")diagnosticAO=true;
+                if(args[i]=="-inspectCoast")inspectCoast=true;
             }
             if(string.IsNullOrEmpty(folder))yield break;
             Directory.CreateDirectory(folder);
             yield return new WaitForSecondsRealtime(3);
             yield return Capture("01-title.png");
+            if(quickEvidence&&inspectCoast){yield return InspectCoast();yield return new WaitForSecondsRealtime(2);Application.Quit();yield break;}
+            if(diagnosticAO){yield return DiagnoseAO();yield break;}
             var director=VectorBootstrap.Instance.Director;
             director.Player.AutopilotForTesting=autopilot;
             director.StartRace();
@@ -38,6 +43,45 @@ namespace VectorRush
             if(recordReplay){yield return RecordReplay();yield break;}
             started=Time.realtimeSinceStartup;collecting=true;
             if(autopilot)StartCoroutine(VerifyRace());
+        }
+        IEnumerator DiagnoseAO()
+        {
+            var features=Resources.FindObjectsOfTypeAll<ScreenSpaceAmbientOcclusion>();
+            yield return Capture("ao-01-enabled.png");
+            foreach(var feature in features)feature.SetActive(false);
+            for(int i=0;i<5;i++)yield return null;
+            yield return Capture("ao-02-disabled.png");
+            var probes=FindObjectsByType<ReflectionProbe>(FindObjectsSortMode.None);var intensities=new float[probes.Length];
+            for(int i=0;i<probes.Length;i++){intensities[i]=probes[i].intensity;probes[i].intensity=0;}
+            float reflection=RenderSettings.reflectionIntensity;RenderSettings.reflectionIntensity=0;
+            for(int i=0;i<5;i++)yield return null;
+            yield return Capture("ao-03-no-reflections.png");
+            for(int i=0;i<probes.Length;i++)probes[i].intensity=intensities[i];RenderSettings.reflectionIntensity=reflection;
+            var sun=RenderSettings.sun;var shadows=sun.shadows;sun.shadows=LightShadows.None;
+            for(int i=0;i<5;i++)yield return null;
+            yield return Capture("ao-04-no-shadows.png");sun.shadows=shadows;
+            var road=GameObject.Find("Running surface").GetComponent<MeshRenderer>();var original=road.sharedMaterial;
+            var unlit=new Material(Shader.Find("Universal Render Pipeline/Unlit"));unlit.SetColor("_BaseColor",new Color(.17f,.20f,.23f));road.sharedMaterial=unlit;
+            for(int i=0;i<5;i++)yield return null;
+            yield return Capture("ao-05-unlit-road.png");road.sharedMaterial=original;Destroy(unlit);
+            foreach(var feature in features)feature.SetActive(true);
+            File.WriteAllText(Path.Combine(folder,"diagnostic-scope.txt"),$"Identical native starting grid. SSAO enabled versus disabled; {features.Length} loaded feature(s). No changes to meshes, lighting, camera, or materials.\n");
+            if(quitAfter){yield return new WaitForSecondsRealtime(2);Application.Quit();}
+        }
+        IEnumerator InspectCoast()
+        {
+            var cliff=GameObject.Find("Coastal headland")??GameObject.Find("Harbor headland");
+            if(!cliff)yield break;
+            var camera=VectorBootstrap.Instance.Camera;var chase=camera.GetComponent<ChaseCamera>();var hud=FindAnyObjectByType<RaceHUD>();
+            var position=camera.transform.position;var rotation=camera.transform.rotation;float fov=camera.fieldOfView;
+            var bounds=cliff.GetComponentInChildren<Renderer>().bounds;
+            chase.enabled=false;hud.enabled=false;Time.timeScale=0;
+            camera.fieldOfView=58;camera.transform.position=bounds.center+new Vector3(bounds.size.x*.9f,bounds.size.y*.85f,-bounds.size.z*1.3f);
+            camera.transform.LookAt(bounds.center);
+            for(int i=0;i<5;i++)yield return null;
+            yield return Capture("07-coast-inspection.png");
+            camera.transform.SetPositionAndRotation(position,rotation);camera.fieldOfView=fov;chase.enabled=true;hud.enabled=true;Time.timeScale=1;
+            File.WriteAllText(Path.Combine(folder,"coast-inspection-scope.txt"),"Dedicated native camera inspection of imported textured cliff; not a normal racing-camera frame. Gameplay views are 02-start,05-crest,06-city-descent.\n");
         }
         IEnumerator DiagnoseRoad()
         {
@@ -111,6 +155,7 @@ namespace VectorRush
             string result=$"Autopilot through real hover physics: {(finished?"FINISHED":"TIMED OUT")}\nTime {director.RaceTime:F2}\nLaps {director.Player.ProgressTracker.CompletedLaps}\nRecoveries {director.Player.RecoveryCount}\n";
             File.WriteAllText(Path.Combine(folder,"race-verification.txt"),result);
             yield return Capture(finished?"04-results.png":"04-timeout.png");
+            if(inspectCoast)yield return InspectCoast();
             if(finished){
                 yield return VerifyRestartLaunch("results-to-racing",RacePhase.Finished);
                 director.TogglePause();

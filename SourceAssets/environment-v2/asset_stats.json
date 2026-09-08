@@ -53,10 +53,16 @@
     "fbx_axes": "Y up, -Z forward export convention for Unity; model front is Blender -Y",
     "renderers": 1,
     "textures": [
-      "Solstice_Limestone_Albedo.png",
-      "Solstice_Limestone_Normal.png",
-      "Solstice_Limestone_Roughness.png",
-      "Solstice_Limestone_MetallicSmoothness.png"
-    ]
+      "Rock3_CC0_Albedo.jpg",
+      "Rock3_CC0_NormalGL.png",
+      "Rock3_CC0_Roughness.jpg",
+      "Rock3_DERIVED_MetallicSmoothness.png"
+    ],
+    "texture_tiling": [
+      4,
+      4
+    ],
+    "tile_width_metres": 2.5,
+    "uv_layers": 1
   }
 }

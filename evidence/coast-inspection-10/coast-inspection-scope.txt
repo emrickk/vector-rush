@@ -1,0 +1,1 @@
+Dedicated native camera inspection of imported textured cliff; not a normal racing-camera frame. Gameplay views are 02-start,05-crest,06-city-descent.

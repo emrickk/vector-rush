@@ -1,0 +1,154 @@
+{
+  "Solstice_TerraceTower_A.fbx": {
+    "sha256": "33517d32cc55e46f8a377fc1da02ba47a5b8184fd523b8f6f2bbe8f242e41bff",
+    "fbx_version": 7400,
+    "fbx_global_settings": {
+      "UpAxis": 1,
+      "UpAxisSign": 1,
+      "FrontAxis": 2,
+      "FrontAxisSign": 1,
+      "UnitScaleFactor": 100.0
+    },
+    "meshes": [
+      {
+        "name": "Solstice_TerraceTower_A",
+        "dimensions_blender_xyz_m": [
+          27.0,
+          29.850006103515625,
+          74.27545267937796
+        ],
+        "triangles": 39452,
+        "degenerate_triangles": 0,
+        "uv_layers": 2,
+        "uv_layer_names": [
+          "UVMap",
+          "MetricSurfaceUV"
+        ],
+        "uv0_bounds": [
+          [
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.0
+          ]
+        ],
+        "uv0_nonzero_loop_fraction": 0.12442537542139136,
+        "materials": [
+          "Graphite",
+          "Ivory",
+          "Glass",
+          "Vegetation",
+          "Metal"
+        ],
+        "vertices_all_finite": true,
+        "origin_world": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    ]
+  },
+  "Solstice_SplitTower_B.fbx": {
+    "sha256": "b0883080681e9d844029c0433019f30c36646b66f173f6b80039bdb9d3e4765d",
+    "fbx_version": 7400,
+    "fbx_global_settings": {
+      "UpAxis": 1,
+      "UpAxisSign": 1,
+      "FrontAxis": 2,
+      "FrontAxisSign": 1,
+      "UnitScaleFactor": 100.0
+    },
+    "meshes": [
+      {
+        "name": "Solstice_SplitTower_B",
+        "dimensions_blender_xyz_m": [
+          29.0,
+          28.850006103515625,
+          72.14499762453909
+        ],
+        "triangles": 22916,
+        "degenerate_triangles": 52,
+        "uv_layers": 2,
+        "uv_layer_names": [
+          "UVMap",
+          "MetricSurfaceUV"
+        ],
+        "uv0_bounds": [
+          [
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.0
+          ]
+        ],
+        "uv0_nonzero_loop_fraction": 0.1367335865436788,
+        "materials": [
+          "Graphite.001",
+          "Ivory.001",
+          "Glass.001",
+          "Vegetation.001",
+          "Metal.001"
+        ],
+        "vertices_all_finite": true,
+        "origin_world": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    ]
+  },
+  "Solstice_CoastalCliff_C.fbx": {
+    "sha256": "a3ea2fdbcc89c8218a54a55fd07ad5128714f0de9ae3a982ca21f9e76a58cb8c",
+    "fbx_version": 7400,
+    "fbx_global_settings": {
+      "UpAxis": 1,
+      "UpAxisSign": 1,
+      "FrontAxis": 2,
+      "FrontAxisSign": 1,
+      "UnitScaleFactor": 100.0
+    },
+    "meshes": [
+      {
+        "name": "Solstice_CoastalCliff_C",
+        "dimensions_blender_xyz_m": [
+          88.13297653198242,
+          61.26219940185547,
+          46.91176438331604
+        ],
+        "triangles": 37424,
+        "degenerate_triangles": 0,
+        "uv_layers": 1,
+        "uv_layer_names": [
+          "MetricSurfaceUV"
+        ],
+        "uv0_bounds": [
+          [
+            -4.62953519821167,
+            3.9609858989715576
+          ],
+          [
+            -3.400437116622925,
+            4.351228713989258
+          ]
+        ],
+        "uv0_nonzero_loop_fraction": 1.0,
+        "materials": [
+          "Rock",
+          "Vegetation.002"
+        ],
+        "vertices_all_finite": true,
+        "origin_world": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    ]
+  }
+}

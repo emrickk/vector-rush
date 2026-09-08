@@ -8,6 +8,7 @@ namespace VectorRush
     public sealed class CoastalSetDressing : MonoBehaviour
     {
         readonly List<Mesh> ownedMeshes = new List<Mesh>();
+        readonly List<Vector3> cliffCenters = new List<Vector3>();
         Vector2[] road;
         const float Clearance = 112f;
 
@@ -26,33 +27,7 @@ namespace VectorRush
                 Vector3 p = track.Evaluate(i / 480f).Position;
                 road[i] = new Vector2(p.x, p.z);
             }
-            var stone = new[] {
-                world.MakeMaterial("Basalt weathered face", new Color(.38f,.40f,.37f), .13f),
-                world.MakeMaterial("Basalt fractured face", new Color(.285f,.32f,.32f), .10f),
-                world.MakeMaterial("Basalt deep fracture", new Color(.19f,.235f,.25f), .08f),
-                world.MakeMaterial("Pale mineral strata", new Color(.49f,.48f,.415f), .16f),
-                world.MakeMaterial("Wave washed dark basalt", new Color(.13f,.205f,.215f), .39f),
-                world.MakeMaterial("Sparse coastal scrub", new Color(.245f,.285f,.16f), .05f)
-            };
-            var geology = new MeshDraft(6);
-            Island(geology, new Vector3(-500,0,-80), 175, 145, 31, 48);
-            Island(geology, new Vector3(590,0,155), 150, 125, 57, 48);
-            Island(geology, new Vector3(140,0,730), 215, 132, 83, 56);
-            Island(geology, new Vector3(-590,0,490), 150, 106, 107, 44);
-            Island(geology, new Vector3(620,0,-420), 135, 94, 133, 44);
-            Island(geology, new Vector3(-440,0,-660), 170, 96, 159, 44);
-            Island(geology, new Vector3(970,0,560), 175, 102, 181, 40);
-            Island(geology, new Vector3(-990,0,160), 230, 162, 211, 44);
-            Island(geology, new Vector3(50,0,1250), 330, 190, 237, 48);
-            Island(geology, new Vector3(1050,0,-540), 220, 125, 263, 44);
-            Island(geology, new Vector3(-1050,0,-690), 280, 140, 293, 44);
-            // Offshore stacks repeat the same geological language at a smaller scale.
-            for (int i = 0; i < 7; i++) {
-                float a = .45f + i * .85f;
-                Island(geology, new Vector3(Mathf.Cos(a)*485,0,Mathf.Sin(a)*505),
-                    17 + i%3*7, 25 + i%4*10, 347+i*17, 16);
-            }
-            MakeMesh("Layered basalt coast and sea stacks", geology, stone, false);
+            BuildAuthoredCoast(world, track);
 
             var architecture = new MeshDraft(3);
             Landmark(architecture, SafeCenter(new Vector3(540,0,-100), 95), 24, 1f);
@@ -81,50 +56,50 @@ namespace VectorRush
             return Mathf.Sqrt(best);
         }
 
-        void Island(MeshDraft draft, Vector3 position, float radius, float height, int seed, int sides)
+        void BuildAuthoredCoast(WorldBuilder world, TrackPath track)
         {
-            // All generated points fit inside this conservative horizontal disk.
-            Vector3 center = SafeCenter(position, radius * 1.6f);
-            float phase = seed * .317f;
-            float[] radii = {1.1f,1.065f,1.035f,1.02f,.93f,.95f,.79f,.76f,.51f,.24f};
-            float[] levels = {-.12f,0,.045f,.18f,.205f,.40f,.44f,.66f,.82f,.87f};
-            var rings = new Vector3[radii.Length, sides];
-            for (int layer = 0; layer < radii.Length; layer++) for (int j = 0; j < sides; j++) {
-                float a = j * Mathf.PI * 2 / sides;
-                float outline = 1 + .14f*Mathf.Sin(a*3+phase) + .075f*Mathf.Sin(a*7-phase*.7f) + .04f*Mathf.Cos(a*13+phase);
-                float fracture = (Mathf.PerlinNoise(j*.73f+seed,layer*.91f)-.5f)*.065f;
-                float r = radius * radii[layer] * (outline + fracture);
-                float ridge = (.10f*Mathf.Sin(a*2+phase) + .055f*Mathf.Cos(a*5-phase)) * Mathf.Clamp01(layer*.18f);
-                float y = height * (levels[layer] + ridge) - .8f;
-                if (layer == 0) y = -14;
-                if (layer == 1) y = -1 + Mathf.Sin(a*7+phase)*1.5f;
-                // The upper strata drift laterally, creating a broken ridge rather than a cone.
-                Vector3 shift = new Vector3(layer*radius*.012f, 0, -layer*radius*.006f);
-                rings[layer,j] = center + shift + new Vector3(Mathf.Cos(a)*r, y, Mathf.Sin(a)*r*.76f);
-            }
-            for (int layer = 0; layer < radii.Length-1; layer++) for (int j = 0; j < sides; j++) {
-                int k = (j+1)%sides;
-                Vector3 a = rings[layer,j], b = rings[layer,k], c = rings[layer+1,k], d = rings[layer+1,j];
-                int material = RockMaterial(layer,j,seed);
-                // Split direction alternates, so fractures do not form a repetitive diagonal grid.
-                if ((j+layer)%2 == 0) {
-                    draft.Face(a,d,c,material); draft.Face(a,c,b,material);
-                } else {
-                    draft.Face(a,d,b,material); draft.Face(b,d,c,material);
+            var cliff=Resources.Load<GameObject>("Art/Environment/Solstice_CoastalCliff_C");
+            var rock=Resources.Load<Material>("CoastalRock");
+            if(!cliff||!rock){Debug.LogError("Reviewed coastal cliff or textured rock material is missing");return;}
+            var scrub=world.MakeMaterial("Coastal scrub",new Color(.23f,.27f,.12f),.1f);
+            var city=world.GetComponent<AuthoredCity>();
+            if(city!=null)for(int i=0;i<city.HarborCenters.Length;i++){
+                Vector3 landward=city.HarborLandwardDirections[i];
+                Vector3 across=Vector3.Cross(Vector3.up,landward);
+                for(int j=0;j<3;j++){
+                    Vector3 center=city.HarborCenters[i]+landward*(108+j%2*28)+across*(j-1)*52;
+                    if(DistanceToRoad(new Vector2(center.x,center.z))<86)continue;
+                    bool blocksQuay=false;
+                    for(int q=0;q<city.HarborCenters.Length;q++){
+                        Vector3 delta=center-city.HarborCenters[q],back=city.HarborLandwardDirections[q],side=Vector3.Cross(Vector3.up,back);
+                        float dx=Mathf.Max(0,Mathf.Abs(Vector3.Dot(delta,side))-64),dz=Mathf.Max(0,Mathf.Abs(Vector3.Dot(delta,back))-62);
+                        if(dx*dx+dz*dz<40*40)blocksQuay=true;
+                    }
+                    if(blocksQuay)continue;
+                    PlaceCliff(cliff,rock,scrub,center,Quaternion.LookRotation(-landward)*Quaternion.Euler(0,(j-1)*13,0),1.12f+j*.06f,"Harbor headland");
                 }
             }
-            Vector3 summit = center + new Vector3(radius*.15f, height*.93f-.8f, -radius*.08f);
-            for (int j = 0; j < sides; j++)
-                draft.Face(rings[9,j], summit, rings[9,(j+1)%sides], j%7==0 ? 5 : (j+seed)%3);
+            Vector3[] centers={new Vector3(-500,0,-80),new Vector3(590,0,155),new Vector3(140,0,730),new Vector3(-590,0,490),new Vector3(620,0,-420),new Vector3(-440,0,-660)};
+            for(int i=0;i<centers.Length;i++){
+                float scale=1.3f+(i%3)*.18f;
+                var center=SafeCenter(centers[i],58*scale);
+                PlaceCliff(cliff,rock,scrub,center,Quaternion.Euler(0,i*71+24,0),scale,"Coastal headland");
+                if(i%2==0)PlaceCliff(cliff,rock,scrub,SafeCenter(center+new Vector3(70,0,38),58*scale),Quaternion.Euler(0,i*71+62,0),scale*.82f,"Broken outer headland");
+            }
         }
 
-        static int RockMaterial(int layer, int sector, int seed)
+        void PlaceCliff(GameObject source,Material rock,Material scrub,Vector3 position,Quaternion rotation,float scale,string name)
         {
-            if (layer <= 1) return 4;
-            if (layer == 3 || layer == 5) return (sector+seed)%4 == 0 ? 1 : 3;
-            if (layer >= 7 && (sector*13+seed)%9 < 3) return 5;
-            int variation = (sector*17 + layer*11 + seed)%11;
-            return variation < 5 ? 0 : variation < 9 ? 1 : 2;
+            foreach(var existing in cliffCenters)if(Vector3.ProjectOnPlane(position-existing,Vector3.up).sqrMagnitude<40*40)return;
+            cliffCenters.Add(position);
+            position.y=-.65f;
+            var instance=Instantiate(source,transform);instance.name=name;
+            instance.transform.SetPositionAndRotation(position,rotation);instance.transform.localScale=Vector3.one*scale;
+            foreach(var renderer in instance.GetComponentsInChildren<Renderer>()){
+                var materials=renderer.sharedMaterials;
+                for(int m=0;m<materials.Length;m++)materials[m]=materials[m]&&materials[m].name.Contains("Vegetation")?scrub:rock;
+                renderer.sharedMaterials=materials;
+            }
         }
 
         void Landmark(MeshDraft draft, Vector3 center, float yaw, float scale)

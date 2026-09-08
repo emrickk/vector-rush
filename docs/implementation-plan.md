@@ -40,7 +40,7 @@
 
 ## Task 5 — independent review and delivery
 - [x] A separate agent reviews actual images plus source for critical race/integration defects.
-- [x] Fix highest-impact findings; recapture and re-review up to three meaningful cycles. Three review cycles complete; unresolved road artifacts and AAA gap are documented.
+- [x] Fix highest-impact findings; recapture and re-review up to three meaningful cycles. Initial three review cycles complete, followed by the user-directed modeling pass. Final deck artifact correction and remaining AAA gap are documented.
 - [ ] Record exact tools, compile/test logs, performance and remaining gaps. Deliver prompt, sources, build and controls, or precise external blocker if build cannot run.
 
 ## GitHub milestones
@@ -52,7 +52,7 @@
 
 ## Delivery input check
 - [x] Native keyboard Start, Resume, Pause and throttle verified at 1280×800; throttle taps reached21km/h.
-- [ ] Diagnose unregistered automated pointer clicks using opt-in native input event logging; verify activation or document a precise automation limitation.
+- [x] Diagnose unregistered pointer clicks and verify native Start, Resume, Restart and Shake activation at 1280×800.
 
 ## Evidence-driven corrections after final review
 - [x] Identify large within-quad normal differences and discontinuous banking numerically; implement continuous projected-curvature frames and12-column wide ribbons.
@@ -64,6 +64,6 @@
 - [x] Restore URP postprocess resources and emissive shader retention; capture matched native road diagnostics.
 - [x] Replace opaque propulsion with additive, fading engine trails and recessed cores.
 - [x] Integrate reviewed Kestrel V2 and tower A/B models; capture native title, start, crest and descent (run06).
-- [ ] Add restrained ambient occlusion and verify contact/material depth in matched native captures.
-- [ ] Integrate the reviewed textured cliff once approved by the companion visual task.
+- [x] Add restrained ambient occlusion and verify contact/material depth; retain matte deck after matched reflection diagnostics.
+- [x] Integrate the reviewed textured cliff into connected harbor districts, replacing the old radial geology; inspect native coastline and texture response (run09).
 - [ ] Preserve final authoring sources, independent critique, current gameplay recording and delivery evidence.
