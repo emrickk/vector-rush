@@ -74,7 +74,8 @@ The user rejected the daylight prototype's visual quality and asked for a more a
 
 - [x] First native night pass: replace coastal vista with a built urban district; add patterned window lights, pools of road illumination, matte/damp deck response and revised propulsion.
 - [x] Inspect matched title/start/crest/descent captures; fix the three largest visible failures.
-- [ ] Inspect a second native pass and moving footage; refine materials, craft separation and speed presentation.
+- [x] Generate coordinated night-scene reference images before further implementation; preserve prompts and select a practical primary target.
+- [ ] Inspect a second native pass and moving footage; refine materials, craft separation and speed presentation. Third pass verifies native atmosphere, varies facades, and develops the two overhead light corridors.
 - [ ] Verify the complete race and current performance, preserve critique and record a new preview; package the night build for review.
 
 Ownership: parent road, lighting, materials, rendering settings, integration, camera/HUD and runtime evidence; game_brief NightDistrict and NightWindows; gameplay IonPropulsion and VehicleVFX; independent critic reads actual captures after integration. Existing daytime source/history stays recoverable in Git.
