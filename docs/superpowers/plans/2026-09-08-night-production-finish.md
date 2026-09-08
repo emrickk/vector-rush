@@ -54,12 +54,12 @@ Paths below are repository-relative. `U` in this plan means `UnityProject/Assets
 
 **Interfaces:** Consume the existing `EnvironmentEvidence.Report`: `buildGuid`, `complete`, and `frames[]` with `index`, `file`, `lap`, `progress`, `raceTime`, `speedKph`, camera/FOV and racer state. Produce a selection manifest containing unchanged selected frame records, thresholds, source report path and source build GUID. All later visual comparisons use these crossings, not EnvironmentEvidence's built-in final-station anchors.
 
-- [ ] Preserve the native baseline GUID `5c49b92643bd4d41820ba81857fdf8c7` and source delivery `a948825`; verify existing source hashes before capturing a fresh performance baseline. Do not rebuild merely to create baseline selections.
-- [ ] Copy five unmodified first-crossing frames using the recipe below. Include the existing thermal views `frame-0606.png` / `frame-0641.png` and station view `frame-1004.png` as global-change controls, labeled separately from the opening benchmark.
-- [ ] Encode original frames 121–480 at their recorded 24 simulation fps, producing the baseline's 360-frame / 15-second continuous passage. Record its approximately .119–.439 route interval and 5.17–20.13 s race interval, including the slowdown near .33–.39. This is silent automated native rendering, not a performance sample.
-- [ ] In review 020, describe the largest visible failure at each view and draw a simple layout marking foreground route, nearby structure, middle district, skyline and intended bright surfaces. Use actual-frame annotations only as design studies; keep originals alongside them.
-- [ ] Record each acceptance dimension as below / approaching / meets, or pending where motion has not been watched. Record a fresh standalone real-time baseline using the real-time switches in Task 6 before any runtime changes, with output `E/baseline/performance` and log `E/baseline/native-performance.log` so later candidate measurements cannot overwrite it.
-- [ ] Commit and push `docs: establish the night production benchmark`, including the updated implementation plan and development history.
+- [x] Preserve the native baseline GUID `5c49b92643bd4d41820ba81857fdf8c7` and source delivery `a948825`; verify existing source hashes before capturing a fresh performance baseline. Do not rebuild merely to create baseline selections.
+- [x] Copy five unmodified first-crossing frames using the recipe below. Include the existing thermal views `frame-0606.png` / `frame-0641.png` and station view `frame-1004.png` as global-change controls, labeled separately from the opening benchmark.
+- [x] Encode original frames 121–480 at their recorded 24 simulation fps, producing the baseline's 360-frame / 15-second continuous passage. Record its approximately .119–.439 route interval and 5.17–20.13 s race interval, including the slowdown near .33–.39. This is silent automated native rendering, not a performance sample.
+- [x] In review 020, describe the largest visible failure at each view and draw a simple layout marking foreground route, nearby structure, middle district, skyline and intended bright surfaces. Use actual-frame annotations only as design studies; keep originals alongside them.
+- [x] Record each acceptance dimension as below / approaching / meets, or pending where motion has not been watched. Record a fresh standalone real-time baseline using the real-time switches in Task 6 before any runtime changes, with output `E/baseline/performance` and log `E/baseline/native-performance.log` so later candidate measurements cannot overwrite it.
+- [x] Commit and push `docs: establish the night production benchmark`, including the updated implementation plan and development history.
 
 Run this selection recipe from the repository root. It rejects the initial progress near .99 as a false crossing and never injects a pose:
 
@@ -252,4 +252,4 @@ Optional full-race pack telemetry is a different run and is not a performance sa
 
 The plan is complete when the night circuit consistently earns its visual target across ordinary and crowded race views, holds together in watched motion and manual play with sound, and stays within an explicitly accepted performance budget on the target Mac. A better local asset, a test pass or a claim of “AAA” is not a substitute for those observations.
 
-**Planning status:** Direction and execution sequence are documented. Tasks 1–8 have not started; the current game/build remains unchanged by this planning milestone.
+**Execution status:** The owner has authorized Stage 1 of the six-stage summary: the prerequisite baseline (Task 1) and lighting/road response (Task 2). Later tasks remain planned. See the implementation log for current candidate and native review status.

@@ -1,0 +1,11 @@
+{
+  "sha256": "76c395940d7ab270c110d4621b2ce8ef7a46ec0103a0d9cc22408d2fa2189a29",
+  "width": 1920,
+  "height": 1080,
+  "fps": 24,
+  "frames": 360,
+  "duration": 15,
+  "completeDecode": true,
+  "audio": false,
+  "scope": "Continuous native simulation-time excerpt, automated steering; not performance or watched-motion acceptance."
+}

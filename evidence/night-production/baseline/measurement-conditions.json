@@ -1,0 +1,21 @@
+{
+  "buildGuid": "5c49b92643bd4d41820ba81857fdf8c7",
+  "resolution": [
+    1920,
+    1080
+  ],
+  "mode": "real-time native automated race; no captureFramerate override",
+  "sampleIntervals": 7189,
+  "meanMs": 8.35,
+  "p50Ms": 8.33,
+  "p95Ms": 9.18,
+  "p99Ms": 9.31,
+  "allocatedMiB": 241.9,
+  "raceSeconds": 128.32,
+  "laps": 3,
+  "playerRecoveries": 0,
+  "restartLaunchesPassed": 2,
+  "countdownPauseChecksPassed": 3,
+  "conditions": "No Unity build, bake or video encoder overlapped the native run. The prior failed licensing batch job was identified and stopped. An unrelated Blender editor remained open with a visually verified idle solid-shaded viewport; no render/bake was in progress. The initial sandboxed native launch exited before writing any evidence; preserved separately. Automatic review approved the retry after the stale build was cleared.",
+  "limits": "Observed frame intervals, not isolated GPU timing. This automated baseline is not a human handling or watched-motion review."
+}

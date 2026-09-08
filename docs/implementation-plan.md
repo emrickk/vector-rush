@@ -257,3 +257,9 @@ The owner supplied a polished night-racing video, confirmed it represents the sa
 - [ ] Execute Tasks 1–8 in the linked production finish plan. First deliverable: baseline/acceptance record and the bounded lighting/road candidate; full-circuit expansion waits for the integrated benchmark gate.
 
 The new plan permits documented global lighting/material experiments in its environment stages and later bounded motion/racing work. Prior step-specific locks applied to their completed milestones. The current native build remains GUID `5c49b92643bd4d41820ba81857fdf8c7`.
+
+## Stage 1 execution — lighting and road response
+
+The owner authorizes Stage 1 from the six-stage summary: lighting and road response, including prerequisite benchmark capture/acceptance definition (Tasks 1–2 of the detailed production plan). Work continues in the existing clean `build/first-playable` checkout so current native evidence, Unity import state and authoring paths remain usable. Parent owns the integrated world/light/material edits; independent critic owns baseline/native visual reports, and technical reviewer audits rendering behavior read-only. Geometry, race/AI, camera and craft surface payloads remain fixed for this stage. Preserve the baseline, one direct-light candidate and the controlled reflection variant before selecting the final road response. Later city, craft and race work is outside this bounded stage.
+
+Task 1 baseline is complete: eight original-image selections, natural-crossing metadata, schematic lighting layout, independently inspected review020 and a fully decoded 15-second native clip. Fresh real-time baseline completes three laps in128.32s; mean8.35/P959.18/P999.31ms. Its conditions and evidence limits are retained. Proceed to the controlled lighting/road candidate (Task2).
