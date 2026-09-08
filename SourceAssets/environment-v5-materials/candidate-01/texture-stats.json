@@ -1,0 +1,314 @@
+{
+  "provenance": "Original seeded procedural values; authored for this project. No external texture sources.",
+  "generator": "generate_finishes.py",
+  "seed_config": {
+    "WarmCeramic": {
+      "tint": [
+        0.985,
+        0.967,
+        0.929
+      ],
+      "albedo_grain": 0.009,
+      "metal": 0.035,
+      "metal_grain": 0.007,
+      "smooth": 0.435,
+      "smooth_grain": 0.026,
+      "vary": 0.013,
+      "seed": 145
+    },
+    "CastConcrete": {
+      "tint": [
+        0.961,
+        0.964,
+        0.952
+      ],
+      "albedo_grain": 0.028,
+      "metal": 0.025,
+      "metal_grain": 0.003,
+      "smooth": 0.225,
+      "smooth_grain": 0.06,
+      "vary": 0.02,
+      "seed": 276
+    },
+    "SatinTitanium": {
+      "tint": [
+        0.925,
+        0.957,
+        0.985
+      ],
+      "albedo_grain": 0.013,
+      "metal": 0.665,
+      "metal_grain": 0.035,
+      "smooth": 0.575,
+      "smooth_grain": 0.047,
+      "vary": 0.019,
+      "seed": 391
+    },
+    "ServiceCoating": {
+      "tint": [
+        0.97,
+        0.966,
+        0.951
+      ],
+      "albedo_grain": 0.018,
+      "metal": 0.335,
+      "metal_grain": 0.019,
+      "smooth": 0.35,
+      "smooth_grain": 0.042,
+      "vary": 0.016,
+      "seed": 477
+    }
+  },
+  "texture_count": 8,
+  "total_uncompressed_rgba_mib_with_mips": 10.666666666666666,
+  "files": {
+    "WarmCeramic_BaseColor.png": {
+      "width": 512,
+      "height": 512,
+      "color_space": "sRGB",
+      "channels": "RGBA color multiplier; opaque alpha",
+      "statistics": {
+        "R": {
+          "min": 0.9725490196078431,
+          "max": 0.996078431372549,
+          "mean": 0.9850495431937424
+        },
+        "G": {
+          "min": 0.9568627450980393,
+          "max": 0.9764705882352941,
+          "mean": 0.9670525345147825
+        },
+        "B": {
+          "min": 0.9176470588235294,
+          "max": 0.9372549019607843,
+          "mean": 0.9290520312739353
+        },
+        "A": {
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0
+        }
+      },
+      "opposing_edge_max_byte_difference": 0,
+      "sha256": "c804b02efe0e5d60511ab567da18d3f52458a730671a7a6fab04affd94abfcd9",
+      "guid": "b598f7b7686a4638afca2a1d8a6ede7c"
+    },
+    "WarmCeramic_MetallicSmoothness.png": {
+      "width": 512,
+      "height": 512,
+      "color_space": "linear",
+      "channels": "R = metallic; G/B = 0 unused; A = smoothness",
+      "statistics": {
+        "R": {
+          "min": 0.027450980392156862,
+          "max": 0.043137254901960784,
+          "mean": 0.035032249899471506
+        },
+        "G": {
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        "B": {
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        "A": {
+          "min": 0.4,
+          "max": 0.4666666666666667,
+          "mean": 0.43515137317133884
+        }
+      },
+      "opposing_edge_max_byte_difference": 0,
+      "sha256": "021d44c3066da2f6f80d09d82a9adef1cc2a9595a5267761ff146033cb86e804",
+      "guid": "9973ce1872304658b7b644ea64052f3d"
+    },
+    "CastConcrete_BaseColor.png": {
+      "width": 512,
+      "height": 512,
+      "color_space": "sRGB",
+      "channels": "RGBA color multiplier; opaque alpha",
+      "statistics": {
+        "R": {
+          "min": 0.9333333333333333,
+          "max": 0.9882352941176471,
+          "mean": 0.9615123075597426
+        },
+        "G": {
+          "min": 0.9372549019607843,
+          "max": 0.9921568627450981,
+          "mean": 0.9645217745911842
+        },
+        "B": {
+          "min": 0.9215686274509803,
+          "max": 0.9803921568627451,
+          "mean": 0.9525238186705346
+        },
+        "A": {
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0
+        }
+      },
+      "opposing_edge_max_byte_difference": 0,
+      "sha256": "8b06b57cdf6bbc765cda51b0eec6e0f6f666f63a448b3d012039b0ec75527dd2",
+      "guid": "5a9ebfe83e7448cf87965fcaf37b215a"
+    },
+    "CastConcrete_MetallicSmoothness.png": {
+      "width": 512,
+      "height": 512,
+      "color_space": "linear",
+      "channels": "R = metallic; G/B = 0 unused; A = smoothness",
+      "statistics": {
+        "R": {
+          "min": 0.023529411764705882,
+          "max": 0.027450980392156862,
+          "mean": 0.02486133949429381
+        },
+        "G": {
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        "B": {
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        "A": {
+          "min": 0.15294117647058825,
+          "max": 0.2901960784313726,
+          "mean": 0.22611811020795036
+        }
+      },
+      "opposing_edge_max_byte_difference": 0,
+      "sha256": "37eb93341aa88d8d226cd914952b1a8dbf72a5596f9c7abf9b22893c30b53fa0",
+      "guid": "38f15d2b24b7438596f7cc26d5a611f1"
+    },
+    "SatinTitanium_BaseColor.png": {
+      "width": 512,
+      "height": 512,
+      "color_space": "sRGB",
+      "channels": "RGBA color multiplier; opaque alpha",
+      "statistics": {
+        "R": {
+          "min": 0.9098039215686274,
+          "max": 0.9372549019607843,
+          "mean": 0.9248549667059206
+        },
+        "G": {
+          "min": 0.9411764705882353,
+          "max": 0.9686274509803922,
+          "mean": 0.956854008693321
+        },
+        "B": {
+          "min": 0.9686274509803922,
+          "max": 1.0,
+          "mean": 0.9848563998353248
+        },
+        "A": {
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0
+        }
+      },
+      "opposing_edge_max_byte_difference": 0,
+      "sha256": "839833bb82954f2ea0ccda6c4a1bcba1465a5e6a8753ce83725872baab4f8cf2",
+      "guid": "aa566d332afd4fb086c923a0d0cef936"
+    },
+    "SatinTitanium_MetallicSmoothness.png": {
+      "width": 512,
+      "height": 512,
+      "color_space": "linear",
+      "channels": "R = metallic; G/B = 0 unused; A = smoothness",
+      "statistics": {
+        "R": {
+          "min": 0.6313725490196078,
+          "max": 0.6980392156862745,
+          "mean": 0.6646085402544807
+        },
+        "G": {
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        "B": {
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        "A": {
+          "min": 0.5176470588235295,
+          "max": 0.6274509803921569,
+          "mean": 0.5744933034859452
+        }
+      },
+      "opposing_edge_max_byte_difference": 0,
+      "sha256": "4cca16a8d4cc3a22a804d90355d2bdf3ac32931a2307766e6a2bf84592fdfceb",
+      "guid": "8d59f8a8d424436f928a479601b95b15"
+    },
+    "ServiceCoating_BaseColor.png": {
+      "width": 512,
+      "height": 512,
+      "color_space": "sRGB",
+      "channels": "RGBA color multiplier; opaque alpha",
+      "statistics": {
+        "R": {
+          "min": 0.9490196078431372,
+          "max": 0.9882352941176471,
+          "mean": 0.9698654773188572
+        },
+        "G": {
+          "min": 0.9450980392156862,
+          "max": 0.984313725490196,
+          "mean": 0.9658653408873314
+        },
+        "B": {
+          "min": 0.9333333333333333,
+          "max": 0.9686274509803922,
+          "mean": 0.9508689132391238
+        },
+        "A": {
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0
+        }
+      },
+      "opposing_edge_max_byte_difference": 0,
+      "sha256": "c920a6adb4eb6a0dfa7010cde0fd3c14987cf8b151b45e2fa7b5581deab36d22",
+      "guid": "6ea1dca7006d4845b444f315332759b3"
+    },
+    "ServiceCoating_MetallicSmoothness.png": {
+      "width": 512,
+      "height": 512,
+      "color_space": "linear",
+      "channels": "R = metallic; G/B = 0 unused; A = smoothness",
+      "statistics": {
+        "R": {
+          "min": 0.3176470588235294,
+          "max": 0.35294117647058826,
+          "mean": 0.3348562651989507
+        },
+        "G": {
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        "B": {
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        "A": {
+          "min": 0.2980392156862745,
+          "max": 0.396078431372549,
+          "mean": 0.3496855193493413
+        }
+      },
+      "opposing_edge_max_byte_difference": 0,
+      "sha256": "f5bb6106f4735361ed4527536afce01e8a69f3b1a4edf536165871b89bddc198",
+      "guid": "f01ea02bb2b44506ae933ef6934e0d2b"
+    }
+  }
+}

@@ -278,3 +278,7 @@ Local archive VectorRush-macOS-landmarks-2026-09-08.zip is55,318,267 bytes,441 e
 ## Lighting/material-depth baseline
 
 User approved a focused presentation pass after the landmark/road milestone. Preserved seven landmark approach/pass originals and the final-station reveal from build b709ef36660443b7bdec08170d00b8df, with original camera/racer metadata and hashes. This reuses verified native evidence rather than generating a synthetic baseline. The next implementation targets material distinction and visible lower structural/service surfaces, followed by native critique.
+
+## Lighting/material candidate01 implementation
+
+After the owner explicitly overrode the brief account-switch pause, completed a four-family512-square albedo/metallic-smoothness kit and retained Lit shader template. Parent integrates it into five existing landmark material regions, with rougher concrete and warmer ceramic/insulation plus more legible smoked glass. One short mast bracing/soffit fill, one thermal end-portal wash and a retargeted thermal support/service wash address the surfaces identified in direction015. Original geometry, road shadows/materials, race physics and global moon/ambient/fog remain unchanged. Texture/metadata/channel validation passes; native candidate review is pending.

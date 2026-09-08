@@ -29,14 +29,20 @@ namespace VectorRush
             // loading art, so a missing resource cannot admit a competing city block.
             Reserve(track, "Nocturne_SplitSignal_Mast", .230f, 56f, new Vector2(27, 33));
             Reserve(track, "Nocturne_ThermalExchange_Works", .625f, -51f, new Vector2(23, 43));
-            finishes["Ceramic"] = world.MakeMaterial("Landmarks / broad ceramic cladding", new Color(.48f, .54f, .54f), .42f, .04f);
-            finishes["Concrete"] = world.MakeMaterial("Landmarks / cast service concrete", new Color(.30f, .37f, .40f), .25f, .03f);
-            finishes["Structure"] = world.MakeMaterial("Landmarks / recessed structure", new Color(.065f, .092f, .11f), .42f, .3f);
+            finishes["Ceramic"] = world.MakeMaterial("Landmarks / broad ceramic cladding", new Color(.52f, .53f, .50f), .42f, .04f);
+            finishes["Concrete"] = world.MakeMaterial("Landmarks / cast service concrete", new Color(.34f, .355f, .365f), .25f, .03f);
+            finishes["Structure"] = world.MakeMaterial("Landmarks / recessed structure", new Color(.075f, .09f, .10f), .42f, .3f);
             finishes["Titanium"] = world.MakeMaterial("Landmarks / satin titanium", new Color(.34f, .40f, .42f), .58f, .66f);
-            finishes["Oxide"] = world.MakeMaterial("Landmarks / insulated oxide mains", new Color(.28f, .17f, .10f), .34f, .38f);
-            finishes["Glass"] = world.MakeMaterial("Landmarks / deep smoked glazing", new Color(.035f, .085f, .10f), .75f, .25f);
-            finishes["Occupied"] = world.MakeMaterial("Landmarks / limited occupied rooms", new Color(.24f, .20f, .15f), .58f, .08f, new Color(.26f, .16f, .075f));
+            finishes["Oxide"] = world.MakeMaterial("Landmarks / insulated oxide mains", new Color(.31f, .195f, .11f), .34f, .38f);
+            finishes["Glass"] = world.MakeMaterial("Landmarks / deep smoked glazing", new Color(.07f, .11f, .14f), .84f, .40f);
+            finishes["Occupied"] = world.MakeMaterial("Landmarks / limited occupied rooms", new Color(.24f, .20f, .15f), .70f, .16f, new Color(.20f, .135f, .08f));
             finishes["Lamp"] = world.MakeMaterial("Landmarks / concealed service lamps", new Color(.45f, .35f, .24f), .4f, .1f, new Color(.75f, .47f, .21f));
+            foreach (var finish in finishes)
+            {
+                bool textured = NightArchitectureFinishes.Apply(finish.Value, finish.Key);
+                // Mineral service faces spread their local wash more broadly than the cladding.
+                if (textured && finish.Key == "Concrete") finish.Value.SetFloat("_Smoothness", .78f);
+            }
             for (int i = 0; i < sites.Count; i++)
             {
                 var site = sites[i];
@@ -74,17 +80,19 @@ namespace VectorRush
                     renderer.shadowCastingMode = ShadowCastingMode.On;
                     renderer.receiveShadows = true;
                 }
-                // Four broad, fixed architectural washes reveal the actual shapes.
-                // No luminous outline, animated window grid or procedural scenery.
+                // Broad upper modeling and shorter local fills reveal actual structural returns.
                 if (i == 0)
                 {
                     Wash(site, "Signal / lower structural wash", new Vector3(-22, 48, -29), new Vector3(9, 77, -9), 1500, 96, 78, new Color(.70f, .83f, 1f));
                     Wash(site, "Signal / skyroom return wash", new Vector3(20, 57, 12), new Vector3(10, 89, -10), 1100, 88, 74, new Color(1f, .81f, .58f));
+                    Wash(site, "Signal / bracing and soffit fill", new Vector3(-29, 76, -23), new Vector3(8, 79, -8), 650, 56, 72, new Color(.94f, .82f, .66f), true);
                 }
                 else
                 {
                     Wash(site, "Thermal / drum and gallery wash", new Vector3(20, 53, -35), new Vector3(-7, 60, -5), 1650, 98, 86, new Color(.76f, .86f, 1f));
-                    Wash(site, "Thermal / rear drum wash", new Vector3(20, 51, 33), new Vector3(-7, 60, 18), 1200, 88, 80, new Color(1f, .81f, .61f));
+                    Wash(site, "Thermal / pipe supports and service return", new Vector3(29, 40, 31), new Vector3(13, 35, 5), 800, 60, 86, new Color(.95f, .82f, .63f), true);
+                    // The early approach sees the end portals (local -Z), before the long service side.
+                    Wash(site, "Thermal / end portal wash", new Vector3(-7, 32, -54), new Vector3(2, 16, -39), 450, 42, 86, new Color(.80f, .87f, .94f), true);
                 }
                 Debug.Log("VECTOR_RUSH_LANDMARK resource=" + site.Resource + " center=" + site.Center + " halfFootprint=" + site.HalfSize, this);
             }
@@ -139,7 +147,7 @@ namespace VectorRush
             return Mathf.Abs(Vector3.Dot(delta, axis)) > extent + 3f;
         }
 
-        void Wash(Site site, string name, Vector3 localPosition, Vector3 localTarget, float intensity, float range, float angle, Color color)
+        void Wash(Site site, string name, Vector3 localPosition, Vector3 localTarget, float intensity, float range, float angle, Color color, bool excludeRacers = false)
         {
             var housing = new GameObject(name);
             housing.transform.SetParent(transform, false);
@@ -153,6 +161,7 @@ namespace VectorRush
             light.spotAngle = angle;
             light.innerSpotAngle = angle * .63f;
             light.shadows = LightShadows.None;
+            if (excludeRacers) light.cullingMask = ~(1 << 8);
             light.renderMode = LightRenderMode.Auto;
         }
     }

@@ -1,0 +1,282 @@
+{
+  "status": "PASS_DATA_AND_METADATA_ONLY",
+  "textures": {
+    "WarmCeramic_BaseColor.png": {
+      "status": "PASS",
+      "packed_smoothness_alpha": false,
+      "color_space": "sRGB",
+      "mips": true,
+      "repeat": true,
+      "uncompressed": true,
+      "channel_statistics": {
+        "R": {
+          "min": 0.9725490196078431,
+          "max": 0.996078431372549,
+          "mean": 0.9850495431937424,
+          "distinct_values": 7
+        },
+        "G": {
+          "min": 0.9568627450980393,
+          "max": 0.9764705882352941,
+          "mean": 0.9670525345147825,
+          "distinct_values": 6
+        },
+        "B": {
+          "min": 0.9176470588235294,
+          "max": 0.9372549019607843,
+          "mean": 0.9290520312739353,
+          "distinct_values": 6
+        },
+        "A": {
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "distinct_values": 1
+        }
+      }
+    },
+    "WarmCeramic_MetallicSmoothness.png": {
+      "status": "PASS",
+      "packed_smoothness_alpha": true,
+      "color_space": "linear",
+      "mips": true,
+      "repeat": true,
+      "uncompressed": true,
+      "channel_statistics": {
+        "R": {
+          "min": 0.027450980392156862,
+          "max": 0.043137254901960784,
+          "mean": 0.035032249899471506,
+          "distinct_values": 5
+        },
+        "G": {
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "distinct_values": 1
+        },
+        "B": {
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "distinct_values": 1
+        },
+        "A": {
+          "min": 0.4,
+          "max": 0.4666666666666667,
+          "mean": 0.43515137317133884,
+          "distinct_values": 18
+        }
+      }
+    },
+    "CastConcrete_BaseColor.png": {
+      "status": "PASS",
+      "packed_smoothness_alpha": false,
+      "color_space": "sRGB",
+      "mips": true,
+      "repeat": true,
+      "uncompressed": true,
+      "channel_statistics": {
+        "R": {
+          "min": 0.9333333333333333,
+          "max": 0.9882352941176471,
+          "mean": 0.9615123075597426,
+          "distinct_values": 15
+        },
+        "G": {
+          "min": 0.9372549019607843,
+          "max": 0.9921568627450981,
+          "mean": 0.9645217745911842,
+          "distinct_values": 15
+        },
+        "B": {
+          "min": 0.9215686274509803,
+          "max": 0.9803921568627451,
+          "mean": 0.9525238186705346,
+          "distinct_values": 16
+        },
+        "A": {
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "distinct_values": 1
+        }
+      }
+    },
+    "CastConcrete_MetallicSmoothness.png": {
+      "status": "PASS",
+      "packed_smoothness_alpha": true,
+      "color_space": "linear",
+      "mips": true,
+      "repeat": true,
+      "uncompressed": true,
+      "channel_statistics": {
+        "R": {
+          "min": 0.023529411764705882,
+          "max": 0.027450980392156862,
+          "mean": 0.02486133949429381,
+          "distinct_values": 2
+        },
+        "G": {
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "distinct_values": 1
+        },
+        "B": {
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "distinct_values": 1
+        },
+        "A": {
+          "min": 0.15294117647058825,
+          "max": 0.2901960784313726,
+          "mean": 0.22611811020795036,
+          "distinct_values": 36
+        }
+      }
+    },
+    "SatinTitanium_BaseColor.png": {
+      "status": "PASS",
+      "packed_smoothness_alpha": false,
+      "color_space": "sRGB",
+      "mips": true,
+      "repeat": true,
+      "uncompressed": true,
+      "channel_statistics": {
+        "R": {
+          "min": 0.9098039215686274,
+          "max": 0.9372549019607843,
+          "mean": 0.9248549667059206,
+          "distinct_values": 8
+        },
+        "G": {
+          "min": 0.9411764705882353,
+          "max": 0.9686274509803922,
+          "mean": 0.956854008693321,
+          "distinct_values": 8
+        },
+        "B": {
+          "min": 0.9686274509803922,
+          "max": 1.0,
+          "mean": 0.9848563998353248,
+          "distinct_values": 9
+        },
+        "A": {
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "distinct_values": 1
+        }
+      }
+    },
+    "SatinTitanium_MetallicSmoothness.png": {
+      "status": "PASS",
+      "packed_smoothness_alpha": true,
+      "color_space": "linear",
+      "mips": true,
+      "repeat": true,
+      "uncompressed": true,
+      "channel_statistics": {
+        "R": {
+          "min": 0.6313725490196078,
+          "max": 0.6980392156862745,
+          "mean": 0.6646085402544807,
+          "distinct_values": 18
+        },
+        "G": {
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "distinct_values": 1
+        },
+        "B": {
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "distinct_values": 1
+        },
+        "A": {
+          "min": 0.5176470588235295,
+          "max": 0.6274509803921569,
+          "mean": 0.5744933034859452,
+          "distinct_values": 29
+        }
+      }
+    },
+    "ServiceCoating_BaseColor.png": {
+      "status": "PASS",
+      "packed_smoothness_alpha": false,
+      "color_space": "sRGB",
+      "mips": true,
+      "repeat": true,
+      "uncompressed": true,
+      "channel_statistics": {
+        "R": {
+          "min": 0.9490196078431372,
+          "max": 0.9882352941176471,
+          "mean": 0.9698654773188572,
+          "distinct_values": 11
+        },
+        "G": {
+          "min": 0.9450980392156862,
+          "max": 0.984313725490196,
+          "mean": 0.9658653408873314,
+          "distinct_values": 11
+        },
+        "B": {
+          "min": 0.9333333333333333,
+          "max": 0.9686274509803922,
+          "mean": 0.9508689132391238,
+          "distinct_values": 10
+        },
+        "A": {
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "distinct_values": 1
+        }
+      }
+    },
+    "ServiceCoating_MetallicSmoothness.png": {
+      "status": "PASS",
+      "packed_smoothness_alpha": true,
+      "color_space": "linear",
+      "mips": true,
+      "repeat": true,
+      "uncompressed": true,
+      "channel_statistics": {
+        "R": {
+          "min": 0.3176470588235294,
+          "max": 0.35294117647058826,
+          "mean": 0.3348562651989507,
+          "distinct_values": 10
+        },
+        "G": {
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "distinct_values": 1
+        },
+        "B": {
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "distinct_values": 1
+        },
+        "A": {
+          "min": 0.2980392156862745,
+          "max": 0.396078431372549,
+          "mean": 0.3496855193493413,
+          "distinct_values": 26
+        }
+      }
+    }
+  },
+  "serialized_keyword_variant_retained": true,
+  "template_default_emission_black": true,
+  "immutable_guard_leaves_all_live_files_unchanged": true,
+  "provenance": "Original procedural CPU authoring",
+  "native_compile_or_visual_validation": false
+}
