@@ -274,3 +274,7 @@ Build b709ef36660443b7bdec08170d00b8df completes1,440 native capture frames /60 
 Two standalone real-time races each finish three laps in128.32s with zero recoveries for all six racers, both restart launches and all three countdown-pause checks passing. First performance sample:4,499 intervals,mean13.27ms,P95/P9916.66/188.14ms. Repeat:7,162 intervals,mean8.38ms,P95/P999.23/9.33ms,241.2MiB. Prior close-race P95/P99 was9.22/9.32ms. No Editor build,bake or encoding ran concurrently. Read-only sanitized process snapshots show sustained Chrome GPU-helper CPU activity during the good repeat too; initial hitch cause remains undetermined. Both runs are preserved rather than replacing the poor sample.
 
 Local archive VectorRush-macOS-landmarks-2026-09-08.zip is55,318,267 bytes,441 entries,CRC pass. The172 runtime/resource/settings hashes and all app-file hashes remain unchanged after tests/captures; archive and video identity are recorded. Final source, editable assets, critiques and selected evidence are committed/pushed; no GitHub release is published.
+
+## Lighting/material-depth baseline
+
+User approved a focused presentation pass after the landmark/road milestone. Preserved seven landmark approach/pass originals and the final-station reveal from build b709ef36660443b7bdec08170d00b8df, with original camera/racer metadata and hashes. This reuses verified native evidence rather than generating a synthetic baseline. The next implementation targets material distinction and visible lower structural/service surfaces, followed by native critique.
