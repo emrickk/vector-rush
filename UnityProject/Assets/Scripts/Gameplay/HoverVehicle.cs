@@ -18,6 +18,7 @@ namespace VectorRush
         public bool AutopilotForTesting = false;
         public string DisplayName { get; set; } = "PILOT";
         public bool IsPlayer { get; private set; }
+        public float ThrottleInput => Mathf.Clamp01(throttle);
         public float SpeedKph => Body ? Body.linearVelocity.magnitude * 3.6f : 0f;
         public float Boost01 { get; private set; } = 1f;
         public bool IsBoosting { get; private set; }

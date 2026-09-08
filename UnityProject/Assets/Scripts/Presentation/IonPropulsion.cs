@@ -18,6 +18,9 @@ namespace VectorRush
         readonly float[] jetLengthScales = new float[3];
         readonly MaterialPropertyBlock properties = new MaterialPropertyBlock();
         float response;
+        public float ExhaustResponse => response;
+        public float ExhaustDemand => vehicle && RaceDirector.Instance && RaceDirector.Instance.Phase == RacePhase.Racing
+            ? vehicle.ThrottleInput * (vehicle.IsBoosting ? 1.35f : 1f) : 0f;
 
         public void Initialize(HoverVehicle craft)
         {
@@ -74,23 +77,25 @@ namespace VectorRush
         {
             if (!vehicle || !plumeMaterial) return;
             var phase = RaceDirector.Instance ? RaceDirector.Instance.Phase : RacePhase.Menu;
-            float speed = Mathf.Clamp01(vehicle.SpeedKph / 340f);
-            bool boosting = phase == RacePhase.Racing && vehicle.IsBoosting;
-            float desired = phase == RacePhase.Racing ? (boosting ? 1f : .18f + speed * .50f) : .08f;
-            response = Mathf.Lerp(response, desired, 1f - Mathf.Exp(-9f * Time.deltaTime));
+            // Throttle is the engine command. Coasting speed must not keep the flame alive.
+            // Pausing freezes the presentation with the simulation.
+            if (phase == RacePhase.Paused) return;
+            float desired = ExhaustDemand;
+            response = Mathf.Lerp(response, desired, 1f - Mathf.Exp(-(desired > response ? 18f : 26f) * Time.deltaTime));
+            if (response < .003f) response = 0f;
             float flicker = 1f + .025f * Mathf.Sin(Time.time * 33f) + .015f * Mathf.Sin(Time.time * 51f);
             for (int i = 0; i < 3; i++)
             {
                 float size = jetLengthScales[i];
-                // Keep an attached envelope at idle; density fades before the 1.4–2.8 m
-                // main-engine mesh ends. Smaller authored center engines retain their scale.
-                jets[i].localScale = new Vector3(1f + response*.08f,1f + response*.08f,(1.40f + response*1.40f)*size);
-                SetIntensity(outerJets[i], (.90f + response*1.50f)*flicker);
-                SetIntensity(innerJets[i], (1.05f + response*1.65f)*flicker);
-                SetIntensity(cores[i], (2.05f + response*1.45f)*flicker);
-                SetIntensity(rings[i*2], .45f + response*.25f);
-                SetIntensity(rings[i*2+1], .20f + response*.15f);
-                if (i < 2 && lights[i]) lights[i].intensity = .12f + response*.55f;
+                float width = Mathf.Lerp(.35f,1f,Mathf.Sqrt(Mathf.Clamp01(response)));
+                jets[i].localScale = new Vector3(width,width,(.04f + response*2.05f)*size);
+                outerJets[i].enabled = innerJets[i].enabled = response > 0f;
+                SetIntensity(outerJets[i], response*2.15f*flicker);
+                SetIntensity(innerJets[i], response*2.45f*flicker);
+                SetIntensity(cores[i], (.12f + response*2.6f)*flicker);
+                SetIntensity(rings[i*2], .10f + response*.40f);
+                SetIntensity(rings[i*2+1], .04f + response*.20f);
+                if (i < 2 && lights[i]) lights[i].intensity = response*.55f;
             }
         }
 

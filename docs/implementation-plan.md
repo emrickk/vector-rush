@@ -112,3 +112,11 @@ Final bounded material comparison: periodic dampness did not remove diagonal she
 
 
 Milestone outcome: keep the 0.42–0.78 range after the native comparison. Warm/cool pools remain readable and the bright road pattern is modestly quieter; its underlying cause is not claimed fixed. Archive integrity and the 360-frame, 1080p, 15-second preview are verified. This closes the current playable iteration; it does not award AAA or independent continuous-motion acceptance.
+
+
+## Throttle-driven exhaust correction
+
+User rejected the always-on flame appearance. Replace speed-driven plume intensity and its idle floor with actual analog throttle demand, strengthened by active boost. Verify trigger press, partial throttle and lift-off through the input path, including extinguishing the plume while the craft is still coasting at speed. Preserve a faint powered nozzle core. Build, capture the native input sequence, and package the corrected app.
+
+
+Throttle correction complete: 32/32 tests pass. Native virtual-gamepad sequence verifies off, quarter, full, coast release, boost and off-after-boost through normal physics. Response fell below 0.02 in 0.150 seconds at 242 km/h and subsequently reached zero; parent inspected quarter/full/release/boost PNGs. Updated native app is packaged separately from the previous lighting milestone.

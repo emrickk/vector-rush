@@ -1,0 +1,1 @@
+PASS — actual gamepad input and native exhaust response verified.

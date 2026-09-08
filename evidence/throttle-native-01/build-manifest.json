@@ -1,0 +1,14 @@
+{
+  "candidate": "Throttle-driven exhaust correction",
+  "archive": "Builds/VectorRush-macOS-throttle-fix-2026-09-07.zip",
+  "archive_sha256": "a001fec5a7528843181d363e0aeef63601fbcd01b1acdb83650d48d2f3f08d70",
+  "archive_bytes": 53059297,
+  "archive_integrity": "unzip -tq passed",
+  "asset_identity": "asset-identity.json",
+  "native_verification": "throttle-evidence.json",
+  "tests_passed": 32,
+  "native_passed": true,
+  "release_below_2_percent_seconds": 0.1501312255859375,
+  "release_speed_kph": 242.0181427001953,
+  "scope": "Six native input stages through a temporary virtual gamepad and normal physics. Separate from prior full-race and performance evidence."
+}

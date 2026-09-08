@@ -4,19 +4,19 @@ A playable, original anti-gravity racing prototype for Apple Silicon macOS. Pilo
 
 [Private GitHub repository](https://github.com/emrickk/vector-rush) · [Build brief](docs/GPT6-BUILD-PROMPT.md) · [Development history](docs/development-history.md) · [Ship art plan](docs/ship-art-plan.md)
 
-## Current night milestone
+## Current night milestone — throttle-driven exhaust
 
-The native game now uses the corrected V3 ship with flush citron/07 paint, baked surface maps and authored engine anchors. The canopy, intake and nozzle contact artifacts are repaired. Recessed gallery panels and focused wall lighting create readable warm/cool corridors; short plasma trails remain attached to the engines. A rival corridor guard prevents the repeated wall stalls observed in the earlier night candidate.
+The native game now uses the corrected V3 ship with flush citron/07 paint, baked surface maps and authored engine anchors. The canopy, intake and nozzle contact artifacts are repaired. Recessed gallery panels and focused wall lighting create readable warm/cool corridors; plume length and brightness now follow actual throttle, strengthen during active boost, and extinguish after lift-off even at speed. A rival corridor guard prevents the repeated wall stalls observed in the earlier night candidate.
 
-[Current native preview](evidence/night-v4-motion-02/VectorRush-night-v4-current.mp4): 15 seconds at 1080p, silent, with automated steering at 24 simulation frames per second. It shows the current final road-gloss adjustment and is separate from the real-time performance sample.
+[Earlier night-scene preview (before the throttle fix)](evidence/night-v4-motion-02/VectorRush-night-v4-current.mp4): 15 seconds at 1080p, silent, with automated steering at 24 simulation frames per second. It shows the road-gloss/lighting milestone, predates the throttle-response correction, and is separate from the real-time performance sample.
 
-![Current native gallery view](evidence/night-v4-motion-02/selected/amber-mid.png)
+[Current native throttle check](evidence/throttle-native-01/throttle-evidence.json): [quarter throttle](evidence/throttle-native-01/02-quarter.png), [full throttle](evidence/throttle-native-01/03-full.png), [released while coasting](evidence/throttle-native-01/04-release-coasting.png), [boost](evidence/throttle-native-01/05-boost.png). Exhaust fell below 2% in 0.150 seconds while still at 242 km/h, then reached zero.
 
 This is a playable prototype milestone, not AAA acceptance. Exterior buildings/windows and gallery bays remain repetitive, the ceiling is too dark, and residual diagonal road sheen remains visible. The last material adjustment lowers its contrast without claiming to repair the underlying cause. Human handling, competitive rival pacing and physical gamepad hardware need further assessment.
 
 ## Play
 
-Open **[Builds/Vector Rush.app](Builds/Vector%20Rush.app)** or unpack **[the current night archive](Builds/VectorRush-macOS-night-v4-2026-09-07.zip)**. The **[VectorRush-macOS-2026-09-07.zip](Builds/VectorRush-macOS-2026-09-07.zip)** archive contains the earlier coastal delivery and is historical. Build products stay local and are excluded from Git; source and selected evidence are in the private repository.
+Open **[Builds/Vector Rush.app](Builds/Vector%20Rush.app)** or unpack **[the current night archive](Builds/VectorRush-macOS-throttle-fix-2026-09-07.zip)**. The **[VectorRush-macOS-2026-09-07.zip](Builds/VectorRush-macOS-2026-09-07.zip)** archive contains the earlier coastal delivery and is historical. Build products stay local and are excluded from Git; source and selected evidence are in the private repository.
 
 | Action | Keyboard | Gamepad |
 |---|---|---|
@@ -33,14 +33,14 @@ Menus support the pointer. Pause includes Resume, Restart, camera shake and Quit
 
 ## Current validation
 
-- **29/29 Unity tests passed**, including player exclusion, rival edge correction and adjacent-traffic clearance.
+- **32/32 Unity tests passed**, including analog trigger/release at high coasting speed, player exclusion, rival edge correction and adjacent-traffic clearance.
 - **Three player laps in 112.60 seconds, zero recoveries across all six racers** during the observed race. Both restart launches and all three countdown-pause checks passed. Rivals had completed 2.27–2.74 laps when the player ended the race; their independent completion and competitive pacing are not established.
 - **1920×1080 on Apple M2 Max:** 3,529 frame intervals over the real-time sample, VSync enabled, mean **17.01 ms**, P95 **20.60 ms**, P99 **25.34 ms**, with 250.3 MiB Unity allocation. This is not a locked 60fps or isolated GPU claim. No build/bake ran during the sample; idle desktop apps remained open.
 - Eight calibrated native ship-control views confirm the geometry repair using unchanged prior maps. The final maps were rebaked, hash/dimension checked and exercised in native race/gameplay captures.
 
 [Native race and metrics](evidence/night-v4-race-01/) · [Geometry review 009](docs/ship-reviews/009-native-contact-repair-control.md) · [Gallery/plume review 008](docs/ship-reviews/008-gallery-wash-and-plume-correction.md) · [Final review 010](docs/ship-reviews/010-night-playable-milestone.md)
 
-The full race/performance run preceded the last two-number road-gloss adjustment; gameplay code, geometry, light count and render settings are unchanged. The final native recording validates that material-only finish. Earlier pointer and keyboard checks remain historical evidence because the UI/input path did not change in this iteration.
+The full race/performance run preceded the road-gloss and throttle-driven presentation adjustments; gameplay code, geometry, light count and render settings are unchanged. The final native recording validates the road finish, and the six-stage virtual-gamepad run separately validates throttle-driven exhaust through normal physics. Earlier pointer and keyboard checks remain historical evidence because the UI/input path did not change in this iteration.
 
 ## Previous coastal delivery and evidence
 
@@ -70,7 +70,7 @@ The slice includes one course, one craft shape, five AI rivals and original proc
 - [SourceAssets/environment-v2](SourceAssets/environment-v2/) — editable tower/cliff kit, export scripts and texture sources.
 - [Asset regeneration guide](docs/asset-regeneration.md) — safe staged rebuilds that protect the reviewed live assets.
 - [Reference concept](references/solstice-chase-concept.png) — generated art direction, distinct from actual runtime and Blender inspection images.
-- [Toolchain and provenance](docs/toolchain.md), [test results](evidence/editmode-results.xml), [current build manifest](evidence/night-v4-build-manifest.json).
+- [Toolchain and provenance](docs/toolchain.md), [test results](evidence/editmode-results.xml), [current build manifest](evidence/throttle-native-01/build-manifest.json).
 
 The craft, environment geometry, interface and sound synthesis are original. Cliff surface maps are **Rock 3 by Rob Tuytel / Poly Haven (CC0)**; original maps, hash manifests and the named Unity mask derivative are retained with [provenance](SourceAssets/environment-v2/textures/Rock3_PROVENANCE.md). No Wipeout assets or branding are included.
 

@@ -97,6 +97,34 @@ namespace VectorRush.Tests
             Assert.That(vehicle.Boost01, Is.LessThan(1f));
         }
 
+        [TestCase(.25f)] [TestCase(1f)]
+        public void AnalogThrottleIsReportedIndependentlyOfHighCoastingSpeed(float trigger)
+        {
+            // Input-only fixture: seed velocity without advancing physics. The native
+            // throttle evidence run reaches its coasting speed through real acceleration.
+            vehicle.Body.linearVelocity=vehicle.transform.forward*60f;
+            float speed=vehicle.SpeedKph;
+            InputSystem.QueueStateEvent(gamepad,new GamepadState { rightTrigger=trigger });
+            UpdateInput(); gamepad.MakeCurrent(); Invoke(vehicle,"Update");
+            Assert.That(vehicle.ThrottleInput,Is.EqualTo(trigger).Within(.002f));
+            Assert.That(vehicle.SpeedKph,Is.EqualTo(speed).Within(.01f));
+            Assert.That(vehicle.SpeedKph,Is.GreaterThan(200f));
+        }
+
+        [Test] public void ReleasingTriggerReportsZeroThrottleWhileCoastingSpeedRemainsHigh()
+        {
+            vehicle.Body.linearVelocity=vehicle.transform.forward*60f;
+            InputSystem.QueueStateEvent(gamepad,new GamepadState { rightTrigger=1f });
+            UpdateInput(); gamepad.MakeCurrent(); Invoke(vehicle,"Update");
+            Assert.That(vehicle.ThrottleInput,Is.EqualTo(1f).Within(.002f));
+            float speed=vehicle.SpeedKph;
+            InputSystem.QueueStateEvent(gamepad,new GamepadState());
+            UpdateInput(); gamepad.MakeCurrent(); Invoke(vehicle,"Update");
+            Assert.That(vehicle.ThrottleInput,Is.Zero.Within(.002f));
+            Assert.That(vehicle.SpeedKph,Is.EqualTo(speed).Within(.01f));
+            Assert.That(vehicle.SpeedKph,Is.GreaterThan(200f));
+        }
+
         static void UpdateInput()
         {
             typeof(InputSystem).GetMethod("Update", BindingFlags.Static | BindingFlags.NonPublic, null, new[] { typeof(InputUpdateType) }, null).Invoke(null, new object[] { InputUpdateType.Dynamic });

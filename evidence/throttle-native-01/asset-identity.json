@@ -1,0 +1,11 @@
+{
+  "scope": "Native throttle-driven exhaust verification through temporary virtual-gamepad inputs and ordinary physics. No direct speed/VFX assignment.",
+  "sha256": {
+    "UnityProject/Assets/Scripts/Gameplay/HoverVehicle.cs": "642822177f98e3009759b8bccc9d2f651f9f5abfdaf46328764153b2efe58652",
+    "UnityProject/Assets/Scripts/Presentation/IonPropulsion.cs": "336c523e73e3071438659815428467f41b6d490c53eafd35d52a37d9e3ea7bdb",
+    "UnityProject/Assets/Scripts/ThrottleEvidence.cs": "c67a96d60ddc58052d852a17bc02e923963ba3e0531ecee851d344d951331518",
+    "UnityProject/Assets/Scripts/VectorBootstrap.cs": "8de2654de0e0296a77c7e5a3dae83325765293fb8b5a0219ee1672a7e37ab0c1",
+    "Builds/Vector Rush.app/Contents/Resources/Data/Managed/VectorRush.Runtime.dll": "fe96d438ba692f5326f91a896e9414d1bd0622ccc535e0618946f0de47404605",
+    "Builds/Vector Rush.app/Contents/Resources/Data/globalgamemanagers": "e523552439b378c159539274edb866f7932b5757e06ae8121b311abaeaacb1fb"
+  }
+}
