@@ -1,0 +1,38 @@
+[
+  {
+    "file": "pack-01-002s.png",
+    "raceTime": 2.0399982929229736,
+    "expectedNearest": "Rival 1",
+    "signedGapM": -3.4037435054779053
+  },
+  {
+    "file": "pack-02-010s.png",
+    "raceTime": 10.000133514404297,
+    "expectedNearest": "Rival 4",
+    "signedGapM": -27.114730834960938
+  },
+  {
+    "file": "pack-03-020s.png",
+    "raceTime": 20.000362396240234,
+    "expectedNearest": "Rival 4",
+    "signedGapM": -44.289894104003906
+  },
+  {
+    "file": "pack-04-030s.png",
+    "raceTime": 30.000591278076172,
+    "expectedNearest": "Rival 2",
+    "signedGapM": -24.581560134887695
+  },
+  {
+    "file": "pack-05-045s.png",
+    "raceTime": 45.038448333740234,
+    "expectedNearest": "Rival 4",
+    "signedGapM": -81.9932861328125
+  },
+  {
+    "file": "pack-06-060s.png",
+    "raceTime": 60.03593063354492,
+    "expectedNearest": "Rival 4",
+    "signedGapM": -16.882225036621094
+  }
+]

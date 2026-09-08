@@ -1,0 +1,104 @@
+{
+  "full-lap": {
+    "buildGuid": "7da2883ade4f4223b7a611db8cf60eb6",
+    "complete": true,
+    "anchors": [
+      747,
+      921,
+      943,
+      965,
+      1004
+    ],
+    "pngCrcPassed": true,
+    "pngDimensions": {
+      "02-entry.png": [
+        1920,
+        1080
+      ],
+      "04-exit.png": [
+        1920,
+        1080
+      ],
+      "01-approach.png": [
+        1920,
+        1080
+      ],
+      "03-middle.png": [
+        1920,
+        1080
+      ],
+      "05-reveal.png": [
+        1920,
+        1080
+      ]
+    }
+  },
+  "aspect-16-10": {
+    "buildGuid": "7da2883ade4f4223b7a611db8cf60eb6",
+    "complete": true,
+    "anchors": [
+      0,
+      174,
+      196,
+      218,
+      257
+    ],
+    "pngCrcPassed": true,
+    "pngDimensions": {
+      "02-entry.png": [
+        1280,
+        800
+      ],
+      "04-exit.png": [
+        1280,
+        800
+      ],
+      "01-approach.png": [
+        1280,
+        800
+      ],
+      "03-middle.png": [
+        1280,
+        800
+      ],
+      "05-reveal.png": [
+        1280,
+        800
+      ]
+    }
+  },
+  "aspect-ultrawide": {
+    "buildGuid": "7da2883ade4f4223b7a611db8cf60eb6",
+    "complete": true,
+    "anchors": [
+      0,
+      174,
+      196,
+      218,
+      257
+    ],
+    "pngCrcPassed": true,
+    "pngDimensions": {
+      "02-entry.png": [
+        1920,
+        810
+      ],
+      "04-exit.png": [
+        1920,
+        810
+      ],
+      "01-approach.png": [
+        1920,
+        810
+      ],
+      "03-middle.png": [
+        1920,
+        810
+      ],
+      "05-reveal.png": [
+        1920,
+        810
+      ]
+    }
+  }
+}

@@ -120,11 +120,12 @@ namespace VectorRush
                     Add(mid.Position+mid.Right*side*11.35f+mid.Up*10.79f,new Vector3(.34f,.04f,2.65f),mq,lamps,cube);
                     var wash=new GameObject(warm?"Warm gallery concealed surface wash":"Cool gallery concealed surface wash");
                     wash.transform.SetParent(transform,false);
-                    wash.transform.position=mid.Position+mid.Right*side*11.32f+mid.Up*10.97f;
+                    // Pull the cool wash away from the wall and lower its peak so the panel reads as a surface.
+                    wash.transform.position=mid.Position+mid.Right*side*(warm?11.32f:10.6f)+mid.Up*10.97f;
                     var fill=wash.AddComponent<Light>();fill.type=LightType.Point;
-                    fill.color=warm?new Color(1,.72f,.46f):new Color(.67f,.81f,1);
-                    fill.intensity=(warm?88:78)*(i==5?.62f:i%3==1?1f:.86f)*(side<0?.88f:1f);
-                    fill.range=20;fill.shadows=LightShadows.None;
+                    fill.color=warm?new Color(1,.72f,.46f):new Color(.76f,.85f,1);
+                    fill.intensity=(warm?88:52)*(i==5?.62f:i%3==1?1f:.86f)*(side<0?.88f:1f);
+                    fill.range=warm?20:22;fill.shadows=LightShadows.None;
                     if((i==2&&side==1)||(i==4&&side==-1)){
                         // Designated service bays interrupt the blank repeated wall spans.
                         // Attach the hatch to one half-panel, not the joint between two angled panels.

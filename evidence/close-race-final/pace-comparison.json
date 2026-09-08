@@ -1,0 +1,9 @@
+{
+  "scope": "Final native build after visual-only changes compared with candidate06. All recorded racer states and race timestamps are compared; wall-clock capture duration is excluded.",
+  "finalBuildGuid": "7da2883ade4f4223b7a611db8cf60eb6",
+  "allSampledRacerStatesIdentical": true,
+  "samples": 1285,
+  "recoveries": 0,
+  "finishTime": 128.3203582763672,
+  "candidateAnalysis": "../pace-candidate-06/analysis.json"
+}

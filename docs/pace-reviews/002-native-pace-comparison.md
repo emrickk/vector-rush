@@ -1,6 +1,6 @@
 # Pace review 002: native baseline and player-speed candidate
 
-2026-09-08. **Candidate 05 now meets the sustained-proximity and two-nearby-finish-rivals gates, with zero recoveries, but its nearest finish gap remains too large.** With the bounded lateral guard assistance and actual-player 55/75 settings, within-60 m time reaches 66.4% and two rivals finish within 200 m of the player. The nearest is still 160.4 m behind, and no rival is recorded ahead during the race. A final 53/72 calibration is recommended for measurement; complete acceptance remains open.
+2026-09-08. **The final 53/72 calibration sustains a nearby rival for 80.9% of post-launch racing time, compared with 0% in the baseline, with zero recoveries.** All three laps and both gallery passages retain nearby rivals in the recorded race. The nearest rival at player finish is 100.85 m behind, narrowly outside the proposed 100 m gate, and no pass is recorded. Stop further speed calibration for this bounded closer-racing objective; preserve the literal finish-gate miss and overtaking limitation rather than claiming every gate passed.
 
 ## Evidence and calculation
 
@@ -148,3 +148,33 @@ Candidate 05 [native report](../../evidence/pace-candidate-05/pace-evidence.json
 Candidate 05 passes the proposed overall within-60 m gate, two-rivals-within-200 m finish gate and zero-recovery gate. It **does not** pass the nearest-finish-rival-within-100 m gate. Per-lap nearest-gap means are 37.9 / 41.2 / 67.4 m, so the third lap still separates more than the earlier laps. Every observed close rival is behind; ahead-within-60 m remains 0%, and no observed rank change or actual pass is claimed.
 
 Signed rival gaps at player finish are **−552.0 / −449.3 / −190.5 / −160.4 / −288.7 m**. Physical and validated gaps agree; all rivals remain unfinished. Player mean speed after five seconds is **158.0 km/h**, compared with Rival 4 at **157.8**, Rival 3 at **156.5**, and Rival 5 at **154.7**. This near-equal pace preserves much of the launch separation. A final actual-player **53/72 m/s** candidate is justified as a small calibration intended to give the leading rivals enough pace to close that remaining gap; its exact effect and ability to produce a visible pass must be observed, not assumed. No further AI architecture change is indicated by candidate 05 alone.
+
+## Candidate 06: final bounded pace verdict
+
+Candidate 06 [native report](../../evidence/pace-candidate-06/pace-evidence.json) and [analysis](../../evidence/pace-candidate-06/analysis.json): build GUID `2e193f7e0b434c90889e503ce4668749`, 1,285 samples, complete without error, actual-player cruise/boost **53/72 m/s**, the same pursuit and lateral guard assistance as candidate 05. Player finish is **128.320 s**. All six recovery counts are zero, and no rival finishes before the player; independently unwrapped physical progress agrees with validated race gaps.
+
+| Metric | Original baseline | Final candidate 06 |
+| --- | ---: | ---: |
+| Rival within 30 m after 5 s | 0% | 56.0% |
+| Rival within 40 m after 5 s | 0% | 66.4% |
+| Rival within 60 m after 5 s | 0% | 80.9% |
+| Rival within 100 m after 5 s | 4.0% | 98.1% |
+| Mean nearest absolute race gap, m | 280.1 | 38.4 |
+| Within 60 m, player laps 1 / 2 / 3 | 0% / 0% / 0% | 86.2% / 77.7% / 79.2% |
+| Cool / warm gallery within 60 m | 0% / 0% | 100% / 100% |
+| Nearest rival at player finish, m | 476.6 | 100.85 |
+| Rivals within 200 m at player finish | 0 | 2 |
+| Entire field distance spread at player finish, m | 1,352.2 | 469.2 |
+
+The nearest-gap mean remains consistent across player laps at **35.2 / 40.4 / 39.3 m**, rather than collapsing late as earlier candidates did. The cool-gallery nearest gap averages 30.6 m, range 18.5–43.8 m; the warm-gallery gap averages 50.4 m, range 41.7–58.2 m. These are duration-weighted metadata measurements, not a claim that those rivals appear ahead in every rendered view.
+
+Signed finish gaps for Rivals 1–5 are **−248.87 / −361.31 / −100.85 / −112.95 / −469.23 m**. The two strongest rivals average 155.4/155.5 km/h after five seconds, compared with the player's 154.6 km/h; enough pace is retained to keep the recorded race close through all three laps, although the player remains first. All close-rival observations are behind the player: ahead-within-60 m is **0%**, and an actual overtake is not demonstrated.
+
+| Proposed gate | Final result |
+| --- | --- |
+| At least 50% of post-launch time with a rival within 60 m | **Pass: 80.9%** |
+| Nearest rival within 100 m at player finish | **Fail narrowly: 100.85 m** |
+| At least two rivals within 200 m at player finish | **Pass: two** |
+| Zero player and rival recoveries | **Pass: all six zero** |
+
+Do not round 100.85 m into a passing 100 m result or attribute that miss to unmeasured error. Equally, the arbitrary 0.85 m overrun alone does not justify another balance cycle: the intended sustained-proximity behavior is directly demonstrated, and late-lap separation is controlled. The bounded recommendation is to retain this calibration and proceed to the requested visual critique/improvement round. Keep actual visible passing, occupied-camera readability, manual-player feel and broader nondeterministic race coverage as explicit unproven limits. This review certifies neither a six-craft fighting pack nor subjective racing quality; it documents a substantial, sustained improvement over the baseline without recoveries in the measured native run.

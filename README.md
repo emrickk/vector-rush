@@ -4,21 +4,19 @@ A playable, original anti-gravity racing prototype for Apple Silicon macOS. Pilo
 
 [Private GitHub repository](https://github.com/emrickk/vector-rush) · [Build brief](docs/GPT6-BUILD-PROMPT.md) · [Development history](docs/development-history.md) · [Ship art plan](docs/ship-art-plan.md)
 
-## Current night milestone — racing HUD
+## Current milestone — close racing and final visual polish
 
-The HUD now groups speed and boost in one instrument, adds the actual circuit map with live racer markers, and uses bundled Rajdhani typography. Compact position/lap and race-time panels keep the road center clear; actual lap transitions trigger a brief final-lap cue. Countdown, pause and results share the same typography.
+The player now uses a 53 m/s cruise and 72 m/s boost preset, with responsive acceleration retained. Rival steering follows the pursuit geometry, and bounded lateral assistance helps AI craft clear outer-wall contact through normal physics. In the final automated race, a rival stayed within 60 m of validated race progress for **80.9%** of post-start racing, sustained across all three laps. All six racers had zero recoveries. The nearest finish gap was 100.85 m; no overtake was demonstrated.
 
-The current environment candidate adds an authored transit station, service buildings, terrace/split towers, continuous deck construction and rebuilt warm/cool galleries with visible ceilings. Near glazing now has restrained room-light artwork. The road uses a deliberate satin finish; the old diagonal-sheen cause remains unresolved. The corrected Kestrel ship, throttle-driven exhaust and compact racing HUD remain in use.
+The final independent visual critique led to two changes: a compact nearest-rival name/distance cue beneath POS/LAP and softer cool-gallery lighting. The authored transit/service architecture, rebuilt galleries, deck construction, corrected Kestrel ship and throttle-driven exhaust remain in the current build.
 
-[Current 11-second environment passage](evidence/environment-final-full-lap/VectorRush-environment-current.mp4) · [Current 42-second full-lap preview](evidence/environment-final-full-lap/VectorRush-full-lap-current.mp4). Both show the final native build at 1080p, with silent automated steering at 24 simulation frames per second. The full recording spans two start-line crossings and a completed lap.
+[Current 15-second preview](evidence/close-race-final/VectorRush-preview.mp4) · [Current 42.75-second full lap](evidence/close-race-final/VectorRush-full-lap.mp4) · [Download the macOS release](https://github.com/emrickk/vector-rush/releases/tag/close-race-2026-09-08). Previews show actual native rendering at 1080p, with silent automated steering at 24 simulation frames per second. The full lap spans two recorded start-line crossings.
 
-The five-view composition has passed review for further verification. **Finished visual acceptance and full-circuit city expansion remain pending normal-speed playback review.** Frame inspection does not establish motion comfort, highlight stability or human driving feel. Rejected candidates and corrective history are preserved in [environment reviews](docs/environment-reviews/).
-
-[Previous HUD preview](evidence/hud-motion-01/VectorRush-HUD-current.mp4) and [HUD phase/aspect verification](evidence/hud-native-02/) predate this environment candidate. The [native throttle check](evidence/throttle-native-01/throttle-evidence.json) covers normal-physics exhaust response; gameplay and propulsion are unchanged in this environment pass.
+[Final critique](docs/environment-reviews/009-close-race-critique.md) · [Focused correction verification](docs/environment-reviews/010-close-race-verification.md) · [Pacing comparison and preserved candidates](docs/pace-reviews/002-native-pace-comparison.md). Broader city expansion and subjective continuous-motion, human driving and audio assessment remain future work.
 
 ## Play
 
-Open **[Builds/Vector Rush.app](Builds/Vector%20Rush.app)** or unpack **[the current environment review archive](Builds/VectorRush-macOS-environment-2026-09-08.zip)**. The **[VectorRush-macOS-2026-09-07.zip](Builds/VectorRush-macOS-2026-09-07.zip)** archive contains the earlier coastal delivery and is historical. Build products stay local and are excluded from Git; source and selected evidence are in the private repository.
+Open **[Builds/Vector Rush.app](Builds/Vector%20Rush.app)**, unpack **[the current local archive](Builds/VectorRush-macOS-close-race-2026-09-08.zip)**, or download it from the [versioned GitHub release](https://github.com/emrickk/vector-rush/releases/tag/close-race-2026-09-08). Builds are distributed as release assets; source, editable assets and selected evidence are preserved in Git. Earlier environment/coastal archives are historical.
 
 | Action | Keyboard | Gamepad |
 |---|---|---|
@@ -35,15 +33,16 @@ Menus support the pointer. Pause includes Resume, Restart, camera shake and Quit
 
 ## Current validation
 
-- Final native build **153b77ea7d53463b8fc11a0ddae232be**: a verified complete circuit across **1008 frames / 42 simulation seconds**, with five correct benchmark anchors. An 11-second passage is extracted from that same recording.
-- Five current native views each at **1920×1080, 1280×800 and 1920×810**. Source/build hashes and PNG validation are preserved. The baseline comparison reports camera drift outside exact-match tolerance; it is a nearby actual-physics comparison, not pixel-exact A/B.
-- Separate real-time native race: **three laps in 112.60 seconds, zero player recoveries**; both restart launches and all three countdown-pause checks pass.
-- **Apple M2 Max, 1920×1080, VSync enabled:** 6,804 observed frame intervals; mean **8.82 ms**, P95 **15.14 ms**, P99 **15.99 ms**, 240.1 MiB Unity allocation. Fresh baseline P95/P99 were 16.67/17.01 ms. No build, bake or encoding job ran during the sample. This is no observed regression in this run, not an isolated GPU timing or locked-frame-rate guarantee.
-- **32/32 Unity tests passed again on the final source**, including throttle response, rival safety and race/restart behavior.
+- Final native build **7da2883ade4f4223b7a611db8cf60eb6** completed a fresh pacing race in **128.32 simulation seconds**, with **zero recoveries across all six racers**. All 1,285 sampled racer states and timestamps exactly match the accepted pacing candidate after presentation changes.
+- **42/42 Unity tests passed** on the final source, including pursuit geometry, rival corridor assistance and existing input/race/restart checks.
+- The final 60-second traversal produced five correct anchors, all matching the pre-polish camera/player transforms exactly. The exported full lap contains **1,026 frames / 42.75 seconds**; the short preview contains **360 frames / 15 seconds**.
+- Five current native views each at **1920×1080, 1280×800 and 1920×810**, with build identity and PNG integrity checks. The cue fits in inspected smallest/ultrawide warm-gallery views, and sampled labels agree with racer telemetry.
+- Separate real-time native race: **three laps in 128.32 seconds, zero player recoveries**; both restart launches and all three countdown-pause checks passed. At 1080p on Apple M2 Max with VSync, 7,189 observed intervals yielded mean **8.35 ms**, P95 **9.22 ms**, P99 **9.32 ms**, and 239.5 MiB Unity allocation. No build or encoding ran concurrently. Prior environment P95 was 15.14 ms; changed race pace makes this an observed comparison, not an identical-trajectory benchmark.
+- Native archive integrity and source/build hashes are recorded in the [delivery manifests](evidence/close-race-final/build-manifest.json).
 
-[Final capture and manifests](evidence/environment-final-full-lap/) · [Real-time race and metrics](evidence/environment-final-performance/) · [Art review 008](docs/environment-reviews/008-final-environment-art.md) · [Continuity/aspect review 007](docs/environment-reviews/007-final-continuity-aspects.md) · [Capture validation](evidence/environment-final-full-lap/capture-validation.json).
+[Final evidence](evidence/close-race-final/) · [Real-time race and metrics](evidence/close-race-final/performance/) · [Previous environment milestone](evidence/environment-final-full-lap/).
 
-Native frame inspection accepts the corrected glazing, bearing and hatch. Broad diagonal road bands, a brief lamp/BEST LAP overlap and the conventional station silhouette remain. Continuous normal-speed playback, crowded-gallery readability, human driving/audio feel and full-circuit city expansion are **not accepted** by these checks. Earlier HUD pointer/phase checks remain historical coverage; this environment stage changes no controls, handling or AI.
+This remains a working prototype. Nearby rivals are usually behind the camera in automated driving; the cue exposes that pressure without inventing a visible fighting pack. Broad road shading bands, repeated skyline patterns and a modest station silhouette remain. Sampled visual checks do not establish subjective motion comfort or human driving/audio quality. Earlier pointer/gamepad checks remain historical coverage; no new physical gamepad validation is claimed.
 
 ## Previous coastal delivery and evidence
 
@@ -74,7 +73,7 @@ The slice includes one course, one craft shape, five AI rivals and original proc
 - [SourceAssets/environment-v3](SourceAssets/environment-v3/) — current editable transit/service and night-tower sources, export recipes and placement audits.
 - [Asset regeneration guide](docs/asset-regeneration.md) — safe staged rebuilds that protect the reviewed live assets.
 - [Reference concept](references/solstice-chase-concept.png) — generated art direction, distinct from actual runtime and Blender inspection images.
-- [Toolchain and provenance](docs/toolchain.md), [test results](evidence/editmode-results.xml), [current build manifest](evidence/environment-final-full-lap/build-manifest.json).
+- [Toolchain and provenance](docs/toolchain.md), [test results](evidence/editmode-results.xml), [current build manifest](evidence/close-race-final/build-manifest.json).
 
 The craft, environment geometry, interface and sound synthesis are original. Cliff surface maps are **Rock 3 by Rob Tuytel / Poly Haven (CC0)**; original maps, hash manifests and the named Unity mask derivative are retained with [provenance](SourceAssets/environment-v2/textures/Rock3_PROVENANCE.md). No Wipeout assets or branding are included.
 

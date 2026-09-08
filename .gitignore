@@ -11,3 +11,7 @@ UnityProject/.unity-pipeline*
 evidence/*.log
 evidence/asset-renders/*.log
 evidence/**/frames/
+
+# Local Editor build/licensing logs are not distribution evidence.
+evidence/**/unity-*.log
+evidence/environment-v3/*.log

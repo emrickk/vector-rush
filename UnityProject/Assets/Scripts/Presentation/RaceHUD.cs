@@ -28,11 +28,15 @@ namespace VectorRush
         float width, height;
         bool ready;
         bool inputEvidence;
+        bool showRivalCue;
+        string rivalName, rivalGapLabel;
+        int rivalMetres = -1, rivalRelation;
 
         public void Initialize(RaceDirector raceDirector)
         {
             director = raceDirector;
             chaseCamera = FindAnyObjectByType<ChaseCamera>();
+            circuit = VectorBootstrap.Instance != null ? VectorBootstrap.Instance.Track : FindAnyObjectByType<TrackPath>();
             inputEvidence = System.Array.IndexOf(System.Environment.GetCommandLineArgs(), "-inputEvidence") >= 0;
             if (inputEvidence) Debug.Log("[InputEvidence] enabled; original and InputSystem-corrected pointer coordinates are recorded; HUD uses InputSystem window coordinates.");
         }
@@ -40,6 +44,7 @@ namespace VectorRush
         void Update()
         {
             if (director == null) return;
+            UpdateRivalCue();
             float speed = director.Player == null ? 0 : director.Player.SpeedKph;
             displayedSpeed = Mathf.Lerp(displayedSpeed, speed, 1f - Mathf.Exp(-18f * Time.deltaTime));
             if (director.Phase == RacePhase.Countdown && observedPhase != RacePhase.Countdown) {
@@ -67,6 +72,48 @@ namespace VectorRush
             if (accept && director.Phase == RacePhase.Menu) director.StartRace();
             else if ((accept || restart) && director.Phase == RacePhase.Finished) director.RestartRace();
             else if (restart && director.Phase == RacePhase.Paused) director.RestartRace();
+        }
+
+        void UpdateRivalCue()
+        {
+            showRivalCue = false;
+            var player = director.Player;
+            if (director.Phase != RacePhase.Racing || !player || !player.Body ||
+                player.ProgressTracker == null || player.ProgressTracker.CompletedLaps >= director.TotalLaps ||
+                director.Racers == null) return;
+            if (!circuit && VectorBootstrap.Instance != null) circuit = VectorBootstrap.Instance.Track;
+            if (!circuit || circuit.Length <= 0) return;
+
+            HoverVehicle nearest = null;
+            float nearestGap = 0, nearestDistance = float.PositiveInfinity;
+            for (int i = 0; i < director.Racers.Count; i++)
+            {
+                var rival = director.Racers[i];
+                if (!rival || rival == player || !rival.Body || rival.ProgressTracker == null ||
+                    rival.ProgressTracker.CompletedLaps >= director.TotalLaps) continue;
+                // Validated race distance preserves lap order; the two proximity
+                // checks exclude lapped traffic and nearby, separate track branches.
+                float gap = (rival.RaceProgress - player.RaceProgress) * circuit.Length;
+                float distance = Mathf.Abs(gap);
+                float trackGap = (Mathf.Repeat(rival.TrackProgress - player.TrackProgress + .5f, 1f) - .5f) * circuit.Length;
+                if (float.IsNaN(gap) || distance > 100f || distance >= nearestDistance ||
+                    Mathf.Abs(trackGap) > 100f || (rival.Body.position - player.Body.position).sqrMagnitude >= 10000f) continue;
+                nearest = rival;
+                nearestGap = gap;
+                nearestDistance = distance;
+            }
+            if (!nearest) return;
+
+            rivalName = string.IsNullOrEmpty(nearest.DisplayName) ? nearest.name : nearest.DisplayName;
+            int metres = Mathf.RoundToInt(nearestDistance);
+            int relation = nearestDistance < 2f ? 0 : nearestGap > 0 ? 1 : -1;
+            if (metres != rivalMetres || relation != rivalRelation || rivalGapLabel == null)
+            {
+                rivalMetres = metres;
+                rivalRelation = relation;
+                rivalGapLabel = metres + " M  /  " + (relation == 0 ? "SIDE BY SIDE" : relation > 0 ? "AHEAD" : "BEHIND");
+            }
+            showRivalCue = true;
         }
 
         void Prepare()
@@ -190,6 +237,12 @@ namespace VectorRush
             Text("LAP", 267, 59, 91, 25, 18, muted);
             Text(Mathf.Clamp(director.Lap, 1, director.TotalLaps).ToString(), 263, 88, 42, 61, 47, ivory, true);
             Text("/ " + director.TotalLaps, 310, 107, 55, 36, 26, muted);
+            if (showRivalCue)
+            {
+                Box(54, 166, 332, 34, ink);
+                Text(rivalName, 74, 170, 90, 25, 18, ivory);
+                Text(rivalGapLabel, 164, 170, 202, 25, 18, muted, false, TextAnchor.MiddleRight);
+            }
 
             float tx = width - 368;
             Box(tx - 16, 48, 330, 126, new Color(.007f, .016f, .024f, .65f));

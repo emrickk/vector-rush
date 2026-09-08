@@ -135,7 +135,7 @@ Added recessed charcoal faces, folded borders, vents and local warm/cool wall wa
 
 Recessed only three Graphite parts: canopy sill, buried intake openings and rear returns. All seven runtime UV arrays remain byte-equivalent; armor, glazing and engine geometry stay fixed. Source audits reduce targeted positive-area coplanar overlaps to zero and canopy near-parallel contacts within 2 mm from 145 to zero. FBX reimport remains manifold with valid tangents.
 
-The native control build kept exact pass03 maps to isolate geometry changes. All eight calibration checks and the reflection probe passed; parent and review009 confirm removal of the jagged canopy patch, intake-mouth serration and white/Graphite nozzle-border conflict. This is a targeted repair verdict; fresh maps and final race remain separate checks. The 350-triangle native/export discrepancy is accounted for by 332 duplicate-position triangles plus 18 more collapsed at float32 centimeter precision, matching Ceramic 330/Engine 20 exactly. The precise importer operation is not instrumented.
+The native control build kept exact pass03 maps to isolate geometry changes. All eight calibration checks and the reflection probe passed; parent and review 009 confirm removal of the jagged canopy patch, intake-mouth serration and white/Graphite nozzle-border conflict. This is a targeted repair verdict; fresh maps and final race remain separate checks. The 350-triangle native/export discrepancy is accounted for by 332 duplicate-position triangles plus 18 more collapsed at float32 centimeter precision, matching Ceramic 330/Engine 20 exactly. The precise importer operation is not instrumented.
 
 
 ### Combined night candidate — maps, road dampness and rival guard
@@ -233,12 +233,20 @@ The next bounded physical correction is a rival-only lateral thruster during an 
 
 ## 2026-09-08 — Rail-lock mitigation verified, final pace fit pending
 
-Candidate04 adds bounded6m/s² lateral assistance only for rivals with active guard and a resolved inward target; all42 tests pass after two mirrored contact tests fail the previous zero-force response. Native outer-edge exposure falls from roughly20–40% to3–5%, with longest outer episodes≤2s and zero recoveries. This supports the contact-recovery correction. Player60/82 still averages164.2km/h versus the best rival160.4, and within60m proximity reaches38.3%, so sustained-pack acceptance remains pending. Retain the proven wall correction and test55/75 once more under the corrected controller rather than changing lane topology or weakening edge safety.
+Candidate04 adds bounded6m/s² lateral assistance only for rivals with active guard and a resolved inward target; all 42 tests pass after two mirrored contact tests fail the previous zero-force response. Native outer-edge exposure falls from roughly20–40% to3–5%, with longest outer episodes≤2s and zero recoveries. This supports the contact-recovery correction. Player60/82 still averages164.2km/h versus the best rival160.4, and within60m proximity reaches38.3%, so sustained-pack acceptance remains pending. Retain the proven wall correction and test55/75 once more under the corrected controller rather than changing lane topology or weakening edge safety.
 
 ## 2026-09-08 — Sustained proximity established; final finish-gap calibration
 
 Candidate05 uses player55/75 with pursuit and rail-recovery assistance retained. It completes125.567s with zero recoveries; nearest Euclidean proximity after5s is54.25% under40m and80.84% under80m. The nearest two rivals finish160.4/190.5m behind, so the intended finish-gap target remains unmet. Preserve this substantial proximity improvement and make a final small actual-player53/72 calibration, without additional AI or physics changes, before visual critique.
 
-## Final player pace calibration — candidate06
+## Final player pace calibration — candidate 06
 
 Actual manual/test player preset53m/s cruise and72m/s boost, with controller fixes retained. Native race128.32s,1285 samples, six pack stills; zero recoveries for every racer. Nearest validated-progress rival within60m80.9% of post-start race, within30m56.0%; each lap remains close. Final nearest100.85m and second112.95m; no observed pass/rank change. Evidence and independent comparison preserve the narrow finish-target miss. Proceed to requested single visual pass.
+
+## Single requested visual critique and correction
+
+Independent review 009 inspected six pacing stills and eight actual full-lap frames. It found that rivals behind the camera remained visually imperceptible and cool-gallery upper pools dominated the fixtures. Added a restrained named-rival distance/relation cue under POS/LAP using validated race gaps plus physical/track proximity filters, excluding finished/distant racers. Reduced cool surface-wash peak78→52, moved it inward0.72m, softened tint and extended range20→22; warm gallery unchanged. All42Unity regression tests passed on this final source. Final native visual/race evidence and release follow.
+
+## Final close-race native verification and delivery
+
+Build 7da2883ade4f4223b7a611db8cf60eb6: final pace samples exactly reproduce candidate 06 after visual changes. Five matched anchor poses; 1080p, 16:10 and ultrawide captures verified. Independent critique009 and focused parent verification 010 remain separate. 42/42 tests pass. Separate real-time race 128.32 s, 3 laps,all six racers zero recoveries; both restart launches and all three countdown-pause checks pass. Observed M2 Max 1080p frame intervals: 7,189 samples, mean 8.35 ms, P95 9.22 ms, P99 9.32 ms, 239.5 MiB allocation. No build/bake/encoding concurrent. Packaged archive 54,531,835 bytes, 441 entries, CRC pass; hashes recorded. Current 15-second preview and 42.75-second full lap are silent native automated captures at 24 simulation fps. Source/assets/evidence are committed; native app is distributed through the close-race-2026-09-08 GitHub release. Larger environment and human-playback limitations remain explicit.

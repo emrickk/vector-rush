@@ -1,0 +1,20 @@
+{
+  "scope": "Separate real-time native race, Apple M2 Max,1920x1080,VSync enabled. No Unity Editor build, bake, capture or encoding job ran concurrently. Comparison is against the prior environment build at its older pace, not a controlled identical-trajectory benchmark. Frame intervals are not isolated GPU timings or a locked frame-rate guarantee.",
+  "current": {
+    "samples": 7189,
+    "meanMs": 8.35,
+    "p50Ms": 8.33,
+    "p95Ms": 9.22,
+    "p99Ms": 9.32,
+    "allocatedMiB": 239.5
+  },
+  "previousEnvironment": {
+    "samples": 6804,
+    "meanMs": 8.82,
+    "p50Ms": 8.33,
+    "p95Ms": 15.14,
+    "p99Ms": 15.99,
+    "allocatedMiB": 240.1
+  },
+  "observedRegression": false
+}

@@ -1,0 +1,21 @@
+{
+  "captureFrames": 1440,
+  "captureSeconds": 60.0,
+  "complete": true,
+  "buildGuid": "7da2883ade4f4223b7a611db8cf60eb6",
+  "anchorFrames": [
+    747,
+    921,
+    943,
+    965,
+    1004
+  ],
+  "matchedWithinTolerance": true,
+  "fullLapClipStartFrame": 15,
+  "fullLapClipEndFrameExclusive": 1041,
+  "fullLapClipFrames": 1026,
+  "fullLapClipDurationSeconds": 42.75,
+  "previewStartFrame": 360,
+  "previewFrames": 360,
+  "scope": "Actual native chase camera; automated physics steering;24 simulation fps,silent. No continuous-motion judgment claimed."
+}

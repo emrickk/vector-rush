@@ -1,0 +1,13 @@
+{
+  "parentCommit": "5735895c38eac5db5738782208fdebe2c4433c43",
+  "scope": "Final close-racing preset53/72 plus nearest-rival HUD and softened cool-gallery wash. Hashes identify exact tested runtime source before native build.",
+  "files": {
+    "UnityProject/Assets/Scripts/Gameplay/HoverVehicle.cs": "e68d3de384f4eed9923f11cfa5b783be5ec345ad801f50f70a8c8cc1f9adf625",
+    "UnityProject/Assets/Scripts/VectorBootstrap.cs": "9a5f74b7a5e90bf96f6b35570c7e9fcc7a993faceea8ade8f00e1d13af1b67d9",
+    "UnityProject/Assets/Scripts/Presentation/RaceHUD.cs": "1a86dc7eec3fcc6af89a3a3fb1162942bb3d2b75163093f3c674a435caab8a4c",
+    "UnityProject/Assets/Scripts/World/NightTrackLighting.cs": "09cf184f136325658ab2fa517e7406a4b1ce7ef3195d7a15cc6c695683f9a3a5",
+    "UnityProject/Assets/Scripts/PaceEvidence.cs": "7c9634b01ac7ebc37e0f70089b4f08083bb5dddd71faefc635ea18e6ea9004f5",
+    "UnityProject/Assets/Scripts/EnvironmentEvidence.cs": "5b3af59fb6903e762222c0d21676ed8b0b840340bf330bb081849176ba6f61eb",
+    "UnityProject/Assets/Scripts/RaceEvidence.cs": "69b14b5fd0e32563b794117b2850d97481572f134d1d42596bacac8769b34b7d"
+  }
+}

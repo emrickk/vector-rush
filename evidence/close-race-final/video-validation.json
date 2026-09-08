@@ -1,0 +1,24 @@
+[
+  {
+    "file": "VectorRush-full-lap.mp4",
+    "bytes": 37315594,
+    "sha256": "5f993f51d7906b37be261202b0204ff605f074e6aff62353d3bd7352db6dbdd0",
+    "stream": {
+      "width": 1920,
+      "height": 1080,
+      "duration": "42.750000",
+      "nb_frames": "1026"
+    }
+  },
+  {
+    "file": "VectorRush-preview.mp4",
+    "bytes": 12197843,
+    "sha256": "1c495e92471cd73cd6e66d0fd943cfe45ebd2dbf3b35eafd31ef8d442398f101",
+    "stream": {
+      "width": 1920,
+      "height": 1080,
+      "duration": "15.000000",
+      "nb_frames": "360"
+    }
+  }
+]
