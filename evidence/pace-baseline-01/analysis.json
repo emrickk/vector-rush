@@ -1,0 +1,762 @@
+{
+  "scope": "Read-only analysis of completed native pace telemetry. Duration-weighted left-end sample states over race seconds >=5. Closeness uses absolute validated race-distance gaps, not Euclidean or wrapped proximity. Lap/gallery interval attribution uses the left-end player state and is approximate within the observed sample interval. First-observed lap crossings are not exact crossing times.",
+  "source": "evidence/pace-baseline-01/pace-evidence.json",
+  "sourceSha256": "57cc4c6e30935ee7f6b2ffe26f709700daecb490a935ade2114b99aa7a43ff00",
+  "buildGuid": "db45f4d51f4a4c1e98aca0a6d43f3fad",
+  "simulationCaptureRate": 24,
+  "complete": true,
+  "sampleCount": 1127,
+  "maxObservedSampleInterval": 0.13002777099609375,
+  "trackLengthM": 1844.517578125,
+  "maxRecomputedRaceGapErrorM": 6.097555160522461e-05,
+  "playerFinishTime": 112.6031265258789,
+  "overallAfter5s": {
+    "measuredSeconds": 107.6031265258789,
+    "intervals": 1077,
+    "nearestAbsoluteValidatedGapMeanM": 280.12772115694685,
+    "nearestAbsoluteValidatedGapMinM": 80.69085693359375,
+    "nearestAbsoluteValidatedGapMaxM": 491.41046142578125,
+    "nearbyFractions": {
+      "30": 0.0,
+      "40": 0.0,
+      "60": 0.0,
+      "80": 0.0,
+      "100": 0.03986981979340682
+    },
+    "playerMeanSpeedKph": 176.9015589929589
+  },
+  "byPlayerLapAfter5s": {
+    "1": {
+      "measuredSeconds": 33.2095947265625,
+      "intervals": 333,
+      "nearestAbsoluteValidatedGapMeanM": 165.67333052543415,
+      "nearestAbsoluteValidatedGapMinM": 80.69085693359375,
+      "nearestAbsoluteValidatedGapMaxM": 289.8918151855469,
+      "nearbyFractions": {
+        "30": 0.0,
+        "40": 0.0,
+        "60": 0.0,
+        "80": 0.0,
+        "100": 0.1291830658915726
+      },
+      "playerMeanSpeedKph": 172.59255830555884
+    },
+    "2": {
+      "measuredSeconds": 37.19810485839844,
+      "intervals": 372,
+      "nearestAbsoluteValidatedGapMeanM": 276.45584314494783,
+      "nearestAbsoluteValidatedGapMinM": 156.43797302246094,
+      "nearestAbsoluteValidatedGapMaxM": 387.89166259765625,
+      "nearbyFractions": {
+        "30": 0.0,
+        "40": 0.0,
+        "60": 0.0,
+        "80": 0.0,
+        "100": 0.0
+      },
+      "playerMeanSpeedKph": 178.8298060689316
+    },
+    "3": {
+      "measuredSeconds": 37.19542694091797,
+      "intervals": 372,
+      "nearestAbsoluteValidatedGapMeanM": 385.989413163341,
+      "nearestAbsoluteValidatedGapMinM": 265.7174987792969,
+      "nearestAbsoluteValidatedGapMaxM": 491.41046142578125,
+      "nearbyFractions": {
+        "30": 0.0,
+        "40": 0.0,
+        "60": 0.0,
+        "80": 0.0,
+        "100": 0.0
+      },
+      "playerMeanSpeedKph": 178.82042470979755
+    }
+  },
+  "byGalleryAfter5s": {
+    "cool": {
+      "measuredSeconds": 5.830148696899414,
+      "intervals": 58,
+      "nearestAbsoluteValidatedGapMeanM": 182.70180825056642,
+      "nearestAbsoluteValidatedGapMinM": 92.03905487060547,
+      "nearestAbsoluteValidatedGapMaxM": 289.54541015625,
+      "nearbyFractions": {
+        "30": 0.0,
+        "40": 0.0,
+        "60": 0.0,
+        "80": 0.0,
+        "100": 0.13550564878134
+      },
+      "playerMeanSpeedKph": 144.55063726527925
+    },
+    "warm": {
+      "measuredSeconds": 4.210357666015625,
+      "intervals": 42,
+      "nearestAbsoluteValidatedGapMeanM": 266.40837901569597,
+      "nearestAbsoluteValidatedGapMinM": 180.05764770507812,
+      "nearestAbsoluteValidatedGapMaxM": 357.150390625,
+      "nearbyFractions": {
+        "30": 0.0,
+        "40": 0.0,
+        "60": 0.0,
+        "80": 0.0,
+        "100": 0.0
+      },
+      "playerMeanSpeedKph": 196.60263330435194
+    }
+  },
+  "byPlayerLapAndGalleryAfter5s": {
+    "1": {
+      "cool": {
+        "measuredSeconds": 1.910043716430664,
+        "intervals": 19,
+        "nearestAbsoluteValidatedGapMeanM": 102.3055432304662,
+        "nearestAbsoluteValidatedGapMinM": 92.03905487060547,
+        "nearestAbsoluteValidatedGapMaxM": 114.39324951171875,
+        "nearbyFractions": {
+          "30": 0.0,
+          "40": 0.0,
+          "60": 0.0,
+          "80": 0.0,
+          "100": 0.41361256544502617
+        },
+        "playerMeanSpeedKph": 143.70591212567234
+      },
+      "warm": {
+        "measuredSeconds": 1.4197616577148438,
+        "intervals": 14,
+        "nearestAbsoluteValidatedGapMeanM": 184.00628973732532,
+        "nearestAbsoluteValidatedGapMinM": 180.05764770507812,
+        "nearestAbsoluteValidatedGapMaxM": 193.54684448242188,
+        "nearbyFractions": {
+          "30": 0.0,
+          "40": 0.0,
+          "60": 0.0,
+          "80": 0.0,
+          "100": 0.0
+        },
+        "playerMeanSpeedKph": 197.66336844001017
+      }
+    },
+    "2": {
+      "cool": {
+        "measuredSeconds": 1.919677734375,
+        "intervals": 19,
+        "nearestAbsoluteValidatedGapMeanM": 162.9259753227234,
+        "nearestAbsoluteValidatedGapMinM": 156.43797302246094,
+        "nearestAbsoluteValidatedGapMaxM": 177.33790588378906,
+        "nearbyFractions": {
+          "30": 0.0,
+          "40": 0.0,
+          "60": 0.0,
+          "80": 0.0,
+          "100": 0.0
+        },
+        "playerMeanSpeedKph": 144.61776514848074
+      },
+      "warm": {
+        "measuredSeconds": 1.3802947998046875,
+        "intervals": 14,
+        "nearestAbsoluteValidatedGapMeanM": 271.2535472261733,
+        "nearestAbsoluteValidatedGapMinM": 252.62936401367188,
+        "nearestAbsoluteValidatedGapMaxM": 292.0069885253906,
+        "nearbyFractions": {
+          "30": 0.0,
+          "40": 0.0,
+          "60": 0.0,
+          "80": 0.0,
+          "100": 0.0
+        },
+        "playerMeanSpeedKph": 196.38752602839816
+      }
+    },
+    "3": {
+      "cool": {
+        "measuredSeconds": 2.00042724609375,
+        "intervals": 20,
+        "nearestAbsoluteValidatedGapMeanM": 278.4431591796875,
+        "nearestAbsoluteValidatedGapMinM": 268.3974304199219,
+        "nearestAbsoluteValidatedGapMaxM": 289.54541015625,
+        "nearbyFractions": {
+          "30": 0.0,
+          "40": 0.0,
+          "60": 0.0,
+          "80": 0.0,
+          "100": 0.0
+        },
+        "playerMeanSpeedKph": 145.2927777481079
+      },
+      "warm": {
+        "measuredSeconds": 1.4103012084960938,
+        "intervals": 14,
+        "nearestAbsoluteValidatedGapMeanM": 344.6211506728585,
+        "nearestAbsoluteValidatedGapMinM": 330.5369873046875,
+        "nearestAbsoluteValidatedGapMaxM": 357.150390625,
+        "nearbyFractions": {
+          "30": 0.0,
+          "40": 0.0,
+          "60": 0.0,
+          "80": 0.0,
+          "100": 0.0
+        },
+        "playerMeanSpeedKph": 195.74531317095384
+      }
+    }
+  },
+  "racers": [
+    {
+      "index": 0,
+      "name": "VESPER 01 \u2022 player",
+      "isPlayer": true,
+      "corridorGuardFraction": 0.0,
+      "boostFraction": 0.03754882475641065,
+      "meanSpeedKph": 176.9015589929589,
+      "meanDesiredSpeedMps": 53.419159112136775,
+      "meanBrake": 0.058407571144744486,
+      "brakingFractionAbovePoint1": 0.20221110233252035,
+      "meanThrottle": 0.4883832121242878,
+      "groundedFraction": 1.0,
+      "meanAbsLateralM": 3.8946674427375427,
+      "guardByPlayerLap": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.0
+      },
+      "guardDuringFirst42s": 0.0,
+      "meanSpeedWhileGuardKph": null,
+      "meanSpeedWithoutGuardKph": 176.9015589929589,
+      "maxRecoveries": 0,
+      "final": {
+        "index": 0,
+        "completedLaps": 3,
+        "nextCheckpoint": 1,
+        "recoveries": 0,
+        "progressRank": 1,
+        "nearestOtherIndex": 2,
+        "nearestTrackIndex": 2,
+        "name": "VESPER 01 \u2022 player",
+        "isPlayer": true,
+        "hasStarted": true,
+        "grounded": true,
+        "boost": false,
+        "corridorGuard": false,
+        "position": {
+          "x": 0.28840360045433044,
+          "y": 33.86421585083008,
+          "z": -221.83042907714844
+        },
+        "velocity": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "rotation": {
+          "x": 0.020091282203793526,
+          "y": -0.7190805077552795,
+          "z": 0.004624165128916502,
+          "w": -0.6946209073066711
+        },
+        "trackProgress": 9.865412721410394e-05,
+        "raceProgress": 3.000098705291748,
+        "speedKph": 0.0,
+        "cruiseSpeedSettingMps": 78.0,
+        "boostSpeedSettingMps": 108.0,
+        "energy01": 0.7408975958824158,
+        "throttle": 0.0,
+        "aiDesiredSpeedMps": 75.0,
+        "aiBrake": 0.0,
+        "aiTargetLane": -5.800000190734863,
+        "lateralOffsetM": -8.246010780334473,
+        "heightAboveTrackM": 1.505539894104004,
+        "raceGapToPlayerM": 0.0,
+        "wrappedTrackGapToPlayerM": 0.0,
+        "distanceToPlayerM": 0.0,
+        "nearestOtherM": 282.3395690917969,
+        "nearestWrappedTrackGapM": 476.64569091796875
+      },
+      "lapCrossingsFirstObserved": [
+        {
+          "completedLaps": 1,
+          "raceTime": 38.2095947265625
+        },
+        {
+          "completedLaps": 2,
+          "raceTime": 75.40769958496094
+        },
+        {
+          "completedLaps": 3,
+          "raceTime": 112.6031265258789
+        }
+      ],
+      "actualSettingPairs": [
+        [
+          78.0,
+          108.0
+        ]
+      ]
+    },
+    {
+      "index": 1,
+      "name": "Rival 1",
+      "isPlayer": false,
+      "corridorGuardFraction": 0.8386819022761098,
+      "boostFraction": 0.015427414128022766,
+      "meanSpeedKph": 139.18940159617037,
+      "meanDesiredSpeedMps": 41.437451255058086,
+      "meanBrake": 0.037050112060557916,
+      "brakingFractionAbovePoint1": 0.10084055971752774,
+      "meanThrottle": 0.37724981226840887,
+      "groundedFraction": 1.0,
+      "meanAbsLateralM": 7.244371105333653,
+      "guardByPlayerLap": {
+        "1": 0.8653972640441384,
+        "2": 0.7725744160241856,
+        "3": 0.8809415830355555
+      },
+      "guardDuringFirst42s": 0.8178903216451106,
+      "meanSpeedWhileGuardKph": 138.0443058162961,
+      "meanSpeedWithoutGuardKph": 145.14267727015627,
+      "maxRecoveries": 0,
+      "final": {
+        "index": 1,
+        "completedLaps": 2,
+        "nextCheckpoint": 4,
+        "recoveries": 0,
+        "progressRank": 6,
+        "nearestOtherIndex": 3,
+        "nearestTrackIndex": 3,
+        "name": "Rival 1",
+        "isPlayer": false,
+        "hasStarted": true,
+        "grounded": true,
+        "boost": false,
+        "corridorGuard": false,
+        "position": {
+          "x": 216.42572021484375,
+          "y": 61.300838470458984,
+          "z": 55.26655197143555
+        },
+        "velocity": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "rotation": {
+          "x": -0.04296743497252464,
+          "y": -0.3990534245967865,
+          "z": 0.005260959267616272,
+          "w": 0.9159052968025208
+        },
+        "trackProgress": 0.267021119594574,
+        "raceProgress": 2.2670211791992188,
+        "speedKph": 0.0,
+        "cruiseSpeedSettingMps": 78.0,
+        "boostSpeedSettingMps": 108.0,
+        "energy01": 1.0,
+        "throttle": 0.0,
+        "aiDesiredSpeedMps": 75.5,
+        "aiBrake": 0.0,
+        "aiTargetLane": 5.800000190734863,
+        "lateralOffsetM": 5.1884918212890625,
+        "heightAboveTrackM": 1.6192078590393066,
+        "raceGapToPlayerM": -1352.1744384765625,
+        "wrappedTrackGapToPlayerM": 492.34320068359375,
+        "distanceToPlayerM": 352.4923400878906,
+        "nearestOtherM": 123.63975524902344,
+        "nearestWrappedTrackGapM": 124.27581024169922
+      },
+      "lapCrossingsFirstObserved": [
+        {
+          "completedLaps": 1,
+          "raceTime": 51.61734390258789
+        },
+        {
+          "completedLaps": 2,
+          "raceTime": 101.00316619873047
+        }
+      ],
+      "actualSettingPairs": [
+        [
+          78.0,
+          108.0
+        ]
+      ]
+    },
+    {
+      "index": 2,
+      "name": "Rival 2",
+      "isPlayer": false,
+      "corridorGuardFraction": 0.1555799635515558,
+      "boostFraction": 0.024814132858358238,
+      "meanSpeedKph": 167.60887859158638,
+      "meanDesiredSpeedMps": 50.55126958203928,
+      "meanBrake": 0.08954510929685014,
+      "brakingFractionAbovePoint1": 0.23504611218131452,
+      "meanThrottle": 0.42919213100112946,
+      "groundedFraction": 1.0,
+      "meanAbsLateralM": 3.0141987086140882,
+      "guardByPlayerLap": {
+        "1": 0.15056234446964378,
+        "2": 0.1602108855676087,
+        "3": 0.15542864316072988
+      },
+      "guardDuringFirst42s": 0.13470521114675732,
+      "meanSpeedWhileGuardKph": 156.10972425660236,
+      "meanSpeedWithoutGuardKph": 169.72753747589596,
+      "maxRecoveries": 0,
+      "final": {
+        "index": 2,
+        "completedLaps": 2,
+        "nextCheckpoint": 9,
+        "recoveries": 0,
+        "progressRank": 2,
+        "nearestOtherIndex": 4,
+        "nearestTrackIndex": 4,
+        "name": "Rival 2",
+        "isPlayer": false,
+        "hasStarted": true,
+        "grounded": true,
+        "boost": false,
+        "corridorGuard": false,
+        "position": {
+          "x": -181.68798828125,
+          "y": 47.43663024902344,
+          "z": -6.386680603027344
+        },
+        "velocity": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "rotation": {
+          "x": 0.13919493556022644,
+          "y": -0.976471483707428,
+          "z": 0.07667749375104904,
+          "w": 0.14576947689056396
+        },
+        "trackProgress": 0.7416865825653076,
+        "raceProgress": 2.7416865825653076,
+        "speedKph": 0.0,
+        "cruiseSpeedSettingMps": 78.0,
+        "boostSpeedSettingMps": 108.0,
+        "energy01": 1.0,
+        "throttle": 0.0,
+        "aiDesiredSpeedMps": 30.972089767456055,
+        "aiBrake": 0.0,
+        "aiTargetLane": 0.0,
+        "lateralOffsetM": -4.075738906860352,
+        "heightAboveTrackM": 1.3869355916976929,
+        "raceGapToPlayerM": -476.64569091796875,
+        "wrappedTrackGapToPlayerM": -476.64569091796875,
+        "distanceToPlayerM": 282.3395690917969,
+        "nearestOtherM": 23.288061141967773,
+        "nearestWrappedTrackGapM": 20.29009246826172
+      },
+      "lapCrossingsFirstObserved": [
+        {
+          "completedLaps": 1,
+          "raceTime": 42.53886795043945
+        },
+        {
+          "completedLaps": 2,
+          "raceTime": 82.03911590576172
+        }
+      ],
+      "actualSettingPairs": [
+        [
+          78.0,
+          108.0
+        ]
+      ]
+    },
+    {
+      "index": 3,
+      "name": "Rival 3",
+      "isPlayer": false,
+      "corridorGuardFraction": 0.7039329839559771,
+      "boostFraction": 0.014311966662499929,
+      "meanSpeedKph": 144.0635767784555,
+      "meanDesiredSpeedMps": 42.88583696268147,
+      "meanBrake": 0.042369354956432466,
+      "brakingFractionAbovePoint1": 0.11698746298592637,
+      "meanThrottle": 0.3878359637092944,
+      "groundedFraction": 1.0,
+      "meanAbsLateralM": 6.416853066691426,
+      "guardByPlayerLap": {
+        "1": 0.3923638615453606,
+        "2": 0.8368275484398939,
+        "3": 0.8492104759542992
+      },
+      "guardDuringFirst42s": 0.4563597251407352,
+      "meanSpeedWhileGuardKph": 136.37165910087805,
+      "meanSpeedWithoutGuardKph": 162.35198538090424,
+      "maxRecoveries": 0,
+      "final": {
+        "index": 3,
+        "completedLaps": 2,
+        "nextCheckpoint": 5,
+        "recoveries": 0,
+        "progressRank": 5,
+        "nearestOtherIndex": 5,
+        "nearestTrackIndex": 5,
+        "name": "Rival 3",
+        "isPlayer": false,
+        "hasStarted": true,
+        "grounded": true,
+        "boost": false,
+        "corridorGuard": false,
+        "position": {
+          "x": 121.54287719726562,
+          "y": 56.47648239135742,
+          "z": 134.3915252685547
+        },
+        "velocity": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "rotation": {
+          "x": 0.14177119731903076,
+          "y": -0.39776286482810974,
+          "z": -0.04263247922062874,
+          "w": 0.9054657220840454
+        },
+        "trackProgress": 0.33439692854881287,
+        "raceProgress": 2.3343968391418457,
+        "speedKph": 0.0,
+        "cruiseSpeedSettingMps": 78.0,
+        "boostSpeedSettingMps": 108.0,
+        "energy01": 1.0,
+        "throttle": 0.0,
+        "aiDesiredSpeedMps": 21.768945693969727,
+        "aiBrake": 0.0,
+        "aiTargetLane": 5.800000190734863,
+        "lateralOffsetM": 4.511655330657959,
+        "heightAboveTrackM": 1.8487507104873657,
+        "raceGapToPlayerM": -1227.8988037109375,
+        "wrappedTrackGapToPlayerM": 616.6190185546875,
+        "distanceToPlayerM": 376.9721984863281,
+        "nearestOtherM": 75.94204711914062,
+        "nearestWrappedTrackGapM": 89.65380859375
+      },
+      "lapCrossingsFirstObserved": [
+        {
+          "completedLaps": 1,
+          "raceTime": 48.61784744262695
+        },
+        {
+          "completedLaps": 2,
+          "raceTime": 98.00252532958984
+        }
+      ],
+      "actualSettingPairs": [
+        [
+          78.0,
+          108.0
+        ]
+      ]
+    },
+    {
+      "index": 4,
+      "name": "Rival 4",
+      "isPlayer": false,
+      "corridorGuardFraction": 0.31122324356552655,
+      "boostFraction": 0.018122476160075646,
+      "meanSpeedKph": 164.84946256546996,
+      "meanDesiredSpeedMps": 48.74983589826816,
+      "meanBrake": 0.08732383264759987,
+      "brakingFractionAbovePoint1": 0.19814835508013928,
+      "meanThrottle": 0.4347698270509395,
+      "groundedFraction": 1.0,
+      "meanAbsLateralM": 3.631777508551336,
+      "guardByPlayerLap": {
+        "1": 0.36553837855123816,
+        "2": 0.29892772831408454,
+        "3": 0.27502487549943294
+      },
+      "guardDuringFirst42s": 0.32704010181586635,
+      "meanSpeedWhileGuardKph": 132.3649929041161,
+      "meanSpeedWithoutGuardKph": 179.52754500519626,
+      "maxRecoveries": 0,
+      "final": {
+        "index": 4,
+        "completedLaps": 2,
+        "nextCheckpoint": 9,
+        "recoveries": 0,
+        "progressRank": 3,
+        "nearestOtherIndex": 2,
+        "nearestTrackIndex": 2,
+        "name": "Rival 4",
+        "isPlayer": false,
+        "hasStarted": true,
+        "grounded": true,
+        "boost": false,
+        "corridorGuard": true,
+        "position": {
+          "x": -182.77210998535156,
+          "y": 51.14453887939453,
+          "z": 16.578725814819336
+        },
+        "velocity": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "rotation": {
+          "x": 0.10258526355028152,
+          "y": -0.9737832546234131,
+          "z": 0.09228859096765518,
+          "w": -0.18084566295146942
+        },
+        "trackProgress": 0.730686366558075,
+        "raceProgress": 2.7306864261627197,
+        "speedKph": 0.0,
+        "cruiseSpeedSettingMps": 78.0,
+        "boostSpeedSettingMps": 108.0,
+        "energy01": 1.0,
+        "throttle": 0.0,
+        "aiDesiredSpeedMps": 27.7664852142334,
+        "aiBrake": 0.0,
+        "aiTargetLane": -5.800000190734863,
+        "lateralOffsetM": -7.257920742034912,
+        "heightAboveTrackM": 1.2306245565414429,
+        "raceGapToPlayerM": -496.9356994628906,
+        "wrappedTrackGapToPlayerM": -496.9356994628906,
+        "distanceToPlayerM": 301.0791931152344,
+        "nearestOtherM": 23.288061141967773,
+        "nearestWrappedTrackGapM": 20.29009246826172
+      },
+      "lapCrossingsFirstObserved": [
+        {
+          "completedLaps": 1,
+          "raceTime": 44.40855407714844
+        },
+        {
+          "completedLaps": 2,
+          "raceTime": 83.9995346069336
+        }
+      ],
+      "actualSettingPairs": [
+        [
+          78.0,
+          108.0
+        ]
+      ]
+    },
+    {
+      "index": 5,
+      "name": "Rival 5",
+      "isPlayer": false,
+      "corridorGuardFraction": 0.635699427464611,
+      "boostFraction": 0.01663521287271186,
+      "meanSpeedKph": 146.76718537199673,
+      "meanDesiredSpeedMps": 43.325690150724206,
+      "meanBrake": 0.051383904886229605,
+      "brakingFractionAbovePoint1": 0.13382843663571345,
+      "meanThrottle": 0.37549855058103365,
+      "groundedFraction": 1.0,
+      "meanAbsLateralM": 5.767124378745505,
+      "guardByPlayerLap": {
+        "1": 0.415227742847901,
+        "2": 0.6903587844032464,
+        "3": 0.7778822504312061
+      },
+      "guardDuringFirst42s": 0.3714962128900375,
+      "meanSpeedWhileGuardKph": 139.43931878724263,
+      "meanSpeedWithoutGuardKph": 159.5542105475136,
+      "maxRecoveries": 0,
+      "final": {
+        "index": 5,
+        "completedLaps": 2,
+        "nextCheckpoint": 5,
+        "recoveries": 0,
+        "progressRank": 4,
+        "nearestOtherIndex": 3,
+        "nearestTrackIndex": 3,
+        "name": "Rival 5",
+        "isPlayer": false,
+        "hasStarted": true,
+        "grounded": true,
+        "boost": false,
+        "corridorGuard": true,
+        "position": {
+          "x": 151.85345458984375,
+          "y": 44.81734085083008,
+          "z": 203.0393829345703
+        },
+        "velocity": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "rotation": {
+          "x": 0.06849540024995804,
+          "y": 0.20906691253185272,
+          "z": 0.07438261061906815,
+          "w": 0.9726595878601074
+        },
+        "trackProgress": 0.38300246000289917,
+        "raceProgress": 2.383002519607544,
+        "speedKph": 0.0,
+        "cruiseSpeedSettingMps": 78.0,
+        "boostSpeedSettingMps": 108.0,
+        "energy01": 1.0,
+        "throttle": 0.0,
+        "aiDesiredSpeedMps": 25.786855697631836,
+        "aiBrake": 0.0,
+        "aiTargetLane": 5.800000190734863,
+        "lateralOffsetM": 6.6180100440979,
+        "heightAboveTrackM": 1.1404162645339966,
+        "raceGapToPlayerM": -1138.2447509765625,
+        "wrappedTrackGapToPlayerM": 706.2728271484375,
+        "distanceToPlayerM": 451.2275390625,
+        "nearestOtherM": 75.94204711914062,
+        "nearestWrappedTrackGapM": 89.65375518798828
+      },
+      "lapCrossingsFirstObserved": [
+        {
+          "completedLaps": 1,
+          "raceTime": 44.908470153808594
+        },
+        {
+          "completedLaps": 2,
+          "raceTime": 94.71182250976562
+        }
+      ],
+      "actualSettingPairs": [
+        [
+          78.0,
+          108.0
+        ]
+      ]
+    }
+  ],
+  "finish": {
+    "rivalSignedValidatedGapsM": [
+      -1352.1744384765625,
+      -476.64569091796875,
+      -1227.8988037109375,
+      -496.9356994628906,
+      -1138.2447509765625
+    ],
+    "nearestRivalAbsoluteGapM": 476.64569091796875,
+    "rivalsWithin100M": 0,
+    "rivalsWithin200M": 0,
+    "entireFieldSignedDistanceSpreadM": 1352.1744384765625,
+    "unfinishedRacers": 5,
+    "allRecoveryCounts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "playerOfficialPosition": 1
+  },
+  "proposedGateResults": {
+    "near60FractionAtLeastHalf": false,
+    "nearestFinishGapAtMost100M": false,
+    "atLeastTwoRivalsWithin200M": false,
+    "zeroAllRecoveries": true
+  }
+}

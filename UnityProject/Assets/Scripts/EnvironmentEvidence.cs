@@ -47,9 +47,9 @@ namespace VectorRush
             report.unityVersion=Application.unityVersion;report.buildGuid=Application.buildGUID;report.gpu=SystemInfo.graphicsDeviceName;
             report.sceneRenderers=FindObjectsByType<Renderer>(FindObjectsSortMode.None).Length;
             foreach(var light in FindObjectsByType<Light>(FindObjectsSortMode.None))if(light.enabled)report.activeLights++;
-            report.scope = "Actual native racing camera and normal hover physics. Existing test autopilot drives; no camera, pose, lap, energy, speed or race phase is injected. Time.captureFramerate=24 is set before StartRace for repeatable simulation. The 264-frame passage is 11 simulation seconds, not a frame-time/performance measurement. Camera transforms, FOV, all racer rigidbody poses/velocities and player visual transform are recorded every frame. Five anchors are the first recorded frames crossing fixed track-progress thresholds. An optional prior report compares actual anchor poses; it never overwrites them. PNGs and metadata are rendering evidence, not independent visual/motion acceptance. The exported picture sequence contains no audio.";
-            int frameCount=fullLap?1008:264;
-            if(fullLap)report.scope=report.scope.Replace("The 264-frame passage is 11 simulation seconds","The 1008-frame full-circuit traversal is 42 simulation seconds");
+            report.scope = "Actual native racing camera and normal hover physics. Existing test autopilot drives; no camera, pose, lap, energy, speed or race phase is injected. Time.captureFramerate=24 is set before StartRace for repeatable simulation. The 360-frame passage is 15 simulation seconds, not a frame-time/performance measurement. Camera transforms, FOV, all racer rigidbody poses/velocities and player visual transform are recorded every frame. Five anchors are the first recorded frames crossing fixed track-progress thresholds. An optional prior report compares actual anchor poses; it never overwrites them. PNGs and metadata are rendering evidence, not independent visual/motion acceptance. The exported picture sequence contains no audio.";
+            int frameCount=fullLap?1440:360;
+            if(fullLap)report.scope=report.scope.Replace("The 360-frame passage is 15 simulation seconds","The 1440-frame full-circuit traversal is 60 simulation seconds");
             if(stillsOnly)report.scope+=" Stills-only mode saves the five anchor PNGs, while retaining every simulated frame's pose metadata; it is not a motion recording.";
             bool success = false;
             try {

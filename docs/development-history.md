@@ -212,3 +212,7 @@ The same gallery kit is installed in both enclosures and deck/material improveme
 Final real-time verification completes three player laps in 112.60 seconds with zero player recoveries; both restart launches and all three countdown-pause checks pass. At 1080p on M2 Max with VSync1, 6,804 observed frame intervals give mean 8.82 ms / P95 15.14 ms / P99 15.99 ms and 240.1 MiB Unity allocation, versus fresh baseline P95/P99 16.67/17.01 ms. No build/bake/encoding ran concurrently. This run shows no observed frame-time regression; it is not an isolated GPU or guaranteed-framerate measurement. Archive CRC validation passes.
 
 Final-source regression suite rerun: all 32 tests pass. Source hashes remain identical to the final build manifest after testing.
+
+## 2026-09-08 — Native pace baseline before final balance pass
+
+User requested closer racing, followed by one visual critique/improvement round and final publication. Added opt-in PaceEvidence recording actual all-racer state, guard duty, input requests, validated distance gaps and vehicle settings through an ordinary three-lap race. Read-only driver diagnostics do not change behavior. Native baseline completes in 112.60 simulation seconds, 1,127 samples, six original screenshots, zero recoveries. Capture runs at 24 simulation frames per second and makes no performance claim. Prior pose-based pace diagnosis and exact native fields are preserved before applying the authorized actual-player speed reduction. Expanded optional environment capture durations to accommodate the slower race.

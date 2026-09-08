@@ -30,6 +30,10 @@ namespace VectorRush
         public float LastImpactTime { get; private set; } = -100f;
         public float LastImpactStrength { get; private set; }
         public int RecoveryCount { get; private set; }
+        public bool AICorridorGuardActive => aiEdgeGuard;
+        public float AIDesiredSpeed { get; private set; }
+        public float AIBrakeInput => brake;
+        public float AITargetLane => aiLane;
 
         TrackPath track;
         int gridIndex;
@@ -290,6 +294,7 @@ namespace VectorRush
             else if (Boost01 > .65f) aiBoostLatch = true;
             boostHeld = aiBoostLatch;
             if (boostHeld) desiredSpeed = Mathf.Max(desiredSpeed, 96f);
+            AIDesiredSpeed=desiredSpeed;
             throttle = Mathf.Clamp01((desiredSpeed - speed) / 5f);
             brake = Mathf.Clamp01((speed - desiredSpeed) / 10f);
             leftBrake = angle < -32f ? .45f : 0f;

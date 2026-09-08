@@ -1,0 +1,10 @@
+{
+  "parentCommit": "3e6efa6394ddd6347907dc9d569b8c6ae0400531",
+  "scope": "Pace instrumentation added; vehicle tuning unchanged from environment milestone.",
+  "files": {
+    "UnityProject/Assets/Scripts/Gameplay/HoverVehicle.cs": "1bb8acf97bae95706ea27911220e53c978030d87dcfb8a5b9cd4c116e642899f",
+    "UnityProject/Assets/Scripts/VectorBootstrap.cs": "b573776f7f1af1b43cb13764f5cacbb7ed2a1d4e565b35537ed18382d42e64ca",
+    "UnityProject/Assets/Scripts/PaceEvidence.cs": "884e1d5d7faa444534dca31fccfefbcf42ce10aeecd8cc75d1803a79ab05b133",
+    "UnityProject/Assets/Scripts/EnvironmentEvidence.cs": "5b3af59fb6903e762222c0d21676ed8b0b840340bf330bb081849176ba6f61eb"
+  }
+}
