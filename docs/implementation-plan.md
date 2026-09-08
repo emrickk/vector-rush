@@ -87,13 +87,13 @@ The user explicitly assigned Astra as planner and harsh independent visual revie
 - [x] Astra baseline critique and ranked ship art plan against reference C.
 - [x] Preserve V3 form pass 01 and Astra rejection, including nine inspection views, staged export and topology audit.
 - [x] Preserve pass 02 source/export, clean reimport audit, completed rear clay and provisional review at the user's wrap-up request.
-- [ ] Correct pass 01 compound hull shape, integrated intakes, canopy curvature and supported joints; repeat the same independent form review.
+- [x] Correct pass 01 compound hull shape, integrated intakes, canopy curvature and supported joints; repeat the same independent form review.
 - [x] Calibrate a native neutral inspection rig against recorded origin, orientation and bounds before judging runtime materials.
-- [ ] Rebuild primary form and construction in staged Blender source; review neutral renders and loop on visible failures.
+- [x] Establish a coherent primary form in staged Blender source; independent rear/top/side/chase review clears readiness for finish work.
 - [ ] Develop surface/material depth and readable livery after form acceptance; review and loop.
 - [ ] Integrate the reviewed asset and calibrated engine anchors; review native neutral views, ordinary chase views and propulsion.
 - [ ] Preserve each reviewed pass, its critique and source/export identity; validate the integrated race and package for review.
 
 A successful compile or a flattering studio frame does not establish visual quality. The reference is directional; minor contour differences must not prevent progress on larger whole-game improvements. Reviewer remains independent from the asset implementation.
 
-Status at wrap-up: work paused by the user. V3 is staged, with only the first rear clay render complete; native app still uses V2. Finish the remaining readiness views before selecting a payload, then focus on surface finish and the whole night scene. The optional anchor/surface preparation added after the calibrated build remains uncompiled and untested in runtime.
+Status on resumption: the user asked to continue. V3 is staged, with only the first rear clay render complete; native app still uses V2. Finish the remaining readiness views before selecting a payload, then focus on surface finish and the whole night scene. Compile the optional anchor/surface preparation, then validate it with the selected payload in the native inspection rig and ordinary gameplay.

@@ -182,11 +182,31 @@
     "existing_01_samples": 48,
     "priority": "side, top, chase first; existing images preserved"
   },
-  "completion_status": "partial \u2014 user requested wrap-up; active renderer stopped",
+  "completion_status": "resumed \u2014 partial evidence; source and export unchanged",
   "completed_views": [
     {
       "file": "01-clay-rear-quarter.png",
       "samples": 48,
+      "denoising": false,
+      "threads": 4,
+      "resolution": [
+        1600,
+        1200
+      ]
+    },
+    {
+      "file": "07-clay-top.png",
+      "samples": 32,
+      "denoising": false,
+      "threads": 4,
+      "resolution": [
+        1600,
+        1200
+      ]
+    },
+    {
+      "file": "08-clay-side.png",
+      "samples": 32,
       "denoising": false,
       "threads": 4,
       "resolution": [
@@ -201,8 +221,6 @@
     "04-neutral-front-quarter",
     "05-clay-chase",
     "06-neutral-chase",
-    "07-clay-top",
-    "08-clay-side",
     "09-C-perspective",
     "10-C-comparison-16x9"
   ]

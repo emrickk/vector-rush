@@ -1,6 +1,8 @@
 # Kestrel hero ship: production plan and visual gates
 
-Status: **V2 baseline rejected; V3 form is being revised; overall game quality is not achieved.** Independent Astra planning/review, 2026-09-07. The ship is the first art task, followed by coordinated work on materials, propulsion and the game's full presentation.
+Status: **V3 pass 02 is ready to advance from primary form; major shape is frozen. Overall game quality remains unmet.** Independent Astra planning/review, 2026-09-07. Continue with materials, livery, propulsion and the game's full presentation, following [review 005](ship-reviews/005-form-readiness-pass-02.md).
+
+The independent review directly inspected pass 02 rear, top, side and chase clay views. Those confirm a coherent low twin-nacelle craft under the user's readiness threshold. Remaining broad panels, simple mounts and collar refinements are finish follow-ups. Front/neutral coverage, finished materials and native V3 integration/motion still need review. The separate [native rig calibration review](ship-reviews/003-native-rig-calibration.md) accepts the diagnostic setup using V2 only.
 
 ## User scope correction — 2026-09-07
 
