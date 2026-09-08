@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -11,7 +12,14 @@ namespace VectorRush
     /// <summary>Opt-in matched native road-material/light diagnosis; never modifies the authored road.</summary>
     public sealed class RoadSurfaceEvidence : MonoBehaviour
     {
-        const float TargetProgress=.88475f, ConstantSmoothness=.56f;
+        const float DefaultTargetProgress=.88475f, ConstantSmoothness=.56f;
+        static readonly string[] CasterNames={"Track lighting steelwork","Cool linear road lamps","Amber linear road lamps"};
+        float targetProgress=DefaultTargetProgress;
+        bool casterMode;
+        readonly List<CasterState> casters=new List<CasterState>();
+        MeshCollider roadCollider;
+        Mesh originalColliderMesh;
+        string originalLightSnapshot;
         VectorBootstrap bootstrap;
         HoverVehicle player;
         MeshRenderer road;
@@ -36,6 +44,9 @@ namespace VectorRush
         {
             string[] args=Environment.GetCommandLineArgs(); int index=Array.IndexOf(args,"-roadSurfaceEvidence");
             if(index<0) return false;
+            float target=DefaultTargetProgress; int targetIndex=Array.IndexOf(args,"-roadTargetProgress");
+            if(targetIndex>=0 && (targetIndex+1>=args.Length || !float.TryParse(args[targetIndex+1],NumberStyles.Float,CultureInfo.InvariantCulture,out target) || float.IsNaN(target) || float.IsInfinity(target) || target<0f || target>=1f))
+            { Debug.LogError("-roadTargetProgress requires a finite normalized value in [0,1)."); Application.Quit(2); return true; }
             if(index+1>=args.Length || !Path.IsPathRooted(args[index+1]))
             { Debug.LogError("Road surface evidence requires -roadSurfaceEvidence <absolute output folder>."); return false; }
             if(!owner || !owner.Director || !owner.Director.Player || !owner.Camera)
@@ -43,6 +54,7 @@ namespace VectorRush
             foreach(var evidence in owner.GetComponents<RaceEvidence>()) { evidence.StopAllCoroutines(); evidence.enabled=false; }
             var runner=owner.gameObject.AddComponent<RoadSurfaceEvidence>(); runner.bootstrap=owner;
             runner.player=owner.Director.Player; runner.folder=Path.GetFullPath(args[index+1]);
+            runner.targetProgress=target; runner.casterMode=Array.IndexOf(args,"-roadCasterEvidence")>=0;
             runner.StartCoroutine(runner.Run()); return true;
         }
 
@@ -52,10 +64,16 @@ namespace VectorRush
             originalTimeScale=Time.timeScale; originalCaptureRate=Time.captureFramerate; originalAutopilot=player.AutopilotForTesting;
             originalWidth=Screen.width; originalHeight=Screen.height; originalScreenMode=Screen.fullScreenMode; initialized=true;
             report.startedUtc=DateTime.UtcNow.ToString("o"); report.unityVersion=Application.unityVersion;
+            report.buildGuid=Application.buildGUID; report.mode=casterMode?"fixture-caster-A-B-A":"legacy-road-controls"; report.targetProgress=targetProgress;
             report.gpu=SystemInfo.graphicsDeviceName; report.graphicsApi=SystemInfo.graphicsDeviceType.ToString();
             report.scope="Actual native ScreenCapture images at the first gallery passage near progress0.88475. Existing player testing autopilot reaches the pose through normal physics, with captureFramerate0. After LateUpdate/end-of-frame, the real chase camera and all racers are frozen in their rendered poses; Rigidbody interpolation is disabled only for stable matching. Each material/light condition restores the original before the next. Geometry, UVs, tangents, camera, postprocessing, light positions and intensities stay fixed. Named normal-mode controls change only mesh normals, and the named main-only shadow control changes only sun shadows relative to the no-additional-lights condition. The calibrated control is URP Lit with no maps, base color equal to the original, metallic0, smoothness0.56 and environment reflections off. Single-light controls retain the original directional lights and ambient, changing only which originally enabled non-directional lights are enabled. Selection is an approximate attenuation ranking at three right-side road points, not a measured BRDF contribution. These images diagnose the artifact; capture completion does not identify its cause or establish visual acceptance.";
             report.normalEncodingSourceNote="WorldBuilder supplies a linear runtime RGBA32 normal texture with R/G near0.5, B1 and A1, rather than an imported compressed normal asset. The installed URP UnpackNormalMapRGorAG path multiplies A by R before AG decoding, which supports that packing. Its ASTC-only AG path would interpret alpha differently. The compiled native variant is not proven by this source note. Compare normal-disabled against BumpScale0 with original keywords; do not infer a normal-encoding cause from the source alone.";
             report.variantScope="Map-disabled and fresh-material conditions change shader keywords and can be affected by build-time stripping. The original-keyword normal-scale-zero and constant-mask controls preserve the baseline combinations. Material.shader.isSupported and recorded keywords do not certify availability of every compiled variant; native images must be reviewed for fallback or missing-shader output.";
+            if(casterMode)
+            {
+                report.scope="Actual normal-physics race reaches the recorded target-progress window, then the existing rendered-pose freeze is used. Only shadowCastingMode of the three named road-fixture renderers changes: baseline, fixture casters off, restored baseline. Visible geometry, meshes/colliders, mesh attributes, materials, all light settings, camera and postprocessing remain unchanged. Caster and light state is read back for each view and caster restoration is checked finally. This isolates a caster family at one native pose; completion is not root-cause or visual acceptance.";
+                report.variantScope="Caster mode creates no material and changes no shader keyword.";
+            }
             Save("RUNNING\n");
             try
             {
@@ -67,11 +85,11 @@ namespace VectorRush
                 while(Time.realtimeSinceStartup<deadline)
                 {
                     yield return new WaitForEndOfFrame();
-                    if(bootstrap.Director.Phase==RacePhase.Racing && bootstrap.Director.RaceTime>10f && player.TrackProgress>=TargetProgress && player.TrackProgress<=TargetProgress+.006f)
+                    if(bootstrap.Director.Phase==RacePhase.Racing && bootstrap.Director.RaceTime>10f && player.TrackProgress>=targetProgress && player.TrackProgress<=Mathf.Min(1f,targetProgress+.006f))
                     { reached=true; break; }
                     if(bootstrap.Director.Phase==RacePhase.Finished) break;
                 }
-                if(!reached) Fail("The native player did not reach the requested gallery window.");
+                if(!reached) Fail("The native player did not reach the requested road-progress window.");
                 else
                 {
                     var roadObject=GameObject.Find("Running surface"); road=roadObject?roadObject.GetComponent<MeshRenderer>():null;
@@ -80,9 +98,11 @@ namespace VectorRush
                     {
                         originalMaterials=road.sharedMaterials;
                         roadMesh=road.GetComponent<MeshFilter>().sharedMesh;originalNormals=roadMesh.normals;
+                        roadCollider=road.GetComponent<MeshCollider>();originalColliderMesh=roadCollider?roadCollider.sharedMesh:null;
                         FreezeRenderedPose();
                         for(int i=0;i<4;i++) yield return null;
                         RecordSetup();
+                        if(casterMode) ResolveCasters();
                         var conditions=BuildConditions(); report.expectedViews=conditions.Count;
                         foreach(var condition in conditions)
                         {
@@ -95,7 +115,7 @@ namespace VectorRush
             }
             finally
             {
-                Restore(); report.finishedUtc=DateTime.UtcNow.ToString("o");
+                Restore(); report.complete=report.complete && report.error==null; report.finishedUtc=DateTime.UtcNow.ToString("o");
                 Save(report.complete?"COMPLETE — matched native diagnostic images; cause and quality require review.\n":"INCOMPLETE — "+report.error+"\n");
             }
             yield return new WaitForSecondsRealtime(.75f); Application.Quit(report.complete?0:1);
@@ -119,6 +139,7 @@ namespace VectorRush
 
         List<Condition> BuildConditions()
         {
+            if(casterMode) return new List<Condition>{new Condition("00-baseline",null),new Condition("01-fixture-casters-off",null,castersOff:true),new Condition("02-baseline-restored",null)};
             Material original=originalMaterials[0];
             var smooth=Copy("Constant smoothness, map disabled"); Constant(smooth);
             var normal=Copy("Normal mapping disabled"); NoNormal(normal);
@@ -159,6 +180,7 @@ namespace VectorRush
             RestoreCondition();
             try
             {
+                if(condition.castersOff) foreach(var state in casters) if(state.renderer)state.renderer.shadowCastingMode=ShadowCastingMode.Off;
                 if(condition.material) road.sharedMaterial=condition.material;
                 if(condition.noSunShadows && RenderSettings.sun)RenderSettings.sun.shadows=LightShadows.None;
                 if(condition.normalMode!=0){
@@ -180,8 +202,11 @@ namespace VectorRush
                 if((bootstrap.Camera.transform.position-cameraPosition).sqrMagnitude>.000001f || Quaternion.Angle(bootstrap.Camera.transform.rotation,cameraRotation)>.001f)
                 { Fail("Frozen normal chase camera moved before "+condition.name); yield break; }
                 foreach(var body in bodies) if(!body.IsFrozen()) { Fail("Frozen racer pose moved before "+condition.name); yield break; }
+                if(casterMode && !VerifyCasterCondition(condition.castersOff))yield break;
                 var view=new View { file=condition.name+".png",normalMode=condition.normalMode,noSunShadows=condition.noSunShadows,material=ReadMaterial(road.sharedMaterial),cameraPosition=bootstrap.Camera.transform.position,
                     cameraRotation=bootstrap.Camera.transform.rotation,width=Screen.width,height=Screen.height,raceTime=bootstrap.Director.RaceTime,progress=player.TrackProgress };
+                view.fixtureCastersOff=condition.castersOff;
+                if(casterMode){foreach(var state in casters)view.casters.Add(state.Read());view.lights=ReadLights();view.roadMeshEntityId=roadMesh.GetEntityId().ToString();view.roadColliderMeshEntityId=originalColliderMesh?originalColliderMesh.GetEntityId().ToString():string.Empty;}
                 foreach(var state in lightStates) if(state.light && state.light.enabled && state.light.gameObject.activeInHierarchy && state.light.type!=LightType.Directional) view.enabledAdditionalLights.Add(Hierarchy(state.light.transform));
                 string path=Path.Combine(folder,view.file); DateTime requested=DateTime.UtcNow;
                 ScreenCapture.CaptureScreenshot(path); float deadline=Time.realtimeSinceStartup+8f;
@@ -244,6 +269,41 @@ namespace VectorRush
                     position=light.transform.position,rotation=light.transform.rotation,color=light.color,intensity=light.intensity,range=light.range,
                     spotAngle=light.spotAngle,innerSpotAngle=light.innerSpotAngle,shadows=light.shadows.ToString(),cullingMask=light.cullingMask });
             }
+            if(casterMode)originalLightSnapshot=JsonUtility.ToJson(ReadLights());
+        }
+
+        void ResolveCasters()
+        {
+            var renderers=FindObjectsByType<MeshRenderer>(FindObjectsInactive.Include,FindObjectsSortMode.None);
+            foreach(string name in CasterNames)
+            {
+                MeshRenderer found=null;int count=0;
+                foreach(var candidate in renderers)if(candidate.name==name){found=candidate;count++;}
+                if(count!=1 || !found || !found.enabled || !found.gameObject.activeInHierarchy)
+                {Fail("Expected exactly one active enabled fixture renderer: "+name+"; found "+count);return;}
+                var state=new CasterState(found);casters.Add(state);report.originalCasters.Add(state.Read());
+            }
+        }
+        bool VerifyCasterCondition(bool off)
+        {
+            foreach(var state in casters)if(!state.Matches(off)){Fail("Fixture state changed beyond requested shadow casting: "+state.path);return false;}
+            if(casters.Count!=CasterNames.Length){Fail("Incomplete fixture-caster family.");return false;}
+            if(!road || road.GetComponent<MeshFilter>().sharedMesh!=roadMesh || road.sharedMaterial!=originalMaterials[0] ||
+                (roadCollider && roadCollider.sharedMesh!=originalColliderMesh))
+            {Fail("Road mesh, collider or material identity changed during caster control.");return false;}
+            if(originalLightSnapshot!=JsonUtility.ToJson(ReadLights())){Fail("A light setting changed during caster control.");return false;}
+            return true;
+        }
+        LightSnapshot ReadLights()
+        {
+            var snapshot=new LightSnapshot{sunEntityId=RenderSettings.sun?RenderSettings.sun.GetEntityId().ToString():string.Empty};
+            foreach(var state in lightStates)if(state.light)
+            {
+                var light=state.light;snapshot.states.Add(new LightInfo{path=Hierarchy(light.transform),type=light.type.ToString(),enabled=light.enabled,
+                    position=light.transform.position,rotation=light.transform.rotation,color=light.color,intensity=light.intensity,range=light.range,
+                    spotAngle=light.spotAngle,innerSpotAngle=light.innerSpotAngle,shadows=light.shadows.ToString(),shadowStrength=light.shadowStrength,cullingMask=light.cullingMask});
+            }
+            return snapshot;
         }
 
         static MaterialInfo ReadMaterial(Material material)
@@ -265,10 +325,12 @@ namespace VectorRush
         }
         static string Hierarchy(Transform value) { string path=value.name+"["+value.GetSiblingIndex()+"]"; for(var parent=value.parent;parent;parent=parent.parent) path=parent.name+"["+parent.GetSiblingIndex()+"]/"+path; return path; }
         void Disable(Behaviour value) { if(value && value.enabled) { disabled.Add(value); value.enabled=false; } }
-        void RestoreCondition() { if(road && originalMaterials!=null) road.sharedMaterials=originalMaterials; if(roadMesh && originalNormals!=null)roadMesh.normals=originalNormals; foreach(var state in lightStates) if(state.light){state.light.enabled=state.enabled;state.light.shadows=state.shadows;} }
+        void RestoreCondition() { if(casterMode){foreach(var state in casters)state.Restore();return;} if(road && originalMaterials!=null) road.sharedMaterials=originalMaterials; if(roadMesh && originalNormals!=null)roadMesh.normals=originalNormals; foreach(var state in lightStates) if(state.light){state.light.enabled=state.enabled;state.light.shadows=state.shadows;} }
         void Restore()
         {
             if(!initialized) return; initialized=false; RestoreCondition();
+            if(casterMode && casters.Count==CasterNames.Length)
+            {report.casterRestorationVerified=VerifyCasterCondition(false);foreach(var state in casters)if(state.renderer)report.restoredCasters.Add(state.Read());}
             foreach(var body in bodies) body.Restore(); Physics.SyncTransforms();
             foreach(var value in disabled) if(value) value.enabled=true;
             if(player) player.AutopilotForTesting=originalAutopilot;
@@ -277,9 +339,25 @@ namespace VectorRush
             foreach(var material in ownedMaterials) if(material) Destroy(material); if(constantMask) Destroy(constantMask);
         }
         void OnDestroy() { Restore(); }
+        void OnApplicationQuit() { Restore(); }
         void Fail(string message) { if(report.error==null) report.error=message; Debug.LogError("Road surface evidence: "+message); }
         void Save(string status) { File.WriteAllText(Path.Combine(folder,"road-surface-evidence.json"),JsonUtility.ToJson(report,true)); File.WriteAllText(Path.Combine(folder,"road-surface-status.txt"),status); }
-        sealed class Condition { public readonly string name; public readonly Material material; public readonly Light[] lights;public readonly int normalMode;public readonly bool noSunShadows; public Condition(string name,Material material,Light[] lights=null,int normalMode=0,bool noSunShadows=false) { this.name=name;this.material=material;this.lights=lights;this.normalMode=normalMode;this.noSunShadows=noSunShadows; } }
+        sealed class Condition { public readonly string name; public readonly Material material; public readonly Light[] lights;public readonly int normalMode;public readonly bool noSunShadows,castersOff; public Condition(string name,Material material,Light[] lights=null,int normalMode=0,bool noSunShadows=false,bool castersOff=false) { this.name=name;this.material=material;this.lights=lights;this.normalMode=normalMode;this.noSunShadows=noSunShadows;this.castersOff=castersOff; } }
+        sealed class CasterState
+        {
+            public readonly MeshRenderer renderer;public readonly string path;
+            readonly ShadowCastingMode mode;readonly Mesh mesh;readonly Material[] materials;readonly Vector3 position,scale;readonly Quaternion rotation;
+            public CasterState(MeshRenderer value){renderer=value;path=Hierarchy(value.transform);mode=value.shadowCastingMode;mesh=value.GetComponent<MeshFilter>()?value.GetComponent<MeshFilter>().sharedMesh:null;materials=value.sharedMaterials;position=value.transform.position;rotation=value.transform.rotation;scale=value.transform.lossyScale;}
+            public void Restore(){if(renderer)renderer.shadowCastingMode=mode;}
+            public bool Matches(bool off)
+            {
+                if(!renderer || !renderer.enabled || !renderer.gameObject.activeInHierarchy || renderer.shadowCastingMode!=(off?ShadowCastingMode.Off:mode) ||
+                    renderer.transform.position!=position || Quaternion.Angle(renderer.transform.rotation,rotation)>.001f || renderer.transform.lossyScale!=scale ||
+                    !renderer.GetComponent<MeshFilter>() || renderer.GetComponent<MeshFilter>().sharedMesh!=mesh)return false;
+                var current=renderer.sharedMaterials;if(current.Length!=materials.Length)return false;for(int i=0;i<current.Length;i++)if(current[i]!=materials[i])return false;return true;
+            }
+            public CasterInfo Read(){var result=new CasterInfo{path=path,entityId=renderer.GetEntityId().ToString(),enabled=renderer.enabled,active=renderer.gameObject.activeInHierarchy,shadowCastingMode=renderer.shadowCastingMode.ToString(),position=renderer.transform.position,rotation=renderer.transform.rotation,scale=renderer.transform.lossyScale,meshEntityId=mesh?mesh.GetEntityId().ToString():string.Empty};foreach(var material in renderer.sharedMaterials)result.materialEntityIds.Add(material?material.GetEntityId().ToString():string.Empty);return result;}
+        }
         sealed class LightState { public readonly Light light; public readonly bool enabled;public readonly LightShadows shadows; public LightState(Light value) { light=value;enabled=value.enabled;shadows=value.shadows; } }
         sealed class BodyState
         {
@@ -292,7 +370,9 @@ namespace VectorRush
         }
         [Serializable] sealed class Report
         {
-            public string scope,normalEncodingSourceNote,variantScope,meshSourceNote,startedUtc,finishedUtc,unityVersion,gpu,graphicsApi,error,pipelineJson,cameraUrpJson,roadPath,meshName;
+            public string scope,normalEncodingSourceNote,variantScope,meshSourceNote,startedUtc,finishedUtc,unityVersion,gpu,graphicsApi,error,pipelineJson,cameraUrpJson,roadPath,meshName,buildGuid,mode;
+            public float targetProgress;public bool casterRestorationVerified;
+            public List<CasterInfo> originalCasters=new List<CasterInfo>(),restoredCasters=new List<CasterInfo>();
             public bool complete; public int expectedViews,vertexCount,normalCount,tangentCount,uvCount,subMeshCount; public long triangleCount;
             public float raceTime,progress,speedKphBeforeFreeze,fieldOfView,nearClip,farClip,cameraAspect;
             public Vector3 playerPosition,cameraPosition,roadPosition,roadScale,meshBoundsCenter,meshBoundsSize; public Quaternion playerRotation,cameraRotation,roadRotation;
@@ -301,10 +381,12 @@ namespace VectorRush
             public List<string> rendererSettings=new List<string>(),rendererFeatures=new List<string>(),selectedLights=new List<string>();
             public List<LightInfo> originalLights=new List<LightInfo>(); public List<View> views=new List<View>();
         }
-        [Serializable] sealed class View { public string file;public int normalMode;public bool noSunShadows;public MaterialInfo material;public Vector3 cameraPosition;public Quaternion cameraRotation;public int width,height;public float raceTime,progress;public List<string> enabledAdditionalLights=new List<string>(); }
+        [Serializable] sealed class View { public string file;public int normalMode;public string roadMeshEntityId,roadColliderMeshEntityId;public bool noSunShadows,fixtureCastersOff;public List<CasterInfo> casters=new List<CasterInfo>();public LightSnapshot lights;public MaterialInfo material;public Vector3 cameraPosition;public Quaternion cameraRotation;public int width,height;public float raceTime,progress;public List<string> enabledAdditionalLights=new List<string>(); }
+        [Serializable] sealed class CasterInfo {public string path,shadowCastingMode;public string entityId,meshEntityId;public bool enabled,active;public Vector3 position,scale;public Quaternion rotation;public List<string> materialEntityIds=new List<string>();}
+        [Serializable] sealed class LightSnapshot {public string sunEntityId;public List<LightInfo> states=new List<LightInfo>();}
         [Serializable] sealed class MaterialInfo { public string name,shader;public bool shaderSupported;public string[] keywords;public Color baseColor,emission;public List<FloatInfo> floats=new List<FloatInfo>();public List<TextureInfo> textures=new List<TextureInfo>(); }
         [Serializable] sealed class FloatInfo { public string property;public float value; }
         [Serializable] sealed class TextureInfo { public string property,name,graphicsFormat,format,filter,wrap;public int width,height,mipCount,aniso;public bool readable;public Vector2 scale,offset; }
-        [Serializable] sealed class LightInfo { public string path,type,shadows;public bool enabled;public Vector3 position;public Quaternion rotation;public Color color;public float intensity,range,spotAngle,innerSpotAngle;public int cullingMask; }
+        [Serializable] sealed class LightInfo { public string path,type,shadows;public bool enabled;public Vector3 position;public Quaternion rotation;public Color color;public float intensity,range,spotAngle,innerSpotAngle,shadowStrength;public int cullingMask; }
     }
 }

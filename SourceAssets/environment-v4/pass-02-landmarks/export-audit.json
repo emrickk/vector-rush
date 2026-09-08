@@ -1,0 +1,36 @@
+{
+  "Nocturne_SplitSignal_Mast": {
+    "status": "PASS_GEOMETRY_WITH_DOCUMENTED_TANGENT_LIMITATION",
+    "mesh_count": 1,
+    "triangles": 13580,
+    "material_slots": 7,
+    "roundtrip_bounds_error_m": 2.408383124929969e-06,
+    "nonmanifold_edges": 0,
+    "degenerate_triangles": 0,
+    "uv0_finite": true,
+    "tangents_finite": true,
+    "tangents_unit": false,
+    "zero_tangent_loops": [
+      964
+    ],
+    "limitation": "One mast bevel loop has a zero tangent after Blender FBX reimport; no landmark runtime material uses tangent normal mapping.",
+    "inside_reserved_footprint": true,
+    "fbx_sha256": "86fce532571fe159ed14398cf7d635866d38070858f40e54e766c9d2ea81cd59"
+  },
+  "Nocturne_ThermalExchange_Works": {
+    "status": "PASS",
+    "mesh_count": 1,
+    "triangles": 27736,
+    "material_slots": 8,
+    "roundtrip_bounds_error_m": 3.1633621802029666e-06,
+    "nonmanifold_edges": 0,
+    "degenerate_triangles": 0,
+    "uv0_finite": true,
+    "tangents_finite": true,
+    "tangents_unit": true,
+    "zero_tangent_loops": [],
+    "limitation": "",
+    "inside_reserved_footprint": true,
+    "fbx_sha256": "91a1a700deb2de21ec559a30e7b7ca3672747e058a7ee22864f37fb784dca28e"
+  }
+}

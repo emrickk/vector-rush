@@ -1,0 +1,71 @@
+{
+  "Nocturne_SplitSignal_Mast": {
+    "editable_parts": 121,
+    "runtime_meshes": 1,
+    "material_slots": [
+      "Structure",
+      "Concrete",
+      "Ceramic",
+      "Titanium",
+      "Glass",
+      "Occupied",
+      "Lamp"
+    ],
+    "vertices": 7032,
+    "triangles": 13580,
+    "source_min_xyz": [
+      -26.0,
+      -32.0,
+      0.0
+    ],
+    "source_max_xyz": [
+      26.06574058532715,
+      32.0,
+      123.0
+    ],
+    "unity_dimensions_xyz": [
+      52.06574058532715,
+      123.0,
+      64.0
+    ],
+    "nonmanifold_edges": 0,
+    "degenerate_triangles": 0,
+    "uv0": "4 m metric box projection, overlapping for tiling by design",
+    "fbx_sha256": "17750a4cbaa92bb25191d051697545674d8dcf8c17f43d5cb3133f87f29e6568"
+  },
+  "Nocturne_ThermalExchange_Works": {
+    "editable_parts": 183,
+    "runtime_meshes": 1,
+    "material_slots": [
+      "Structure",
+      "Concrete",
+      "Titanium",
+      "Glass",
+      "Occupied",
+      "Ceramic",
+      "Oxide",
+      "Lamp"
+    ],
+    "vertices": 14164,
+    "triangles": 27736,
+    "source_min_xyz": [
+      -22.700000762939453,
+      -42.0,
+      0.0
+    ],
+    "source_max_xyz": [
+      22.0,
+      42.0,
+      90.94999694824219
+    ],
+    "unity_dimensions_xyz": [
+      44.70000076293945,
+      90.94999694824219,
+      84.0
+    ],
+    "nonmanifold_edges": 0,
+    "degenerate_triangles": 0,
+    "uv0": "4 m metric box projection, overlapping for tiling by design",
+    "fbx_sha256": "aab8f5a70e19528d0f5c41a72b0c7574da42140690666648dcfae80472e64549"
+  }
+}

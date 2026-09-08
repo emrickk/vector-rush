@@ -1,0 +1,23 @@
+/Users/anping/Documents/Stuff/AI Space/Vector Rush/SourceAssets/environment-v4/build_landmarks.py:13: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m=bpy.data.materials.new(name);m.diffuse_color=(*col,1);m.use_nodes=True;p=m.node_tree.nodes.get('Principled BSDF');p.inputs['Base Color'].default_value=(*col,1);p.inputs['Roughness'].default_value=rough;p.inputs['Metallic'].default_value=metal
+/Users/anping/Documents/Stuff/AI Space/Vector Rush/SourceAssets/environment-v4/build_landmarks.py:197: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  world=bpy.data.worlds.new('Architectural studio');scene.world=world;world.use_nodes=True;world.node_tree.nodes['Background'].inputs[0].default_value=(.20,.25,.30,1);world.node_tree.nodes['Background'].inputs[1].default_value=.55
+BlenderMCP: cannot start server in background mode (blender -b) - commands would never execute
+BlenderMCP: run Blender with a GUI, or use a virtual display: xvfb-run -a blender
+BlenderMCP addon registered
+
+FBX export starting... '/Users/anping/Documents/Stuff/AI Space/Vector Rush/SourceAssets/environment-v4/pass-02-landmarks/Nocturne_SplitSignal_Mast.fbx'
+export finished in 0.0292 sec.
+
+FBX export starting... '/Users/anping/Documents/Stuff/AI Space/Vector Rush/SourceAssets/environment-v4/pass-02-landmarks/Nocturne_ThermalExchange_Works.fbx'
+export finished in 0.0542 sec.
+Info: Saved as "Nocturne_Landmark_Kit.blend"
+LANDMARK_EXPORTS_READY
+00:15.664  render           | Saved: '/Users/anping/Documents/Stuff/AI Space/Vector Rush/SourceAssets/environment-v4/pass-02-landmarks/01-mast-studio.png'
+00:24.397  render           | Saved: '/Users/anping/Documents/Stuff/AI Space/Vector Rush/SourceAssets/environment-v4/pass-02-landmarks/02-thermal-studio.png'
+LANDMARK_STUDIO_PREVIEWS_READY
+BlenderMCP server stopped
+BlenderMCP addon unregistered
+Blender 5.2.0 LTS (hash fbe6228777e7 built 2026-07-14 01:31:22)
+
+Blender quit

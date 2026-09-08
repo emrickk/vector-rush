@@ -16,6 +16,8 @@ namespace VectorRush
         Material concrete,steel,trim,asphalt,warm,cyan,windows;
         Material civicConcrete,civicSteel,civicGlass,civicWarm,civicWorkshopWarm,civicTowerWarm,farConcrete,farGlass;
         readonly Material[] facades=new Material[4];
+        readonly Material[] skylineFacades=new Material[12];
+        NightLandmarks landmarks;
         readonly List<Plot> benchmarkPlots=new List<Plot>();
         Vector3 benchmarkOrigin;
         Quaternion benchmarkRotation;
@@ -46,6 +48,18 @@ namespace VectorRush
                 if(i==1){facade.SetColor("_WarmColor",new Color(.54f,.46f,.32f));facade.SetColor("_CoolColor",new Color(.32f,.53f,.7f));}
                 if(i==3){facade.SetColor("_WarmColor",new Color(.62f,.38f,.22f));facade.SetColor("_CoolColor",new Color(.21f,.41f,.56f));}
             }
+            // Distant occupied rooms recede in three layers, leaving the near landmarks dominant.
+            for(int depth=0;depth<3;depth++)for(int character=0;character<4;character++)
+            {
+                var distant=new Material(facades[character]){name="Night / skyline depth "+depth+" character "+character};
+                ownMaterials.Add(distant);skylineFacades[depth*4+character]=distant;
+                if(shader){
+                    distant.SetFloat("_Intensity",intensities[character]*(depth==0?.72f:depth==1?.48f:.30f));
+                    distant.SetFloat("_Density",densities[character]*(depth==0?.95f:.8f));
+                    distant.SetColor("_WarmColor",new Color(.56f,.35f,.22f));
+                    distant.SetColor("_CoolColor",new Color(.28f,.40f,.56f));
+                }
+            }
             samples=new Vector3[720];for(int i=0;i<samples.Length;i++)samples[i]=track.Evaluate((float)i/samples.Length).Position;
             clearance=track.Width*.5f+30f;
             Box(Vector3.zero,Quaternion.identity,new Vector3(0,-1.15f,0),new Vector3(2400,.5f,2400),asphalt);
@@ -53,12 +67,13 @@ namespace VectorRush
             var a=Resources.Load<GameObject>("Art/Environment/Solstice_TerraceTower_A");
             var b=Resources.Load<GameObject>("Art/Environment/Solstice_SplitTower_B");
             BuildTransitBenchmark(world,track,a,b);
+            landmarks=gameObject.AddComponent<NightLandmarks>();landmarks.Build(world,track);
             float[] anchors={.13f,.40f,.67f,.88f};
             for(int i=0;i<anchors.Length;i++)
             {
-                // The final-sector cluster is now composed from the race camera.
-                // Its old 154 m plinth is removed rather than buried under the new station.
-                if(i==3)continue;
+                // The first-sector plinth obscured the signal mast approach with a blank wall.
+                // Authored landmark/service clusters now own this view and the final station sector.
+                if(i==0||i==3)continue;
                 var frame=track.Evaluate(anchors[i]);Vector3 outward=Vector3.ProjectOnPlane(frame.Right,Vector3.up).normalized;
                 Quaternion q=Quaternion.LookRotation(-outward,Vector3.up);Vector3 center=frame.Position+outward*135f;center.y=0;
                 for(int n=0;n<12&&(!Clear(center,q,new Vector2(82,77))||OverlapsBenchmark(center,q,new Vector2(82,77)));n++)center+=outward*15f;
@@ -86,7 +101,7 @@ namespace VectorRush
             var random=new System.Random(64281);
             // Continuous surrounding skyline: staggered rings make parallax and depth,
             // with taller silhouettes behind lower buildings instead of four isolated islands.
-            int[] counts={28,32,36};float[] radii={445,625,855};
+            int[] counts={22,26,30};float[] radii={445,625,855};
             for(int ring=0;ring<3;ring++)
             {
                 for(int i=0;i<counts[ring];i++)
@@ -96,12 +111,13 @@ namespace VectorRush
                     Vector3 center=new Vector3(Mathf.Cos(angle)*r,0,Mathf.Sin(angle)*r);
                     Quaternion q=Quaternion.Euler(0,-angle*Mathf.Rad2Deg+90,0);
                     float w=24+(float)random.NextDouble()*20,d=22+(float)random.NextDouble()*21;
-                    float height=65+(float)random.NextDouble()*105+ring*27;
-                    if(i%9==0)height+=45;
+                    float cluster=.5f+.5f*Mathf.Sin(angle*3f+.65f);
+                    float height=42+(float)random.NextDouble()*44+cluster*48+ring*24;
+                    if(i%9==0)height+=28;
                     bool nearDistrict=false;
                     foreach(var other in accepted)if((center-other).sqrMagnitude<105f*105f)nearDistrict=true;
                     if(nearDistrict||InBenchmarkArea(center)||OverlapsBenchmark(center,q,new Vector2(w*.7f+5,d*.7f+5))||!Clear(center,q,new Vector2(w*.7f+5,d*.7f+5)))continue;
-                    SkylineTower(center,q,w,d,height,(i+ring)%5);
+                    SkylineTower(center,q,w,d,height,(i+ring)%5,ring);
                 }
                 Flush("Layered skyline / depth "+ring);
             }
@@ -415,9 +431,10 @@ namespace VectorRush
         }
         struct Plot{public Vector3 center;public Quaternion rotation;public Vector2 half;}
 
-        void SkylineTower(Vector3 c,Quaternion q,float w,float d,float h,int style)
+        void SkylineTower(Vector3 c,Quaternion q,float w,float d,float h,int style,int depth=-1)
         {
-            Material facade=facades[(Mathf.FloorToInt(Mathf.Abs(c.x+c.z)*.037f)+style)%4];
+            int character=(Mathf.FloorToInt(Mathf.Abs(c.x+c.z)*.037f)+style)%4;
+            Material facade=depth>=0?skylineFacades[Mathf.Clamp(depth,0,2)*4+character]:facades[character];
             bool detailed=c.x*c.x+c.z*c.z<420f*420f;
             Box(c,q,new Vector3(0,4,0),new Vector3(w+8,8,d+8),steel);
             if(style==1)
@@ -566,6 +583,7 @@ namespace VectorRush
 
         bool Clear(Vector3 center,Quaternion q,Vector2 half)
         {
+            if(landmarks && landmarks.Overlaps(center,q,half))return false;
             var inverse=Quaternion.Inverse(q);
             foreach(var p in samples)
             {
