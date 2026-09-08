@@ -34,6 +34,9 @@ namespace VectorRush
             var racers=new List<HoverVehicle>();
             GameObject ship=Resources.Load<GameObject>("Art/HeroShip");
             for(int i=0;i<6;i++){
+                Color teamColor=i==0?new Color(.56f,.75f,.006f):Color.HSVToRGB(i*.16f,.72f,.85f);
+                var teamPaint=world.MakeMaterial("Team accent "+i,teamColor,.6f,.25f);
+                var hullPaint=i==0?craftIvory:world.MakeMaterial("Team pearl hull "+i,Color.Lerp(new Color(.55f,.62f,.64f),teamColor,.48f),.65f,.3f);
                 var root=new GameObject(i==0?"VESPER 01 • player":"Rival "+i);root.transform.SetParent(transform);
                 root.AddComponent<Rigidbody>();var collider=root.AddComponent<BoxCollider>();collider.size=new Vector3(5.2f,1.2f,7.2f);collider.center=new Vector3(0,.12f,.1f);
                 GameObject art;
@@ -49,8 +52,8 @@ namespace VectorRush
                         else if(n.Contains("Ceramic"))materials[k]=craftCeramic;
                         else if(n.Contains("Metal"))materials[k]=world.Metal;
                         else if(n.Contains("WhiteMark"))materials[k]=world.MakeMaterial("White number",new Color(.97f,.99f,.94f),.3f);
-                        else if(n.Contains("Signal"))materials[k]=i==0?world.Signal:world.MakeMaterial("Team color "+i,Color.HSVToRGB(i*.16f,.72f,.95f),.6f,.3f);
-                        else materials[k]=craftIvory;
+                        else if(n.Contains("Signal"))materials[k]=teamPaint;
+                        else materials[k]=hullPaint;
                     }renderer.sharedMaterials=materials;
                 }
                 var vehicle=root.AddComponent<HoverVehicle>();vehicle.VisualRoot=art.transform;vehicle.Initialize(Track,i==0,i);racers.Add(vehicle);

@@ -11,7 +11,7 @@ namespace VectorRush
     public sealed class RaceEvidence : MonoBehaviour
     {
         readonly List<float> frames=new List<float>();
-        string folder;float started;bool collecting;bool autopilot;bool quitAfter;bool recordReplay;
+        string folder;float started;bool collecting;bool autopilot;bool quitAfter;bool recordReplay;bool quickEvidence;
         float nextTelemetry;
         IEnumerator Start()
         {
@@ -21,6 +21,7 @@ namespace VectorRush
                 if(args[i]=="-autopilot")autopilot=true;
                 if(args[i]=="-quitAfterEvidence")quitAfter=true;
                 if(args[i]=="-recordReplay")recordReplay=true;
+                if(args[i]=="-quickEvidence")quickEvidence=true;
             }
             if(string.IsNullOrEmpty(folder))yield break;
             Directory.CreateDirectory(folder);
@@ -31,6 +32,7 @@ namespace VectorRush
             director.StartRace();
             yield return new WaitForSecondsRealtime(4);
             yield return Capture("02-start.png");
+            if(quickEvidence){yield return new WaitForSecondsRealtime(2);Application.Quit();yield break;}
             if(recordReplay){yield return RecordReplay();yield break;}
             started=Time.realtimeSinceStartup;collecting=true;
             if(autopilot)StartCoroutine(VerifyRace());

@@ -40,12 +40,12 @@
 
 ## Task 5 — independent review and delivery
 - [x] A separate agent reviews actual images plus source for critical race/integration defects.
-- [ ] Fix highest-impact findings; recapture and re-review up to three meaningful cycles.
+- [x] Fix highest-impact findings; recapture and re-review up to three meaningful cycles. Three review cycles complete; unresolved road artifacts and AAA gap are documented.
 - [ ] Record exact tools, compile/test logs, performance and remaining gaps. Deliver prompt, sources, build and controls, or precise external blocker if build cannot run.
 
 ## GitHub milestones
 - [x] Preserve integrated source checkpoint and push to private `emrickk/vector-rush`.
 - [x] Complete second native race and collect current evidence (112.58 seconds, 3 laps, zero player recoveries).
-- [ ] Final polish: road shadow artifacts, team paint distinction, grandstand roof structure; rebuild and recapture.
+- [x] Final polish: team paint and grandstand roof improved, rebuilt and recaptured; road artifact diagnostics were inconclusive and are documented.
 - [ ] Verify menu/keyboard interaction and record a short native gameplay video.
 - [ ] Commit final evidence, critique, limitations and delivery documentation; push all completed steps.

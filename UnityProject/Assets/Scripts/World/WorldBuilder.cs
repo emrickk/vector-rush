@@ -54,7 +54,8 @@ namespace VectorRush
             }
             for(int i=0;i<200;i++) {
                 var f=track.Evaluate(i/200f);
-                Box("Deck expansion joint",f.Position+f.Up*.013f,new Vector3(20,.018f,.09f),Quaternion.LookRotation(f.Forward,f.Up),metal);
+                var joint=Box("Deck expansion joint",f.Position+f.Up*.02f,new Vector3(20,.018f,.12f),Quaternion.LookRotation(f.Forward,f.Up),graphite);
+                joint.GetComponent<Renderer>().shadowCastingMode=ShadowCastingMode.Off;
                 if(i%2==0) {
                     Box("Lane datum",f.Position+f.Up*.025f,new Vector3(.13f,.025f,3),Quaternion.LookRotation(f.Forward,f.Up),ivory);
                 }
@@ -153,14 +154,20 @@ namespace VectorRush
                 Box("Grandstand terrace",start.Position+start.Right*(24+i*3)+start.Up*(i*1.5f-1),new Vector3(4,1.5f,85),rot,ivory);
                 Box("Grandstand seating",start.Position+start.Right*(24+i*3)+start.Up*(i*1.5f),new Vector3(2,.3f,83),rot,i%2==0?signal:graphite);
             }
-            Box("Grandstand canopy",start.Position+start.Right*32+start.Up*14,new Vector3(30,.6f,95),rot*Quaternion.Euler(0,0,-9),ivory);
+            for(int bay=-3;bay<=3;bay++){
+                Vector3 along=start.Forward*bay*12;
+                Box("Grandstand roof blade",start.Position+along+start.Right*32+start.Up*14,new Vector3(24,.3f,11),rot*Quaternion.Euler(0,0,-9),ivory);
+                Box("Grandstand cantilever",start.Position+along+start.Right*33+start.Up*13.4f,new Vector3(22,.7f,.35f),rot*Quaternion.Euler(0,0,-9),metal);
+                Box("Grandstand roof column",start.Position+along+start.Right*43+start.Up*9,new Vector3(.6f,9,.6f),rot,metal);
+                Box("Grandstand front fascia",start.Position+along+start.Right*20.2f+start.Up*15.85f,new Vector3(.3f,.9f,11),rot,graphite);
+            }
         }
         void BuildLighting()
         {
             RenderSettings.fog=true;RenderSettings.fogColor=new Color(.5f,.72f,.79f);RenderSettings.fogMode=FogMode.ExponentialSquared;RenderSettings.fogDensity=.0007f;
             RenderSettings.ambientMode=AmbientMode.Custom;var ambient=new SphericalHarmonicsL2();ambient.AddAmbientLight(new Color(.36f,.43f,.49f));RenderSettings.ambientProbe=ambient;
             var sun=new GameObject("Pacific afternoon sun");sun.transform.SetParent(transform);sun.transform.rotation=Quaternion.Euler(32,-32,0);
-            var light=sun.AddComponent<Light>();light.type=LightType.Directional;light.color=new Color(1,.965f,.88f);light.intensity=1.65f;light.shadows=LightShadows.Soft;light.shadowStrength=.75f;light.shadowBias=.025f;RenderSettings.sun=light;
+            var light=sun.AddComponent<Light>();light.type=LightType.Directional;light.color=new Color(1,.965f,.88f);light.intensity=1.65f;light.shadows=LightShadows.Soft;light.shadowStrength=.75f;RenderSettings.sun=light;
             var skyShader=Shader.Find("Skybox/Procedural");if(skyShader){var sky=new Material(skyShader);ownedMaterials.Add(sky);sky.SetFloat("_SunSize",.025f);sky.SetFloat("_AtmosphereThickness",.8f);sky.SetColor("_SkyTint",new Color(.48f,.65f,.76f));sky.SetColor("_GroundColor",new Color(.25f,.4f,.45f));sky.SetFloat("_Exposure",1.15f);RenderSettings.skybox=sky;}
             var probeObject=new GameObject("Coastal reflection environment");probeObject.transform.SetParent(transform);probeObject.transform.position=new Vector3(0,50,-180);
             coastalProbe=probeObject.AddComponent<ReflectionProbe>();coastalProbe.mode=ReflectionProbeMode.Realtime;coastalProbe.refreshMode=ReflectionProbeRefreshMode.ViaScripting;coastalProbe.timeSlicingMode=ReflectionProbeTimeSlicingMode.AllFacesAtOnce;coastalProbe.resolution=256;coastalProbe.size=new Vector3(1800,600,1800);coastalProbe.farClipPlane=2500;coastalProbe.intensity=1f;
