@@ -1,0 +1,36 @@
+/Users/anping/Documents/Stuff/AI Space/Vector Rush/SourceAssets/hero-v3/build_hero_v3.py:23: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m=bpy.data.materials.new(name);m.diffuse_color=(*color,1);m.use_nodes=True;n=m.node_tree.nodes.get('Principled BSDF')
+/Users/anping/Documents/Stuff/AI Space/Vector Rush/SourceAssets/hero-v3/build_hero_v3.py:196: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  scene.world.use_nodes=True;scene.world.node_tree.nodes.get('Background').inputs[0].default_value=(.18,.19,.20,1);scene.world.node_tree.nodes.get('Background').inputs[1].default_value=.48
+00:41.086  render           | Saved: '/Users/anping/Documents/Stuff/AI Space/Vector Rush/evidence/ship-v3/pass-01/01-clay-rear-quarter.png'
+Warning: No mesh data to join
+
+FBX export starting... '/Users/anping/Documents/Stuff/AI Space/Vector Rush/SourceAssets/hero-v3/pass-01/HeroShip.fbx'
+export finished in 0.0404 sec.
+Warning: Mesh 'Nose / small ceramic lower keel.001' has polygons with more than 4 vertices, cannot compute/export tangent space for it
+Warning: Mesh 'Engine / thin dim energizer -1.001' has polygons with more than 4 vertices, cannot compute/export tangent space for it
+Warning: Mesh 'Canopy / long faceted near-black glazing.001' has polygons with more than 4 vertices, cannot compute/export tangent space for it
+Warning: Mesh 'Monocoque / continuous load-bearing center.001' has polygons with more than 4 vertices, cannot compute/export tangent space for it
+Warning: Mesh 'Center / formed rear cheek -1.001' has polygons with more than 4 vertices, cannot compute/export tangent space for it
+Info: Saved as "Kestrel07-v3.blend"
+SHIP_V3_RENDER_READY 01-clay-rear-quarter
+01:40.105  render           | Saved: '/Users/anping/Documents/Stuff/AI Space/Vector Rush/evidence/ship-v3/pass-01/02-neutral-rear-quarter.png'
+SHIP_V3_RENDER_READY 02-neutral-rear-quarter
+02:05.577  render           | Saved: '/Users/anping/Documents/Stuff/AI Space/Vector Rush/evidence/ship-v3/pass-01/03-clay-front-quarter.png'
+SHIP_V3_RENDER_READY 03-clay-front-quarter
+02:34.443  render           | Saved: '/Users/anping/Documents/Stuff/AI Space/Vector Rush/evidence/ship-v3/pass-01/04-neutral-front-quarter.png'
+SHIP_V3_RENDER_READY 04-neutral-front-quarter
+03:16.329  render           | Saved: '/Users/anping/Documents/Stuff/AI Space/Vector Rush/evidence/ship-v3/pass-01/05-clay-chase.png'
+SHIP_V3_RENDER_READY 05-clay-chase
+03:57.619  render           | Saved: '/Users/anping/Documents/Stuff/AI Space/Vector Rush/evidence/ship-v3/pass-01/06-neutral-chase.png'
+SHIP_V3_RENDER_READY 06-neutral-chase
+04:29.202  render           | Saved: '/Users/anping/Documents/Stuff/AI Space/Vector Rush/evidence/ship-v3/pass-01/07-clay-top.png'
+SHIP_V3_RENDER_READY 07-clay-top
+04:49.136  render           | Saved: '/Users/anping/Documents/Stuff/AI Space/Vector Rush/evidence/ship-v3/pass-01/08-clay-side.png'
+SHIP_V3_RENDER_READY 08-clay-side
+05:32.378  render           | Saved: '/Users/anping/Documents/Stuff/AI Space/Vector Rush/evidence/ship-v3/pass-01/09-C-perspective.png'
+SHIP_V3_RENDER_READY 09-C-perspective
+SHIP_V3_CANDIDATE_READY {"revision": "pass-01", "recipe_sha256": "722d027fa7f2a4836ada84d052cc11ac5eb9e5b63b1a1459f34a64f9e8f1b654", "source_dimensions_xyz": [5.14, 6.885, 1.515], "source_forward": "-Y", "source_up": "+Z", "unity_mapping": "(X,Z,-Y)", "source_meshes": 70, "runtime_meshes": 6, "triangles": 21176, "nonmanifold_edges_by_source_mesh": {"Nacelle / closed structural cavity shell -1": 8, "Nacelle / closed structural cavity shell 1": 8}, "materials_used": ["Ivory", "Graphite", "Glass", "Engine", "Metal", "Ceramic"], "primary_form_only": true, "studio_bloom": false, "runtime_uv_policy": "Unique SmartProject atlas AFTER joining by material; EXPORT_RUNTIME is exact FBX source. Do not re-unwrap after baking."}
+Blender 5.2.0 LTS (hash fbe6228777e7 built 2026-07-14 01:31:22)
+
+Blender quit

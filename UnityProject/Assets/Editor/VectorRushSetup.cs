@@ -72,6 +72,7 @@ namespace VectorRush.Editor
             road.SetTexture("_MetallicGlossMap",Texture2D.whiteTexture);road.EnableKeyword("_METALLICSPECGLOSSMAP");
             road.SetFloat("_Metallic",0);road.SetFloat("_Smoothness",.16f);road.SetColor("_EmissionColor",Color.black);road.EnableKeyword("_EMISSION");EditorUtility.SetDirty(road);
             PrepareCoastalMaterial();
+            PrepareCraftSurfaceMaterial();
             // The lit template retains only needed variants; these small shaders are used by name.
             var gs=new SerializedObject(AssetDatabase.LoadAllAssetsAtPath("ProjectSettings/GraphicsSettings.asset")[0]);
             gs.FindProperty("m_FogStripping").intValue=1; // Custom: retain the runtime Exp2 mode.
@@ -95,6 +96,33 @@ namespace VectorRush.Editor
             EditorSceneManager.SaveScene(scene,"Assets/Scenes/Solstice.unity");
             EditorBuildSettings.scenes=new[]{new EditorBuildSettingsScene("Assets/Scenes/Solstice.unity",true)};
             AssetDatabase.SaveAssets();AssetDatabase.Refresh();Debug.Log("VECTOR_SETUP_COMPLETE");
+        }
+        static void PrepareCraftSurfaceMaterial()
+        {
+            const string folder="Assets/Resources/Art/ShipSurfaces/";
+            if(!Directory.Exists(folder))return;
+            foreach(string key in new[]{"Ivory","Graphite","Metal","Ceramic"})
+                foreach(string suffix in new[]{"BaseColor","Normal","MetallicSmoothness","Occlusion"})
+                {
+                    string path=folder+key+"_"+suffix+".png";
+                    var importer=AssetImporter.GetAtPath(path) as TextureImporter;
+                    if(!importer)throw new Exception("Incomplete selected ship surface payload: "+path);
+                    importer.textureType=suffix=="Normal"?TextureImporterType.NormalMap:TextureImporterType.Default;
+                    importer.sRGBTexture=suffix=="BaseColor";
+                    importer.alphaSource=TextureImporterAlphaSource.FromInput;importer.alphaIsTransparency=false;
+                    importer.wrapMode=TextureWrapMode.Clamp;importer.filterMode=FilterMode.Trilinear;
+                    importer.anisoLevel=8;importer.maxTextureSize=2048;importer.mipmapEnabled=true;
+                    importer.textureCompression=TextureImporterCompression.CompressedHQ;
+                    importer.SaveAndReimport();
+                }
+            const string materialPath="Assets/Resources/CraftSurfaceLit.mat";
+            var craft=AssetDatabase.LoadAssetAtPath<Material>(materialPath);
+            if(!craft){craft=new Material(Shader.Find("Universal Render Pipeline/Lit"));AssetDatabase.CreateAsset(craft,materialPath);}
+            craft.SetColor("_BaseColor",Color.white);craft.SetTexture("_BaseMap",AssetDatabase.LoadAssetAtPath<Texture2D>(folder+"Ivory_BaseColor.png"));
+            craft.SetTexture("_BumpMap",AssetDatabase.LoadAssetAtPath<Texture2D>(folder+"Ivory_Normal.png"));craft.SetFloat("_BumpScale",1);craft.EnableKeyword("_NORMALMAP");
+            craft.SetTexture("_MetallicGlossMap",AssetDatabase.LoadAssetAtPath<Texture2D>(folder+"Ivory_MetallicSmoothness.png"));craft.SetFloat("_Smoothness",1);craft.SetFloat("_SmoothnessTextureChannel",0);craft.EnableKeyword("_METALLICSPECGLOSSMAP");
+            craft.SetTexture("_OcclusionMap",AssetDatabase.LoadAssetAtPath<Texture2D>(folder+"Ivory_Occlusion.png"));craft.SetFloat("_OcclusionStrength",.6f);craft.EnableKeyword("_OCCLUSIONMAP");
+            craft.SetColor("_EmissionColor",Color.black);craft.EnableKeyword("_EMISSION");EditorUtility.SetDirty(craft);
         }
         static void PrepareCoastalMaterial()
         {

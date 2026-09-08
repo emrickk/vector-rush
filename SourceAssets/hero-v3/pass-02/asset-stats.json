@@ -1,0 +1,27 @@
+{
+  "revision": "pass-02",
+  "recipe_sha256": "c2727d6c130f44eec8de0d0fbb6c8bfcf7f80cc5f7be06697b887cc80eb2ab19",
+  "source_dimensions_xyz": [
+    5.2256,
+    6.885,
+    1.5197
+  ],
+  "source_forward": "-Y",
+  "source_up": "+Z",
+  "unity_mapping": "(X,Z,-Y)",
+  "source_meshes": 70,
+  "runtime_meshes": 6,
+  "triangles": 38036,
+  "nonmanifold_edges_by_source_mesh": {},
+  "materials_used": [
+    "Ivory",
+    "Graphite",
+    "Glass",
+    "Engine",
+    "Metal",
+    "Ceramic"
+  ],
+  "primary_form_only": true,
+  "studio_bloom": false,
+  "runtime_uv_policy": "Unique SmartProject atlas AFTER joining by material; EXPORT_RUNTIME is exact FBX source. Do not re-unwrap after baking."
+}

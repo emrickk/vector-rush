@@ -1,0 +1,11 @@
+/Users/anping/Documents/Stuff/AI Space/Vector Rush/SourceAssets/hero-v3/build_hero_v3.py:23: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m=bpy.data.materials.new(name);m.diffuse_color=(*color,1);m.use_nodes=True;n=m.node_tree.nodes.get('Principled BSDF')
+/Users/anping/Documents/Stuff/AI Space/Vector Rush/SourceAssets/hero-v3/build_hero_v3.py:226: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  scene.world.use_nodes=True;scene.world.node_tree.nodes.get('Background').inputs[0].default_value=(.18,.19,.20,1);scene.world.node_tree.nodes.get('Background').inputs[1].default_value=.48
+04:30.770  render           | Saved: '/Users/anping/Documents/Stuff/AI Space/Vector Rush/evidence/ship-v3/pass-02/01-clay-rear-quarter.png'
+Warning: No mesh data to join
+
+FBX export starting... '/Users/anping/Documents/Stuff/AI Space/Vector Rush/SourceAssets/hero-v3/pass-02/HeroShip.fbx'
+export finished in 0.4825 sec.
+Info: Saved as "Kestrel07-v3.blend"
+SHIP_V3_RENDER_READY 01-clay-rear-quarter

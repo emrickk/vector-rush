@@ -105,3 +105,9 @@ The standalone rebuilt successfully and exited normally after eight native 1920Ã
 ### User clarification: close shape, then whole-game quality
 
 The user clarified that matching the reference completely is unrealistic and that once the shape is almost there, effort should move to other elements that make the whole game feel AAA. Astra and the asset worker were instructed to treat the reference as direction, advance when the primary shape is coherent and close, and prioritize material response, propulsion, lighting, road and motion over minor contour matching. Current pass 02 remains the bounded shape correction under review.
+
+### User-requested wrap-up â€” V3 pass 02 staged checkpoint
+
+Stopped further iteration and rendering at the user's request. Pass 02 retains editable source, the exact runtime UV meshes, FBX, anchor JSON, generation recipe and a completed rear clay image. Its audit reports all source meshes manifold, runtime meshes manifold and triangulated, and the reimported FBX manifold with valid tangents; runtime/export totals agree at 38,036 triangles. Astra found the visible hull changes coherent enough to support advancing under the revised practical target, conditional on the still-pending side/top/chase views. Its provisional review is preserved separately; no final shape, material, native or AAA acceptance was awarded.
+
+Saved optional authored-engine placement and validation with the original V2 fallback, plus an opt-in ship texture helper, editor import preparation and a staged Blender coating-bake script. No V3 model, texture or anchor payload was copied into Unity. These latest preparatory changes have not been compiled, baked or checked in a new native run. The last built app remains the night candidate with V2 and the independently validated inspection rig. No render or audit job remains active. README distinguishes that app, the staged V3 work and the historical coastal archive/video.

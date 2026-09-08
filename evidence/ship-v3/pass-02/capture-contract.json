@@ -1,0 +1,209 @@
+{
+  "revision": "pass-02",
+  "resolution": [
+    1600,
+    1200
+  ],
+  "neutral_white_studio": true,
+  "bloom": false,
+  "view_transform": "AgX",
+  "views": [
+    [
+      "01-clay-rear-quarter",
+      [
+        -8,
+        10,
+        6
+      ],
+      [
+        0,
+        0,
+        0.2
+      ],
+      9.6,
+      true,
+      "ORTHO"
+    ],
+    [
+      "02-neutral-rear-quarter",
+      [
+        -8,
+        10,
+        6
+      ],
+      [
+        0,
+        0,
+        0.2
+      ],
+      9.6,
+      false,
+      "ORTHO"
+    ],
+    [
+      "03-clay-front-quarter",
+      [
+        9,
+        -11,
+        7
+      ],
+      [
+        0,
+        -0.1,
+        0.1
+      ],
+      9.6,
+      true,
+      "ORTHO"
+    ],
+    [
+      "04-neutral-front-quarter",
+      [
+        9,
+        -11,
+        7
+      ],
+      [
+        0,
+        -0.1,
+        0.1
+      ],
+      9.6,
+      false,
+      "ORTHO"
+    ],
+    [
+      "05-clay-chase",
+      [
+        0,
+        10,
+        4.4
+      ],
+      [
+        0,
+        -0.8,
+        0.05
+      ],
+      9.6,
+      true,
+      "ORTHO"
+    ],
+    [
+      "06-neutral-chase",
+      [
+        0,
+        10,
+        4.4
+      ],
+      [
+        0,
+        -0.8,
+        0.05
+      ],
+      9.6,
+      false,
+      "ORTHO"
+    ],
+    [
+      "07-clay-top",
+      [
+        0,
+        -0.001,
+        15
+      ],
+      [
+        0,
+        -0.2,
+        0
+      ],
+      10,
+      true,
+      "ORTHO"
+    ],
+    [
+      "08-clay-side",
+      [
+        12,
+        0,
+        0.8
+      ],
+      [
+        0,
+        0,
+        0.1
+      ],
+      9.6,
+      true,
+      "ORTHO"
+    ],
+    [
+      "09-C-perspective",
+      [
+        -4.1,
+        10.8,
+        4.2
+      ],
+      [
+        0,
+        -0.3,
+        0.06
+      ],
+      9.6,
+      false,
+      "PERSP"
+    ],
+    [
+      "10-C-comparison-16x9",
+      [
+        -8.2,
+        21.6,
+        8.4
+      ],
+      [
+        0,
+        -0.3,
+        0.06
+      ],
+      9.6,
+      false,
+      "PERSP"
+    ]
+  ],
+  "perspective_focal_length_mm": 45,
+  "C_comparison_resolution": [
+    1920,
+    1080
+  ],
+  "render_resume": {
+    "reason": "CPU OIDN denoiser delayed output; same saved geometry and lighting resumed without denoising",
+    "denoising": false,
+    "samples": 32,
+    "threads": 4,
+    "existing_01_samples": 48,
+    "priority": "side, top, chase first; existing images preserved"
+  },
+  "completion_status": "partial \u2014 user requested wrap-up; active renderer stopped",
+  "completed_views": [
+    {
+      "file": "01-clay-rear-quarter.png",
+      "samples": 48,
+      "denoising": false,
+      "threads": 4,
+      "resolution": [
+        1600,
+        1200
+      ]
+    }
+  ],
+  "pending_views": [
+    "02-neutral-rear-quarter",
+    "03-clay-front-quarter",
+    "04-neutral-front-quarter",
+    "05-clay-chase",
+    "06-neutral-chase",
+    "07-clay-top",
+    "08-clay-side",
+    "09-C-perspective",
+    "10-C-comparison-16x9"
+  ]
+}

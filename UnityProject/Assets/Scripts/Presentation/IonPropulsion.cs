@@ -3,7 +3,7 @@ using UnityEngine.Rendering;
 
 namespace VectorRush
 {
-    /// <summary>Short, layered translucent propulsion volumes at the authored V2 apertures.</summary>
+    /// <summary>Short translucent propulsion at optional authored apertures, with the original V2 layout as fallback.</summary>
     public sealed class IonPropulsion : MonoBehaviour
     {
         HoverVehicle vehicle;
@@ -15,6 +15,7 @@ namespace VectorRush
         readonly Renderer[] innerJets = new Renderer[3];
         readonly Renderer[] rings = new Renderer[6];
         readonly Light[] lights = new Light[2];
+        readonly float[] jetLengthScales = new float[3];
         readonly MaterialPropertyBlock properties = new MaterialPropertyBlock();
         float response;
 
@@ -30,22 +31,34 @@ namespace VectorRush
             ringMaterial = CreateMaterial(shader, "Subtle nozzle rim accents", 2, new Color(.025f,.76f,1.3f,.18f));
             plumeMesh = CreatePlume(); ringMesh = CreateRing();
             Transform parent = craft.VisualRoot ? craft.VisualRoot : craft.transform;
+            bool authored=ShipEngineAnchors.TryLoad(out var engineAnchors);
             for (int i = 0; i < 3; i++)
             {
                 float size = i == 2 ? .35f : 1f;
+                var definition=authored?engineAnchors[i]:null;
+                float mantleRadius=authored?definition.OpeningRadius*.55f:.37f*size;
+                float spineRadius=authored?definition.OpeningRadius*.22f:.13f*size;
+                jetLengthScales[i]=authored?Mathf.Clamp(definition.OpeningRadius/.509f,.2f,2f):(i==2?.60f:1f);
                 var anchor = new GameObject(i == 2 ? "Central ion aperture" : (i == 0 ? "Port ion aperture" : "Starboard ion aperture"));
                 anchor.transform.SetParent(parent, false);
                 anchor.layer = parent.gameObject.layer;
-                anchor.transform.localPosition = i == 2 ? new Vector3(0,-.08f,-2.76f) : new Vector3(i == 0 ? -1.68f : 1.68f,-.035f,-3.405f);
+                anchor.transform.localPosition = authored?definition.Exit:(i == 2 ? new Vector3(0,-.08f,-2.76f) : new Vector3(i == 0 ? -1.68f : 1.68f,-.035f,-3.405f));
                 var jet = new GameObject("Variable length thrust volume"); jet.transform.SetParent(anchor.transform, false); jets[i] = jet.transform;
                 jet.layer = anchor.layer;
-                outerJets[i] = MeshRenderer("Tapered ion mantle", jet.transform, plumeMesh, plumeMaterial, Vector3.zero, new Vector3(.37f*size,.37f*size,1));
-                innerJets[i] = MeshRenderer("White blue jet spine", jet.transform, plumeMesh, innerMaterial, new Vector3(0,0,-.02f), new Vector3(.13f*size,.13f*size,.74f));
+                outerJets[i] = MeshRenderer("Tapered ion mantle", jet.transform, plumeMesh, plumeMaterial, Vector3.zero, new Vector3(mantleRadius,mantleRadius,1));
+                innerJets[i] = MeshRenderer("White blue jet spine", jet.transform, plumeMesh, innerMaterial, new Vector3(0,0,-.02f), new Vector3(spineRadius,spineRadius,.74f));
                 var core = GameObject.CreatePrimitive(PrimitiveType.Quad); core.name = "Radiance inside engine throat";
-                core.transform.SetParent(anchor.transform,false); core.layer = anchor.layer; core.transform.localPosition = new Vector3(0,0,i == 2 ? .315f : .67f); core.transform.localScale = Vector3.one * .5f * size;
+                core.transform.SetParent(anchor.transform,false); core.layer = anchor.layer;
+                // Keep the compact radiance at the throat; the outer cavity remains physical and dark.
+                core.transform.localPosition = authored?definition.Throat-definition.Exit-Vector3.forward*.012f:new Vector3(0,0,i == 2 ? .315f : .67f);
+                core.transform.localScale = Vector3.one*(authored?definition.CompactCoreRadius*2f:.5f*size);
                 Destroy(core.GetComponent<Collider>()); cores[i] = core.GetComponent<Renderer>(); Configure(cores[i], coreMaterial);
                 for (int j = 0; j < 2; j++)
-                    rings[i*2+j] = MeshRenderer(j == 0 ? "Aperture light ring" : "Recessed accelerator ring", anchor.transform, ringMesh, ringMaterial, new Vector3(0,0,j == 0 ? .018f : .20f), Vector3.one * size * (j == 0 ? 1 : .8f));
+                {
+                    float ringDepth=authored?(j==0?.018f:(definition.Throat.z-definition.Exit.z)*.28f):(j==0?.018f:.20f);
+                    float ringScale=authored?definition.OpeningRadius*(j==0?.94f:.75f)/.334f:size*(j==0?1f:.8f);
+                    rings[i*2+j] = MeshRenderer(j == 0 ? "Aperture light ring" : "Recessed accelerator ring", anchor.transform, ringMesh, ringMaterial, new Vector3(0,0,ringDepth), Vector3.one*ringScale);
+                }
                 if (craft.IsPlayer && i < 2)
                 {
                     var lamp = new GameObject("Nozzle reflected light"); lamp.transform.SetParent(anchor.transform,false); lamp.transform.localPosition = new Vector3(0,-.10f,-.3f);
@@ -68,7 +81,7 @@ namespace VectorRush
             float flicker = 1f + .025f * Mathf.Sin(Time.time * 33f) + .015f * Mathf.Sin(Time.time * 51f);
             for (int i = 0; i < 3; i++)
             {
-                float size = i == 2 ? .60f : 1f;
+                float size = jetLengthScales[i];
                 jets[i].localScale = new Vector3(1f + response*.08f,1f + response*.08f,(.30f + response*2.1f)*size);
                 SetIntensity(outerJets[i], (.55f + response*1.0f)*flicker);
                 SetIntensity(innerJets[i], (.75f + response*1.3f)*flicker);

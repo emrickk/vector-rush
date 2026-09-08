@@ -1,0 +1,3 @@
+00:03.224  blend            | Read blend: "/Users/anping/Documents/Stuff/AI Space/Vector Rush/SourceAssets/hero-v3/pass-02/Kestrel07-v3.blend"
+/Users/anping/Documents/Stuff/AI Space/Vector Rush/SourceAssets/hero-v3/render_saved_v3.py:13: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  clay=bpy.data.materials.new('STUDIO medium gray clay');clay.diffuse_color=(.31,.33,.34,1);clay.use_nodes=True

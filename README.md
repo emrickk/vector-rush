@@ -1,12 +1,20 @@
 # VECTOR RUSH
 
-A playable, original anti-gravity racing prototype for Apple Silicon macOS. Pilot Kestrel 07 through three laps of Solstice Circuit, a 1.84 km elevated coastal course, against five rivals.
+A playable, original anti-gravity racing prototype for Apple Silicon macOS. Pilot Kestrel 07 through three laps of Solstice Circuit against five rivals. The current development direction is a night urban circuit.
 
-[Private GitHub repository](https://github.com/emrickk/vector-rush) · [Build brief](docs/GPT6-BUILD-PROMPT.md) · [Development history](docs/development-history.md) · [Final visual critique](docs/critique-coastal-final.md)
+[Private GitHub repository](https://github.com/emrickk/vector-rush) · [Build brief](docs/GPT6-BUILD-PROMPT.md) · [Development history](docs/development-history.md) · [Ship art plan](docs/ship-art-plan.md)
+
+## Current checkpoint — ship iteration paused at user request
+
+The local app contains the night scene candidate and the existing V2 ship. Its corrected native inspection rig was built and independently validated with eight [actual game screenshots](evidence/ship-native-v2-neutral-02/inspection-scope.json). The night scene's full final race/motion review is still pending.
+
+[V3 pass 02](SourceAssets/hero-v3/pass-02/) is a staged Blender model and FBX, **not yet imported into the game**. The completed [rear clay render](evidence/ship-v3/pass-02/01-clay-rear-quarter.png) shows a more coherent hull and integrated intakes. Astra's preliminary assessment supports moving toward finish work, subject to the remaining views. Exact reference matching is not required; whole-game materials, lighting, propulsion, road and motion are the next priorities once shape readiness is confirmed.
+
+Optional authored-engine support and surface-import/baking preparation are saved in source, but those latest additions have not been compiled or exercised in a new native build. No V3 textures or anchor payloads have been selected for runtime. This is a recoverable work checkpoint, not a completed AAA delivery.
 
 ## Play
 
-Open **[Builds/Vector Rush.app](Builds/Vector%20Rush.app)**. The current packaged copy is **[VectorRush-macOS-2026-09-07.zip](Builds/VectorRush-macOS-2026-09-07.zip)**. Build products stay local and are excluded from Git; source and selected evidence are in the private repository.
+Open **[Builds/Vector Rush.app](Builds/Vector%20Rush.app)** for the night candidate with V2. The **[VectorRush-macOS-2026-09-07.zip](Builds/VectorRush-macOS-2026-09-07.zip)** archive contains the earlier coastal delivery and is historical. Build products stay local and are excluded from Git; source and selected evidence are in the private repository.
 
 | Action | Keyboard | Gamepad |
 |---|---|---|
@@ -21,7 +29,7 @@ Open **[Builds/Vector Rush.app](Builds/Vector%20Rush.app)**. The current package
 
 Menus support the pointer. Pause includes Resume, Restart, camera shake and Quit. Results supports another race.
 
-## Current build and evidence
+## Previous coastal delivery and evidence
 
 - Revised Blender ship with layered armor, open structure and recessed engines; two authored tower designs grouped on substantial waterfronts; textured cliffs, additive exhaust, bloom and contact shading.
 - **19/19 Unity tests passed**, covering race progress, finish order, recovery and paused input.
@@ -29,13 +37,13 @@ Menus support the pointer. Pause includes Resume, Restart, camera shake and Quit
 - **1920×1080 on Apple M2 Max:** 60-second standalone sample, VSync enabled, mean 16.69 ms, P95 16.76 ms, P99 16.96 ms. These are observed frame intervals, not isolated GPU timings. Unity reported 203.6 MiB allocated memory. No Editor or asset generation ran during this sample.
 - Native pointer activation checked at 1280×800 and 1920×1080, including outside-click rejection. Keyboard start/pause/resume and throttle were checked. Physical gamepad hardware and a sustained human handling assessment remain untested.
 
-[Current gameplay preview](evidence/gameplay-final/VectorRush-gameplay-current.mp4): 15 seconds, 1280×720, 24 fps, silent. This is actual native gameplay with automated steering, recorded at fixed simulation time; it is separate from the real-time performance sample.
+[Previous coastal gameplay preview](evidence/gameplay-final/VectorRush-gameplay-current.mp4): 15 seconds, 1280×720, 24 fps, silent. This is actual native gameplay with automated steering, recorded at fixed simulation time; it is separate from the real-time performance sample and does not show the newer night candidate.
 
-![Current native race view](evidence/run-09-coastal/06-city-descent.png)
+![Previous coastal native race view](evidence/run-09-coastal/06-city-descent.png)
 
 The native race evidence is in [run-09-coastal](evidence/run-09-coastal). The unobstructed dedicated cliff inspection is in [coast-inspection-10](evidence/coast-inspection-10); the earlier obstructed inspection is retained as a failed capture. Earlier runs and negative diagnostics remain labeled history, not current presentation evidence.
 
-## Honest limits
+## Previous coastal review and general limits
 
 This is a working prototype, **not an AAA-quality game**. The independent critic accepts the inspected visual integration but rejects the AAA target. Broad cliff planes and texture repetition, sparse quays, dark tower glazing and simple water remain visible gaps. Minor close-up craft details and some environment export cleanup also remain. The previous severe road reflection artifact is absent from the inspected final views after using a matte Lit deck; other materials retain reflections.
 
@@ -44,7 +52,8 @@ The slice includes one course, one craft shape, five AI rivals and original proc
 ## Project and editable sources
 
 - [UnityProject](UnityProject/) — Unity **6000.6.0f1**, URP **17.6.0**. Open `Assets/Scenes/Solstice.unity` and press Play.
-- [SourceAssets/hero-v2](SourceAssets/hero-v2/) — current editable ship, export generator, engine anchors and inspection metadata.
+- [SourceAssets/hero-v2](SourceAssets/hero-v2/) — currently imported ship, export generator, engine anchors and inspection metadata.
+- [SourceAssets/hero-v3](SourceAssets/hero-v3/) — staged new ship, preserved rejected pass 01 and partial pass 02 evidence; not integrated.
 - [SourceAssets/environment-v2](SourceAssets/environment-v2/) — editable tower/cliff kit, export scripts and texture sources.
 - [Asset regeneration guide](docs/asset-regeneration.md) — safe staged rebuilds that protect the reviewed live assets.
 - [Reference concept](references/solstice-chase-concept.png) — generated art direction, distinct from actual runtime and Blender inspection images.
