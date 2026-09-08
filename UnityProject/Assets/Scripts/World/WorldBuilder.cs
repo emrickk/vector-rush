@@ -145,18 +145,7 @@ namespace VectorRush
             var water=waterShader?new Material(waterShader):MakeMaterial("Ocean",new Color(.015f,.25f,.38f),.95f,.4f);
             if(waterShader)ownedMaterials.Add(water);
             Box("Pacific Ocean",new Vector3(0,-1,0),new Vector3(16000,.5f,16000),Quaternion.identity,water);
-            var random=new System.Random(1181);
-            for(int i=0;i<30;i++) {
-                float angle=(float)random.NextDouble()*Mathf.PI*2;
-                float radius= i<30? 95+(float)random.NextDouble()*65 : 550+(float)random.NextDouble()*700;
-                Vector3 p=new Vector3(Mathf.Sin(angle)*radius,0,Mathf.Cos(angle)*radius);
-                float height=24+(float)random.NextDouble()*100;
-                if(i<30){
-                    Box("Coastal tower",p+Vector3.up*height*.5f,new Vector3(12+(float)random.NextDouble()*18,height,15+(float)random.NextDouble()*18),Quaternion.Euler(0,i*19,0),i%3==0?glass:ivory);
-                    Box("Tower crown",p+Vector3.up*(height+1),new Vector3(23,2,23),Quaternion.Euler(0,i*19,0),signal);
-                    for(int k=12;k<height;k+=9) Box("Facade band",p+Vector3.up*k,new Vector3(24,.6f,24),Quaternion.Euler(0,i*19,0),metal);
-                }
-            }
+            if(!gameObject.AddComponent<AuthoredCity>().Build(this,track))Debug.LogWarning("Authored coastal city assets are missing");
             var start=track.Evaluate(.015f);var rot=Quaternion.LookRotation(start.Forward,start.Up);
             for(int i=0;i<6;i++){
                 Box("Grandstand terrace",start.Position+start.Right*(24+i*3)+start.Up*(i*1.5f-1),new Vector3(4,1.5f,85),rot,ivory);

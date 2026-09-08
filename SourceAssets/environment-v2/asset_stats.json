@@ -1,0 +1,62 @@
+{
+  "Solstice_TerraceTower_A": {
+    "vertices": 21054,
+    "triangles": 39452,
+    "materials": [
+      "Graphite",
+      "Ivory",
+      "Glass",
+      "Vegetation",
+      "Metal"
+    ],
+    "dimensions_metres_blender_xyz": [
+      27.0,
+      29.850000381469727,
+      74.27545166015625
+    ],
+    "origin": "local ground center; cliff underwater skirt extends -3m",
+    "fbx_axes": "Y up, -Z forward export convention for Unity; model front is Blender -Y",
+    "renderers": 1
+  },
+  "Solstice_SplitTower_B": {
+    "vertices": 12660,
+    "triangles": 22916,
+    "materials": [
+      "Graphite",
+      "Ivory",
+      "Glass",
+      "Vegetation",
+      "Metal"
+    ],
+    "dimensions_metres_blender_xyz": [
+      29.0,
+      28.850000381469727,
+      72.1449966430664
+    ],
+    "origin": "local ground center; cliff underwater skirt extends -3m",
+    "fbx_axes": "Y up, -Z forward export convention for Unity; model front is Blender -Y",
+    "renderers": 1
+  },
+  "Solstice_CoastalCliff_C": {
+    "vertices": 18965,
+    "triangles": 37424,
+    "materials": [
+      "Rock",
+      "Vegetation"
+    ],
+    "dimensions_metres_blender_xyz": [
+      88.13298034667969,
+      61.2621955871582,
+      46.91175842285156
+    ],
+    "origin": "local ground center; cliff underwater skirt extends -3m",
+    "fbx_axes": "Y up, -Z forward export convention for Unity; model front is Blender -Y",
+    "renderers": 1,
+    "textures": [
+      "Solstice_Limestone_Albedo.png",
+      "Solstice_Limestone_Normal.png",
+      "Solstice_Limestone_Roughness.png",
+      "Solstice_Limestone_MetallicSmoothness.png"
+    ]
+  }
+}
