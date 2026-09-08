@@ -11,7 +11,7 @@ namespace VectorRush
         Material road, ivory, graphite, signal, cyan, metal, glass, rock;
         readonly List<Mesh> ownedMeshes=new List<Mesh>();
         readonly List<Material> ownedMaterials=new List<Material>();
-        Texture2D roadGrain;
+        Texture2D roadGrain,roadNormals,roadSmoothness;
         ReflectionProbe coastalProbe;
         public Material Ivory => ivory;
         public Material Signal => signal;
@@ -32,15 +32,26 @@ namespace VectorRush
         public void Build(TrackPath path)
         {
             track=path;track.Ensure();
-            road=MakeMaterial("Graphite composite running surface",new Color(.16f,.205f,.23f),.16f,0f,templateName:"RoadSurface");
-            roadGrain=new Texture2D(256,256,TextureFormat.RGBA32,true){name="Asphalt microaggregate",wrapMode=TextureWrapMode.Repeat,filterMode=FilterMode.Trilinear,anisoLevel=8};
-            var grainRandom=new System.Random(419);var pixels=new Color[256*256];
-            for(int i=0;i<pixels.Length;i++){float n=.78f+(float)grainRandom.NextDouble()*.22f;pixels[i]=new Color(n,n,n,1);}
-            roadGrain.SetPixels(pixels);roadGrain.Apply(true,true);road.SetTexture("_BaseMap",roadGrain);road.SetTextureScale("_BaseMap",new Vector2(12,5));
-            ivory=MakeMaterial("Ceramic ivory",new Color(.88f,.88f,.79f),.54f,.18f);
+            road=MakeMaterial("Damp graphite running deck",new Color(.075f,.089f,.108f),.85f,0f,templateName:"RoadSurface");
+            const int textureSize=512;
+            roadGrain=new Texture2D(textureSize,textureSize,TextureFormat.RGBA32,true){name="Deck aggregate",wrapMode=TextureWrapMode.Repeat,filterMode=FilterMode.Trilinear,anisoLevel=8};
+            roadNormals=new Texture2D(textureSize,textureSize,TextureFormat.RGBA32,true,true){name="Deck fine relief",wrapMode=TextureWrapMode.Repeat,filterMode=FilterMode.Trilinear,anisoLevel=8};
+            roadSmoothness=new Texture2D(textureSize,textureSize,TextureFormat.RGBA32,true,true){name="Uneven damp surface",wrapMode=TextureWrapMode.Repeat,filterMode=FilterMode.Trilinear,anisoLevel=8};
+            var random=new System.Random(419);var pixels=new Color[textureSize*textureSize];var normals=new Color[pixels.Length];var masks=new Color[pixels.Length];
+            for(int y=0;y<textureSize;y++)for(int x=0;x<textureSize;x++){
+                int index=y*textureSize+x;float grain=(float)random.NextDouble();
+                float patch=Mathf.PerlinNoise(x*.021f+2.7f,y*.009f+1.1f);
+                float streak=Mathf.PerlinNoise(x*.12f,y*.005f);
+                float shade=.72f+grain*.22f+patch*.08f;pixels[index]=new Color(shade,shade,shade,1);
+                normals[index]=new Color(.5f+(grain-.5f)*.2f,.5f+((float)random.NextDouble()-.5f)*.17f,1,1);
+                masks[index]=new Color(0,0,0,Mathf.Lerp(.27f,.78f,Mathf.SmoothStep(.2f,.8f,patch*.65f+streak*.35f)));
+            }
+            roadGrain.SetPixels(pixels);roadGrain.Apply(true,true);roadNormals.SetPixels(normals);roadNormals.Apply(true,true);roadSmoothness.SetPixels(masks);roadSmoothness.Apply(true,true);
+            road.SetTexture("_BaseMap",roadGrain);road.SetTexture("_BumpMap",roadNormals);road.SetTexture("_MetallicGlossMap",roadSmoothness);road.SetTextureScale("_BaseMap",new Vector2(3,1));
+            ivory=MakeMaterial("Ceramic ivory",new Color(.22f,.28f,.33f),.5f,.3f);
             graphite=MakeMaterial("Structural graphite",new Color(.025f,.05f,.065f),.55f,.5f);
             signal=MakeMaterial("Signal citron",new Color(.56f,.75f,.006f),.4f,0f);
-            cyan=MakeMaterial("Ion turquoise",new Color(.015f,.88f,.81f),.81f,.3f,new Color(.075f,4.4f,4.05f));
+            cyan=MakeMaterial("Ion turquoise",new Color(.01f,.52f,.67f),.6f,.1f,new Color(.04f,2.7f,3.8f));
             metal=MakeMaterial("Brushed titanium",new Color(.3f,.37f,.4f),.7f,.8f);
             glass=MakeMaterial("Smoked glass",new Color(.025f,.1f,.14f),.98f,.7f);
             rock=MakeMaterial("Basalt",new Color(.17f,.23f,.23f),.08f);
@@ -50,7 +61,7 @@ namespace VectorRush
                 Ribbon("Ivory edge",side*10.2f,side*10.48f,.025f,ivory,false);
                 Ribbon("Drain channel",side*10.6f,side*10.85f,.03f,metal,false);
                 Ribbon("Shoulder",side*11f,side*12f,-.02f,ivory,true);
-                Wall(side);Ribbon("Barrier luminous cap",side*11.72f,side*12.06f,2.03f,cyan,false);
+                Wall(side);Ribbon("Barrier luminous cap",side*11.78f,side*11.91f,2.03f,cyan,false);
             }
             for(int i=0;i<200;i++) {
                 var f=track.Evaluate(i/200f);
@@ -62,14 +73,14 @@ namespace VectorRush
                 if(i%5==0) Support(f);
             }
             for(int i=0;i<7;i++) BoostStrip(.06f+i*.135f);
-            Gate(0,"SOLSTICE",true);
-            Gate(.29f,"VECTOR  /  01",false);Gate(.56f,"PACIFIC  /  02",false);Gate(.8f,"FINAL SECTOR",false);
+            Gate(0,"NOCTURNE",true);
+            Gate(.29f,"VECTOR  /  01",false);Gate(.56f,"MIDNIGHT  /  02",false);Gate(.8f,"FINAL SECTOR",false);
             for(int i=0;i<7;i++) {float t=.35f+i*.009f;var f=track.Evaluate(t);
                 var q=Quaternion.LookRotation(f.Forward,f.Up);
                 for(int s=-1;s<=1;s+=2) Box("Aero tunnel rib",f.Position+f.Right*s*14+f.Up*9,new Vector3(.9f,19,1.1f),q*Quaternion.Euler(0,0,s*12),ivory);
                 Box("Tunnel crown",f.Position+f.Up*18,new Vector3(24,.75f,1.1f),q,ivory);
             }
-            BuildLandscape();gameObject.AddComponent<CoastalSetDressing>().Build(this,track);BuildLighting();
+            gameObject.AddComponent<NightDistrict>().Build(this,track);gameObject.AddComponent<NightTrackLighting>().Build(this,track);BuildLighting();
         }
         void Ribbon(string name,float left,float right,float height,Material mat,bool collider)
         {
@@ -103,7 +114,7 @@ namespace VectorRush
         }
         void MeshObject(string name,Vector3[] vertices,Vector2[] uv,int[] triangles,Material mat,bool collider)
         {
-            var mesh=new Mesh{name=name};mesh.vertices=vertices;mesh.uv=uv;mesh.triangles=triangles;mesh.RecalculateNormals();mesh.RecalculateBounds();ownedMeshes.Add(mesh);
+            var mesh=new Mesh{name=name};mesh.vertices=vertices;mesh.uv=uv;mesh.triangles=triangles;mesh.RecalculateNormals();mesh.RecalculateTangents();mesh.RecalculateBounds();ownedMeshes.Add(mesh);
             var go=new GameObject(name);go.transform.SetParent(transform,false);go.AddComponent<MeshFilter>().sharedMesh=mesh;go.AddComponent<MeshRenderer>().sharedMaterial=mat;
             if(collider) go.AddComponent<MeshCollider>().sharedMesh=mesh;
         }
@@ -161,15 +172,15 @@ namespace VectorRush
         }
         void BuildLighting()
         {
-            RenderSettings.fog=true;RenderSettings.fogColor=new Color(.5f,.72f,.79f);RenderSettings.fogMode=FogMode.ExponentialSquared;RenderSettings.fogDensity=.0007f;
-            RenderSettings.ambientMode=AmbientMode.Custom;var ambient=new SphericalHarmonicsL2();ambient.AddAmbientLight(new Color(.36f,.43f,.49f));RenderSettings.ambientProbe=ambient;
-            var sun=new GameObject("Pacific afternoon sun");sun.transform.SetParent(transform);sun.transform.rotation=Quaternion.Euler(32,-32,0);
-            var light=sun.AddComponent<Light>();light.type=LightType.Directional;light.color=new Color(1,.965f,.88f);light.intensity=1.65f;light.shadows=LightShadows.Soft;light.shadowStrength=.75f;RenderSettings.sun=light;
-            var skyShader=Shader.Find("Skybox/Procedural");if(skyShader){var sky=new Material(skyShader);ownedMaterials.Add(sky);sky.SetFloat("_SunSize",.025f);sky.SetFloat("_AtmosphereThickness",.8f);sky.SetColor("_SkyTint",new Color(.48f,.65f,.76f));sky.SetColor("_GroundColor",new Color(.25f,.4f,.45f));sky.SetFloat("_Exposure",1.15f);RenderSettings.skybox=sky;}
-            var probeObject=new GameObject("Coastal reflection environment");probeObject.transform.SetParent(transform);probeObject.transform.position=new Vector3(0,50,-180);
-            coastalProbe=probeObject.AddComponent<ReflectionProbe>();coastalProbe.mode=ReflectionProbeMode.Realtime;coastalProbe.refreshMode=ReflectionProbeRefreshMode.ViaScripting;coastalProbe.timeSlicingMode=ReflectionProbeTimeSlicingMode.AllFacesAtOnce;coastalProbe.resolution=256;coastalProbe.size=new Vector3(1800,600,1800);coastalProbe.farClipPlane=2500;coastalProbe.intensity=1f;
+            RenderSettings.fog=true;RenderSettings.fogColor=new Color(.008f,.016f,.037f);RenderSettings.fogMode=FogMode.ExponentialSquared;RenderSettings.fogDensity=.0018f;
+            RenderSettings.ambientMode=AmbientMode.Custom;var ambient=new SphericalHarmonicsL2();ambient.AddAmbientLight(new Color(.045f,.065f,.115f));RenderSettings.ambientProbe=ambient;
+            var moon=new GameObject("Midnight soft key");moon.transform.SetParent(transform);moon.transform.rotation=Quaternion.Euler(43,-28,0);
+            var light=moon.AddComponent<Light>();light.type=LightType.Directional;light.color=new Color(.5f,.67f,1);light.intensity=.75f;light.shadows=LightShadows.Soft;light.shadowStrength=.65f;RenderSettings.sun=light;
+            var skyShader=Shader.Find("VectorRush/Night Sky");if(skyShader){var sky=new Material(skyShader);ownedMaterials.Add(sky);RenderSettings.skybox=sky;}
+            var probeObject=new GameObject("Night architecture reflection environment");probeObject.transform.SetParent(transform);probeObject.transform.position=new Vector3(0,58,-170);
+            coastalProbe=probeObject.AddComponent<ReflectionProbe>();coastalProbe.mode=ReflectionProbeMode.Realtime;coastalProbe.refreshMode=ReflectionProbeRefreshMode.ViaScripting;coastalProbe.timeSlicingMode=ReflectionProbeTimeSlicingMode.AllFacesAtOnce;coastalProbe.resolution=256;coastalProbe.size=new Vector3(1800,600,1800);coastalProbe.farClipPlane=1600;coastalProbe.intensity=.8f;coastalProbe.cullingMask=~(1<<8);
         }
         IEnumerator Start(){yield return new WaitForEndOfFrame();if(coastalProbe)coastalProbe.RenderProbe();}
-        void OnDestroy(){foreach(var m in ownedMeshes)if(m)Destroy(m);foreach(var m in ownedMaterials)if(m)Destroy(m);if(roadGrain)Destroy(roadGrain);}
+        void OnDestroy(){foreach(var m in ownedMeshes)if(m)Destroy(m);foreach(var m in ownedMaterials)if(m)Destroy(m);if(roadGrain)Destroy(roadGrain);if(roadNormals)Destroy(roadNormals);if(roadSmoothness)Destroy(roadSmoothness);}
     }
 }

@@ -143,13 +143,13 @@ namespace VectorRush
             Text("ANTI-GRAVITY RACING / VOL. 01", 136, y - 10, 500, 30, 20, ivory);
             Text("VECTOR", 64, y + 28, 840, 140, 116, ivory, true);
             Text("RUSH", 64, y + 141, 840, 145, 116, acid, true);
-            Text("SOLSTICE CIRCUIT", 76, y + 320, 680, 40, 30, ivory, true);
-            Text("PACIFIC EXHIBITION  /  6 PILOTS  /  3 LAPS", 76, y + 367, 720, 32, 19, muted);
+            Text("NOCTURNE CIRCUIT", 76, y + 320, 680, 40, 30, ivory, true);
+            Text("MIDNIGHT EXHIBITION  /  6 PILOTS  /  3 LAPS", 76, y + 367, 720, 32, 19, muted);
             if (Button("START RACE", "ENTER / A", 76, y + 440, 450, true)) director.StartRace();
             ShakeToggle(76, y + 525, 450);
             if (Button("QUIT", "", 76, y + 589, 450, false, 48)) Application.Quit();
             Controls(76, height - 128);
-            Text("01 — SOLSTICE", width - 380, height - 99, 306, 32, 20, ivory, false, TextAnchor.MiddleRight);
+            Text("02 / NOCTURNE", width - 380, height - 99, 306, 32, 20, ivory, false, TextAnchor.MiddleRight);
             Text("ORIGINAL RACE PROTOTYPE", width - 420, height - 64, 346, 25, 14, muted, false, TextAnchor.MiddleRight);
         }
 
@@ -164,7 +164,7 @@ namespace VectorRush
             Text("LAP", 323, 64, 136, 27, 15, muted);
             Text(Mathf.Clamp(director.Lap, 1, director.TotalLaps).ToString("00") + " / " + director.TotalLaps.ToString("00"), 321, 96, 150, 43, 31, ivory, true);
 
-            Text("SOLSTICE / PACIFIC", width * .5f - 210, 57, 420, 30, 19, ivory, false, TextAnchor.MiddleCenter);
+            Text("NOCTURNE / MIDNIGHT", width * .5f - 210, 57, 420, 30, 19, ivory, false, TextAnchor.MiddleCenter);
             Text("VECTOR RUSH", width * .5f - 210, 88, 420, 26, 13, muted, false, TextAnchor.MiddleCenter);
             Box(width - 449, 54, 394, 128, ink);
             Text("RACE TIME", width - 391, 57, 315, 26, 15, muted, false, TextAnchor.MiddleRight);
@@ -215,7 +215,7 @@ namespace VectorRush
             Box(0, 0, width, height, new Color(.015f, .04f, .05f, .75f));
             float x = width * .5f - 240, y = height * .5f - 230;
             Text("RACE PAUSED", x, y, 480, 70, 54, ivory, true);
-            Text("SOLSTICE CIRCUIT", x + 3, y + 82, 480, 30, 18, muted);
+            Text("NOCTURNE CIRCUIT", x + 3, y + 82, 480, 30, 18, muted);
             if (Button("RESUME", "ESC / START", x, y + 148, 480, true)) director.TogglePause();
             if (Button("RESTART RACE", "R", x, y + 233, 480)) director.RestartRace();
             ShakeToggle(x, y + 309, 480);
@@ -227,11 +227,11 @@ namespace VectorRush
         {
             GUI.DrawTexture(new Rect(0, 0, width * .78f, height), sideShade);
             float x = 78, y = height * .20f;
-            Text("PACIFIC EXHIBITION / COMPLETE", x, y, 790, 34, 19, acid);
+            Text("MIDNIGHT EXHIBITION / COMPLETE", x, y, 790, 34, 19, acid);
             Text("RACE FINISHED", x - 7, y + 47, 1000, 111, 78, ivory, true);
             Text(director.Position.ToString("00"), x - 4, y + 181, 245, 165, 137, acid, true);
             Text("FINAL POSITION", x + 268, y + 231, 400, 40, 23, ivory);
-            Text("SOLSTICE CIRCUIT / 3 LAPS", x + 268, y + 276, 460, 32, 17, muted);
+            Text("NOCTURNE CIRCUIT / 3 LAPS", x + 268, y + 276, 460, 32, 17, muted);
             Box(x, y + 379, 650, 1, muted);
             Text("TOTAL TIME", x, y + 407, 270, 28, 17, muted);
             Text(TimeLabel(director.RaceTime), x, y + 442, 300, 55, 36, ivory, true);

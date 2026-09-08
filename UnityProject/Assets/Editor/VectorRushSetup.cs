@@ -27,6 +27,10 @@ namespace VectorRush.Editor
             }
             GraphicsSettings.defaultRenderPipeline=pipeline;QualitySettings.renderPipeline=pipeline;
             var rendererData=AssetDatabase.LoadAssetAtPath<UniversalRendererData>("Assets/Settings/VectorRenderer.asset");
+            rendererData.renderingMode=RenderingMode.ForwardPlus;
+            var lightSettings=new SerializedObject(pipeline);
+            lightSettings.FindProperty("m_AdditionalLightsRenderingMode").intValue=(int)LightRenderingMode.PerPixel;
+            lightSettings.ApplyModifiedPropertiesWithoutUndo();pipeline.maxAdditionalLightsCount=8;
             rendererData.postProcessData=AssetDatabase.LoadAssetAtPath<PostProcessData>("Packages/com.unity.render-pipelines.universal/Runtime/Data/PostProcessData.asset");
             if(!rendererData.postProcessData)throw new Exception("URP post-processing resource is missing");
             ScreenSpaceAmbientOcclusion occlusion=null;
@@ -62,14 +66,16 @@ namespace VectorRush.Editor
             if(!road){road=new Material(surface);AssetDatabase.CreateAsset(road,"Assets/Resources/RoadSurface.mat");}
             // A diffuse composite deck avoids the static harbor cubemap projecting
             // large reflected silhouettes over the driving line. Other surfaces retain reflections.
-            road.SetFloat("_EnvironmentReflections",0);road.SetFloat("_SpecularHighlights",0);
-            road.EnableKeyword("_ENVIRONMENTREFLECTIONS_OFF");road.EnableKeyword("_SPECULARHIGHLIGHTS_OFF");
+            road.SetFloat("_EnvironmentReflections",0);road.SetFloat("_SpecularHighlights",1);
+            road.EnableKeyword("_ENVIRONMENTREFLECTIONS_OFF");road.DisableKeyword("_SPECULARHIGHLIGHTS_OFF");
+            road.SetTexture("_BumpMap",Texture2D.normalTexture);road.SetFloat("_BumpScale",.25f);road.EnableKeyword("_NORMALMAP");
+            road.SetTexture("_MetallicGlossMap",Texture2D.whiteTexture);road.EnableKeyword("_METALLICSPECGLOSSMAP");
             road.SetFloat("_Metallic",0);road.SetFloat("_Smoothness",.16f);road.SetColor("_EmissionColor",Color.black);road.EnableKeyword("_EMISSION");EditorUtility.SetDirty(road);
             PrepareCoastalMaterial();
             // The lit template retains only needed variants; these small shaders are used by name.
             var gs=new SerializedObject(AssetDatabase.LoadAllAssetsAtPath("ProjectSettings/GraphicsSettings.asset")[0]);
             var shaders=gs.FindProperty("m_AlwaysIncludedShaders");
-            foreach(string name in new[]{"Skybox/Procedural","VectorRush/Ocean","Universal Render Pipeline/Unlit","VectorRush/Ion Trail"}){
+            foreach(string name in new[]{"Skybox/Procedural","VectorRush/Ocean","Universal Render Pipeline/Unlit","VectorRush/Ion Trail","VectorRush/NightWindows","VectorRush/Night Sky"}){
                 var shader=Shader.Find(name);if(!shader)continue;bool found=false;
                 for(int i=0;i<shaders.arraySize;i++)if(shaders.GetArrayElementAtIndex(i).objectReferenceValue==shader)found=true;
                 if(!found){int i=shaders.arraySize;shaders.InsertArrayElementAtIndex(i);shaders.GetArrayElementAtIndex(i).objectReferenceValue=shader;}

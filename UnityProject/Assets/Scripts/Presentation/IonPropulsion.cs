@@ -3,50 +3,112 @@ using UnityEngine.Rendering;
 
 namespace VectorRush
 {
-    /// <summary>Dedicated additive exhaust, separated from opaque craft and track materials.</summary>
+    /// <summary>Short, layered translucent propulsion volumes at the authored V2 apertures.</summary>
     public sealed class IonPropulsion : MonoBehaviour
     {
         HoverVehicle vehicle;
-        Material wakeMaterial,coreMaterial;
-        readonly TrailRenderer[] wakes=new TrailRenderer[2];
-        readonly Renderer[] cores=new Renderer[2];
-        readonly Light[] lights=new Light[2];
-        readonly MaterialPropertyBlock properties=new MaterialPropertyBlock();
+        Material plumeMaterial, innerMaterial, coreMaterial, ringMaterial;
+        Mesh plumeMesh, ringMesh;
+        readonly Transform[] jets = new Transform[3];
+        readonly Renderer[] cores = new Renderer[3];
+        readonly Renderer[] outerJets = new Renderer[3];
+        readonly Renderer[] innerJets = new Renderer[3];
+        readonly Renderer[] rings = new Renderer[6];
+        readonly Light[] lights = new Light[2];
+        readonly MaterialPropertyBlock properties = new MaterialPropertyBlock();
+        float response;
 
         public void Initialize(HoverVehicle craft)
         {
-            vehicle=craft;
-            var shader=Shader.Find("VectorRush/Ion Trail");
-            if(!shader){Debug.LogError("Ion Trail shader missing from build");enabled=false;return;}
-            wakeMaterial=new Material(shader){name="Transparent ion wake"};
-            coreMaterial=new Material(shader){name="Radiant thrust core"};
-            coreMaterial.SetFloat("_Radial",1);
-            for(int i=0;i<2;i++){
-                var anchor=new GameObject("Port "+(i==0?"L":"R")+" ion nozzle");
-                anchor.transform.SetParent(craft.VisualRoot?craft.VisualRoot:craft.transform,false);
-                anchor.transform.localPosition=new Vector3(i==0?-1.68f:1.68f,-.035f,-3.43f);
-                var trail=anchor.AddComponent<TrailRenderer>();wakes[i]=trail;
-                trail.sharedMaterial=wakeMaterial;trail.shadowCastingMode=ShadowCastingMode.Off;trail.receiveShadows=false;
-                trail.textureMode=LineTextureMode.Stretch;trail.minVertexDistance=.2f;trail.numCapVertices=2;trail.numCornerVertices=2;
-                trail.widthCurve=new AnimationCurve(new Keyframe(0,.25f),new Keyframe(.2f,.13f),new Keyframe(1,0));
-                var gradient=new Gradient();gradient.SetKeys(new[]{new GradientColorKey(Color.white,0),new GradientColorKey(new Color(.1f,.55f,1),1)},new[]{new GradientAlphaKey(.8f,0),new GradientAlphaKey(.18f,.3f),new GradientAlphaKey(0,1)});trail.colorGradient=gradient;
-                var core=GameObject.CreatePrimitive(PrimitiveType.Quad);core.name="Recessed ion radiance";core.transform.SetParent(anchor.transform,false);core.transform.localPosition=Vector3.forward*.57f;core.transform.localScale=Vector3.one*.68f;Destroy(core.GetComponent<Collider>());
-                cores[i]=core.GetComponent<Renderer>();cores[i].sharedMaterial=coreMaterial;cores[i].shadowCastingMode=ShadowCastingMode.Off;cores[i].receiveShadows=false;
-                if(craft.IsPlayer){lights[i]=anchor.AddComponent<Light>();lights[i].type=LightType.Point;lights[i].color=new Color(.03f,.8f,1);lights[i].range=4;lights[i].shadows=LightShadows.None;}
+            if (vehicle) return;
+            vehicle = craft;
+            var shader = Resources.Load<Shader>("Shaders/IonPlume");
+            if (!shader) { Debug.LogError("Ion Plume shader missing from Resources"); enabled = false; return; }
+            plumeMaterial = CreateMaterial(shader, "Translucent cyan exhaust mantle", 0, new Color(.025f,.58f,1.1f,.26f));
+            innerMaterial = CreateMaterial(shader, "Pale inner ion jet", 0, new Color(.55f,.86f,1.1f,.24f));
+            coreMaterial = CreateMaterial(shader, "Recessed pale plasma core", 1, new Color(.65f,.88f,1.05f,.95f));
+            ringMaterial = CreateMaterial(shader, "Thin cyan nozzle annuli", 2, new Color(.025f,.76f,1.3f,.72f));
+            plumeMesh = CreatePlume(); ringMesh = CreateRing();
+            Transform parent = craft.VisualRoot ? craft.VisualRoot : craft.transform;
+            for (int i = 0; i < 3; i++)
+            {
+                float size = i == 2 ? .35f : 1f;
+                var anchor = new GameObject(i == 2 ? "Central ion aperture" : (i == 0 ? "Port ion aperture" : "Starboard ion aperture"));
+                anchor.transform.SetParent(parent, false);
+                anchor.layer = parent.gameObject.layer;
+                anchor.transform.localPosition = i == 2 ? new Vector3(0,-.08f,-2.76f) : new Vector3(i == 0 ? -1.68f : 1.68f,-.035f,-3.405f);
+                var jet = new GameObject("Variable length thrust volume"); jet.transform.SetParent(anchor.transform, false); jets[i] = jet.transform;
+                jet.layer = anchor.layer;
+                outerJets[i] = MeshRenderer("Tapered ion mantle", jet.transform, plumeMesh, plumeMaterial, Vector3.zero, new Vector3(.37f*size,.37f*size,1));
+                innerJets[i] = MeshRenderer("White blue jet spine", jet.transform, plumeMesh, innerMaterial, new Vector3(0,0,-.02f), new Vector3(.13f*size,.13f*size,.74f));
+                var core = GameObject.CreatePrimitive(PrimitiveType.Quad); core.name = "Radiance inside engine throat";
+                core.transform.SetParent(anchor.transform,false); core.layer = anchor.layer; core.transform.localPosition = new Vector3(0,0,i == 2 ? .315f : .67f); core.transform.localScale = Vector3.one * .55f * size;
+                Destroy(core.GetComponent<Collider>()); cores[i] = core.GetComponent<Renderer>(); Configure(cores[i], coreMaterial);
+                for (int j = 0; j < 2; j++)
+                    rings[i*2+j] = MeshRenderer(j == 0 ? "Aperture light ring" : "Recessed accelerator ring", anchor.transform, ringMesh, ringMaterial, new Vector3(0,0,j == 0 ? .018f : .20f), Vector3.one * size * (j == 0 ? 1 : .8f));
+                if (craft.IsPlayer && i < 2)
+                {
+                    var lamp = new GameObject("Nozzle reflected light"); lamp.transform.SetParent(anchor.transform,false); lamp.transform.localPosition = new Vector3(0,-.10f,-.3f);
+                    lights[i] = lamp.AddComponent<Light>(); lights[i].type = LightType.Point; lights[i].color = new Color(.06f,.62f,1f); lights[i].range = 3.6f; lights[i].shadows = LightShadows.None;
+                }
             }
+            var effects = craft.GetComponent<VehicleVFX>();
+            if (!effects) effects = craft.gameObject.AddComponent<VehicleVFX>();
+            effects.Initialize(craft);
         }
+
         void LateUpdate()
         {
-            if(!vehicle||!wakeMaterial)return;
-            float speed=Mathf.Clamp01(vehicle.SpeedKph/340f);bool boost=vehicle.IsBoosting;
-            float intensity=(boost?5.5f:1.4f+speed*1.4f)*(1+.025f*Mathf.Sin(Time.time*47));
-            properties.SetFloat("_Intensity",intensity);
-            for(int i=0;i<2;i++){
-                wakes[i].emitting=vehicle.SpeedKph>18;wakes[i].time=boost?.18f:Mathf.Lerp(.035f,.08f,speed);wakes[i].widthMultiplier=boost?1.7f:1;
-                cores[i].SetPropertyBlock(properties);
-                if(lights[i])lights[i].intensity=boost?2.8f:.65f+speed*.6f;
+            if (!vehicle || !plumeMaterial) return;
+            var phase = RaceDirector.Instance ? RaceDirector.Instance.Phase : RacePhase.Menu;
+            float speed = Mathf.Clamp01(vehicle.SpeedKph / 340f);
+            bool boosting = phase == RacePhase.Racing && vehicle.IsBoosting;
+            float desired = phase == RacePhase.Racing ? (boosting ? 1f : .18f + speed * .50f) : .08f;
+            response = Mathf.Lerp(response, desired, 1f - Mathf.Exp(-9f * Time.deltaTime));
+            float flicker = 1f + .025f * Mathf.Sin(Time.time * 33f) + .015f * Mathf.Sin(Time.time * 51f);
+            for (int i = 0; i < 3; i++)
+            {
+                float size = i == 2 ? .60f : 1f;
+                jets[i].localScale = new Vector3(1f + response*.12f,1f + response*.12f,(.32f + response*3.65f)*size);
+                SetIntensity(outerJets[i], (.65f + response*1.45f)*flicker);
+                SetIntensity(innerJets[i], (.75f + response*1.8f)*flicker);
+                SetIntensity(cores[i], (1.15f + response*1.3f)*flicker);
+                SetIntensity(rings[i*2], 1.05f + response*.85f);
+                SetIntensity(rings[i*2+1], .8f + response*.65f);
+                if (i < 2 && lights[i]) lights[i].intensity = .6f + response*2.5f;
             }
         }
-        void OnDestroy(){if(wakeMaterial)Destroy(wakeMaterial);if(coreMaterial)Destroy(coreMaterial);}
+
+        void SetIntensity(Renderer renderer, float value) { properties.SetFloat("_Intensity",value); renderer.SetPropertyBlock(properties); }
+        static Material CreateMaterial(Shader shader, string name, float mode, Color tint)
+        { var material = new Material(shader) { name = name }; material.SetFloat("_Mode", mode); material.SetColor("_Tint", tint); return material; }
+        static void Configure(Renderer renderer, Material material)
+        { renderer.sharedMaterial = material; renderer.shadowCastingMode = ShadowCastingMode.Off; renderer.receiveShadows = false; renderer.lightProbeUsage = LightProbeUsage.Off; renderer.reflectionProbeUsage = ReflectionProbeUsage.Off; }
+        static Renderer MeshRenderer(string name, Transform parent, Mesh mesh, Material material, Vector3 position, Vector3 scale)
+        {
+            var go = new GameObject(name); go.transform.SetParent(parent,false); go.layer = parent.gameObject.layer; go.transform.localPosition = position; go.transform.localScale = scale;
+            go.AddComponent<MeshFilter>().sharedMesh = mesh; var renderer = go.AddComponent<UnityEngine.MeshRenderer>(); Configure(renderer,material); return renderer;
+        }
+        static Mesh CreatePlume()
+        {
+            const int sides = 20, rows = 9;
+            var vertices = new Vector3[(sides+1)*rows]; var uv = new Vector2[vertices.Length]; var colors = new Color[vertices.Length]; var triangles = new int[(rows-1)*sides*6];
+            for (int row=0;row<rows;row++)
+            {
+                float t=row/(float)(rows-1); float radius=Mathf.Lerp(1f,.025f,Mathf.Pow(t,.7f))*(1f+.08f*Mathf.Sin(t*Mathf.PI*5));
+                for(int side=0;side<=sides;side++) {int k=row*(sides+1)+side;float angle=side/(float)sides*Mathf.PI*2;vertices[k]=new Vector3(Mathf.Cos(angle)*radius,Mathf.Sin(angle)*radius,-t);uv[k]=new Vector2(t,side/(float)sides);colors[k]=Color.white;
+                    if(row<rows-1&&side<sides){int q=(row*sides+side)*6;triangles[q]=k;triangles[q+1]=k+sides+1;triangles[q+2]=k+1;triangles[q+3]=k+1;triangles[q+4]=k+sides+1;triangles[q+5]=k+sides+2;}}
+            }
+            var mesh=new Mesh{name="Tapered ion volume"};mesh.vertices=vertices;mesh.uv=uv;mesh.colors=colors;mesh.triangles=triangles;mesh.RecalculateNormals();mesh.RecalculateBounds();return mesh;
+        }
+        static Mesh CreateRing()
+        {
+            const int sides=40;var vertices=new Vector3[(sides+1)*2];var uv=new Vector2[vertices.Length];var colors=new Color[vertices.Length];var triangles=new int[sides*6];
+            for(int i=0;i<=sides;i++){float angle=i/(float)sides*Mathf.PI*2;for(int edge=0;edge<2;edge++){int k=i*2+edge;float radius=edge==0?.305f:.334f;vertices[k]=new Vector3(Mathf.Cos(angle)*radius,Mathf.Sin(angle)*radius,0);uv[k]=new Vector2(edge,i/(float)sides);colors[k]=Color.white;}
+                if(i<sides){int k=i*2,q=i*6;triangles[q]=k;triangles[q+1]=k+2;triangles[q+2]=k+1;triangles[q+3]=k+1;triangles[q+4]=k+2;triangles[q+5]=k+3;}}
+            var mesh=new Mesh{name="Thin engine light annulus"};mesh.vertices=vertices;mesh.uv=uv;mesh.colors=colors;mesh.triangles=triangles;mesh.RecalculateNormals();mesh.RecalculateBounds();return mesh;
+        }
+        void OnDestroy()
+        { if(plumeMaterial)Destroy(plumeMaterial);if(innerMaterial)Destroy(innerMaterial);if(coreMaterial)Destroy(coreMaterial);if(ringMaterial)Destroy(ringMaterial);if(plumeMesh)Destroy(plumeMesh);if(ringMesh)Destroy(ringMesh); }
     }
 }

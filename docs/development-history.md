@@ -65,3 +65,9 @@ Run09 native title/start/crest/descent shows a clean road and integrated coast. 
 The current native preview contains 360 frames at 24 fps, 1280×720, 15 seconds, silent H.264. It uses automated steering and fixed simulation-time capture; frame timing evidence comes from the separate run09 standalone profile. First, middle and final recording frames were visually inspected. Pointer activation also passed at 1920×1080, including outside-click rejection, Start, Resume and Quit.
 
 The current macOS app is packaged in `Builds/VectorRush-macOS-2026-09-07.zip`; archive integrity passed and hashes/source milestone are recorded in `evidence/build-manifest.json`. Native build products remain local. README, revised experiment prompt, editable asset guidance, final independent critique and limitations now describe the current build. Earlier failed captures, rejected model images and prior video are retained with historical labels.
+
+### Night urban pass 01 — native review rejects visual target
+
+Replaced active coastline with midnight architecture, procedural occupied windows, a dark sky, 58 overhead lamps and two open light galleries. Added local-light road response, layered propulsion and small suspension lights. Unity 6000.6.0f1 standalone build succeeded after using its serialized additional-light setting. Captures in `evidence/night-01` show actual title/start/crest/descent. A separate real-time 60-second sample recorded mean 16.67 ms, P95 16.79 ms and P99 16.85 ms at 1920×1080 on Apple M2 Max.
+
+Visual target fails: broad road areas remain underlit, isolated towers and black ground read as an empty test course, and exhaust has hard crystal-cone edges. Corrective pass is explicitly required: composed skyline and connected service corridors, broader neutral light pools/material response, softer compact propulsion. No AA/AAA acceptance is claimed.

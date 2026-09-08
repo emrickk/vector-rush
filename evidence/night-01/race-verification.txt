@@ -1,0 +1,8 @@
+Autopilot through real hover physics: FINISHED
+Time 112.64
+Laps 3
+Recoveries 0
+Restart launch results-to-racing: expectedSource=True, laps/time/energy/recovery reset=True, racing/movement=True, time=1.20, speedKph=204.3
+Restart launch paused-race-to-racing: expectedSource=True, laps/time/energy/recovery reset=True, racing/movement=True, time=1.20, speedKph=204.3
+Restart 1: countdown pause frozen=True, laps=0
+Restart 2: countdown pause frozen=True, laps=0

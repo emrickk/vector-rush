@@ -24,13 +24,13 @@ namespace VectorRush
             cameraObject.AddComponent<AudioListener>();
             var cameraData=Camera.GetUniversalAdditionalCameraData();cameraData.renderPostProcessing=true;cameraData.antialiasing=AntialiasingMode.SubpixelMorphologicalAntiAliasing;cameraData.antialiasingQuality=AntialiasingQuality.High;
             var profile=ScriptableObject.CreateInstance<VolumeProfile>();
-            var bloom=profile.Add<Bloom>();bloom.threshold.Override(1.15f);bloom.intensity.Override(.2f);bloom.scatter.Override(.55f);
+            var bloom=profile.Add<Bloom>();bloom.threshold.Override(1.3f);bloom.intensity.Override(.32f);bloom.scatter.Override(.55f);
             var tonemap=profile.Add<Tonemapping>();tonemap.mode.Override(TonemappingMode.ACES);
-            var color=profile.Add<ColorAdjustments>();color.postExposure.Override(.15f);color.contrast.Override(3);color.saturation.Override(3);
-            var vignette=profile.Add<Vignette>();vignette.intensity.Override(.17f);vignette.smoothness.Override(.65f);
+            var color=profile.Add<ColorAdjustments>();color.postExposure.Override(.3f);color.contrast.Override(7);color.saturation.Override(3);
+            var vignette=profile.Add<Vignette>();vignette.intensity.Override(.22f);vignette.smoothness.Override(.65f);
             var volume=new GameObject("Race grade").AddComponent<Volume>();volume.isGlobal=true;volume.profile=profile;
-            var craftIvory=world.MakeMaterial("Craft pearl ceramic",new Color(.8f,.84f,.81f),.60f,.18f);
-            var craftCeramic=world.MakeMaterial("Craft thermal ceramic",new Color(.055f,.08f,.088f),.51f,.22f);
+            var craftIvory=world.MakeMaterial("Craft pearl ceramic",new Color(.72f,.78f,.83f),.72f,.3f);
+            var craftCeramic=world.MakeMaterial("Craft thermal ceramic",new Color(.055f,.072f,.095f),.46f,.24f);
             var craftGraphite=world.MakeMaterial("Craft carbon structure",new Color(.018f,.034f,.045f),.54f,.35f);
             var craftGlass=world.MakeMaterial("Craft optical canopy",new Color(.015f,.07f,.10f),.86f,.22f);
             var racers=new List<HoverVehicle>();
@@ -58,6 +58,7 @@ namespace VectorRush
                         else materials[k]=hullPaint;
                     }renderer.sharedMaterials=materials;
                 }
+                foreach(var child in root.GetComponentsInChildren<Transform>())child.gameObject.layer=8;
                 var vehicle=root.AddComponent<HoverVehicle>();vehicle.VisualRoot=art.transform;vehicle.Initialize(Track,i==0,i);racers.Add(vehicle);
                 root.AddComponent<IonPropulsion>().Initialize(vehicle);
             }

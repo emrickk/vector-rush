@@ -67,3 +67,14 @@
 - [x] Add restrained ambient occlusion and verify contact/material depth; retain matte deck after matched reflection diagnostics.
 - [x] Integrate the reviewed textured cliff into connected harbor districts, replacing the old radial geology; inspect native coastline and texture response (run09).
 - [x] Preserve final authoring sources, independent critique, current gameplay recording and delivery evidence.
+
+## Night urban circuit revision
+
+The user rejected the daylight prototype's visual quality and asked for a more achievable night road setting, stronger craft effects, and additional iterations. The target is a visibly composed racing scene with readable road and craft, purposeful lighting, material depth and credible architecture. A functioning race or darkened background alone does not close this request.
+
+- [x] First native night pass: replace coastal vista with a built urban district; add patterned window lights, pools of road illumination, matte/damp deck response and revised propulsion.
+- [ ] Inspect matched title/start/crest/descent captures; fix the three largest visible failures.
+- [ ] Inspect a second native pass and moving footage; refine materials, craft separation and speed presentation.
+- [ ] Verify the complete race and current performance, preserve critique and record a new preview; package the night build for review.
+
+Ownership: parent road, lighting, materials, rendering settings, integration, camera/HUD and runtime evidence; game_brief NightDistrict and NightWindows; gameplay IonPropulsion and VehicleVFX; independent critic reads actual captures after integration. Existing daytime source/history stays recoverable in Git.
