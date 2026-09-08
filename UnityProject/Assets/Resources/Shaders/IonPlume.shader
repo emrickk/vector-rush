@@ -37,12 +37,19 @@ Shader "VectorRush/Ion Plume"
                 if(_Mode<.5)
                 {
                     float along=saturate(input.uv.x);
+                    float side=input.uv.y*2-1;
                     float facing=saturate(abs(dot(normalize(input.normalWS),normalize(input.viewWS))));
-                    float volume=lerp(.24,1,pow(facing,.6));
-                    float cells=.78+.22*sin(along*31.4159-_Time.y*10);
-                    shape=pow(1-along,1.15)*smoothstep(0,.045,along)*volume*cells;
+                    float drift=(sin(along*17-_Time.y*11)*.075+sin(along*29+_Time.y*7)*.035)*along;
+                    float displaced=side-drift;
+                    float crossSection=exp(-displaced*displaced*5.2);
+                    float sideFade=1-smoothstep(.62,.98,abs(side));
+                    float tail=(1-smoothstep(.42,1,along))*exp(-along*1.35);
+                    float cells=.76+.14*sin(along*24-_Time.y*12+side*4)+.10*sin(along*41+_Time.y*9-side*7);
+                    // Density vanishes at sheet borders and along the tail. No edge-on
+                    // brightness floor: the previous shell's floor revealed its triangles.
+                    shape=crossSection*sideFade*tail*cells*pow(facing,.45);
                 }
-                else if(_Mode<1.5) shape=exp(-dot(p,p)*3.6)*(1-smoothstep(.45,1,radius));
+                else if(_Mode<1.5) shape=exp(-dot(p,p)*5.2)*(1-smoothstep(.40,1,radius));
                 else if(_Mode<2.5) shape=pow(saturate(sin(input.uv.x*3.14159265)),.65);
                 else shape=exp(-dot(p,p)*4.5)*(1-smoothstep(.3,1,radius));
                 half3 color=_Tint.rgb*_Tint.a*input.color.rgb*input.color.a*_Intensity*shape;

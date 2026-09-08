@@ -1,0 +1,7 @@
+Time 112.64 Phase Finished Lap 3 Position 1
+YOU speed 0.0 progress 3.0003 track 0.0003 recoveries 0 grounded True
+KIRA speed 0.0 progress 2.5078 track 0.5078 recoveries 1 grounded True
+NOVA speed 0.0 progress 2.7192 track 0.7192 recoveries 1 grounded True
+RENN speed 0.0 progress 2.3529 track 0.3529 recoveries 1 grounded True
+AXIOM speed 0.0 progress 2.7157 track 0.7157 recoveries 0 grounded True
+SOL speed 0.0 progress 2.8349 track 0.8349 recoveries 0 grounded True

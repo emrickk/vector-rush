@@ -33,7 +33,7 @@ namespace VectorRush
             fade.color = gradient;
             var size = ions.sizeOverLifetime; size.enabled = true; size.size = new ParticleSystem.MinMaxCurve(1,new AnimationCurve(new Keyframe(0,1),new Keyframe(1,.1f)));
             var renderer = ions.GetComponent<ParticleSystemRenderer>(); renderer.sharedMaterial = particleMaterial; renderer.renderMode = ParticleSystemRenderMode.Stretch;
-            renderer.lengthScale = 1.8f; renderer.velocityScale = .018f; renderer.cameraVelocityScale = 0; renderer.shadowCastingMode = ShadowCastingMode.Off; renderer.receiveShadows = false;
+            renderer.lengthScale = .75f; renderer.velocityScale = .007f; renderer.cameraVelocityScale = 0; renderer.shadowCastingMode = ShadowCastingMode.Off; renderer.receiveShadows = false;
             renderer.lightProbeUsage = LightProbeUsage.Off; renderer.reflectionProbeUsage = ReflectionProbeUsage.Off;
             ions.Play();
             // Only the viewed craft gets real suspension lights; rivals retain their small emissive engines.
@@ -81,7 +81,7 @@ namespace VectorRush
             {
                 position = origin + visual.right*Random.Range(-.10f,.10f),
                 velocity = drift - visual.forward*Random.Range(8f,15f) + visual.right*Random.Range(-.7f,.7f) + visual.up*Random.Range(-.4f,.4f),
-                startLifetime = Random.Range(.13f,.25f), startSize = Random.Range(.025f,.055f),
+                startLifetime = Random.Range(.10f,.18f), startSize = Random.Range(.025f,.048f),
                 startColor = new Color(.30f,.78f,1f,.62f)
             };
             ions.Emit(particle,1);

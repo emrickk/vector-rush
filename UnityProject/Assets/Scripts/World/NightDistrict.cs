@@ -26,7 +26,7 @@ namespace VectorRush
             cyan=world.MakeMaterial("Night / cool architectural light",new Color(.08f,.3f,.42f),.25f,0,new Color(.12f,.75f,1.2f));
             var shader=Shader.Find("VectorRush/NightWindows");
             windows=shader?new Material(shader):world.MakeMaterial("Night / window fallback",new Color(.08f,.15f,.22f),.75f,.1f,new Color(.15f,.24f,.35f));
-            if(shader){ownMaterials.Add(windows);windows.SetFloat("_Density",.36f);}
+            if(shader){ownMaterials.Add(windows);windows.SetFloat("_Density",.53f);}
             samples=new Vector3[720];for(int i=0;i<samples.Length;i++)samples[i]=track.Evaluate((float)i/samples.Length).Position;
             clearance=track.Width*.5f+30f;
             Box(Vector3.zero,Quaternion.identity,new Vector3(0,-1.15f,0),new Vector3(2400,.5f,2400),asphalt);
@@ -53,6 +53,123 @@ namespace VectorRush
                 bool occupied=false;foreach(var other in accepted)if((center-other).sqrMagnitude<120*120)occupied=true;
                 if(occupied)continue;
                 Industrial(center,q,i);Flush("Inner service works "+i);
+            }
+            BuildUrbanFabric();
+        }
+
+        void BuildUrbanFabric()
+        {
+            var random=new System.Random(64281);
+            // Continuous surrounding skyline: staggered rings make parallax and depth,
+            // with taller silhouettes behind lower buildings instead of four isolated islands.
+            int[] counts={28,32,36};float[] radii={445,625,855};
+            for(int ring=0;ring<3;ring++)
+            {
+                for(int i=0;i<counts[ring];i++)
+                {
+                    float angle=(i+.27f*ring)*Mathf.PI*2/counts[ring];
+                    float r=radii[ring]+((float)random.NextDouble()-.5f)*48;
+                    Vector3 center=new Vector3(Mathf.Cos(angle)*r,0,Mathf.Sin(angle)*r);
+                    Quaternion q=Quaternion.Euler(0,-angle*Mathf.Rad2Deg+90,0);
+                    float w=24+(float)random.NextDouble()*20,d=22+(float)random.NextDouble()*21;
+                    float height=65+(float)random.NextDouble()*105+ring*27;
+                    if(i%9==0)height+=45;
+                    bool nearDistrict=false;
+                    foreach(var other in accepted)if((center-other).sqrMagnitude<105f*105f)nearDistrict=true;
+                    if(nearDistrict||!Clear(center,q,new Vector2(w*.7f+5,d*.7f+5)))continue;
+                    SkylineTower(center,q,w,d,height,(i+ring)%5);
+                }
+                Flush("Layered skyline / depth "+ring);
+            }
+            // Mid-rise districts bridge the space between the race and the skyline.
+            for(int i=0;i<26;i++)
+            {
+                float a=(i+.4f)*Mathf.PI*2/26;float r=345+(i%3)*17;
+                Vector3 c=new Vector3(Mathf.Cos(a)*r,0,Mathf.Sin(a)*r);
+                Quaternion q=Quaternion.Euler(0,-a*Mathf.Rad2Deg+90,0);
+                bool nearDistrict=false;foreach(var other in accepted)if((c-other).sqrMagnitude<120*120)nearDistrict=true;
+                if(nearDistrict||!Clear(c,q,new Vector2(32,30)))continue;
+                SkylineTower(c,q,43,38,25+(i%5)*10,i%5);
+                Box(c,q,new Vector3(0,1,0),new Vector3(62,3,58),concrete);
+                Box(c,q,new Vector3(0,4.8f,27),new Vector3(54,5,.25f),windows);
+                Box(c,q,new Vector3(0,8,28),new Vector3(59,.45f,3),steel);
+                Box(c,q,new Vector3(0,7.75f,29.6f),new Vector3(42,.12f,.16f),i%3==0?cyan:warm);
+            }
+            Flush("Middle city / mixed-use blocks");
+            // Interior blocks give the descent an inhabited foreground below the track.
+            for(int x=-2;x<=2;x++)for(int z=-2;z<=2;z++)
+            {
+                Vector3 c=new Vector3(x*70+12,0,z*70+14);Quaternion q=Quaternion.Euler(0,(x+z)%2*90,0);
+                if(!Clear(c,q,new Vector2(25,26)))continue;
+                SkylineTower(c,q,36,40,19+Mathf.Abs(x*11+z*7)%36,Mathf.Abs(x+z)%5);
+            }
+            Flush("Inner city / low urban fabric");
+            // A real ground-level street grid, seen through the elevated road supports.
+            // These lanes and 8m streetlamps cannot reach the 28m minimum track height.
+            for(int lane=-7;lane<=7;lane++)
+            {
+              for(int segment=-7;segment<=7;segment++)
+              {
+                float x=lane*112,z=segment*112;
+                Box(Vector3.zero,Quaternion.identity,new Vector3(x,.02f,z),new Vector3(13,.12f,112),asphalt);
+                Box(Vector3.zero,Quaternion.identity,new Vector3(x,.02f,z),new Vector3(112,.12f,13),asphalt);
+                for(int side=-1;side<=1;side+=2)
+                {
+                    Box(Vector3.zero,Quaternion.identity,new Vector3(x+side*6.7f,.16f,z),new Vector3(.07f,.06f,78),warm);
+                    Vector3 pole=new Vector3(x+side*8,4,z+35);
+                    Box(Vector3.zero,Quaternion.identity,pole,new Vector3(.22f,8,.22f),trim);
+                    Box(Vector3.zero,Quaternion.identity,pole+new Vector3(-side*.9f,4,0),new Vector3(2,.12f,.45f),warm);
+                    // Tiny opposing traffic queues are architectural light detail, not gameplay AI.
+                    for(int vehicle=0;vehicle<2;vehicle++)
+                    {
+                        Vector3 car=new Vector3(x+side*3,.45f,z-26+vehicle*12+side*9);
+                        Box(Vector3.zero,Quaternion.identity,car,new Vector3(1.8f,.8f,4),steel);
+                        Box(Vector3.zero,Quaternion.identity,car+new Vector3(0,0,side*2.05f),new Vector3(1.5f,.15f,.1f),side>0?warm:cyan);
+                    }
+                }
+              }
+              if(lane%3==0)Flush("Service avenues / sector "+lane);
+            }
+            Flush("Service avenues / remainder");
+        }
+
+        void SkylineTower(Vector3 c,Quaternion q,float w,float d,float h,int style)
+        {
+            Box(c,q,new Vector3(0,4,0),new Vector3(w+8,8,d+8),steel);
+            if(style==1)
+            {
+                // Unequal paired blades with a deliberate vertical gap and linking floor.
+                Box(c,q,new Vector3(-w*.29f,h*.5f,0),new Vector3(w*.43f,h,d),windows);
+                Box(c,q,new Vector3(w*.29f,h*.38f,0),new Vector3(w*.43f,h*.76f,d*.87f),windows);
+                Box(c,q,new Vector3(0,h*.63f,0),new Vector3(w*.65f,5,d*.57f),steel);
+                Box(c,q,new Vector3(-w*.29f,h+.8f,0),new Vector3(w*.44f,1.6f,d+1),concrete);
+            }
+            else
+            {
+                float lower=h*.64f,upper=h*.24f;
+                Box(c,q,new Vector3(0,lower*.5f,0),new Vector3(w,lower,d),windows);
+                Box(c,q,new Vector3(style==2?w*.12f:0,lower+upper*.5f,0),new Vector3(w*.79f,upper,d*.81f),windows);
+                Box(c,q,new Vector3(style==2?w*.22f:0,h*.94f,0),new Vector3(w*.56f,h*.12f,d*.6f),steel);
+                Box(c,q,new Vector3(0,lower+.4f,0),new Vector3(w+1,.8f,d+1),concrete);
+                Box(c,q,new Vector3(style==2?w*.12f:0,lower+upper+.4f,0),new Vector3(w*.8f,.8f,d*.83f),trim);
+            }
+            for(int side=-1;side<=1;side+=2)
+            {
+                Box(c,q,new Vector3(side*w*.48f,h*.32f,-d*.49f),new Vector3(.8f,h*.64f,1.2f),concrete);
+                Box(c,q,new Vector3(side*w*.48f,h*.32f,d*.49f),new Vector3(.8f,h*.64f,1.2f),concrete);
+            }
+            if(style==0||style==3)
+            {
+                // A few architectural edge/crown lights establish readable district identity.
+                Box(c,q,new Vector3(w*.24f,h*.7f,d*.42f),new Vector3(.18f,h*.22f,.2f),style==0?cyan:warm);
+                Box(c,q,new Vector3(0,h+1,d*.29f),new Vector3(w*.52f,.18f,.22f),style==0?cyan:warm);
+                Pipe(c,q,new Vector3(0,h,0),new Vector3(0,h+9,0),.3f,trim);
+            }
+            if(style==4)
+            {
+                // Vertical utility sign is a restrained grouped light mark, not a bright slab.
+                Box(c,q,new Vector3(-w*.5f-1,h*.59f,0),new Vector3(1.8f,19,3.5f),steel);
+                for(int mark=0;mark<4;mark++)Box(c,q,new Vector3(-w*.5f-2,h*.59f-6+mark*4,0),new Vector3(.15f,1.2f,2.4f),warm);
             }
         }
 

@@ -24,10 +24,10 @@ namespace VectorRush
             vehicle = craft;
             var shader = Resources.Load<Shader>("Shaders/IonPlume");
             if (!shader) { Debug.LogError("Ion Plume shader missing from Resources"); enabled = false; return; }
-            plumeMaterial = CreateMaterial(shader, "Translucent cyan exhaust mantle", 0, new Color(.025f,.58f,1.1f,.26f));
-            innerMaterial = CreateMaterial(shader, "Pale inner ion jet", 0, new Color(.55f,.86f,1.1f,.24f));
+            plumeMaterial = CreateMaterial(shader, "Soft cyan plasma envelope", 0, new Color(.025f,.58f,1.1f,.17f));
+            innerMaterial = CreateMaterial(shader, "Soft pale ion spine", 0, new Color(.55f,.86f,1.1f,.14f));
             coreMaterial = CreateMaterial(shader, "Recessed pale plasma core", 1, new Color(.65f,.88f,1.05f,.95f));
-            ringMaterial = CreateMaterial(shader, "Thin cyan nozzle annuli", 2, new Color(.025f,.76f,1.3f,.72f));
+            ringMaterial = CreateMaterial(shader, "Subtle nozzle rim accents", 2, new Color(.025f,.76f,1.3f,.18f));
             plumeMesh = CreatePlume(); ringMesh = CreateRing();
             Transform parent = craft.VisualRoot ? craft.VisualRoot : craft.transform;
             for (int i = 0; i < 3; i++)
@@ -42,7 +42,7 @@ namespace VectorRush
                 outerJets[i] = MeshRenderer("Tapered ion mantle", jet.transform, plumeMesh, plumeMaterial, Vector3.zero, new Vector3(.37f*size,.37f*size,1));
                 innerJets[i] = MeshRenderer("White blue jet spine", jet.transform, plumeMesh, innerMaterial, new Vector3(0,0,-.02f), new Vector3(.13f*size,.13f*size,.74f));
                 var core = GameObject.CreatePrimitive(PrimitiveType.Quad); core.name = "Radiance inside engine throat";
-                core.transform.SetParent(anchor.transform,false); core.layer = anchor.layer; core.transform.localPosition = new Vector3(0,0,i == 2 ? .315f : .67f); core.transform.localScale = Vector3.one * .55f * size;
+                core.transform.SetParent(anchor.transform,false); core.layer = anchor.layer; core.transform.localPosition = new Vector3(0,0,i == 2 ? .315f : .67f); core.transform.localScale = Vector3.one * .5f * size;
                 Destroy(core.GetComponent<Collider>()); cores[i] = core.GetComponent<Renderer>(); Configure(cores[i], coreMaterial);
                 for (int j = 0; j < 2; j++)
                     rings[i*2+j] = MeshRenderer(j == 0 ? "Aperture light ring" : "Recessed accelerator ring", anchor.transform, ringMesh, ringMaterial, new Vector3(0,0,j == 0 ? .018f : .20f), Vector3.one * size * (j == 0 ? 1 : .8f));
@@ -69,12 +69,12 @@ namespace VectorRush
             for (int i = 0; i < 3; i++)
             {
                 float size = i == 2 ? .60f : 1f;
-                jets[i].localScale = new Vector3(1f + response*.12f,1f + response*.12f,(.32f + response*3.65f)*size);
-                SetIntensity(outerJets[i], (.65f + response*1.45f)*flicker);
-                SetIntensity(innerJets[i], (.75f + response*1.8f)*flicker);
-                SetIntensity(cores[i], (1.15f + response*1.3f)*flicker);
-                SetIntensity(rings[i*2], 1.05f + response*.85f);
-                SetIntensity(rings[i*2+1], .8f + response*.65f);
+                jets[i].localScale = new Vector3(1f + response*.08f,1f + response*.08f,(.30f + response*2.1f)*size);
+                SetIntensity(outerJets[i], (.55f + response*1.0f)*flicker);
+                SetIntensity(innerJets[i], (.75f + response*1.3f)*flicker);
+                SetIntensity(cores[i], (2.05f + response*1.45f)*flicker);
+                SetIntensity(rings[i*2], .45f + response*.25f);
+                SetIntensity(rings[i*2+1], .20f + response*.15f);
                 if (i < 2 && lights[i]) lights[i].intensity = .6f + response*2.5f;
             }
         }
@@ -91,15 +91,29 @@ namespace VectorRush
         }
         static Mesh CreatePlume()
         {
-            const int sides = 20, rows = 9;
-            var vertices = new Vector3[(sides+1)*rows]; var uv = new Vector2[vertices.Length]; var colors = new Color[vertices.Length]; var triangles = new int[(rows-1)*sides*6];
-            for (int row=0;row<rows;row++)
+            // Crossed translucent sheets have no solid cone silhouette. Shader density
+            // reaches zero before every mesh edge; overlapping Gaussian profiles read as gas.
+            const int sheets = 3, rows = 14;
+            var vertices = new Vector3[sheets*rows*2]; var normals = new Vector3[vertices.Length];
+            var uv = new Vector2[vertices.Length]; var colors = new Color[vertices.Length]; var triangles = new int[sheets*(rows-1)*6];
+            for (int sheet=0;sheet<sheets;sheet++)
             {
-                float t=row/(float)(rows-1); float radius=Mathf.Lerp(1f,.025f,Mathf.Pow(t,.7f))*(1f+.08f*Mathf.Sin(t*Mathf.PI*5));
-                for(int side=0;side<=sides;side++) {int k=row*(sides+1)+side;float angle=side/(float)sides*Mathf.PI*2;vertices[k]=new Vector3(Mathf.Cos(angle)*radius,Mathf.Sin(angle)*radius,-t);uv[k]=new Vector2(t,side/(float)sides);colors[k]=Color.white;
-                    if(row<rows-1&&side<sides){int q=(row*sides+side)*6;triangles[q]=k;triangles[q+1]=k+sides+1;triangles[q+2]=k+1;triangles[q+3]=k+1;triangles[q+4]=k+sides+1;triangles[q+5]=k+sides+2;}}
+                float angle=sheet/(float)sheets*Mathf.PI;
+                Vector3 across=new Vector3(Mathf.Cos(angle),Mathf.Sin(angle),0);
+                Vector3 normal=new Vector3(Mathf.Sin(angle),-Mathf.Cos(angle),0);
+                for(int row=0;row<rows;row++)
+                {
+                    float t=row/(float)(rows-1);float width=1.10f-.42f*t;
+                    for(int edge=0;edge<2;edge++)
+                    {
+                        int k=(sheet*rows+row)*2+edge;
+                        vertices[k]=across*((edge==0?-1f:1f)*width)+Vector3.back*t;
+                        normals[k]=normal;uv[k]=new Vector2(t,edge);colors[k]=Color.white;
+                    }
+                    if(row<rows-1){int k=(sheet*rows+row)*2,q=(sheet*(rows-1)+row)*6;triangles[q]=k;triangles[q+1]=k+2;triangles[q+2]=k+1;triangles[q+3]=k+1;triangles[q+4]=k+2;triangles[q+5]=k+3;}
+                }
             }
-            var mesh=new Mesh{name="Tapered ion volume"};mesh.vertices=vertices;mesh.uv=uv;mesh.colors=colors;mesh.triangles=triangles;mesh.RecalculateNormals();mesh.RecalculateBounds();return mesh;
+            var mesh=new Mesh{name="Soft plasma density sheets"};mesh.vertices=vertices;mesh.normals=normals;mesh.uv=uv;mesh.colors=colors;mesh.triangles=triangles;mesh.RecalculateBounds();return mesh;
         }
         static Mesh CreateRing()
         {

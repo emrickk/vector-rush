@@ -2,10 +2,10 @@ Shader "VectorRush/NightWindows"
 {
     Properties
     {
-        _BaseColor("Unlit glass", Color) = (.016,.03,.05,1)
-        [HDR] _WarmColor("Occupied warm rooms", Color) = (2.3,1.05,.3,1)
-        [HDR] _CoolColor("Occupied cool rooms", Color) = (.3,.85,1.5,1)
-        _Density("Occupied fraction", Range(0,1)) = .36
+        _BaseColor("Unlit glass", Color) = (.035,.055,.09,1)
+        [HDR] _WarmColor("Occupied warm rooms", Color) = (.88,.43,.19,1)
+        [HDR] _CoolColor("Occupied cool rooms", Color) = (.25,.48,.82,1)
+        _Density("Occupied fraction", Range(0,1)) = .53
         _Seed("District seed", Float) = 1
     }
     SubShader
@@ -42,19 +42,25 @@ Shader "VectorRush/NightWindows"
                 float2 cell=floor(rooms), within=frac(rooms);
                 float edge=min(min(within.x-.13,.87-within.x),min(within.y-.14,.83-within.y));
                 float panel=smoothstep(0,max(fwidth(edge),.015),edge)*(1-smoothstep(.65,.9,abs(n.y)));
-                float occupancy=step(1-_Density,Hash(cell));
-                half3 room=lerp(_WarmColor.rgb,_CoolColor.rgb,step(.79,Hash(cell+53)));
-                float curtain=lerp(.40,1.0,step(.37,within.x));
+                // Offices occupy coherent suites and two-floor banks, not random pixels.
+                float2 suite=floor((cell+float2(fmod(floor(cell.y/2),2)*2,0))/float2(4,2));
+                float occupancy=step(1-_Density,Hash(suite));
+                float bankBrightness=.35+.65*Hash(suite+19);
+                half3 room=lerp(_WarmColor.rgb,_CoolColor.rgb,step(.65,Hash(suite+53)));
+                float curtain=lerp(.72,1.0,step(.28,within.x));
+                float minification=max(fwidth(rooms.x),fwidth(rooms.y));
+                panel=lerp(panel,.48*(1-smoothstep(.65,.9,abs(n.y))),smoothstep(.55,1.25,minification));
                 Light light=GetMainLight(TransformWorldToShadowCoord(i.positionWS));
                 half3 ambient=max(SampleSH(n),half3(.045,.06,.09));
-                half3 base=_BaseColor.rgb*(ambient+light.color*saturate(dot(n,light.direction))*light.shadowAttenuation);
+                half3 base=_BaseColor.rgb*(half3(.2,.23,.3)+ambient+light.color*saturate(dot(n,light.direction))*light.shadowAttenuation);
                 half fresnel=pow(1-saturate(dot(n,GetWorldSpaceNormalizeViewDir(i.positionWS))),4);
-                half3 color=base+half3(.025,.045,.075)*fresnel+room*occupancy*panel*curtain;
+                half3 color=base+half3(.025,.045,.075)*fresnel+room*occupancy*panel*curtain*bankBrightness;
                 return half4(MixFog(color,i.fog),1);
             }
             ENDHLSL
         }
         UsePass "Universal Render Pipeline/Lit/ShadowCaster"
         UsePass "Universal Render Pipeline/Lit/DepthOnly"
+        UsePass "Universal Render Pipeline/Lit/DepthNormals"
     }
 }

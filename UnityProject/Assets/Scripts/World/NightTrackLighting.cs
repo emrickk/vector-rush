@@ -24,8 +24,8 @@ namespace VectorRush
                 var go=new GameObject(warm?"Amber road pool":"Cool road pool");go.transform.SetParent(transform,false);
                 go.transform.position=p+f.Up*12.4f-f.Right*side*4;
                 go.transform.rotation=Quaternion.LookRotation((f.Position+f.Forward*6-go.transform.position).normalized,f.Forward);
-                var light=go.AddComponent<Light>();light.type=LightType.Spot;light.color=warm?new Color(1,.48f,.12f):new Color(.46f,.74f,1);
-                light.intensity=warm?135:115;light.range=41;light.spotAngle=106;light.innerSpotAngle=67;light.shadows=LightShadows.None;
+                var light=go.AddComponent<Light>();light.type=LightType.Spot;light.color=warm?new Color(1,.48f,.12f):new Color(.74f,.86f,1);
+                light.intensity=warm?590:470;light.range=49;light.spotAngle=114;light.innerSpotAngle=78;light.shadows=LightShadows.None;
                 // Repeated embedded edge reflectors and exposed deck engineering establish close-range scale.
                 for(int s=-1;s<=1;s+=2){
                     world.Box("Barrier service panel",f.Position+f.Right*s*11.59f+f.Up*.91f,new Vector3(.045f,.62f,2.3f),q,housing);

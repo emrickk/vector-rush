@@ -14,7 +14,7 @@ Shader "VectorRush/Night Sky"
             V vert(A i){V o;o.positionCS=TransformObjectToHClip(i.positionOS.xyz);o.direction=i.positionOS.xyz;return o;}
             half4 frag(V i):SV_Target{
                 float3 d=normalize(i.direction);float horizon=pow(1-saturate(d.y),5);
-                float3 color=lerp(float3(.0015,.0028,.009),float3(.018,.025,.054),horizon);
+                float3 color=lerp(float3(.0015,.0028,.009),float3(.039,.053,.084),horizon);
                 float haze=sin(d.x*13+d.z*7)*sin(d.x*5-d.z*11)*.0015*horizon;
                 color+=haze;
                 float moon=dot(d,normalize(float3(-.35,.5,.75)));

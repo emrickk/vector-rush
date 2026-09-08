@@ -17,7 +17,7 @@ namespace VectorRush
         readonly Color muted = new Color(.62f, .73f, .74f);
         readonly Color acid = new Color(.85f, 1f, .21f);
         readonly Color turquoise = new Color(.25f, .94f, .90f);
-        readonly Color ink = new Color(.025f, .065f, .08f, .91f);
+        readonly Color ink = new Color(.004f, .009f, .017f, .55f);
         float width, height;
         bool ready;
         bool inputEvidence;
@@ -75,8 +75,8 @@ namespace VectorRush
             for (int i = 0; i < 64; i++)
             {
                 float t = i / 63f;
-                float alpha = horizontal ? .96f * (1f - Mathf.SmoothStep(0f, 1f, Mathf.InverseLerp(.28f, 1f, t))) : .84f * Mathf.Pow(1f - t, 2f);
-                texture.SetPixel(horizontal ? i : 0, horizontal ? 0 : i, new Color(.018f, .043f, .059f, alpha));
+                float alpha = horizontal ? .96f * (1f - Mathf.SmoothStep(0f, 1f, Mathf.InverseLerp(.28f, 1f, t))) : .55f * Mathf.Pow(1f - t, 2f);
+                texture.SetPixel(horizontal ? i : 0, horizontal ? 0 : i, new Color(.003f, .007f, .013f, alpha));
             }
             texture.Apply(false, true);
             return texture;

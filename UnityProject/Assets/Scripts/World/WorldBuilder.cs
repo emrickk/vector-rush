@@ -32,7 +32,7 @@ namespace VectorRush
         public void Build(TrackPath path)
         {
             track=path;track.Ensure();
-            road=MakeMaterial("Damp graphite running deck",new Color(.075f,.089f,.108f),.85f,0f,templateName:"RoadSurface");
+            road=MakeMaterial("Damp graphite running deck",new Color(.13f,.145f,.165f),.94f,0f,templateName:"RoadSurface");
             const int textureSize=512;
             roadGrain=new Texture2D(textureSize,textureSize,TextureFormat.RGBA32,true){name="Deck aggregate",wrapMode=TextureWrapMode.Repeat,filterMode=FilterMode.Trilinear,anisoLevel=8};
             roadNormals=new Texture2D(textureSize,textureSize,TextureFormat.RGBA32,true,true){name="Deck fine relief",wrapMode=TextureWrapMode.Repeat,filterMode=FilterMode.Trilinear,anisoLevel=8};
@@ -42,16 +42,16 @@ namespace VectorRush
                 int index=y*textureSize+x;float grain=(float)random.NextDouble();
                 float patch=Mathf.PerlinNoise(x*.021f+2.7f,y*.009f+1.1f);
                 float streak=Mathf.PerlinNoise(x*.12f,y*.005f);
-                float shade=.72f+grain*.22f+patch*.08f;pixels[index]=new Color(shade,shade,shade,1);
+                float shade=.88f+grain*.07f+patch*.03f;pixels[index]=new Color(shade,shade,shade,1);
                 normals[index]=new Color(.5f+(grain-.5f)*.2f,.5f+((float)random.NextDouble()-.5f)*.17f,1,1);
-                masks[index]=new Color(0,0,0,Mathf.Lerp(.27f,.78f,Mathf.SmoothStep(.2f,.8f,patch*.65f+streak*.35f)));
+                masks[index]=new Color(0,0,0,Mathf.Lerp(.48f,.93f,Mathf.SmoothStep(.2f,.8f,patch*.65f+streak*.35f)));
             }
             roadGrain.SetPixels(pixels);roadGrain.Apply(true,true);roadNormals.SetPixels(normals);roadNormals.Apply(true,true);roadSmoothness.SetPixels(masks);roadSmoothness.Apply(true,true);
             road.SetTexture("_BaseMap",roadGrain);road.SetTexture("_BumpMap",roadNormals);road.SetTexture("_MetallicGlossMap",roadSmoothness);road.SetTextureScale("_BaseMap",new Vector2(3,1));
             ivory=MakeMaterial("Ceramic ivory",new Color(.22f,.28f,.33f),.5f,.3f);
             graphite=MakeMaterial("Structural graphite",new Color(.025f,.05f,.065f),.55f,.5f);
             signal=MakeMaterial("Signal citron",new Color(.56f,.75f,.006f),.4f,0f);
-            cyan=MakeMaterial("Ion turquoise",new Color(.01f,.52f,.67f),.6f,.1f,new Color(.04f,2.7f,3.8f));
+            cyan=MakeMaterial("Ion turquoise",new Color(.01f,.52f,.67f),.6f,.1f,new Color(.025f,1.5f,2.2f));
             metal=MakeMaterial("Brushed titanium",new Color(.3f,.37f,.4f),.7f,.8f);
             glass=MakeMaterial("Smoked glass",new Color(.025f,.1f,.14f),.98f,.7f);
             rock=MakeMaterial("Basalt",new Color(.17f,.23f,.23f),.08f);
@@ -65,7 +65,7 @@ namespace VectorRush
             }
             for(int i=0;i<200;i++) {
                 var f=track.Evaluate(i/200f);
-                var joint=Box("Deck expansion joint",f.Position+f.Up*.02f,new Vector3(20,.018f,.12f),Quaternion.LookRotation(f.Forward,f.Up),graphite);
+                var joint=Box("Deck expansion joint",f.Position+f.Up*.02f,new Vector3(20,.009f,.035f),Quaternion.LookRotation(f.Forward,f.Up),graphite);
                 joint.GetComponent<Renderer>().shadowCastingMode=ShadowCastingMode.Off;
                 if(i%2==0) {
                     Box("Lane datum",f.Position+f.Up*.025f,new Vector3(.13f,.025f,3),Quaternion.LookRotation(f.Forward,f.Up),ivory);
@@ -172,10 +172,10 @@ namespace VectorRush
         }
         void BuildLighting()
         {
-            RenderSettings.fog=true;RenderSettings.fogColor=new Color(.008f,.016f,.037f);RenderSettings.fogMode=FogMode.ExponentialSquared;RenderSettings.fogDensity=.0018f;
-            RenderSettings.ambientMode=AmbientMode.Custom;var ambient=new SphericalHarmonicsL2();ambient.AddAmbientLight(new Color(.045f,.065f,.115f));RenderSettings.ambientProbe=ambient;
+            RenderSettings.fog=true;RenderSettings.fogColor=new Color(.028f,.045f,.075f);RenderSettings.fogMode=FogMode.ExponentialSquared;RenderSettings.fogDensity=.0015f;
+            RenderSettings.ambientMode=AmbientMode.Custom;var ambient=new SphericalHarmonicsL2();ambient.AddAmbientLight(new Color(.095f,.115f,.155f));RenderSettings.ambientProbe=ambient;
             var moon=new GameObject("Midnight soft key");moon.transform.SetParent(transform);moon.transform.rotation=Quaternion.Euler(43,-28,0);
-            var light=moon.AddComponent<Light>();light.type=LightType.Directional;light.color=new Color(.5f,.67f,1);light.intensity=.75f;light.shadows=LightShadows.Soft;light.shadowStrength=.65f;RenderSettings.sun=light;
+            var light=moon.AddComponent<Light>();light.type=LightType.Directional;light.color=new Color(.64f,.74f,1);light.intensity=.62f;light.shadows=LightShadows.Soft;light.shadowStrength=.4f;RenderSettings.sun=light;
             var skyShader=Shader.Find("VectorRush/Night Sky");if(skyShader){var sky=new Material(skyShader);ownedMaterials.Add(sky);RenderSettings.skybox=sky;}
             var probeObject=new GameObject("Night architecture reflection environment");probeObject.transform.SetParent(transform);probeObject.transform.position=new Vector3(0,58,-170);
             coastalProbe=probeObject.AddComponent<ReflectionProbe>();coastalProbe.mode=ReflectionProbeMode.Realtime;coastalProbe.refreshMode=ReflectionProbeRefreshMode.ViaScripting;coastalProbe.timeSlicingMode=ReflectionProbeTimeSlicingMode.AllFacesAtOnce;coastalProbe.resolution=256;coastalProbe.size=new Vector3(1800,600,1800);coastalProbe.farClipPlane=1600;coastalProbe.intensity=.8f;coastalProbe.cullingMask=~(1<<8);

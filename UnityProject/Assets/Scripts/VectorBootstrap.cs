@@ -26,13 +26,14 @@ namespace VectorRush
             var profile=ScriptableObject.CreateInstance<VolumeProfile>();
             var bloom=profile.Add<Bloom>();bloom.threshold.Override(1.3f);bloom.intensity.Override(.32f);bloom.scatter.Override(.55f);
             var tonemap=profile.Add<Tonemapping>();tonemap.mode.Override(TonemappingMode.ACES);
-            var color=profile.Add<ColorAdjustments>();color.postExposure.Override(.3f);color.contrast.Override(7);color.saturation.Override(3);
-            var vignette=profile.Add<Vignette>();vignette.intensity.Override(.22f);vignette.smoothness.Override(.65f);
+            var color=profile.Add<ColorAdjustments>();color.postExposure.Override(.3f);color.contrast.Override(3);color.saturation.Override(3);
+            var vignette=profile.Add<Vignette>();vignette.intensity.Override(.16f);vignette.smoothness.Override(.65f);
             var volume=new GameObject("Race grade").AddComponent<Volume>();volume.isGlobal=true;volume.profile=profile;
-            var craftIvory=world.MakeMaterial("Craft pearl ceramic",new Color(.72f,.78f,.83f),.72f,.3f);
+            var craftIvory=world.MakeMaterial("Craft pearl ceramic",new Color(.72f,.78f,.83f),.58f,.18f);
             var craftCeramic=world.MakeMaterial("Craft thermal ceramic",new Color(.055f,.072f,.095f),.46f,.24f);
             var craftGraphite=world.MakeMaterial("Craft carbon structure",new Color(.018f,.034f,.045f),.54f,.35f);
             var craftGlass=world.MakeMaterial("Craft optical canopy",new Color(.015f,.07f,.10f),.86f,.22f);
+            var craftEngine=world.MakeMaterial("Nozzle integrated accent",new Color(.045f,.19f,.25f),.62f,.35f,new Color(.015f,.46f,.68f));
             var racers=new List<HoverVehicle>();
             GameObject ship=Resources.Load<GameObject>("Art/HeroShip");
             for(int i=0;i<6;i++){
@@ -48,7 +49,7 @@ namespace VectorRush
                     var materials=renderer.sharedMaterials;
                     for(int k=0;k<materials.Length;k++){
                         string n=materials[k]?materials[k].name:"Ivory";
-                        if(n.Contains("Engine"))materials[k]=world.Engine;
+                        if(n.Contains("Engine"))materials[k]=craftEngine;
                         else if(n.Contains("Glass"))materials[k]=craftGlass;
                         else if(n.Contains("Graphite")||n.Contains("Ink"))materials[k]=craftGraphite;
                         else if(n.Contains("Ceramic"))materials[k]=craftCeramic;
