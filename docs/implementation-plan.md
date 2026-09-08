@@ -17,28 +17,35 @@
 - Do not install Editor: user is doing that.
 
 ## Task 1 — gameplay
-- [ ] Create Assets/Scripts/Gameplay/{HoverVehicle,RaceDirector,RaceProgress,ChaseCamera}.cs.
-- [ ] Implement specified public interfaces, suspension via downward raycasts, tunable force/steering, boost resource, AI lookahead, track recovery.
-- [ ] Implement ordered forward race progress, transitions and restarts. Test reverse crossing, skipped sectors, wrap, duplicate crossing, reset in Assets/Tests/Editor/RaceProgressTests.cs.
-- [ ] Hand over initialization contract and limitations; parent compiles in Unity and runs a complete race.
+- [x] Create Assets/Scripts/Gameplay/{HoverVehicle,RaceDirector,RaceProgress,ChaseCamera}.cs.
+- [x] Implement specified public interfaces, suspension via downward raycasts, tunable force/steering, boost resource, AI lookahead, track recovery.
+- [x] Implement ordered forward race progress, transitions and restarts. Test reverse crossing, skipped sectors, wrap, duplicate crossing, reset in Assets/Tests/Editor/RaceProgressTests.cs.
+- [x] Hand over initialization contract and limitations; parent compiles in Unity and runs a complete race.
 
 ## Task 2 — authored assets
-- [ ] Create SourceAssets/build_assets.py, hero .blend source and FBX export in Assets/Resources/Art. Craft hierarchy faces Unity +Z after import, approximately 6x2x8m; named material slots.
-- [ ] Render review images in evidence/asset-renders, inspect silhouette/materials and fix concrete issues.
-- [ ] Report names, orientation, scale and intended material assignments. No Unity scene edits.
+- [x] Create SourceAssets/build_assets.py, hero .blend source and FBX export in Assets/Resources/Art. Craft hierarchy faces Unity +Z after import, approximately 6x2x8m; named material slots.
+- [x] Render review images in evidence/asset-renders, inspect silhouette/materials and fix concrete issues.
+- [x] Report names, orientation, scale and intended material assignments. No Unity scene edits.
 
 ## Task 3 — track and integration (parent)
-- [ ] Create TrackPath and TrackFrame, smooth closed sample path and collision mesh.
-- [ ] Generate ocean, coastal architecture, track markings, barriers, grandstands, lighting and boost strips.
-- [ ] Create editor setup that persists scene and URP settings; runtime bootstrap instantiates race entities and presentation.
-- [ ] Provide shell wrappers for asset export, editor setup and standalone macOS build.
+- [x] Create TrackPath and TrackFrame, smooth closed sample path and collision mesh.
+- [x] Generate ocean, coastal architecture, track markings, barriers, grandstands, lighting and boost strips.
+- [x] Create editor setup that persists scene and URP settings; runtime bootstrap instantiates race entities and presentation.
+- [x] Provide shell wrappers for asset export, editor setup and standalone macOS build.
 
 ## Task 4 — presentation
-- [ ] Create Assets/Scripts/Presentation/RaceHUD.cs and RaceAudio.cs reading published gameplay state.
-- [ ] Draw coherent HUD, title, pause, results; pointer and keyboard controls; scalable typography and settings.
-- [ ] Engine, boost, collision and countdown feedback; original procedural audio allowed and documented.
+- [x] Create Assets/Scripts/Presentation/RaceHUD.cs and RaceAudio.cs reading published gameplay state.
+- [x] Draw coherent HUD, title, pause, results; pointer and keyboard controls; scalable typography and settings.
+- [x] Engine, boost, collision and countdown feedback; original procedural audio allowed and documented.
 
 ## Task 5 — independent review and delivery
-- [ ] A separate agent reviews actual images plus source for critical race/integration defects.
+- [x] A separate agent reviews actual images plus source for critical race/integration defects.
 - [ ] Fix highest-impact findings; recapture and re-review up to three meaningful cycles.
 - [ ] Record exact tools, compile/test logs, performance and remaining gaps. Deliver prompt, sources, build and controls, or precise external blocker if build cannot run.
+
+## GitHub milestones
+- [x] Preserve integrated source checkpoint and push to private `emrickk/vector-rush`.
+- [x] Complete second native race and collect current evidence (112.58 seconds, 3 laps, zero player recoveries).
+- [ ] Final polish: road shadow artifacts, team paint distinction, grandstand roof structure; rebuild and recapture.
+- [ ] Verify menu/keyboard interaction and record a short native gameplay video.
+- [ ] Commit final evidence, critique, limitations and delivery documentation; push all completed steps.
