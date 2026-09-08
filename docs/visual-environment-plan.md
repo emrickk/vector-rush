@@ -90,3 +90,7 @@ Parent owns the passage composition, shared WorldBuilder/material changes, rende
 Order: baseline/composition first; city/track assets and isolated road diagnosis can then run in parallel; lighting and speed impression follow integration; native benchmark acceptance precedes full-circuit expansion.
 
 AI pace, race-rule changes, new ship forms, another HUD redesign and new gameplay systems are deferred. The first implementation task is the five-view benchmark and scene composition for the final-sector/gallery/exit passage.
+
+## Subsequent user-selected landmark / road milestone
+
+2026-09-08: the user prioritized distinctive roadside landmarks, then road finish. The first/middle sectors now contain an original split signal mast and thermal exchange works with reserved footprints, quieter skyline layers and an independently verified mast sky gap. The final station remains. Native A/B/A isolates the current L-shaped road strip to the fixture caster family; disabling those three renderer casters preserves light pools without changing the road material/mesh or race physics. Reviews012/013 and road-reviews002/003 record acceptance and boundaries; final build b709ef36660443b7bdec08170d00b8df is packaged locally. All42 tests and both final race/restart checks pass. One performance sample has unexplained long intervals; the repeat returns near prior timings, with both preserved. This closes the requested bounded implementation, not every earlier broad city or subjective-motion ambition.

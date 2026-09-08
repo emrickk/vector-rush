@@ -1,0 +1,132 @@
+{
+  "buildGuid": "b709ef36660443b7bdec08170d00b8df",
+  "source": "full-lap/environment-evidence.json",
+  "scope": "Unmodified native selected PNGs. The complete 1440-frame recording is local; linked previews encode portions at24fps with silent automated steering.",
+  "selectedFrames": [
+    0,
+    148,
+    166,
+    175,
+    193,
+    211,
+    360,
+    405,
+    455,
+    534,
+    570,
+    606,
+    641,
+    678,
+    995,
+    1000,
+    1004,
+    1008,
+    1016
+  ],
+  "lapCrossingFrames": [
+    15,
+    1040
+  ],
+  "fullLapStart": 15,
+  "fullLapFrames": 1026,
+  "fullLapSeconds": 42.75,
+  "previewStart": 130,
+  "previewFrames": 576,
+  "previewSeconds": 24,
+  "matchedAnchorPoses": true,
+  "candidate02MatchingRacerCameraTimestampFrames": 1440,
+  "sourceHashCheck": {
+    "files": 172,
+    "changed": []
+  },
+  "captures": {
+    "full-lap": {
+      "pngCount": 1440,
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "buildGuid": "b709ef36660443b7bdec08170d00b8df",
+      "complete": true,
+      "anchors": [
+        747,
+        921,
+        943,
+        965,
+        1004
+      ],
+      "pngChunkCrcAndZlibPassed": true
+    },
+    "16x10": {
+      "pngCount": 5,
+      "dimensions": [
+        1280,
+        800
+      ],
+      "buildGuid": "b709ef36660443b7bdec08170d00b8df",
+      "complete": true,
+      "anchors": [
+        0,
+        174,
+        196,
+        218,
+        257
+      ],
+      "pngChunkCrcAndZlibPassed": true
+    },
+    "ultrawide": {
+      "pngCount": 5,
+      "dimensions": [
+        1920,
+        810
+      ],
+      "buildGuid": "b709ef36660443b7bdec08170d00b8df",
+      "complete": true,
+      "anchors": [
+        0,
+        174,
+        196,
+        218,
+        257
+      ],
+      "pngChunkCrcAndZlibPassed": true
+    }
+  },
+  "videos": {
+    "VectorRush-full-lap.mp4": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "width": 1920,
+          "height": 1080,
+          "r_frame_rate": "24/1",
+          "nb_frames": "1026"
+        }
+      ],
+      "format": {
+        "duration": "42.750000",
+        "size": "27146732"
+      },
+      "sha256": "c1ae733b44f26c14618467a720ff2fa1c49e38a9626cf7d8689d34de7e4da2a4"
+    },
+    "VectorRush-landmarks-preview.mp4": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "width": 1920,
+          "height": 1080,
+          "r_frame_rate": "24/1",
+          "nb_frames": "576"
+        }
+      ],
+      "format": {
+        "duration": "24.000000",
+        "size": "14371139"
+      },
+      "sha256": "7d0d82378cb48d77a5a3fb5a0a0160b6643d4c2f612e5bf087645381d67c7ff3"
+    }
+  },
+  "videosFullyDecodedWithoutErrors": true
+}

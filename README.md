@@ -4,19 +4,21 @@ A playable, original anti-gravity racing prototype for Apple Silicon macOS. Pilo
 
 [Private GitHub repository](https://github.com/emrickk/vector-rush) · [Build brief](docs/GPT6-BUILD-PROMPT.md) · [Development history](docs/development-history.md) · [Ship art plan](docs/ship-art-plan.md)
 
-## Current milestone — close racing and final visual polish
+## Current milestone — landmarks and road finish
 
-The player now uses a 53 m/s cruise and 72 m/s boost preset, with responsive acceleration retained. Rival steering follows the pursuit geometry, and bounded lateral assistance helps AI craft clear outer-wall contact through normal physics. In the final automated race, a rival stayed within 60 m of validated race progress for **80.9%** of post-start racing, sustained across all three laps. All six racers had zero recoveries. The nearest finish gap was 100.85 m; no overtake was demonstrated.
+Two original landmarks now give the circuit distinct places: a split signal mast with an elevated room beside the opening bend, and a three-drum thermal exchange works with a service podium and pipe bridge beside the middle sector. Their footprints keep nearby blocks clear. A lower, quieter skyline and removal of the oversized slab beside the mast give the structures more space. The final-sector station and both galleries remain.
 
-The final independent visual critique led to two changes: a compact nearest-rival name/distance cue beneath POS/LAP and softer cool-gallery lighting. The authored transit/service architecture, rebuilt galleries, deck construction, corrected Kestrel ship and throttle-driven exhaust remain in the current build.
+A native before/off/restored experiment identified the conspicuous L-shaped road band as the streetlamp family's moon shadow. Disabling casting on those three fixture mesh groups cleans up the satin road's light pools while retaining visible lamps, architectural shadows and vehicle grounding. Road geometry, surface material and racing physics remain unchanged by that correction.
 
-[Current 15-second preview](evidence/close-race-final/VectorRush-preview.mp4) · [Current 42.75-second full lap](evidence/close-race-final/VectorRush-full-lap.mp4) · [Current local macOS archive](Builds/VectorRush-macOS-close-race-2026-09-08.zip). Previews show actual native rendering at 1080p, with silent automated steering at 24 simulation frames per second. The full lap spans two recorded start-line crossings.
+[Current 24-second landmark preview](evidence/landmarks-final/VectorRush-landmarks-preview.mp4) · [Current 42.75-second full lap](evidence/landmarks-final/VectorRush-full-lap.mp4) · [Current local macOS archive](Builds/VectorRush-macOS-landmarks-2026-09-08.zip). Both videos are continuous excerpts of actual 1080p native rendering, with silent automated steering at 24 simulation frames per second. The full lap spans two recorded start-line crossings.
 
-[Final critique](docs/environment-reviews/009-close-race-critique.md) · [Focused correction verification](docs/environment-reviews/010-close-race-verification.md) · [Pacing comparison and preserved candidates](docs/pace-reviews/002-native-pace-comparison.md). Broader city expansion and subjective continuous-motion, human driving and audio assessment remain future work.
+[Independent landmark critique](docs/environment-reviews/012-landmarks-native-critique.md) · [Landmark correction verification](docs/environment-reviews/013-landmark-correction-verification.md) · [Road shadow experiment](docs/road-reviews/002-fixture-caster-native.md) · [Final road sample review](docs/road-reviews/003-final-road-verification.md).
+
+The closer-racing preset remains53m/s cruise and 72 m/s boost. Its prior accepted automated race kept a rival within 60 m of validated progress for 80.9% of post-start racing, with no recoveries. Nearby rivals are often behind the camera; the named distance cue exposes their position. The nearest prior finish gap was 100.85 m and no overtake was demonstrated. [Pacing evidence and limitations](docs/pace-reviews/002-native-pace-comparison.md).
 
 ## Play
 
-Open **[Builds/Vector Rush.app](Builds/Vector%20Rush.app)** or unpack **[the current local archive](Builds/VectorRush-macOS-close-race-2026-09-08.zip)**. Source, editable assets and selected evidence are pushed to GitHub. The native build is ready locally; GitHub release publication was blocked by automatic approval review pending separate user authorization. Earlier environment/coastal archives are historical.
+Open **[Builds/Vector Rush.app](Builds/Vector%20Rush.app)** or unpack **[the current local archive](Builds/VectorRush-macOS-landmarks-2026-09-08.zip)**. Source, editable assets and selected evidence are pushed to GitHub. The native build is ready locally; no GitHub release has been published. Earlier archives are historical.
 
 | Action | Keyboard | Gamepad |
 |---|---|---|
@@ -33,16 +35,15 @@ Menus support the pointer. Pause includes Resume, Restart, camera shake and Quit
 
 ## Current validation
 
-- Final native build **7da2883ade4f4223b7a611db8cf60eb6** completed a fresh pacing race in **128.32 simulation seconds**, with **zero recoveries across all six racers**. All 1,285 sampled racer states and timestamps exactly match the accepted pacing candidate after presentation changes.
+- Native build **b709ef36660443b7bdec08170d00b8df** captures 1,440 frames / 60 simulation seconds. All 1,440 camera, racer and timestamp records exactly match the pre-road-correction candidate; all five station anchors match exactly.
 - **42/42 Unity tests passed** on the final source, including pursuit geometry, rival corridor assistance and existing input/race/restart checks.
-- The final 60-second traversal produced five correct anchors, all matching the pre-polish camera/player transforms exactly. The exported full lap contains **1,026 frames / 42.75 seconds**; the short preview contains **360 frames / 15 seconds**.
-- Five current native views each at **1920×1080, 1280×800 and 1920×810**, with build identity and PNG integrity checks. The cue fits in inspected smallest/ultrawide warm-gallery views, and sampled labels agree with racer telemetry.
-- Separate real-time native race: **three laps in 128.32 seconds, zero player recoveries**; both restart launches and all three countdown-pause checks passed. At 1080p on Apple M2 Max with VSync, 7,189 observed intervals yielded mean **8.35 ms**, P95 **9.22 ms**, P99 **9.32 ms**, and 239.5 MiB Unity allocation. No build or encoding ran concurrently. Prior environment P95 was 15.14 ms; changed race pace makes this an observed comparison, not an identical-trajectory benchmark.
-- Native archive integrity and source/build hashes are recorded in the [delivery manifests](evidence/close-race-final/build-manifest.json).
+- Complete current circuit at **1920×1080**, plus five final-sector views each at **1280×800** and **1920×810**. All 1,450 original PNGs passed chunk-CRC and compressed-data validation. The inspected smaller warm-gallery and ultrawide reveal views remain readable. Other aspect-ratio landmark approaches were not newly inspected.
+- Separate real-time native race completed **three laps in 128.32 seconds**, with **zero recoveries across all six racers**. Both restart launches and all three countdown-pause checks passed. Both final runs passed these behavior checks. The first performance sample had intermittent long frames (P95/P99 16.66/188.14 ms); the repeat returned to **9.23/9.33 ms**, close to the prior 9.22/9.32 ms. The first hitch cause is undetermined; both samples and competing-process observations are preserved in the [performance comparison](evidence/landmarks-final/performance-comparison.json).
+- Final macOS archive integrity passes: **55,318,267 bytes**, 441 ZIP entries. Runtime source/resources/settings and app hashes are recorded in the [delivery manifests](evidence/landmarks-final/build-manifest.json).
 
-[Final evidence](evidence/close-race-final/) · [Real-time race and metrics](evidence/close-race-final/performance/) · [Previous environment milestone](evidence/environment-final-full-lap/).
+[Current evidence](evidence/landmarks-final/) · [Real-time race and metrics](evidence/landmarks-final/performance/) · [Previous close-racing milestone](evidence/close-race-final/).
 
-This remains a working prototype. Nearby rivals are usually behind the camera in automated driving; the cue exposes that pressure without inventing a visible fighting pack. Broad road shading bands, repeated skyline patterns and a modest station silhouette remain. Sampled visual checks do not establish subjective motion comfort or human driving/audio quality. Earlier pointer/gamepad checks remain historical coverage; no new physical gamepad validation is claimed.
+This remains a working prototype. Landmark surfaces and foundations are simplified, distant buildings still repeat, and ordinary road seams remain. The fixture experiment explains the selected current shadow shape; it does not retroactively resolve every earlier damp-road artifact. Visual acceptance here covers documented sampled images, not continuous playback, subjective human handling or audio quality. Earlier physical-input checks remain historical coverage.
 
 ## Previous coastal delivery and evidence
 
@@ -71,9 +72,10 @@ The slice includes one course, one craft shape, five AI rivals and original proc
 - [SourceAssets/hero-v3](SourceAssets/hero-v3/) — current ship source, immutable finish/bake payloads and preserved earlier passes.
 - [SourceAssets/environment-v2](SourceAssets/environment-v2/) — preserved tower/cliff kit and texture sources.
 - [SourceAssets/environment-v3](SourceAssets/environment-v3/) — current editable transit/service and night-tower sources, export recipes and placement audits.
+- [SourceAssets/environment-v4](SourceAssets/environment-v4/) — current editable landmark kit, preserved rejected/corrective passes, live export identity and full-course placement audit.
 - [Asset regeneration guide](docs/asset-regeneration.md) — safe staged rebuilds that protect the reviewed live assets.
 - [Reference concept](references/solstice-chase-concept.png) — generated art direction, distinct from actual runtime and Blender inspection images.
-- [Toolchain and provenance](docs/toolchain.md), [test results](evidence/editmode-results.xml), [current build manifest](evidence/close-race-final/build-manifest.json).
+- [Toolchain and provenance](docs/toolchain.md), [test results](evidence/editmode-results.xml), [current build manifest](evidence/landmarks-final/build-manifest.json).
 
 The craft, environment geometry, interface and sound synthesis are original. Cliff surface maps are **Rock 3 by Rob Tuytel / Poly Haven (CC0)**; original maps, hash manifests and the named Unity mask derivative are retained with [provenance](SourceAssets/environment-v2/textures/Rock3_PROVENANCE.md). No Wipeout assets or branding are included.
 

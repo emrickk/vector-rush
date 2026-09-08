@@ -1,0 +1,15 @@
+Actual runtime sample — 2026-09-08T17:47:33.9780100Z
+Unity 6000.6.0f1
+GPU Apple M2 Max
+Resolution 1920x1080
+Autopilot True
+VSync 1
+Samples 4499
+Mean ms 13.27
+P50 ms 8.36
+P95 ms 16.66
+P99 ms 188.14
+Unity allocated memory MiB 241.1
+Race state Racing
+Race lap 2
+Scope: observed frame intervals; not isolated GPU timings or proof of completed race.

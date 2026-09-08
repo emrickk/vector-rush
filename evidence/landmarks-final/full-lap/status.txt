@@ -1,0 +1,1 @@
+COMPLETE: 1440 simulated frames / 5 anchors; stillsOnly=False; review required.
