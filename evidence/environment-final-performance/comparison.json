@@ -1,0 +1,36 @@
+{
+  "buildGuid": "153b77ea7d53463b8fc11a0ddae232be",
+  "scope": "Separate sequential native real-time samples at1920x1080 Apple M2 Max, VSync1. No build/bake/encode job ran during final sample. Observed frame intervals, not isolated GPU timings or locked framerate proof. Fixed-simulation preview is excluded.",
+  "metrics": {
+    "Samples": {
+      "baseline": 5149.0,
+      "final": 6804.0,
+      "deltaPercent": 32.14216352689843
+    },
+    "Mean ms": {
+      "baseline": 11.65,
+      "final": 8.82,
+      "deltaPercent": -24.291845493562235
+    },
+    "P50 ms": {
+      "baseline": 9.41,
+      "final": 8.33,
+      "deltaPercent": -11.477151965993626
+    },
+    "P95 ms": {
+      "baseline": 16.67,
+      "final": 15.14,
+      "deltaPercent": -9.178164367126584
+    },
+    "P99 ms": {
+      "baseline": 17.01,
+      "final": 15.99,
+      "deltaPercent": -5.996472663139341
+    },
+    "Unity allocated memory MiB": {
+      "baseline": 245.1,
+      "final": 240.1,
+      "deltaPercent": -2.0399836801305637
+    }
+  }
+}

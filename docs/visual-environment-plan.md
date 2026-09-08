@@ -2,7 +2,7 @@
 
 Date: 2026-09-08. Current playable baseline: `14b1212`; planning checkpoint: `6fa91de`.
 
-**User priority: visuals and feeling first.** This plan replaces the previous AI-first order. The current work targets the generated-looking city, underdeveloped track, repetitive gallery, black ceiling and diagonal road sheen. This document is the plan; implementation has not begun.
+**User priority: visuals and feeling first.** This plan replaces the previous AI-first order. The current work targets the generated-looking city, underdeveloped track, repetitive gallery, black ceiling and diagonal road sheen. Implementation is active. Baseline, authored transit assets, both galleries and track construction are built; corrected composition has advanced to final verification. Full-circuit city expansion remains gated by benchmark acceptance. See the implementation plan and numbered reviews for current status.
 
 ## Intended result
 

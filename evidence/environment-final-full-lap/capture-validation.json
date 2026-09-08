@@ -1,0 +1,29 @@
+{
+  "complete": true,
+  "frames": 1008,
+  "pngDimensionsValid": true,
+  "invalidImages": [],
+  "buildGuid": "153b77ea7d53463b8fc11a0ddae232be",
+  "lapStart": 1,
+  "lapEnd": 2,
+  "raceTimeStart": 0.11999990791082382,
+  "raceTimeEnd": 42.07894515991211,
+  "wrapFrames": [
+    15,
+    913
+  ],
+  "boostFrames": 54,
+  "anchorFrames": [
+    646,
+    816,
+    836,
+    856,
+    886
+  ],
+  "fullLapVerified": true,
+  "benchmarkVideoFrames": [
+    646,
+    909
+  ],
+  "scope": "42-second native traversal through normal physics, silent automated steering at24 simulation frames/s. Natural lap advancement and two start-line wraps verify complete circuit coverage. Independent frame review is separate from continuous motion acceptance."
+}

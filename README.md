@@ -8,21 +8,17 @@ A playable, original anti-gravity racing prototype for Apple Silicon macOS. Pilo
 
 The HUD now groups speed and boost in one instrument, adds the actual circuit map with live racer markers, and uses bundled Rajdhani typography. Compact position/lap and race-time panels keep the road center clear; actual lap transitions trigger a brief final-lap cue. Countdown, pause and results share the same typography.
 
-The native game now uses the corrected V3 ship with flush citron/07 paint, baked surface maps and authored engine anchors. The canopy, intake and nozzle contact artifacts are repaired. Recessed gallery panels and focused wall lighting create readable warm/cool corridors; plume length and brightness now follow actual throttle, strengthen during active boost, and extinguish after lift-off even at speed. A rival corridor guard prevents the repeated wall stalls observed in the earlier night candidate.
+The current environment candidate adds an authored transit station, service buildings, terrace/split towers, continuous deck construction and rebuilt warm/cool galleries with visible ceilings. Near glazing now has restrained room-light artwork. The road uses a deliberate satin finish; the old diagonal-sheen cause remains unresolved. The corrected Kestrel ship, throttle-driven exhaust and compact racing HUD remain in use.
 
-[Current HUD preview](evidence/hud-motion-01/VectorRush-HUD-current.mp4): 15 seconds at 1080p, silent, with automated steering at 24 simulation frames per second.
+[Current 11-second environment passage](evidence/environment-final-full-lap/VectorRush-environment-current.mp4) · [Current 42-second full-lap preview](evidence/environment-final-full-lap/VectorRush-full-lap-current.mp4). Both show the final native build at 1080p, with silent automated steering at 24 simulation frames per second. The full recording spans two start-line crossings and a completed lap.
 
-[Native HUD views](evidence/hud-native-02/): seven actual states at 1920×1080, 1280×800 and 1920×810, including an actual three-lap finish. The first rejected scaling pass is preserved separately. [Independent responsive-layout review](docs/hud-reviews/003-native-responsive-correction.md).
+The five-view composition has passed review for further verification. **Finished visual acceptance and full-circuit city expansion remain pending normal-speed playback review.** Frame inspection does not establish motion comfort, highlight stability or human driving feel. Rejected candidates and corrective history are preserved in [environment reviews](docs/environment-reviews/).
 
-[Earlier night-scene preview (before the throttle fix and HUD redesign)](evidence/night-v4-motion-02/VectorRush-night-v4-current.mp4): 15 seconds at 1080p, silent, with automated steering at 24 simulation frames per second. It shows the road-gloss/lighting milestone, predates the throttle-response correction, and is separate from the real-time performance sample.
-
-[Current native throttle check](evidence/throttle-native-01/throttle-evidence.json): [quarter throttle](evidence/throttle-native-01/02-quarter.png), [full throttle](evidence/throttle-native-01/03-full.png), [released while coasting](evidence/throttle-native-01/04-release-coasting.png), [boost](evidence/throttle-native-01/05-boost.png). Exhaust fell below 2% in 0.150 seconds while still at 242 km/h, then reached zero.
-
-This is a playable prototype milestone, not AAA acceptance. Exterior buildings/windows and gallery bays remain repetitive, the ceiling is too dark, and residual diagonal road sheen remains visible. The last material adjustment lowers its contrast without claiming to repair the underlying cause. Human handling, competitive rival pacing and physical gamepad hardware need further assessment.
+[Previous HUD preview](evidence/hud-motion-01/VectorRush-HUD-current.mp4) and [HUD phase/aspect verification](evidence/hud-native-02/) predate this environment candidate. The [native throttle check](evidence/throttle-native-01/throttle-evidence.json) covers normal-physics exhaust response; gameplay and propulsion are unchanged in this environment pass.
 
 ## Play
 
-Open **[Builds/Vector Rush.app](Builds/Vector%20Rush.app)** or unpack **[the current night archive](Builds/VectorRush-macOS-HUD-2026-09-07.zip)**. The **[VectorRush-macOS-2026-09-07.zip](Builds/VectorRush-macOS-2026-09-07.zip)** archive contains the earlier coastal delivery and is historical. Build products stay local and are excluded from Git; source and selected evidence are in the private repository.
+Open **[Builds/Vector Rush.app](Builds/Vector%20Rush.app)** or unpack **[the current environment review archive](Builds/VectorRush-macOS-environment-2026-09-08.zip)**. The **[VectorRush-macOS-2026-09-07.zip](Builds/VectorRush-macOS-2026-09-07.zip)** archive contains the earlier coastal delivery and is historical. Build products stay local and are excluded from Git; source and selected evidence are in the private repository.
 
 | Action | Keyboard | Gamepad |
 |---|---|---|
@@ -39,15 +35,15 @@ Menus support the pointer. Pause includes Resume, Restart, camera shake and Quit
 
 ## Current validation
 
-- **21 native HUD phase/aspect captures complete**, with a real final-lap event and three-lap finish in 112.60 seconds, zero player recoveries. Native pointer Start/Resume/Restart/Quit and an outside-click rejection checked at 1280×800; keyboard Pause opened correctly.
-- **32/32 Unity tests passed**, including analog trigger/release at high coasting speed, player exclusion, rival edge correction and adjacent-traffic clearance.
-- **Three player laps in 112.60 seconds, zero recoveries across all six racers** during the observed race. Both restart launches and all three countdown-pause checks passed. Rivals had completed 2.27–2.74 laps when the player ended the race; their independent completion and competitive pacing are not established.
-- **1920×1080 on Apple M2 Max:** 3,529 frame intervals over the real-time sample, VSync enabled, mean **17.01 ms**, P95 **20.60 ms**, P99 **25.34 ms**, with 250.3 MiB Unity allocation. This is not a locked 60fps or isolated GPU claim. No build/bake ran during the sample; idle desktop apps remained open.
-- Eight calibrated native ship-control views confirm the geometry repair using unchanged prior maps. The final maps were rebaked, hash/dimension checked and exercised in native race/gameplay captures.
+- Final native build **153b77ea7d53463b8fc11a0ddae232be**: a verified complete circuit across **1008 frames / 42 simulation seconds**, with five correct benchmark anchors. An 11-second passage is extracted from that same recording.
+- Five current native views each at **1920×1080, 1280×800 and 1920×810**. Source/build hashes and PNG validation are preserved. The baseline comparison reports camera drift outside exact-match tolerance; it is a nearby actual-physics comparison, not pixel-exact A/B.
+- Separate real-time native race: **three laps in 112.60 seconds, zero player recoveries**; both restart launches and all three countdown-pause checks pass.
+- **Apple M2 Max, 1920×1080, VSync enabled:** 6,804 observed frame intervals; mean **8.82 ms**, P95 **15.14 ms**, P99 **15.99 ms**, 240.1 MiB Unity allocation. Fresh baseline P95/P99 were 16.67/17.01 ms. No build, bake or encoding job ran during the sample. This is no observed regression in this run, not an isolated GPU timing or locked-frame-rate guarantee.
+- **32/32 Unity tests passed again on the final source**, including throttle response, rival safety and race/restart behavior.
 
-[Native race and metrics](evidence/night-v4-race-01/) · [Geometry review 009](docs/ship-reviews/009-native-contact-repair-control.md) · [Gallery/plume review 008](docs/ship-reviews/008-gallery-wash-and-plume-correction.md) · [Final review 010](docs/ship-reviews/010-night-playable-milestone.md)
+[Final capture and manifests](evidence/environment-final-full-lap/) · [Real-time race and metrics](evidence/environment-final-performance/) · [Art review 008](docs/environment-reviews/008-final-environment-art.md) · [Continuity/aspect review 007](docs/environment-reviews/007-final-continuity-aspects.md) · [Capture validation](evidence/environment-final-full-lap/capture-validation.json).
 
-The full race/performance sample preceded the road-gloss, throttle-driven presentation and HUD adjustments; gameplay code, geometry, light count and render settings are unchanged; the new HUD adds presentation drawing. The final native recording validates the road finish, and the six-stage virtual-gamepad run separately validates throttle-driven exhaust through normal physics. The current HUD has its own [native pointer check](evidence/hud-input-01/scope.md). Its motion recording is not a new performance measurement. Low-energy presentation and physical controller hardware still lack dedicated native coverage.
+Native frame inspection accepts the corrected glazing, bearing and hatch. Broad diagonal road bands, a brief lamp/BEST LAP overlap and the conventional station silhouette remain. Continuous normal-speed playback, crowded-gallery readability, human driving/audio feel and full-circuit city expansion are **not accepted** by these checks. Earlier HUD pointer/phase checks remain historical coverage; this environment stage changes no controls, handling or AI.
 
 ## Previous coastal delivery and evidence
 
@@ -74,10 +70,11 @@ The slice includes one course, one craft shape, five AI rivals and original proc
 - [UnityProject](UnityProject/) — Unity **6000.6.0f1**, URP **17.6.0**. Open `Assets/Scenes/Solstice.unity` and press Play.
 - [SourceAssets/hero-v2](SourceAssets/hero-v2/) — preserved previous ship, export generator, engine anchors and inspection metadata.
 - [SourceAssets/hero-v3](SourceAssets/hero-v3/) — current ship source, immutable finish/bake payloads and preserved earlier passes.
-- [SourceAssets/environment-v2](SourceAssets/environment-v2/) — editable tower/cliff kit, export scripts and texture sources.
+- [SourceAssets/environment-v2](SourceAssets/environment-v2/) — preserved tower/cliff kit and texture sources.
+- [SourceAssets/environment-v3](SourceAssets/environment-v3/) — current editable transit/service and night-tower sources, export recipes and placement audits.
 - [Asset regeneration guide](docs/asset-regeneration.md) — safe staged rebuilds that protect the reviewed live assets.
 - [Reference concept](references/solstice-chase-concept.png) — generated art direction, distinct from actual runtime and Blender inspection images.
-- [Toolchain and provenance](docs/toolchain.md), [test results](evidence/editmode-results.xml), [current build manifest](evidence/throttle-native-01/build-manifest.json).
+- [Toolchain and provenance](docs/toolchain.md), [test results](evidence/editmode-results.xml), [current build manifest](evidence/environment-final-full-lap/build-manifest.json).
 
 The craft, environment geometry, interface and sound synthesis are original. Cliff surface maps are **Rock 3 by Rob Tuytel / Poly Haven (CC0)**; original maps, hash manifests and the named Unity mask derivative are retained with [provenance](SourceAssets/environment-v2/textures/Rock3_PROVENANCE.md). No Wipeout assets or branding are included.
 

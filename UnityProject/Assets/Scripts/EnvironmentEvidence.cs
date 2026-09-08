@@ -61,11 +61,15 @@ namespace VectorRush
                 while ((director.Phase != RacePhase.Racing || director.RaceTime < startTime || player.TrackProgress < startProgress) && Time.realtimeSinceStartup < deadline) yield return null;
                 if (director.Phase != RacePhase.Racing || player.TrackProgress < startProgress) throw new InvalidOperationException("Could not reach the benchmark through normal physics.");
                 int nextAnchor = 0;
+                // Grid staging can report .99 before the start-line crossing. Arm
+                // full-lap anchors only after entering the early circuit.
+                bool anchorsArmed=!fullLap || player.TrackProgress<anchors[0];
                 for (int index = 0; index < frameCount; index++) {
                     yield return new WaitForEndOfFrame();
                     var frame = ReadFrame(index);
                     report.frames.Add(frame);
-                    if (nextAnchor < anchors.Length && player.TrackProgress >= anchors[nextAnchor] && player.TrackProgress < .999f) {
+                    if(player.TrackProgress<anchors[0])anchorsArmed=true;
+                    if (anchorsArmed && nextAnchor < anchors.Length && player.TrackProgress >= anchors[nextAnchor] && player.TrackProgress < .999f) {
                         frame.anchor = labels[nextAnchor]; frame.anchorFile = labels[nextAnchor] + ".png";
                         report.anchorFrames.Add(index); nextAnchor++;
                     }
@@ -80,6 +84,7 @@ namespace VectorRush
                     if (!File.Exists(path) || new FileInfo(path).Length < 24) throw new IOException("Missing native frame " + frame.file);
                     if (!string.IsNullOrEmpty(frame.anchorFile)) File.Copy(path, Path.Combine(folder, frame.anchorFile), true);
                 }
+                if(fullLap && (report.frames[report.frames.Count-1].lap<=report.frames[0].lap || report.frames[report.frames.Count-1].raceTime-report.frames[0].raceTime<40)) throw new InvalidOperationException("Full circuit was not completed during the traversal.");
                 if (nextAnchor != 5) throw new InvalidOperationException("Only " + nextAnchor + " of five natural progress anchors reached.");
                 if (!string.IsNullOrEmpty(referencePath)) CompareReference();
                 report.complete = true; success = true;

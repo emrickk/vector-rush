@@ -1,0 +1,12 @@
+{
+  "complete": true,
+  "buildGuid": "153b77ea7d53463b8fc11a0ddae232be",
+  "resolution": [
+    1920,
+    810
+  ],
+  "anchors": 5,
+  "simulatedPoseFrames": 264,
+  "savedFramePNGs": 5,
+  "scope": "Stills-only rendering check; no motion/performance claim."
+}

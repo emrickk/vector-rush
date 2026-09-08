@@ -161,7 +161,8 @@ namespace VectorRush
         {
             var q=Quaternion.LookRotation(f.Forward,Vector3.up);
             Box("Ocean pier",new Vector3(f.Position.x,(f.Position.y-4)*.5f,f.Position.z),new Vector3(3.5f,f.Position.y-4,5),q,ivory);
-            Box("Deck bearing",f.Position-Vector3.up*3,new Vector3(23,1.8f,4),q,metal);
+            // Follow the bank beneath the deck; a level bearing can rise through the low shoulder.
+            Box("Deck bearing",f.Position-f.Up*3,new Vector3(23,1.8f,4),Quaternion.LookRotation(f.Forward,f.Up),metal);
             Box("Pier foot",new Vector3(f.Position.x,1,f.Position.z),new Vector3(11,2,12),q,graphite);
         }
         void DirectionMarkings(float t)

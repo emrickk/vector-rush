@@ -151,9 +151,9 @@ User explicitly prioritizes city/track visuals and feeling. This order supersede
 
 - [x] Write the revised visual-first plan and preserve the prior critique/history.
 - [x] Capture five fixed benchmark views and compose one 10–15-second final-sector/gallery/exit passage.
-- [ ] Author visible near/middle/far city layers with distinct architecture and an exit landmark.
-- [ ] Develop track construction and entry/interior/exit gallery variants with a visible ceiling.
-- [ ] Isolate and resolve or deliberately redesign the unstable road-sheen treatment.
+- [x] Author the benchmark city layers and exit transit structure; landmark identity remains a documented weakness.
+- [x] Develop track construction and both galleries with visible ceilings; corrective still views pass.
+- [x] Run isolated road diagnostics and deliberately redesign the satin finish; residual bands remain.
 - [ ] Integrate surface lighting, depth and speed cues; independently inspect stills and continuously view native motion.
 - [ ] Expand the accepted design around the current circuit, profile the exact build and package the visual milestone.
 
@@ -169,3 +169,16 @@ Baseline step complete: unchanged-art native build, 264 frames / five anchors wi
 Candidate01 integrated and captured; city composition fails (station passed before reveal, blank workshop face, dark nearby masses). Preserve that candidate and correct placement/facing with at most four architectural fills, then test the deliberate satin road finish. Do not extend the district kit until the corrected benchmark is reviewed. Native camera drift is reported as a failed exact-match check, not hidden.
 
 Candidate02: corrected composition accepted for further verification in review 005; no expansion acceptance. Preserve its 1080p/16:10 evidence and sampled-sequence defects in review 006. Final bounded correction addresses bearing banking, hatch placement and nearby glazing, then refresh native passage/full-lap/aspect and real-time performance evidence on the exact build. Continuous normal-speed motion acceptance remains explicit and separate from sampled images.
+
+Final bounded correction complete: glazing finish, bank-aligned bearing and single-panel hatch passed inspected native stills (008). Capture instrumentation was corrected after preserving its first full-lap anchor failure. Final build GUID 153b77ea7d53463b8fc11a0ddae232be supplies the 42-second full-circuit preview, 11-second benchmark extract and five valid anchors at each of 1080p, 16:10 and ultrawide.
+
+- [x] Author near/middle/far benchmark composition and transit/service architecture; preserve two rejected/corrective stages.
+- [x] Rebuild both galleries and continuous deck construction; verify the bearing/hatch corrective views.
+- [x] Perform isolated road experiments and adopt deliberate satin finish. Broad residual shading bands remain; root cause and motion stability are not accepted.
+- [x] Capture a complete current circuit and package the native review build with source/build manifests.
+- [ ] Obtain normal-speed subjective playback acceptance; verify crowded gallery/opponent readability.
+- [ ] Expand the accepted city design across the remaining circuit after that gate.
+
+Next bounded work depends on playback findings: address a demonstrated visual defect or extend the accepted city families. Do not multiply assets while treating sampled-frame review as motion acceptance.
+
+Final real-time native race/performance gate complete: 3 player laps, zero player recoveries, restart/countdown checks pass; P95/P99 15.14/15.99 ms versus baseline16.67/17.01 ms. The macOS archive passed integrity checks. Playback question remains pending; absence of a reply is not acceptance for city expansion.

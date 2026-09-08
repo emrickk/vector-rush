@@ -127,12 +127,14 @@ namespace VectorRush
                     fill.range=20;fill.shadows=LightShadows.None;
                     if((i==2&&side==1)||(i==4&&side==-1)){
                         // Designated service bays interrupt the blank repeated wall spans.
-                        var service=mid.Position+mid.Right*side*14.27f+mid.Up*6.25f;
-                        Add(service,new Vector3(.1f,3.6f,3.5f),mq,dark,cube);
+                        // Attach the hatch to one half-panel, not the joint between two angled panels.
+                        var sf=track.Evaluate(start+(i+.25f)*step);var sq=Quaternion.LookRotation(sf.Forward,sf.Up);
+                        var service=sf.Position+sf.Right*side*14.27f+sf.Up*6.25f;
+                        Add(service,new Vector3(.1f,3.6f,3.5f),sq,dark,cube);
                         for(int vent=0;vent<5;vent++)
-                            Add(service+mid.Up*(-1.15f+vent*.48f)-mid.Right*side*.08f,new Vector3(.12f,.12f,3.12f),mq,metal,cube);
-                        Add(service+mid.Forward*1.82f,new Vector3(.18f,3.85f,.13f),mq,metal,cube);
-                        Add(service-mid.Forward*1.82f,new Vector3(.18f,3.85f,.13f),mq,metal,cube);
+                            Add(service+sf.Up*(-1.15f+vent*.48f)-sf.Right*side*.08f,new Vector3(.12f,.12f,3.12f),sq,metal,cube);
+                        Add(service+sf.Forward*1.82f,new Vector3(.18f,3.85f,.13f),sq,metal,cube);
+                        Add(service-sf.Forward*1.82f,new Vector3(.18f,3.85f,.13f),sq,metal,cube);
                     }
                 }
                 // One transverse diffuser is recessed into a substantial tray at the rear of each cassette.

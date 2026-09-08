@@ -1,0 +1,1 @@
+The 1008 native frames span a complete circuit, but the full-lap harness incorrectly selected its five named anchors while staged just before the start line (progress .9926, frames 0–4). Preserve this instrumentation failure. It is not the final benchmark capture. Corrected harness arms anchors after entering the early circuit and explicitly checks lap advancement.

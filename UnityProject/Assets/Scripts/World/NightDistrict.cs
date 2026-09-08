@@ -9,11 +9,12 @@ namespace VectorRush
     {
         readonly List<Mesh> meshes=new List<Mesh>();
         readonly List<Material> ownMaterials=new List<Material>();
+        readonly List<Texture2D> ownTextures=new List<Texture2D>();
         readonly Dictionary<Material,Batch> batches=new Dictionary<Material,Batch>();
         readonly List<Vector3> accepted=new List<Vector3>();
         public IReadOnlyList<Vector3> DistrictCenters => accepted;
         Material concrete,steel,trim,asphalt,warm,cyan,windows;
-        Material civicConcrete,civicSteel,civicGlass,civicWarm,farConcrete,farGlass;
+        Material civicConcrete,civicSteel,civicGlass,civicWarm,civicWorkshopWarm,civicTowerWarm,farConcrete,farGlass;
         readonly Material[] facades=new Material[4];
         readonly List<Plot> benchmarkPlots=new List<Plot>();
         Vector3 benchmarkOrigin;
@@ -161,7 +162,7 @@ namespace VectorRush
             civicConcrete=world.MakeMaterial("Transit / blue gray concrete",new Color(.38f,.46f,.51f),.36f,.05f);
             civicSteel=world.MakeMaterial("Transit / charcoal structure",new Color(.055f,.075f,.091f),.32f,.18f);
             civicGlass=world.MakeMaterial("Transit / recessed dark glass",new Color(.027f,.068f,.089f),.66f,.25f);
-            civicWarm=world.MakeMaterial("Transit / occupied recessed rooms",new Color(.55f,.31f,.14f),.27f,0,new Color(.8f,.38f,.13f));
+            BuildOccupiedGlazing(world);
             farConcrete=world.MakeMaterial("Transit skyline / quiet blue mass",new Color(.22f,.28f,.32f),.24f,.03f);
             farGlass=world.MakeMaterial("Transit skyline / grouped dim rooms",new Color(.10f,.15f,.18f),.3f,0,new Color(.105f,.13f,.14f));
             var frame=track.Evaluate(.918f);var forward=Vector3.ProjectOnPlane(frame.Forward,Vector3.up).normalized;
@@ -239,6 +240,64 @@ namespace VectorRush
             Flush("Benchmark / composed transit district");
         }
 
+        void BuildOccupiedGlazing(WorldBuilder world)
+        {
+            // Low-frequency material artwork inside the already-authored panes:
+            // a shaded lower room, one partial blind and a soft ceiling pool.
+            // This is not interior geometry, parallax, or extra occupied windows.
+            const int width=512,height=256;
+            var baseMap=new Texture2D(width,height,TextureFormat.RGBA32,true,false){name="Transit glazing / glass and room tone",wrapMode=TextureWrapMode.Repeat,filterMode=FilterMode.Trilinear,anisoLevel=4};
+            var emissionMap=new Texture2D(width,height,TextureFormat.RGBA32,true,true){name="Transit glazing / restrained room light",wrapMode=TextureWrapMode.Repeat,filterMode=FilterMode.Trilinear,anisoLevel=4};
+            var basePixels=new Color[width*height];var emissionPixels=new Color[width*height];
+            for(int y=0;y<height;y++)for(int x=0;x<width;x++)
+            {
+                float u=(x+.5f)/width,v=(y+.5f)/height;
+                float side=SmoothRange(0,.10f,u)*(1-SmoothRange(.90f,1,u));
+                float top=SmoothRange(0,.07f,v)*(1-SmoothRange(.95f,1,v));
+                float pool=Mathf.Exp(-Mathf.Pow((u-.62f)/.34f,2)-Mathf.Pow((v-.62f)/.39f,2));
+                float ceiling=.27f*Mathf.Exp(-Mathf.Pow((v-.83f)/.055f,2))*SmoothRange(.16f,.30f,u)*(1-SmoothRange(.77f,.86f,u));
+                float lower=Mathf.Lerp(.25f,1,SmoothRange(.15f,.38f,v));
+                float blind=1-.35f*SmoothRange(.15f,.21f,u)*(1-SmoothRange(.37f,.43f,u))*SmoothRange(.45f,.55f,v);
+                float light=(.17f+.27f*pool+ceiling)*side*top*lower*blind;
+                // A cool reflected glass tint survives around the warmer room.
+                basePixels[y*width+x]=new Color(.095f+light*.26f,.135f+light*.18f,.16f+light*.07f,1);
+                emissionPixels[y*width+x]=new Color(light,light*.91f,light*.78f,1);
+            }
+            baseMap.SetPixels(basePixels);baseMap.Apply(true,true);emissionMap.SetPixels(emissionPixels);emissionMap.Apply(true,true);
+            ownTextures.Add(baseMap);ownTextures.Add(emissionMap);
+            civicWarm=world.MakeMaterial("Transit / glass over occupied rooms",Color.white,.73f,.10f,new Color(.55f,.32f,.16f));
+            civicWarm.SetTexture("_BaseMap",baseMap);civicWarm.SetTexture("_EmissionMap",emissionMap);
+            SetRoomUV(civicWarm,new Vector2(4f/6.3f,4f/5.7f),new Vector2(0,-2.75f/5.7f));
+            // Workshop UV0 is the same 4 m metric projection, fitted to its
+            // single existing 3.5 x 3 m recessed occupied pane.
+            civicWorkshopWarm=new Material(civicWarm){name="Transit / workshop recessed glazing"};ownMaterials.Add(civicWorkshopWarm);
+            SetRoomUV(civicWorkshopWarm,new Vector2(4f/3.5f,4f/3f),new Vector2(.5f,-1.4f/3f));
+            // Tower glazing retains legacy UV0. Reuse the exact shader already
+            // instantiated above for the native city; no new shader variant or
+            // CPU mesh read is required. Apply only to existing WarmWindow faces.
+            if(windows&&windows.shader&&windows.shader.name=="VectorRush/NightWindows")
+            {
+                civicTowerWarm=new Material(windows){name="Transit / authored warm floor glass"};ownMaterials.Add(civicTowerWarm);
+                civicTowerWarm.SetColor("_BaseColor",new Color(.055f,.082f,.105f));
+                civicTowerWarm.SetColor("_WarmColor",new Color(.44f,.27f,.13f));
+                civicTowerWarm.SetColor("_CoolColor",new Color(.36f,.23f,.13f));
+                civicTowerWarm.SetFloat("_Density",1f);civicTowerWarm.SetFloat("_CellWidth",7.4f);
+                civicTowerWarm.SetFloat("_FloorHeight",7f);civicTowerWarm.SetFloat("_Intensity",.95f);
+                civicTowerWarm.SetFloat("_BandInterval",999f);civicTowerWarm.SetFloat("_Seed",23f);
+            }
+            else civicTowerWarm=civicWarm;
+        }
+
+        static float SmoothRange(float a,float b,float value)
+        {
+            float t=Mathf.Clamp01((value-a)/(b-a));return t*t*(3-2*t);
+        }
+        static void SetRoomUV(Material material,Vector2 scale,Vector2 offset)
+        {
+            material.SetTextureScale("_BaseMap",scale);material.SetTextureOffset("_BaseMap",offset);
+            material.SetTextureScale("_EmissionMap",scale);material.SetTextureOffset("_EmissionMap",offset);
+        }
+
         void BuildApproachServiceGroup(TrackPath track,GameObject terrace,GameObject workshop)
         {
             if(!terrace)return;
@@ -305,13 +364,15 @@ namespace VectorRush
         {
             if(!source)return null;
             var go=Instantiate(source,transform);go.name=name;go.transform.SetPositionAndRotation(p,q);go.transform.localScale=Vector3.one*scale;
+            bool tower=source.name.Contains("Tower"),workshop=source.name.Contains("Workshop");
+            Material occupied=tower?civicTowerWarm:workshop?civicWorkshopWarm:civicWarm;
             foreach(var renderer in go.GetComponentsInChildren<Renderer>())
             {
                 var mats=renderer.sharedMaterials;
                 for(int i=0;i<mats.Length;i++)
                 {
                     string material=mats[i]?mats[i].name:"Concrete";
-                    mats[i]=material.Contains("WarmWindow")?civicWarm:material.Contains("Glass")?civicGlass:
+                    mats[i]=material.Contains("WarmWindow")?occupied:material.Contains("Glass")?civicGlass:
                         material.Contains("Metal")?trim:material.Contains("Concrete")||material.Contains("Ivory")?civicConcrete:civicSteel;
                 }
                 renderer.sharedMaterials=mats;
@@ -547,6 +608,6 @@ namespace VectorRush
             public readonly List<Vector3> vertices=new List<Vector3>();public readonly List<int> triangles=new List<int>();
             public void Quad(Vector3 a,Vector3 b,Vector3 c,Vector3 d){int n=vertices.Count;vertices.Add(a);vertices.Add(b);vertices.Add(c);vertices.Add(d);triangles.AddRange(new[]{n,n+1,n+2,n,n+2,n+3});}
         }
-        void OnDestroy(){foreach(var mesh in meshes)if(mesh)Destroy(mesh);foreach(var mat in ownMaterials)if(mat)Destroy(mat);}
+        void OnDestroy(){foreach(var mesh in meshes)if(mesh)Destroy(mesh);foreach(var mat in ownMaterials)if(mat)Destroy(mat);foreach(var texture in ownTextures)if(texture)Destroy(texture);}
     }
 }

@@ -1,0 +1,18 @@
+{
+  "complete": true,
+  "frames": 264,
+  "pngDimensionsValid": true,
+  "invalidImages": [],
+  "boostFrames": 32,
+  "ordinaryFrames": 232,
+  "buildGuid": "4c4e7b105d184e6ab573eaec055000e5",
+  "sourceManifest": "source-manifest.json",
+  "anchorSha256": {
+    "02-entry.png": "f63c2222587ad069ae4b6f2ac3323e90ca715bf58c0907f4b6b82f7e69b71c50",
+    "04-exit.png": "a301e206a64f717b363649ec234af1a1be544632fc668f4c4d97984d5e0b7356",
+    "01-approach.png": "be894f780628c442a17d22ad80b1cb965e2aaf7ff2bc5da0284b3a11689beb04",
+    "03-middle.png": "4c390ac745702e232b128cdf1db70ea8e3cc15723e9fe7062740abb610136e8d",
+    "05-reveal.png": "62a58f8bf7693e113484f80801176c947207097cf3e1ee99af85ee5d7e9e3bcb"
+  },
+  "scope": "Native PNG headers and counts checked. Motion acceptance is not asserted; full decode is exercised by ffmpeg encoding."
+}
