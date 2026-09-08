@@ -332,3 +332,7 @@ C GUID `1287761a66a64ff9bb7a952eb5519b0a` completes1,440 validated PNGs with197 
 ### Independent Stage1 A/B/C verdicts recorded
 
 Review021 independently inspects all eight originals per candidate. A is a modest direct-light improvement; B is rejected because its road darkens without useful reflection benefit. C is accepted as an atmospheric-depth correction: existing near/middle/far city masses separate in the three open primary views, while thermal and workshop contrast survives. Its fog becomes the fixed control for the next road experiment. Full-production depth is approaching, and Stage1 remains open for credible broad road response. The report preserves every earlier verdict and exact-pose limitation.
+
+### Local reflection candidate D preserved at owner wrap-up
+
+D adds two bounded one-shot local 256px probes and retained Forward+ blending/box-projection/atlas settings with C atmosphere and unchanged road roughness. Native GUID `5edbc3cfa5be45358031fe8050f71d28` completes 1,440 validated PNGs; 197 source and 189 app hashes remain unchanged, and all three probes report completed render IDs. The parent-inspected five primary originals do not establish the required road improvement. D is preserved as an unaccepted experiment, with no independent motion/performance acceptance. The owner then requests wrap-up and push; no roughness, SSR or later-stage experiment is initiated. Final checkpoint will retain C atmosphere and restore A's clearer road.
