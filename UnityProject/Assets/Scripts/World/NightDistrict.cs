@@ -252,7 +252,7 @@ namespace VectorRush
             // Quiet grouped silhouettes leave the vanishing-point corridor open.
             BenchmarkSkyline(new Vector3(172,0,305),28,33,126);
             BenchmarkSkyline(new Vector3(211,0,337),25,29,151);
-            BenchmarkSkyline(new Vector3(-226,0,467),34,31,113);
+            // Leave the opening mast's sky gap clear; this transformed placement crowded its approach.
             Flush("Benchmark / composed transit district");
         }
 

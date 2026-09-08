@@ -1,0 +1,16 @@
+{
+  "parentCommit": "0d01fd099be58525ebdea02daba745d7cadaaffe",
+  "scope": "Candidate02 removes only the identified benchmark skyline slab. Road geometry/materials/shadow casters unchanged.",
+  "files": {
+    "UnityProject/Assets/Scripts/World/NightDistrict.cs": "d9f419f7ce7a7f03c536bc3371bc555ae57758737bf952887ad601bb11cc7f31",
+    "UnityProject/Assets/Scripts/World/NightLandmarks.cs": "6c3d81c84d9cd2680a800233178fbc9e20e11d3d3f09511cd80ef00227217401",
+    "UnityProject/Assets/Scripts/RoadSurfaceEvidence.cs": "524eeba1f840398de983fd0f1fc4a83ff9added81225341d0e9074f86490eeb5",
+    "UnityProject/Assets/Scripts/World/WorldBuilder.cs": "e2e27fed28523bc1d486a4f950203b2d845f55d541feed302cd6963f90f219a0",
+    "UnityProject/Assets/Scripts/World/NightTrackLighting.cs": "09cf184f136325658ab2fa517e7406a4b1ce7ef3195d7a15cc6c695683f9a3a5",
+    "UnityProject/Assets/Scripts/VectorBootstrap.cs": "9a5f74b7a5e90bf96f6b35570c7e9fcc7a993faceea8ade8f00e1d13af1b67d9",
+    "UnityProject/Assets/Resources/Art/Environment/Landmarks/Nocturne_SplitSignal_Mast.fbx": "86fce532571fe159ed14398cf7d635866d38070858f40e54e766c9d2ea81cd59",
+    "UnityProject/Assets/Resources/Art/Environment/Landmarks/Nocturne_ThermalExchange_Works.fbx": "91a1a700deb2de21ec559a30e7b7ca3672747e058a7ee22864f37fb784dca28e",
+    "UnityProject/Assets/Resources/Art/Environment/Landmarks/Nocturne_ThermalExchange_Works.fbx.meta": "395eee9c8af72269048083cb5b7e65171a9b8d7aca12b703f86f46748853ee27",
+    "UnityProject/Assets/Resources/Art/Environment/Landmarks/Nocturne_SplitSignal_Mast.fbx.meta": "33148d41a9780aee89fba49b14812ba3c2f53154f96cb3608ab507c1368f11b7"
+  }
+}

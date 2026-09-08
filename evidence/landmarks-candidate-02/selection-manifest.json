@@ -1,0 +1,16 @@
+{
+  "source": "full-lap/environment-evidence.json",
+  "scope": "Unmodified native selected frames from corrected landmark build; full sequence local.",
+  "indices": [
+    148,
+    166,
+    175,
+    193,
+    211,
+    534,
+    570,
+    606,
+    641,
+    678
+  ]
+}
