@@ -282,3 +282,7 @@ User approved a focused presentation pass after the landmark/road milestone. Pre
 ## Lighting/material candidate01 implementation
 
 After the owner explicitly overrode the brief account-switch pause, completed a four-family512-square albedo/metallic-smoothness kit and retained Lit shader template. Parent integrates it into five existing landmark material regions, with rougher concrete and warmer ceramic/insulation plus more legible smoked glass. One short mast bracing/soffit fill, one thermal end-portal wash and a retargeted thermal support/service wash address the surfaces identified in direction015. Original geometry, road shadows/materials, race physics and global moon/ambient/fog remain unchanged. Texture/metadata/channel validation passes; native candidate review is pending.
+
+### Lighting/material native candidate accepted — 2026-09-08
+
+Build5c49b92643bd4d41820ba81857fdf8c7 completed a1,440-frame native circuit. All PNG CRC/decompression checks passed;193 prebuild source/resource/settings hashes remain unchanged. Independent review016 directly compares eight original views against baseline and accepts the bounded pass with zero required corrections. Thermal service recesses and pipe/support connections improve; mast improvement is restrained. All five exact anchor comparisons fail small pose tolerances, preserved as a comparison limitation. Candidate evidence and critique are retained before final tests/performance/package; still review is not continuous subjective-motion acceptance.

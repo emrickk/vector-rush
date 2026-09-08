@@ -1,0 +1,60 @@
+{
+  "buildGuid": "5c49b92643bd4d41820ba81857fdf8c7",
+  "complete": true,
+  "pngFrames": 1440,
+  "pngDimensions": [
+    1920,
+    1080
+  ],
+  "pngChunkCrcPassed": true,
+  "matchedWithinTolerance": false,
+  "comparisons": [
+    {
+      "anchor": "01-approach",
+      "cameraDistance": 0.2213953286409378,
+      "cameraAngle": 0.0,
+      "fovDifference": 0.00664520263671875,
+      "playerDistance": 0.0,
+      "progressDifference": 0.0,
+      "matched": false
+    },
+    {
+      "anchor": "02-entry",
+      "cameraDistance": 0.3137895166873932,
+      "cameraAngle": 0.0,
+      "fovDifference": 0.00286102294921875,
+      "playerDistance": 0.0,
+      "progressDifference": 0.0,
+      "matched": false
+    },
+    {
+      "anchor": "03-middle",
+      "cameraDistance": 0.321912944316864,
+      "cameraAngle": 0.0,
+      "fovDifference": 0.00058746337890625,
+      "playerDistance": 0.4850061535835266,
+      "progressDifference": 0.00029528141021728516,
+      "matched": false
+    },
+    {
+      "anchor": "04-exit",
+      "cameraDistance": 0.3183860778808594,
+      "cameraAngle": 0.18974557518959045,
+      "fovDifference": 0.000152587890625,
+      "playerDistance": 0.48200324177742004,
+      "progressDifference": 0.0002611875534057617,
+      "matched": false
+    },
+    {
+      "anchor": "05-reveal",
+      "cameraDistance": 0.44246193766593933,
+      "cameraAngle": 0.2502290904521942,
+      "fovDifference": 0.00901031494140625,
+      "playerDistance": 0.0,
+      "progressDifference": 0.0,
+      "matched": false
+    }
+  ],
+  "sourceFilesUnchanged": 193,
+  "scope": "Native full-circuit simulation capture. Structural PNG and source-identity checks; separate from independent visual acceptance or realtime performance."
+}
