@@ -1,0 +1,36 @@
+{
+  "status": "passed",
+  "fbx_version": 7400,
+  "meshes": 9,
+  "vertices": 29922,
+  "polygons": 27572,
+  "triangles": 51772,
+  "dimensions_unity_xyz_m": [
+    5.4375,
+    1.6941,
+    7.487
+  ],
+  "bounds_fbx_cm": [
+    [
+      -271.87483310699463,
+      271.8747854232788
+    ],
+    [
+      -50.09999871253967,
+      119.30803060531616
+    ],
+    [
+      -340.70000648498535,
+      407.99999237060547
+    ]
+  ],
+  "checks": [
+    "valid finite vertices and polygon indices",
+    "nine material mesh groups",
+    "centimetre metadata",
+    "positive Y up",
+    "metre-scale bounds agree with authored source",
+    "positive Z nose extent",
+    "triangle count matches source"
+  ]
+}

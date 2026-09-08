@@ -6,3 +6,8 @@ UnityProject/UserSettings/
 Builds/
 .DS_Store
 *.blend1
+.unity-pipeline*
+UnityProject/.unity-pipeline*
+evidence/*.log
+evidence/asset-renders/*.log
+evidence/**/frames/

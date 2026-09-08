@@ -1,0 +1,7 @@
+Autopilot through real hover physics: FINISHED
+Time 155.43
+Laps 3
+Recoveries 7
+Restart 1: countdown pause frozen=True, laps=0
+Restart 2: countdown pause frozen=True, laps=0
+Restart 3: countdown pause frozen=True, laps=0

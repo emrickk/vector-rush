@@ -6,7 +6,7 @@
 
 **Architecture:** Track frame sampling drives generated course geometry and AI. Fixed-step hover controller drives player physics; race director owns transitions and ordered progress. Presentation reads published state. Parent owns integration, track and Unity setup.
 
-**Tech Stack:** Unity 6.3 LTS/URP 17.3, C#, Blender 5.2, Apple Silicon.
+**Tech Stack:** Unity 6000.6.0f1/URP 17.6.0, C#, Blender 5.2, Apple Silicon.
 
 **Spec:** docs/design.md
 

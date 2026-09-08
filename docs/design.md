@@ -6,7 +6,7 @@ An original anti-gravity racer pursuing the speed, clarity, and finish of Wipeou
 Sunlit ivory infrastructure, deep ocean blue, graphite track, restrained acid-yellow racing identifiers, turquoise engine glow. Strong silhouette, physically meaningful material variation, industrial details and open ocean vistas. Hero craft: slender twin pontoons framing a recessed cockpit, swept stabilizers and exposed rear propulsion. Chase camera readable at speed. No copied logos or game assets.
 
 ## Technology and interfaces
-Unity 6.3 LTS (exact patch follows user install), URP 17.3, C#, Apple Silicon macOS. Blender 5.2 LTS sources and reproducible FBX exports. One Unity unit = one metre; +Y up, +Z craft forward. Namespace VectorRush. Core uses legacy Input with activeInputHandler=Both initially; gamepad via InputSystem if available. Shared settings, scenes, editor code and integration owned by parent.
+Unity 6000.6.0f1 (user installed), URP 17.6.0, C#, Apple Silicon macOS. Blender 5.2 LTS sources and reproducible FBX exports. One Unity unit = one metre; +Y up, +Z craft forward. Namespace VectorRush. Core uses legacy Input with activeInputHandler=Both initially; gamepad via InputSystem if available. Shared settings, scenes, editor code and integration owned by parent.
 
 TrackPath is authoritative for track geometry. TrackFrame has Position, Forward, Right, Up. TrackPath.Evaluate(float normalized) returns TrackFrame; ClosestProgress(Vector3) returns [0,1). Width=22m. Runtime mesh includes collision surface and walls. Vehicle simulation owns speed, steering and suspension. Race progress must use ordered sectors and forward crossings, not raw wraparound.
 

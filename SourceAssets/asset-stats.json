@@ -1,0 +1,26 @@
+{
+  "editable_source_objects": 120,
+  "exported_meshes": 9,
+  "vertices": 29922,
+  "triangles": 51772,
+  "source_dimensions_xyz": [
+    5.4375,
+    7.487,
+    1.6941
+  ],
+  "source_forward": "-Y",
+  "source_up": "+Z",
+  "fbx_axis_forward": "-Z",
+  "fbx_axis_up": "+Y",
+  "materials": [
+    "Ivory",
+    "Graphite",
+    "Glass",
+    "Signal",
+    "Engine",
+    "Metal",
+    "Ceramic",
+    "Ink",
+    "WhiteMark"
+  ]
+}
