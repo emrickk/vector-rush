@@ -1,0 +1,6 @@
+{
+  "input_log_sha256": "50f82473e5c5e3211392efb72707bee1fb438cde34a2c79af7fac45a0d52d343",
+  "recovery_event_count": 0,
+  "exception_or_shader_error_lines": [],
+  "scope": "Read-only summary of actual native race log; complements final per-racer telemetry and race-verification.txt."
+}

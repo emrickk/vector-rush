@@ -1,0 +1,118 @@
+{
+  "input_blend": "/Users/anping/Documents/Stuff/AI Space/Vector Rush/SourceAssets/hero-v3/pass-04-contacts/Kestrel07-v3.blend",
+  "input_sha256": "d015949dfc96e149d488b9df2a6d40efc287970ae1577af551723c8d2de5efaa",
+  "size": 1024,
+  "scope": "Candidate coatings baked into existing runtime UVs. Geometry and UV coordinates are unchanged. No visual acceptance implied.",
+  "normal_convention": "Tangent space, OpenGL +Y; import as Unity NormalMap without green inversion.",
+  "packed_contract": "MetallicSmoothness RGB metallic, A 1 minus linear roughness; import linear. Occlusion green channel, linear. BaseColor sRGB.",
+  "materials": {
+    "Ivory": [
+      {
+        "file": "Ivory_Normal.png",
+        "sha256": "852392b95eaded0ce8e2e5a5b55036c3ede5d652234f429004783b1f5a339742",
+        "color_space": "Non-Color"
+      },
+      {
+        "file": "Ivory_BaseColor.png",
+        "sha256": "c4fcaeb7b6a8b00baca2c3c17a1f09e213ce46d752bc26c4456626930fd36056",
+        "color_space": "sRGB"
+      },
+      {
+        "file": "Ivory_Roughness.png",
+        "sha256": "cff394fe733ac6b50eae87ff816ce696bfde40af4cfd60bfeff5f8bd05578b63",
+        "color_space": "Non-Color"
+      },
+      {
+        "file": "Ivory_MetallicSmoothness.png",
+        "sha256": "f7d2eaa82f748454bef75030be7ee450de64738a2ef03686f02a304246efef53",
+        "color_space": "Non-Color"
+      },
+      {
+        "file": "Ivory_Occlusion.png",
+        "sha256": "5f48abf182f2dd27fe3b4da80517db3eef686405819554b10f5491a0b45914d4",
+        "color_space": "Non-Color"
+      }
+    ],
+    "Graphite": [
+      {
+        "file": "Graphite_Normal.png",
+        "sha256": "f5fa3623f719dca4f8102d7ad0c247112127a9e1d955b9a7f3ce230930d6ff3c",
+        "color_space": "Non-Color"
+      },
+      {
+        "file": "Graphite_BaseColor.png",
+        "sha256": "d14f767965a7d023fc1fa06c0c83b79d7e06dd831405139aeaff51885a1687c7",
+        "color_space": "sRGB"
+      },
+      {
+        "file": "Graphite_Roughness.png",
+        "sha256": "dbee8a317ccada54587d48d09d78a2f1c7efafa8942c3399ee771d8ae01e4b37",
+        "color_space": "Non-Color"
+      },
+      {
+        "file": "Graphite_MetallicSmoothness.png",
+        "sha256": "b558757e8a465748ac28e11540b436da2c9d9eb497599a9971ddeff0ff58f8c2",
+        "color_space": "Non-Color"
+      },
+      {
+        "file": "Graphite_Occlusion.png",
+        "sha256": "74933346828dfa8969c9bbf987df5f5135033939d30503c1a1263d4086951bf1",
+        "color_space": "Non-Color"
+      }
+    ],
+    "Metal": [
+      {
+        "file": "Metal_Normal.png",
+        "sha256": "28d0ec4e63ece9504a0b2e252deca7daaa68df530cf7645ae78b50091cc99527",
+        "color_space": "Non-Color"
+      },
+      {
+        "file": "Metal_BaseColor.png",
+        "sha256": "b206919faad0f67f4f07579d9b66f381a55dd8eac44b971682cc7cce29b32da7",
+        "color_space": "sRGB"
+      },
+      {
+        "file": "Metal_Roughness.png",
+        "sha256": "92b246390749a14058df7b008b94cdf3876e7f8d1153d61d9fff3a750c59793b",
+        "color_space": "Non-Color"
+      },
+      {
+        "file": "Metal_MetallicSmoothness.png",
+        "sha256": "fab7d63ba08b03dd42c6928a669a1c92c9283a68a35f10d7a4b3edccc3658f2b",
+        "color_space": "Non-Color"
+      },
+      {
+        "file": "Metal_Occlusion.png",
+        "sha256": "19ee76facf34e4ca688d05545515ab7a518b80020b48f9b5792b1dda95ee0bec",
+        "color_space": "Non-Color"
+      }
+    ],
+    "Ceramic": [
+      {
+        "file": "Ceramic_Normal.png",
+        "sha256": "46d3c88f2eab139838b87fd3a7ae56c1a5f009d1a06d46c279a19e59eb9609a2",
+        "color_space": "Non-Color"
+      },
+      {
+        "file": "Ceramic_BaseColor.png",
+        "sha256": "24e519f7ab40414851755d3c3c7daea25b97e2f5a043fe7e0a7240cb9152b6cc",
+        "color_space": "sRGB"
+      },
+      {
+        "file": "Ceramic_Roughness.png",
+        "sha256": "ab014c54ffd9723174406d0147298783ea51a07fc57c44a9099d6488c8a1c981",
+        "color_space": "Non-Color"
+      },
+      {
+        "file": "Ceramic_MetallicSmoothness.png",
+        "sha256": "a233028cb3b906844f6b5b12c44d0afc80cb6173e04aa0880dc659efa43272fb",
+        "color_space": "Non-Color"
+      },
+      {
+        "file": "Ceramic_Occlusion.png",
+        "sha256": "5bb32692d364023851fe3353cf682c5d0301d44ec3ba62bd5d685fe785c552f6",
+        "color_space": "Non-Color"
+      }
+    ]
+  }
+}

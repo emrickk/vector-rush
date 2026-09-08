@@ -1,0 +1,27 @@
+{
+  "input_sha256": "d015949dfc96e149d488b9df2a6d40efc287970ae1577af551723c8d2de5efaa",
+  "verified_1024_pngs_sha256": [
+    "Ivory_Normal.png",
+    "Ivory_BaseColor.png",
+    "Ivory_Roughness.png",
+    "Ivory_MetallicSmoothness.png",
+    "Ivory_Occlusion.png",
+    "Graphite_Normal.png",
+    "Graphite_BaseColor.png",
+    "Graphite_Roughness.png",
+    "Graphite_MetallicSmoothness.png",
+    "Graphite_Occlusion.png",
+    "Metal_Normal.png",
+    "Metal_BaseColor.png",
+    "Metal_Roughness.png",
+    "Metal_MetallicSmoothness.png",
+    "Metal_Occlusion.png",
+    "Ceramic_Normal.png",
+    "Ceramic_BaseColor.png",
+    "Ceramic_Roughness.png",
+    "Ceramic_MetallicSmoothness.png",
+    "Ceramic_Occlusion.png"
+  ],
+  "runtime_maps": 16,
+  "all_passed": true
+}

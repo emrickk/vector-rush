@@ -1,18 +1,22 @@
 # VECTOR RUSH
 
-A playable, original anti-gravity racing prototype for Apple Silicon macOS. Pilot Kestrel 07 through three laps of Solstice Circuit against five rivals. The current development direction is a night urban circuit.
+A playable, original anti-gravity racing prototype for Apple Silicon macOS. Pilot Kestrel 07 through three laps of Nocturne Circuit against five rivals. The current development direction is a night urban circuit.
 
 [Private GitHub repository](https://github.com/emrickk/vector-rush) · [Build brief](docs/GPT6-BUILD-PROMPT.md) · [Development history](docs/development-history.md) · [Ship art plan](docs/ship-art-plan.md)
 
-## Current checkpoint — V3 finish integrated, night polish underway
+## Current night milestone
 
-The native app now uses the coherent V3 ship with flush citron/07 paint, baked surface maps and authored engine anchors. Eight [calibrated native inspection views](evidence/ship-native-v3-01/inspection-scope.json) and [independent review 006](docs/ship-reviews/006-source-baked-native-finish.md) support advancing the material hierarchy and import. Local canopy/intake/nozzle surface overlaps remain under correction; the accepted primary shape stays fixed.
+The native game now uses the corrected V3 ship with flush citron/07 paint, baked surface maps and authored engine anchors. The canopy, intake and nozzle contact artifacts are repaired. Recessed gallery panels and focused wall lighting create readable warm/cool corridors; short plasma trails remain attached to the engines. A rival corridor guard prevents the repeated wall stalls observed in the earlier night candidate.
 
-[Native amber-gallery preview](evidence/night-v3-motion-02/VectorRush-V3-amber-candidate.mp4): 15 seconds at 1080p, recorded with automated steering at 24 simulation frames per second. This preserves the pass 03 baseline before the current gallery/plume correction and does not measure real-time performance. [Review 007](docs/ship-reviews/007-native-gallery-and-boost-stills.md) records black structural panels, weak attached exhaust and repeated road highlights as remaining issues. The night build's final race, performance and packaging checks are pending.
+[Current native preview](evidence/night-v4-motion-02/VectorRush-night-v4-current.mp4): 15 seconds at 1080p, silent, with automated steering at 24 simulation frames per second. It shows the current final road-gloss adjustment and is separate from the real-time performance sample.
+
+![Current native gallery view](evidence/night-v4-motion-02/selected/amber-mid.png)
+
+This is a playable prototype milestone, not AAA acceptance. Exterior buildings/windows and gallery bays remain repetitive, the ceiling is too dark, and residual diagonal road sheen remains visible. The last material adjustment lowers its contrast without claiming to repair the underlying cause. Human handling, competitive rival pacing and physical gamepad hardware need further assessment.
 
 ## Play
 
-Open **[Builds/Vector Rush.app](Builds/Vector%20Rush.app)** for the current night development candidate. The **[VectorRush-macOS-2026-09-07.zip](Builds/VectorRush-macOS-2026-09-07.zip)** archive contains the earlier coastal delivery and is historical. Build products stay local and are excluded from Git; source and selected evidence are in the private repository.
+Open **[Builds/Vector Rush.app](Builds/Vector%20Rush.app)** or unpack **[the current night archive](Builds/VectorRush-macOS-night-v4-2026-09-07.zip)**. The **[VectorRush-macOS-2026-09-07.zip](Builds/VectorRush-macOS-2026-09-07.zip)** archive contains the earlier coastal delivery and is historical. Build products stay local and are excluded from Git; source and selected evidence are in the private repository.
 
 | Action | Keyboard | Gamepad |
 |---|---|---|
@@ -26,6 +30,17 @@ Open **[Builds/Vector Rush.app](Builds/Vector%20Rush.app)** for the current nigh
 | Pause | Escape / P | Start |
 
 Menus support the pointer. Pause includes Resume, Restart, camera shake and Quit. Results supports another race.
+
+## Current validation
+
+- **29/29 Unity tests passed**, including player exclusion, rival edge correction and adjacent-traffic clearance.
+- **Three player laps in 112.60 seconds, zero recoveries across all six racers** during the observed race. Both restart launches and all three countdown-pause checks passed. Rivals had completed 2.27–2.74 laps when the player ended the race; their independent completion and competitive pacing are not established.
+- **1920×1080 on Apple M2 Max:** 3,529 frame intervals over the real-time sample, VSync enabled, mean **17.01 ms**, P95 **20.60 ms**, P99 **25.34 ms**, with 250.3 MiB Unity allocation. This is not a locked 60fps or isolated GPU claim. No build/bake ran during the sample; idle desktop apps remained open.
+- Eight calibrated native ship-control views confirm the geometry repair using unchanged prior maps. The final maps were rebaked, hash/dimension checked and exercised in native race/gameplay captures.
+
+[Native race and metrics](evidence/night-v4-race-01/) · [Geometry review 009](docs/ship-reviews/009-native-contact-repair-control.md) · [Gallery/plume review 008](docs/ship-reviews/008-gallery-wash-and-plume-correction.md) · [Final review 010](docs/ship-reviews/010-night-playable-milestone.md)
+
+The full race/performance run preceded the last two-number road-gloss adjustment; gameplay code, geometry, light count and render settings are unchanged. The final native recording validates that material-only finish. Earlier pointer and keyboard checks remain historical evidence because the UI/input path did not change in this iteration.
 
 ## Previous coastal delivery and evidence
 
@@ -55,7 +70,7 @@ The slice includes one course, one craft shape, five AI rivals and original proc
 - [SourceAssets/environment-v2](SourceAssets/environment-v2/) — editable tower/cliff kit, export scripts and texture sources.
 - [Asset regeneration guide](docs/asset-regeneration.md) — safe staged rebuilds that protect the reviewed live assets.
 - [Reference concept](references/solstice-chase-concept.png) — generated art direction, distinct from actual runtime and Blender inspection images.
-- [Toolchain and provenance](docs/toolchain.md), [test results](evidence/editmode-results.xml), [build manifest](evidence/build-manifest.json).
+- [Toolchain and provenance](docs/toolchain.md), [test results](evidence/editmode-results.xml), [current build manifest](evidence/night-v4-build-manifest.json).
 
 The craft, environment geometry, interface and sound synthesis are original. Cliff surface maps are **Rock 3 by Rob Tuytel / Poly Haven (CC0)**; original maps, hash manifests and the named Unity mask derivative are retained with [provenance](SourceAssets/environment-v2/textures/Rock3_PROVENANCE.md). No Wipeout assets or branding are included.
 

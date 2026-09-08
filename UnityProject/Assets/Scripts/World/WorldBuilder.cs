@@ -41,10 +41,12 @@ namespace VectorRush
             for(int y=0;y<textureSize;y++)for(int x=0;x<textureSize;x++){
                 int index=y*textureSize+x;float grain=(float)random.NextDouble();
                 float patch=Mathf.PerlinNoise(x*.021f+2.7f,y*.009f+1.1f);
-                float streak=Mathf.PerlinNoise(x*.12f,y*.005f);
                 float shade=.88f+grain*.07f+patch*.03f;pixels[index]=new Color(shade,shade,shade,1);
                 normals[index]=new Color(.5f+(grain-.5f)*.08f,.5f+((float)random.NextDouble()-.5f)*.065f,1,1);
-                masks[index]=new Color(0,0,0,Mathf.Lerp(.48f,.93f,Mathf.SmoothStep(.2f,.8f,patch*.65f+streak*.35f)));
+                float u=x/(float)(textureSize-1),v=y/(float)(textureSize-1);
+                float dampPatch=PeriodicNoise(u,v,(textureSize-1)*.021f,(textureSize-1)*.009f,2.7f,1.1f);
+                float dampStreak=PeriodicNoise(u,v,(textureSize-1)*.12f,(textureSize-1)*.005f,0,0);
+                masks[index]=new Color(0,0,0,Mathf.Lerp(.42f,.78f,Mathf.SmoothStep(.2f,.8f,dampPatch*.65f+dampStreak*.35f)));
             }
             roadGrain.SetPixels(pixels);roadGrain.Apply(true,true);roadNormals.SetPixels(normals);roadNormals.Apply(true,true);roadSmoothness.SetPixels(masks);roadSmoothness.Apply(true,true);
             road.SetTexture("_BaseMap",roadGrain);road.SetTexture("_BumpMap",roadNormals);road.SetTexture("_MetallicGlossMap",roadSmoothness);road.SetTextureScale("_BaseMap",new Vector2(3,1));
@@ -81,6 +83,16 @@ namespace VectorRush
                 Box("Tunnel crown",f.Position+f.Up*18,new Vector3(24,.75f,1.1f),q,ivory);
             }
             gameObject.AddComponent<NightDistrict>().Build(this,track);gameObject.AddComponent<NightTrackLighting>().Build(this,track);BuildLighting();
+        }
+        static float PeriodicNoise(float u,float v,float periodX,float periodY,float offsetX,float offsetY)
+        {
+            // Blend translated samples so opposite tile edges have matching values
+            // and slopes. Only the dampness mask uses this; grain and relief stay unchanged.
+            float x=u*periodX+offsetX,y=v*periodY+offsetY;
+            float blendX=Mathf.SmoothStep(0,1,u),blendY=Mathf.SmoothStep(0,1,v);
+            float near=Mathf.Lerp(Mathf.PerlinNoise(x,y),Mathf.PerlinNoise(x-periodX,y),blendX);
+            float far=Mathf.Lerp(Mathf.PerlinNoise(x,y-periodY),Mathf.PerlinNoise(x-periodX,y-periodY),blendX);
+            return Mathf.Lerp(near,far,blendY);
         }
         void Ribbon(string name,float left,float right,float height,Material mat,bool collider)
         {

@@ -1,0 +1,15 @@
+00:01.502  blend            | Read blend: "/Users/anping/Documents/Stuff/AI Space/Vector Rush/SourceAssets/hero-v3/pass-02/Kestrel07-v3.blend"
+/Users/anping/Documents/Stuff/AI Space/Vector Rush/SourceAssets/hero-v3/render_saved_v3.py:13: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  clay=bpy.data.materials.new('STUDIO medium gray clay');clay.diffuse_color=(.31,.33,.34,1);clay.use_nodes=True
+00:41.516  render           | Saved: '/Users/anping/Documents/Stuff/AI Space/Vector Rush/evidence/ship-v3/pass-02/08-clay-side.png'
+SHIP_V3_RENDER_READY 08-clay-side
+01:58.401  render           | Saved: '/Users/anping/Documents/Stuff/AI Space/Vector Rush/evidence/ship-v3/pass-02/07-clay-top.png'
+SHIP_V3_RENDER_READY 07-clay-top
+05:10.118  render           | Saved: '/Users/anping/Documents/Stuff/AI Space/Vector Rush/evidence/ship-v3/pass-02/05-clay-chase.png'
+SHIP_V3_RENDER_READY 05-clay-chase
+07:58.559  render           | Saved: '/Users/anping/Documents/Stuff/AI Space/Vector Rush/evidence/ship-v3/pass-02/06-neutral-chase.png'
+SHIP_V3_RENDER_READY 06-neutral-chase
+10:21.927  render           | Saved: '/Users/anping/Documents/Stuff/AI Space/Vector Rush/evidence/ship-v3/pass-02/02-neutral-rear-quarter.png'
+SHIP_V3_RENDER_READY 02-neutral-rear-quarter
+12:31.347  render           | Saved: '/Users/anping/Documents/Stuff/AI Space/Vector Rush/evidence/ship-v3/pass-02/03-clay-front-quarter.png'
+SHIP_V3_RENDER_READY 03-clay-front-quarter

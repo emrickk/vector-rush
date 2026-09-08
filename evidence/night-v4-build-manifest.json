@@ -1,0 +1,40 @@
+{
+  "candidate": "Vector Rush / Nocturne night v4 / playable prototype",
+  "archive": {
+    "path": "Builds/VectorRush-macOS-night-v4-2026-09-07.zip",
+    "bytes": 53055816,
+    "sha256": "c943fb2f3fb79b618b82e7e7ae2af01adb86b27d59b8a3afb834c0c10efa6ce0",
+    "zip_integrity": "unzip -tq passed"
+  },
+  "preview": {
+    "path": "evidence/night-v4-motion-02/VectorRush-night-v4-current.mp4",
+    "bytes": 20415730,
+    "sha256": "5735097b81d51c2dbd42fd9493bae8534ed9711e1e88318a41e69b1786d90c40",
+    "codec": "H264",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "fps": 24,
+    "frames": 360,
+    "seconds": 15,
+    "audio": false,
+    "scope": "Native gameplay, automated steering, fixed simulation capture rate; not performance."
+  },
+  "asset_identity": "night-v4-motion-02/asset-identity.json",
+  "native_race": "night-v4-race-01/race-verification.txt",
+  "tests": "editmode-results.xml",
+  "tests_passed": 29,
+  "observed_player_race_seconds": 112.6,
+  "player_laps": 3,
+  "observed_all_racer_recoveries": 0,
+  "gameplay_code_identical_to_race_build": true,
+  "final_change_after_full_race": "Road smoothness mask range only:0.48\u20130.93 to0.42\u20130.78. Final native capture verified its appearance; gameplay unchanged.",
+  "limitations": [
+    "Playable prototype, not AAA acceptance",
+    "Residual diagonal road sheen, repetitive city and dark ceiling",
+    "Independent continuous-motion/manual-feel review not complete",
+    "Rival competitive pacing and independent completion not established",
+    "Physical gamepad hardware untested"
+  ]
+}

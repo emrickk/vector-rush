@@ -76,7 +76,7 @@ The user rejected the daylight prototype's visual quality and asked for a more a
 - [x] Inspect matched title/start/crest/descent captures; fix the three largest visible failures.
 - [x] Generate coordinated night-scene reference images before further implementation; preserve prompts and select a practical primary target.
 - [ ] Inspect a second native pass and moving footage; refine materials, craft separation and speed presentation. Third pass verifies native atmosphere, varies facades, and develops the two overhead light corridors.
-- [ ] Verify the complete race and current performance, preserve critique and record a new preview; package the night build for review.
+- [x] Verify the complete race and current performance, preserve critique and record a new preview; package the night build for review.
 
 Ownership: parent road, lighting, materials, rendering settings, integration, camera/HUD and runtime evidence; game_brief NightDistrict and NightWindows; gameplay IonPropulsion and VehicleVFX; independent critic reads actual captures after integration. Existing daytime source/history stays recoverable in Git.
 
@@ -90,19 +90,25 @@ The user explicitly assigned Astra as planner and harsh independent visual revie
 - [x] Correct pass 01 compound hull shape, integrated intakes, canopy curvature and supported joints; repeat the same independent form review.
 - [x] Calibrate a native neutral inspection rig against recorded origin, orientation and bounds before judging runtime materials.
 - [x] Establish a coherent primary form in staged Blender source; independent rear/top/side/chase review clears readiness for finish work.
-- [ ] Develop surface/material depth and readable livery after form acceptance; review and loop.
-- [ ] Integrate the reviewed asset and calibrated engine anchors; review native neutral views, ordinary chase views and propulsion.
-- [ ] Preserve each reviewed pass, its critique and source/export identity; validate the integrated race and package for review.
+- [x] Develop surface/material depth and readable livery after form acceptance; review and loop.
+- [x] Integrate the reviewed asset and calibrated engine anchors; review native neutral views, ordinary chase views and propulsion.
+- [x] Preserve each reviewed pass, its critique and source/export identity; validate the integrated race and package for review.
 
 A successful compile or a flattering studio frame does not establish visual quality. The reference is directional; minor contour differences must not prevent progress on larger whole-game improvements. Reviewer remains independent from the asset implementation.
 
-Current status: V3 pass 03, baked surface maps and authored anchors are integrated and compiled. Eight calibrated native inspection views and gallery gameplay captures support advancing the materials and import; review 006 records localized overlapping surfaces and weak attached plumes. Next bounded step: correct those contacts without changing the accepted primary form, compare revised propulsion, and give gallery cassettes readable charcoal panels and focused wall lighting. Rebuild and inspect native gallery motion before race/performance and packaging.
+Current status: pass04 ship contact repairs and refreshed maps are integrated. Native reviews accept the targeted geometry and gallery/plume corrections. The combined candidate passed 29 tests and completed three player laps with zero observed recoveries across all racers. A final road-gloss reduction softens the visible sheen; residual diagonal patterning remains. The current 15-second native preview and verified local macOS archive are ready for a playable milestone. Continuous-motion/manual-feel review, city depth and competitive rival pacing remain open.
 
 
 ## Bounded native candidate corrections
 
 - [x] Native matched gallery/plume comparison: motion03 shows readable recessed charcoal construction and attached soft exhaust; preserve independent review 008.
-- [ ] Integrate pass04 contact correction and refreshed maps, then compare native canopy and nozzle views.
-- [ ] Validate periodic dampness texture against the matched amber interior.
-- [ ] Add a conservative rival-only outer-corridor steering guard; compare a full native race with the previously repeated wall stalls. Preserve player controls and collision shape.
-- [ ] Run current gameplay checks and an isolated real-time performance sample; save a current night preview and versioned local package.
+- [x] Integrate pass04 contact correction and refreshed maps, then compare native canopy and nozzle views.
+- [x] Validate periodic dampness texture against the matched amber interior.
+- [x] Add a conservative rival-only outer-corridor steering guard; compare a full native race with the previously repeated wall stalls. Preserve player controls and collision shape.
+- [x] Run current gameplay checks and a real-time performance sample; save a current night preview and versioned local package.
+
+
+Final bounded material comparison: periodic dampness did not remove diagonal sheen in the native amber interior. Compare a restrained smoothness-mask range of 0.42–0.78 against 0.48–0.93, retaining normals, direct specular, geometry and lighting. Keep the tested combined candidate as evidence; use the reduced-gloss version only if native comparison improves the road without losing the warm lighting rhythm.
+
+
+Milestone outcome: keep the 0.42–0.78 range after the native comparison. Warm/cool pools remain readable and the bright road pattern is modestly quieter; its underlying cause is not claimed fixed. Archive integrity and the 360-frame, 1080p, 15-second preview are verified. This closes the current playable iteration; it does not award AAA or independent continuous-motion acceptance.

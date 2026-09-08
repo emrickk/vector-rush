@@ -1,0 +1,61 @@
+{
+  "scope": "Nearest track-progress matches to preserved baseline gallery/boost images. Actual native gameplay, automated steering,24 simulation fps, not performance.",
+  "frames": [
+    {
+      "image": "amber-entry.png",
+      "targetProgress": 0.8577257,
+      "metadata": {
+        "frameIndex": 82,
+        "file": "frames/frame-0082.png",
+        "raceTime": 34.420230865478516,
+        "normalizedProgress": 0.8574330806732178,
+        "speedKph": 194.50262451171875,
+        "energy01": 1.0,
+        "isBoosting": false,
+        "isGrounded": true
+      }
+    },
+    {
+      "image": "amber-mid.png",
+      "targetProgress": 0.8859141,
+      "metadata": {
+        "frameIndex": 105,
+        "file": "frames/frame-0105.png",
+        "raceTime": 35.380069732666016,
+        "normalizedProgress": 0.885627269744873,
+        "speedKph": 190.6280517578125,
+        "energy01": 1.0,
+        "isBoosting": false,
+        "isGrounded": true
+      }
+    },
+    {
+      "image": "amber-exit.png",
+      "targetProgress": 0.9173769,
+      "metadata": {
+        "frameIndex": 128,
+        "file": "frames/frame-0128.png",
+        "raceTime": 36.339908599853516,
+        "normalizedProgress": 0.9170123934745789,
+        "speedKph": 242.2872772216797,
+        "energy01": 1.0,
+        "isBoosting": false,
+        "isGrounded": true
+      }
+    },
+    {
+      "image": "observed-boost.png",
+      "targetProgress": 0.9498486,
+      "metadata": {
+        "frameIndex": 146,
+        "file": "frames/frame-0146.png",
+        "raceTime": 37.08978271484375,
+        "normalizedProgress": 0.9493470788002014,
+        "speedKph": 333.9778137207031,
+        "energy01": 0.8458983898162842,
+        "isBoosting": true,
+        "isGrounded": true
+      }
+    }
+  ]
+}

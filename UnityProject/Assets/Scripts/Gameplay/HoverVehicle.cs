@@ -33,7 +33,7 @@ namespace VectorRush
         TrackPath track;
         int gridIndex;
         float steering, throttle, brake, leftBrake, rightBrake;
-        bool boostHeld, recoveryRequested, boostExhausted, aiBoostLatch;
+        bool boostHeld, recoveryRequested, boostExhausted, aiBoostLatch, aiEdgeGuard;
         float lostTime, stoppedTime, visualBank;
         float aiLane, nextLaneDecision;
         Quaternion originalVisualRotation;
@@ -67,6 +67,7 @@ namespace VectorRush
             Boost01 = 1f;
             IsBoosting = false;
             boostExhausted = aiBoostLatch = recoveryRequested = false;
+            aiEdgeGuard = false;
             lostTime = stoppedTime = 0f;
             RecoveryCount = 0;
             aiLane = (gridIndex % 2 == 0 ? -1f : 1f) * Mathf.Min(5.8f, track.Width * .265f);
@@ -251,14 +252,39 @@ namespace VectorRush
                     break;
                 }
             }
-            Vector3 destination = target.Position + target.Right * aiLane;
+            float targetLane = aiLane;
+            ApplyRivalCorridorGuard(IsPlayer,currentLane,Vector3.Dot(Body.linearVelocity,frame.Right),track.Width,
+                ref aiEdgeGuard,ref targetLane,ref desiredSpeed);
+            if(aiEdgeGuard)
+            {
+                // The safety target is temporary, not a reserved lane change. Do not
+                // move it through an adjacent craft that the normal lane test excluded.
+                float ownRadius=LateralCollisionRadius(this,frame.Right);
+                foreach(var other in racers)
+                {
+                    if(!other || other==this || !other.Body || Mathf.Abs(SignedTrackGap(other))>12f) continue;
+                    float clearance=Mathf.Max(5.5f,ownRadius+LateralCollisionRadius(other,frame.Right)+.4f);
+                    targetLane=KeepCorrectionClear(currentLane,targetLane,OtherLane(other),clearance);
+                }
+                foreach(var other in racers)
+                {
+                    if(!other || other==this || !other.Body) continue;
+                    float gap=SignedTrackGap(other); if(gap<=0f || gap>65f) continue;
+                    float clearance=Mathf.Max(5.5f,ownRadius+LateralCollisionRadius(other,frame.Right)+.4f);
+                    float otherLane=OtherLane(other);
+                    if(otherLane<Mathf.Min(currentLane,targetLane)-clearance || otherLane>Mathf.Max(currentLane,targetLane)+clearance) continue;
+                    float leaderSpeed=Mathf.Max(0f,Vector3.Dot(other.Body.linearVelocity,track.Evaluate(other.TrackProgress).Forward));
+                    desiredSpeed=Mathf.Min(desiredSpeed,Mathf.Max(0f,leaderSpeed+(gap-(11f+speed*.32f))*1.6f));
+                }
+            }
+            Vector3 destination = target.Position + target.Right * targetLane;
             Vector3 direction = Vector3.ProjectOnPlane(destination - Body.position, frame.Up).normalized;
             float angle = Vector3.SignedAngle(transform.forward, direction, frame.Up);
             steering = Mathf.Clamp(angle / 26f, -1f, 1f);
             float bend = Vector3.Angle(frame.Forward, target.Forward);
             // Reduce speed while badly misaligned, including after glancing wall contact.
             desiredSpeed *= Mathf.Lerp(1f, .45f, Mathf.InverseLerp(15f, 60f, Mathf.Abs(angle)));
-            bool clearStraight = strongestCurve < .002f && bend < 7f && Mathf.Abs(angle) < 8f && nearestBlocker > 65f;
+            bool clearStraight = !aiEdgeGuard && strongestCurve < .002f && bend < 7f && Mathf.Abs(angle) < 8f && nearestBlocker > 65f;
             if (!clearStraight || Boost01 < .1f) aiBoostLatch = false;
             else if (Boost01 > .65f) aiBoostLatch = true;
             boostHeld = aiBoostLatch;
@@ -267,6 +293,41 @@ namespace VectorRush
             brake = Mathf.Clamp01((speed - desiredSpeed) / 10f);
             leftBrake = angle < -32f ? .45f : 0f;
             rightBrake = angle > 32f ? .45f : 0f;
+        }
+
+        public static void ApplyRivalCorridorGuard(bool isPlayer,float currentLane,float lateralSpeed,float width,
+            ref bool active,ref float targetLane,ref float desiredSpeed)
+        {
+            // Testing autopilot is still the player: preserve its existing behavior.
+            if(isPlayer) { active=false; return; }
+            float boundary=Mathf.Min(6.2f,width*.282f);
+            float projectedLane=currentLane+lateralSpeed*.45f;
+            float excursion=Mathf.Max(Mathf.Abs(currentLane),Mathf.Abs(projectedLane));
+            // Release farther inside the corridor to avoid alternating corrections at the edge.
+            active=excursion>(active?boundary-.6f:boundary);
+            if(!active) return;
+            float inwardLimit=Mathf.Min(4.6f,width*.21f);
+            targetLane=Mathf.Clamp(targetLane,-inwardLimit,inwardLimit);
+            desiredSpeed=Mathf.Min(desiredSpeed,42f);
+        }
+
+        public static float KeepCorrectionClear(float currentLane,float correctedLane,float occupiedLane,float clearance)
+        {
+            if(correctedLane<currentLane && occupiedLane<currentLane)
+                return Mathf.Min(currentLane,Mathf.Max(correctedLane,occupiedLane+clearance));
+            if(correctedLane>currentLane && occupiedLane>currentLane)
+                return Mathf.Max(currentLane,Mathf.Min(correctedLane,occupiedLane-clearance));
+            return correctedLane;
+        }
+
+        static float LateralCollisionRadius(HoverVehicle racer,Vector3 axis)
+        {
+            var box=racer.GetComponent<BoxCollider>();
+            if(!box) return 2.6f;
+            var t=box.transform; Vector3 half=box.size*.5f;
+            return Mathf.Abs(Vector3.Dot(t.TransformVector(Vector3.right*half.x),axis))+
+                Mathf.Abs(Vector3.Dot(t.TransformVector(Vector3.up*half.y),axis))+
+                Mathf.Abs(Vector3.Dot(t.TransformVector(Vector3.forward*half.z),axis));
         }
 
         float SignedTrackGap(HoverVehicle other) => (Mathf.Repeat(other.TrackProgress - TrackProgress + .5f, 1f) - .5f) * track.Length;
