@@ -1,0 +1,52 @@
+[
+  {
+    "file": "VectorRush-full-lap.mp4",
+    "firstFrame": 15,
+    "lastFrameInclusive": 1040,
+    "nativeCapture": "../lighting-depth-candidate-01/full-lap/",
+    "scope": "Continuous native rendering, automated steering, 24 simulation frames per second, silent. Not a real-time performance measurement or subjective playback acceptance.",
+    "sha256": "61a6fd8b97a58df0e8fa0b5239c7e51b2347b040103446036275490c2eb9a058",
+    "bytes": 41842413,
+    "probe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "width": 1920,
+          "height": 1080,
+          "r_frame_rate": "24/1",
+          "nb_frames": "1026"
+        }
+      ],
+      "format": {
+        "duration": "42.750000"
+      }
+    },
+    "fullDecodeExitCode": 0
+  },
+  {
+    "file": "VectorRush-lighting-preview.mp4",
+    "firstFrame": 130,
+    "lastFrameInclusive": 705,
+    "nativeCapture": "../lighting-depth-candidate-01/full-lap/",
+    "scope": "Continuous native rendering, automated steering, 24 simulation frames per second, silent. Not a real-time performance measurement or subjective playback acceptance.",
+    "sha256": "9fe820215f93d43d2133617978ac7bb352e362fd12d09cf1a99e63de3b1cab21",
+    "bytes": 22146201,
+    "probe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "width": 1920,
+          "height": 1080,
+          "r_frame_rate": "24/1",
+          "nb_frames": "576"
+        }
+      ],
+      "format": {
+        "duration": "24.000000"
+      }
+    },
+    "fullDecodeExitCode": 0
+  }
+]

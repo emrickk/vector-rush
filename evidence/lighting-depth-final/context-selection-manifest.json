@@ -1,0 +1,29 @@
+{
+  "scope": "Additional parent-inspected circuit context originals. Frame678 warm ship wash is also visible in prior accepted landmark capture; it is not newly introduced by this pass. Nearby-camera comparison only.",
+  "selections": [
+    {
+      "frame": 360,
+      "path": "evidence/lighting-depth-candidate-01/selected/frame-0360.png",
+      "sha256": "c1d27d60a055dc918954cdb9158029f17de2e078e1b4546315993118aefa88e9",
+      "original": "evidence/lighting-depth-candidate-01/full-lap/frames/frame-0360.png"
+    },
+    {
+      "frame": 455,
+      "path": "evidence/lighting-depth-candidate-01/selected/frame-0455.png",
+      "sha256": "8c63baea774224240d6207801081c5ad1a96fc9715e017f36709185831dc9a4f",
+      "original": "evidence/lighting-depth-candidate-01/full-lap/frames/frame-0455.png"
+    },
+    {
+      "frame": 678,
+      "path": "evidence/lighting-depth-candidate-01/selected/frame-0678.png",
+      "sha256": "65b2ac3dfea903c17787e0a20aed65924b3504a962755cf458061769fc89611c",
+      "original": "evidence/lighting-depth-candidate-01/full-lap/frames/frame-0678.png"
+    },
+    {
+      "frame": 1004,
+      "path": "evidence/lighting-depth-candidate-01/selected/frame-1004.png",
+      "sha256": "9970e7ade4a0a6bd555bdb346be7009792bb78d3385a8c2d9452a1e6126e12aa",
+      "original": "evidence/lighting-depth-candidate-01/full-lap/frames/frame-1004.png"
+    }
+  ]
+}

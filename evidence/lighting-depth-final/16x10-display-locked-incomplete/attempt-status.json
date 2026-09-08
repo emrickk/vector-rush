@@ -1,0 +1,11 @@
+{
+  "complete": false,
+  "reason": "Mac locked; CUA explicitly reported it could not automatically unlock. Native process stayed at0% CPU with no frames or completion metadata. Parent terminated only that process (PID21556).",
+  "resolutionIntended": [
+    1280,
+    800
+  ],
+  "recordedFrames": 0,
+  "resume": "After the user unlocks, run a fresh16x10 capture and ultrawide capture, then a separate real-time native race. Do not count this attempt as presentation/performance evidence.",
+  "updatedUtc": "2026-09-08T20:22:15.274526+00:00"
+}

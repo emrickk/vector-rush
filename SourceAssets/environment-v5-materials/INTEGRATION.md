@@ -1,4 +1,4 @@
-# Architecture finish kit — candidate 01 ready for native review
+# Architecture finish kit — candidate 01 accepted in native views
 
 Implementation resumed on the owner's explicit instruction and is complete within this asset task's scope. Parent owns NightLandmarks integration, lighting, native compilation and visual acceptance. No Unity or Blender process was run by this task.
 
@@ -39,3 +39,7 @@ Every texture has sRGB enabled only for BaseColor, linear packed data, mipmaps, 
 - New `NightArchitectureFinishes.cs` and its `.meta` implement the runtime helper. Existing landmark geometry and scripts were not edited by this asset task.
 
 Data and metadata checks pass. Concrete alpha has real variation from .1529 to .2902; titanium remains smoother at .5176–.6275. These are texture/channel findings, not a native appearance pass. Parent must verify import/compile, correct shader sampling, subtle material separation, cylindrical seam visibility and lighting/performance in the native game.
+
+## Native integration acceptance
+
+Parent integration applies a .78 smoothness multiplier only to Concrete after the helper, for an approximate .1193–.2264 effective range and .1764 mean. Other mapped families keep the authored absolute smoothness. The native build5c49b92643bd4d41820ba81857fdf8c7 compiles and loads the kit without missing-resource errors. [Independent review016](../../docs/environment-reviews/016-lighting-material-native-critique.md) accepts eight compared native views with no required corrections: thermal service recesses and pipe/support connections improve clearly, while mast depth improves modestly and its amber pane remains fairly flat. No conspicuous seam was observed in those views; this is sampled-image acceptance, not a motion-stability claim.

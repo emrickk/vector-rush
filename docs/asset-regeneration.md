@@ -64,3 +64,7 @@ The 2K albedo, OpenGL normal and roughness maps are third-party CC0 source image
 ## Landmark kit (environment-v4)
 
 The live landmark FBXs are the audited pass-02 exports in [environment-v4](../SourceAssets/environment-v4/INTEGRATION.md). Preserve their Unity importer metadata, shared material names, ground origins and reserved footprints. Pass01 has rejected radial placement; pass03 is an unpublished tangent experiment. Start a fresh immutable staging pass for regeneration, inspect both complete silhouettes, run export/whole-road clearance audits and verify the actual native approach before replacing a reviewed export. The integration document records current geometry, source/live identity and the unused-normal-map tangent limitation.
+
+## Architecture finish kit (environment-v5-materials)
+
+The four original512px texture pairs and their deterministic generator are preserved in [the finish integration guide](../SourceAssets/environment-v5-materials/INTEGRATION.md). The generator refuses to overwrite an existing candidate directory; select a fresh staging name, validate all channel/color-space/repeat-edge and source-to-live checks, then review actual native materials before replacing the accepted payloads. Preserve Unity metadata and the retained URP material variant. These are color and metallic/smoothness maps only; the current mast tangent limitation precludes adding a normal map without a separate geometry audit.

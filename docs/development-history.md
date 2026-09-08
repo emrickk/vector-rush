@@ -286,3 +286,7 @@ After the owner explicitly overrode the brief account-switch pause, completed a 
 ### Lighting/material native candidate accepted — 2026-09-08
 
 Build5c49b92643bd4d41820ba81857fdf8c7 completed a1,440-frame native circuit. All PNG CRC/decompression checks passed;193 prebuild source/resource/settings hashes remain unchanged. Independent review016 directly compares eight original views against baseline and accepts the bounded pass with zero required corrections. Thermal service recesses and pipe/support connections improve; mast improvement is restrained. All five exact anchor comparisons fail small pose tolerances, preserved as a comparison limitation. Candidate evidence and critique are retained before final tests/performance/package; still review is not continuous subjective-motion acceptance.
+
+### Lighting delivery artifacts verified; native checks blocked by display lock
+
+All42 tests pass;193 source hashes and189 app hashes are unchanged. Both continuous simulation-time videos decode completely. The new macOS archive passes CRC with441 entries and56,664,092 bytes. Additional sampled circuit contexts remain readable. The Mac locked before the16:10 capture; the tool explicitly could not unlock it, and no frames were recorded. Only the stalled capture process was stopped. Preserve this incomplete attempt and mark alternate-aspect plus fresh real-time race/performance checks pending manual unlock. No completion or prior-performance substitution is claimed.
