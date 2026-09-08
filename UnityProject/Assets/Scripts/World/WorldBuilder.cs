@@ -32,11 +32,11 @@ namespace VectorRush
         public void Build(TrackPath path)
         {
             track=path;track.Ensure();
-            road=MakeMaterial("Damp graphite running deck",new Color(.13f,.145f,.165f),.94f,0f,templateName:"RoadSurface");
+            road=MakeMaterial("Satin graphite running deck",new Color(.13f,.145f,.165f),.9f,0f,templateName:"RoadSurface");
             const int textureSize=512;
             roadGrain=new Texture2D(textureSize,textureSize,TextureFormat.RGBA32,true){name="Deck aggregate",wrapMode=TextureWrapMode.Repeat,filterMode=FilterMode.Trilinear,anisoLevel=8};
             roadNormals=new Texture2D(textureSize,textureSize,TextureFormat.RGBA32,true,true){name="Deck fine relief",wrapMode=TextureWrapMode.Repeat,filterMode=FilterMode.Trilinear,anisoLevel=8};
-            roadSmoothness=new Texture2D(textureSize,textureSize,TextureFormat.RGBA32,true,true){name="Uneven damp surface",wrapMode=TextureWrapMode.Repeat,filterMode=FilterMode.Trilinear,anisoLevel=8};
+            roadSmoothness=new Texture2D(textureSize,textureSize,TextureFormat.RGBA32,true,true){name="Satin deck service wear",wrapMode=TextureWrapMode.Repeat,filterMode=FilterMode.Trilinear,anisoLevel=8};
             var random=new System.Random(419);var pixels=new Color[textureSize*textureSize];var normals=new Color[pixels.Length];var masks=new Color[pixels.Length];
             for(int y=0;y<textureSize;y++)for(int x=0;x<textureSize;x++){
                 int index=y*textureSize+x;float grain=(float)random.NextDouble();
@@ -46,7 +46,9 @@ namespace VectorRush
                 float u=x/(float)(textureSize-1),v=y/(float)(textureSize-1);
                 float dampPatch=PeriodicNoise(u,v,(textureSize-1)*.021f,(textureSize-1)*.009f,2.7f,1.1f);
                 float dampStreak=PeriodicNoise(u,v,(textureSize-1)*.12f,(textureSize-1)*.005f,0,0);
-                masks[index]=new Color(0,0,0,Mathf.Lerp(.42f,.78f,Mathf.SmoothStep(.2f,.8f,dampPatch*.65f+dampStreak*.35f)));
+                // Deliberate satin material redesign: the original damp finish exposed unresolved
+                // specular facets. Keep topology/normals/light shadows, and broaden the reflection.
+                masks[index]=new Color(0,0,0,Mathf.Lerp(.35f,.5f,Mathf.SmoothStep(.2f,.8f,dampPatch*.65f+dampStreak*.35f)));
             }
             roadGrain.SetPixels(pixels);roadGrain.Apply(true,true);roadNormals.SetPixels(normals);roadNormals.Apply(true,true);roadSmoothness.SetPixels(masks);roadSmoothness.Apply(true,true);
             road.SetTexture("_BaseMap",roadGrain);road.SetTexture("_BumpMap",roadNormals);road.SetTexture("_MetallicGlossMap",roadSmoothness);road.SetTextureScale("_BaseMap",new Vector2(3,1));
@@ -58,7 +60,7 @@ namespace VectorRush
             glass=MakeMaterial("Smoked glass",new Color(.025f,.1f,.14f),.98f,.7f);
             rock=MakeMaterial("Basalt",new Color(.17f,.23f,.23f),.08f);
             Ribbon("Running surface",-11,11,0,road,true);
-            Ribbon("Track underbody",-12,12,-1.7f,graphite,false);
+            Ribbon("Track underbody",-13.3f,13.3f,-1.7f,graphite,false,true);
             for(int side=-1;side<=1;side+=2){
                 Ribbon("Ivory edge",side*10.2f,side*10.48f,.025f,ivory,false);
                 Ribbon("Drain channel",side*10.6f,side*10.85f,.03f,metal,false);
@@ -97,7 +99,7 @@ namespace VectorRush
             float far=Mathf.Lerp(Mathf.PerlinNoise(x,y-periodY),Mathf.PerlinNoise(x-periodX,y-periodY),blendX);
             return Mathf.Lerp(near,far,blendY);
         }
-        void Ribbon(string name,float left,float right,float height,Material mat,bool collider)
+        void Ribbon(string name,float left,float right,float height,Material mat,bool collider,bool faceDown=false)
         {
             if(left>right){float v=left;left=right;right=v;}
             const int n=960;
@@ -114,6 +116,7 @@ namespace VectorRush
                     }
                 }
             }
+            if(faceDown)for(int i=0;i<tris.Length;i+=3){int swap=tris[i+1];tris[i+1]=tris[i+2];tris[i+2]=swap;}
             MeshObject(name,vertices,uv,tris,mat,collider);
         }
         void Wall(int side)

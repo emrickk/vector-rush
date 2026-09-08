@@ -1,0 +1,108 @@
+{
+  "source_camera_metadata": "Vector Rush/evidence/environment-candidate-01/environment-evidence.json",
+  "camera_source_sha256": "8b3ddecc9267b2914569e98876065e9ac18273aca431ae3ad031e55a16cee362",
+  "city_script_sha256": "be673d732c0c96f39d4854401698035bd45ca3e05e03e772a7d6606affac9f2c",
+  "projection": [
+    {
+      "anchor": "04-exit",
+      "center_pixel_xy_depth_m": [
+        966.3912623708732,
+        410.03497730624804,
+        150.12541921255365
+      ],
+      "projected_full_box_min_xy": [
+        866.5387875865197,
+        327.6809200399923
+      ],
+      "projected_full_box_max_xy": [
+        1113.9309859808675,
+        498.624102096102
+      ],
+      "interpretation": "Mathematical projection only; no occlusion, imported child-transform or material proof. Native capture must establish recognizable roof/stair profile. Some bounds may extend outside the image."
+    },
+    {
+      "anchor": "05-reveal",
+      "center_pixel_xy_depth_m": [
+        1443.721751105249,
+        516.2599016981725,
+        55.86825478653106
+      ],
+      "projected_full_box_min_xy": [
+        1183.6088502342527,
+        199.17472627318853
+      ],
+      "projected_full_box_max_xy": [
+        2496.6896354467767,
+        869.3998217951206
+      ],
+      "interpretation": "Mathematical projection only; no occlusion, imported child-transform or material proof. Native capture must establish recognizable roof/stair profile. Some bounds may extend outside the image."
+    },
+    {
+      "anchor": "01-approach",
+      "group": "terrace over service court",
+      "base_pixel_xy_depth_m": [
+        645.3776244899723,
+        758.5424416239298,
+        93.710502987946
+      ],
+      "roof_pixel_xy_depth_m": [
+        562.4134845300175,
+        201.43357836520607,
+        76.57873109528347
+      ]
+    }
+  ],
+  "architectural_fills": [
+    {
+      "name": "canopy wash -17",
+      "position": [
+        -37.59405518822718,
+        34.33500637539109,
+        -255.47860946569517
+      ],
+      "intensity": 210,
+      "range": 27,
+      "cone_degrees": 116,
+      "conservative_housing_to_centerline_m": 24.443193397141265
+    },
+    {
+      "name": "canopy wash 16",
+      "position": [
+        -70.58027596692864,
+        34.33500637539109,
+        -256.4321495743243
+      ],
+      "intensity": 210,
+      "range": 27,
+      "cone_degrees": 116,
+      "conservative_housing_to_centerline_m": 24.473158799476114
+    },
+    {
+      "name": "facade wash station rear terrace",
+      "position": [
+        -147.37080337519748,
+        8.9,
+        -289.6768660299624
+      ],
+      "intensity": 1850,
+      "range": 105,
+      "cone_degrees": 66,
+      "conservative_housing_to_centerline_m": 58.50776670021923
+    },
+    {
+      "name": "facade wash split landmark",
+      "position": [
+        -62.254053731820854,
+        8.9,
+        -317.43703481552114
+      ],
+      "intensity": 1850,
+      "range": 105,
+      "cone_degrees": 66,
+      "conservative_housing_to_centerline_m": 85.67280999173533
+    }
+  ],
+  "light_count": 4,
+  "all_housings_clear_18m": true,
+  "facing_evidence": "Candidate01 05-reveal shows workshop blank rear despite prior assumed -X frontage. Station and workshop are rotated 180 degrees for this candidate. Exact imported child axes were not recorded in candidate01; this remains a native-validation requirement."
+}

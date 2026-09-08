@@ -1,0 +1,223 @@
+{
+  "status": "Numerical dry run of current NightDistrict placements; actual native object presence pending",
+  "candidates": [
+    {
+      "label": "exit transit station",
+      "center": [
+        -54.355795563042086,
+        23.835006375391085,
+        -263.9664866801287
+      ],
+      "yaw": 268.3441991136899,
+      "half": [
+        11.6,
+        32
+      ],
+      "runtime_sample_clearance_m": 21.32705797041704,
+      "runtime_required_m": 20.561829767977002,
+      "conservative_all_course_clearance_m": 21.172112010131418,
+      "overlap_with": null,
+      "predicted_accepted": true
+    },
+    {
+      "label": "opposite low service room",
+      "center": [
+        -96.10489530687326,
+        26.827175304618574,
+        -202.84137497374715
+      ],
+      "yaw": 89.53046537188571,
+      "half": [
+        4,
+        9
+      ],
+      "runtime_sample_clearance_m": 24.959689959167434,
+      "runtime_required_m": 20.561829767977002,
+      "conservative_all_course_clearance_m": 24.80448682749239,
+      "overlap_with": null,
+      "predicted_accepted": true
+    },
+    {
+      "label": "low left terrace",
+      "center": [
+        -150.3322326419013,
+        3.9,
+        -143.81027651642185
+      ],
+      "yaw": 186.66843792099547,
+      "half": [
+        14.25,
+        15.75
+      ],
+      "runtime_sample_clearance_m": 69.61544669803169,
+      "runtime_required_m": 20.561829767977002,
+      "conservative_all_course_clearance_m": 69.46042097866922,
+      "overlap_with": null,
+      "predicted_accepted": true
+    },
+    {
+      "label": "station rear terrace",
+      "center": [
+        -140.98372752461464,
+        3.9,
+        -322.03741704626776
+      ],
+      "yaw": 2.871150284036162,
+      "half": [
+        19,
+        21
+      ],
+      "runtime_sample_clearance_m": 70.00054081907268,
+      "runtime_required_m": 20.561829767977002,
+      "conservative_all_course_clearance_m": 69.84505403971438,
+      "overlap_with": null,
+      "predicted_accepted": true
+    },
+    {
+      "label": "split landmark",
+      "center": [
+        -51.78412678522413,
+        3.9,
+        -352.9293245378387
+      ],
+      "yaw": -1.655800886310118,
+      "half": [
+        22.419999999999998,
+        24.779999999999998
+      ],
+      "runtime_sample_clearance_m": 97.20703878829775,
+      "runtime_required_m": 20.561829767977002,
+      "conservative_all_course_clearance_m": 97.05023194807765,
+      "overlap_with": null,
+      "predicted_accepted": true
+    },
+    {
+      "label": "approach terrace over service court",
+      "center": [
+        -123.29832361159801,
+        9,
+        24.421750069983634
+      ],
+      "yaw": -79.04750415574426,
+      "half": [
+        18,
+        20
+      ],
+      "runtime_sample_clearance_m": 39.41319807141452,
+      "runtime_required_m": 20.561829767977002,
+      "conservative_all_course_clearance_m": 39.22765218466538,
+      "overlap_with": null,
+      "predicted_accepted": true
+    },
+    {
+      "label": "approach ledge 0.792",
+      "center": [
+        -263.11513066915523,
+        23.599932500554136,
+        -56.30179948200481
+      ],
+      "yaw": -135.18422081794432,
+      "half": [
+        3.2,
+        4.3
+      ],
+      "runtime_sample_clearance_m": 22.80065274436375,
+      "runtime_required_m": 20.561829767977002,
+      "conservative_all_course_clearance_m": 22.645054039714385,
+      "overlap_with": null,
+      "predicted_accepted": true
+    },
+    {
+      "label": "approach ledge 0.826",
+      "center": [
+        -295.3731453137814,
+        18.785123078505723,
+        -132.09107461285257
+      ],
+      "yaw": 172.98517739184862,
+      "half": [
+        3.2,
+        4.3
+      ],
+      "runtime_sample_clearance_m": 22.803046084843324,
+      "runtime_required_m": 20.561829767977002,
+      "conservative_all_course_clearance_m": 22.645054039714392,
+      "overlap_with": null,
+      "predicted_accepted": true
+    },
+    {
+      "label": "approach ledge 0.848",
+      "center": [
+        -279.52879025665754,
+        16.609830680753547,
+        -179.58023070519388
+      ],
+      "yaw": 151.30729888515734,
+      "half": [
+        3.2,
+        4.3
+      ],
+      "runtime_sample_clearance_m": 22.80503520138957,
+      "runtime_required_m": 20.561829767977002,
+      "conservative_all_course_clearance_m": 22.645054039714356,
+      "overlap_with": null,
+      "predicted_accepted": true
+    },
+    {
+      "label": "quiet skyline 126",
+      "center": [
+        137.8298827704377,
+        0,
+        -427.9018114089493
+      ],
+      "yaw": 94.96348529878453,
+      "half": [
+        16.8,
+        19.8
+      ],
+      "runtime_sample_clearance_m": 178.50373183237596,
+      "runtime_required_m": 20.561829767977002,
+      "conservative_all_course_clearance_m": 178.34816657152788,
+      "overlap_with": null,
+      "predicted_accepted": true
+    },
+    {
+      "label": "quiet skyline 151",
+      "center": [
+        166.33557097003532,
+        0,
+        -469.5242301309231
+      ],
+      "yaw": 94.96348529878453,
+      "half": [
+        15.0,
+        17.4
+      ],
+      "runtime_sample_clearance_m": 225.80123238010148,
+      "runtime_required_m": 20.561829767977002,
+      "conservative_all_course_clearance_m": 225.6435493932053,
+      "overlap_with": null,
+      "predicted_accepted": true
+    },
+    {
+      "label": "quiet skyline 113",
+      "center": [
+        333.6576869830308,
+        0,
+        -45.410672822348474
+      ],
+      "yaw": 94.96348529878453,
+      "half": [
+        20.4,
+        18.599999999999998
+      ],
+      "runtime_sample_clearance_m": 47.24197472377754,
+      "runtime_required_m": 20.561829767977002,
+      "conservative_all_course_clearance_m": 47.08676545773743,
+      "overlap_with": null,
+      "predicted_accepted": true
+    }
+  ],
+  "all_predicted_accepted": true,
+  "placement_count": 12
+}

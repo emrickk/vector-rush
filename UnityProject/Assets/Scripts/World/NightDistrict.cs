@@ -162,7 +162,7 @@ namespace VectorRush
             civicSteel=world.MakeMaterial("Transit / charcoal structure",new Color(.055f,.075f,.091f),.32f,.18f);
             civicGlass=world.MakeMaterial("Transit / recessed dark glass",new Color(.027f,.068f,.089f),.66f,.25f);
             civicWarm=world.MakeMaterial("Transit / occupied recessed rooms",new Color(.55f,.31f,.14f),.27f,0,new Color(.8f,.38f,.13f));
-            farConcrete=world.MakeMaterial("Transit skyline / quiet blue mass",new Color(.105f,.15f,.19f),.28f,.03f);
+            farConcrete=world.MakeMaterial("Transit skyline / quiet blue mass",new Color(.22f,.28f,.32f),.24f,.03f);
             farGlass=world.MakeMaterial("Transit skyline / grouped dim rooms",new Color(.10f,.15f,.18f),.3f,0,new Color(.105f,.13f,.14f));
             var frame=track.Evaluate(.918f);var forward=Vector3.ProjectOnPlane(frame.Forward,Vector3.up).normalized;
             benchmarkRotation=Quaternion.LookRotation(forward,Vector3.up);benchmarkOrigin=frame.Position;benchmarkOrigin.y=0;
@@ -172,29 +172,39 @@ namespace VectorRush
             var station=Resources.Load<GameObject>("Art/Environment/Nocturne_TransitStation_A");
             var workshop=Resources.Load<GameObject>("Art/Environment/Nocturne_ServiceWorkshop_A");
             var buttress=Resources.Load<GameObject>("Art/Environment/Nocturne_PlatformButtress_A");
-            Vector3 stationPosition=frame.Position+benchmarkRotation*Vector3.right*33f-Vector3.up*7f;
-            if(station&&Reserve(stationPosition,benchmarkRotation,new Vector2(11.6f,32)))
+            // Candidate 01 placed this at .918: it was behind the chase camera
+            // by the .947 reveal. Keep the same landmark ahead across both views.
+            var stationFrame=track.Evaluate(.970f);
+            var stationRoute=Quaternion.LookRotation(Vector3.ProjectOnPlane(stationFrame.Forward,Vector3.up).normalized,Vector3.up);
+            // Native candidate 01 exposed the source's blank rear elevation.
+            // This FBX arrives with its occupied side on local +X; turn that
+            // side toward the road instead of trusting the source X convention.
+            var stationFacing=stationRoute*Quaternion.Euler(0,180,0);
+            Vector3 stationPosition=stationFrame.Position+stationRoute*Vector3.right*33f-Vector3.up*7f;
+            if(station&&Reserve(stationPosition,stationFacing,new Vector2(11.6f,32)))
             {
-                PlaceAuthored(station,"Benchmark / exit transit station",stationPosition,benchmarkRotation,1);
+                PlaceAuthored(station,"Benchmark / exit transit station",stationPosition,stationFacing,1);
                 // Two unscaled structural modules meet the platform foundation;
                 // their lower pedestals continue to the visible service level.
                 foreach(float along in new[]{-21f,20f})
                 {
-                    Vector3 p=stationPosition+benchmarkRotation*new Vector3(3,-11.135f,along);
-                    PlaceAuthored(buttress,"Benchmark / grounded station buttress",p,benchmarkRotation,1);
-                    Box(p,benchmarkRotation,new Vector3(0,-p.y*.5f,0),new Vector3(4.4f,p.y,7.2f),civicConcrete);
-                    Box(p,benchmarkRotation,new Vector3(0,-p.y+.30f,0),new Vector3(5.8f,.6f,8.4f),civicSteel);
+                    Vector3 p=stationPosition+stationFacing*new Vector3(3,-11.135f,along);
+                    PlaceAuthored(buttress,"Benchmark / grounded station buttress",p,stationFacing,1);
+                    Box(p,stationFacing,new Vector3(0,-p.y*.5f,0),new Vector3(4.4f,p.y,7.2f),civicConcrete);
+                    Box(p,stationFacing,new Vector3(0,-p.y+.30f,0),new Vector3(5.8f,.6f,8.4f),civicSteel);
                 }
                 Vector3 service=stationPosition;service.y=.16f;
-                Box(service,benchmarkRotation,Vector3.zero,new Vector3(22.8f,.3f,63.5f),civicSteel);
-                PlaceAuthored(workshop,"Benchmark / ground service rooms",service+benchmarkRotation*new Vector3(3,0,0),benchmarkRotation,1);
+                Box(service,stationFacing,Vector3.zero,new Vector3(22.8f,.3f,63.5f),civicSteel);
+                PlaceAuthored(workshop,"Benchmark / ground service rooms",service+stationFacing*new Vector3(3,0,0),stationFacing,1);
                 // A broad service apron and limited markings make the station
                 // visibly belong to the ground, with no additional lamp cadence.
-                for(int bay=0;bay<3;bay++)Box(service,benchmarkRotation,new Vector3(-6.3f,.18f,-8+bay*8),new Vector3(3.2f,.04f,.16f),trim);
+                for(int bay=0;bay<3;bay++)Box(service,stationFacing,new Vector3(-6.3f,.18f,-8+bay*8),new Vector3(3.2f,.04f,.16f),trim);
+                foreach(float along in new[]{-17f,16f})
+                    ArchitecturalFill("Transit canopy / warm concealed wash",stationPosition,stationFacing,new Vector3(8.0f,10.5f,along),new Vector3(1.5f,7.2f,along+3),new Color(1,.73f,.47f),210,27,116);
             }
             var other=track.Evaluate(.948f);var oq=Quaternion.LookRotation(Vector3.ProjectOnPlane(other.Forward,Vector3.up).normalized,Vector3.up);
             Vector3 opposite=other.Position-oq*Vector3.right*29f-Vector3.up*3f;
-            var facing=oq*Quaternion.Euler(0,180,0);
+            var facing=oq;
             if(workshop&&Reserve(opposite,facing,new Vector2(4,9)))
             {
                 PlaceAuthored(workshop,"Benchmark / opposite low service room",opposite,facing,1);
@@ -206,9 +216,12 @@ namespace VectorRush
             }
             // Reuse the authored terrace/split families as distinct middle
             // masses. The left side stays lower; bases and open courtyards show.
-            BenchmarkTower(track,terrace,.913f,-86f,.75f,"low left terrace");
-            BenchmarkTower(track,terrace,.926f,91f,1.0f,"station rear terrace");
-            BenchmarkTower(track,split,.970f,122f,1.18f,"split landmark");
+            var nightTerrace=Resources.Load<GameObject>("Art/Environment/Nocturne_TerraceTower_Night_A");
+            var nightSplit=Resources.Load<GameObject>("Art/Environment/Nocturne_SplitTower_Night_B");
+            BenchmarkTower(track,nightTerrace?nightTerrace:terrace,.913f,-86f,.75f,"low left terrace",false);
+            BenchmarkTower(track,nightTerrace?nightTerrace:terrace,.926f,91f,1.0f,"station rear terrace",true);
+            BenchmarkTower(track,nightSplit?nightSplit:split,.970f,122f,1.18f,"split landmark",true);
+            BuildApproachServiceGroup(track,nightTerrace?nightTerrace:terrace,workshop);
             // Close but intermittent structural ledges give the approach real
             // parallax. Their complete bounds get the same all-course check.
             foreach(float progress in new[]{.792f,.826f,.848f})
@@ -226,7 +239,26 @@ namespace VectorRush
             Flush("Benchmark / composed transit district");
         }
 
-        void BenchmarkTower(TrackPath track,GameObject source,float progress,float offset,float scale,string name)
+        void BuildApproachServiceGroup(TrackPath track,GameObject terrace,GameObject workshop)
+        {
+            if(!terrace)return;
+            var f=track.Evaluate(.735f);var route=Quaternion.LookRotation(Vector3.ProjectOnPlane(f.Forward,Vector3.up).normalized,Vector3.up);
+            Vector3 c=f.Position-route*Vector3.right*65f;c.y=9;
+            // Aim this one composed frontage toward the recorded approach
+            // camera. No camera or gameplay transform is changed.
+            Vector3 towardCamera=new Vector3(-212.6821f,0,41.7193f)-new Vector3(c.x,0,c.z);
+            var q=Quaternion.LookRotation(towardCamera.normalized,Vector3.up);
+            if(!Reserve(c,q,new Vector2(18,20)))return;
+            PlaceAuthored(terrace,"Benchmark / approach terrace over service court",c,q,.82f);
+            Box(c,q,new Vector3(0,-.5f,0),new Vector3(31,1,34),civicConcrete);
+            foreach(float x in new[]{-11f,11f})foreach(float z in new[]{-12f,12f})
+                Box(c,q,new Vector3(x,-4.9f,z),new Vector3(2.2f,7.8f,2.8f),civicConcrete);
+            Vector3 ground=c;ground.y=.2f;
+            Box(ground,q,Vector3.zero,new Vector3(35,.4f,39),civicSteel);
+            PlaceAuthored(workshop,"Benchmark / approach occupied service court",ground,q*Quaternion.Euler(0,-90,0),1);
+        }
+
+        void BenchmarkTower(TrackPath track,GameObject source,float progress,float offset,float scale,string name,bool lightFacade)
         {
             if(!source)return;
             var f=track.Evaluate(progress);var q=Quaternion.LookRotation(Vector3.ProjectOnPlane(f.Forward,Vector3.up).normalized,Vector3.up);
@@ -240,6 +272,19 @@ namespace VectorRush
             Box(c,orientation,new Vector3(0,.03f,0),new Vector3(half.x*2,.16f,half.y*2),civicConcrete);
             // A separate street-facing service room is supported by the podium.
             Box(c,orientation,new Vector3(0,-1.0f,half.y+.03f),new Vector3(half.x*1.3f,1.4f,.12f),civicGlass);
+            if(lightFacade)
+                ArchitecturalFill("Transit facade / cool structural wash",c,orientation,new Vector3(-8*scale,5,half.y+11),new Vector3(0,31*scale,0),new Color(.65f,.77f,1),1850,105,66);
+        }
+
+        void ArchitecturalFill(string name,Vector3 c,Quaternion q,Vector3 localPosition,Vector3 localTarget,Color color,float intensity,float range,float cone)
+        {
+            Vector3 position=c+q*localPosition,target=c+q*localTarget;
+            var go=new GameObject(name);go.transform.SetParent(transform,false);go.transform.position=position;
+            go.transform.rotation=Quaternion.LookRotation(target-position,Vector3.up);
+            var light=go.AddComponent<Light>();light.type=LightType.Spot;light.color=color;light.intensity=intensity;
+            light.range=range;light.spotAngle=cone;light.innerSpotAngle=cone*.62f;light.shadows=LightShadows.None;
+            // Physical dark housings, with no extra neon strips or road lamp cadence.
+            Box(position,go.transform.rotation,Vector3.zero,new Vector3(.52f,.26f,.48f),civicSteel);
         }
 
         void BenchmarkSkyline(Vector3 local,float w,float d,float height)

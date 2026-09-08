@@ -1,0 +1,54 @@
+{
+  "Nocturne_TerraceTower_Night_A": {
+    "source_fbx": "/Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Resources/Art/Environment/Solstice_TerraceTower_A.fbx",
+    "source_fbx_sha256": "33517d32cc55e46f8a377fc1da02ba47a5b8184fd523b8f6f2bbe8f242e41bff",
+    "variant_fbx_sha256": "c0651d6d135679aaf6fe8a5fdbe5040550bf841f6f7784a9a52464c6fbfb2c84",
+    "vertices": 21054,
+    "triangles": 39452,
+    "polygons_given_occupied_material": 21,
+    "material_assignment_only": true,
+    "source_bounds_min_xyz": [
+      -13.5,
+      -16.350000381469727,
+      -1.0192217132498627e-06
+    ],
+    "source_bounds_max_xyz": [
+      13.5,
+      13.5,
+      74.27545166015625
+    ],
+    "unity_dimensions_xyz": [
+      27.0,
+      74.27545267937796,
+      29.850000381469727
+    ],
+    "source_zero_area_triangles_retained": 0,
+    "uv_note": "Original authored UVs retained. No texture bake or UV readiness claim."
+  },
+  "Nocturne_SplitTower_Night_B": {
+    "source_fbx": "/Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Resources/Art/Environment/Solstice_SplitTower_B.fbx",
+    "source_fbx_sha256": "b0883080681e9d844029c0433019f30c36646b66f173f6b80039bdb9d3e4765d",
+    "variant_fbx_sha256": "dfdfedcd75f22cc691a40f77ce71651ef271a4cc417a2bbbc0b035f3ac3758b3",
+    "vertices": 12660,
+    "triangles": 22916,
+    "polygons_given_occupied_material": 26,
+    "material_assignment_only": true,
+    "source_bounds_min_xyz": [
+      -14.5,
+      -15.850000381469727,
+      -9.814726809054264e-07
+    ],
+    "source_bounds_max_xyz": [
+      14.5,
+      13.0,
+      72.1449966430664
+    ],
+    "unity_dimensions_xyz": [
+      29.0,
+      72.14499762453909,
+      28.850000381469727
+    ],
+    "source_zero_area_triangles_retained": 20,
+    "uv_note": "Original authored UVs retained. No texture bake or UV readiness claim."
+  }
+}

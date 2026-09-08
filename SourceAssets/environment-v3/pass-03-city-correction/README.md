@@ -1,0 +1,17 @@
+# City candidate 02 — bounded native correction
+
+2026-09-08. Trigger: all five actual `environment-candidate-01` images were inspected. The station had already passed behind the racing camera by the reveal, the opposite workshop showed its blank rear wall, new middle towers had no occupied windows, and approach frame 01 lacked a nearby service/terrace relationship. This candidate addresses those observations only.
+
+The station moves from progress .918 to .970, retaining the 33 m right offset. Its new origin is **(-54.356, 23.835, -263.966) m**, yaw **268.344°**. Both station and opposite workshop rotate 180° from candidate 01. The facing correction is based on the actual visible blank rear elevation; the prior source -X assumption was not a verified native imported-child transform. Parent's next capture must establish correct frontage.
+
+The five cameras remain unchanged. Projection using the recorded candidate-01 cameras places the new station center at (966, 410) in exit frame 04 and (1444, 516) in reveal frame 05. At the initially considered .958 position, its center was near x1736 in frame 05 and the profile would be heavily cropped. Even at .970 the full bounds extend beyond the right edge; recognizable roof/stair visibility remains a native review item, not a claimed pass.
+
+The new `Nocturne_NightTower_Kit.blend` and two tower FBXs are derivatives of the existing Solstice authored exports. The recipe applies the import transform, then asserts that vertex coordinates and polygon connectivity remain unchanged while selected glazing polygons receive `WarmWindow`. Terrace A gets five occupied floor groups, including two short side groups; Split B gets two pairs of floors on its broad outer glazing. No new facade-wide random pattern is added. Source, variant hashes and exact assigned-face counts are in `night-tower-stats.json`. Original geometry and UVs are retained, including existing near-zero-area cap triangles in Split B; this is not a new topology/UV certification.
+
+Exactly four conditional spot fills are added to NightDistrict: two warm canopy washes and two cooler middle-tower facade washes. No global light/exposure change is made. Small dark housings accompany them. Their all-course horizontal clearances are 24.44 m or greater. Far benchmark masses receive a lighter blue-gray base material to retain a silhouette under existing moonlight.
+
+One approach group reuses the terrace at uniform scale .82 over grounded supports and a low occupied service workshop, progress .735 / left 65 m. It faces the actual recorded approach camera. Its roof and base project around (562, 201) and (645, 759), establishing a left-side middle/near relationship without adding skyline population or extending the kit around the lap.
+
+`integration-placement-audit.json` reproduces the runtime reserve ordering: all 12 major plots are predicted accepted; minimum conservative centerline distance is **21.172 m**, and the approach group has **39.228 m**. Audit covers all course branches and subtracts the maximum 12,000-sample spacing. Actual instantiated bounds, source-facing correction, clipping, lighting and motion remain for the parent native capture.
+
+Code/assets were frozen for candidate 02. Additional projection findings were reported as review notes; no further candidate edits were made after freeze. Evidence: `evidence/environment-v3/pass-03-city-correction/`.

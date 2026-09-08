@@ -115,14 +115,25 @@ namespace VectorRush
                     if(i%2==0)Add(mid.Position+mid.Right*side*14.10f+mid.Up*2.65f,new Vector3(.03f,.27f,1.45f),mq,labels,cube);
                     // Concealed upper fixtures cast real light onto both ceiling and wall surfaces.
                     // These replace the previous two downward wall spots, retaining three lights per bay.
-                    Add(mid.Position+mid.Right*side*12.72f+mid.Up*11.66f,new Vector3(.7f,.22f,3.3f),mq,dark,cube);
-                    Add(mid.Position+mid.Right*side*12.65f+mid.Up*11.79f,new Vector3(.34f,.04f,2.65f),mq,lamps,cube);
+                    Add(mid.Position+mid.Right*side*12.88f+mid.Up*10.53f,new Vector3(2.95f,.14f,.24f),mq,metal,cube);
+                    Add(mid.Position+mid.Right*side*11.42f+mid.Up*10.66f,new Vector3(.7f,.22f,3.3f),mq,dark,cube);
+                    Add(mid.Position+mid.Right*side*11.35f+mid.Up*10.79f,new Vector3(.34f,.04f,2.65f),mq,lamps,cube);
                     var wash=new GameObject(warm?"Warm gallery concealed surface wash":"Cool gallery concealed surface wash");
                     wash.transform.SetParent(transform,false);
-                    wash.transform.position=mid.Position+mid.Right*side*12.38f+mid.Up*11.97f;
+                    wash.transform.position=mid.Position+mid.Right*side*11.32f+mid.Up*10.97f;
                     var fill=wash.AddComponent<Light>();fill.type=LightType.Point;
                     fill.color=warm?new Color(1,.72f,.46f):new Color(.67f,.81f,1);
-                    fill.intensity=warm?105:90;fill.range=18;fill.shadows=LightShadows.None;
+                    fill.intensity=(warm?88:78)*(i==5?.62f:i%3==1?1f:.86f)*(side<0?.88f:1f);
+                    fill.range=20;fill.shadows=LightShadows.None;
+                    if((i==2&&side==1)||(i==4&&side==-1)){
+                        // Designated service bays interrupt the blank repeated wall spans.
+                        var service=mid.Position+mid.Right*side*14.27f+mid.Up*6.25f;
+                        Add(service,new Vector3(.1f,3.6f,3.5f),mq,dark,cube);
+                        for(int vent=0;vent<5;vent++)
+                            Add(service+mid.Up*(-1.15f+vent*.48f)-mid.Right*side*.08f,new Vector3(.12f,.12f,3.12f),mq,metal,cube);
+                        Add(service+mid.Forward*1.82f,new Vector3(.18f,3.85f,.13f),mq,metal,cube);
+                        Add(service-mid.Forward*1.82f,new Vector3(.18f,3.85f,.13f),mq,metal,cube);
+                    }
                 }
                 // One transverse diffuser is recessed into a substantial tray at the rear of each cassette.
                 var fixture=track.Evaluate(start+(i+.18f)*step);var fq=Quaternion.LookRotation(fixture.Forward,fixture.Up);

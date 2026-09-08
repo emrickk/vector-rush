@@ -14,6 +14,7 @@ namespace VectorRush
         int originalCaptureRate;
         float originalTimeScale;
         bool originalAutopilot, initialized;
+        bool fullLap,stillsOnly;
         readonly Report report = new Report();
         readonly float[] anchors = { .71626f, .84775f, .87269f, .89735f, .94585f };
         readonly string[] labels = { "01-approach", "02-entry", "03-middle", "04-exit", "05-reveal" };
@@ -28,6 +29,8 @@ namespace VectorRush
             }
             var evidence = bootstrap.gameObject.AddComponent<EnvironmentEvidence>();
             evidence.owner = bootstrap; evidence.folder = args[i + 1];
+            evidence.fullLap=Array.IndexOf(args,"-environmentFullLap")>=0;
+            evidence.stillsOnly=Array.IndexOf(args,"-environmentStillsOnly")>=0;
             int reference = Array.IndexOf(args, "-environmentReference");
             if (reference >= 0 && reference + 1 < args.Length) evidence.referencePath = args[reference + 1];
             foreach (var old in bootstrap.GetComponents<RaceEvidence>()) { old.StopAllCoroutines(); old.enabled = false; }
@@ -41,29 +44,38 @@ namespace VectorRush
             originalCaptureRate = Time.captureFramerate; originalTimeScale = Time.timeScale;
             originalAutopilot = player.AutopilotForTesting; initialized = true;
             report.startedUtc = DateTime.UtcNow.ToString("o");
+            report.unityVersion=Application.unityVersion;report.buildGuid=Application.buildGUID;report.gpu=SystemInfo.graphicsDeviceName;
+            report.sceneRenderers=FindObjectsByType<Renderer>(FindObjectsSortMode.None).Length;
+            foreach(var light in FindObjectsByType<Light>(FindObjectsSortMode.None))if(light.enabled)report.activeLights++;
             report.scope = "Actual native racing camera and normal hover physics. Existing test autopilot drives; no camera, pose, lap, energy, speed or race phase is injected. Time.captureFramerate=24 is set before StartRace for repeatable simulation. The 264-frame passage is 11 simulation seconds, not a frame-time/performance measurement. Camera transforms, FOV, all racer rigidbody poses/velocities and player visual transform are recorded every frame. Five anchors are the first recorded frames crossing fixed track-progress thresholds. An optional prior report compares actual anchor poses; it never overwrites them. PNGs and metadata are rendering evidence, not independent visual/motion acceptance. The exported picture sequence contains no audio.";
+            int frameCount=fullLap?1008:264;
+            if(fullLap)report.scope=report.scope.Replace("The 264-frame passage is 11 simulation seconds","The 1008-frame full-circuit traversal is 42 simulation seconds");
+            if(stillsOnly)report.scope+=" Stills-only mode saves the five anchor PNGs, while retaining every simulated frame's pose metadata; it is not a motion recording.";
             bool success = false;
             try {
                 player.AutopilotForTesting = true; Time.timeScale = 1; Time.captureFramerate = 24;
                 yield return new WaitForSecondsRealtime(2);
                 director.StartRace();
                 float deadline = Time.realtimeSinceStartup + 150;
-                while ((director.Phase != RacePhase.Racing || director.RaceTime < 5 || player.TrackProgress < anchors[0]) && Time.realtimeSinceStartup < deadline) yield return null;
-                if (director.Phase != RacePhase.Racing || player.TrackProgress < anchors[0]) throw new InvalidOperationException("Could not reach the benchmark through normal physics.");
+                float startProgress=fullLap?.005f:anchors[0],startTime=fullLap?.1f:5;
+                while ((director.Phase != RacePhase.Racing || director.RaceTime < startTime || player.TrackProgress < startProgress) && Time.realtimeSinceStartup < deadline) yield return null;
+                if (director.Phase != RacePhase.Racing || player.TrackProgress < startProgress) throw new InvalidOperationException("Could not reach the benchmark through normal physics.");
                 int nextAnchor = 0;
-                for (int index = 0; index < 264; index++) {
+                for (int index = 0; index < frameCount; index++) {
                     yield return new WaitForEndOfFrame();
                     var frame = ReadFrame(index);
                     report.frames.Add(frame);
-                    ScreenCapture.CaptureScreenshot(Path.Combine(folder, frame.file));
                     if (nextAnchor < anchors.Length && player.TrackProgress >= anchors[nextAnchor] && player.TrackProgress < .999f) {
                         frame.anchor = labels[nextAnchor]; frame.anchorFile = labels[nextAnchor] + ".png";
                         report.anchorFrames.Add(index); nextAnchor++;
                     }
+                    frame.captureRequested=!stillsOnly || !string.IsNullOrEmpty(frame.anchor);
+                    if(frame.captureRequested)ScreenCapture.CaptureScreenshot(Path.Combine(folder, frame.file));
                 }
                 // Allow the native screenshot writer to finish before validating files/copying anchors.
                 yield return new WaitForSecondsRealtime(2);
                 foreach (var frame in report.frames) {
+                    if(!frame.captureRequested)continue;
                     string path = Path.Combine(folder, frame.file);
                     if (!File.Exists(path) || new FileInfo(path).Length < 24) throw new IOException("Missing native frame " + frame.file);
                     if (!string.IsNullOrEmpty(frame.anchorFile)) File.Copy(path, Path.Combine(folder, frame.anchorFile), true);
@@ -75,8 +87,9 @@ namespace VectorRush
             finally {
                 report.finishedUtc = DateTime.UtcNow.ToString("o");
                 File.WriteAllText(Path.Combine(folder, "environment-evidence.json"), JsonUtility.ToJson(report, true));
-                File.WriteAllText(Path.Combine(folder, "status.txt"), success ? "COMPLETE: 264 frames / 5 anchors; review required.\n" : "INCOMPLETE: inspect native log.\n");
+                File.WriteAllText(Path.Combine(folder, "status.txt"), success ? "COMPLETE: "+frameCount+" simulated frames / 5 anchors; stillsOnly="+stillsOnly+"; review required.\n" : "INCOMPLETE: inspect native log.\n");
                 Restore();
+                if(!success)Application.Quit(1);
             }
             Application.Quit(success ? 0 : 1);
         }
@@ -128,14 +141,15 @@ namespace VectorRush
         }
         void OnDestroy() { Restore(); }
         [Serializable] public sealed class Report {
-            public string scope, startedUtc, finishedUtc, reference;
+            public string scope, startedUtc, finishedUtc, reference,unityVersion,buildGuid,gpu;
+            public int sceneRenderers,activeLights;
             public bool complete, matchedWithinTolerance;
             public List<int> anchorFrames = new List<int>(); public List<Frame> frames = new List<Frame>();
             public List<PoseComparison> comparisons = new List<PoseComparison>();
         }
         [Serializable] public sealed class Frame {
             public int index, width, height, lap; public string file, anchor, anchorFile;
-            public float raceTime, progress, speedKph, energy, fieldOfView; public bool boost, grounded;
+            public float raceTime, progress, speedKph, energy, fieldOfView; public bool boost, grounded,captureRequested;
             public Vector3 cameraPosition, playerVisualPosition; public Quaternion cameraRotation, playerVisualRotation;
             public RacerPose[] racers;
         }

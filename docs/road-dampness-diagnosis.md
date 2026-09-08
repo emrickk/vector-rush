@@ -19,3 +19,11 @@ The periodic mask compiled and ran in `night-v4-race-01` and `night-v4-motion-01
 ## Final bounded material finish
 
 The 0.42–0.78 range in `night-v4-motion-02` modestly reduces bright diagonal-band contrast while retaining damp-road and warm/cool pool readability. Parent and Astra keep this version for the playable milestone. The actual boundaries remain, so this is a contrast improvement only; no further road or scene rebuild is part of this iteration. The matched interior is at 35.380 seconds in both comparison captures.
+
+## Visual-environment experiments — 2026-09-08
+
+[Road diagnostic 002](environment-reviews/002-road-diagnostic.md) inspects twelve matched native material/light conditions. The original foreground polygon persists under a plain material, neutral normal scale, constant smoothness mask and no local lights. Those changes exclude simple texture wrapping or local-light overlap as necessary causes of that observed boundary; they do not isolate a unique alternative.
+
+[Road diagnostic 003](environment-reviews/003-road-normal-shadow-controls.md) adds continuous ribbon normals, deliberately incorrect global-up normals and a main-light shadow control. The first integrated gallery already reproduces the target weakly; none of the valid controls demonstrates a robust repair. Keep the original normals, tangents and directional shadows. The global-up highlight movement is not permission to flatten a banked road's shading.
+
+The next candidate deliberately redesigns the material as satin graphite. Its periodic mask is narrowed to 0.35–0.50 with a 0.90 multiplier (effective smoothness 0.315–0.45), retaining the existing color, fine relief, mesh attributes and lighting system. This aims for broad, restrained highlights instead of the unresolved damp treatment. It is **material redesign and artifact mitigation, not a proven root-cause fix**. Native candidate02 motion/stills remain the acceptance evidence; this source change alone is not a pass.
