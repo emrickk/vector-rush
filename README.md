@@ -10,13 +10,13 @@ The player now uses a 53 m/s cruise and 72 m/s boost preset, with responsive acc
 
 The final independent visual critique led to two changes: a compact nearest-rival name/distance cue beneath POS/LAP and softer cool-gallery lighting. The authored transit/service architecture, rebuilt galleries, deck construction, corrected Kestrel ship and throttle-driven exhaust remain in the current build.
 
-[Current 15-second preview](evidence/close-race-final/VectorRush-preview.mp4) · [Current 42.75-second full lap](evidence/close-race-final/VectorRush-full-lap.mp4) · [Download the macOS release](https://github.com/emrickk/vector-rush/releases/tag/close-race-2026-09-08). Previews show actual native rendering at 1080p, with silent automated steering at 24 simulation frames per second. The full lap spans two recorded start-line crossings.
+[Current 15-second preview](evidence/close-race-final/VectorRush-preview.mp4) · [Current 42.75-second full lap](evidence/close-race-final/VectorRush-full-lap.mp4) · [Current local macOS archive](Builds/VectorRush-macOS-close-race-2026-09-08.zip). Previews show actual native rendering at 1080p, with silent automated steering at 24 simulation frames per second. The full lap spans two recorded start-line crossings.
 
 [Final critique](docs/environment-reviews/009-close-race-critique.md) · [Focused correction verification](docs/environment-reviews/010-close-race-verification.md) · [Pacing comparison and preserved candidates](docs/pace-reviews/002-native-pace-comparison.md). Broader city expansion and subjective continuous-motion, human driving and audio assessment remain future work.
 
 ## Play
 
-Open **[Builds/Vector Rush.app](Builds/Vector%20Rush.app)**, unpack **[the current local archive](Builds/VectorRush-macOS-close-race-2026-09-08.zip)**, or download it from the [versioned GitHub release](https://github.com/emrickk/vector-rush/releases/tag/close-race-2026-09-08). Builds are distributed as release assets; source, editable assets and selected evidence are preserved in Git. Earlier environment/coastal archives are historical.
+Open **[Builds/Vector Rush.app](Builds/Vector%20Rush.app)** or unpack **[the current local archive](Builds/VectorRush-macOS-close-race-2026-09-08.zip)**. Source, editable assets and selected evidence are pushed to GitHub. The native build is ready locally; GitHub release publication was blocked by automatic approval review pending separate user authorization. Earlier environment/coastal archives are historical.
 
 | Action | Keyboard | Gamepad |
 |---|---|---|
