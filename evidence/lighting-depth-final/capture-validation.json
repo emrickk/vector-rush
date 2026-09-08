@@ -1,0 +1,38 @@
+{
+  "buildGuid": "5c49b92643bd4d41820ba81857fdf8c7",
+  "fullCircuitValidation": "../lighting-depth-candidate-01/capture-validation.json",
+  "totalOriginalPngsValidated": 1450,
+  "alternateAspectSets": [
+    {
+      "aspect": "16x10",
+      "complete": true,
+      "buildGuid": "5c49b92643bd4d41820ba81857fdf8c7",
+      "dimensions": [
+        1280,
+        800
+      ],
+      "anchors": 5,
+      "recordedPoseFrames": 360,
+      "pngCount": 5,
+      "crcAndDecompressionPassed": true
+    },
+    {
+      "aspect": "ultrawide",
+      "complete": true,
+      "buildGuid": "5c49b92643bd4d41820ba81857fdf8c7",
+      "dimensions": [
+        1920,
+        810
+      ],
+      "anchors": 5,
+      "recordedPoseFrames": 360,
+      "pngCount": 5,
+      "crcAndDecompressionPassed": true
+    }
+  ],
+  "parentInspected": [
+    "16x10/03-middle.png",
+    "ultrawide/05-reveal.png"
+  ],
+  "scope": "Five station-context anchors at each alternate aspect. Inspected warm-gallery and station reveal retain road/ship/HUD readability. Not alternate-aspect landmark-approach or continuous motion acceptance. Two prior no-frame attempts remain preserved."
+}

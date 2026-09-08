@@ -207,5 +207,9 @@
     "failed": 0,
     "file": "editmode-results.xml"
   },
-  "nativeChecks": "Alternate-aspect and separate real-time race checks pending display unlock."
+  "nativeChecks": "Complete: accepted native circuit, two alternate-aspect station sets, separate three-lap race and restart/countdown verification.",
+  "finalChecksUtc": "2026-09-08T20:48:00.451624+00:00",
+  "captureValidation": "capture-validation.json",
+  "performanceComparison": "performance-comparison.json",
+  "videoValidation": "video-validation.json"
 }

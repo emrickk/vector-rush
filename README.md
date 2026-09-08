@@ -37,12 +37,13 @@ Menus support the pointer. Pause includes Resume, Restart, camera shake and Quit
 
 ## Current validation
 
-- Build **5c49b92643bd4d41820ba81857fdf8c7** records a complete 1,440-frame native circuit at1920×1080. All PNG chunk-CRC/decompression checks pass. Small camera drift remains against the previous build; exact anchor comparisons fail and are preserved as such.
-- **42/42 existing Unity tests pass** on the final source. The193 source/resource/settings hashes and189 app-file hashes remain unchanged after tests.
+- Build **5c49b92643bd4d41820ba81857fdf8c7** records a complete 1,440-frame native circuit at 1920×1080. All PNG chunk-CRC/decompression checks pass. Small camera drift remains against the previous build; exact anchor comparisons fail and are preserved as such.
+- **42/42 existing Unity tests pass** on the final source. The 193 source/resource/settings hashes and 189 app-file hashes remain unchanged after tests.
 - Independent review016 compares eight native views. Additional parent inspections cover the cool-gallery approach/interior, crest and station reveal. This is sampled visual acceptance, not subjective continuous playback or human driving assessment.
-- The42.75-second full lap and24-second lighting excerpt pass complete video decoding. Both are silent, continuous native rendering with automated steering at24 simulation frames per second, separate from performance measurement.
-- Current local archive passes integrity checks: **56,664,092 bytes**,441 ZIP entries. [Delivery manifest](evidence/lighting-depth-final/build-manifest.json).
-- Alternate-aspect and separate real-time race/performance checks are pending display unlock. Prior landmark race measurements remain [historical evidence](evidence/landmarks-final/performance-comparison.json), not results for this build.
+- The 42.75-second full lap and 24-second lighting excerpt pass complete video decoding. Both are silent, continuous native rendering with automated steering at 24 simulation frames per second, separate from performance measurement.
+- Current local archive passes integrity checks: **56,664,092 bytes**, 441 ZIP entries. [Delivery manifest](evidence/lighting-depth-final/build-manifest.json).
+- Five station-context views each at **1280×800** and **1920×810** complete successfully on the same build; all 10 PNGs pass validation. The inspected warm-gallery and ultrawide reveal retain road, craft and HUD readability.
+- A separate real-time native race finishes **three laps in 128.32 seconds**, with **zero recoveries across all six racers**. Both restart launches and all three countdown-pause checks pass. The 60-second performance sample averages **8.35 ms**, with **P95 9.21 ms / P99 9.33 ms**, consistent with the prior accepted repeat. [Race/performance comparison](evidence/lighting-depth-final/performance-comparison.json).
 
 [Current evidence](evidence/lighting-depth-final/) · [Reviewed native circuit](evidence/lighting-depth-candidate-01/) · [Previous landmark milestone](evidence/landmarks-final/).
 

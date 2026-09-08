@@ -1,0 +1,6 @@
+{
+  "complete": false,
+  "recordedFrames": 0,
+  "reason": "Started while CUA still reported locked. Did not resume after user unlock reply and bringing app forward. Stopped only this process before fresh launch.",
+  "pid": 27903
+}

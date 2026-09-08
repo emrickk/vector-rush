@@ -1,0 +1,45 @@
+{
+  "crcAndDecompressionPassed": true,
+  "images": [
+    {
+      "file": "01-approach.png",
+      "dimensions": [
+        1280,
+        800
+      ],
+      "sha256": "a17d559fe8f195a677b6744d4de170b803e39996251363956284e20493c81127"
+    },
+    {
+      "file": "02-entry.png",
+      "dimensions": [
+        1280,
+        800
+      ],
+      "sha256": "b0e7f6cbf990de480d73c04497ee9894900ee47bda8324ab11e2b21fd732fe88"
+    },
+    {
+      "file": "03-middle.png",
+      "dimensions": [
+        1280,
+        800
+      ],
+      "sha256": "26be4d89fbea66523577b43b3562264152c624e154b2c58a40b1d2ff5f8559a6"
+    },
+    {
+      "file": "04-exit.png",
+      "dimensions": [
+        1280,
+        800
+      ],
+      "sha256": "3047140c73781478420d2baf0252cf65234782de29c0a37b3e7fbdaff37eec0c"
+    },
+    {
+      "file": "05-reveal.png",
+      "dimensions": [
+        1280,
+        800
+      ],
+      "sha256": "6104c071cdf8c7597a949d585eba93ba73f617f69ac60ce6b0eb9ad213ae908e"
+    }
+  ]
+}
