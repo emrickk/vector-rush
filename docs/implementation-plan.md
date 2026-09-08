@@ -57,7 +57,7 @@
 ## Evidence-driven corrections after final review
 - [x] Identify large within-quad normal differences and discontinuous banking numerically; implement continuous projected-curvature frames and12-column wide ribbons.
 - [x] Rebuild and inspect crest/descent, rerun full race and completed restart launches (run04).
-- [ ] Gate paused vehicle input and run the paused-recovery regression.
+- [x] Gate paused vehicle input and run the paused-recovery regression: 19/19 tests passed.
 - [ ] Verify corrected pointer mapping at1280×800 and1080p, including outside-click non-activation.
 
 ## Visual-first modeling and rendering milestones

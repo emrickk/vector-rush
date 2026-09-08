@@ -76,6 +76,15 @@ namespace VectorRush
 
         void Update()
         {
+            // Update still runs while paused; FixedUpdate does not. Never retain a
+            // recover press (or held drive controls) from a non-racing screen.
+            var director = RaceDirector.Instance;
+            if (!director || director.Phase != RacePhase.Racing)
+            {
+                steering = throttle = brake = leftBrake = rightBrake = 0f;
+                boostHeld = recoveryRequested = false;
+                return;
+            }
             if (!IsPlayer || AutopilotForTesting) return;
             steering = throttle = brake = leftBrake = rightBrake = 0f;
             boostHeld = false;
