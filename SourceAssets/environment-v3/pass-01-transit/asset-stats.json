@@ -1,0 +1,91 @@
+{
+  "Nocturne_TransitStation_A": {
+    "source_parts": 122,
+    "vertices": 6956,
+    "triangles": 13424,
+    "materials": [
+      "Charcoal",
+      "Concrete",
+      "Glass",
+      "WarmWindow",
+      "Metal"
+    ],
+    "source_min_xyz": [
+      -11.399999618530273,
+      -32.0,
+      0.0
+    ],
+    "source_max_xyz": [
+      11.600000381469727,
+      32.0,
+      22.350000381469727
+    ],
+    "unity_dimensions_xyz": [
+      23.0,
+      22.350000381469727,
+      64.0
+    ],
+    "nonmanifold_edges": 0,
+    "degenerate_triangles": 0,
+    "uv0": "Metric tiling: 4 metres per tile; overlapping by design",
+    "fbx_sha256": "20d3240d6a3d61d64098288f456b3e16c238375cebe06ab69a6b2c748b9785be"
+  },
+  "Nocturne_ServiceWorkshop_A": {
+    "source_parts": 27,
+    "vertices": 1540,
+    "triangles": 2972,
+    "materials": [
+      "Charcoal",
+      "Concrete",
+      "Metal",
+      "WarmWindow"
+    ],
+    "source_min_xyz": [
+      -4.0,
+      -9.0,
+      0.0
+    ],
+    "source_max_xyz": [
+      4.0,
+      9.0,
+      6.985000133514404
+    ],
+    "unity_dimensions_xyz": [
+      8.0,
+      6.985000133514404,
+      18.0
+    ],
+    "nonmanifold_edges": 0,
+    "degenerate_triangles": 0,
+    "uv0": "Metric tiling: 4 metres per tile; overlapping by design",
+    "fbx_sha256": "1e4a8c5ffebb17bf488c017bd812e8b3345aaf8f3cfbb3215481eb9f9cf1d20f"
+  },
+  "Nocturne_PlatformButtress_A": {
+    "source_parts": 6,
+    "vertices": 336,
+    "triangles": 648,
+    "materials": [
+      "Charcoal",
+      "Concrete"
+    ],
+    "source_min_xyz": [
+      -3.6971659660339355,
+      -4.0,
+      0.0
+    ],
+    "source_max_xyz": [
+      2.3499999046325684,
+      4.0,
+      11.477283477783203
+    ],
+    "unity_dimensions_xyz": [
+      6.047165870666504,
+      11.477283477783203,
+      8.0
+    ],
+    "nonmanifold_edges": 0,
+    "degenerate_triangles": 0,
+    "uv0": "Metric tiling: 4 metres per tile; overlapping by design",
+    "fbx_sha256": "401fb27a156a98b908a0bde9fcf1a5acbbadd8b312a2e5bfdd244cfa5b802030"
+  }
+}

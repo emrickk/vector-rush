@@ -64,6 +64,9 @@ namespace VectorRush
                 Ribbon("Drain channel",side*10.6f,side*10.85f,.03f,metal,false);
                 Ribbon("Shoulder",side*11f,side*12f,-.02f,ivory,true);
                 Wall(side);Ribbon("Barrier luminous cap",side*11.78f,side*11.91f,2.03f,cyan,false);
+                Ribbon("Maintenance ledge",side*12.1f,side*13.3f,-.12f,ivory,false);
+                Fascia(side*13.3f,-1.7f,-.12f,ivory);
+                Fascia(side*12.16f,-.1f,.40f,graphite);
             }
             for(int i=0;i<200;i++) {
                 var f=track.Evaluate(i/200f);
@@ -74,7 +77,7 @@ namespace VectorRush
                 }
                 if(i%5==0) Support(f);
             }
-            for(int i=0;i<7;i++) BoostStrip(.06f+i*.135f);
+            for(int i=0;i<7;i++) DirectionMarkings(.06f+i*.135f);
             Gate(0,"NOCTURNE",true);
             Gate(.29f,"VECTOR  /  01",false);Gate(.56f,"MIDNIGHT  /  02",false);Gate(.8f,"FINAL SECTOR",false);
             for(int i=0;i<7;i++) {float t=.35f+i*.009f;var f=track.Evaluate(t);
@@ -124,6 +127,21 @@ namespace VectorRush
             }
             MeshObject("Safety barrier",vertices,uv,tris.ToArray(),ivory,true);
         }
+        void Fascia(float lateral,float bottom,float top,Material material)
+        {
+            // Continuous deck construction follows the same sampled bank as the race surface.
+            // This stays outside the existing safety collider; no new driving boundary is implied.
+            const int n=960;var vertices=new Vector3[(n+1)*2];var uv=new Vector2[vertices.Length];var triangles=new int[n*6];
+            for(int i=0;i<=n;i++){
+                var f=track.Evaluate(i/(float)n);vertices[i*2]=f.Position+f.Right*lateral+f.Up*bottom;
+                vertices[i*2+1]=f.Position+f.Right*lateral+f.Up*top;
+                uv[i*2]=new Vector2(i*.2f,0);uv[i*2+1]=new Vector2(i*.2f,1);
+                if(i==n)continue;int a=i*2,k=i*6;
+                if(lateral>0){triangles[k]=a;triangles[k+1]=a+1;triangles[k+2]=a+2;triangles[k+3]=a+1;triangles[k+4]=a+3;triangles[k+5]=a+2;}
+                else {triangles[k]=a;triangles[k+1]=a+2;triangles[k+2]=a+1;triangles[k+3]=a+1;triangles[k+4]=a+2;triangles[k+5]=a+3;}
+            }
+            MeshObject("Deck edge / continuous fascia",vertices,uv,triangles,material,false);
+        }
         void MeshObject(string name,Vector3[] vertices,Vector2[] uv,int[] triangles,Material mat,bool collider)
         {
             var mesh=new Mesh{name=name};mesh.vertices=vertices;mesh.uv=uv;mesh.triangles=triangles;mesh.RecalculateNormals();mesh.RecalculateTangents();mesh.RecalculateBounds();ownedMeshes.Add(mesh);
@@ -143,10 +161,15 @@ namespace VectorRush
             Box("Deck bearing",f.Position-Vector3.up*3,new Vector3(23,1.8f,4),q,metal);
             Box("Pier foot",new Vector3(f.Position.x,1,f.Position.z),new Vector3(11,2,12),q,graphite);
         }
-        void BoostStrip(float t)
+        void DirectionMarkings(float t)
         {
-            for(int j=0;j<5;j++){var f=track.Evaluate(t+j*.0018f);var q=Quaternion.LookRotation(f.Forward,f.Up);
-                for(int s=-1;s<=1;s+=2)Box("Boost chevron",f.Position+f.Right*s*2+f.Up*.045f,new Vector3(4.3f,.04f,.4f),q*Quaternion.Euler(0,s*-25,0),cyan);}
+            // Small non-emissive arrows at the shoulders communicate direction without implying a boost pad.
+            for(int side=-1;side<=1;side+=2){var f=track.Evaluate(t);var q=Quaternion.LookRotation(f.Forward,f.Up);
+                var p=f.Position+f.Right*side*8.3f+f.Up*.042f;
+                Box("Painted route arrow shaft",p,new Vector3(.16f,.015f,2.5f),q,ivory);
+                for(int wing=-1;wing<=1;wing+=2)
+                    Box("Painted route arrow head",p+f.Forward*1.15f+f.Right*wing*.31f,new Vector3(.15f,.015f,1f),q*Quaternion.Euler(0,-wing*38,0),ivory);
+            }
         }
         void Gate(float t,string title,bool start)
         {

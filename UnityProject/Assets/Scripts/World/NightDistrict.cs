@@ -13,7 +13,12 @@ namespace VectorRush
         readonly List<Vector3> accepted=new List<Vector3>();
         public IReadOnlyList<Vector3> DistrictCenters => accepted;
         Material concrete,steel,trim,asphalt,warm,cyan,windows;
+        Material civicConcrete,civicSteel,civicGlass,civicWarm,farConcrete,farGlass;
         readonly Material[] facades=new Material[4];
+        readonly List<Plot> benchmarkPlots=new List<Plot>();
+        Vector3 benchmarkOrigin;
+        Quaternion benchmarkRotation;
+        float benchmarkClearance;
         Vector3[] samples;
         float clearance;
 
@@ -46,13 +51,17 @@ namespace VectorRush
             Flush("Night city ground");
             var a=Resources.Load<GameObject>("Art/Environment/Solstice_TerraceTower_A");
             var b=Resources.Load<GameObject>("Art/Environment/Solstice_SplitTower_B");
+            BuildTransitBenchmark(world,track,a,b);
             float[] anchors={.13f,.40f,.67f,.88f};
             for(int i=0;i<anchors.Length;i++)
             {
+                // The final-sector cluster is now composed from the race camera.
+                // Its old 154 m plinth is removed rather than buried under the new station.
+                if(i==3)continue;
                 var frame=track.Evaluate(anchors[i]);Vector3 outward=Vector3.ProjectOnPlane(frame.Right,Vector3.up).normalized;
                 Quaternion q=Quaternion.LookRotation(-outward,Vector3.up);Vector3 center=frame.Position+outward*135f;center.y=0;
-                for(int n=0;n<12&&!Clear(center,q,new Vector2(82,77));n++)center+=outward*15f;
-                if(!Clear(center,q,new Vector2(82,77)))continue;
+                for(int n=0;n<12&&(!Clear(center,q,new Vector2(82,77))||OverlapsBenchmark(center,q,new Vector2(82,77)));n++)center+=outward*15f;
+                if(!Clear(center,q,new Vector2(82,77))||OverlapsBenchmark(center,q,new Vector2(82,77)))continue;
                 accepted.Add(center);
                 District(center,q,i,a,b);
                 Flush("Night district "+(i+1));
@@ -60,9 +69,10 @@ namespace VectorRush
             // Low industrial service blocks fill selected middle-distance gaps.
             for(int i=0;i<6;i++)
             {
+                if(i==5)continue;
                 var frame=track.Evaluate(.04f+i*.16f);Vector3 direction=Vector3.ProjectOnPlane(frame.Right,Vector3.up).normalized;
                 Vector3 center=frame.Position-direction*115f;center.y=0;Quaternion q=Quaternion.LookRotation(direction,Vector3.up);
-                if(!Clear(center,q,new Vector2(43,32)))continue;
+                if(!Clear(center,q,new Vector2(43,32))||OverlapsBenchmark(center,q,new Vector2(43,32)))continue;
                 bool occupied=false;foreach(var other in accepted)if((center-other).sqrMagnitude<120*120)occupied=true;
                 if(occupied)continue;
                 Industrial(center,q,i);Flush("Inner service works "+i);
@@ -89,7 +99,7 @@ namespace VectorRush
                     if(i%9==0)height+=45;
                     bool nearDistrict=false;
                     foreach(var other in accepted)if((center-other).sqrMagnitude<105f*105f)nearDistrict=true;
-                    if(nearDistrict||!Clear(center,q,new Vector2(w*.7f+5,d*.7f+5)))continue;
+                    if(nearDistrict||InBenchmarkArea(center)||OverlapsBenchmark(center,q,new Vector2(w*.7f+5,d*.7f+5))||!Clear(center,q,new Vector2(w*.7f+5,d*.7f+5)))continue;
                     SkylineTower(center,q,w,d,height,(i+ring)%5);
                 }
                 Flush("Layered skyline / depth "+ring);
@@ -101,7 +111,7 @@ namespace VectorRush
                 Vector3 c=new Vector3(Mathf.Cos(a)*r,0,Mathf.Sin(a)*r);
                 Quaternion q=Quaternion.Euler(0,-a*Mathf.Rad2Deg+90,0);
                 bool nearDistrict=false;foreach(var other in accepted)if((c-other).sqrMagnitude<120*120)nearDistrict=true;
-                if(nearDistrict||!Clear(c,q,new Vector2(32,30)))continue;
+                if(nearDistrict||InBenchmarkArea(c)||OverlapsBenchmark(c,q,new Vector2(32,30))||!Clear(c,q,new Vector2(32,30)))continue;
                 SkylineTower(c,q,43,38,25+(i%5)*10,i%5);
                 Box(c,q,new Vector3(0,1,0),new Vector3(62,3,58),concrete);
                 Box(c,q,new Vector3(0,4.8f,27),new Vector3(54,5,.25f),windows);
@@ -113,7 +123,7 @@ namespace VectorRush
             for(int x=-2;x<=2;x++)for(int z=-2;z<=2;z++)
             {
                 Vector3 c=new Vector3(x*70+12,0,z*70+14);Quaternion q=Quaternion.Euler(0,(x+z)%2*90,0);
-                if(!Clear(c,q,new Vector2(25,26)))continue;
+                if(InBenchmarkArea(c)||OverlapsBenchmark(c,q,new Vector2(25,26))||!Clear(c,q,new Vector2(25,26)))continue;
                 SkylineTower(c,q,36,40,19+Mathf.Abs(x*11+z*7)%36,Mathf.Abs(x+z)%5);
             }
             Flush("Inner city / low urban fabric");
@@ -145,6 +155,159 @@ namespace VectorRush
             }
             Flush("Service avenues / remainder");
         }
+
+        void BuildTransitBenchmark(WorldBuilder world,TrackPath track,GameObject terrace,GameObject split)
+        {
+            civicConcrete=world.MakeMaterial("Transit / blue gray concrete",new Color(.38f,.46f,.51f),.36f,.05f);
+            civicSteel=world.MakeMaterial("Transit / charcoal structure",new Color(.055f,.075f,.091f),.32f,.18f);
+            civicGlass=world.MakeMaterial("Transit / recessed dark glass",new Color(.027f,.068f,.089f),.66f,.25f);
+            civicWarm=world.MakeMaterial("Transit / occupied recessed rooms",new Color(.55f,.31f,.14f),.27f,0,new Color(.8f,.38f,.13f));
+            farConcrete=world.MakeMaterial("Transit skyline / quiet blue mass",new Color(.105f,.15f,.19f),.28f,.03f);
+            farGlass=world.MakeMaterial("Transit skyline / grouped dim rooms",new Color(.10f,.15f,.18f),.3f,0,new Color(.105f,.13f,.14f));
+            var frame=track.Evaluate(.918f);var forward=Vector3.ProjectOnPlane(frame.Forward,Vector3.up).normalized;
+            benchmarkRotation=Quaternion.LookRotation(forward,Vector3.up);benchmarkOrigin=frame.Position;benchmarkOrigin.y=0;
+            // Add a full sample-step margin to the 18 m camera envelope, so the
+            // coarse runtime sampling cannot accept a bend between sample points.
+            benchmarkClearance=18f+track.Length/samples.Length;
+            var station=Resources.Load<GameObject>("Art/Environment/Nocturne_TransitStation_A");
+            var workshop=Resources.Load<GameObject>("Art/Environment/Nocturne_ServiceWorkshop_A");
+            var buttress=Resources.Load<GameObject>("Art/Environment/Nocturne_PlatformButtress_A");
+            Vector3 stationPosition=frame.Position+benchmarkRotation*Vector3.right*33f-Vector3.up*7f;
+            if(station&&Reserve(stationPosition,benchmarkRotation,new Vector2(11.6f,32)))
+            {
+                PlaceAuthored(station,"Benchmark / exit transit station",stationPosition,benchmarkRotation,1);
+                // Two unscaled structural modules meet the platform foundation;
+                // their lower pedestals continue to the visible service level.
+                foreach(float along in new[]{-21f,20f})
+                {
+                    Vector3 p=stationPosition+benchmarkRotation*new Vector3(3,-11.135f,along);
+                    PlaceAuthored(buttress,"Benchmark / grounded station buttress",p,benchmarkRotation,1);
+                    Box(p,benchmarkRotation,new Vector3(0,-p.y*.5f,0),new Vector3(4.4f,p.y,7.2f),civicConcrete);
+                    Box(p,benchmarkRotation,new Vector3(0,-p.y+.30f,0),new Vector3(5.8f,.6f,8.4f),civicSteel);
+                }
+                Vector3 service=stationPosition;service.y=.16f;
+                Box(service,benchmarkRotation,Vector3.zero,new Vector3(22.8f,.3f,63.5f),civicSteel);
+                PlaceAuthored(workshop,"Benchmark / ground service rooms",service+benchmarkRotation*new Vector3(3,0,0),benchmarkRotation,1);
+                // A broad service apron and limited markings make the station
+                // visibly belong to the ground, with no additional lamp cadence.
+                for(int bay=0;bay<3;bay++)Box(service,benchmarkRotation,new Vector3(-6.3f,.18f,-8+bay*8),new Vector3(3.2f,.04f,.16f),trim);
+            }
+            var other=track.Evaluate(.948f);var oq=Quaternion.LookRotation(Vector3.ProjectOnPlane(other.Forward,Vector3.up).normalized,Vector3.up);
+            Vector3 opposite=other.Position-oq*Vector3.right*29f-Vector3.up*3f;
+            var facing=oq*Quaternion.Euler(0,180,0);
+            if(workshop&&Reserve(opposite,facing,new Vector2(4,9)))
+            {
+                PlaceAuthored(workshop,"Benchmark / opposite low service room",opposite,facing,1);
+                // The elevated service room has a real structural base instead
+                // of floating at the road datum.
+                for(int side=-1;side<=1;side+=2)
+                    Box(opposite,facing,new Vector3(0,-opposite.y*.5f,side*6),new Vector3(3.2f,opposite.y,2.0f),civicConcrete);
+                Box(opposite,facing,new Vector3(0,-.35f,0),new Vector3(8,.7f,18),civicSteel);
+            }
+            // Reuse the authored terrace/split families as distinct middle
+            // masses. The left side stays lower; bases and open courtyards show.
+            BenchmarkTower(track,terrace,.913f,-86f,.75f,"low left terrace");
+            BenchmarkTower(track,terrace,.926f,91f,1.0f,"station rear terrace");
+            BenchmarkTower(track,split,.970f,122f,1.18f,"split landmark");
+            // Close but intermittent structural ledges give the approach real
+            // parallax. Their complete bounds get the same all-course check.
+            foreach(float progress in new[]{.792f,.826f,.848f})
+            {
+                var f=track.Evaluate(progress);var q=Quaternion.LookRotation(Vector3.ProjectOnPlane(f.Forward,Vector3.up).normalized,Vector3.up);
+                Vector3 c=f.Position+q*Vector3.right*26f-Vector3.up*13.2f;
+                if(!buttress||!Reserve(c,q,new Vector2(3.2f,4.3f)))continue;
+                PlaceAuthored(buttress,"Benchmark / approach structural ledge",c,q,1);
+                Box(c,q,new Vector3(0,-c.y*.5f,0),new Vector3(3.6f,c.y,5.4f),civicConcrete);
+            }
+            // Quiet grouped silhouettes leave the vanishing-point corridor open.
+            BenchmarkSkyline(new Vector3(172,0,305),28,33,126);
+            BenchmarkSkyline(new Vector3(211,0,337),25,29,151);
+            BenchmarkSkyline(new Vector3(-226,0,467),34,31,113);
+            Flush("Benchmark / composed transit district");
+        }
+
+        void BenchmarkTower(TrackPath track,GameObject source,float progress,float offset,float scale,string name)
+        {
+            if(!source)return;
+            var f=track.Evaluate(progress);var q=Quaternion.LookRotation(Vector3.ProjectOnPlane(f.Forward,Vector3.up).normalized,Vector3.up);
+            Vector3 c=f.Position+q*Vector3.right*offset;c.y=3.9f;
+            // Reorient the authored entrance toward the service courtyard.
+            var orientation=q*Quaternion.Euler(0,offset>0?-90:90,0);
+            var half=new Vector2(19*scale,21*scale);
+            if(!Reserve(c,orientation,half))return;
+            PlaceAuthored(source,"Benchmark / "+name,c,orientation,scale);
+            Box(c,orientation,new Vector3(0,-2.1f,0),new Vector3(half.x*2,4.2f,half.y*2),civicSteel);
+            Box(c,orientation,new Vector3(0,.03f,0),new Vector3(half.x*2,.16f,half.y*2),civicConcrete);
+            // A separate street-facing service room is supported by the podium.
+            Box(c,orientation,new Vector3(0,-1.0f,half.y+.03f),new Vector3(half.x*1.3f,1.4f,.12f),civicGlass);
+        }
+
+        void BenchmarkSkyline(Vector3 local,float w,float d,float height)
+        {
+            Vector3 c=benchmarkOrigin+benchmarkRotation*local;c.y=0;
+            if(!Reserve(c,benchmarkRotation,new Vector2(w*.6f,d*.6f)))return;
+            Box(c,benchmarkRotation,new Vector3(0,3,0),new Vector3(w*1.15f,6,d*1.15f),farConcrete);
+            Box(c,benchmarkRotation,new Vector3(0,height*.36f,0),new Vector3(w,height*.72f,d),farConcrete);
+            Box(c,benchmarkRotation,new Vector3(w*.12f,height*.84f,0),new Vector3(w*.68f,height*.24f,d*.74f),farConcrete);
+            Box(c,benchmarkRotation,new Vector3(w*.18f,height*.97f,0),new Vector3(w*.36f,height*.06f,d*.46f),civicSteel);
+            // A few large occupied groups have lower contrast than the route;
+            // gaps and height changes carry the distant identity.
+            for(int group=0;group<3;group++)for(int floor=0;floor<2;floor++)
+                Box(c,benchmarkRotation,new Vector3(-w*.13f,height*(.22f+group*.18f)+floor*3.3f,-d*.502f),new Vector3(w*.46f,1.15f,.12f),farGlass);
+        }
+
+        GameObject PlaceAuthored(GameObject source,string name,Vector3 p,Quaternion q,float scale)
+        {
+            if(!source)return null;
+            var go=Instantiate(source,transform);go.name=name;go.transform.SetPositionAndRotation(p,q);go.transform.localScale=Vector3.one*scale;
+            foreach(var renderer in go.GetComponentsInChildren<Renderer>())
+            {
+                var mats=renderer.sharedMaterials;
+                for(int i=0;i<mats.Length;i++)
+                {
+                    string material=mats[i]?mats[i].name:"Concrete";
+                    mats[i]=material.Contains("WarmWindow")?civicWarm:material.Contains("Glass")?civicGlass:
+                        material.Contains("Metal")?trim:material.Contains("Concrete")||material.Contains("Ivory")?civicConcrete:civicSteel;
+                }
+                renderer.sharedMaterials=mats;
+            }
+            return go;
+        }
+
+        bool Reserve(Vector3 c,Quaternion q,Vector2 half)
+        {
+            var inverse=Quaternion.Inverse(q);
+            foreach(var p in samples)
+            {
+                Vector3 d=inverse*(p-c);float x=Mathf.Max(0,Mathf.Abs(d.x)-half.x),z=Mathf.Max(0,Mathf.Abs(d.z)-half.y);
+                if(x*x+z*z<benchmarkClearance*benchmarkClearance)return false;
+            }
+            if(OverlapsBenchmark(c,q,half))return false;
+            benchmarkPlots.Add(new Plot{center=c,rotation=q,half=half});return true;
+        }
+        bool InBenchmarkArea(Vector3 c)
+        {
+            Vector3 local=Quaternion.Inverse(benchmarkRotation)*(c-benchmarkOrigin);
+            return local.z>-145&&local.z<350&&Mathf.Abs(local.x)<157;
+        }
+        bool OverlapsBenchmark(Vector3 c,Quaternion q,Vector2 half)
+        {
+            Vector3 a=q*Vector3.right,b=q*Vector3.forward;
+            foreach(var plot in benchmarkPlots)
+            {
+                Vector3 d=c-plot.center,u=plot.rotation*Vector3.right,v=plot.rotation*Vector3.forward;
+                bool separate=false;
+                foreach(var axis in new[]{a,b,u,v})
+                {
+                    float radius=half.x*Mathf.Abs(Vector3.Dot(a,axis))+half.y*Mathf.Abs(Vector3.Dot(b,axis))+
+                        plot.half.x*Mathf.Abs(Vector3.Dot(u,axis))+plot.half.y*Mathf.Abs(Vector3.Dot(v,axis))+4f;
+                    if(Mathf.Abs(Vector3.Dot(d,axis))>radius){separate=true;break;}
+                }
+                if(!separate)return true;
+            }
+            return false;
+        }
+        struct Plot{public Vector3 center;public Quaternion rotation;public Vector2 half;}
 
         void SkylineTower(Vector3 c,Quaternion q,float w,float d,float h,int style)
         {

@@ -1,0 +1,83 @@
+{
+  "Nocturne_TransitStation_A": {
+    "checks": {
+      "single_mesh": true,
+      "triangle_count_matches": true,
+      "bounds_match_within_0_1mm": true,
+      "manifold": true,
+      "no_degenerate_triangles": true,
+      "uv0_present": true,
+      "valid_tangents": true
+    },
+    "pass": true,
+    "triangles": 13424,
+    "nonmanifold_edges": 0,
+    "degenerate_triangles": 0,
+    "roundtrip_blender_bounds_min": [
+      -11.399999618530273,
+      -32.0,
+      -2.408383124929969e-06
+    ],
+    "roundtrip_blender_bounds_max": [
+      11.600000381469727,
+      32.0,
+      22.35000228881836
+    ],
+    "max_bounds_error_m": 2.408383124929969e-06,
+    "fbx_sha256": "31b506f0bae749e1e2785bc65607b0c7cd0550011cef244960bae97071a1b99e"
+  },
+  "Nocturne_ServiceWorkshop_A": {
+    "checks": {
+      "single_mesh": true,
+      "triangle_count_matches": true,
+      "bounds_match_within_0_1mm": true,
+      "manifold": true,
+      "no_degenerate_triangles": true,
+      "uv0_present": true,
+      "valid_tangents": true
+    },
+    "pass": true,
+    "triangles": 2972,
+    "nonmanifold_edges": 0,
+    "degenerate_triangles": 0,
+    "roundtrip_blender_bounds_min": [
+      -4.0,
+      -9.0,
+      -6.734412636433262e-07
+    ],
+    "roundtrip_blender_bounds_max": [
+      4.0,
+      9.0,
+      6.985000133514404
+    ],
+    "max_bounds_error_m": 6.734412636433262e-07,
+    "fbx_sha256": "90c3a0f99cfdffb3eebcbde8cf9670b58110f6bd9a2887409c5c83c82026e0c1"
+  },
+  "Nocturne_PlatformButtress_A": {
+    "checks": {
+      "single_mesh": true,
+      "triangle_count_matches": true,
+      "bounds_match_within_0_1mm": true,
+      "manifold": true,
+      "no_degenerate_triangles": true,
+      "uv0_present": true,
+      "valid_tangents": true
+    },
+    "pass": true,
+    "triangles": 648,
+    "nonmanifold_edges": 0,
+    "degenerate_triangles": 0,
+    "roundtrip_blender_bounds_min": [
+      -2.75,
+      -3.9999992847442627,
+      -2.642426579768653e-07
+    ],
+    "roundtrip_blender_bounds_max": [
+      2.3499999046325684,
+      4.000000953674316,
+      11.135000228881836
+    ],
+    "max_bounds_error_m": 9.5367431640625e-07,
+    "fbx_sha256": "8a62050fc6d03f381b6e8e5a56d95e09b5847dfe44823b3b2a5aa80bdd0914cf"
+  }
+}
