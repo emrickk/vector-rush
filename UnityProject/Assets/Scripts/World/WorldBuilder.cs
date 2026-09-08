@@ -32,7 +32,7 @@ namespace VectorRush
         public void Build(TrackPath path)
         {
             track=path;track.Ensure();
-            road=MakeMaterial("Satin graphite running deck",new Color(.13f,.145f,.165f),.9f,0f,templateName:"RoadSurface");
+            road=MakeMaterial("Satin graphite running deck",new Color(.13f,.145f,.165f),.9f,0f,templateName:"RoadSurfaceReflections");
             const int textureSize=512;
             roadGrain=new Texture2D(textureSize,textureSize,TextureFormat.RGBA32,true){name="Deck aggregate",wrapMode=TextureWrapMode.Repeat,filterMode=FilterMode.Trilinear,anisoLevel=8};
             roadNormals=new Texture2D(textureSize,textureSize,TextureFormat.RGBA32,true,true){name="Deck fine relief",wrapMode=TextureWrapMode.Repeat,filterMode=FilterMode.Trilinear,anisoLevel=8};

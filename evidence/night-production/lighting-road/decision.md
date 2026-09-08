@@ -30,3 +30,13 @@ Baseline complete and published. Candidate A implementation is ready for its nat
 ## A native result
 
 Build `9a03e9b1767f4b89abd9c3bf938f7898` completes 1,440 native frames. All PNG chunk CRC and stream-decompression checks pass; all 195 tracked source and 189 app hashes remain unchanged after capture. The five new natural crossings are149/211/283/398/473, with controls606/642/1004. Exact-pose comparisons all fail: usual camera offsets are0.1–0.2m, with1.8–1.9m at the shifted portal/thermal frames. Per-frame values are retained rather than called matched. Parent sees broader exterior surface light and preserved warm controls, with a still-shallow city and modest road response. Independent A review is underway; proceed with the planned single reflection-state comparison, preserving A as its control.
+
+## Candidate B — retained road reflection state
+
+B retains A's lighting, fog/sky, geometry, normals, generated road maps, smoothness, global probe configuration and gameplay. The running deck selects `RoadSurfaceReflections`, a serialized Resources material created in Editor setup from the unchanged control, with `_EnvironmentReflections=1` and `_ENVIRONMENTREFLECTIONS_OFF` removed. Copying the control properties preserves normal/metallic/emission keywords and direct specular; the native build must show the intended response. No local probe, blending, box projection, increased gloss or additional rendering technique is introduced in this initial B comparison.
+
+## B native result and next diagnosis
+
+Build `de942ca116044e6eb2141c36b547d8a3` completes1,440 frames with all PNG CRC/decompression checks and197-source/189-app hash checks passing. Selected indices are149/211/283/398/473/607/642/1004; exact-pose tolerance fails and remains explicit. Parent inspection of149/283 finds a darker road with no useful broad reflected-source shape. B is retained as a controlled comparison, not accepted. Independent B review follows.
+
+The weak skyline separation warrants a separate fog-color readback before further brightness tuning. Local URP source consumes `unity_FogColor` directly; its upload/conversion is in native engine code. A's assigned fog RGB could be gamma-converted, but this is a hypothesis until actual native readback. The next diagnostic logs active color space, assigned fog, its linear conversion and resolved shader fog globals after rendering. A zero built-in global readback is inconclusive; it cannot establish black fog. A supported color-space correction, if verified, must preserve density, lights, sky and reflection state for the subsequent comparison.

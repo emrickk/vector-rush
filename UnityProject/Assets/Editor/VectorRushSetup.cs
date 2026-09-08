@@ -71,6 +71,7 @@ namespace VectorRush.Editor
             road.SetTexture("_BumpMap",Texture2D.normalTexture);road.SetFloat("_BumpScale",.25f);road.EnableKeyword("_NORMALMAP");
             road.SetTexture("_MetallicGlossMap",Texture2D.whiteTexture);road.EnableKeyword("_METALLICSPECGLOSSMAP");
             road.SetFloat("_Metallic",0);road.SetFloat("_Smoothness",.16f);road.SetColor("_EmissionColor",Color.black);road.EnableKeyword("_EMISSION");EditorUtility.SetDirty(road);
+            PrepareRoadReflectionMaterial(road);
             PrepareCoastalMaterial();
             PrepareCraftSurfaceMaterial();
             // The lit template retains only needed variants; these small shaders are used by name.
@@ -96,6 +97,17 @@ namespace VectorRush.Editor
             EditorSceneManager.SaveScene(scene,"Assets/Scenes/Solstice.unity");
             EditorBuildSettings.scenes=new[]{new EditorBuildSettingsScene("Assets/Scenes/Solstice.unity",true)};
             AssetDatabase.SaveAssets();AssetDatabase.Refresh();Debug.Log("VECTOR_SETUP_COMPLETE");
+        }
+        static void PrepareRoadReflectionMaterial(Material control)
+        {
+            const string path="Assets/Resources/RoadSurfaceReflections.mat";
+            var reflected=AssetDatabase.LoadAssetAtPath<Material>(path);
+            if(!reflected){reflected=new Material(control);AssetDatabase.CreateAsset(reflected,path);}
+            // Retain the exact mapped Lit variant in the native build; keep the original control intact.
+            reflected.CopyPropertiesFromMaterial(control);
+            reflected.SetFloat("_EnvironmentReflections",1);
+            reflected.DisableKeyword("_ENVIRONMENTREFLECTIONS_OFF");
+            EditorUtility.SetDirty(reflected);
         }
         static void PrepareCraftSurfaceMaterial()
         {
