@@ -49,3 +49,13 @@
 - [x] Final polish: team paint and grandstand roof improved, rebuilt and recaptured; road artifact diagnostics were inconclusive and are documented.
 - [ ] Verify menu/keyboard interaction and record a short native gameplay video.
 - [ ] Commit final evidence, critique, limitations and delivery documentation; push all completed steps.
+
+## Delivery input check
+- [x] Native keyboard Start, Resume, Pause and throttle verified at 1280×800; throttle taps reached21km/h.
+- [ ] Diagnose unregistered automated pointer clicks using opt-in native input event logging; verify activation or document a precise automation limitation.
+
+## Evidence-driven corrections after final review
+- [x] Identify large within-quad normal differences and discontinuous banking numerically; implement continuous projected-curvature frames and12-column wide ribbons.
+- [ ] Rebuild and inspect crest/descent, rerun full race and completed restart launches.
+- [ ] Gate paused vehicle input and run the paused-recovery regression.
+- [ ] Verify corrected pointer mapping at1280×800 and1080p, including outside-click non-activation.

@@ -74,11 +74,19 @@ namespace VectorRush
         void Ribbon(string name,float left,float right,float height,Material mat,bool collider)
         {
             if(left>right){float v=left;left=right;right=v;}
-            const int n=960;var vertices=new Vector3[(n+1)*2];var uv=new Vector2[vertices.Length];var tris=new int[n*6];
+            const int n=960;
+            int columns=right-left>5f?12:1, stride=columns+1;
+            var vertices=new Vector3[(n+1)*stride];var uv=new Vector2[vertices.Length];var tris=new int[n*columns*6];
             for(int i=0;i<=n;i++) {var f=track.Evaluate((float)i/n);
-                vertices[i*2]=f.Position+f.Right*left+f.Up*height;vertices[i*2+1]=f.Position+f.Right*right+f.Up*height;
-                uv[i*2]=new Vector2(0,i*.25f);uv[i*2+1]=new Vector2(1,i*.25f);
-                if(i<n){int k=i*6,a=i*2;tris[k]=a;tris[k+1]=a+2;tris[k+2]=a+1;tris[k+3]=a+1;tris[k+4]=a+2;tris[k+5]=a+3;}
+                for(int j=0;j<=columns;j++){
+                    float across=(float)j/columns;int index=i*stride+j;
+                    vertices[index]=f.Position+f.Right*Mathf.Lerp(left,right,across)+f.Up*height;
+                    uv[index]=new Vector2(across,i*.25f);
+                    if(i<n&&j<columns){int k=(i*columns+j)*6,a=index;
+                        tris[k]=a;tris[k+1]=a+stride;tris[k+2]=a+1;
+                        tris[k+3]=a+1;tris[k+4]=a+stride;tris[k+5]=a+stride+1;
+                    }
+                }
             }
             MeshObject(name,vertices,uv,tris,mat,collider);
         }

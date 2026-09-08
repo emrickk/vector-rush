@@ -56,11 +56,21 @@ namespace VectorRush
         {
             Ensure(); float d=Mathf.Repeat(normalized,1)*Length; int i=Segment(d);
             float a=Mathf.InverseLerp(distances[i],distances[i+1],d);
-            Vector3 p=Vector3.Lerp(points[i],points[i+1],a);
-            Vector3 f=(points[(i+2)%Samples]-points[(i+Samples-1)%Samples]).normalized;
-            Vector3 before=points[(i+Samples-5)%Samples],after=points[(i+5)%Samples];
-            float turn=Vector3.SignedAngle(p-before,after-p,Vector3.up);
+            float t=(i+a)/Samples;
+            Vector3 p=Spline(t), f=SplineTangent(t);
+            const float span=5f/Samples;
+            // Grade must not contribute to lateral banking. Evaluate the frame continuously.
+            Vector3 incoming=Vector3.ProjectOnPlane(p-Spline(t-span),Vector3.up).normalized;
+            Vector3 outgoing=Vector3.ProjectOnPlane(Spline(t+span)-p,Vector3.up).normalized;
+            float turn=Mathf.Atan2(Vector3.Dot(Vector3.Cross(incoming,outgoing),Vector3.up),Vector3.Dot(incoming,outgoing))*Mathf.Rad2Deg;
             return new TrackFrame(p,f,Mathf.Clamp(-turn*2.5f,-17,17));
+        }
+        Vector3 SplineTangent(float t)
+        {
+            float u=Mathf.Repeat(t,1f)*knots.Length; int j=Mathf.FloorToInt(u);u-=j;
+            Vector3 a=knots[(j+knots.Length-1)%knots.Length],b=knots[j%knots.Length],
+                c=knots[(j+1)%knots.Length],d=knots[(j+2)%knots.Length];
+            return ((-a+c)+2f*(2f*a-5f*b+4f*c-d)*u+3f*(-a+3f*b-3f*c+d)*u*u).normalized;
         }
         public float ClosestProgress(Vector3 position)
         {
