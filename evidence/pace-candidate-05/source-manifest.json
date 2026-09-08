@@ -1,0 +1,10 @@
+{
+  "parentCommit": "d630e559802305b8d05c5ee623ad39e49b95dc15",
+  "scope": "Actual player55/75 with tested pursuit and bounded guard-only lateral assistance retained.",
+  "files": {
+    "UnityProject/Assets/Scripts/Gameplay/HoverVehicle.cs": "e68d3de384f4eed9923f11cfa5b783be5ec345ad801f50f70a8c8cc1f9adf625",
+    "UnityProject/Assets/Scripts/VectorBootstrap.cs": "b7d454482356ffa2ee043ebc8e5254d31763ced28d83db19ab97dbd52b0ceecc",
+    "UnityProject/Assets/Scripts/PaceEvidence.cs": "7c9634b01ac7ebc37e0f70089b4f08083bb5dddd71faefc635ea18e6ea9004f5",
+    "UnityProject/Assets/Scripts/EnvironmentEvidence.cs": "5b3af59fb6903e762222c0d21676ed8b0b840340bf330bb081849176ba6f61eb"
+  }
+}

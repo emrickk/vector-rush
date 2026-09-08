@@ -196,3 +196,5 @@ Candidate02 (55/75) fails sustained closeness despite a close first lap. Next bo
 Candidate03 validates pursuit math but does not resolve wall-contact lock. Before another pace adjustment, address the demonstrated contact mechanism with bounded guard-only lateral acceleration toward the already-resolved safe target. Add inward-direction/player-exclusion/blocked-target regression coverage and verify native guard duty, race proximity and recoveries. No more cap-only tuning.
 
 Candidate04 closes sustained outer-wall contact, but player60/82 remains slightly faster than the improved rivals. Final bounded pace fit:55/75 with pursuit and guard assistance retained. Compare all three laps, gallery proximity and actual finish observations; then perform the single requested visual critique/improvement pass and wrap up.
+
+Candidate05 establishes frequent close racing, but nearest finish gap remains160m. Final small pace calibration: player53/72 with corrected controller unchanged. Run the same race, then proceed with the single requested visual critique/polish and final delivery; preserve measured limits rather than invent an overtaking/finish pass.

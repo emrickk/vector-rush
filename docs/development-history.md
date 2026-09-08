@@ -234,3 +234,7 @@ The next bounded physical correction is a rival-only lateral thruster during an 
 ## 2026-09-08 — Rail-lock mitigation verified, final pace fit pending
 
 Candidate04 adds bounded6m/s² lateral assistance only for rivals with active guard and a resolved inward target; all42 tests pass after two mirrored contact tests fail the previous zero-force response. Native outer-edge exposure falls from roughly20–40% to3–5%, with longest outer episodes≤2s and zero recoveries. This supports the contact-recovery correction. Player60/82 still averages164.2km/h versus the best rival160.4, and within60m proximity reaches38.3%, so sustained-pack acceptance remains pending. Retain the proven wall correction and test55/75 once more under the corrected controller rather than changing lane topology or weakening edge safety.
+
+## 2026-09-08 — Sustained proximity established; final finish-gap calibration
+
+Candidate05 uses player55/75 with pursuit and rail-recovery assistance retained. It completes125.567s with zero recoveries; nearest Euclidean proximity after5s is54.25% under40m and80.84% under80m. The nearest two rivals finish160.4/190.5m behind, so the intended finish-gap target remains unmet. Preserve this substantial proximity improvement and make a final small actual-player53/72 calibration, without additional AI or physics changes, before visual critique.

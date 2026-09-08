@@ -1,6 +1,6 @@
 # Pace review 002: native baseline and player-speed candidate
 
-2026-09-08. **Player speed reductions and speed-aware pursuit steering have not yet produced stable close racing.** The 60/82 m/s candidate improves proximity, but misses the proposed gates; slower 55/75 and subsequent pursuit steering each have closer early laps followed by separation. All six recovery counts remain zero in every run. Candidate 03 telemetry shows rivals requesting inward steering while their long box colliders remain almost flush with the barrier. This supports a physical wall-lock hypothesis rather than another blind speed reduction or a claim that pursuit steering closed the cause.
+2026-09-08. **The bounded lateral guard force greatly reduces the sustained outer-edge state, but stable close racing is not yet established.** Candidate 04 reduces rival time beyond eight meters lateral from 20–41% to 3–5%, with zero recoveries. At actual-player 60/82, however, rivals still trail and overall within-60 m time is 38.3%, below the proposed 50% gate. The physical wall-lock mitigation is supported by native evidence; balance acceptance remains open.
 
 ## Evidence and calculation
 
@@ -108,4 +108,26 @@ Median absolute slip in those outer-edge samples is only 0.18–0.37°. An appro
 
 The craft box collider is 5.2 × 1.2 × 7.2 m, with local center (0, 0.12, 0.1); the barrier's inner lateral face is at ±11.7 m. Projecting the oriented collider onto the local track-right axis gives mean barrier clearance of **0.064–0.104 m** during these guarded outer-edge samples. Between **82% and 94%** of that time has projected clearance below 0.15 m. This approximates the local barrier plane; it is not recorded collision/contact telemetry. Nevertheless, the geometry supports a long-box yaw lock: turning inward initially sweeps the stern outward into the wall, while forward thrust cannot move the hull inward until it turns.
 
-The bounded next physical hypothesis is a rival-only lateral guard force toward the final clearance-approved inward target, using normal rigidbody acceleration with a small cap and lateral damping. This could create space to rotate without teleporting, changing colliders, or removing the guard. It must honor blocked corrections and adjacent-craft clearance and be validated natively for actual edge escape, contacts, recoveries and later-lap proximity. That force has not been implemented or accepted by this review. No root-cause closure is claimed for candidate 03.
+The bounded next physical hypothesis was a rival-only lateral guard force toward the final clearance-approved inward target, using normal rigidbody acceleration with a small cap and lateral damping. This could create space to rotate without teleporting, changing colliders, or removing the guard. It must honor blocked corrections and adjacent-craft clearance and be validated natively for actual edge escape, contacts, recoveries and later-lap proximity. Candidate 03 does not include that force. No root-cause closure is claimed for candidate 03.
+
+## Candidate 04: physical edge assistance works; pace still needs alignment
+
+Source review of the implemented helper found no blocker to the bounded experiment. `RivalCorridorAcceleration` returns zero for the player, an inactive guard, or a target that is not meaningfully inward; it clamps `(targetLane − currentLane) × 3 − lateralSpeed × 2` to ±6 m/s². `DriveAI` applies it with normal rigidbody acceleration after the existing collision-clear target resolution. The damping term can oppose fast inward travel, so this is lateral proportional/damping assistance, not an unconditional inward force. Existing player controls, steering clamp, corridor braking and clearance decisions remain authoritative.
+
+Candidate 04 [native report](../../evidence/pace-candidate-04/pace-evidence.json) and [analysis](../../evidence/pace-candidate-04/analysis.json) are complete: build GUID `e095e1d456934daaafa2808f83afa405`, 1,208 samples, player 60/82, the same pursuit controller as candidate 03, finish **120.716 s**, all six recovery counts zero. The direct change from candidate 03 is the bounded rival guard force.
+
+| Rival | Active racing time with absolute lane >8 m: candidate 03 → 04 | Longest continuous guarded outer-edge episode in 04, s | Actual guard duty in 04 |
+| --- | ---: | ---: | ---: |
+| 1 | 27.5% → 5.0% | 2.00 | 41.8% |
+| 2 | 32.8% → 3.3% | 1.21 | 56.1% |
+| 3 | 20.0% → 4.0% | 0.83 | 65.6% |
+| 4 | 40.5% → 3.9% | 0.80 | 61.1% |
+| 5 | 37.2% → 3.4% | 0.79 | 44.0% |
+
+This is strong native support that the added lateral room mitigates the sustained wall state. It is not proof of zero contacts or universally solved driving: guard duty remains high, and the observation covers one deterministic native race.
+
+Post-launch within-30/40/60 m fractions are **20.6% / 25.6% / 38.3%**, with mean nearest gap **78.4 m**. Within-60 fractions by player lap are **76.1% / 23.5% / 18.8%**. Every observed close rival is behind the player; the fraction with an unfinished rival ahead within 60 m is **0%**. The cool gallery has a rival within 60 m for 100% of sampled duration, while the warm gallery reaches only 23.7%. This supports nearby metadata in the cool passage, not a claim that a rival is visible ahead in the chase camera.
+
+At finish, signed rival gaps are **−240.0 / −563.7 / −774.1 / −626.7 / −456.3 m**. No rival has finished first; there are no frozen-progress proximity artifacts. The nearest finish gap is 240.0 m, with no rivals within 200 m. All three proposed closeness gates still fail despite the physical improvement.
+
+The player averages 164.2 km/h after five seconds, versus 160.4 for the fastest rival and 156.6 for the next fastest. Increasing player speeds is not justified by these measurements. Retesting player 55/75 with the now-supported guard assistance is a bounded, evidence-based next balance experiment: the earlier setting produced roughly 158.2 km/h player mean, but its previous pack failed under the older prolonged wall state. That earlier failure cannot be assumed to recur or to be fixed without the new native run. Retain the physical assistance and verify sustained proximity, actual ranks and the same safety gates before wrapping the pace work.
