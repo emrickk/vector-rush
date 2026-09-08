@@ -212,7 +212,8 @@ namespace VectorRush
         void BuildLighting()
         {
             // Separate the distant city from the neutral foreground without lifting exposure or bloom.
-            RenderSettings.fog=true;RenderSettings.fogColor=new Color(.041f,.074f,.086f);RenderSettings.fogMode=FogMode.ExponentialSquared;RenderSettings.fogDensity=.0018f;
+            // RenderSettings converts its sRGB color on upload. Match the linear sky palette.
+            RenderSettings.fog=true;RenderSettings.fogColor=new Color(.041f,.074f,.086f).gamma;RenderSettings.fogMode=FogMode.ExponentialSquared;RenderSettings.fogDensity=.0018f;
             RenderSettings.ambientMode=AmbientMode.Custom;var ambient=new SphericalHarmonicsL2();ambient.AddAmbientLight(new Color(.14f,.16f,.18f));RenderSettings.ambientProbe=ambient;
             var moon=new GameObject("Midnight soft key");moon.transform.SetParent(transform);moon.transform.rotation=Quaternion.Euler(43,-28,0);
             var light=moon.AddComponent<Light>();light.type=LightType.Directional;light.color=new Color(.78f,.85f,.92f);light.intensity=.78f;light.shadows=LightShadows.Soft;light.shadowStrength=.4f;RenderSettings.sun=light;

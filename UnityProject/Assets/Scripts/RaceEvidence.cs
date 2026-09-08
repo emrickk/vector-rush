@@ -60,6 +60,10 @@ namespace VectorRush
             Time.timeScale=0;
             for(int i=0;i<5;i++)yield return null;
             yield return Capture("fog-01-enabled.png");
+            var assignedFog=RenderSettings.fogColor;var linearFog=assignedFog.linear;
+            var shaderFog=Shader.GetGlobalVector("unity_FogColor");var shaderParams=Shader.GetGlobalVector("unity_FogParams");
+            File.WriteAllText(Path.Combine(folder,"fog-state.txt"),FormattableString.Invariant(
+                $"Build {Application.buildGUID}\nColor space {QualitySettings.activeColorSpace}\nFog mode {RenderSettings.fogMode} density {RenderSettings.fogDensity:R}\nAssigned RGB {assignedFog.r:R} {assignedFog.g:R} {assignedFog.b:R}\nAssigned.linear RGB {linearFog.r:R} {linearFog.g:R} {linearFog.b:R}\nShader fog RGBA {shaderFog.x:R} {shaderFog.y:R} {shaderFog.z:R} {shaderFog.w:R}\nShader fog params {shaderParams.x:R} {shaderParams.y:R} {shaderParams.z:R} {shaderParams.w:R}\nScope: read after the rendered enabled-fog frame. Built-in shader globals may be unavailable to C#; zero or inconsistent readback is inconclusive, not proof of black GPU fog.\n"));
             RenderSettings.fog=false;
             for(int i=0;i<5;i++)yield return null;
             yield return Capture("fog-02-disabled.png");

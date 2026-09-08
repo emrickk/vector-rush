@@ -93,7 +93,7 @@ namespace VectorRush.Editor
             // Runtime scenery uses Exp2 atmosphere. Keep that native shader variant
             // by serializing the same fog mode into the bootstrap scene before build.
             RenderSettings.fog=true;RenderSettings.fogMode=FogMode.ExponentialSquared;
-            RenderSettings.fogColor=new Color(.041f,.074f,.086f);RenderSettings.fogDensity=.0018f;
+            RenderSettings.fogColor=new Color(.041f,.074f,.086f).gamma;RenderSettings.fogDensity=.0018f;
             EditorSceneManager.SaveScene(scene,"Assets/Scenes/Solstice.unity");
             EditorBuildSettings.scenes=new[]{new EditorBuildSettingsScene("Assets/Scenes/Solstice.unity",true)};
             AssetDatabase.SaveAssets();AssetDatabase.Refresh();Debug.Log("VECTOR_SETUP_COMPLETE");

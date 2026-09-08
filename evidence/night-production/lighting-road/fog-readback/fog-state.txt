@@ -1,0 +1,8 @@
+Build 1f13c130ce6f4d9895edf31998701007
+Color space Linear
+Fog mode ExponentialSquared density 0.0018
+Assigned RGB 0.041 0.074 0.086
+Assigned.linear RGB 0.00317427842 0.00645073876 0.007985829
+Shader fog RGBA 0.00317427842 0.00645073876 0.007985829 1
+Shader fog params 0.00216202019 0.002596851 0 0
+Scope: read after the rendered enabled-fog frame. Built-in shader globals may be unavailable to C#; zero or inconsistent readback is inconclusive, not proof of black GPU fog.

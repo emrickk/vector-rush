@@ -322,3 +322,9 @@ A neutral ambient/key lift, restrained teal fog/sky and modest cool-road-pool in
 ### Controlled road-reflection candidate B preserved
 
 Added an Editor-created, serialized Resources road template retaining mapped Lit keywords, with environment reflection sampling enabled while the original reflection-off control remains unchanged. B selects that template and preserves A's light/sky/fog, geometry, generated maps, smoothness, probe configuration and race state. Native GUID `de942ca116044e6eb2141c36b547d8a3` completes1,440 verified PNGs;197source/189app hashes are unchanged. The sampled road darkens without useful broad reflection shape; B is not accepted. Preserve this result and its comparison metadata before diagnosing the actual fog color upload and, if warranted, a bounded road-probe correction. No new performance or watched-motion claim is made.
+
+### Production atmosphere correction C preserved
+
+Independent review021 rejects B because broad road shading darkens without useful reflection benefit. A remains a better road-readability control. The diagnostic native build verifies the fog upload was gamma-converting intended linear values from `.041/.074/.086` to `.003174/.006451/.007986`. C assigns the intended color through `.gamma` in runtime and serialized scene setup; native readback now confirms `.041/.074/.086` with unchanged density. No road, sky, light, gameplay or camera contribution changes in this comparison.
+
+C GUID `1287761a66a64ff9bb7a952eb5519b0a` completes1,440 validated PNGs with197 source and189 app hashes unchanged. Eight natural crossings and explicit failed exact-pose checks are preserved. Parent-inspected open views show layered city haze and retained thermal highlights; the road still needs correction. Independent C review is pending. Next test is the documented two-local-probe fallback with C lighting and roughness fixed; no performance or watched-motion acceptance is claimed here.
