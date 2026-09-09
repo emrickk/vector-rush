@@ -1,7 +1,7 @@
 {
-  "status": "Source-computed placement, not native acceptance. Projection is a loose bounding rectangle with no occlusion.",
+  "status": "Opening02 correction source-computed placement, not native acceptance. Projection is a loose bounding rectangle with no occlusion.",
   "source_sha256": {
-    "UnityProject/Assets/Scripts/World/NightDistrict.cs": "c36790811bf8871123bb5147e177b77725c5067ca6bcc383e3c3341f8454cfac",
+    "UnityProject/Assets/Scripts/World/NightDistrict.cs": "d370816457b6fc24f717abe2f4db373e2d0e4015b68a53176060634285d77533",
     "UnityProject/Assets/Scripts/World/TrackPath.cs": "7c338b66f00d5eddd65da2416a702ef428361ede15c7df0aa5ef1c3fe3a1cf71",
     "evidence/nocturne-v2/ssr-02/off/capture-validation.json": "673904e763b3ecc3b9ab541e905e5ebe31abfe6b653cd2702d7db85a6c5d54d7"
   },
@@ -13,6 +13,46 @@
   ],
   "groups": [
     {
+      "reservation_audit": {
+        "method": "Conservative world-AABB screening of all emitted pieces including lamp boxes against possible inner/middle/district/industrial sites and landmark/transit envelopes; exact accepted runtime OBB reservations still required. Far skyline excluded by radius separation.",
+        "obstacles_screened": 59,
+        "conflicts": []
+      },
+      "service_floor_m": 12.75,
+      "room_roof_m": 21.25,
+      "lamps": [
+        {
+          "position_xyz": [
+            193.98644171528196,
+            19.73,
+            -59.27450150653964
+          ],
+          "target_xyz": [
+            202.99523671035286,
+            15.55,
+            -56.149743478022025
+          ],
+          "intensity": 240,
+          "range": 27,
+          "cone": 108
+        },
+        {
+          "position_xyz": [
+            210.98174949289006,
+            14.9,
+            -60.9721509239322
+          ],
+          "target_xyz": [
+            210.9862347541236,
+            0.6,
+            -59.372157210684655
+          ],
+          "intensity": 430,
+          "range": 25,
+          "cone": 82
+        }
+      ],
+      "audited_housing_lens_boxes": 4,
       "support_progress": 0.2,
       "frontage_xyz": [
         172,
@@ -32,36 +72,36 @@
       "length_m": 90.62363577147745,
       "bounds_min_max_xyz": [
         [
-          171.98343256631873,
+          171.9901884910517,
           0.0,
-          -65.07914303480639
+          -61.58027810238576
         ],
         [
           263.72579832855104,
-          18.175,
-          -47.209130768153884
+          21.25,
+          -47.70800748823537
         ]
       ],
-      "pieces": 19,
+      "pieces": 49,
       "added_lights": 2,
-      "minimum_below_protected_deck_m": 22.90915452317472,
-      "limiting_course_progress": 0.18666666666666668,
+      "minimum_below_protected_deck_m": 22.47483543173215,
+      "limiting_course_progress": 0.1875,
       "projections": [
         {
           "progress": 0.15,
           "room_only_unoccluded_screen_bounds_px": [
             0,
-            668.9575432028818,
-            239.4018588238241,
-            895.7195492555188
+            578.4253990762877,
+            240.79946648711189,
+            713.7529284270179
           ],
           "approx_unoccluded_screen_bounds_px": [
             0,
-            648.4977892102866,
-            740.376239038277,
-            919.048453815722
+            578.4253990762877,
+            738.4570792257448,
+            886.9202964326344
           ],
-          "bounding_rectangle_frame_percent": 9.66
+          "bounding_rectangle_frame_percent": 10.99
         },
         {
           "progress": 0.22,
@@ -90,6 +130,46 @@
       ]
     },
     {
+      "reservation_audit": {
+        "method": "Conservative world-AABB screening of all emitted pieces including lamp boxes against possible inner/middle/district/industrial sites and landmark/transit envelopes; exact accepted runtime OBB reservations still required. Far skyline excluded by radius separation.",
+        "obstacles_screened": 59,
+        "conflicts": []
+      },
+      "service_floor_m": 22.0,
+      "room_roof_m": 30.5,
+      "lamps": [
+        {
+          "position_xyz": [
+            186.55362558912648,
+            28.98,
+            22.04812013987204
+          ],
+          "target_xyz": [
+            187.69002650166988,
+            24.8,
+            31.51549004740024
+          ],
+          "intensity": 240,
+          "range": 27,
+          "cone": 108
+        },
+        {
+          "position_xyz": [
+            201.97739579382647,
+            20.5,
+            55.98099617721318
+          ],
+          "target_xyz": [
+            199.80345566381112,
+            1.25,
+            59.60956122570119
+          ],
+          "intensity": 750,
+          "range": 34,
+          "cone": 80
+        }
+      ],
+      "audited_housing_lens_boxes": 4,
       "support_progress": 0.275,
       "frontage_xyz": [
         152,
@@ -109,52 +189,52 @@
       "length_m": 108.52506518788465,
       "bounds_min_max_xyz": [
         [
-          146.70321063400007,
+          148.8578368167797,
           0.0,
-          -40.42325504052001
+          -39.361690802338416
         ],
         [
-          205.10922263890598,
-          31.360784313725492,
-          62.208411435357384
+          203.12013260791173,
+          30.5,
+          61.645860265096296
         ]
       ],
-      "pieces": 22,
+      "pieces": 52,
       "added_lights": 2,
-      "minimum_below_protected_deck_m": 25.937502054234045,
-      "limiting_course_progress": 0.25833333333333336,
+      "minimum_below_protected_deck_m": 18.76165344907706,
+      "limiting_course_progress": 0.26666666666666666,
       "projections": [
         {
           "progress": 0.15,
           "room_only_unoccluded_screen_bounds_px": [
-            32.903942679013085,
-            474.5291617455043,
-            272.980382153561,
-            628.5703674964545
+            53.216871617022434,
+            423.6166065802848,
+            263.51614154379445,
+            488.2736138401185
           ],
           "approx_unoccluded_screen_bounds_px": [
             0,
-            430.3564490783997,
-            342.589898845786,
+            423.6166065802848,
+            332.19480197361645,
             720.061329587016
           ],
-          "bounding_rectangle_frame_percent": 4.79
+          "bounding_rectangle_frame_percent": 4.75
         },
         {
           "progress": 0.22,
           "room_only_unoccluded_screen_bounds_px": [
-            168.0906283143621,
-            677.6187654835951,
-            520.4290606737993,
-            998.0145001078081
+            192.63533933944245,
+            612.2778807446361,
+            520.0057728234649,
+            742.6487350667957
           ],
           "approx_unoccluded_screen_bounds_px": [
             0,
-            639.3951776358894,
-            679.7326318964275,
+            612.2778807446361,
+            673.2963337449573,
             1080
           ],
-          "bounding_rectangle_frame_percent": 14.44
+          "bounding_rectangle_frame_percent": 15.19
         },
         {
           "progress": 0.3,

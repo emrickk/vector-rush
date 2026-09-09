@@ -1,0 +1,10 @@
+{
+  "sourceBase": "eb453a7",
+  "editorExitCode": 1,
+  "buildPlayerReached": false,
+  "outputAppCreated": false,
+  "failure": "InvalidOperationException: Opening road required variant was not retained: _NORMALMAP",
+  "logSha256": "66ff3ebb90aed16f7c4f108ad1a77a7525a5d092c7305d121af6a010cc754ca0",
+  "excerpt": "InvalidOperationException: Opening road required variant was not retained: _NORMALMAP\n  at VectorRush.Editor.OpeningFinishPreviewSetup.BuildPreview () [0x0040a] in /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Editor/OpeningFinishPreviewSetup.cs:107 \nUnityEngine.StackTraceUtility:ExtractStringFromExceptionInternal(Object, String&, String&) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:50)\n\n(Filename: Assets/Editor/OpeningFinishPreviewSetup.cs Line: 107)\n\nexecuteMethod method VectorRush.Editor.OpeningFinishPreviewSetup.BuildPreview threw exception.\n[ExitDontLaunchBugReporter] Exiting without the bug reporter. Application will exit with return code 1\n[Package Manager] Server process was shutdown",
+  "scope": "Pre-build guard failure after prepared-control property copy; no native appearance result. Persistent authored seed maps plus explicit keyword restoration proposed."
+}

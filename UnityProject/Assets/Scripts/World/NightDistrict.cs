@@ -14,6 +14,7 @@ namespace VectorRush
         readonly List<Vector3> accepted=new List<Vector3>();
         public IReadOnlyList<Vector3> DistrictCenters => accepted;
         Material concrete,steel,trim,asphalt,warm,cyan,windows;
+        Material openingConcrete,openingDeck,openingSteel,openingOccupied;
         Material civicConcrete,civicSteel,civicGlass,civicWarm,civicWorkshopWarm,civicTowerWarm,farConcrete,farGlass;
         readonly Material[] facades=new Material[4];
         readonly Material[] skylineFacades=new Material[12];
@@ -610,6 +611,7 @@ namespace VectorRush
             // North blade of the existing co-located 34 m grid tower: its
             // upper full-height blade reaches Z=-37.82 at this 22 m datum.
             Vector3 north=new Vector3(152,0,-37.82f);
+            BuildOpeningMaterials();
             int count=0;
             if(BuildOpeningGroup(track,"crossing service court",.200f,east))count++;
             if(BuildOpeningGroup(track,"inner frontage return",.275f,north,22f/12.75f))count++;
@@ -630,100 +632,148 @@ namespace VectorRush
             {
                 Debug.LogWarning("VECTOR_RUSH_OPENING_GROUP name="+name+" accepted=false reason=actual-pier-foot-missing",this);return false;
             }
-            // Inboard socket rests on the top of the existing 11 x 2 x 12 m
-            // foot, clear of its central 3.5 m pier. No second foundation.
             Vector3 socket=foot.TransformPoint(new Vector3(-.33f,.46f,0));
             Vector3 direction=Vector3.ProjectOnPlane(socket-frontage,Vector3.up);
             float length=direction.magnitude;Quaternion q=Quaternion.LookRotation(direction.normalized,Vector3.up);
             Vector3 c=frontage;c.y=0;
-            const float deckTop=12.75f,deckThickness=1.3f;
-            // Leave the existing X=224 service avenue free. On the taller
-            // return, place the room ahead where .22 sees its actual faces.
+            float floor=12.75f*heightScale;
             float room=length*(heightScale>1f?.70f:.32f);
             var pieces=new List<OpeningPiece>();
-            // Type 1: existing-podium interface. A broad 12 m top has a deep
-            // exposed edge, ending flush at the real industrial / tower face.
-            OpeningBox(pieces,new Vector3(0,deckTop-deckThickness*.5f,length*.5f),new Vector3(11.8f,deckThickness,length),civicConcrete);
-            OpeningBox(pieces,new Vector3(5.78f,11.55f,length*.5f),new Vector3(.26f,1.15f,length),civicSteel);
-            // Type 2: a recessed service frontage, open toward the racing view.
-            // The back wall, two end returns and deep ceiling carry the form;
-            // no ornamental rails, signs or repeated tiny window strips.
-            OpeningBox(pieces,new Vector3(0,.4f,room),new Vector3(14.8f,.8f,25),civicConcrete);
-            OpeningBox(pieces,new Vector3(-6.65f,6.2f,room),new Vector3(.7f,11.6f,24),civicConcrete);
-            foreach(float end in new[]{-11.6f,11.6f})
-                OpeningBox(pieces,new Vector3(0,6.2f,room+end),new Vector3(14,11.6f,.8f),civicConcrete);
-            OpeningBox(pieces,new Vector3(0,12.1f,room),new Vector3(14.8f,1.3f,25),civicConcrete);
-            OpeningBox(pieces,new Vector3(-6.24f,5.7f,room),new Vector3(.12f,7,18),civicGlass);
-            // A solid door-sized inset is deliberately non-emissive; the
-            // source in front illuminates the recess and its return edges.
-            OpeningBox(pieces,new Vector3(-6.12f,3.8f,room+5),new Vector3(.14f,6,4),civicSteel);
-            OpeningBox(pieces,new Vector3(8.7f,.45f,room),new Vector3(3.4f,.9f,25),civicConcrete);
-            // Type 3: limited supported spans. Intermediate columns reach
-            // ground, with no continuous retaining wall under the viaduct.
+            var lamps=new List<OpeningLamp>();
+            // Type 1: a seven-metre service walk with dark running surface,
+            // a mineral edge and two actual deep longitudinal steel girders.
+            // Split each layer at its exact podium boundary. Distinct local
+            // UV origins must never create two coplanar mapped top surfaces.
+            foreach(bool after in new[]{false,true})
+            {
+                float start=after?room+12.9f:0,end=after?length:room-12.9f;
+                OpeningBox(pieces,new Vector3(0,floor-.50f,(start+end)*.5f),new Vector3(7,1,end-start),openingConcrete);
+                foreach(float side in new[]{-1f,1f})
+                    OpeningBox(pieces,new Vector3(side*3.36f,floor+.28f,(start+end)*.5f),new Vector3(.28f,.56f,end-start),openingSteel);
+                start=after?room+12.6f:0;end=after?length:room-12.6f;
+                OpeningBox(pieces,new Vector3(0,floor+.025f,(start+end)*.5f),new Vector3(6.5f,.05f,end-start),openingDeck);
+            }
+            foreach(float side in new[]{-1f,1f})
+                OpeningBox(pieces,new Vector3(side*2.6f,floor-1.35f,length*.5f),new Vector3(.5f,1.65f,length),openingSteel);
+            // Type 2: the room now sits ON the connected service datum. Its
+            // 8.5 m front is visible above the .22 barrier; the old 22 m tall
+            // empty ground-level cubby and its broad pale roof are removed.
+            OpeningBox(pieces,new Vector3(0,floor-.5f,room),new Vector3(13.8f,1,25.8f),openingConcrete);
+            OpeningBox(pieces,new Vector3(0,floor+.025f,room),new Vector3(13.2f,.05f,25.2f),openingDeck);
+            OpeningBox(pieces,new Vector3(-5.45f,floor+3.8f,room),new Vector3(.7f,7.6f,23.2f),openingSteel);
+            foreach(float end in new[]{-11.2f,11.2f})
+            {
+                OpeningBox(pieces,new Vector3(-1,floor+3.8f,room+end),new Vector3(9.6f,7.6f,.9f),openingConcrete);
+                OpeningBox(pieces,new Vector3(3.55f,floor+3.8f,room+end),new Vector3(1.1f,7.6f,1.7f),openingSteel);
+            }
+            // Recessed occupied cassettes, a central service door and a solid
+            // lower return establish use/scale without rows of tiny detailing.
+            OpeningBox(pieces,new Vector3(1.9f,floor+3.65f,room),new Vector3(.35f,7.3f,21.4f),openingSteel);
+            foreach(float bay in new[]{-6f,6f})
+            {
+                OpeningBox(pieces,new Vector3(2.12f,floor+4.15f,room+bay),new Vector3(.14f,3.8f,5.4f),civicGlass);
+                OpeningBox(pieces,new Vector3(2.22f,floor+4.15f,room+bay),new Vector3(.08f,3.2f,4.8f),openingOccupied);
+                OpeningBox(pieces,new Vector3(2.5f,floor+1.15f,room+bay),new Vector3(.7f,2.3f,5.5f),openingConcrete);
+                OpeningBox(pieces,new Vector3(3.1f,floor+6.5f,room+bay),new Vector3(2.1f,.45f,5.6f),openingSteel);
+            }
+            OpeningBox(pieces,new Vector3(2.18f,floor+2.6f,room),new Vector3(.18f,5.2f,3.2f),civicGlass);
+            OpeningBox(pieces,new Vector3(-.45f,floor+8.05f,room),new Vector3(11.1f,.9f,24.9f),openingDeck);
+            OpeningBox(pieces,new Vector3(4.7f,floor+7.55f,room),new Vector3(.6f,.7f,24.9f),openingSteel);
+            // Type 3: grounded room frames and intermittent span supports.
+            // The four room columns replace the former opaque ground walls.
+            // Their feet, caps and steel girders make the bearing path explicit.
+            foreach(float end in new[]{-10f,10f})
+            {
+                foreach(float side in new[]{-4.7f,4.7f})
+                {
+                    OpeningBox(pieces,new Vector3(side,(floor-1)*.5f,room+end),new Vector3(1.8f,floor-1,2.2f),openingConcrete);
+                    OpeningBox(pieces,new Vector3(side,.4f,room+end),new Vector3(3.3f,.8f,3.7f),openingConcrete);
+                }
+                OpeningBox(pieces,new Vector3(0,floor-1.35f,room+end),new Vector3(12.8f,1.3f,2.5f),openingSteel);
+            }
             foreach(float along in new[]{length*.18f,length*.46f,length*.75f})
             {
                 if(Mathf.Abs(along-room)<13)continue;
-                OpeningBox(pieces,new Vector3(0,6.025f,along),new Vector3(2.6f,12.05f,3.6f),civicConcrete);
-                OpeningBox(pieces,new Vector3(0,.35f,along),new Vector3(4.2f,.7f,5.2f),civicSteel);
-                OpeningBox(pieces,new Vector3(0,11.45f,along),new Vector3(9.6f,1.2f,2.8f),civicSteel);
+                OpeningBox(pieces,new Vector3(0,(floor-1)*.5f,along),new Vector3(2.6f,floor-1,3.6f),openingConcrete);
+                OpeningBox(pieces,new Vector3(0,.35f,along),new Vector3(4.2f,.7f,5.2f),openingConcrete);
+                OpeningBox(pieces,new Vector3(0,floor-1.35f,along),new Vector3(6.8f,1.2f,2.8f),openingSteel);
             }
-            float socketHeight=12.1f-socket.y;
-            int socketPiece=pieces.Count;
-            OpeningBox(pieces,new Vector3(0,socket.y+socketHeight*.5f,length),new Vector3(1.8f,socketHeight,2.2f),civicConcrete);
-            OpeningBox(pieces,new Vector3(0,11.45f,length-.6f),new Vector3(8.8f,1.2f,2.4f),civicSteel);
-            // Two physically supported practical sources per group.
-            OpeningBox(pieces,new Vector3(5.1f,15.4f,room-9),new Vector3(.36f,5.3f,.36f),civicSteel);
-            OpeningBox(pieces,new Vector3(6.5f,18,room-9),new Vector3(3.2f,.35f,.65f),civicSteel);
-            OpeningBox(pieces,new Vector3(8.7f,5.5f,room+10),new Vector3(.38f,10.2f,.38f),civicSteel);
-            OpeningBox(pieces,new Vector3(8.7f,10.7f,room+10),new Vector3(.9f,.45f,1.2f),civicSteel);
-            // The second return joins the existing tower blade at 22 m.
-            // It must appear above the .22 foreground barrier; the first
-            // industrial roof connection retains its actual 12.75 m datum.
-            for(int i=0;i<pieces.Count;i++)
+            float socketTop=floor-.65f;
+            OpeningBox(pieces,new Vector3(0,(socket.y+socketTop)*.5f,length),new Vector3(1.8f,socketTop-socket.y,2.2f),openingConcrete);
+            OpeningBox(pieces,new Vector3(0,floor-1.3f,length-.6f),new Vector3(6.8f,1.2f,2.4f),openingSteel);
+            // One visible under-canopy source models the room's recessed front.
+            // The other follows the support to a real base, not another roof pool.
+            OpeningLampPlan(pieces,lamps,new Vector3(4.65f,floor+6.98f,room-7),new Vector3(1.5f,floor+2.8f,room+2),new Color(1,.81f,.62f),240,27,108);
+            if(heightScale>1f)
             {
-                var piece=pieces[i];piece.center.y*=heightScale;piece.size.y*=heightScale;
-                if(i==socketPiece) // Preserve the real foot contact.
-                {
-                    float top=12.1f*heightScale;
-                    piece.center.y=(socket.y+top)*.5f;piece.size.y=top-socket.y;
-                }
-                pieces[i]=piece;
+                OpeningBox(pieces,new Vector3(3.05f,floor-1.15f,length-2.3f),new Vector3(1.5f,.45f,1.3f),openingSteel);
+                OpeningLampPlan(pieces,lamps,new Vector3(3.55f,floor-1.5f,length-2.3f),new Vector3(0,1.25f,length),new Color(1,.78f,.57f),750,34,80);
             }
-            // Include the full housed-lamp envelope in the preflight.
+            else
+            {
+                OpeningBox(pieces,new Vector3(5.55f,floor+2.3f,room+10),new Vector3(2.3f,.4f,.6f),openingSteel);
+                OpeningLampPlan(pieces,lamps,new Vector3(6.3f,floor+2.15f,room+10),new Vector3(4.7f,.6f,room+10),new Color(1,.78f,.57f),430,25,82);
+            }
+            // Every emitted mesh box is in this plan, including the rotated
+            // lamp housings/lenses. No unaudited geometry is appended afterward.
             Bounds bounds=new Bounds(c+q*pieces[0].center,Vector3.zero);
             float clearanceBelowDeck=float.PositiveInfinity;string failure=null;
+            foreach(var piece in pieces)bounds.Encapsulate(OpeningWorldBounds(c,q,piece));
             foreach(var piece in pieces)
-            {
-                Bounds b=OpeningWorldBounds(c,q,piece);
-                bounds.Encapsulate(b);
                 if(!OpeningClear(track,c,q,piece,ref clearanceBelowDeck,out failure))break;
-            }
             if(failure!=null)
             {
                 Debug.LogWarning("VECTOR_RUSH_OPENING_GROUP name="+name+" accepted=false bounds="+bounds+" reason="+failure,this);return false;
             }
-            foreach(var piece in pieces)Box(c,q,piece.center,piece.size,piece.material);
-            OpeningPractical(name+" / broad court wash",c,q,new Vector3(7.7f,17.85f*heightScale,room-9),new Vector3(0,9.5f*heightScale,room+8),new Color(1,.82f,.64f),900*heightScale,58,100);
-            OpeningPractical(name+" / recessed frontage task lamp",c,q,new Vector3(8.5f,10.5f*heightScale,room+10),new Vector3(-5.8f,5.5f*heightScale,room-2),new Color(1,.73f,.47f),480*heightScale,36,92);
+            foreach(var piece in pieces)Box(c+q*piece.center,q*piece.rotation,Vector3.zero,piece.size,piece.material,true);
+            for(int i=0;i<lamps.Count;i++)OpeningPractical(name+" / "+(i==0?"occupied front":"support contact"),c,q,lamps[i]);
             Flush("Opening construction / "+name);
-            Debug.Log("VECTOR_RUSH_OPENING_GROUP name="+name+" accepted=true supportProgress="+progress.ToString("F3")+" supportFoot="+foot.position.ToString("F3")+" socket="+socket.ToString("F3")+" frontage="+c.ToString("F3")+" boundsMin="+bounds.min.ToString("F3")+" boundsMax="+bounds.max.ToString("F3")+" minimumBelowProtectedDeck="+clearanceBelowDeck.ToString("F3")+" boxes="+pieces.Count+" addedLights=2 fullCourseSamples=1200",this);
+            Debug.Log("VECTOR_RUSH_OPENING_GROUP name="+name+" accepted=true supportProgress="+progress.ToString("F3")+" supportFoot="+foot.position.ToString("F3")+" socket="+socket.ToString("F3")+" frontage="+c.ToString("F3")+" serviceFloor="+floor.ToString("F3")+" boundsMin="+bounds.min.ToString("F3")+" boundsMax="+bounds.max.ToString("F3")+" minimumBelowProtectedDeck="+clearanceBelowDeck.ToString("F3")+" boxes="+pieces.Count+" addedLights=2 auditedHousingBoxes=4 fullCourseSamples=1200 cityFootprintsChecked="+openingObstacles.Count,this);
             return true;
         }
 
-        void OpeningPractical(string name,Vector3 c,Quaternion q,Vector3 position,Vector3 target,Color color,float intensity,float range,float angle)
+        void BuildOpeningMaterials()
         {
-            Vector3 origin=c+q*position;Quaternion aim=Quaternion.LookRotation(q*(target-position),Vector3.up);
-            Box(origin,aim,new Vector3(0,0,.14f),new Vector3(.7f,.24f,.34f),civicSteel);
-            Box(origin,aim,new Vector3(0,0,.32f),new Vector3(.55f,.15f,.04f),warm);
-            var housing=new GameObject("Opening practical / "+name);housing.transform.SetParent(transform,false);housing.transform.SetPositionAndRotation(origin,aim);
-            var light=housing.AddComponent<Light>();light.type=LightType.Spot;light.color=color;light.intensity=intensity;
-            light.range=range;light.spotAngle=angle;light.innerSpotAngle=angle*.64f;light.shadows=LightShadows.None;
+            openingConcrete=OpeningFinish("Opening / cast structural returns",new Color(.32f,.355f,.37f),"Concrete",.72f);
+            openingDeck=OpeningFinish("Opening / dark mineral service tops",new Color(.10f,.135f,.155f),"Concrete",.76f);
+            openingSteel=OpeningFinish("Opening / coated steel recess and girders",new Color(.075f,.095f,.11f),"Structure",.82f);
+            openingOccupied=new Material(civicWorkshopWarm){name="Opening / recessed occupied cassette"};ownMaterials.Add(openingOccupied);
+            // The front is 4.8 x 3.2 m and each box's UV origin is its centre.
+            SetRoomUV(openingOccupied,new Vector2(4f/4.8f,4f/3.2f),new Vector2(.5f,.5f));
+        }
+        Material OpeningFinish(string name,Color color,string family,float smoothness)
+        {
+            var material=new Material(civicConcrete){name=name};ownMaterials.Add(material);
+            material.SetColor("_BaseColor",color);material.color=color;
+            bool mapped=NightArchitectureFinishes.Apply(material,family);material.SetFloat("_Smoothness",smoothness);
+            Debug.Log("VECTOR_RUSH_OPENING_FINISH material="+name+" existingMaps="+mapped+" uvMetresPerTile=4 normalMap=false",this);
+            return material;
+        }
+
+        void OpeningLampPlan(List<OpeningPiece> pieces,List<OpeningLamp> lamps,Vector3 position,Vector3 target,Color color,float intensity,float range,float angle)
+        {
+            Quaternion aim=Quaternion.LookRotation(target-position,Vector3.up);
+            // The Light origin is the front lens. The housing sits behind it.
+            pieces.Add(new OpeningPiece{center=position+aim*new Vector3(0,0,-.28f),size=new Vector3(.85f,.34f,.6f),rotation=aim,material=openingSteel});
+            pieces.Add(new OpeningPiece{center=position,size=new Vector3(.68f,.22f,.035f),rotation=aim,material=warm});
+            lamps.Add(new OpeningLamp{position=position,target=target,color=color,intensity=intensity,range=range,angle=angle});
+        }
+        void OpeningPractical(string name,Vector3 c,Quaternion q,OpeningLamp lamp)
+        {
+            var housing=new GameObject("Opening practical / "+name);housing.transform.SetParent(transform,false);
+            housing.transform.SetPositionAndRotation(c+q*lamp.position,Quaternion.LookRotation(q*(lamp.target-lamp.position),Vector3.up));
+            var light=housing.AddComponent<Light>();light.type=LightType.Spot;light.color=lamp.color;light.intensity=lamp.intensity;
+            light.range=lamp.range;light.spotAngle=lamp.angle;light.innerSpotAngle=lamp.angle*.64f;light.shadows=LightShadows.None;
             light.cullingMask=~(1<<8);light.renderMode=LightRenderMode.Auto;
         }
 
         bool OpeningClear(TrackPath track,Vector3 c,Quaternion q,OpeningPiece piece,ref float minimum,out string failure)
         {
-            failure=null;Vector3 center=c+q*piece.center;var half=new Vector2(piece.size.x*.5f,piece.size.z*.5f);
+            failure=null;Vector3 center=c+q*piece.center;
+            // Rotated fixture boxes use their conservative group-local AABB
+            // for the yaw-only landmark/city footprint checks too.
+            Bounds local=OpeningWorldBounds(Vector3.zero,Quaternion.identity,piece);
+            var half=new Vector2(local.extents.x,local.extents.z);
             if(landmarks&&landmarks.Overlaps(center,q,half)){failure="landmark-reservation";return false;}
             if(OverlapsBenchmark(center,q,half)){failure="transit-reservation";return false;}
             Bounds b=OpeningWorldBounds(c,q,piece);
@@ -771,17 +821,18 @@ namespace VectorRush
         }
         static void OpeningBox(List<OpeningPiece> pieces,Vector3 center,Vector3 size,Material material)
         {
-            pieces.Add(new OpeningPiece{center=center,size=size,material=material});
+            pieces.Add(new OpeningPiece{center=center,size=size,rotation=Quaternion.identity,material=material});
         }
         static Bounds OpeningWorldBounds(Vector3 c,Quaternion q,OpeningPiece piece)
         {
             Vector3 h=piece.size*.5f;
             Bounds bounds=new Bounds(c+q*piece.center,Vector3.zero);
             for(int x=-1;x<=1;x+=2)for(int y=-1;y<=1;y+=2)for(int z=-1;z<=1;z+=2)
-                bounds.Encapsulate(c+q*(piece.center+Vector3.Scale(h,new Vector3(x,y,z))));
+                bounds.Encapsulate(c+q*(piece.center+piece.rotation*Vector3.Scale(h,new Vector3(x,y,z))));
             return bounds;
         }
-        struct OpeningPiece{public Vector3 center,size;public Material material;}
+        struct OpeningPiece{public Vector3 center,size;public Quaternion rotation;public Material material;}
+        struct OpeningLamp{public Vector3 position,target;public Color color;public float intensity,range,angle;}
         struct OpeningObstacle{public Vector3 center;public Quaternion rotation;public Vector2 half;public float height;}
 
         bool Clear(Vector3 center,Quaternion q,Vector2 half)
@@ -796,12 +847,21 @@ namespace VectorRush
             return true;
         }
         Batch Get(Material material){if(!batches.TryGetValue(material,out var batch)){batch=new Batch();batches.Add(material,batch);}return batch;}
-        void Box(Vector3 c,Quaternion q,Vector3 p,Vector3 size,Material mat)
+        void Box(Vector3 c,Quaternion q,Vector3 p,Vector3 size,Material mat,bool metricUV=false)
         {
             var batch=Get(mat);Vector3 h=size*.5f;
             Vector3[] corners={new Vector3(-h.x,-h.y,-h.z),new Vector3(h.x,-h.y,-h.z),new Vector3(h.x,h.y,-h.z),new Vector3(-h.x,h.y,-h.z),new Vector3(-h.x,-h.y,h.z),new Vector3(h.x,-h.y,h.z),new Vector3(h.x,h.y,h.z),new Vector3(-h.x,h.y,h.z)};
             int[] faces={0,3,2,1,5,6,7,4,4,7,3,0,1,2,6,5,3,7,6,2,4,0,1,5};
-            for(int f=0;f<6;f++)batch.Quad(c+q*(p+corners[faces[f*4]]),c+q*(p+corners[faces[f*4+1]]),c+q*(p+corners[faces[f*4+2]]),c+q*(p+corners[faces[f*4+3]]));
+            for(int f=0;f<6;f++)
+            {
+                batch.Quad(c+q*(p+corners[faces[f*4]]),c+q*(p+corners[faces[f*4+1]]),c+q*(p+corners[faces[f*4+2]]),c+q*(p+corners[faces[f*4+3]]));
+                if(!metricUV)continue;
+                for(int k=0;k<4;k++)
+                {
+                    Vector3 v=p+corners[faces[f*4+k]];
+                    batch.uv.Add((f<2?new Vector2(v.x,v.y):f<4?new Vector2(v.z,v.y):new Vector2(v.x,v.z))*.25f);
+                }
+            }
         }
         void Pipe(Vector3 c,Quaternion q,Vector3 a,Vector3 b,float radius,Material material)
         {
@@ -818,7 +878,9 @@ namespace VectorRush
             foreach(var pair in batches)
             {
                 var mesh=new Mesh{name=name+" / "+pair.Key.name};if(pair.Value.vertices.Count>65535)mesh.indexFormat=IndexFormat.UInt32;
-                mesh.SetVertices(pair.Value.vertices);mesh.SetTriangles(pair.Value.triangles,0);mesh.RecalculateNormals();mesh.RecalculateBounds();meshes.Add(mesh);
+                mesh.SetVertices(pair.Value.vertices);mesh.SetTriangles(pair.Value.triangles,0);
+                if(pair.Value.uv.Count>0&&pair.Value.uv.Count==pair.Value.vertices.Count)mesh.SetUVs(0,pair.Value.uv);
+                mesh.RecalculateNormals();mesh.RecalculateBounds();meshes.Add(mesh);
                 var go=new GameObject(mesh.name);go.transform.SetParent(transform,false);go.AddComponent<MeshFilter>().sharedMesh=mesh;
                 go.AddComponent<MeshRenderer>().sharedMaterial=pair.Key;
             }
@@ -826,7 +888,7 @@ namespace VectorRush
         }
         sealed class Batch
         {
-            public readonly List<Vector3> vertices=new List<Vector3>();public readonly List<int> triangles=new List<int>();
+            public readonly List<Vector3> vertices=new List<Vector3>();public readonly List<int> triangles=new List<int>();public readonly List<Vector2> uv=new List<Vector2>();
             public void Quad(Vector3 a,Vector3 b,Vector3 c,Vector3 d){int n=vertices.Count;vertices.Add(a);vertices.Add(b);vertices.Add(c);vertices.Add(d);triangles.AddRange(new[]{n,n+1,n+2,n,n+2,n+3});}
         }
         void OnDestroy(){foreach(var mesh in meshes)if(mesh)Destroy(mesh);foreach(var mat in ownMaterials)if(mat)Destroy(mat);foreach(var texture in ownTextures)if(texture)Destroy(texture);}
