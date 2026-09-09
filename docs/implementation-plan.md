@@ -1,5 +1,7 @@
 # Vector Rush Implementation Plan
 
+**Active execution — 2026-09-08:** Owner authorized the [Nocturne V2 plan](superpowers/plans/2026-09-08-nocturne-v2-execution.md). Task 1 in progress: preserve the current app, compile the existing guarded SSR feature, build a separately named native preview, then judge off/on evidence. Integrator owns Unity execution and serialized settings; reflection implementer owns the isolated preview source. Later milestones remain conditional on the reflection verdict.
+
 **Active next plan — 2026-09-08:** [Night Racing Production Finish](superpowers/plans/2026-09-08-night-production-finish.md), with [design/acceptance spec](superpowers/specs/2026-09-08-night-production-finish-design.md). The owner requested planning toward the supplied night video's finish. Keep the night game and its existing systems; prove the opening-city benchmark before wider rollout. This documentation milestone is complete; implementation has not started. Earlier sections below preserve the completed work and historical directions, rather than overriding the new plan.
 
 > For agentic workers: use subagent-driven-development with explicit ownership and independent review. User has requested parallel implementation. Do not change another owner's files without coordinating.

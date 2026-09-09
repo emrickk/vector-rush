@@ -1,0 +1,11 @@
+{
+  "sourceBaseline": "ac6992c",
+  "defineExitCode": 0,
+  "guardedEditorCompile": "passed",
+  "resourceLookup": "both shader references found",
+  "build": "deliberately terminated before native completion",
+  "buildExitCode": 143,
+  "reason": "Independent source/serialized review found SSR prefilter SelectOnly strips required OFF keyword variant. No native capture or acceptance from this attempt.",
+  "correction": "Retain an SSR-free renderer variant in same pipeline renderer list so installed preprocessor keeps both SSR states; active renderer/default index unchanged.",
+  "controlAppUnchanged": true
+}

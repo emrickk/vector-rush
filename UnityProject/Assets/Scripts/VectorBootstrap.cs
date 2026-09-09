@@ -28,6 +28,7 @@ namespace VectorRush
             var tonemap=profile.Add<Tonemapping>();tonemap.mode.Override(TonemappingMode.ACES);
             var color=profile.Add<ColorAdjustments>();color.postExposure.Override(.3f);color.contrast.Override(3);color.saturation.Override(3);
             var vignette=profile.Add<Vignette>();vignette.intensity.Override(.16f);vignette.smoothness.Override(.65f);
+            RoadReflectionPreview.Configure(profile);
             var volume=new GameObject("Race grade").AddComponent<Volume>();volume.isGlobal=true;volume.profile=profile;
             var craftIvory=ShipSurfaceMaps.Create(world,"Craft pearl ceramic","Ivory",ShipSurfaceMaps.HasSurface("Ivory")?Color.white:new Color(.72f,.78f,.83f),.58f,.18f);
             var craftCeramic=ShipSurfaceMaps.Create(world,"Craft thermal ceramic","Ceramic",ShipSurfaceMaps.HasSurface("Ceramic")?Color.white:new Color(.055f,.072f,.095f),.46f,.24f);

@@ -380,3 +380,7 @@ All four generated and four native PNGs pass CRC/decompression; all local compar
 ### Nocturne V2 implementation planning
 
 Prepared the [reference-aligned execution plan](superpowers/plans/2026-09-08-nocturne-v2-execution.md) after the owner asked for an implementation plan. Re-read pinned SSR APIs and existing setup/capture code; defined seven gated milestones, explicit file ownership, separate preview-app output, off/on comparison, native acceptance and rollback criteria. Corrected habitual duplicate preparation and preserved the provisional performance-budget discrepancy. Local plan links resolve; no runtime changes, builds or game tests were made.
+
+## 2026-09-08 — Nocturne V2 SSR source prototype and retention finding
+
+Owner authorized execution. Added separate SSR preview setup/runtime and optional native diagnostics; standalone opt-in invocation exits 0 and guarded Editor compilation/resource lookup succeed. Preserved current app hashes. Independent source review then identified SSR SelectOnly stripping the OFF keyword variant required by the planned runtime comparison. The first build was deliberately terminated (exit 143), with no native result or visual acceptance claimed. Preserve this implementation/finding before a separate retention correction. See `evidence/nocturne-v2/ssr-01/attempt-01.json` and `docs/visual-target-reviews/001a-reflection-source-review.md`.
