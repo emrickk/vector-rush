@@ -1,0 +1,9 @@
+{
+  "buildReport": "Success",
+  "editorExitCode": 0,
+  "baselineAndRegionalTemplateGuardsPassed": true,
+  "app": "Builds/Vector Rush-opening-03.app",
+  "configuration": "ManagedCodeVariant.Instrumented; BuildOptions.None; SSRinactive; SSAOunchanged",
+  "nativeVerificationPending": true,
+  "sameArtRevisionAs": "opening02; technicaltemplatecorrectiononly"
+}

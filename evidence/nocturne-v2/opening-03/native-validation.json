@@ -1,0 +1,105 @@
+{
+  "buildGuid": "5b0ab4accd4c40279591b27098ff49ed",
+  "configuration": "Instrumented; BuildOptions.None; SSRinactive",
+  "modes": {
+    "off": {
+      "exitCode": 0,
+      "pngsValidated": 9,
+      "sourceFilesUnchanged": 242,
+      "appFilesUnchanged": 189,
+      "indices": [
+        149,
+        211,
+        283,
+        398,
+        473,
+        607,
+        642,
+        943,
+        1005
+      ],
+      "allExactPoseTolerancePassed": false,
+      "exceptions": 0,
+      "renderGraphErrors": 0,
+      "runtimeMetadata": [
+        "VR_SSR_NATIVE_ROAD_MATERIAL name=Satin graphite running deck shader=Universal Render Pipeline/Lit keywords=_EMISSION,_ENVIRONMENTREFLECTIONS_OFF,_METALLICSPECGLOSSMAP,_NORMALMAP"
+      ]
+    },
+    "construction": {
+      "exitCode": 0,
+      "pngsValidated": 9,
+      "sourceFilesUnchanged": 242,
+      "appFilesUnchanged": 189,
+      "indices": [
+        149,
+        211,
+        283,
+        398,
+        473,
+        607,
+        642,
+        943,
+        1004
+      ],
+      "allExactPoseTolerancePassed": false,
+      "exceptions": 0,
+      "renderGraphErrors": 0,
+      "runtimeMetadata": [
+        "VECTOR_RUSH_OPENING_GROUP name=crossing service court accepted=true supportProgress=0.200 supportFoot=(266.253, 1.000, -54.710) socket=(262.623, 1.917, -54.817) frontage=(172.000, 0.000, -54.563) serviceFloor=12.750 boundsMin=(171.990, 0.000, -61.580) boundsMax=(263.726, 21.250, -47.708) minimumBelowProtectedDeck=22.475 boxes=49 addedLights=2 auditedHousingBoxes=4 fullCourseSamples=1200 cityFootprintsChecked=99",
+        "VECTOR_RUSH_OPENING_GROUP name=inner frontage return accepted=true supportProgress=0.275 supportFoot=(202.328, 1.000, 62.219) socket=(199.804, 1.918, 59.609) frontage=(152.000, 0.000, -37.820) serviceFloor=22.000 boundsMin=(148.858, 0.000, -39.362) boundsMax=(203.120, 30.500, 61.646) minimumBelowProtectedDeck=18.762 boxes=52 addedLights=2 auditedHousingBoxes=4 fullCourseSamples=1200 cityFootprintsChecked=99"
+      ]
+    },
+    "surface": {
+      "exitCode": 0,
+      "pngsValidated": 9,
+      "sourceFilesUnchanged": 242,
+      "appFilesUnchanged": 189,
+      "indices": [
+        149,
+        211,
+        283,
+        398,
+        473,
+        607,
+        642,
+        943,
+        1004
+      ],
+      "allExactPoseTolerancePassed": false,
+      "exceptions": 0,
+      "renderGraphErrors": 0,
+      "runtimeMetadata": [
+        "Opening road detail: Opening metric satin study; template=Materials/OpeningRoadFinish; keyword=True; UV scale=(3.00, 54.25); UV offset=(0.00, 27.50); macro boundary normal=flat; original detail normal=.25.",
+        "Opening road detail: Warm gallery metric satin study; template=Materials/OpeningRoadFinish; keyword=True; UV scale=(3.00, 10.25); UV offset=(0.00, 206.25); macro boundary normal=flat; original detail normal=.25."
+      ]
+    },
+    "combined": {
+      "exitCode": 0,
+      "pngsValidated": 9,
+      "sourceFilesUnchanged": 242,
+      "appFilesUnchanged": 189,
+      "indices": [
+        149,
+        211,
+        283,
+        398,
+        473,
+        607,
+        642,
+        943,
+        1004
+      ],
+      "allExactPoseTolerancePassed": false,
+      "exceptions": 0,
+      "renderGraphErrors": 0,
+      "runtimeMetadata": [
+        "Opening road detail: Opening metric satin study; template=Materials/OpeningRoadFinish; keyword=True; UV scale=(3.00, 54.25); UV offset=(0.00, 27.50); macro boundary normal=flat; original detail normal=.25.",
+        "Opening road detail: Warm gallery metric satin study; template=Materials/OpeningRoadFinish; keyword=True; UV scale=(3.00, 10.25); UV offset=(0.00, 206.25); macro boundary normal=flat; original detail normal=.25.",
+        "VECTOR_RUSH_OPENING_GROUP name=crossing service court accepted=true supportProgress=0.200 supportFoot=(266.253, 1.000, -54.710) socket=(262.623, 1.917, -54.817) frontage=(172.000, 0.000, -54.563) serviceFloor=12.750 boundsMin=(171.990, 0.000, -61.580) boundsMax=(263.726, 21.250, -47.708) minimumBelowProtectedDeck=22.475 boxes=49 addedLights=2 auditedHousingBoxes=4 fullCourseSamples=1200 cityFootprintsChecked=99",
+        "VECTOR_RUSH_OPENING_GROUP name=inner frontage return accepted=true supportProgress=0.275 supportFoot=(202.328, 1.000, 62.219) socket=(199.804, 1.918, 59.609) frontage=(152.000, 0.000, -37.820) serviceFloor=22.000 boundsMin=(148.858, 0.000, -39.362) boundsMax=(203.120, 30.500, 61.646) minimumBelowProtectedDeck=18.762 boxes=52 addedLights=2 auditedHousingBoxes=4 fullCourseSamples=1200 cityFootprintsChecked=99",
+        "VR_SSR_NATIVE_ROAD_MATERIAL name=Satin graphite running deck shader=Universal Render Pipeline/Lit keywords=_EMISSION,_ENVIRONMENTREFLECTIONS_OFF,_METALLICSPECGLOSSMAP,_NORMALMAP"
+      ]
+    }
+  },
+  "scope": "Four9stills /1440poses native simulated-time draft traversals. Baseline materialkeywords correctlyretained. Originalapp189hashes verified by identity recorder. Visualverdictseparate; no continuousmotion/audio/realtimeperformance acceptance."
+}
