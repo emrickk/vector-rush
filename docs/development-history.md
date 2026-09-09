@@ -472,3 +472,10 @@ Final permitted substantive correction: remove the regional road integration and
 ## 2026-09-09 — Final correction restores original road rendering
 
 Removed WorldBuilder's regional road integration. Independent source review confirms the full pre-opening road mesh/material/generated maps/collider path is restored; construction and scoped gallery/fixture study are unchanged. The helper remains isolated as historical experimental source. Whitespace/source comparison passes; separate opening04 native compilation and combined-preservation review follow.
+
+
+## 2026-09-09 — Global critique after opening04 owner rejection
+
+The owner found the latest visible changes too small and requested a realistic whole-game critique. The parent inspected current native views and current source, with independent visual and gameplay/production critics. The [synthesis](visual-target-reviews/004-global-aaa-assessment.md) judges the game a functioning prototype substantially below the requested visual target and with whole-race experience still unproven. The opening promotion path is paused. Scene-wide construction, material/light coherence and sequence design take priority over another isolated module or renderer tweak; an integrated section is proposed, not implemented.
+
+The review distinguishes current source from older race telemetry and avoids re-reporting corrected decorative markings, old AI pacing defects or old frame-time samples as current failures. Original game/source artifacts and pending opening04 captures remain intact. No new game implementation, build, tests, manual play, audio audition or performance measurement was performed for this documentation milestone. Independent reports are preserved separately as 004 and 004a.
