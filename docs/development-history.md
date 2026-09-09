@@ -416,3 +416,7 @@ Preserved all three reports and their differing priorities. No game code, assets
 ## 2026-09-09 — Opening finish source: preview controls and surface study
 
 Owner authorized the next bounded pass at High effort. Added separate preview controls/build setup and a nine-anchor sparse native capture mode. Implemented scoped opening/warm-gallery road material regions with unchanged original collision, existing-source light rhythm and warm-gallery material separation. Source assertions/diff checks pass; Unity compile, native appearance and performance remain pending. Environment construction is a separate owned source step. Source reports are retained under `evidence/nocturne-v2/opening-01/`; original app has not been rebuilt or overwritten.
+
+## 2026-09-09 — Opening construction source and measured placement
+
+Added two default-off service connections from existing industrial/tower frontages to actual .200/.275 pier feet. Reuses existing materials and contacts; 49 boxes in up to eight batches, four housed local lights, no new colliders. The editable procedural recipe and source-based bounds/projection/whole-course clearance audit are retained under `SourceAssets/environment-v6-context/`. Projection rectangles are not proof of visible native coverage. Source is frozen for compilation and native feedback; visual acceptance remains pending.

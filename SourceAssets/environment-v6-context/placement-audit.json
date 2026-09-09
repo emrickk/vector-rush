@@ -1,0 +1,180 @@
+{
+  "status": "Source-computed placement, not native acceptance. Projection is a loose bounding rectangle with no occlusion.",
+  "source_sha256": {
+    "UnityProject/Assets/Scripts/World/NightDistrict.cs": "c36790811bf8871123bb5147e177b77725c5067ca6bcc383e3c3341f8454cfac",
+    "UnityProject/Assets/Scripts/World/TrackPath.cs": "7c338b66f00d5eddd65da2416a702ef428361ede15c7df0aa5ef1c3fe3a1cf71",
+    "evidence/nocturne-v2/ssr-02/off/capture-validation.json": "673904e763b3ecc3b9ab541e905e5ebe31abfe6b653cd2702d7db85a6c5d54d7"
+  },
+  "route_length_m": 1844.5174329434412,
+  "existing_industrial_center_xyz": [
+    151.25268247181563,
+    0,
+    -54.53184295439415
+  ],
+  "groups": [
+    {
+      "support_progress": 0.2,
+      "frontage_xyz": [
+        172,
+        0.0,
+        -54.56284865923749
+      ],
+      "actual_foot_center_xyz": [
+        266.2525442771335,
+        1,
+        -54.710125757243325
+      ],
+      "socket_xyz": [
+        262.62327969124954,
+        1.9167002546471084,
+        -54.81689283446585
+      ],
+      "length_m": 90.62363577147745,
+      "bounds_min_max_xyz": [
+        [
+          171.98343256631873,
+          0.0,
+          -65.07914303480639
+        ],
+        [
+          263.72579832855104,
+          18.175,
+          -47.209130768153884
+        ]
+      ],
+      "pieces": 19,
+      "added_lights": 2,
+      "minimum_below_protected_deck_m": 22.90915452317472,
+      "limiting_course_progress": 0.18666666666666668,
+      "projections": [
+        {
+          "progress": 0.15,
+          "room_only_unoccluded_screen_bounds_px": [
+            0,
+            668.9575432028818,
+            239.4018588238241,
+            895.7195492555188
+          ],
+          "approx_unoccluded_screen_bounds_px": [
+            0,
+            648.4977892102866,
+            740.376239038277,
+            919.048453815722
+          ],
+          "bounding_rectangle_frame_percent": 9.66
+        },
+        {
+          "progress": 0.22,
+          "room_only_unoccluded_screen_bounds_px": null,
+          "approx_unoccluded_screen_bounds_px": null,
+          "bounding_rectangle_frame_percent": 0
+        },
+        {
+          "progress": 0.3,
+          "room_only_unoccluded_screen_bounds_px": null,
+          "approx_unoccluded_screen_bounds_px": null,
+          "bounding_rectangle_frame_percent": 0
+        },
+        {
+          "progress": 0.37,
+          "room_only_unoccluded_screen_bounds_px": null,
+          "approx_unoccluded_screen_bounds_px": null,
+          "bounding_rectangle_frame_percent": 0
+        },
+        {
+          "progress": 0.43,
+          "room_only_unoccluded_screen_bounds_px": null,
+          "approx_unoccluded_screen_bounds_px": null,
+          "bounding_rectangle_frame_percent": 0
+        }
+      ]
+    },
+    {
+      "support_progress": 0.275,
+      "frontage_xyz": [
+        152,
+        0,
+        -37.82
+      ],
+      "actual_foot_center_xyz": [
+        202.32795133051238,
+        1,
+        62.218701183402196
+      ],
+      "socket_xyz": [
+        199.80345566381112,
+        1.917938075217829,
+        59.60956122570119
+      ],
+      "length_m": 108.52506518788465,
+      "bounds_min_max_xyz": [
+        [
+          146.70321063400007,
+          0.0,
+          -40.42325504052001
+        ],
+        [
+          205.10922263890598,
+          31.360784313725492,
+          62.208411435357384
+        ]
+      ],
+      "pieces": 22,
+      "added_lights": 2,
+      "minimum_below_protected_deck_m": 25.937502054234045,
+      "limiting_course_progress": 0.25833333333333336,
+      "projections": [
+        {
+          "progress": 0.15,
+          "room_only_unoccluded_screen_bounds_px": [
+            32.903942679013085,
+            474.5291617455043,
+            272.980382153561,
+            628.5703674964545
+          ],
+          "approx_unoccluded_screen_bounds_px": [
+            0,
+            430.3564490783997,
+            342.589898845786,
+            720.061329587016
+          ],
+          "bounding_rectangle_frame_percent": 4.79
+        },
+        {
+          "progress": 0.22,
+          "room_only_unoccluded_screen_bounds_px": [
+            168.0906283143621,
+            677.6187654835951,
+            520.4290606737993,
+            998.0145001078081
+          ],
+          "approx_unoccluded_screen_bounds_px": [
+            0,
+            639.3951776358894,
+            679.7326318964275,
+            1080
+          ],
+          "bounding_rectangle_frame_percent": 14.44
+        },
+        {
+          "progress": 0.3,
+          "room_only_unoccluded_screen_bounds_px": null,
+          "approx_unoccluded_screen_bounds_px": null,
+          "bounding_rectangle_frame_percent": 0
+        },
+        {
+          "progress": 0.37,
+          "room_only_unoccluded_screen_bounds_px": null,
+          "approx_unoccluded_screen_bounds_px": null,
+          "bounding_rectangle_frame_percent": 0
+        },
+        {
+          "progress": 0.43,
+          "room_only_unoccluded_screen_bounds_px": null,
+          "approx_unoccluded_screen_bounds_px": null,
+          "bounding_rectangle_frame_percent": 0
+        }
+      ]
+    }
+  ]
+}
