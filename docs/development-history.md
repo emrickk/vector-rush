@@ -384,3 +384,7 @@ Prepared the [reference-aligned execution plan](superpowers/plans/2026-09-08-noc
 ## 2026-09-08 — Nocturne V2 SSR source prototype and retention finding
 
 Owner authorized execution. Added separate SSR preview setup/runtime and optional native diagnostics; standalone opt-in invocation exits 0 and guarded Editor compilation/resource lookup succeed. Preserved current app hashes. Independent source review then identified SSR SelectOnly stripping the OFF keyword variant required by the planned runtime comparison. The first build was deliberately terminated (exit 143), with no native result or visual acceptance claimed. Preserve this implementation/finding before a separate retention correction. See `evidence/nocturne-v2/ssr-01/attempt-01.json` and `docs/visual-target-reviews/001a-reflection-source-review.md`.
+
+## 2026-09-08 — SSR keyword-retention correction and first native run
+
+Added matching unused SSR-free renderer as a build requirement. Generated prefilter is Select(1), retaining both states; original renderer remains default and SSAO is unchanged. Independent 001b review clears the correction. Separate Development preview builds successfully, but its first SSR-off run exposes a pre-existing IonPropulsion MaterialPropertyBlock constructor allocation rejected by Development checks. Integrator terminated invalid capture (exit143); archived binary and excerpt retained. No valid off/on comparison yet. The next bounded correction moves only that allocation into Awake and repeats the native run.

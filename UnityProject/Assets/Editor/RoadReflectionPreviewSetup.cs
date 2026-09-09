@@ -29,6 +29,55 @@ namespace VectorRush.Editor
             Debug.Log("VR_SSR_DEFINE_READY End this invocation; run BuildPreview after compilation/domain reload.");
         }
 
+#if URP_SCREEN_SPACE_REFLECTION
+        static void RetainRuntimeOffVariants(UniversalRendererData source)
+        {
+            // URP 17.6 prefilters SSR OFF out when every configured renderer has SSR.
+            // An unused, SSR-free renderer supplies the OFF requirement to the build's
+            // feature union while the original renderer remains selected for BOTH runs.
+            const string path = "Assets/Settings/VectorSSRVariantRetentionRenderer.asset";
+            var pipeline = AssetDatabase.LoadAssetAtPath<UniversalRenderPipelineAsset>("Assets/Settings/VectorPipeline.asset");
+            if (!pipeline) throw new InvalidOperationException("VectorPipeline missing");
+            var settings = new SerializedObject(pipeline);
+            var renderers = settings.FindProperty("m_RendererDataList");
+            var defaultIndex = settings.FindProperty("m_DefaultRendererIndex");
+            if (renderers == null || defaultIndex == null || defaultIndex.intValue < 0 ||
+                defaultIndex.intValue >= renderers.arraySize ||
+                renderers.GetArrayElementAtIndex(defaultIndex.intValue).objectReferenceValue != source)
+                throw new InvalidOperationException("SSR preview requires the original VectorRenderer to remain the selected default.");
+            int selected = defaultIndex.intValue;
+            var retained = AssetDatabase.LoadAssetAtPath<UniversalRendererData>(path);
+            if (!retained)
+            {
+                retained = UnityEngine.Object.Instantiate(source);
+                retained.rendererFeatures.RemoveAll(feature => feature is ScreenSpaceReflectionRendererFeature);
+                AssetDatabase.CreateAsset(retained, path);
+            }
+            else
+            {
+                // Refresh all settings on repeat builds; keep its asset GUID and all
+                // non-SSR feature references, including the existing SSAO subasset.
+                EditorUtility.CopySerialized(source, retained);
+                retained.rendererFeatures.RemoveAll(feature => feature is ScreenSpaceReflectionRendererFeature);
+            }
+            retained.name = "SSR OFF variant retention (unused renderer)";
+            EditorUtility.SetDirty(retained);
+            bool found = false;
+            for (int i = 0; i < renderers.arraySize; i++)
+                if (renderers.GetArrayElementAtIndex(i).objectReferenceValue == retained) found = true;
+            if (!found)
+            {
+                int index = renderers.arraySize;
+                renderers.InsertArrayElementAtIndex(index);
+                renderers.GetArrayElementAtIndex(index).objectReferenceValue = retained;
+            }
+            settings.ApplyModifiedPropertiesWithoutUndo();
+            EditorUtility.SetDirty(pipeline);
+            Debug.Log("VR_SSR_VARIANT_RETENTION renderer=" + path + " defaultIndex=" + selected +
+                " originalDefaultPreserved=true expectedSSRPrefilter=Select(1); native off/on verification still required");
+        }
+#endif
+
         [MenuItem("Vector Rush/SSR preview/Build separate macOS preview")]
         public static void BuildPreview()
         {
@@ -54,6 +103,7 @@ namespace VectorRush.Editor
             ssr.SetActive(true);
             EditorUtility.SetDirty(ssr);
             EditorUtility.SetDirty(renderer);
+            RetainRuntimeOffVariants(renderer);
             // The resource type is internal in the pinned URP package. Inspect it without
             // modifying the package or inventing a public type reference.
             var resources = RoadReflectionPreview.FindPersistentResources();

@@ -18,6 +18,7 @@ MonoBehaviour:
   m_RendererData: {fileID: 0}
   m_RendererDataList:
   - {fileID: 11400000, guid: 99fa91cd9943a4d51b7dd5c15e707a1d, type: 2}
+  - {fileID: 11400000, guid: 1826198ef517c466290c8bc5e9fd72bf, type: 2}
   m_DefaultRendererIndex: 0
   m_RequireDepthTexture: 0
   m_RequireOpaqueTexture: 0
@@ -107,7 +108,7 @@ MonoBehaviour:
   m_PrefilteringModeForwardPlus: 2
   m_PrefilteringModeDeferredRendering: 0
   m_PrefilteringModeScreenSpaceOcclusion: 2
-  m_PrefilteringModeScreenSpaceReflection: 2
+  m_PrefilteringModeScreenSpaceReflection: 1
   m_PrefilterWriteSmoothness: 0
   m_PrefilterDebugKeywords: 1
   m_PrefilterWriteRenderingLayers: 1

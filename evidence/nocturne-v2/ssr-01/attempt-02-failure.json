@@ -1,0 +1,11 @@
+{
+  "buildExitCode": 0,
+  "nativeExitCode": 143,
+  "nativeTerminatedByIntegrator": true,
+  "invalidComparisonReason": "Development check rejects MaterialPropertyBlock field initializer in IonPropulsion constructor. Six initial exceptions then repeated NullReferenceException at SetIntensity. SSR requested off.",
+  "sourceCorrectionRequired": "Move allocation to Awake; preserve all effect values and geometry.",
+  "nativeCaptureComplete": false,
+  "partialPNGCount": 75,
+  "archivedApp": "Builds/Vector Rush-SSR-preview-01-initialization-failed.app",
+  "shaderRetention": "SSR Select1 confirmed; original renderer remains default; source review cleared retention correction."
+}
