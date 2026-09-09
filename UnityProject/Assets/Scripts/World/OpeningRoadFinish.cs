@@ -11,12 +11,13 @@ namespace VectorRush
         readonly List<Texture2D> textures=new List<Texture2D>();
         WorldBuilder world;
         TrackPath track;
-        Color[] controlBase,controlNormal,controlMask;
+        Texture2D detailAlbedo,detailNormal;
+        Color[] controlMask;
         int controlSize;
 
-        public void Configure(WorldBuilder builder,TrackPath path,Color[] albedo,Color[] normal,Color[] mask,int size)
+        public void Configure(WorldBuilder builder,TrackPath path,Texture2D albedo,Texture2D normal,Color[] mask,int size)
         {
-            world=builder;track=path;controlBase=albedo;controlNormal=normal;controlMask=mask;controlSize=size;
+            world=builder;track=path;detailAlbedo=albedo;detailNormal=normal;controlMask=mask;controlSize=size;
         }
 
         public void Build(Mesh original,MeshRenderer renderer)
@@ -33,13 +34,13 @@ namespace VectorRush
             }
             var control=Instantiate(original);control.name="Running surface / unchanged regions";
             control.SetTriangles(remaining,0);meshes.Add(control);renderer.GetComponent<MeshFilter>().sharedMesh=control;
-            Region(original,openingFirst,openingLast,"Opening metric satin study",2048);
-            Region(original,warmFirst,warmLast,"Warm gallery metric satin study",512);
-            controlBase=null;controlNormal=null;controlMask=null;
+            Region(original,openingFirst,openingLast,"Opening metric satin study",1024);
+            Region(original,warmFirst,warmLast,"Warm gallery metric satin study",256);
+            controlMask=null;
             Debug.Log("Opening surface preview: two renderer regions, original collision retained; opening="+
                 (openingFirst/(float)Segments).ToString("F6")+".."+(openingLast/(float)Segments).ToString("F6")+
                 ", warm="+(warmFirst/(float)Segments).ToString("F6")+".."+(warmLast/(float)Segments).ToString("F6")+
-                "; smoothness mask .35..50 x .90; direct lighting only, environment reflections unchanged.");
+                "; original albedo/normal detail UV=(3u,240progress), detail normal .25; smoothness mask .35..50 x .90; direct lighting only, environment reflections unchanged.");
         }
 
         void Region(Mesh original,int first,int last,string name,int textureHeight)
@@ -60,7 +61,7 @@ namespace VectorRush
             }
             var mesh=new Mesh{name=name};mesh.vertices=vertices;mesh.normals=normals;mesh.tangents=tangents;mesh.uv=uv;
             mesh.triangles=triangles;mesh.RecalculateBounds();meshes.Add(mesh);
-            var material=world.MakeMaterial(name,new Color(.13f,.145f,.165f),.9f,0,templateName:"RoadSurface");
+            var material=world.MakeMaterial(name,new Color(.13f,.145f,.165f),.9f,0,templateName:"Materials/OpeningRoadFinish");
             Maps(material,first/(float)Segments,last/(float)Segments,textureHeight);
             var go=new GameObject(name);go.transform.SetParent(transform,false);go.AddComponent<MeshFilter>().sharedMesh=mesh;
             go.AddComponent<MeshRenderer>().sharedMaterial=material;
@@ -68,7 +69,7 @@ namespace VectorRush
 
         void Maps(Material material,float first,float last,int height)
         {
-            const int width=512;
+            const int width=256;
             var albedo=new Color[width*height];var normals=new Color[albedo.Length];var masks=new Color[albedo.Length];
             float length=(last-first)*track.Length;
             for(int y=0;y<height;y++)for(int x=0;x<width;x++){
@@ -82,34 +83,53 @@ namespace VectorRush
                 float patch=Mathf.PerlinNoise(across*.19f+43f,along*.047f+17f);
                 float breakup=Ramp(.32f,.67f,Mathf.PerlinNoise(across*.27f+81f,along*.088f+31f));
                 float margin=1-Ramp(8.6f,10.8f,Mathf.Abs(across));
-                float polish=Mathf.Clamp01(.13f+Mathf.Max(left,right)*breakup*.75f+Ramp(.3f,.72f,patch)*.24f)*margin;
-                float shade=.83f+.13f*(patch*.4f+polish*.6f);
-                var newBase=new Color(shade,shade,shade,1);
-                // Small continuous relief has a metric scale, without pixel noise as the headline.
+                float polish=Ramp(.16f,.72f,Mathf.Max(left,right)*breakup+Ramp(.3f,.72f,patch)*.18f)*margin;
+                // The original albedo is sampled independently through detail. This atlas supplies
+                // only broad, restrained darkening: satin islands retain the control albedo.
+                float shade=Mathf.Lerp(.78f,1f,polish)*Mathf.Lerp(.96f,1f,patch);
+                var newBase=new Color(shade*.5f,shade*.5f,shade*.5f,1);
+                // Broad relief bends the direct response; the original fine normal remains a
+                // separate sample at its original UV frequency, phase and .25 scale.
                 const float delta=.12f;
                 float dx=(Relief(across+delta,along)-Relief(across-delta,along))/(2*delta);
                 float dy=(Relief(across,along+delta)-Relief(across,along-delta))/(2*delta);
                 var normal=new Vector3(-dx,-dy,1).normalized;
                 var newNormal=new Color(normal.x*.5f+.5f,normal.y*.5f+.5f,normal.z*.5f+.5f,1);
                 var newMask=new Color(0,0,0,Mathf.Lerp(.35f,.5f,polish));
-                // A 12 m transition returns to the original sampled maps at either end of each study.
+                // Fine detail continues unchanged through the 12 m boundary transition. Broad
+                // normals fade to flat, never to a second copy of the original normal.
+                // A linear .5 base cancels detail albedo x2, recovering the control albedo.
                 float blend=Ramp(0,12,Mathf.Min(v*length,(1-v)*length));
                 int index=y*width+x;float oldU=u*3f,oldV=progress*240f;
-                albedo[index]=Color.Lerp(SampleControl(controlBase,oldU,oldV),newBase,blend);
-                normals[index]=Color.Lerp(SampleControl(controlNormal,oldU,oldV),newNormal,blend);
+                albedo[index]=Color.Lerp(new Color(.5f,.5f,.5f,1),newBase,blend);
+                normals[index]=Color.Lerp(new Color(.5f,.5f,1,1),newNormal,blend);
                 masks[index]=Color.Lerp(SampleControl(controlMask,oldU,oldV),newMask,blend);
             }
-            material.SetTexture("_BaseMap",Texture(material.name+" / broad aggregate",width,height,albedo,false));
-            material.SetTexture("_BumpMap",Texture(material.name+" / metric relief",width,height,normals,true));
+            material.SetTexture("_BaseMap",Texture(material.name+" / broad albedo multiplier",width,height,albedo,true,TextureFormat.RGBAHalf));
+            // Half precision represents neutral .5 exactly and keeps shallow macro slopes from
+            // collapsing into 8-bit steps. Fine textures are borrowed, owned by WorldBuilder.
+            material.SetTexture("_BumpMap",Texture(material.name+" / metric relief",width,height,normals,true,TextureFormat.RGBAHalf));
             material.SetTexture("_MetallicGlossMap",Texture(material.name+" / broken service polish",width,height,masks,true));
             material.SetTextureScale("_BaseMap",Vector2.one);
             material.SetFloat("_BumpScale",.25f);
+            material.SetTexture("_DetailAlbedoMap",detailAlbedo);
+            material.SetTexture("_DetailNormalMap",detailNormal);
+            material.SetTexture("_DetailMask",Texture2D.whiteTexture);
+            // LitInput applies this ST to already-transformed main UV. Main ST is identity,
+            // so both original detail textures recover precisely (3u,240progress).
+            material.SetTextureScale("_DetailAlbedoMap",new Vector2(3,(last-first)*240f));
+            material.SetTextureOffset("_DetailAlbedoMap",new Vector2(0,first*240f));
+            material.SetFloat("_DetailAlbedoMapScale",1);
+            material.SetFloat("_DetailNormalMapScale",.25f);
+            material.DisableKeyword("_DETAIL_SCALED");material.EnableKeyword("_DETAIL_MULX2");
+            Debug.Log("Opening road detail: "+material.name+"; template=Materials/OpeningRoadFinish; keyword="+
+                material.IsKeywordEnabled("_DETAIL_MULX2")+"; UV scale="+material.GetTextureScale("_DetailAlbedoMap")+
+                "; UV offset="+material.GetTextureOffset("_DetailAlbedoMap")+"; macro boundary normal=flat; original detail normal=.25.");
         }
 
         static float Relief(float x,float y)
         {
-            return Mathf.PerlinNoise(x*.55f+71f,y*.24f+13f)*.055f+
-                Mathf.PerlinNoise(x*1.7f+37f,y*1.4f+29f)*.007f;
+            return Mathf.PerlinNoise(x*.55f+71f,y*.24f+13f)*.14f;
         }
         static float Ramp(float low,float high,float value){return Mathf.SmoothStep(0,1,Mathf.InverseLerp(low,high,value));}
         Color SampleControl(Color[] pixels,float u,float v)
@@ -120,9 +140,9 @@ namespace VectorRush
             return Color.Lerp(Color.Lerp(pixels[y0*controlSize+x0],pixels[y0*controlSize+x1],fx),
                 Color.Lerp(pixels[y1*controlSize+x0],pixels[y1*controlSize+x1],fx),fy);
         }
-        Texture2D Texture(string name,int width,int height,Color[] pixels,bool linear)
+        Texture2D Texture(string name,int width,int height,Color[] pixels,bool linear,TextureFormat format=TextureFormat.RGBA32)
         {
-            var texture=new Texture2D(width,height,TextureFormat.RGBA32,true,linear){name=name,wrapMode=TextureWrapMode.Clamp,
+            var texture=new Texture2D(width,height,format,true,linear){name=name,wrapMode=TextureWrapMode.Clamp,
                 filterMode=FilterMode.Trilinear,anisoLevel=8};
             texture.SetPixels(pixels);texture.Apply(true,true);textures.Add(texture);return texture;
         }

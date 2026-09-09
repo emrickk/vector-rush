@@ -55,7 +55,7 @@ namespace VectorRush
             road.SetTexture("_BaseMap",roadGrain);road.SetTexture("_BumpMap",roadNormals);road.SetTexture("_MetallicGlossMap",roadSmoothness);road.SetTextureScale("_BaseMap",new Vector2(3,1));
             if(OpeningFinishPreview.SurfaceEnabled){
                 openingSurface=gameObject.AddComponent<OpeningRoadFinish>();
-                openingSurface.Configure(this,track,pixels,normals,masks,textureSize);
+                openingSurface.Configure(this,track,roadGrain,roadNormals,masks,textureSize);
             }
             ivory=MakeMaterial("Ceramic ivory",new Color(.22f,.28f,.33f),.5f,.3f);
             graphite=MakeMaterial("Structural graphite",new Color(.025f,.05f,.065f),.55f,.5f);

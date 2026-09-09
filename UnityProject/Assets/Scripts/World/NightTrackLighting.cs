@@ -59,7 +59,9 @@ namespace VectorRush
                 // Gallery meshes do not share the authored landmark UV contract. Distinguish broad
                 // construction through material response; do not stamp metric normal maps onto them.
                 var studyStructure=world.MakeMaterial("Warm study / dark structural ribs",new Color(.065f,.075f,.087f),.27f,.3f);
-                var studyShell=world.MakeMaterial("Warm study / recessed ceiling and backing",new Color(.15f,.162f,.178f),.22f,.08f);
+                // The swept backing approaches the flat cassette faces on this curved gallery.
+                // Keep its tone close enough that existing intersections do not become dark facets.
+                var studyShell=world.MakeMaterial("Warm study / recessed ceiling and backing",new Color(.24f,.232f,.212f),.28f,.08f);
                 var studyPanel=world.MakeMaterial("Warm study / neutral ceramic faces",new Color(.265f,.255f,.228f),.34f,.12f);
                 var studyTrim=world.MakeMaterial("Warm study / satin folded returns",new Color(.20f,.215f,.23f),.43f,.65f);
                 BuildGallery(track,1,.86f,cube,studyStructure,studyShell,studyPanel,studyTrim,housing,warmLight,paint);
@@ -71,14 +73,16 @@ namespace VectorRush
             // Reuse the twelve visible sources at .121–.310. Lit approach (7–9), a quieter
             // transition (10–12), lit bend (13–15), then descent (16–18). No extra light count.
             float[] intensity={520,780,860,400,190,330,820,900,530,260,650,640};
-            float[] forward={9,13,15,8,5,8,13,16,11,7,12,14};
+            float[] forward={7,9,10,7,5,7,9,11,8,6,8,10};
             int slot=index-7;
             // Source sits immediately below the actual 4.8 m diffuser, at its lateral center.
             light.transform.position=frame.Position+frame.Right*side*9.5f+frame.Up*12.48f;
             var target=frame.Position+frame.Forward*forward[slot]-frame.Right*side*1.5f;
             light.transform.rotation=Quaternion.LookRotation((target-light.transform.position).normalized,frame.Forward);
             light.intensity=intensity[slot];light.range=43;
-            light.spotAngle=(index==11||index==16)?82:92;light.innerSpotAngle=44;
+            // Keep the same intensity budget. Less overlapping, oblique footprints leave
+            // readable dark intervals and put the inner cone closer to each physical source.
+            light.spotAngle=(index==11||index==16)?68:72;light.innerSpotAngle=(index==11||index==16)?32:38;
             light.gameObject.name+=" / opening authored coverage";
         }
 
@@ -191,10 +195,10 @@ namespace VectorRush
                     // Alternating existing cassette sources create dark intervals and broad diagonal
                     // coverage. This is direct specular response, not an image of reflected fixtures.
                     float[] intensity={360,440,260,420,360,240};
-                    var target=fixture.Position+fixture.Forward*(i%2==0?6f:3.5f)+fixture.Right*(i%2==0?2.5f:-2.5f);
+                    var target=fixture.Position+fixture.Forward*(i%2==0?6f:4f)+fixture.Right*(i%2==0?3.5f:-3.5f);
                     road.transform.rotation=Quaternion.LookRotation((target-road.transform.position).normalized,fixture.Forward);
                     light.color=new Color(1,.78f,.55f);light.intensity=intensity[i];
-                    light.spotAngle=88;light.innerSpotAngle=42;light.range=31;
+                    light.spotAngle=74;light.innerSpotAngle=36;light.range=31;
                 }
             }
             string prefix=warm?"Warm gallery ":"Cool gallery ";

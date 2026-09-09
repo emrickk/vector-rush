@@ -22,6 +22,31 @@ namespace VectorRush.Editor
 
             VectorRushSetup.Prepare();
 
+            // The regional road replaces these template maps at runtime. Keep an authored
+            // detail map reference so material validation also retains the required variant.
+            var roadFinish = AssetDatabase.LoadAssetAtPath<Material>("Assets/Resources/Materials/OpeningRoadFinish.mat");
+            var roadControl = AssetDatabase.LoadAssetAtPath<Material>("Assets/Resources/RoadSurface.mat");
+            var detailSeed = AssetDatabase.LoadAssetAtPath<Texture2D>("Assets/Resources/Art/Environment/Finishes/ServiceCoating_BaseColor.png");
+            if (!roadFinish || !roadControl || !detailSeed)
+                throw new InvalidOperationException("Opening road template, prepared control or authored detail seed is missing.");
+            // Prepare establishes the working control feature combination, including normal,
+            // smoothness-map and emission variants. Preserve it on this separate template.
+            roadFinish.CopyPropertiesFromMaterial(roadControl);
+            roadFinish.SetTexture("_DetailAlbedoMap", detailSeed);
+            roadFinish.SetFloat("_DetailAlbedoMapScale", 1);
+            roadFinish.SetFloat("_DetailNormalMapScale", .25f);
+            roadFinish.DisableKeyword("_DETAIL_SCALED");
+            roadFinish.EnableKeyword("_DETAIL_MULX2");
+            foreach (string keyword in new[] { "_DETAIL_MULX2", "_NORMALMAP", "_METALLICSPECGLOSSMAP", "_EMISSION", "_ENVIRONMENTREFLECTIONS_OFF" })
+                if (!roadFinish.IsKeywordEnabled(keyword))
+                    throw new InvalidOperationException("Opening road required variant was not retained: " + keyword);
+            if (!roadFinish.GetTexture("_DetailAlbedoMap") || !roadFinish.GetTexture("_BumpMap") ||
+                !roadFinish.GetTexture("_MetallicGlossMap") || roadFinish.IsKeywordEnabled("_DETAIL_SCALED"))
+                throw new InvalidOperationException("Opening road template maps/keyword combination is incomplete.");
+            EditorUtility.SetDirty(roadFinish);
+            Debug.Log("VR_OPENING_DETAIL_TEMPLATE retained=true keyword=_DETAIL_MULX2 authoredDetailMap=" +
+                roadFinish.GetTexture("_DetailAlbedoMap").name);
+
             var pipeline = AssetDatabase.LoadAssetAtPath<UniversalRenderPipelineAsset>(PipelinePath);
             var renderer = AssetDatabase.LoadAssetAtPath<UniversalRendererData>(RendererPath);
             if (!pipeline || !renderer) throw new InvalidOperationException("Opening preview renderer settings are missing.");
