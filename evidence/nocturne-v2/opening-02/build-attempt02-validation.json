@@ -1,0 +1,15 @@
+{
+  "BuildReport": "Success",
+  "editorExitCode": 0,
+  "app": "Builds/Vector Rush-opening-02.app",
+  "detailGuardPassed": true,
+  "baselineTemplateInvalid": true,
+  "runtimeRoadKeywords": "_EMISSION,_ENVIRONMENTREFLECTIONS_OFF",
+  "runtimeSmoothnessScalar": 0.9,
+  "runtimeMapsAssignedButFeaturesDisabled": [
+    "_BumpMap",
+    "_MetallicGlossMap"
+  ],
+  "decision": "Reject same-binary comparison; preserve failure. Two diagnostic sparse captures may inform geometry only, not final whole-frame acceptance.",
+  "nextCorrection": "Persistently seed and assert both baseline and regional templates, preserving intended baseline values at runtime."
+}
