@@ -1,0 +1,156 @@
+{
+  "buildGuid": "117ef07dd95f4ceab9efba1e41f5a6d7",
+  "configuration": "BuildOptions.None; ManagedCodeVariant.Instrumented; SSR inactive; SSAO retained",
+  "modes": {
+    "off": {
+      "nativeExitCode": 0,
+      "pngsValidated": 9,
+      "indices": [
+        149,
+        211,
+        283,
+        398,
+        473,
+        607,
+        642,
+        943,
+        1004
+      ],
+      "sourceFilesUnchanged": 239,
+      "appFilesUnchanged": 189,
+      "allExactPoseTolerancePassed": false,
+      "exceptions": 0,
+      "renderGraphErrors": 0,
+      "configuration": [],
+      "shutdownWarnings": [
+        "Thread 0x16fabb000 may have been prematurely finalized",
+        "Thread 0x16e51b000 may have been prematurely finalized",
+        "Thread 0x16e74b000 may have been prematurely finalized",
+        "Thread 0x16e863000 may have been prematurely finalized",
+        "Thread 0x16e97b000 may have been prematurely finalized",
+        "Thread 0x16ea93000 may have been prematurely finalized",
+        "Thread 0x16e7d7000 may have been prematurely finalized",
+        "Thread 0x16e633000 may have been prematurely finalized",
+        "Thread 0x16e8ef000 may have been prematurely finalized",
+        "Thread 0x16e6bf000 may have been prematurely finalized",
+        "Thread 0x16ea07000 may have been prematurely finalized",
+        "Thread 0x16e5a7000 may have been prematurely finalized"
+      ]
+    },
+    "construction": {
+      "nativeExitCode": 0,
+      "pngsValidated": 9,
+      "indices": [
+        149,
+        211,
+        283,
+        398,
+        473,
+        607,
+        642,
+        943,
+        1005
+      ],
+      "sourceFilesUnchanged": 239,
+      "appFilesUnchanged": 189,
+      "allExactPoseTolerancePassed": false,
+      "exceptions": 0,
+      "renderGraphErrors": 0,
+      "configuration": [
+        "VECTOR_RUSH_OPENING_GROUP name=crossing service court accepted=true supportProgress=0.200 supportFoot=(266.253, 1.000, -54.710) socket=(262.623, 1.917, -54.817) frontage=(172.000, 0.000, -54.563) boundsMin=(171.983, 0.000, -65.079) boundsMax=(263.726, 18.175, -47.209) minimumBelowProtectedDeck=22.909 boxes=19 addedLights=2 fullCourseSamples=1200",
+        "VECTOR_RUSH_OPENING_GROUP name=inner frontage return accepted=true supportProgress=0.275 supportFoot=(202.328, 1.000, 62.219) socket=(199.804, 1.918, 59.609) frontage=(152.000, 0.000, -37.820) boundsMin=(146.703, 0.000, -40.423) boundsMax=(205.109, 31.361, 62.208) minimumBelowProtectedDeck=25.937 boxes=22 addedLights=2 fullCourseSamples=1200",
+        "VECTOR_RUSH_OPENING_CONSTRUCTION groups=2 addedLights=4 moduleTypes=3 colliders=0"
+      ],
+      "shutdownWarnings": [
+        "Thread 0x16e06f000 may have been prematurely finalized",
+        "Thread 0x16ca43000 may have been prematurely finalized",
+        "Thread 0x16cbe7000 may have been prematurely finalized",
+        "Thread 0x16ccff000 may have been prematurely finalized",
+        "Thread 0x16cd8b000 may have been prematurely finalized",
+        "Thread 0x16cc73000 may have been prematurely finalized",
+        "Thread 0x16cb5b000 may have been prematurely finalized",
+        "Thread 0x16cfbb000 may have been prematurely finalized",
+        "Thread 0x16ce17000 may have been prematurely finalized",
+        "Thread 0x16cea3000 may have been prematurely finalized",
+        "Thread 0x16cf2f000 may have been prematurely finalized",
+        "Thread 0x16cacf000 may have been prematurely finalized"
+      ]
+    },
+    "surface": {
+      "nativeExitCode": 0,
+      "pngsValidated": 9,
+      "indices": [
+        149,
+        211,
+        283,
+        398,
+        472,
+        606,
+        641,
+        943,
+        1004
+      ],
+      "sourceFilesUnchanged": 239,
+      "appFilesUnchanged": 189,
+      "allExactPoseTolerancePassed": false,
+      "exceptions": 0,
+      "renderGraphErrors": 0,
+      "configuration": [],
+      "shutdownWarnings": [
+        "Thread 0x16fb17000 may have been prematurely finalized",
+        "Thread 0x16e68f000 may have been prematurely finalized",
+        "Thread 0x16e833000 may have been prematurely finalized",
+        "Thread 0x16e94b000 may have been prematurely finalized",
+        "Thread 0x16e9d7000 may have been prematurely finalized",
+        "Thread 0x16e7a7000 may have been prematurely finalized",
+        "Thread 0x16e8bf000 may have been prematurely finalized",
+        "Thread 0x16ea63000 may have been prematurely finalized",
+        "Thread 0x16eaef000 may have been prematurely finalized",
+        "Thread 0x16eb7b000 may have been prematurely finalized",
+        "Thread 0x16e71b000 may have been prematurely finalized",
+        "Thread 0x16ec07000 may have been prematurely finalized"
+      ]
+    },
+    "combined": {
+      "nativeExitCode": 0,
+      "pngsValidated": 9,
+      "indices": [
+        149,
+        211,
+        283,
+        398,
+        473,
+        606,
+        641,
+        943,
+        1004
+      ],
+      "sourceFilesUnchanged": 239,
+      "appFilesUnchanged": 189,
+      "allExactPoseTolerancePassed": false,
+      "exceptions": 0,
+      "renderGraphErrors": 0,
+      "configuration": [
+        "VECTOR_RUSH_OPENING_GROUP name=crossing service court accepted=true supportProgress=0.200 supportFoot=(266.253, 1.000, -54.710) socket=(262.623, 1.917, -54.817) frontage=(172.000, 0.000, -54.563) boundsMin=(171.983, 0.000, -65.079) boundsMax=(263.726, 18.175, -47.209) minimumBelowProtectedDeck=22.909 boxes=19 addedLights=2 fullCourseSamples=1200",
+        "VECTOR_RUSH_OPENING_GROUP name=inner frontage return accepted=true supportProgress=0.275 supportFoot=(202.328, 1.000, 62.219) socket=(199.804, 1.918, 59.609) frontage=(152.000, 0.000, -37.820) boundsMin=(146.703, 0.000, -40.423) boundsMax=(205.109, 31.361, 62.208) minimumBelowProtectedDeck=25.937 boxes=22 addedLights=2 fullCourseSamples=1200",
+        "VECTOR_RUSH_OPENING_CONSTRUCTION groups=2 addedLights=4 moduleTypes=3 colliders=0"
+      ],
+      "shutdownWarnings": [
+        "Thread 0x1718df000 may have been prematurely finalized",
+        "Thread 0x1703cb000 may have been prematurely finalized",
+        "Thread 0x17079f000 may have been prematurely finalized",
+        "Thread 0x170457000 may have been prematurely finalized",
+        "Thread 0x17056f000 may have been prematurely finalized",
+        "Thread 0x1708b7000 may have been prematurely finalized",
+        "Thread 0x1705fb000 may have been prematurely finalized",
+        "Thread 0x17082b000 may have been prematurely finalized",
+        "Thread 0x170713000 may have been prematurely finalized",
+        "Thread 0x170943000 may have been prematurely finalized",
+        "Thread 0x1704e3000 may have been prematurely finalized",
+        "Thread 0x170687000 may have been prematurely finalized"
+      ]
+    }
+  },
+  "originalControlFilesUnchanged": 189,
+  "scope": "Sparse native automated 24 simulation-fps still capture with normal chase/physics; 1440 pose frames per mode; original pixels. No motion, audio or realtime performance acceptance. Independent visual verdict follows separately."
+}

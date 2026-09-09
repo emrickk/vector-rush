@@ -420,3 +420,9 @@ Owner authorized the next bounded pass at High effort. Added separate preview co
 ## 2026-09-09 — Opening construction source and measured placement
 
 Added two default-off service connections from existing industrial/tower frontages to actual .200/.275 pier feet. Reuses existing materials and contacts; 49 boxes in up to eight batches, four housed local lights, no new colliders. The editable procedural recipe and source-based bounds/projection/whole-course clearance audit are retained under `SourceAssets/environment-v6-context/`. Projection rectangles are not proof of visible native coverage. Source is frozen for compilation and native feedback; visual acceptance remains pending.
+
+## 2026-09-09 — Opening01 native draft candidate preserved
+
+Separate Instrumented, non-Development preview builds successfully and exits 0; GUID `117ef07dd95f4ceab9efba1e41f5a6d7`. Fresh existing EditMode suite passes 42/42. Same-binary off, construction, surface and combined modes each capture nine original 1920 × 1080 natural-crossing PNGs with all 1,440 pose frames retained. Source/app identity, PNG CRC/decompression and selection validation are recorded per mode; exact-pose tolerances do not pass, so comparisons concern whole-frame appearance. Runtime confirms two accepted groups/four new construction lights. Native shutdown thread warnings remain; no exception-free-all-categories or performance claim is implied.
+
+Generated settings keep SSR inactive and SSAO/default renderer intact. The original app remains unchanged. This commit preserves the first integrated candidate before its independent visual verdict and any correction; source cleanliness and file integrity are not visual acceptance. No continuous-motion, audio, full-lap image or realtime-performance gate has yet passed for this candidate.

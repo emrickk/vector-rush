@@ -1,0 +1,17 @@
+{
+  "buildReport": "Success",
+  "editorExitCode": 0,
+  "app": "Builds/Vector Rush-opening-01.app",
+  "configuration": "ManagedCodeVariant.Instrumented, BuildOptions.None",
+  "ssrFeatureActive": false,
+  "ssrKeywordPrefilter": 0,
+  "ssaoAndDefaultRendererDiff": "unchanged",
+  "generatedChanges": [
+    "SSR active false",
+    "SSR prefilter0 / writeSmoothness prefilter1",
+    "SSR persistent resource removed from runtime settings list",
+    "scene root serialization IDs"
+  ],
+  "controlAppUnchanged": true,
+  "buildWarnings": "Unity toolchain reports duplicate TypeDB/TestRunner IsExternalInit registration and duplicate ILPP hint paths; build succeeded. Not presented as warning-free."
+}
