@@ -17,7 +17,7 @@ Staffing is explicit: **GPT-5.6 Sol codes and integrates Unity; Astra models in 
 5. [Handoff and mandatory stop](../superpowers/plans/2026-09-09-sol-astra/handoff-and-stop.md).
 6. [Whole-course production plan](../superpowers/plans/2026-09-09-nocturne-production-rebuild.md).
 7. [Global quality diagnosis](../visual-target-reviews/004-global-aaa-assessment.md), [visual critic](../visual-target-reviews/004-global-aaa-independent-critique.md), [gameplay critic](../visual-target-reviews/004a-global-gameplay-production-critique.md).
-8. [Current Sol snapshot and coordination caveat](SOL_CHECKPOINT.md). Treat unvalidated/incomplete sections exactly as recorded; do not restart completed work or infer a green build.
+8. [Confirmed paused Sol checkpoint](SOL_CHECKPOINT.md). Treat unvalidated/incomplete sections exactly as recorded; do not restart completed work or infer a green build.
 
 The packet's owner-first review order supersedes older plans/skills that prescribe automatic review. README's original “workers not dispatched” line is historical: the owner subsequently started the separate coding task. Astra was not started at the latest owner update.
 
@@ -25,6 +25,7 @@ The packet's owner-first review order supersedes older plans/skills that prescri
 
 - The global assessment and six-milestone rebuild plan are complete planning artifacts, not completed production work.
 - Sol's coding task is `Implement Sol Astra gameplay`, Codex task ID `01a0855e-ce6a-7f71-8d08-4b53840f3be7`. Parent coordination task is `Review Vector Rush work record`, ID `01a0840d-c54a-7e43-be3b-f57b2ff2e520`. These are optional local coordination references; all necessary plan/context artifacts are in Git.
+- Sol confirmed its lane is frozen for transfer, with no Unity/Blender/shell process active.
 - Sol delivered C1 route/camera context and has been working on C2 importer/scene diagnostics and C4 race lifecycle, records, preferences/input, audio and telemetry. The checkpoint report records exact validation/completion boundaries.
 - Astra's modeling/art package does not exist yet. The owner said they would start Astra separately. Do not use diagnostic import assets as production art.
 - No finished NocturneProduction candidate, full-course art acceptance or whole-game AAA verdict is established by this transfer.
