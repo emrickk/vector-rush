@@ -46,3 +46,7 @@ Source frozen after this report. Independent verdict and native validation remai
 ### Integrator retention guard
 
 Independent source review identified possible import validation clearing primary normal/gloss-map keywords as well as detail. Before build, OpeningFinishPreviewSetup now copies properties from the freshly prepared RoadSurface into the separate template, then reapplies the authored detail seed and detail scales/keyword. It requires the normal and gloss maps plus the full `_DETAIL_MULX2`, `_NORMALMAP`, `_METALLICSPECGLOSSMAP`, `_EMISSION`, `_ENVIRONMENTREFLECTIONS_OFF` combination. Original RoadSurface is only read by this addition. A missing required feature fails the build rather than silently producing a different road. Runtime still overwrites all seed maps with original fine road textures and scoped atlases.
+
+### Native preparation failure and persistent seeds
+
+Attempt01 demonstrated that copying the prepared control did not retain `_NORMALMAP`; the guard stopped beforeBuildPlayer (exit1). The separate preview setup now assigns existing authored normal/gloss/detail seeds after copying, uses white template emission and explicitly enables all five required keywords. It checks the maps/keywords after SaveAssets. These template-only retention values are all replaced before a regional renderer is created; runtime RoadSurface is unchanged. Independent source review cleared the retry; successful compilation/native appearance are still required.

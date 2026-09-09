@@ -27,25 +27,25 @@ namespace VectorRush.Editor
             var roadFinish = AssetDatabase.LoadAssetAtPath<Material>("Assets/Resources/Materials/OpeningRoadFinish.mat");
             var roadControl = AssetDatabase.LoadAssetAtPath<Material>("Assets/Resources/RoadSurface.mat");
             var detailSeed = AssetDatabase.LoadAssetAtPath<Texture2D>("Assets/Resources/Art/Environment/Finishes/ServiceCoating_BaseColor.png");
-            if (!roadFinish || !roadControl || !detailSeed)
+            var normalSeed = AssetDatabase.LoadAssetAtPath<Texture2D>("Assets/Resources/Art/ShipSurfaces/Graphite_Normal.png");
+            var glossSeed = AssetDatabase.LoadAssetAtPath<Texture2D>("Assets/Resources/Art/Environment/Finishes/ServiceCoating_MetallicSmoothness.png");
+            if (!roadFinish || !roadControl || !detailSeed || !normalSeed || !glossSeed)
                 throw new InvalidOperationException("Opening road template, prepared control or authored detail seed is missing.");
             // Prepare establishes the working control feature combination, including normal,
             // smoothness-map and emission variants. Preserve it on this separate template.
             roadFinish.CopyPropertiesFromMaterial(roadControl);
             roadFinish.SetTexture("_DetailAlbedoMap", detailSeed);
+            roadFinish.SetTexture("_BumpMap", normalSeed);
+            roadFinish.SetTexture("_MetallicGlossMap", glossSeed);
             roadFinish.SetFloat("_DetailAlbedoMapScale", 1);
             roadFinish.SetFloat("_DetailNormalMapScale", .25f);
+            // These persistent seeds survive asset validation. Runtime MakeMaterial/Maps
+            // replaces their emission and textures before any regional renderer is created.
+            roadFinish.SetColor("_EmissionColor", Color.white);
             roadFinish.DisableKeyword("_DETAIL_SCALED");
-            roadFinish.EnableKeyword("_DETAIL_MULX2");
             foreach (string keyword in new[] { "_DETAIL_MULX2", "_NORMALMAP", "_METALLICSPECGLOSSMAP", "_EMISSION", "_ENVIRONMENTREFLECTIONS_OFF" })
-                if (!roadFinish.IsKeywordEnabled(keyword))
-                    throw new InvalidOperationException("Opening road required variant was not retained: " + keyword);
-            if (!roadFinish.GetTexture("_DetailAlbedoMap") || !roadFinish.GetTexture("_BumpMap") ||
-                !roadFinish.GetTexture("_MetallicGlossMap") || roadFinish.IsKeywordEnabled("_DETAIL_SCALED"))
-                throw new InvalidOperationException("Opening road template maps/keyword combination is incomplete.");
+                roadFinish.EnableKeyword(keyword);
             EditorUtility.SetDirty(roadFinish);
-            Debug.Log("VR_OPENING_DETAIL_TEMPLATE retained=true keyword=_DETAIL_MULX2 authoredDetailMap=" +
-                roadFinish.GetTexture("_DetailAlbedoMap").name);
 
             var pipeline = AssetDatabase.LoadAssetAtPath<UniversalRenderPipelineAsset>(PipelinePath);
             var renderer = AssetDatabase.LoadAssetAtPath<UniversalRendererData>(RendererPath);
@@ -84,6 +84,14 @@ namespace VectorRush.Editor
             EditorUtility.SetDirty(renderer);
             PlayerSettings.SetManagedCodeVariant(NamedBuildTarget.Standalone, ManagedCodeVariant.Instrumented);
             AssetDatabase.SaveAssets();
+            foreach (string keyword in new[] { "_DETAIL_MULX2", "_NORMALMAP", "_METALLICSPECGLOSSMAP", "_EMISSION", "_ENVIRONMENTREFLECTIONS_OFF" })
+                if (!roadFinish.IsKeywordEnabled(keyword))
+                    throw new InvalidOperationException("Opening road required variant was not retained after save: " + keyword);
+            if (!roadFinish.GetTexture("_DetailAlbedoMap") || !roadFinish.GetTexture("_BumpMap") ||
+                !roadFinish.GetTexture("_MetallicGlossMap") || roadFinish.IsKeywordEnabled("_DETAIL_SCALED"))
+                throw new InvalidOperationException("Opening road template maps/keyword combination is incomplete after save.");
+            Debug.Log("VR_OPENING_DETAIL_TEMPLATE retained=true requiredKeywordCount=5 keyword=_DETAIL_MULX2 authoredDetailMap=" +
+                roadFinish.GetTexture("_DetailAlbedoMap").name);
 
             string parent = Path.GetDirectoryName(output);
             if (string.IsNullOrEmpty(parent)) throw new InvalidOperationException("Opening preview output has no parent directory.");
