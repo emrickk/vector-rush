@@ -31,6 +31,17 @@ namespace VectorRush.Editor
             var glossSeed = AssetDatabase.LoadAssetAtPath<Texture2D>("Assets/Resources/Art/Environment/Finishes/ServiceCoating_MetallicSmoothness.png");
             if (!roadFinish || !roadControl || !detailSeed || !normalSeed || !glossSeed)
                 throw new InvalidOperationException("Opening road template, prepared control or authored detail seed is missing.");
+            // Prepare's built-in normal/white defaults do not persist as asset references.
+            // Preserve the baseline variant as well: runtime replaces these maps and emission
+            // before drawing, so both modes retain the existing road response.
+            roadControl.SetTexture("_BumpMap", normalSeed);
+            roadControl.SetTexture("_MetallicGlossMap", glossSeed);
+            roadControl.SetColor("_EmissionColor", Color.white);
+            roadControl.DisableKeyword("_DETAIL_MULX2");
+            roadControl.DisableKeyword("_DETAIL_SCALED");
+            foreach (string keyword in new[] { "_NORMALMAP", "_METALLICSPECGLOSSMAP", "_EMISSION", "_ENVIRONMENTREFLECTIONS_OFF" })
+                roadControl.EnableKeyword(keyword);
+            EditorUtility.SetDirty(roadControl);
             // Prepare establishes the working control feature combination, including normal,
             // smoothness-map and emission variants. Preserve it on this separate template.
             roadFinish.CopyPropertiesFromMaterial(roadControl);
@@ -84,6 +95,13 @@ namespace VectorRush.Editor
             EditorUtility.SetDirty(renderer);
             PlayerSettings.SetManagedCodeVariant(NamedBuildTarget.Standalone, ManagedCodeVariant.Instrumented);
             AssetDatabase.SaveAssets();
+            foreach (string keyword in new[] { "_NORMALMAP", "_METALLICSPECGLOSSMAP", "_EMISSION", "_ENVIRONMENTREFLECTIONS_OFF" })
+                if (!roadControl.IsKeywordEnabled(keyword))
+                    throw new InvalidOperationException("Opening baseline road variant was not retained after save: " + keyword);
+            if (!roadControl.GetTexture("_BumpMap") || !roadControl.GetTexture("_MetallicGlossMap") ||
+                roadControl.IsKeywordEnabled("_DETAIL_MULX2") || roadControl.IsKeywordEnabled("_DETAIL_SCALED"))
+                throw new InvalidOperationException("Opening baseline road maps/keyword combination is incomplete after save.");
+            Debug.Log("VR_OPENING_BASELINE_TEMPLATE retained=true requiredKeywordCount=4 detail=false");
             foreach (string keyword in new[] { "_DETAIL_MULX2", "_NORMALMAP", "_METALLICSPECGLOSSMAP", "_EMISSION", "_ENVIRONMENTREFLECTIONS_OFF" })
                 if (!roadFinish.IsKeywordEnabled(keyword))
                     throw new InvalidOperationException("Opening road required variant was not retained after save: " + keyword);

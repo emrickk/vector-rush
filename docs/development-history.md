@@ -454,3 +454,7 @@ Corrected the demonstrated preparation failure with persistent existing normal/g
 Build attempt02 succeeds and exits0, GUID820fb25545d3470894c50fee5095e2c0, with correct regional detail-template guard. Generated baseline RoadSurface nevertheless loses its normal and gloss-map keywords. Native diagnostics confirm the actual road material has only emission/environment-opt-out keywords while scalar smoothness is.9: assigned normal/wear textures are ineffective. Off and combined each finish9 intact native diagnostic PNGs with all1440 poses and unchanged source/app hashes. These are rejected as a valid whole-frame comparison; only construction placement may inform a provisional review.
 
 Preserved opening02 app/evidence and generated source state. Next technical correction persistently seeds both baseline and regional build templates and asserts their distinct full keyword sets. Original control app remains unchanged. This is a retention correction within the first visual revision, not another art-constant round or accepted quality gain.
+
+## 2026-09-09 — Preserve baseline road shader features in preview builds
+
+Added persistent authored normal/gloss seed references and explicit baseline keyword restoration alongside the regional template, with both feature combinations asserted after save. Runtime replaces seed values before drawing. This corrects the observed opening02 control failure and will be verified in separately named opening03; art source remains the same first correction.
