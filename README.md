@@ -4,6 +4,8 @@ A playable, original anti-gravity racing prototype for Apple Silicon macOS. Pilo
 
 [Complete illustrated work record](docs/development-work-record.html) · [Markdown edition](docs/development-work-record.md)
 
+[New consistent visual targets and native comparison](docs/visual-targets-v2.html) · [Gap evaluation and reference originals](references/nocturne-v2/README.md)
+
 [Private GitHub repository](https://github.com/emrickk/vector-rush) · [Build brief](docs/GPT6-BUILD-PROMPT.md) · [Development history](docs/development-history.md) · [Ship art plan](docs/ship-art-plan.md)
 
 ## Stage 1 — one road comparison completed

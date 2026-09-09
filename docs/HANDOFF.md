@@ -1,5 +1,11 @@
 # Vector Rush handoff — 2026-09-08
 
+## Latest reference refresh — appearance targets and gap review
+
+The owner requested consistent reference images and evaluation after reviewing this handoff. Four new generated [Nocturne V2 targets](../references/nocturne-v2/README.md) now share the current craft and one appearance reference across the opening bend, amber gallery, thermal passage, and a neutral craft study. The [interactive comparison](visual-targets-v2.html) places original native evidence beside each target. Exact prompts, input camera/file provenance, image integrity checks, consistency limitations, and prioritized native acceptance criteria are preserved with the set.
+
+The main gaps are road/light interaction, connected lower/middle city construction, and architectural/material finish. The craft's primary identity should remain. Generated road sheen is an upper limit; small generated geometry/projection changes are not blueprint requirements. The studio comparison uses the historical contact-repair control with older maps and is labeled accordingly. This is a parent-assistant art-direction review, not an independent production pass. Runtime and the local app are unchanged. The proposed SSR test below remains a separate implementation step and would address only part of the visual gap.
+
 ## Current result — resumed road pass completed
 
 The owner resumed after the historical pause below. One higher-smoothness candidate was rejected for insufficient useful whole-frame gain by the parent and independent [review004](road-reviews/004-resumed-smoothness-native.md). Candidate source is preserved at `a5debfb`; the exact control runtime, scene and app are restored. The app remains GUID `40bed5f53c2449418e7fb56bf59739f6`. [Decision](../evidence/night-production/road-response/decision.md) · [restoration identity](../evidence/night-production/road-response/restoration-validation.json).

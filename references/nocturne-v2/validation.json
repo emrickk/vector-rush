@@ -1,0 +1,16 @@
+{
+  "checkedUtc": "2026-09-09T03:07:59.726420+00:00",
+  "htmlLinks": 19,
+  "htmlImages": 8,
+  "markdownLinks": 11,
+  "missingLocalTargets": [],
+  "nativeComparisonFilesTracked": [
+    "evidence/night-production/road-response/control/selected/frame-0149.png",
+    "evidence/night-production/road-response/control/full-lap/03-middle.png",
+    "evidence/night-production/road-response/control/selected/frame-0607.png",
+    "evidence/ship-native-v4-control-01/01-studio-rear-three-quarter.png"
+  ],
+  "browserInspection": "Loaded in Codex in-app browser through loopback HTTP. Opening side-by-side layout inspected; Target button switches to enlarged target and selected state. No broad responsive/browser-matrix claim.",
+  "imageIntegrity": "Four targets and four source PNGs passed chunk CRC and decompression; see provenance.json.",
+  "runtimeChanges": "None. No Unity build, tests, native game, or rendering experiment launched."
+}
