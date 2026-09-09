@@ -1,0 +1,16 @@
+{
+  "buildReport": "Succeeded",
+  "separateApp": "Builds/Vector Rush-SSR-preview-02.app",
+  "nativeConfiguration": "Development + ManagedCodeVariant.Instrumented",
+  "compilerDefinesVerified": [
+    "DEVELOPMENT_BUILD",
+    "ENABLE_PROFILER",
+    "UNITY_INCLUDE_INSTRUMENTATION"
+  ],
+  "compilerResponse": "UnityProject/Library/Bee/artifacts/200b0aPDevIns.dag/Unity.RenderPipelines.Core.Runtime.rsp",
+  "editorExitCode": 143,
+  "editorExitScope": "BuildReport completed and log reached Exiting batchmode successfully now; process lingered over a minute, then integrator terminated that owned batch process before native launch. Native result not inferred from Editor exit.",
+  "rendererDefault": 0,
+  "ssrPrefilter": 1,
+  "controlAppUnchanged": true
+}

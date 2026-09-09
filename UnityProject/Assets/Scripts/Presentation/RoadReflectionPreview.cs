@@ -65,7 +65,7 @@ namespace VectorRush
             return null;
         }
 
-        static readonly string[] MarkerNames = { "SSR - Upscaling", "SSR - Depth Pyramid Generation", "SSR - Final Blit" };
+        static readonly string[] MarkerNames = { "SSR", "SSR - Upscaling", "SSR - Depth Pyramid Generation", "SSR - Final Blit", "Inl_SSR", "Inl_SSR - Upscaling" };
         readonly ProfilerRecorder[] recorders = new ProfilerRecorder[MarkerNames.Length];
         readonly long[] framesWithSamples = new long[MarkerNames.Length];
         readonly long[] maximumNanoseconds = new long[MarkerNames.Length];

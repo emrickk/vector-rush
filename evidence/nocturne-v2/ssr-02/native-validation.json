@@ -1,0 +1,144 @@
+{
+  "buildGuid": "f1a459e36c064afc930b841eede3d488",
+  "configuration": "Development + ManagedCodeVariant.Instrumented",
+  "nativeExitCodes": {
+    "off": 0,
+    "on": 0
+  },
+  "controlAppUnchanged": true,
+  "captureScope": "Native automated steering at 24 simulation fps; not realtime performance or watched motion.",
+  "runs": {
+    "off": {
+      "pngsValidated": 1440,
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "sourceFilesUnchanged": 241,
+      "appFilesUnchanged": 303,
+      "selectedIndices": [
+        149,
+        211,
+        283,
+        398,
+        473,
+        607,
+        642,
+        1004,
+        943
+      ],
+      "priorFailureCounts": {
+        "UnityException:": 0,
+        "NullReferenceException:": 0,
+        "InvalidOperationException:": 0,
+        "Render Graph Execution error": 0
+      },
+      "cameraScope": [
+        "VR_SSR_CAMERA_SCOPE type=Game action=delegate delegationDoesNotProveExecution=true",
+        "VR_SSR_CAMERA_SCOPE type=Reflection action=skip delegationDoesNotProveExecution=true"
+      ],
+      "markers": {
+        "SSR": {
+          "valid": true,
+          "framesWithPositiveSamples": 0,
+          "maxCpuNanosecondsDiagnosticOnly": 0
+        },
+        "SSR - Upscaling": {
+          "valid": true,
+          "framesWithPositiveSamples": 0,
+          "maxCpuNanosecondsDiagnosticOnly": 0
+        },
+        "SSR - Depth Pyramid Generation": {
+          "valid": true,
+          "framesWithPositiveSamples": 0,
+          "maxCpuNanosecondsDiagnosticOnly": 0
+        },
+        "SSR - Final Blit": {
+          "valid": true,
+          "framesWithPositiveSamples": 0,
+          "maxCpuNanosecondsDiagnosticOnly": 0
+        },
+        "Inl_SSR": {
+          "valid": true,
+          "framesWithPositiveSamples": 0,
+          "maxCpuNanosecondsDiagnosticOnly": 0
+        },
+        "Inl_SSR - Upscaling": {
+          "valid": true,
+          "framesWithPositiveSamples": 0,
+          "maxCpuNanosecondsDiagnosticOnly": 0
+        }
+      },
+      "shutdownNotes": "Native shutdown logs include premature-thread-finalization warnings and a MemoryLeaks immediate diagnostic; no leak-free acceptance is claimed."
+    },
+    "on": {
+      "pngsValidated": 1440,
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "sourceFilesUnchanged": 241,
+      "appFilesUnchanged": 303,
+      "selectedIndices": [
+        149,
+        211,
+        283,
+        398,
+        473,
+        606,
+        641,
+        1004,
+        943
+      ],
+      "priorFailureCounts": {
+        "UnityException:": 0,
+        "NullReferenceException:": 0,
+        "InvalidOperationException:": 0,
+        "Render Graph Execution error": 0
+      },
+      "cameraScope": [
+        "VR_SSR_CAMERA_SCOPE type=Game action=delegate delegationDoesNotProveExecution=true",
+        "VR_SSR_CAMERA_SCOPE type=Reflection action=skip delegationDoesNotProveExecution=true"
+      ],
+      "markers": {
+        "SSR": {
+          "valid": true,
+          "framesWithPositiveSamples": 1690,
+          "maxCpuNanosecondsDiagnosticOnly": 10293083
+        },
+        "SSR - Upscaling": {
+          "valid": true,
+          "framesWithPositiveSamples": 1690,
+          "maxCpuNanosecondsDiagnosticOnly": 1583166
+        },
+        "SSR - Depth Pyramid Generation": {
+          "valid": true,
+          "framesWithPositiveSamples": 0,
+          "maxCpuNanosecondsDiagnosticOnly": 0
+        },
+        "SSR - Final Blit": {
+          "valid": true,
+          "framesWithPositiveSamples": 1690,
+          "maxCpuNanosecondsDiagnosticOnly": 5809334
+        },
+        "Inl_SSR": {
+          "valid": true,
+          "framesWithPositiveSamples": 1690,
+          "maxCpuNanosecondsDiagnosticOnly": 6900083
+        },
+        "Inl_SSR - Upscaling": {
+          "valid": true,
+          "framesWithPositiveSamples": 1690,
+          "maxCpuNanosecondsDiagnosticOnly": 728583
+        }
+      },
+      "shutdownNotes": "Native shutdown logs include premature-thread-finalization warnings and a MemoryLeaks immediate diagnostic; no leak-free acceptance is claimed."
+    }
+  },
+  "limits": [
+    "No GPU output/readback validation; positive CPU marker samples prove instrumented work only.",
+    "Depth/normal/smoothness GPU input contents not inspected.",
+    "Exact-pose tolerance is not satisfied; comparisons are natural crossings.",
+    "No realtime performance or continuous/manual/audio pass collected for this candidate."
+  ]
+}

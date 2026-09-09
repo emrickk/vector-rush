@@ -392,3 +392,11 @@ Added matching unused SSR-free renderer as a build requirement. Generated prefil
 ## 2026-09-08 — Propulsion startup correction verified; SSR01 native failure preserved
 
 Moved only MaterialPropertyBlock allocation into IonPropulsion.Awake. Independent 001c review clears source; rebuilt Development preview GUID47944ad3754d45adb51c354c3251c518 completes clean SSR-off capture without the earlier initialization exceptions. Both off and on finish1440 original1080p PNGs, all integrity checks pass, nine natural crossings retained, exact-pose tolerances still fail. ON produces six RenderGraph exceptions on reflection-probe rendering and shows the error console, so image integrity is not a reflection or quality pass. No performance sample collected. Original control app unchanged. See `evidence/nocturne-v2/ssr-01/native-validation.json`.
+
+## 2026-09-08 — SSR02 camera scope and native instrumentation
+
+Replaced the preview feature with a project-owned subclass that delegates Game cameras and skips reflection cameras; kept the installed package, probe, materials, lights and scene behavior. Enabled the supported Instrumented managed variant in the separate Development app. Independent source review 001e found no blocker. BuildReport succeeds; the Editor later lingered after its exit message and was terminated with exit 143, recorded separately from the two successful native exits.
+
+SSR02 GUID `f1a459e36c064afc930b841eede3d488` completes both off/on runs with 1,440 intact 1920 × 1080 original PNGs each. Source and app hashes remain unchanged across capture; all nine natural selections retain failed exact-pose tolerances. The prior rendering/initialization exceptions are absent. Instrumented SSR/upscaling/final-blit CPU markers record 1,690 positive frames on and zero off. This establishes instrumented pass work, not correct GPU buffers or useful reflections. Shutdown warnings remain recorded. Original control app hashes still match.
+
+See [native validation](../evidence/nocturne-v2/ssr-02/native-validation.json). No GPU-output inspection, realtime performance, continuous-view or manual/audio acceptance is claimed. The candidate and source correction are preserved before the separate visual verdict.

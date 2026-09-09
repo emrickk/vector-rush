@@ -1,0 +1,518 @@
+Mono path[0] = '/Users/anping/Documents/Stuff/AI Space/Vector Rush/Builds/Vector Rush-SSR-preview-02.app/Contents/Resources/Data/Managed'
+Mono config path = '/Users/anping/Documents/Stuff/AI Space/Vector Rush/Builds/Vector Rush-SSR-preview-02.app/Contents/MonoBleedingEdge/etc'
+CodeReloadManager initialized
+Found 1 interfaces on host : 0) 192.168.0.153
+Player connection [8512643456]  Target information:
+
+Player connection [8512643456]  * "[IP] 192.168.0.153 [Port] 55000 [Flags] 2 [Guid] 872100605 [EditorId] 4251148645 [Version] 1048832 [Id] OSXPlayer(1,Anping-MacBook-Pro.local) [Debug] 0 [PackageName] OSXPlayer [ProjectName] Vector Rush" 
+
+Player connection [8512643456] Started UDP target info broadcast (1) on [225.0.0.222:54997].
+
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+ preferred device: Apple M2 Max (high power)
+Metal devices available: 1
+0: Apple M2 Max (high power)
+Using device Apple M2 Max (high power)
+Initialize engine version: 6000.6.0f1 (f7f8ed4d1e24)
+[EntityIdStore] init: VM path (explicit commit), pageSize=16384, blockCount=262144, entitiesPerBlock=1024, slots reserved=4294967296 bytes
+[Subsystems] Discovering subsystems at path /Users/anping/Documents/Stuff/AI Space/Vector Rush/Builds/Vector Rush-SSR-preview-02.app/Contents/Resources/Data/UnitySubsystems
+GfxDevice: creating device client; kGfxThreadingModeThreaded
+Initializing Metal device caps: Apple M2 Max
+Mac GPU Family: 2
+Apple GPU Family: 8
+MSL Version: 3.0
+Has Float MSAA: 1
+Has Float Filtering: 1
+ReadWrite Texture Tier: 2
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Finished resetting the current domain, in  0.008 seconds
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Metal RecreateSurface[0x111f59cb0]: surface size 1920x1080
+UnloadTime: 1.284084 ms
+VECTOR_RUSH_LANDMARK resource=Nocturne_SplitSignal_Mast center=(304.13, 0.00, 24.65) halfFootprint=(27.00, 33.00)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:66)
+UnityEngine.Debug:Log (object,UnityEngine.Object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:135)
+VectorRush.NightLandmarks:Build (VectorRush.WorldBuilder,VectorRush.TrackPath) (at /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Scripts/World/NightLandmarks.cs:97)
+VectorRush.NightDistrict:Build (VectorRush.WorldBuilder,VectorRush.TrackPath) (at /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Scripts/World/NightDistrict.cs:70)
+VectorRush.WorldBuilder:Build (VectorRush.TrackPath) (at /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Scripts/World/WorldBuilder.cs:90)
+VectorRush.VectorBootstrap:Awake () (at /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Scripts/VectorBootstrap.cs:21)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 135)
+
+VECTOR_RUSH_LANDMARK resource=Nocturne_ThermalExchange_Works center=(-155.88, 0.00, 148.33) halfFootprint=(23.00, 43.00)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:66)
+UnityEngine.Debug:Log (object,UnityEngine.Object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:135)
+VectorRush.NightLandmarks:Build (VectorRush.WorldBuilder,VectorRush.TrackPath) (at /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Scripts/World/NightLandmarks.cs:97)
+VectorRush.NightDistrict:Build (VectorRush.WorldBuilder,VectorRush.TrackPath) (at /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Scripts/World/NightDistrict.cs:70)
+VectorRush.WorldBuilder:Build (VectorRush.TrackPath) (at /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Scripts/World/WorldBuilder.cs:90)
+VectorRush.VectorBootstrap:Awake () (at /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Scripts/VectorBootstrap.cs:21)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 135)
+
+VR_SSR_REQUESTED False compiled=true mode=Disabled
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+VectorRush.RoadReflectionPreview:Configure (UnityEngine.Rendering.VolumeProfile) (at /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Scripts/Presentation/RoadReflectionPreview.cs:42)
+VectorRush.VectorBootstrap:Awake () (at /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Scripts/VectorBootstrap.cs:31)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+VR_SSR_DIAGNOSTICS enabled; CPU marker samples do not prove GPU output correctness. Depth/normal/smoothness image inspection remains external.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+VectorRush.RoadReflectionPreview:Start () (at /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Scripts/Presentation/RoadReflectionPreview.cs:76)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+VR_SSR_CAMERA_SCOPE type=Game action=delegate delegationDoesNotProveExecution=true
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+VectorRush.RoadReflectionRendererFeature:AddRenderPasses (UnityEngine.Rendering.Universal.ScriptableRenderer,UnityEngine.Rendering.Universal.RenderingData&) (at /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Scripts/Presentation/RoadReflectionRendererFeature.cs:27)
+UnityEngine.Rendering.Universal.ScriptableRenderer:AddRenderPasses (UnityEngine.Rendering.Universal.RenderingData&) (at ./Library/PackageCache/com.unity.render-pipelines.universal@8457e85b8184/Runtime/ScriptableRenderer.cs:1153)
+UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.Universal.UniversalCameraData) (at ./Library/PackageCache/com.unity.render-pipelines.universal@8457e85b8184/Runtime/UniversalRenderPipeline.cs:1061)
+UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderCameraStack (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera,bool) (at ./Library/PackageCache/com.unity.render-pipelines.universal@8457e85b8184/Runtime/UniversalRenderPipeline.cs:1275)
+UnityEngine.Rendering.Universal.UniversalRenderPipeline:Render (UnityEngine.Rendering.ScriptableRenderContext,System.Collections.Generic.List`1<UnityEngine.Camera>) (at ./Library/PackageCache/com.unity.render-pipelines.universal@8457e85b8184/Runtime/UniversalRenderPipeline.cs:629)
+UnityEngine.Rendering.RenderPipeline:InternalRender (UnityEngine.Rendering.ScriptableRenderContext,System.Collections.Generic.List`1<UnityEngine.Camera>) (at /Users/bokken/build/output/unity/unity/Runtime/Export/RenderPipeline/RenderPipeline.cs:58)
+UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal (UnityEngine.Rendering.RenderPipelineAsset,intptr,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/RenderPipeline/RenderPipelineManager.cs:159)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+VR_SSR_CAMERA_SCOPE type=Reflection action=skip delegationDoesNotProveExecution=true
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+VectorRush.RoadReflectionRendererFeature:AddRenderPasses (UnityEngine.Rendering.Universal.ScriptableRenderer,UnityEngine.Rendering.Universal.RenderingData&) (at /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Scripts/Presentation/RoadReflectionRendererFeature.cs:27)
+UnityEngine.Rendering.Universal.ScriptableRenderer:AddRenderPasses (UnityEngine.Rendering.Universal.RenderingData&) (at ./Library/PackageCache/com.unity.render-pipelines.universal@8457e85b8184/Runtime/ScriptableRenderer.cs:1153)
+UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.Universal.UniversalCameraData) (at ./Library/PackageCache/com.unity.render-pipelines.universal@8457e85b8184/Runtime/UniversalRenderPipeline.cs:1061)
+UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCameraInternal (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera,UnityEngine.Rendering.Universal.UniversalAdditionalCameraData&,bool) (at ./Library/PackageCache/com.unity.render-pipelines.universal@8457e85b8184/Runtime/UniversalRenderPipeline.cs:875)
+UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCameraInternal (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera,bool) (at ./Library/PackageCache/com.unity.render-pipelines.universal@8457e85b8184/Runtime/UniversalRenderPipeline.cs:850)
+UnityEngine.Rendering.Universal.UniversalRenderPipeline:Render (UnityEngine.Rendering.ScriptableRenderContext,System.Collections.Generic.List`1<UnityEngine.Camera>) (at ./Library/PackageCache/com.unity.render-pipelines.universal@8457e85b8184/Runtime/UniversalRenderPipeline.cs:643)
+UnityEngine.Rendering.RenderPipeline:InternalRender (UnityEngine.Rendering.ScriptableRenderContext,System.Collections.Generic.List`1<UnityEngine.Camera>) (at /Users/bokken/build/output/unity/unity/Runtime/Export/RenderPipeline/RenderPipeline.cs:58)
+UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal (UnityEngine.Rendering.RenderPipelineAsset,intptr,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/RenderPipeline/RenderPipelineManager.cs:159)
+UnityEngine.Experimental.Rendering.BuiltinRuntimeReflectionSystem:TickRealtimeProbes () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Camera/BuiltinRuntimeReflectionSystem.bindings.cs:11)
+UnityEngine.Experimental.Rendering.ScriptableRuntimeReflectionSystemWrapper:Internal_ScriptableRuntimeReflectionSystemWrapper_TickRealtimeProbes (bool&) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Camera/ScriptableRuntimeReflectionSystemWrapper.cs:13)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+VR_SSR_NATIVE_RESOURCES container=True
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+VectorRush.RoadReflectionPreview:ReportNativeState () (at /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Scripts/Presentation/RoadReflectionPreview.cs:114)
+VectorRush.RoadReflectionPreview:Update () (at /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Scripts/Presentation/RoadReflectionPreview.cs:104)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+VR_SSR_NATIVE_RESOURCE Shader=Hidden/Universal Render Pipeline/ComputeScreenSpaceReflection supported=True
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+VectorRush.RoadReflectionPreview:ReportNativeState () (at /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Scripts/Presentation/RoadReflectionPreview.cs:119)
+VectorRush.RoadReflectionPreview:Update () (at /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Scripts/Presentation/RoadReflectionPreview.cs:104)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+VR_SSR_NATIVE_RESOURCE BlitShader=Hidden/Universal/BlitFullPrecision supported=True
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+VectorRush.RoadReflectionPreview:ReportNativeState () (at /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Scripts/Presentation/RoadReflectionPreview.cs:119)
+VectorRush.RoadReflectionPreview:Update () (at /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Scripts/Presentation/RoadReflectionPreview.cs:104)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+VR_SSR_NATIVE_FEATURE renderer=VectorRenderer active=True afterOpaque=False
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+VectorRush.RoadReflectionPreview:ReportNativeState () (at /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Scripts/Presentation/RoadReflectionPreview.cs:132)
+VectorRush.RoadReflectionPreview:Update () (at /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Scripts/Presentation/RoadReflectionPreview.cs:104)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+VR_SSR_NATIVE_FEATURE_RESOURCE m_Shader=UNINITIALIZED
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+VectorRush.RoadReflectionPreview:ReportNativeState () (at /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Scripts/Presentation/RoadReflectionPreview.cs:136)
+VectorRush.RoadReflectionPreview:Update () (at /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Scripts/Presentation/RoadReflectionPreview.cs:104)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+VR_SSR_NATIVE_FEATURE_RESOURCE m_BlitShader=UNINITIALIZED
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+VectorRush.RoadReflectionPreview:ReportNativeState () (at /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Scripts/Presentation/RoadReflectionPreview.cs:136)
+VectorRush.RoadReflectionPreview:Update () (at /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Scripts/Presentation/RoadReflectionPreview.cs:104)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+VR_SSR_NATIVE_FEATURE_RESOURCE m_Material=UNINITIALIZED
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+VectorRush.RoadReflectionPreview:ReportNativeState () (at /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Scripts/Presentation/RoadReflectionPreview.cs:136)
+VectorRush.RoadReflectionPreview:Update () (at /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Scripts/Presentation/RoadReflectionPreview.cs:104)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+VR_SSR_NATIVE_FEATURE_RESOURCE m_BlitMaterial=UNINITIALIZED
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+VectorRush.RoadReflectionPreview:ReportNativeState () (at /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Scripts/Presentation/RoadReflectionPreview.cs:136)
+VectorRush.RoadReflectionPreview:Update () (at /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Scripts/Presentation/RoadReflectionPreview.cs:104)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+VR_SSR_NATIVE_FEATURE_COUNT 1 introspectionAvailable=True
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+VectorRush.RoadReflectionPreview:ReportNativeState () (at /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Scripts/Presentation/RoadReflectionPreview.cs:139)
+VectorRush.RoadReflectionPreview:Update () (at /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Scripts/Presentation/RoadReflectionPreview.cs:104)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+VR_SSR_NATIVE_VOLUME {"active":true,"mode":{"m_OverrideState":true,"m_Value":0},"reflectionStrength":{"m_OverrideState":true,"m_Value":1.0},"clampReflectedColor":{"m_OverrideState":false,"m_Value":false},"maxColorValue":{"m_OverrideState":false,"m_Value":1.0},"resolution":{"m_OverrideState":true,"m_Value":2},"upscalingMethod":{"m_OverrideState":true,"m_Value":0},"marchingMethod":{"m_OverrideState":true,"m_Value":0},"hitRefinementSteps":{"m_OverrideState":true,"m_Value":5},"finalThicknessMultiplier":{"m_OverrideState":true,"m_Value":0.05000000074505806},"roughnessFilter":{"m_OverrideState":true,"m_Value":2},"roughnessScale":{"m_OverrideState":true,"m_Value":0.0},"minimumSmoothness":{"m_OverrideState":true,"m_Value":0.05000000074505806},"smoothnessFadeStart":{"m_OverrideState":true,"m_Value":0.10000000149011612},"normalFade":{"m_OverrideState":false,"m_Value":0.0},"screenEdgeFadeDistance":{"m_OverrideState":false,"m_Value":0.20000000298023224},"reflectSky":{"m_OverrideState":true,"m_Value":false},"maxRayLength":{"m_OverrideState":true,"m_Value":30.0},"rayLengthFade":{"m_OverrideState":false,"m_Value":1.0},"maxRaySteps":{"m_OverrideState":true,"m_Value":32},"objectThickness":{"m_OverrideState":true,"m_Value":0.32499998807907104},"temporalFiltering":{"m_OverrideState":true,"m_Value":false},"baseBlendFactor":{"m_OverrideState":false,"m_Value":0.949999988079071}}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+VectorRush.RoadReflectionPreview:ReportNativeState () (at /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Scripts/Presentation/RoadReflectionPreview.cs:141)
+VectorRush.RoadReflectionPreview:Update () (at /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Scripts/Presentation/RoadReflectionPreview.cs:104)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+VR_SSR_NATIVE_ROAD_TEMPLATE optOut=False templateOnly=true
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+VectorRush.RoadReflectionPreview:ReportNativeState () (at /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Scripts/Presentation/RoadReflectionPreview.cs:143)
+VectorRush.RoadReflectionPreview:Update () (at /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Scripts/Presentation/RoadReflectionPreview.cs:104)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+VR_SSR_NATIVE_ROAD_INSTANCE found=True
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+VectorRush.RoadReflectionPreview:ReportNativeState () (at /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Scripts/Presentation/RoadReflectionPreview.cs:147)
+VectorRush.RoadReflectionPreview:Update () (at /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Scripts/Presentation/RoadReflectionPreview.cs:104)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+VR_SSR_NATIVE_ROAD_MATERIAL name=Satin graphite running deck shader=Universal Render Pipeline/Lit keywords=_EMISSION,_ENVIRONMENTREFLECTIONS_OFF,_METALLICSPECGLOSSMAP,_NORMALMAP
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+VectorRush.RoadReflectionPreview:ReportNativeState () (at /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Scripts/Presentation/RoadReflectionPreview.cs:150)
+VectorRush.RoadReflectionPreview:Update () (at /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Scripts/Presentation/RoadReflectionPreview.cs:104)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+VR_SSR_NATIVE_ROAD_FLOAT _Smoothness=0.9
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+VectorRush.RoadReflectionPreview:ReportNativeState () (at /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Scripts/Presentation/RoadReflectionPreview.cs:154)
+VectorRush.RoadReflectionPreview:Update () (at /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Scripts/Presentation/RoadReflectionPreview.cs:104)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+VR_SSR_NATIVE_ROAD_FLOAT _BumpScale=0.25
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+VectorRush.RoadReflectionPreview:ReportNativeState () (at /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Scripts/Presentation/RoadReflectionPreview.cs:154)
+VectorRush.RoadReflectionPreview:Update () (at /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Scripts/Presentation/RoadReflectionPreview.cs:104)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+VR_SSR_NATIVE_ROAD_FLOAT _EnvironmentReflections=0
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+VectorRush.RoadReflectionPreview:ReportNativeState () (at /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Scripts/Presentation/RoadReflectionPreview.cs:154)
+VectorRush.RoadReflectionPreview:Update () (at /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Scripts/Presentation/RoadReflectionPreview.cs:104)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+VR_SSR_NATIVE_ROAD_MAP _BaseMap=Deck aggregate pixelsInspected=false
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+VectorRush.RoadReflectionPreview:ReportNativeState () (at /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Scripts/Presentation/RoadReflectionPreview.cs:159)
+VectorRush.RoadReflectionPreview:Update () (at /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Scripts/Presentation/RoadReflectionPreview.cs:104)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+VR_SSR_NATIVE_ROAD_MAP _MetallicGlossMap=Satin deck service wear pixelsInspected=false
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+VectorRush.RoadReflectionPreview:ReportNativeState () (at /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Scripts/Presentation/RoadReflectionPreview.cs:159)
+VectorRush.RoadReflectionPreview:Update () (at /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Scripts/Presentation/RoadReflectionPreview.cs:104)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+VR_SSR_NATIVE_ROAD_MAP _BumpMap=Deck fine relief pixelsInspected=false
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+VectorRush.RoadReflectionPreview:ReportNativeState () (at /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Scripts/Presentation/RoadReflectionPreview.cs:159)
+VectorRush.RoadReflectionPreview:Update () (at /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Scripts/Presentation/RoadReflectionPreview.cs:104)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+VR_SSR_CPU_MARKER name=SSR valid=True framesWithPositiveSamples=0 maxNanoseconds=0 gpuOutputVerified=false
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+VectorRush.RoadReflectionPreview:ReportMarkers () (at /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Scripts/Presentation/RoadReflectionPreview.cs:172)
+VectorRush.RoadReflectionPreview:Update () (at /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Scripts/Presentation/RoadReflectionPreview.cs:105)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+VR_SSR_CPU_MARKER name=SSR - Upscaling valid=True framesWithPositiveSamples=0 maxNanoseconds=0 gpuOutputVerified=false
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+VectorRush.RoadReflectionPreview:ReportMarkers () (at /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Scripts/Presentation/RoadReflectionPreview.cs:172)
+VectorRush.RoadReflectionPreview:Update () (at /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Scripts/Presentation/RoadReflectionPreview.cs:105)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+VR_SSR_CPU_MARKER name=SSR - Depth Pyramid Generation valid=True framesWithPositiveSamples=0 maxNanoseconds=0 gpuOutputVerified=false
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+VectorRush.RoadReflectionPreview:ReportMarkers () (at /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Scripts/Presentation/RoadReflectionPreview.cs:172)
+VectorRush.RoadReflectionPreview:Update () (at /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Scripts/Presentation/RoadReflectionPreview.cs:105)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+VR_SSR_CPU_MARKER name=SSR - Final Blit valid=True framesWithPositiveSamples=0 maxNanoseconds=0 gpuOutputVerified=false
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+VectorRush.RoadReflectionPreview:ReportMarkers () (at /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Scripts/Presentation/RoadReflectionPreview.cs:172)
+VectorRush.RoadReflectionPreview:Update () (at /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Scripts/Presentation/RoadReflectionPreview.cs:105)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+VR_SSR_CPU_MARKER name=Inl_SSR valid=True framesWithPositiveSamples=0 maxNanoseconds=0 gpuOutputVerified=false
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+VectorRush.RoadReflectionPreview:ReportMarkers () (at /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Scripts/Presentation/RoadReflectionPreview.cs:172)
+VectorRush.RoadReflectionPreview:Update () (at /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Scripts/Presentation/RoadReflectionPreview.cs:105)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+VR_SSR_CPU_MARKER name=Inl_SSR - Upscaling valid=True framesWithPositiveSamples=0 maxNanoseconds=0 gpuOutputVerified=false
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+VectorRush.RoadReflectionPreview:ReportMarkers () (at /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Scripts/Presentation/RoadReflectionPreview.cs:172)
+VectorRush.RoadReflectionPreview:Update () (at /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Scripts/Presentation/RoadReflectionPreview.cs:105)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+Thread 0x16f377000 may have been prematurely finalized
+VR_SSR_CPU_MARKER name=SSR valid=True framesWithPositiveSamples=0 maxNanoseconds=0 gpuOutputVerified=false
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+VectorRush.RoadReflectionPreview:ReportMarkers () (at /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Scripts/Presentation/RoadReflectionPreview.cs:172)
+VectorRush.RoadReflectionPreview:OnDestroy () (at /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Scripts/Presentation/RoadReflectionPreview.cs:179)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+VR_SSR_CPU_MARKER name=SSR - Upscaling valid=True framesWithPositiveSamples=0 maxNanoseconds=0 gpuOutputVerified=false
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+VectorRush.RoadReflectionPreview:ReportMarkers () (at /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Scripts/Presentation/RoadReflectionPreview.cs:172)
+VectorRush.RoadReflectionPreview:OnDestroy () (at /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Scripts/Presentation/RoadReflectionPreview.cs:179)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+VR_SSR_CPU_MARKER name=SSR - Depth Pyramid Generation valid=True framesWithPositiveSamples=0 maxNanoseconds=0 gpuOutputVerified=false
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+VectorRush.RoadReflectionPreview:ReportMarkers () (at /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Scripts/Presentation/RoadReflectionPreview.cs:172)
+VectorRush.RoadReflectionPreview:OnDestroy () (at /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Scripts/Presentation/RoadReflectionPreview.cs:179)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+VR_SSR_CPU_MARKER name=SSR - Final Blit valid=True framesWithPositiveSamples=0 maxNanoseconds=0 gpuOutputVerified=false
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+VectorRush.RoadReflectionPreview:ReportMarkers () (at /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Scripts/Presentation/RoadReflectionPreview.cs:172)
+VectorRush.RoadReflectionPreview:OnDestroy () (at /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Scripts/Presentation/RoadReflectionPreview.cs:179)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+VR_SSR_CPU_MARKER name=Inl_SSR valid=True framesWithPositiveSamples=0 maxNanoseconds=0 gpuOutputVerified=false
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+VectorRush.RoadReflectionPreview:ReportMarkers () (at /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Scripts/Presentation/RoadReflectionPreview.cs:172)
+VectorRush.RoadReflectionPreview:OnDestroy () (at /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Scripts/Presentation/RoadReflectionPreview.cs:179)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+VR_SSR_CPU_MARKER name=Inl_SSR - Upscaling valid=True framesWithPositiveSamples=0 maxNanoseconds=0 gpuOutputVerified=false
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+VectorRush.RoadReflectionPreview:ReportMarkers () (at /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Scripts/Presentation/RoadReflectionPreview.cs:172)
+VectorRush.RoadReflectionPreview:OnDestroy () (at /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Scripts/Presentation/RoadReflectionPreview.cs:179)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+[Physics::Module] Cleanup current backend.
+[Physics::Module] Id: 0xf2b8ea05
+Input System module state changed to: ShutdownInProgress.
+Input Polling Thread exited.
+Input System module state changed to: Shutdown.
+Thread 0x16e007000 may have been prematurely finalized
+Thread 0x16df7b000 may have been prematurely finalized
+Thread 0x16deef000 may have been prematurely finalized
+Thread 0x16e1ab000 may have been prematurely finalized
+Thread 0x16e34f000 may have been prematurely finalized
+Thread 0x16e2c3000 may have been prematurely finalized
+Thread 0x16e467000 may have been prematurely finalized
+Thread 0x16e3db000 may have been prematurely finalized
+Thread 0x16e237000 may have been prematurely finalized
+Thread 0x16e11f000 may have been prematurely finalized
+Thread 0x16e093000 may have been prematurely finalized
+CodeReloadManager destroyed
+PlayerConnection::Cleanup##utp:{"type":"MemoryLeaks","version":2,"phase":"Immediate","time":1788930124105,"processId":39410,"allocatedMemory":3548726,"memoryLabels":[{"Default":54543},{"Permanent":1472},{"NewDelete":2182835},{"Thread":8120},{"Manager":539527},{"VertexData":8},{"Geometry":408},{"Texture":16},{"Shader":78020},{"Material":24},{"GfxDevice":38776},{"GfxThread":400},{"Animation":880},{"FreeType":8},{"FontEngine":736},{"Physics":2000},{"Physics2D":16},{"Serialization":32776},{"Input":43216},{"JobScheduler":448},{"TextLib":280},{"Mono":56},{"ScriptingNativeRuntime":128},{"BaseObject":42160},{"Resource":520},{"Renderer":2448},{"Transform":6485},{"File":4600},{"WebCam":32},{"Culling":32},{"Terrain":11298},{"Wind":24},{"String":3156},{"Utility":316568},{"PoolAlloc":1632},{"AI":40},{"TypeTree":5512},{"ScriptManager":5688},{"CodeReload":440},{"RuntimeInitializeOnLoadManager":64},{"Sprites":78},{"SpriteAtlas":120},{"GI":7200},{"Director":8248},{"CloudService":144},{"WebRequest":520},{"VR":49402},{"SceneManager":408},{"Video":2080},{"LazyScriptCache":32},{"NativeArray":648},{"Camera":1169},{"Secure":241},{"SerializationCache":3608},{"APIUpdating":10320},{"Subsystems":336},{"VirtualTexturing":57496},{"Baselib":16},{"Analytics":80},{"Hierarchy":1452},{"UIElements":40},{"CoreStats":14536},{"Identifiers":7152},{"Gui":40},{"CoreBusinessMetrics":128},{"AssetReference":32}]}

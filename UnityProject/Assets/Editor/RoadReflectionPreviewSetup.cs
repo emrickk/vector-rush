@@ -92,12 +92,18 @@ namespace VectorRush.Editor
                     if (ssr) throw new InvalidOperationException("Multiple SSR features; resolve duplicate registration before building.");
                     ssr = found;
                 }
-            if (!ssr)
+            if (!(ssr is RoadReflectionRendererFeature))
             {
-                ssr = ScriptableObject.CreateInstance<ScreenSpaceReflectionRendererFeature>();
-                ssr.name = "Nocturne SSR preview";
+                var previous = ssr;
+                int index = previous ? renderer.rendererFeatures.IndexOf(previous) : -1;
+                ssr = ScriptableObject.CreateInstance<RoadReflectionRendererFeature>();
+                ssr.name = "Nocturne SSR preview 02 - game cameras";
                 AssetDatabase.AddObjectToAsset(ssr, renderer);
-                renderer.rendererFeatures.Add(ssr);
+                if (index >= 0) renderer.rendererFeatures[index] = ssr;
+                else renderer.rendererFeatures.Add(ssr);
+                // The prior prototype is preserved in source history and its separate app.
+                // Replace only its feature subasset; retain SSAO and feature-list order.
+                if (previous) UnityEngine.Object.DestroyImmediate(previous, true);
             }
             ssr.afterOpaque = false;
             ssr.SetActive(true);
@@ -118,11 +124,14 @@ namespace VectorRush.Editor
             if (!globalSettings) throw new InvalidOperationException("URP global settings asset missing");
             EditorUtility.SetDirty(globalSettings);
             AssetDatabase.SaveAssets();
-            string output = Path.GetFullPath("../Builds/Vector Rush-SSR-preview-01.app");
+            string output = Path.GetFullPath("../Builds/Vector Rush-SSR-preview-02.app");
             Directory.CreateDirectory(Path.GetDirectoryName(output));
-            // Development retains native profiler markers. Both off/on runs use this binary.
-            // No script debugging or automatic profiler connection is enabled.
-            Debug.Log("VR_SSR_BUILD options=Development output=" + output);
+            // Unity 6.4+ managed instrumentation is independent of Development build.
+            // The supported variant retains RenderGraph profiling scopes without raw defines.
+            PlayerSettings.SetManagedCodeVariant(NamedBuildTarget.Standalone, ManagedCodeVariant.Instrumented);
+            AssetDatabase.SaveAssets();
+            // Both off/on runs use this binary; no script debugging or auto-connection.
+            Debug.Log("VR_SSR_BUILD options=Development managedCodeVariant=Instrumented output=" + output);
             var report = BuildPipeline.BuildPlayer(new BuildPlayerOptions
             {
                 scenes = new[] { "Assets/Scenes/Solstice.unity" },
