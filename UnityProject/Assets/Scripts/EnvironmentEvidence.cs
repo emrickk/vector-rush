@@ -14,10 +14,10 @@ namespace VectorRush
         int originalCaptureRate;
         float originalTimeScale;
         bool originalAutopilot, initialized;
-        bool fullLap,stillsOnly;
+        bool fullLap,stillsOnly,openingStills;
         readonly Report report = new Report();
-        readonly float[] anchors = { .71626f, .84775f, .87269f, .89735f, .94585f };
-        readonly string[] labels = { "01-approach", "02-entry", "03-middle", "04-exit", "05-reveal" };
+        float[] anchors = { .71626f, .84775f, .87269f, .89735f, .94585f };
+        string[] labels = { "01-approach", "02-entry", "03-middle", "04-exit", "05-reveal" };
 
         public static bool TryStart(VectorBootstrap bootstrap)
         {
@@ -31,6 +31,12 @@ namespace VectorRush
             evidence.owner = bootstrap; evidence.folder = args[i + 1];
             evidence.fullLap=Array.IndexOf(args,"-environmentFullLap")>=0;
             evidence.stillsOnly=Array.IndexOf(args,"-environmentStillsOnly")>=0;
+            evidence.openingStills=Array.IndexOf(args,"-environmentOpeningStills")>=0;
+            if(evidence.openingStills){
+                evidence.fullLap=true;evidence.stillsOnly=true;
+                evidence.anchors=new[]{.15f,.22f,.30f,.37f,.43f,.58051056f,.61970216f,.87306988f,.94621426f};
+                evidence.labels=new[]{"opening01","opening02","opening03","opening04","opening05","thermal01","thermal02","warm-gallery","station"};
+            }
             int reference = Array.IndexOf(args, "-environmentReference");
             if (reference >= 0 && reference + 1 < args.Length) evidence.referencePath = args[reference + 1];
             foreach (var old in bootstrap.GetComponents<RaceEvidence>()) { old.StopAllCoroutines(); old.enabled = false; }
@@ -47,10 +53,11 @@ namespace VectorRush
             report.unityVersion=Application.unityVersion;report.buildGuid=Application.buildGUID;report.gpu=SystemInfo.graphicsDeviceName;
             report.sceneRenderers=FindObjectsByType<Renderer>(FindObjectsSortMode.None).Length;
             foreach(var light in FindObjectsByType<Light>(FindObjectsSortMode.None))if(light.enabled)report.activeLights++;
-            report.scope = "Actual native racing camera and normal hover physics. Existing test autopilot drives; no camera, pose, lap, energy, speed or race phase is injected. Time.captureFramerate=24 is set before StartRace for repeatable simulation. The 360-frame passage is 15 simulation seconds, not a frame-time/performance measurement. Camera transforms, FOV, all racer rigidbody poses/velocities and player visual transform are recorded every frame. Five anchors are the first recorded frames crossing fixed track-progress thresholds. An optional prior report compares actual anchor poses; it never overwrites them. PNGs and metadata are rendering evidence, not independent visual/motion acceptance. The exported picture sequence contains no audio.";
+            report.scope = "Actual native racing camera and normal hover physics. Existing test autopilot drives; no camera, pose, lap, energy, speed or race phase is injected. Time.captureFramerate=24 is set before StartRace for repeatable simulation. The 360-frame passage is 15 simulation seconds, not a frame-time/performance measurement. Camera transforms, FOV, all racer rigidbody poses/velocities and player visual transform are recorded every frame. " + anchors.Length + " anchors are the first recorded frames crossing fixed track-progress thresholds. An optional prior report compares actual anchor poses; it never overwrites them. PNGs and metadata are rendering evidence, not independent visual/motion acceptance. The exported picture sequence contains no audio.";
             int frameCount=fullLap?1440:360;
             if(fullLap)report.scope=report.scope.Replace("The 360-frame passage is 15 simulation seconds","The 1440-frame full-circuit traversal is 60 simulation seconds");
-            if(stillsOnly)report.scope+=" Stills-only mode saves the five anchor PNGs, while retaining every simulated frame's pose metadata; it is not a motion recording.";
+            if(stillsOnly)report.scope+=" Stills-only mode saves " + anchors.Length + " natural anchor PNGs, while retaining every simulated frame's pose metadata; it is not a motion recording.";
+            if(openingStills)report.scope+=" Opening-stills draft mode covers opening01-05, thermal01-02, warm-gallery and station.";
             bool success = false;
             try {
                 player.AutopilotForTesting = true; Time.timeScale = 1; Time.captureFramerate = 24;
@@ -71,6 +78,7 @@ namespace VectorRush
                     if(player.TrackProgress<anchors[0])anchorsArmed=true;
                     if (anchorsArmed && nextAnchor < anchors.Length && player.TrackProgress >= anchors[nextAnchor] && player.TrackProgress < .999f) {
                         frame.anchor = labels[nextAnchor]; frame.anchorFile = labels[nextAnchor] + ".png";
+                        if(openingStills)frame.file=frame.anchorFile;
                         report.anchorFrames.Add(index); nextAnchor++;
                     }
                     frame.captureRequested=!stillsOnly || !string.IsNullOrEmpty(frame.anchor);
@@ -82,17 +90,17 @@ namespace VectorRush
                     if(!frame.captureRequested)continue;
                     string path = Path.Combine(folder, frame.file);
                     if (!File.Exists(path) || new FileInfo(path).Length < 24) throw new IOException("Missing native frame " + frame.file);
-                    if (!string.IsNullOrEmpty(frame.anchorFile)) File.Copy(path, Path.Combine(folder, frame.anchorFile), true);
+                    if (!openingStills && !string.IsNullOrEmpty(frame.anchorFile)) File.Copy(path, Path.Combine(folder, frame.anchorFile), true);
                 }
                 if(fullLap && (report.frames[report.frames.Count-1].lap<=report.frames[0].lap || report.frames[report.frames.Count-1].raceTime-report.frames[0].raceTime<40)) throw new InvalidOperationException("Full circuit was not completed during the traversal.");
-                if (nextAnchor != 5) throw new InvalidOperationException("Only " + nextAnchor + " of five natural progress anchors reached.");
+                if (nextAnchor != anchors.Length) throw new InvalidOperationException("Only " + nextAnchor + " of " + anchors.Length + " natural progress anchors reached.");
                 if (!string.IsNullOrEmpty(referencePath)) CompareReference();
                 report.complete = true; success = true;
             }
             finally {
                 report.finishedUtc = DateTime.UtcNow.ToString("o");
                 File.WriteAllText(Path.Combine(folder, "environment-evidence.json"), JsonUtility.ToJson(report, true));
-                File.WriteAllText(Path.Combine(folder, "status.txt"), success ? "COMPLETE: "+frameCount+" simulated frames / 5 anchors; stillsOnly="+stillsOnly+"; review required.\n" : "INCOMPLETE: inspect native log.\n");
+                File.WriteAllText(Path.Combine(folder, "status.txt"), success ? "COMPLETE: "+frameCount+" simulated frames / "+anchors.Length+" anchors; stillsOnly="+stillsOnly+"; review required.\n" : "INCOMPLETE: inspect native log.\n");
                 Restore();
                 if(!success)Application.Quit(1);
             }
@@ -123,9 +131,9 @@ namespace VectorRush
         {
             Report baseline = JsonUtility.FromJson<Report>(File.ReadAllText(referencePath));
             report.reference = referencePath;
-            if (baseline.anchorFrames.Count != 5) throw new InvalidDataException("Reference needs five anchor frames.");
+            if (baseline.anchorFrames.Count != anchors.Length) throw new InvalidDataException("Reference needs " + anchors.Length + " anchor frames.");
             report.matchedWithinTolerance = true;
-            for (int i = 0; i < 5; i++) {
+            for (int i = 0; i < anchors.Length; i++) {
                 Frame a = baseline.frames[baseline.anchorFrames[i]], b = report.frames[report.anchorFrames[i]];
                 var comparison = new PoseComparison { anchor = b.anchor,
                     cameraDistance = Vector3.Distance(a.cameraPosition, b.cameraPosition),

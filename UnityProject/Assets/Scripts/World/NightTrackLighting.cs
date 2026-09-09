@@ -31,6 +31,7 @@ namespace VectorRush
                 go.transform.rotation=Quaternion.LookRotation((f.Position+f.Forward*6-go.transform.position).normalized,f.Forward);
                 var light=go.AddComponent<Light>();light.type=LightType.Spot;light.color=warm?new Color(1,.48f,.12f):new Color(.68f,.86f,.91f);
                 light.intensity=warm?540:460;light.range=41;light.spotAngle=98;light.innerSpotAngle=52;light.shadows=LightShadows.None;
+                if(OpeningFinishPreview.SurfaceEnabled&&i>=7&&i<=18)OpeningFixture(light,f,side,i);
                 }
                 // Repeated embedded edge reflectors and exposed deck engineering establish close-range scale.
                 for(int s=-1;s<=1;s+=2){
@@ -54,7 +55,31 @@ namespace VectorRush
             var warmLight=world.MakeMaterial("Gallery warm white diffuser",new Color(.9f,.65f,.36f),.25f,0,new Color(4.3f,2.55f,1.08f));
             var coolLight=world.MakeMaterial("Gallery cool white diffuser",new Color(.56f,.7f,.79f),.25f,0,new Color(2.45f,3.7f,4.55f));
             BuildGallery(track,0,.39f,cube,structure,ceiling,panel,trim,housing,coolLight,paint);
-            BuildGallery(track,1,.86f,cube,structure,ceiling,warmPanel,trim,housing,warmLight,paint);
+            if(OpeningFinishPreview.SurfaceEnabled){
+                // Gallery meshes do not share the authored landmark UV contract. Distinguish broad
+                // construction through material response; do not stamp metric normal maps onto them.
+                var studyStructure=world.MakeMaterial("Warm study / dark structural ribs",new Color(.065f,.075f,.087f),.27f,.3f);
+                var studyShell=world.MakeMaterial("Warm study / recessed ceiling and backing",new Color(.15f,.162f,.178f),.22f,.08f);
+                var studyPanel=world.MakeMaterial("Warm study / neutral ceramic faces",new Color(.265f,.255f,.228f),.34f,.12f);
+                var studyTrim=world.MakeMaterial("Warm study / satin folded returns",new Color(.20f,.215f,.23f),.43f,.65f);
+                BuildGallery(track,1,.86f,cube,studyStructure,studyShell,studyPanel,studyTrim,housing,warmLight,paint);
+            }else BuildGallery(track,1,.86f,cube,structure,ceiling,warmPanel,trim,housing,warmLight,paint);
+        }
+
+        static void OpeningFixture(Light light,TrackFrame frame,float side,int index)
+        {
+            // Reuse the twelve visible sources at .121–.310. Lit approach (7–9), a quieter
+            // transition (10–12), lit bend (13–15), then descent (16–18). No extra light count.
+            float[] intensity={520,780,860,400,190,330,820,900,530,260,650,640};
+            float[] forward={9,13,15,8,5,8,13,16,11,7,12,14};
+            int slot=index-7;
+            // Source sits immediately below the actual 4.8 m diffuser, at its lateral center.
+            light.transform.position=frame.Position+frame.Right*side*9.5f+frame.Up*12.48f;
+            var target=frame.Position+frame.Forward*forward[slot]-frame.Right*side*1.5f;
+            light.transform.rotation=Quaternion.LookRotation((target-light.transform.position).normalized,frame.Forward);
+            light.intensity=intensity[slot];light.range=43;
+            light.spotAngle=(index==11||index==16)?82:92;light.innerSpotAngle=44;
+            light.gameObject.name+=" / opening authored coverage";
         }
 
         void BuildGallery(TrackPath track,int section,float start,Mesh cube,Material structure,Material ceiling,
@@ -66,6 +91,7 @@ namespace VectorRush
             var dark=new List<CombineInstance>();var lamps=new List<CombineInstance>();var labels=new List<CombineInstance>();
             var ribMesh=CreateRib();meshes.Add(ribMesh);
             bool warm=section==1;
+            bool surfaceStudy=warm&&OpeningFinishPreview.SurfaceEnabled;
             for(int i=0;i<7;i++){
                 var f=track.Evaluate(start+i*step);var q=Quaternion.LookRotation(f.Forward,f.Up);
                 bool entry=i==0,exit=i==6;
@@ -130,6 +156,14 @@ namespace VectorRush
                     fill.color=warm?new Color(1,.72f,.46f):new Color(.76f,.85f,1);
                     fill.intensity=(warm?88:52)*(i==5?.62f:i%3==1?1f:.86f)*(side<0?.88f:1f);
                     fill.range=warm?20:22;fill.shadows=LightShadows.None;
+                    if(surfaceStudy){
+                        // Retain omnidirectional concealed practicals so shoulders and ceilings still
+                        // receive light; match the emitter origin and reduce the uniform amber wash.
+                        wash.transform.position=mid.Position+mid.Right*side*11.35f+mid.Up*10.86f;
+                        fill.color=new Color(1,.76f,.54f);
+                        fill.intensity=(i==5?52:i==2?65:i==1?90:i==3?88:76)*(side<0?.82f:1f);
+                        fill.range=18;
+                    }
                     if((i==2&&side==1)||(i==4&&side==-1)){
                         // Designated service bays interrupt the blank repeated wall spans.
                         // Attach the hatch to one half-panel, not the joint between two angled panels.
@@ -153,6 +187,15 @@ namespace VectorRush
                 var light=road.AddComponent<Light>();light.type=LightType.Spot;
                 light.color=warm?new Color(1,.64f,.36f):new Color(.7f,.85f,1);
                 light.intensity=warm?285:245;light.range=30;light.spotAngle=100;light.innerSpotAngle=52;light.shadows=LightShadows.None;
+                if(surfaceStudy){
+                    // Alternating existing cassette sources create dark intervals and broad diagonal
+                    // coverage. This is direct specular response, not an image of reflected fixtures.
+                    float[] intensity={360,440,260,420,360,240};
+                    var target=fixture.Position+fixture.Forward*(i%2==0?6f:3.5f)+fixture.Right*(i%2==0?2.5f:-2.5f);
+                    road.transform.rotation=Quaternion.LookRotation((target-road.transform.position).normalized,fixture.Forward);
+                    light.color=new Color(1,.78f,.55f);light.intensity=intensity[i];
+                    light.spotAngle=88;light.innerSpotAngle=42;light.range=31;
+                }
             }
             string prefix=warm?"Warm gallery ":"Cool gallery ";
             Combine(prefix+"primary portal structure",ribs,structure);Combine(prefix+"continuous shell",shells,ceiling);

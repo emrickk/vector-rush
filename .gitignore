@@ -21,3 +21,6 @@ UnityProject/Assets/Resources/PerformanceTestRun*.json*
 
 # Duplicate anchor snapshots; reviewed originals live in selected/.
 evidence/nocturne-v2/**/full-lap/*.png
+
+# Python validation bytecode is local cache.
+__pycache__/

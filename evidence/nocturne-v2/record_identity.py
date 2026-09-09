@@ -10,6 +10,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument('stage', type=Path)
 parser.add_argument('app', type=Path)
 parser.add_argument('--scope', required=True)
+parser.add_argument('--modes', nargs='+', default=['off', 'on'], choices=['off', 'on', 'construction', 'surface', 'combined'])
 args = parser.parse_args()
 root = Path.cwd()
 app = args.app.resolve()
@@ -28,7 +29,7 @@ identity = {
     'scope': args.scope,
 }
 assert identity['files'] and identity['appFiles']
-for mode in ('off', 'on'):
+for mode in args.modes:
     folder = args.stage / mode
     folder.mkdir(parents=True, exist_ok=True)
     destination = folder / 'build-identity.json'

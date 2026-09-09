@@ -14,6 +14,7 @@ namespace VectorRush
 
         void Awake()
         {
+            OpeningFinishPreview.LogConfiguration();
             Instance=this;
             Application.targetFrameRate=120;QualitySettings.vSyncCount=1;
             Time.fixedDeltaTime=1f/100f;Time.maximumDeltaTime=.1f;

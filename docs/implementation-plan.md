@@ -309,3 +309,7 @@ Camera-scoped SSR02 source and native evidence are preserved at `dd7a417`. Both 
 ### Owner-requested parallel critique — proposed next milestone
 
 The owner finds the SSR difference almost negligible and requested independent critics plus an improvement approach. Three separate [visual](visual-target-reviews/002a-improvement-visual-critique.md), [rendering](visual-target-reviews/002b-improvement-rendering-critique.md), and [environment](visual-target-reviews/002c-improvement-environment-critique.md) reports support parking SSR and reject a lamp-origin/aim tweak as the next headline finish result. [Integrator synthesis](visual-target-reviews/002-improvement-approach.md) recommends combining the bounded opening portions of Tasks 2–3 into one finished-passage milestone, retaining component snapshots and using a small warm-gallery surface study. Audit existing asset visibility first, reuse/reposition, then author only missing support/service connections and their local light. This is a proposed plan revision; no new runtime implementation occurred in the critique task.
+
+### Active opening finish pass
+
+Owner authorized the next pass at High effort. Execute [the bounded opening plan](superpowers/plans/2026-09-09-opening-finish-pass.md): separate default-off preview controls, connected opening construction, coordinated road/gallery surface-light study, then independent native review and isolated performance. SSR is parked. Original app remains retained. No full-circuit rollout or craft redesign belongs to this pass.
