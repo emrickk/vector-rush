@@ -1,5 +1,9 @@
 # Vector Rush handoff — 2026-09-08
 
+## Latest requested direction review
+
+The owner found SSR's visible difference negligible and requested parallel critics and an improvement approach. [Three independent reports and synthesis](visual-target-reviews/002-improvement-approach.md) recommend parking SSR and making one opening passage visibly more complete through connected existing/new construction, local lighting and material separation. The narrow lamp-aim proposal is supporting work, not the next headline result. A small gallery study can calibrate surface response. No new runtime or asset implementation is included in this review.
+
 ## Latest execution — SSR prototype rejected for insufficient visible gain
 
 The owner authorized the Nocturne V2 implementation plan. SSR01 failed on reflection cameras; SSR02 fixes that scope and supplies actual instrumented CPU pass samples, but independent inspection of all nine off/on pairs finds no convincing useful reflection improvement. [Original native comparison](ssr02-native-comparison.html) · [verdict and limits](visual-target-reviews/001-reflection-feasibility.md) · [next technique proposal](visual-target-reviews/001h-next-technique-proposal.md).
