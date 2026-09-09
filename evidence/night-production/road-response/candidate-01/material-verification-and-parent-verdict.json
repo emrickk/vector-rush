@@ -1,0 +1,52 @@
+{
+  "buildGuid": "1441c9f070434c73a2c65dd244581929",
+  "sourceFilesUnchanged": 197,
+  "appFilesUnchanged": 189,
+  "sceneUnchanged": true,
+  "nativeMaterial": {
+    "material": "Satin graphite running deck",
+    "shader": "Universal Render Pipeline/Lit",
+    "keywords": [
+      "_EMISSION",
+      "_ENVIRONMENTREFLECTIONS_OFF",
+      "_METALLICSPECGLOSSMAP",
+      "_NORMALMAP"
+    ],
+    "baseColor": {
+      "r": 0.12999996542930603,
+      "g": 0.14499995112419128,
+      "b": 0.16499996185302734,
+      "a": 1.0
+    },
+    "maskWidth": 512,
+    "maskHeight": 512,
+    "smoothnessMultiplier": 0.8999999761581421,
+    "environmentReflections": 0.0,
+    "bumpScale": 0.25,
+    "metallic": 0.0,
+    "uploadedAlphaMinimum": 0.48627451062202454,
+    "uploadedAlphaMaximum": 0.5647059082984924,
+    "effectiveSmoothnessMinimum": 0.4376470446586609,
+    "effectiveSmoothnessMaximum": 0.5082352757453918
+  },
+  "nominalSmoothnessRange": [
+    0.405,
+    0.54
+  ],
+  "actualBaseLevelRange": [
+    0.4376470446586609,
+    0.5082352757453918
+  ],
+  "parentInspected": [
+    149,
+    211,
+    283,
+    398,
+    473,
+    606,
+    641,
+    1004
+  ],
+  "parentVerdict": "Reject: no sufficient useful full-frame gain. Readability and controls survive, but opening surface remains plain, fan-like turn boundaries remain, and broad reflected-source structure is absent.",
+  "motionScope": "Both15-secondclips are continuousnativecapture with full decode; parent andcritic reviewselected originalframes, notcontinuouswatchedplayback. Rejectioncanbeestablishedfromfailureofthestill-imagegain gate."
+}

@@ -1,5 +1,6 @@
 {
-  "baselineCommit": "3097bc8",
+  "baselineCommit": "8df99ad",
+  "sourceCommit": "8df99ad04f9d42cefc787addcf8eb27203fbb755",
   "files": {
     "UnityProject/Assets/Editor/VectorRushSetup.cs": "00a1a3aae39c9cd39d15f47c6ddd8539ec0e57d5bb6ab765082599d8e543210a",
     "UnityProject/Assets/Editor/VectorRushSetup.cs.meta": "efdfad55e13c89499182e235cd971228dc05601462d192053a60b4492ab67da8",
@@ -107,7 +108,7 @@
     "UnityProject/Assets/Resources/Shaders/IonPlume.shader.meta": "25de02de74233392cd44af67b37f89c62d0d775adb6d87cab47f96bf775fd753",
     "UnityProject/Assets/Resources/SurfaceLit.mat": "2bcef3d73f0a21362603433b382e46b2efef246af067efe9efe3df274a879be8",
     "UnityProject/Assets/Resources/SurfaceLit.mat.meta": "f74f7b6cbaedcb41ee3e0cbdaaf828d505639b6b26de2079239fcf248a69d938",
-    "UnityProject/Assets/Scripts/EnvironmentEvidence.cs": "5b3af59fb6903e762222c0d21676ed8b0b840340bf330bb081849176ba6f61eb",
+    "UnityProject/Assets/Scripts/EnvironmentEvidence.cs": "921267253dd9e77f83d83d4642778e3e5df4ee3100df146fea0e5aab3c11d8a4",
     "UnityProject/Assets/Scripts/EnvironmentEvidence.cs.meta": "029d299866dfb1440d01d2917937b08c0927292c2ec7099193d1bf5bc7c31d2f",
     "UnityProject/Assets/Scripts/Gameplay.meta": "60d8cc55863bbcba7094fa688855dd1f607dd1a4f01049a4be0da50808ec6df3",
     "UnityProject/Assets/Scripts/Gameplay/ChaseCamera.cs": "775e56cb04323b1db2d656527ea530d46c4e51023823f91c1d6d8bf7f70ed007",
@@ -162,7 +163,7 @@
     "UnityProject/Assets/Scripts/World/NightTrackLighting.cs.meta": "4b02d2bf50e1de3a6bdac9ba4cb10124890034438e18993681735035cb68104c",
     "UnityProject/Assets/Scripts/World/TrackPath.cs": "7c338b66f00d5eddd65da2416a702ef428361ede15c7df0aa5ef1c3fe3a1cf71",
     "UnityProject/Assets/Scripts/World/TrackPath.cs.meta": "1f37765ea6db708ecc403b4d4a62b0379dd0168dfb393a5fe365ca2c4887e9c8",
-    "UnityProject/Assets/Scripts/World/WorldBuilder.cs": "01b20be98b2c0d204eb76fdb6a4eeb8f5983e92437a7dfca62244be3ddf45c62",
+    "UnityProject/Assets/Scripts/World/WorldBuilder.cs": "13f788ff6f60eb9991ee0d0a6dc1520b77309cc10a2da0ff69e80379b5587304",
     "UnityProject/Assets/Scripts/World/WorldBuilder.cs.meta": "cf7bf08a39f10bbd66fbb81630d5a4bff678c4d118aad0a6acc6388e7eeeb847",
     "UnityProject/Assets/Shaders/IonTrail.shader": "2f938d72a352ace2f4d631ce582924fadb24dc01c481bcd01b121cbc4da5f55b",
     "UnityProject/Assets/Shaders/IonTrail.shader.meta": "6f1965df2e3be05ad303af822b16fdea47e05cfb6e0ebd4f10d63cf5712a05fb",
@@ -205,7 +206,7 @@
     "Builds/Vector Rush.app/Contents/Frameworks/libmono-native.dylib": "af23014e14d2ed14f21af0b4411cae943458c9df23902f1ee3c22430ed859ff2",
     "Builds/Vector Rush.app/Contents/Frameworks/libmonobdwgc-2.0.dylib": "e3a8c9c34edf9d66fbaa0d33f12e1a2756d0864cf2eb952de69dbfc95e47f64f",
     "Builds/Vector Rush.app/Contents/Info.plist": "8273418fb2304b74053820f2b57dae08b854ac5eef0b7ed34c9a577c00e4738d",
-    "Builds/Vector Rush.app/Contents/MacOS/Vector Rush": "648cb33824e961ecdeeba54e15a82632bae1f32c405838280169cc2352ba9612",
+    "Builds/Vector Rush.app/Contents/MacOS/Vector Rush": "371f615cc0bed89abc094050f791fd52b064f8707eb5e28db155cd53b6ed6e05",
     "Builds/Vector Rush.app/Contents/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser": "8a1082057ac5681dcd4e9c227ed7fb8eb42ac1618963b5de3b65739dd77e2741",
     "Builds/Vector Rush.app/Contents/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx": "751861040b69ea63a3827507b7c8da9c7f549dc181c1c8af4b7ca78cc97d710a",
     "Builds/Vector Rush.app/Contents/MonoBleedingEdge/etc/mono/2.0/machine.config": "e91782a27fa39fc6c1d6ee8b08529f5d35052310d0006034b878eb04b8f2af30",
@@ -367,7 +368,7 @@
     "Builds/Vector Rush.app/Contents/Resources/Data/Managed/UnityEngine.WindModule.dll": "731c9fd4933917142dbae5d351f538fdc6370b71c93279fa7e67254884e71d1c",
     "Builds/Vector Rush.app/Contents/Resources/Data/Managed/UnityEngine.XRModule.dll": "394535d0edecd6120c50d48959f08bed562dca8538617539cc5be2c53cced102",
     "Builds/Vector Rush.app/Contents/Resources/Data/Managed/UnityEngine.dll": "61b823ad2b5b23735d70514ad3431a4a951835225103f74d99ea34e4d0763454",
-    "Builds/Vector Rush.app/Contents/Resources/Data/Managed/VectorRush.Runtime.dll": "fda6a083fcf910a8799832f3c0a43373b1fa87f228abe61ede3b14cd5ae54c35",
+    "Builds/Vector Rush.app/Contents/Resources/Data/Managed/VectorRush.Runtime.dll": "fd9173e6742ae229f41c28788535e779b8f29867c90568ac00340556ee9ee851",
     "Builds/Vector Rush.app/Contents/Resources/Data/Managed/mscorlib.dll": "097834f78672947093884fe8f56c977d72b97d6c8a7cf052c4198a66f95515d2",
     "Builds/Vector Rush.app/Contents/Resources/Data/Managed/netstandard.dll": "bf0b7eac9010b75413e4ec1a07a3453bc6a68eeb8e916fbed7c1f2777841f7c7",
     "Builds/Vector Rush.app/Contents/Resources/Data/Resources/unity default resources": "015477823d70960576cbd7717f942bc040f4bdb85c903d481cdb6efca0c5c142",
@@ -375,12 +376,12 @@
     "Builds/Vector Rush.app/Contents/Resources/Data/RuntimeInitializeOnLoads.json": "2d92da79272a2207174556e4c099744b7e7b23326d7e96e2ef7bd4295c305c93",
     "Builds/Vector Rush.app/Contents/Resources/Data/ScriptingAssemblies.json": "490e604621c9305c9c3f08cba2dcec9927707ec6fa87d8ddddecef9e23c50b59",
     "Builds/Vector Rush.app/Contents/Resources/Data/app.info": "4adadb8d50361121c5004818a7c32d0ecc4f5685347fb565530ba32a78a75a49",
-    "Builds/Vector Rush.app/Contents/Resources/Data/boot.config": "d48234843bfcd773271b3fa5d9f54ed10da6290dde387be6f32418a11d581d66",
-    "Builds/Vector Rush.app/Contents/Resources/Data/globalgamemanagers": "3db7c3cd5f86fad5563c3ec083ccb2239f8f7368ca37246e13b49bc1dc9666f9",
+    "Builds/Vector Rush.app/Contents/Resources/Data/boot.config": "fb149b71b48e253f45d34fd35f554b28fd13430541e46675913d6b3c4a328ad7",
+    "Builds/Vector Rush.app/Contents/Resources/Data/globalgamemanagers": "370c1645772e79a20c0d976f171aba87a9a0a7990c92f4efb70312cded021855",
     "Builds/Vector Rush.app/Contents/Resources/Data/globalgamemanagers.assets": "d5d02b95608e26e4c4605e2496dd811a4138f715153ddc82e021d2c62f09ff67",
     "Builds/Vector Rush.app/Contents/Resources/Data/globalgamemanagers.assets.resS": "26b24bbd0bdb7017ecbac3b829c0ed7c4848bc343af5702e96ebdb75a7258b04",
     "Builds/Vector Rush.app/Contents/Resources/Data/level0": "1175bf4fe25d217944d332a64cbed5f68d2d6b92e5e8cc84e1dcf605ed38d9b5",
-    "Builds/Vector Rush.app/Contents/Resources/Data/resources.assets": "4f586a12033bf9b743f79f8c9a6ca34a121039e0a8bb769fe0c5bdffcc574231",
+    "Builds/Vector Rush.app/Contents/Resources/Data/resources.assets": "a99bee158255d4c2d29bf014567abe88ceb67e499de1278a31c70faf89aea0be",
     "Builds/Vector Rush.app/Contents/Resources/Data/resources.assets.resS": "3c8d873282059cf724ceb7ca2ee63e1385905f04de63e2dc8740e2cbe032607e",
     "Builds/Vector Rush.app/Contents/Resources/Data/sharedassets0.assets": "93b2b5ce7ad88cb1dde8493bdc86b4e619aad4286e62addcfcae95164c357042",
     "Builds/Vector Rush.app/Contents/Resources/Data/sharedassets0.assets.resS": "cf6e38a0de541c99451ad50a963447203651aaa30fa33fd5cc99a6ca12e0c968",
@@ -388,9 +389,15 @@
     "Builds/Vector Rush.app/Contents/Resources/MainMenu.nib/designable.nib": "57188221ba9dc889be4c9e03f0c867bce820726491e32a2fa4928681f006f308",
     "Builds/Vector Rush.app/Contents/Resources/MainMenu.nib/keyedobjects.nib": "1fae5b7c6ee9b17a767b1636867a41b3e44eaf8f654b1c5e2cafa3261463104d",
     "Builds/Vector Rush.app/Contents/Resources/PrivacyInfo.xcprivacy": "0a513a93916b158eaa3af7311e84eac43604ac52a6530afb33184a77805c0970",
-    "Builds/Vector Rush.app/Contents/_CodeSignature/CodeResources": "f2cdfaab799cbcca0aac54a30516edee7a7c37034850ae7a7a6ed061284a1557"
+    "Builds/Vector Rush.app/Contents/_CodeSignature/CodeResources": "c9b9a392ce363efadc08060d726c83d236804c4234ed902d56e1b55aad26f2e7"
   },
-  "scope": "Fresh opening/full-circuit control for resumed road-response comparison; unchanged A lighting plus C fog and reflection-off road.",
-  "verificationUtc": "2026-09-09T01:54:28.741296+00:00",
-  "sourceCommit": "566cbdeaf869eed62cc9f2f1cf9b76e594a19802"
+  "verificationUtc": "2026-09-09T02:02:41.472203+00:00",
+  "scope": "Candidate01: only rendered road mask endpoints change (.45,.60); EnvironmentEvidence adds read-only native material/GPU-alpha report before racing; Editor scene identifiers regenerated with equivalent values.",
+  "uncommittedCandidate": true,
+  "sourceChangesFromControl": [
+    "UnityProject/Assets/Scripts/EnvironmentEvidence.cs",
+    "UnityProject/Assets/Scripts/World/WorldBuilder.cs"
+  ],
+  "buildGuid": "1441c9f070434c73a2c65dd244581929",
+  "sceneSha256": "b95527b977b7cc86cb709ba8a116f77a410195004e761d590fb05e31a919a663"
 }

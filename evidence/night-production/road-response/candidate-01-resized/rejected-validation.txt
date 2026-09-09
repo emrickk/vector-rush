@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/Users/anping/Documents/Stuff/AI Space/Vector Rush/evidence/night-production/lighting-road/verify_capture.py", line 61, in <module>
+    assert (w, h) == (args.expected_width, args.expected_height), ('Unexpected capture resolution', path, w, h)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('Unexpected capture resolution', PosixPath('evidence/night-production/road-response/candidate-01/full-lap/frames/frame-0433.png'), 3024, 1832)

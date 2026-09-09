@@ -53,6 +53,7 @@ namespace VectorRush
             if(stillsOnly)report.scope+=" Stills-only mode saves the five anchor PNGs, while retaining every simulated frame's pose metadata; it is not a motion recording.";
             bool success = false;
             try {
+                report.roadSurface=ReadRoadSurface();
                 player.AutopilotForTesting = true; Time.timeScale = 1; Time.captureFramerate = 24;
                 yield return new WaitForSecondsRealtime(2);
                 director.StartRace();
@@ -138,6 +139,36 @@ namespace VectorRush
             }
         }
 
+        RoadSurfaceInfo ReadRoadSurface()
+        {
+            var surface=GameObject.Find("Running surface");
+            var renderer=surface?surface.GetComponent<MeshRenderer>():null;
+            if(!renderer || !renderer.sharedMaterial)throw new InvalidOperationException("Running surface material is missing.");
+            var material=renderer.sharedMaterial;
+            var mask=material.GetTexture("_MetallicGlossMap");
+            if(!mask)throw new InvalidOperationException("Running surface smoothness mask is missing.");
+            var result=new RoadSurfaceInfo { material=material.name,shader=material.shader.name,
+                keywords=material.shaderKeywords,smoothnessMultiplier=material.GetFloat("_Smoothness"),
+                environmentReflections=material.GetFloat("_EnvironmentReflections"),
+                bumpScale=material.GetFloat("_BumpScale"),metallic=material.GetFloat("_Metallic"),
+                baseColor=material.GetColor("_BaseColor"),maskWidth=mask.width,maskHeight=mask.height };
+            // Read the uploaded linear mask before racing; restore the active target and
+            // release all temporary resources. No material or source texture is modified.
+            var previous=RenderTexture.active;
+            var target=RenderTexture.GetTemporary(mask.width,mask.height,0,RenderTextureFormat.ARGB32,RenderTextureReadWrite.Linear);
+            var pixels=new Texture2D(mask.width,mask.height,TextureFormat.RGBA32,false,true);
+            try {
+                Graphics.Blit(mask,target);RenderTexture.active=target;
+                pixels.ReadPixels(new Rect(0,0,mask.width,mask.height),0,0,false);
+                int minimum=255,maximum=0;
+                foreach(var pixel in pixels.GetPixels32()){minimum=Mathf.Min(minimum,pixel.a);maximum=Mathf.Max(maximum,pixel.a);}
+                result.uploadedAlphaMinimum=minimum/255f;result.uploadedAlphaMaximum=maximum/255f;
+                result.effectiveSmoothnessMinimum=result.uploadedAlphaMinimum*result.smoothnessMultiplier;
+                result.effectiveSmoothnessMaximum=result.uploadedAlphaMaximum*result.smoothnessMultiplier;
+            } finally { RenderTexture.active=previous;RenderTexture.ReleaseTemporary(target);Destroy(pixels); }
+            return result;
+        }
+
         void Restore()
         {
             if (!initialized) return; initialized = false;
@@ -149,8 +180,15 @@ namespace VectorRush
             public string scope, startedUtc, finishedUtc, reference,unityVersion,buildGuid,gpu;
             public int sceneRenderers,activeLights;
             public bool complete, matchedWithinTolerance;
+            public RoadSurfaceInfo roadSurface;
             public List<int> anchorFrames = new List<int>(); public List<Frame> frames = new List<Frame>();
             public List<PoseComparison> comparisons = new List<PoseComparison>();
+        }
+        [Serializable] public sealed class RoadSurfaceInfo {
+            public string material,shader;public string[] keywords;public Color baseColor;
+            public int maskWidth,maskHeight;
+            public float smoothnessMultiplier,environmentReflections,bumpScale,metallic,
+                uploadedAlphaMinimum,uploadedAlphaMaximum,effectiveSmoothnessMinimum,effectiveSmoothnessMaximum;
         }
         [Serializable] public sealed class Frame {
             public int index, width, height, lap; public string file, anchor, anchorFile;

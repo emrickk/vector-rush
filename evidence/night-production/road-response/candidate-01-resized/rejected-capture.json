@@ -1,0 +1,39 @@
+{
+  "reason": "Window resolution changes from1920x1080 to3024x1832 atframe433; rejected as full controlled comparison.",
+  "buildGuid": "1441c9f070434c73a2c65dd244581929",
+  "nativeComplete": true,
+  "nativeFrames": 1440,
+  "validatorExitCode": 1,
+  "readOnlyMaterialTelemetry": {
+    "material": "Satin graphite running deck",
+    "shader": "Universal Render Pipeline/Lit",
+    "keywords": [
+      "_EMISSION",
+      "_ENVIRONMENTREFLECTIONS_OFF",
+      "_METALLICSPECGLOSSMAP",
+      "_NORMALMAP"
+    ],
+    "baseColor": {
+      "r": 0.12999996542930603,
+      "g": 0.14499995112419128,
+      "b": 0.16499996185302734,
+      "a": 1.0
+    },
+    "maskWidth": 512,
+    "maskHeight": 512,
+    "smoothnessMultiplier": 0.8999999761581421,
+    "environmentReflections": 0.0,
+    "bumpScale": 0.25,
+    "metallic": 0.0,
+    "uploadedAlphaMinimum": 0.48627451062202454,
+    "uploadedAlphaMaximum": 0.5647059082984924,
+    "effectiveSmoothnessMinimum": 0.4376470446586609,
+    "effectiveSmoothnessMaximum": 0.5082352757453918
+  },
+  "firstChangedFrame": 433,
+  "parentEarlyInspection": [
+    149,
+    398
+  ],
+  "independentCandidateVerdict": false
+}

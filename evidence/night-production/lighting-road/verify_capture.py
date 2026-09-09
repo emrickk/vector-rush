@@ -7,12 +7,19 @@ from pathlib import Path
 
 parser = argparse.ArgumentParser()
 parser.add_argument('candidate', type=Path)
+parser.add_argument('--reference', type=Path, help='Use selections from a prior capture-validation.json instead of the original production baseline.')
+parser.add_argument('--expected-width', type=int, default=1920)
+parser.add_argument('--expected-height', type=int, default=1080)
 args = parser.parse_args()
 root = Path.cwd()
 stage = args.candidate
 capture = stage / 'full-lap'
 report = json.loads((capture / 'environment-evidence.json').read_text())
 baseline = json.loads((root / 'evidence/night-production/baseline/selection.json').read_text())
+if args.reference:
+    reference = json.loads(args.reference.read_text())
+    baseline = {'selections': [entry for entry in reference['selections'] if entry['kind'] == 'primary'],
+                'controls': [entry for entry in reference['selections'] if entry['kind'] == 'control']}
 assert report['complete'], 'Incomplete native report'
 frames = report['frames']
 assert len(frames) == 1440, len(frames)
@@ -51,6 +58,7 @@ for index, frame in enumerate(frames):
     path = capture / frame['file']
     w, h, sha = png_info(path)
     assert (w, h) == (frame['width'], frame['height']), path
+    assert (w, h) == (args.expected_width, args.expected_height), ('Unexpected capture resolution', path, w, h)
     hashes[frame['file']] = sha
 
 selected_dir = stage / 'selected'
@@ -70,7 +78,7 @@ def crossing(t):
                 and 0 < b['progress'] - a['progress'] < .05)
 
 selections = []
-for entry in baseline['selections'] + baseline['controls']:
+for kind, entry in [('primary', e) for e in baseline['selections']] + [('control', e) for e in baseline['controls']]:
     old = entry['frame']
     threshold = entry.get('threshold', old['progress'])
     current = crossing(threshold)
@@ -87,7 +95,7 @@ for entry in baseline['selections'] + baseline['controls']:
         'speedKph': current['speedKph'] - old['speedKph'],
         'raceSeconds': current['raceTime'] - old['raceTime']}
     matched = delta['cameraMetres'] <= .05 and delta['cameraDegrees'] <= .1 and delta['fovDegrees'] <= .05 and delta['playerMetres'] <= .05
-    selections.append({'kind': 'primary' if 'threshold' in entry else 'control',
+    selections.append({'kind': kind,
                        'threshold': threshold, 'baselineIndex': old['index'], 'frame': current,
                        'sha256': hashes[current['file']], 'deltaFromBaseline': delta,
                        'exactPoseTolerancePassed': matched})
@@ -97,6 +105,8 @@ source_changes = [p for p, sha in identity['files'].items() if hashlib.sha256((r
 app_changes = [p for p, sha in identity['appFiles'].items() if hashlib.sha256((root / p).read_bytes()).hexdigest() != sha]
 assert not source_changes and not app_changes, (source_changes, app_changes)
 result = {'buildGuid': report['buildGuid'], 'scope': 'Natural native route crossings, no altered pixels or injected poses. Integrity and pose comparison only; not visual or watched-motion acceptance.',
+          'referenceSelection': str(args.reference) if args.reference else 'evidence/night-production/baseline/selection.json',
+          'expectedDimensions': [args.expected_width, args.expected_height],
           'nativeComplete': True, 'pngsValidated': len(hashes), 'pngHashes': hashes,
           'sourceFilesUnchanged': len(identity['files']), 'appFilesUnchanged': len(identity['appFiles']),
           'selections': selections}

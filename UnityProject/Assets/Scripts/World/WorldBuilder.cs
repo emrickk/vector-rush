@@ -46,9 +46,9 @@ namespace VectorRush
                 float u=x/(float)(textureSize-1),v=y/(float)(textureSize-1);
                 float dampPatch=PeriodicNoise(u,v,(textureSize-1)*.021f,(textureSize-1)*.009f,2.7f,1.1f);
                 float dampStreak=PeriodicNoise(u,v,(textureSize-1)*.12f,(textureSize-1)*.005f,0,0);
-                // Deliberate satin material redesign: the original damp finish exposed unresolved
-                // specular facets. Keep topology/normals/light shadows, and broaden the reflection.
-                masks[index]=new Color(0,0,0,Mathf.Lerp(.35f,.5f,Mathf.SmoothStep(.2f,.8f,dampPatch*.65f+dampStreak*.35f)));
+                // Road-response candidate: retain the satin pattern and shift effective
+                // smoothness by +.09 with the unchanged .90 material multiplier.
+                masks[index]=new Color(0,0,0,Mathf.Lerp(.45f,.60f,Mathf.SmoothStep(.2f,.8f,dampPatch*.65f+dampStreak*.35f)));
             }
             roadGrain.SetPixels(pixels);roadGrain.Apply(true,true);roadNormals.SetPixels(normals);roadNormals.Apply(true,true);roadSmoothness.SetPixels(masks);roadSmoothness.Apply(true,true);
             road.SetTexture("_BaseMap",roadGrain);road.SetTexture("_BumpMap",roadNormals);road.SetTexture("_MetallicGlossMap",roadSmoothness);road.SetTextureScale("_BaseMap",new Vector2(3,1));

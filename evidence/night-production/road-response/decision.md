@@ -17,3 +17,19 @@ Higher smoothness narrows and strengthens the existing direct-specular lobe. It 
 Add read-only material telemetry to the opt-in `EnvironmentEvidence` harness: report the actual native material values/keywords and the uploaded mask's min/max alpha through a temporary GPU readback before starting the race. Restore the render target and release the temporary resources. This is evidence instrumentation, not another visual adjustment. Record both the nominal design range and measured quantized texture range.
 
 An exact copy of the control app is retained locally as `Builds/Vector Rush-road-control.app` before rebuilding. Candidate source/build/evidence and the independent verdict will remain separate. The earlier A/B/C/D attempts remain under `lighting-road/`; no new probe or costly reflection technique is implemented by this experiment.
+
+## Capture interruption and validator correction
+
+The first candidate capture begins at1920×1080, then changes to3024×1832 at frame433. That attempt cannot supply the full controlled comparison, even if it later completes its circuit. Preserve the mixed-resolution sequence as rejected capture evidence and rerun the unchanged candidate. No material or light adjustment is made because of this interruption.
+
+The existing PNG validator checked each image against its frame metadata but did not enforce the requested dimensions across the run. Add explicit expected-width/height checks (default1920×1080), plus an optional reference-selection path so the new material is compared against the freshly captured combined checkpoint rather than the older lighting baseline. This is a validation correction, not a change to the native game's rendering.
+
+## Clean candidate result and decision
+
+Unchanged candidate GUID `1441c9f070434c73a2c65dd244581929` completes the fresh1,440-frame run entirely at1920×1080. PNG integrity,197 source files,189 app files and the separately recorded scene hash pass. The uploaded512×512 base-level mask spans alpha124/255–144/255; multiplier.89999998 yields effective smoothness.437647–.508235. This is narrower than the nominal.405–.54 because the generated noise does not reach the interpolation endpoints. URPLit, mapped-alpha/normal keywords, reflection sampling off, base color, bump.25 and metallic0 are confirmed in the native report.
+
+The new validator compares the candidate against the fresh control: primary149/211/283/398/473 and controls606/641/1004. Every exact-pose tolerance fails; this is a nearby natural-crossing comparison. The continuous silent15-second candidate clip includes the slowdown and passes full decoding. Parent inspects all eight originals. Independent [review004](../../../../docs/road-reviews/004-resumed-smoothness-native.md) separately inspects the same candidate set against its recorded control observations.
+
+Both verdicts reject candidate01 for insufficient useful full-frame gain. Panel/edge readability, thermal/station separation and vehicle grounding survive; no catastrophic still regression is found. The opening road remains plain with restrained pools, the tight-turn fan-like boundaries persist, and broad reflected-source structure is absent. The still-image improvement gate fails, so unobserved continuous-motion behavior cannot justify retaining it. No new candidate real-time-performance or human-play verdict is claimed.
+
+Preserve this candidate's source, readback and rejected/resumed capture evidence as a separate milestone. Restore the exact control's three runtime/scene files and its retained native app. Keep the validator's new resolution guard and explicit reference option. Stop roughness iteration; write a bounded reflection-technique feasibility comparison before any other rendering implementation.
