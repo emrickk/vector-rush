@@ -1,0 +1,66 @@
+{
+  "verifiedUtc": "2026-09-09T02:26:45.331886+00:00",
+  "passed": true,
+  "buildGuid": "40bed5f53c2449418e7fb56bf59739f6",
+  "identitiesUnchanged": {
+    "files": 197,
+    "appFiles": 189
+  },
+  "sceneSha256": "80e8d7b40357e7e80947619f1a588f5ce0b428cec47e6dee7457c2dadd791a3a",
+  "tests": {
+    "id": "2",
+    "testcasecount": "42",
+    "result": "Passed",
+    "total": "42",
+    "passed": "42",
+    "failed": "0",
+    "inconclusive": "0",
+    "skipped": "0",
+    "asserts": "0",
+    "engine-version": "3.5.0.0",
+    "clr-version": "4.0.30319.42000",
+    "start-time": "2026-09-09 02:22:04Z",
+    "end-time": "2026-09-09 02:22:04Z",
+    "duration": "0.0636084"
+  },
+  "nativeProcessExitCode": 0,
+  "pngs": {
+    "01-title.png": {
+      "width": 1920,
+      "height": 1080,
+      "sha256": "4a4e45423f4a2bc551f02a544a8efdb47ff4040a5fd0f7685a423214a251a8c0"
+    },
+    "02-start.png": {
+      "width": 1920,
+      "height": 1080,
+      "sha256": "970d5717479af2b9ab1a5c0f94546eb639fbdc76bd625eb041d4d714cc1713e2"
+    },
+    "03-race.png": {
+      "width": 1920,
+      "height": 1080,
+      "sha256": "b6dee8cf255676d8c0cc1418487fc4fa80a7da2a7f936f142b0ff840c7a8b342"
+    },
+    "04-results.png": {
+      "width": 1920,
+      "height": 1080,
+      "sha256": "7d009ea091081d577e4780a96701770e051643c58ad72b8f73f85075fd983aa0"
+    },
+    "05-crest.png": {
+      "width": 1920,
+      "height": 1080,
+      "sha256": "00fefff3053f0485658afc214148dedb8d181d241f3c9fb8ed78d40c3e78e82d"
+    },
+    "06-city-descent.png": {
+      "width": 1920,
+      "height": 1080,
+      "sha256": "7100e5b7246f146b98680feb4d417203682a59cdd7c3785c2cc78ce8624dfe4b"
+    }
+  },
+  "surfaceSizes": [
+    "1920x1080"
+  ],
+  "raceVerification": "Autopilot through real hover physics: FINISHED\nTime 128.32\nLaps 3\nRecoveries 0\nRestart launch results-to-racing: expectedSource=True, laps/time/energy/recovery reset=True, racing/movement=True, time=1.21, speedKph=184.9\nRestart launch paused-race-to-racing: expectedSource=True, laps/time/energy/recovery reset=True, racing/movement=True, time=1.21, speedKph=184.9\nRestart 1: countdown pause frozen=True, laps=0\nRestart 2: countdown pause frozen=True, laps=0\nRestart 3: countdown pause frozen=True, laps=0\n",
+  "finalTelemetry": "Time 128.32 Phase Finished Lap 3 Position 1\nYOU speed 0.0 progress 3.0003 track 0.0003 recoveries 0 grounded True\nKIRA speed 0.0 progress 2.8653 track 0.8653 recoveries 0 grounded True\nNOVA speed 0.0 progress 2.8045 track 0.8045 recoveries 0 grounded True\nRENN speed 0.0 progress 2.9456 track 0.9456 recoveries 0 grounded True\nAXIOM speed 0.0 progress 2.9392 track 0.9392 recoveries 0 grounded True\nSOL speed 0.0 progress 2.7459 track 0.7459 recoveries 0 grounded True\n",
+  "runtimeMetrics": "Actual runtime sample \u2014 2026-09-09T02:25:08.2362320Z\nUnity 6000.6.0f1\nGPU Apple M2 Max\nResolution 1920x1080\nAutopilot True\nVSync 1\nSamples 6967\nMean ms 8.61\nP50 ms 8.33\nP95 ms 9.25\nP99 ms 16.74\nUnity allocated memory MiB 243.3\nRace state Racing\nRace lap 2\nScope: observed frame intervals; not isolated GPU timings or proof of completed race.\n",
+  "scope": "Restored exact control app. Existing tests, actual automated three-lap race/restarts, six PNG integrity checks and a separate 60-second real-time interval sample. No concurrent Unity build, bake or encoder. Full circuit/selected stills and decoded simulation-time clip are in ../control. No watched continuous motion, human input/audio or alternate-aspect acceptance. Candidate performance was not measured and is not inferred from these numbers."
+}

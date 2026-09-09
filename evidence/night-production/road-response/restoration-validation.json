@@ -1,0 +1,11 @@
+{
+  "restoredUtc": "2026-09-09T02:18:22.154826+00:00",
+  "buildGuid": "40bed5f53c2449418e7fb56bf59739f6",
+  "sourceFilesMatchControl": 197,
+  "appFilesMatchControl": 189,
+  "sceneMatchesControlCommit": true,
+  "sceneSha256": "80e8d7b40357e7e80947619f1a588f5ce0b428cec47e6dee7457c2dadd791a3a",
+  "candidateSourcePreservedAt": "a5debfb",
+  "candidateAppPreserved": "Builds/Vector Rush-road-smoothness-candidate-01.app",
+  "scope": "Exact restoration of the control runtime/app after rejected smoothness experiment. Capture validator guard remains; no new roughness/reflection technique implemented."
+}

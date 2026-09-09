@@ -1,6 +1,6 @@
 # Next development step: road response in the opening passage
 
-Proposed on September 8, 2026, following the owner's request to continue and explain the next step. The preceding game checkpoint is `3097bc8`, native GUID `40bed5f53c2449418e7fb56bf59739f6`. This document resumes planning; it does not claim a new runtime experiment or acceptance.
+Proposed on September 8, 2026, following the owner's request to continue and explain the next step. The preceding game checkpoint is `3097bc8`, native GUID `40bed5f53c2449418e7fb56bf59739f6`. The owner subsequently approved and executed this bounded experiment. **Completed: candidate 01 rejected; exact control restored.** See the [decision and evidence](../evidence/night-production/road-response/decision.md), [independent native verdict](road-reviews/004-resumed-smoothness-native.md) and [reflection feasibility report](road-reviews/005-reflection-feasibility.md). The instructions below preserve the original plan; they are not pending permission requests.
 
 The immediate objective is a road surface that shows broad, plausible light response while retaining panel detail, readable edges and stable highlights through bends. Finish this bounded part of Stage 1 before adding more city or ship detail.
 
@@ -26,4 +26,4 @@ If the direct-light treatment still cannot produce the required road response, s
 
 After selecting a candidate, run the relevant existing checks and a separate real-time native race/performance sample with no build, bake or encoder overlapping it. Compare to the actual control, rather than assigning the older baseline's performance to the new app. Preserve source/build identities, native evidence, the decision and remaining limits; commit and push this bounded milestone under the project workflow. Broader Stage 1, watched/manual, alternate-aspect and circuit acceptance remain governed by the production plan.
 
-Deliverable: one before/after opening-passage comparison, one retained or rejected material experiment, an independent verdict and an explicit next decision. No game or asset change was made while writing this plan.
+Deliverable: one before/after opening-passage comparison, one retained or rejected material experiment, an independent verdict and an explicit next decision. The original planning document made no game or asset changes. Execution subsequently preserved the rejected candidate at `a5debfb`, then restored the original runtime and app. Continuous watched-motion acceptance remains open; the candidate failed the prerequisite still-image gain gate.

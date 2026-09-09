@@ -277,3 +277,9 @@ The owner requested a comprehensive record of the whole project, including inspe
 ## Resumed road-response comparison — user approved
 
 The owner says “continue” after the proposed next step. Finish and publish the complete retrospective, then execute [next-road-pass.md](next-road-pass.md): capture the combined checkpoint as the actual control, inspect the continuous opening passage, make one effective-smoothness comparison with accepted atmosphere and reflection state fixed, obtain native comparison/independent verdict and verify any retained result. If it fails, preserve the negative result and reassess technique. No later city/craft/racing stage is included.
+
+### Bounded comparison completed
+
+The fresh control and candidate each completed 1,440 native 1080p frames, eight original selections and a fully decoded 15-second silent simulation-time clip. Candidate 01 failed the useful whole-frame gain gate in parent and independent review004. Preserve its source at `a5debfb`, restore the exact control runtime/app and keep the validator correction that detects unexpected resolution changes. Continuous watched-motion acceptance remains open. [Decision](../evidence/night-production/road-response/decision.md).
+
+The [feasibility report](road-reviews/005-reflection-feasibility.md) proposes one isolated opt-in preview-SSR prototype on the existing URP 17.6 package, beginning with compile/type/resource/pass checks. No new reflection implementation or later city/craft/racing stage is included in this completed comparison. Stage 1 remains incomplete. Current technical checks belong to the restored app and are recorded in [HANDOFF.md](HANDOFF.md).

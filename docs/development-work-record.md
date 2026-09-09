@@ -6,6 +6,8 @@ The result is an original playable macOS anti-gravity racing prototype: one circ
 
 “We” refers to the integrator and the explicitly assigned asset, gameplay and review agents. An independent critic's observations are attributed as review findings; the document does not imply that one person manually performed every operation. Dates in the commit ledger use America/Los_Angeles time. Asset and native reports sometimes retain UTC timestamps.
 
+Subsequent work is recorded separately in the [resumed road-response decision](../evidence/night-production/road-response/decision.md): one smoothness candidate was rejected and the exact control restored. The [current handoff](HANDOFF.md) records its fresh validation and the proposed next step. This retrospective retains its original 60-commit cutoff.
+
 ## How to read this record
 
 The chapters follow the development of each system, with commit anchors to reconnect overlapping work to the chronology. Each substantive entry describes the evidence or problem, the implemented action, the tool or source involved, and the result with its limits. The final ledger lists all 60 recorded commits through the checkpoint. Linked source recipes, images and reports provide the detailed evidence behind the narrative.

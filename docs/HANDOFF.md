@@ -1,5 +1,19 @@
 # Vector Rush handoff — 2026-09-08
 
+## Current result — resumed road pass completed
+
+The owner resumed after the historical pause below. One higher-smoothness candidate was rejected for insufficient useful whole-frame gain by the parent and independent [review004](road-reviews/004-resumed-smoothness-native.md). Candidate source is preserved at `a5debfb`; the exact control runtime, scene and app are restored. The app remains GUID `40bed5f53c2449418e7fb56bf59739f6`. [Decision](../evidence/night-production/road-response/decision.md) · [restoration identity](../evidence/night-production/road-response/restoration-validation.json).
+
+Fresh validation now supersedes the older checkpoint's missing technical checks: **42/42 tests pass**, the actual automated race finishes three laps in **128.32 s** with all six racers at zero recoveries in the final telemetry, both restart launches pass and all three countdown-pause checks pass. The native process exits zero. Six 1920×1080 PNGs pass CRC/decompression; the parent also inspects the actual results image. The 197 source/resource/settings files, 189 app files and scene hash still match the exact restored control. [Final verification](../evidence/night-production/road-response/final/verification.json).
+
+The separate real-time 60-second sample on Apple M2 Max at 1920×1080/VSync 1 records 6,967 intervals: **mean 8.61 ms, P95 9.25 ms, P99 16.74 ms**, allocated memory 243.3 MiB. No build, bake or encoder overlaps it. The higher P99 than the older baseline (9.31 ms) is preserved, not explained away or assigned to the rejected candidate. These are observed frame intervals, not isolated GPU timings or a new production-performance acceptance.
+
+The fresh control and candidate each have a complete 1,440-frame 1080p circuit, eight inspected original selections and a fully decoded 15-second silent simulation-time clip. Exact-pose tolerances fail and remain explicit. Continuous watched-motion, manual input/audio, alternate-aspect and broader production acceptance remain open. This bounded experiment is complete; **Stage 1 remains incomplete**.
+
+Next proposed work is one isolated native preview-SSR prototype on the installed URP 17.6 package, starting with compilation, actual feature/resource availability and pass verification. [Feasibility005](road-reviews/005-reflection-feasibility.md) documents the guarded source, official opt-in route, limitations and gates. No SSR implementation, package upgrade or later city/craft/racing stage was started. Do not repeat arbitrary smoothness or probe-strength variants.
+
+The sections below preserve the earlier checkpoint history; their past-tense validation gaps and pause refer to that earlier milestone.
+
 ## Historical checkpoint and subsequent resumption
 
 **This records the earlier owner-requested pause at `3097bc8`. The owner subsequently resumed work and authorized the [next road pass](next-road-pass.md); that current instruction supersedes the hold below.** See the [complete work record](development-work-record.html) for the project history.
@@ -19,7 +33,7 @@ The source now combines **candidate A’s broader direct lighting and clearer re
 - Ambient SH RGB `.14/.16/.18`; moon RGB `.78/.85/.92`, intensity `.78`, shadow strength `.4`.
 - Exp2 fog density `.0018`; intended linear RGB `.041/.074/.086` is assigned through `.gamma` in runtime and Editor scene setup. Native readback confirms the intended linear shader values. Sky horizon `.047/.081/.096`, zenith `.0015/.0035/.008`.
 - Cool exterior pool RGB `.68/.86/.91`, intensity `460`; warm pools and gallery/landmark lights remain fixed.
-- Running deck uses `RoadSurface`, with environment cubemap sampling disabled and direct specular retained. Original maps, normals, geometry and effective smoothness `.315–.45` remain unchanged. The unused serialized `RoadSurfaceReflections` variant remains for reproducible comparisons.
+- Running deck uses `RoadSurface`, with environment cubemap sampling disabled and direct specular retained. Original maps, normals, geometry and nominal effective-smoothness endpoints `.315–.45` remain unchanged; these endpoints are not a measured GPU texture range. The unused serialized `RoadSurfaceReflections` variant remains for reproducible comparisons.
 - D’s two local probes and pipeline blending/box-projection toggles are removed. The original single 256 px one-shot global probe remains; pipeline blending and box projection are off.
 - Route, race/AI, camera, craft geometry, craft texture payloads and postprocessing are unchanged by this stage. The three proven road-fixture caster-off groups remain off.
 
