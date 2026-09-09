@@ -462,3 +462,9 @@ Added persistent authored normal/gloss seed references and explicit baseline key
 ## 2026-09-09 — Opening03 valid native component evidence
 
 Separate appGUID5b0ab4accd4c40279591b27098ff49ed builds and exits0; both template guards pass and native actual baseline road now retains all four required features. Off/construction/surface/combined each complete9 original1080p PNGs with1440poses; source242/app189 identity and image integrity pass, exact poses differ. Runtime accepts both construction groups and all four lights after99existing-city OBB checks. No native rendering/initialization exceptions found in these logs; shutdown diagnostics remain recorded. Original app unchanged. Candidate preserved before separate whole-frame verdict; no motion/performance claim.
+
+## 2026-09-09 — Opening03 surface rejection and final bounded correction
+
+Independent003f inspects all18 off/combined originals: construction now adds useful occupied fronts at.15/.22, depth at.30 remains, later views broadly preserve hierarchy. Combined surface is rejected because broad cloudy patches replace the control road's directional response, especially in the warm gallery. Fine-normal frequency restoration did not recover that response.
+
+Final permitted substantive correction: remove the regional road integration and retain the complete original road mesh/material/all three maps, while keeping useful construction and the bounded gallery/fixture study for one last combined comparison. This removes a demonstrated regression and does not claim the broader reflected-source road goal. If the retained surface/lighting state still regresses, select the verified construction-only state rather than perform a third art sweep.

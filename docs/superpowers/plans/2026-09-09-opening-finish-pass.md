@@ -61,3 +61,6 @@ Owner authorized the next pass at High effort after [the parallel critique and r
 
 - Opening01 candidate `ce50b9e`: four sparse native modes validated; independent003c rejects useful finish. Main failures are hidden frontage at.22, pale/slab-dominant disconnected construction and flattened road response. Original app preserved.
 - Correction1 / opening02: same attachments, narrower dark walks, compact raised occupied fronts with lit support contacts; metric architectural finish maps. Restore road detail at original frequency beneath broad response atlas, retain detail shader variant explicitly, shape existing-source coverage. Recheck all changed clearance volumes and native nine views before later gates. Implementers own disjoint source; integrator owns Unity/settings.
+
+- Correction1 native opening03: valid baseline, useful construction, rejected regional road/cloudy response (003f). Two technical shader-retention failures are preserved underopening02.
+- Correction2/final: restore original road mesh/material/maps in every mode by disconnecting OpeningRoadFinish from WorldBuilder; retain construction and gallery/fixture study. Evaluate combined once, then use construction-only if this retained study still regresses. No third substantive art round. Road reflected-source finish remains unresolved.
