@@ -1,5 +1,7 @@
 # Nocturne Production Rebuild Implementation Plan
 
+**Execution override — owner instruction, 2026-09-09:** Use the [Sol/Astra execution packet](2026-09-09-sol-astra/README.md): GPT-5.6 Sol owns coding/Unity integration; Astra owns modeling/Blender/art data. Worker self-checks remain required, but the independent review gates below occur only after the implementation handoff, owner review and an explicit request to begin parent review. Stop and notify the owner after the integrated candidate is handed off. This replaces the earlier parent-operated automatic review sequence.
+
 > **For agentic workers:** Use superpowers:subagent-driven-development or superpowers:executing-plans during implementation. Parent owns integrated art direction, shared scene/settings and native execution; agents own explicitly assigned assets or systems. Steps use checkboxes for execution tracking. This is a production plan with substantial playable deliverables, not a request to substitute small source tasks for those deliverables.
 
 **Goal:** Rebuild the complete existing Nocturne circuit into a consistently finished, visually distinct night race, with coherent audiovisual feedback and a complete three-lap player experience.

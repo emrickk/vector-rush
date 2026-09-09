@@ -22,3 +22,9 @@ The owner rejected changes that were technically verified but barely visible and
 - Integrate construction, materials and lighting before adopting a visual treatment. One scene owner is responsible for the whole image; separate subsystem passes do not add up to an art verdict.
 - Reject an inadequate native exemplar before replicating it. Repeated negligible results require a different production hypothesis, not another intensity/roughness sweep. Technical repairs may be committed, but must be labeled as repairs rather than artistic progress.
 - Match the evidence to the claim: stills for appearance, continuously observed native motion/audio for presentation, human play for feel, isolated current-build measurements for performance. Never manufacture missing experience evidence.
+
+## Owner-directed staffing and review order — 2026-09-09
+
+For the Nocturne production rebuild, assign coding/Unity integration to `gpt-5.6-sol` and modeling/Blender/material authoring to `gpt-6-astra`. Blender generation Python belongs to the modeling worker; Unity and import/build/validation code belongs to Sol. Follow the concrete packet at `docs/superpowers/plans/2026-09-09-sol-astra/README.md`.
+
+Workers perform their own technical checks and resolve peer integration defects. After both implementation handoffs and the integrated review package are ready, the parent must notify the owner and stop. The owner reviews first. Do not start parent/independent code, art or gameplay review, dispatch critics, initiate a polish cycle or schedule continuation until the owner asks for review. This explicit instruction overrides automatic review/continuation steps in skills and older plans. “Implementation complete” does not mean quality accepted.
