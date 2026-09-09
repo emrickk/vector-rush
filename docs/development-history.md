@@ -388,3 +388,7 @@ Owner authorized execution. Added separate SSR preview setup/runtime and optiona
 ## 2026-09-08 — SSR keyword-retention correction and first native run
 
 Added matching unused SSR-free renderer as a build requirement. Generated prefilter is Select(1), retaining both states; original renderer remains default and SSAO is unchanged. Independent 001b review clears the correction. Separate Development preview builds successfully, but its first SSR-off run exposes a pre-existing IonPropulsion MaterialPropertyBlock constructor allocation rejected by Development checks. Integrator terminated invalid capture (exit143); archived binary and excerpt retained. No valid off/on comparison yet. The next bounded correction moves only that allocation into Awake and repeats the native run.
+
+## 2026-09-08 — Propulsion startup correction verified; SSR01 native failure preserved
+
+Moved only MaterialPropertyBlock allocation into IonPropulsion.Awake. Independent 001c review clears source; rebuilt Development preview GUID47944ad3754d45adb51c354c3251c518 completes clean SSR-off capture without the earlier initialization exceptions. Both off and on finish1440 original1080p PNGs, all integrity checks pass, nine natural crossings retained, exact-pose tolerances still fail. ON produces six RenderGraph exceptions on reflection-probe rendering and shows the error console, so image integrity is not a reflection or quality pass. No performance sample collected. Original control app unchanged. See `evidence/nocturne-v2/ssr-01/native-validation.json`.

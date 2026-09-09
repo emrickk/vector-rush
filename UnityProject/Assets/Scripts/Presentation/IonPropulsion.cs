@@ -16,11 +16,14 @@ namespace VectorRush
         readonly Renderer[] rings = new Renderer[6];
         readonly Light[] lights = new Light[2];
         readonly float[] jetLengthScales = new float[3];
-        readonly MaterialPropertyBlock properties = new MaterialPropertyBlock();
+        MaterialPropertyBlock properties;
         float response;
         public float ExhaustResponse => response;
         public float ExhaustDemand => vehicle && RaceDirector.Instance && RaceDirector.Instance.Phase == RacePhase.Racing
             ? vehicle.ThrottleInput * (vehicle.IsBoosting ? 1.35f : 1f) : 0f;
+
+        // Native engine allocations must run in a Unity lifecycle callback.
+        void Awake() { properties = new MaterialPropertyBlock(); }
 
         public void Initialize(HoverVehicle craft)
         {

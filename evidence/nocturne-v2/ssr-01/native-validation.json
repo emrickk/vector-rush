@@ -1,0 +1,17 @@
+{
+  "buildGuid": "47944ad3754d45adb51c354c3251c518",
+  "buildExitCode": 0,
+  "offExitCode": 0,
+  "onExitCode": 0,
+  "offPNGValidated": 1440,
+  "onPNGValidated": 1440,
+  "offInitializationExceptions": 0,
+  "onRenderGraphErrors": 6,
+  "onNullReferenceExceptions": 6,
+  "onErrorRoute": "BuiltinRuntimeReflectionSystem -> ScreenSpaceReflectionPass.CreateRenderTextureHandles cameraColor.GetDescriptor",
+  "actualSSRPassVerified": false,
+  "markerScope": "RenderGraphProfilingScope is compiled out without UNITY_INCLUDE_INSTRUMENTATION, absent from observed Development compiler response. Zero marker samples do not prove no pass execution.",
+  "visualComparisonValid": false,
+  "reason": "ON probe-render failures and error overlay contaminate reflected inputs and screenshots. No performance sampling warranted.",
+  "controlAppPreserved": true
+}
