@@ -28,7 +28,7 @@
 
 ## Starting point and scope
 
-This is a plan prepared at the owner's request; implementation has not started. Reference milestone `3c29f48` follows restored-control milestone `23362cc`. Current native app GUID is `40bed5f53c2449418e7fb56bf59739f6`. The restored app's existing 42 tests, 128.32 s automated race, restart checks, captures and performance scope are in [HANDOFF](../../HANDOFF.md). Reuse those records; do not repeat baseline work simply to make a new folder.
+Execution began at the owner's request. SSR01 and SSR02 are preserved native experiments; the current reflection approach has not passed production acceptance. Reference milestone `3c29f48` follows restored-control milestone `23362cc`. Current native app GUID is `40bed5f53c2449418e7fb56bf59739f6`. The restored app's existing 42 tests, 128.32 s automated race, restart checks, captures and performance scope are in [HANDOFF](../../HANDOFF.md). Reuse those records; do not repeat baseline work simply to make a new folder.
 
 The immediate deliverable is **one SSR availability/appearance result**, followed by a retain/reject decision. Later tasks are independently reviewable follow-on work. This plan does not promise that one rendering switch will reproduce the generated targets.
 
@@ -68,8 +68,8 @@ Existing world interfaces remain `WorldBuilder.Build(TrackPath)`, `NightDistrict
 
 **New interfaces:** `RoadReflectionPreviewSetup.EnableDefine()` adds the compile symbol without replacing existing symbols; `RoadReflectionPreviewSetup.BuildPreview()` prepares, retains the feature and builds the separate app; `RoadReflectionPreview.Configure(VolumeProfile profile)` adds the diagnostic volume configuration. The runtime option is `-vrRoadSSR on|off`; missing or invalid values keep SSR disabled. These interfaces are for this prototype, not new player-facing menu settings.
 
-- [ ] Record the current branch/commit and control app hashes in `evidence/nocturne-v2/ssr-01/control-identity.json`. Retain the existing app and source restore point. Confirm no other editor owns the shared settings. Copy the existing reference/control metadata; do not rebuild the control.
-- [ ] Add only `URP_SCREEN_SPACE_REFLECTION` to Standalone scripting symbols, in an Editor method compiled without SSR type references. End that Editor invocation; compilation/domain reload occurs before the separate preview-build invocation. Do not edit the package cache or add an engine dependency.
+- [x] Record the current branch/commit and control app hashes in `evidence/nocturne-v2/ssr-01/control-identity.json`. Retain the existing app and source restore point. Confirm no other editor owns the shared settings. Copy the existing reference/control metadata; do not rebuild the control.
+- [x] Add only `URP_SCREEN_SPACE_REFLECTION` to Standalone scripting symbols, in an Editor method compiled without SSR type references. End that Editor invocation; compilation/domain reload occurs before the separate preview-build invocation. Do not edit the package cache or add an engine dependency.
 
 The define update uses the installed API and preserves other symbols:
 
@@ -84,7 +84,7 @@ UnityEditor.PlayerSettings.SetScriptingDefineSymbols(target,
 UnityEditor.AssetDatabase.SaveAssets();
 ```
 
-- [ ] In the next invocation, verify that `ScreenSpaceReflectionRendererFeature` and `ScreenSpaceReflectionVolumeSettings` compile. Put references behind `#if URP_SCREEN_SPACE_REFLECTION`; the build method's `#else` must throw an explicit unavailable-feature exception. Create/find one feature subasset in `VectorRenderer.asset`, set `afterOpaque=false`, and activate it. Preserve SSAO and all existing renderer settings. Save the renderer, resources and feature before building so native stripping sees the active feature.
+- [x] In the next invocation, verify that `ScreenSpaceReflectionRendererFeature` and `ScreenSpaceReflectionVolumeSettings` compile. Put references behind `#if URP_SCREEN_SPACE_REFLECTION`; the build method's `#else` must throw an explicit unavailable-feature exception. Create/find one feature subasset in `VectorRenderer.asset`, set `afterOpaque=false`, and activate it. Preserve SSAO and all existing renderer settings. Save the renderer, resources and feature before building so native stripping sees the active feature.
 
 The installed feature supports the following concrete registration pattern, after `VectorRushSetup.Prepare()`:
 
@@ -112,7 +112,7 @@ UnityEditor.EditorUtility.SetDirty(renderer);
 UnityEditor.AssetDatabase.SaveAssets();
 ```
 
-- [ ] Call `RoadReflectionPreview.Configure(profile)` beside the existing runtime grade-profile creation, before assigning that profile to the global Volume. Read the explicit on/off flag and apply this one starting configuration. Keep the road's cubemap sampling off, original `.35–.50` mask endpoints and `.90` multiplier, normals, fog, lighting, craft and race logic unchanged. The effect's own material opt-out `_SCREENSPACEREFLECTIONS_OFF` must not be enabled on the road.
+- [x] Call `RoadReflectionPreview.Configure(profile)` beside the existing runtime grade-profile creation, before assigning that profile to the global Volume. Read the explicit on/off flag and apply this one starting configuration. Keep the road's cubemap sampling off, original `.35–.50` mask endpoints and `.90` multiplier, normals, fog, lighting, craft and race logic unchanged. The effect's own material opt-out `_SCREENSPACEREFLECTIONS_OFF` must not be enabled on the road.
 
 The configuration body, inside the SSR compilation guard, uses the pinned source's actual public fields:
 
@@ -142,14 +142,16 @@ ssr.temporalFiltering.Override(false);
 UnityEngine.Debug.Log("VR_SSR_REQUESTED " + enabled);
 ```
 
-- [ ] Build to the separate app path. `BuildPreview()` calls `Prepare()` once, registers/saves the feature, then invokes `BuildPipeline.BuildPlayer` for `Assets/Scenes/Solstice.unity`, `BuildTarget.StandaloneOSX`, and the separate output above; throw if `report.summary.result != BuildResult.Succeeded`. Do not call the ordinary `BuildMac()` afterward: it prepares again and overwrites `Builds/Vector Rush.app`.
+- [x] Build to the separate app path. `BuildPreview()` calls `Prepare()` once, registers/saves the feature, then invokes `BuildPipeline.BuildPlayer` for `Assets/Scenes/Solstice.unity`, `BuildTarget.StandaloneOSX`, and the separate output above; throw if `report.summary.result != BuildResult.Succeeded`. Do not call the ordinary `BuildMac()` afterward: it prepares again and overwrites `Builds/Vector Rush.app`.
 - [ ] Verify **native** feature/volume settings, retained resources, depth/normal/smoothness data and the actual SSR pass. Use an attached native profiler/GPU capture to identify the SSR marker or its output; the installed source also names `SSR - Upscaling`. A type name, requested flag or enabled checkbox alone does not prove execution. If native pass inspection is unavailable, record that technical gate as unverified rather than inventing a pass.
-- [ ] Capture SSR-off and SSR-on in the same preview binary using the native commands below. First confirm that preview-off visually reproduces the current control; unexplained off-state differences invalidate the comparison. Select natural crossings and retain pose differences. Check all opening views, thermal controls, warm gallery and station, not only a favorable road crop.
+- [x] Capture SSR-off and SSR-on in the same preview binary using the native commands below. First confirm that preview-off visually reproduces the current control; unexplained off-state differences invalidate the comparison. Select natural crossings and retain pose differences. Check all opening views, thermal controls, warm gallery and station, not only a favorable road crop.
 - [ ] Watch the whole opening interval continuously. Inspect screen-edge disappearance, craft/rail occlusion, bright-source clipping, black propagation, history trails, bank/turn response and the ordinary slowdown. Opaque-only SSR is not expected to reflect transparent exhaust. A 30 m ray limit does not test all distant city reflections.
 - [ ] If the effect has useful visible gain, collect separate off/on/off real-time performance samples with captureFramerate disabled and stable display conditions. Preserve each sample, including bad ones. The inherited budget stays provisional; compare both cost and absolute thresholds.
-- [ ] Commit the candidate/evidence, then the verdict separately. A compilation/resource/pass failure, unusable artifacts, no useful whole-frame gain, or unacceptable measured cost rejects this prototype. Preserve it and retain the exact control. Write one evidence-based alternative technique proposal before new rendering work; do not repeat arbitrary smoothness/probe-strength changes or silently upgrade URP.
+- [x] Commit the candidate/evidence, then the verdict separately. A compilation/resource/pass failure, unusable artifacts, no useful whole-frame gain, or unacceptable measured cost rejects this prototype. Preserve it and retain the exact control. Write one evidence-based alternative technique proposal before new rendering work; do not repeat arbitrary smoothness/probe-strength changes or silently upgrade URP.
 
 The preview build can carry every setting identically while the volume mode supplies the off/on difference. Selecting a useful renderer is the exit from this task, not completion of the production appearance target.
+
+**Execution result (2026-09-08):** SSR01 rejected for reflection-camera RenderGraph failures. Corrected SSR02 source/evidence is preserved at `dd7a417`; its two native runs exit 0 with 2,880 intact PNGs. CPU SSR pass samples are positive on and zero off, but GPU input/output contents remain unverified. [Independent review 001g](../../visual-target-reviews/001g-ssr02-visual-review.md) rejects useful whole-frame improvement after all nine pairs. The original app remains intact. The unchecked motion and GPU-data items are not passed; conditional performance sampling was not triggered. The prototype experiment has a reject result, while selection of a useful reflection technique remains unresolved. See [updated verdict](../../visual-target-reviews/001-reflection-feasibility.md) and [alternative proposal](../../visual-target-reviews/001h-next-technique-proposal.md). Tasks 2–7 remain pending.
 
 ## Task 2 — road and light finish
 

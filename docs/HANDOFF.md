@@ -1,5 +1,13 @@
 # Vector Rush handoff — 2026-09-08
 
+## Latest execution — SSR prototype rejected for insufficient visible gain
+
+The owner authorized the Nocturne V2 implementation plan. SSR01 failed on reflection cameras; SSR02 fixes that scope and supplies actual instrumented CPU pass samples, but independent inspection of all nine off/on pairs finds no convincing useful reflection improvement. [Original native comparison](ssr02-native-comparison.html) · [verdict and limits](visual-target-reviews/001-reflection-feasibility.md) · [next technique proposal](visual-target-reviews/001h-next-technique-proposal.md).
+
+SSR02 source/evidence is committed at `dd7a417`; its separately named app has GUID `f1a459e36c064afc930b841eede3d488`. Both 1,440-frame captures exit 0 and pass integrity/source/app checks. GPU buffer contents, continuous motion, manual/audio and realtime performance are unverified for this preview. The source checkout retains experimental SSR infrastructure and Instrumented target settings with runtime SSR defaulting off; it is not the exact historical control source. Do not treat a normal rebuild as reproducing the retained control binary.
+
+The original `Builds/Vector Rush.app`, GUID `40bed5f53c2449418e7fb56bf59739f6`, remains unchanged across all 189 hashed files. Earlier control tests/performance below belong only to that control. The SSR experiment has a rejection result; the production rendering choice and Tasks 2–7 remain unresolved. The sections below are historical records, not new acceptance claims.
+
 ## Latest reference refresh — appearance targets and gap review
 
 The owner requested consistent reference images and evaluation after reviewing this handoff. Four new generated [Nocturne V2 targets](../references/nocturne-v2/README.md) now share the current craft and one appearance reference across the opening bend, amber gallery, thermal passage, and a neutral craft study. The [interactive comparison](visual-targets-v2.html) places original native evidence beside each target. Exact prompts, input camera/file provenance, image integrity checks, consistency limitations, and prioritized native acceptance criteria are preserved with the set.

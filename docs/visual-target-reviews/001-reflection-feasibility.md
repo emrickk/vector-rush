@@ -1,3 +1,29 @@
+# Reflection feasibility — SSR02 rejected for insufficient demonstrated gain
+
+SSR02 is **not accepted for production**. The camera-scoped correction removes the earlier observed reflection-camera failures and records native CPU pass work, but all nine whole-frame OFF/ON comparisons fail to demonstrate a convincing useful reflection improvement. This is not a claim that SSR is universally unsuitable or that its GPU output has been proven correct. [Independent visual review 001g](001g-ssr02-visual-review.md) · [original native comparison](../ssr02-native-comparison.html).
+
+Source/evidence milestone `dd7a417` preserves the corrected separate app `Builds/Vector Rush-SSR-preview-02.app`, GUID `f1a459e36c064afc930b841eede3d488`. Both native runs exit 0 and each yields 1,440 intact 1920 × 1080 original PNGs with unchanged source/app hashes. SSR, upscaling and final-blit CPU counters record 1,690 positive frames ON and zero OFF. Reflection cameras are skipped; Game cameras delegate to the installed feature. The prior rendering/initialization exceptions are absent. Native shutdown warnings remain in the logs. [Validation](../../evidence/nocturne-v2/ssr-02/native-validation.json).
+
+The scene remains broadly readable in all reviewed stills. The reviewer finds no clearly legible new reflected lamp, rail, architecture or craft feature. Local differences remain inconclusive. These are naturally steered runs, not identical frozen poses: current pair camera separation is about 0.106–0.221 m except the two thermal pairs at about 1.87 m. Legacy exact-pose tolerance flags also remain failed. Do not interpret small pixel differences as a measured SSR contribution.
+
+## Gate result and retained state
+
+- Feature/resource retention, supported Instrumented compilation and native CPU pass work are evidenced.
+- Actual GPU depth/normal/smoothness contents, hit validity and final reflection buffer are **unverified**. CPU counters cannot close that gate.
+- Useful whole-frame appearance is **not demonstrated**. No gross static failure is apparent in the nine views, which does not establish temporal stability.
+- Continuous motion, manual/audio and separate realtime performance are **not passed** for SSR02. With no useful appearance gain, conditional performance sampling was not triggered.
+- Original playable app GUID `40bed5f53c2449418e7fb56bf59739f6` remains unchanged across all 189 hashed files. Earlier control behavior/performance results do not transfer to the experimental preview. Source retains the default-off SSR experiment and Instrumented target setting; it is not an exact control-source restoration.
+
+The prototype has a rejection result. A useful reflected-structure technique remains unresolved; Tasks 2–7 are still pending. Do not roll out the current SSR configuration or infer completion of the Nocturne V2 appearance target.
+
+## One bounded alternative before new rendering work
+
+[Proposal 001h](001h-next-technique-proposal.md) defines one opening-only direct-light origin, aim and footprint candidate with SSR off, existing fixtures and unchanged road material. It is grounded in the current displaced spotlight origins and common forward aim. It would supply direct diffuse/specular pools, **not reflected scene structure**. The banked, elevated road makes a single planar mirror an unsuitable drop-in alternative; a segmented solution would be a separate rendering-system project.
+
+If explaining SSR itself becomes the priority, one isolated warm-gallery GPU mask/hit/final-contribution inspection could resolve whether information is absent or lost. No further parameter sweep is justified by the current stills. The proposal is recorded before any new rendering changes; it has not been implemented or accepted.
+
+---
+
 # SSR01 feasibility verdict — rejected
 
 The installed preview feature compiled and retained resources, but SSR01 is **rejected as configured**. With SSR enabled, the native player logs six RenderGraph failures originating in the realtime reflection system. The SSR pass tries to obtain a descriptor for an invalid camera color texture. The error console contaminates the ON images; probe rendering also cannot be assumed intact. The six events are consistent with cubemap faces, not independently labeled camera telemetry.

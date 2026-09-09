@@ -296,8 +296,12 @@ Completed: four original 1672 × 941 PNGs in [Nocturne V2](../references/nocturn
 
 ## Nocturne V2 implementation plan
 
-The reference-aligned [implementation plan](superpowers/plans/2026-09-08-nocturne-v2-execution.md) is prepared: isolated reflection feasibility, road/light finish, connected city, architectural finish, craft materials, integrated play validation, then circuit rollout/delivery. It preserves the restored control and starts with a separately named preview app. Runtime implementation has not started.
+The reference-aligned [implementation plan](superpowers/plans/2026-09-08-nocturne-v2-execution.md) is prepared: isolated reflection feasibility, road/light finish, connected city, architectural finish, craft materials, integrated play validation, then circuit rollout/delivery. It preserves the restored control and starts with a separately named preview app. The isolated SSR experiment is implemented; production acceptance and later milestones remain open.
 
 ### Active SSR02 correction after SSR01 availability rejection
 
 SSR01 source and full failed native evidence are preserved at6c0e1a6. [Verdict and bounded proposal](visual-target-reviews/001-reflection-feasibility.md): restrict the installed preview feature to Game cameras and enable supported managed instrumentation in a separately named SSR02 build, preserving probe/world/material/physics inputs. Task1 remains in progress; later visual milestones remain pending.
+
+### SSR02 result — visual feasibility rejected
+
+Camera-scoped SSR02 source and native evidence are preserved at `dd7a417`. Both captures complete with intact images; positive CPU pass samples establish execution but do not prove GPU output. Independent review of all nine pairs finds no convincing whole-frame reflection gain. [Comparison](ssr02-native-comparison.html) · [verdict](visual-target-reviews/001-reflection-feasibility.md) · [bounded alternative proposal](visual-target-reviews/001h-next-technique-proposal.md). The exact original app remains retained. Motion, GPU-buffer and performance gates are not passed; Tasks 2–7 have not begun.
