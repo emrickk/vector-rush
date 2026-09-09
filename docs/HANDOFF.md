@@ -1,14 +1,16 @@
 # Vector Rush handoff — 2026-09-08
 
-## Status and owner hold
+## Historical checkpoint and subsequent resumption
 
-**Paused at the owner’s request. Do not resume automatically.** The owner asked to work on Stage 1, then said “wrap up and push”; the coordinating task also requested a durable handoff and cessation of further game work. Finish this checkpoint, push, and stop. No new experiment, later stage, merge or release is authorized by the wrap-up alone.
+**This records the earlier owner-requested pause at `3097bc8`. The owner subsequently resumed work and authorized the [next road pass](next-road-pass.md); that current instruction supersedes the hold below.** See the [complete work record](development-work-record.html) for the project history.
+
+Historical hold: The owner asked to work on Stage 1, then said “wrap up and push”; the coordinating task also requested a durable handoff and cessation of further game work. Finish this checkpoint, push, and stop. No new experiment, later stage, merge or release is authorized by the wrap-up alone.
 
 Repository: `/Users/anping/Documents/Stuff/AI Space/Vector Rush`  
 Branch: `build/first-playable`  
 Remote: `https://github.com/emrickk/vector-rush.git`
 
-The final checkpoint commit is the commit containing this handoff; obtain its exact revision with `git log -1`. Published history is preserved without squashing. `AGENTS.md` requires current plans, separate corrective/review commits, and pushing completed milestones.
+The saved game checkpoint is commit `3097bc8`. Later documentation commits do not change that native app identity. Published history is preserved without squashing. `AGENTS.md` requires current plans, separate corrective/review commits, and pushing completed milestones.
 
 ## Resumable source and local app
 

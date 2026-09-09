@@ -269,3 +269,11 @@ Task2 preserves A (modest broad-light improvement) and B (rejected darker road).
 ## Owner wrap-up — 2026-09-08
 
 Work is paused. Task 1 is complete; Task 2 is partially delivered and its production road-response acceptance remains open. Preserve A/B/C/D and independent review021. The checkpoint combines A's direct-light/readable reflection-off road with C's accepted fog correction. Remove D's local probes and pipeline toggles. Do not initiate the roughness experiment, SSR, later city/craft/racing stages, releases or merges during wrap-up. Build and inspect the local checkpoint, record its exact limited validation in [HANDOFF.md](HANDOFF.md), push all completed work, then stop. Further work requires the owner to resume it.
+
+## Detailed retrospective documentation — 2026-09-08
+
+The owner requested a comprehensive record of the whole project, including inspected images, findings, concrete Python/Blender/code operations, verification and rejected attempts. Compile the source-linked record through checkpoint `3097bc8` from the 60 recorded commits, authoring recipes, native reports and independent critiques. This is documentation work; it does not restart game builds or asset experiments. Deliver one navigable complete document with the original evidence linked and the latest checkpoint limits explicit. The owner has also asked for the next development plan: a bounded road-response investigation with the accepted atmosphere fixed, following the record delivery.
+
+## Resumed road-response comparison — user approved
+
+The owner says “continue” after the proposed next step. Finish and publish the complete retrospective, then execute [next-road-pass.md](next-road-pass.md): capture the combined checkpoint as the actual control, inspect the continuous opening passage, make one effective-smoothness comparison with accepted atmosphere and reflection state fixed, obtain native comparison/independent verdict and verify any retained result. If it fails, preserve the negative result and reassess technique. No later city/craft/racing stage is included.

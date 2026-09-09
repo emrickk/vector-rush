@@ -1,0 +1,1119 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vector Rush — Complete development work record</title>
+<style>
+:root{color-scheme:light;--ink:#172d34;--muted:#54686d;--accent:#176e70;--line:#d6dfdc;--paper:#f9faf6}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:35px}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.75 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}a{color:var(--accent);text-underline-offset:3px}a:hover{color:#0a4546}header{padding:25px 4vw;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:16px}header strong{letter-spacing:.18em;font-size:13px}header span{font-size:12px;color:var(--muted)}.layout{display:grid;grid-template-columns:270px minmax(0,1fr);max-width:1480px;margin:auto}aside{position:sticky;top:0;height:100vh;overflow:auto;padding:36px 22px 36px 28px;border-right:1px solid var(--line)}aside p{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0 0 17px}aside a{display:block;text-decoration:none;line-height:1.4;font-size:13px;padding:8px 10px;margin:2px 0;border-left:2px solid transparent}aside a:hover,aside a.active{background:#eaf0ea;border-left-color:var(--accent)}main{min-width:0;max-width:1030px;padding:52px 60px 100px}h1{font-size:clamp(35px,4.2vw,58px);line-height:1.08;letter-spacing:-.04em;font-weight:650;max-width:760px;margin:0 0 30px}h2{font-size:29px;line-height:1.25;letter-spacing:-.02em;margin:66px 0 25px;padding-top:26px;border-top:1px solid var(--line)}h3{font-size:21px;line-height:1.4;margin:38px 0 16px}p{margin:0 0 20px}li{margin:8px 0}code{font: .84em ui-monospace,SFMono-Regular,monospace;overflow-wrap:anywhere;background:#eaf0e9;padding:2px 4px;border-radius:3px}pre{overflow:auto;padding:18px;background:#eaf0e9}table{border-collapse:collapse;width:100%;font-size:13px;line-height:1.6}th,td{text-align:left;vertical-align:top;border-bottom:1px solid var(--line);padding:12px 10px;min-width:100px}th{background:#eaf0e9;font-weight:650}.table-scroll{overflow:auto;margin:24px 0 30px}img{display:block;width:100%;height:auto;margin:34px 0 12px;background:#eaf0e9}p:has(>em:only-child){font-size:13px;color:var(--muted);line-height:1.6}button{background:none;color:var(--ink);border:1px solid #9faeaa;padding:8px 14px;border-radius:4px;cursor:pointer;font:inherit;font-size:12px}.document-meta{font:12px/1.6 ui-monospace,monospace;color:var(--muted);margin-bottom:24px}footer{border-top:1px solid var(--line);padding:25px 4vw;color:var(--muted);font-size:12px}@media(max-width:1000px){.layout{grid-template-columns:220px minmax(0,1fr)}main{padding:38px 30px}aside{padding:25px 15px}}@media(max-width:720px){.layout{display:block}aside{position:static;height:auto;max-height:270px;border-right:0;border-bottom:1px solid var(--line)}main{padding:32px 20px 60px}header{padding:18px 20px}header span{display:none}h2{font-size:25px}table{font-size:12px}}@media print{aside,header button{display:none}.layout{display:block}main{max-width:none;padding:18px 0}body{background:white;font-size:10pt}h1{font-size:30pt}h2{font-size:18pt;break-after:avoid}h3{font-size:13pt;break-after:avoid}img,tr{break-inside:avoid}.table-scroll{overflow:visible}table{font-size:8pt}a{color:inherit}footer{padding:10px 0}}
+</style></head><body>
+<header><strong>VECTOR RUSH / FIELD RECORD</strong><span>SEPTEMBER 7–8, 2026 · SOURCE, DECISIONS & EVIDENCE</span><button onclick="window.print()">Print / Save PDF</button></header>
+<div class="layout"><aside aria-label="Contents"><p>Contents · use ⌘F to search</p><a href="#section-1">How to read this record</a>
+<a href="#section-2">Tools and what we actually used them for</a>
+<a href="#section-3">Original scope and changes in direction</a>
+<a href="#section-4">Gameplay, input, presentation and native validation audit</a>
+<a href="#section-14">Ship production audit: original Kestrel through the contact-corrected native craft</a>
+<a href="#section-24">Environment: from coastal kit to constructed night districts</a>
+<a href="#section-37">Later lighting work and the production finish checkpoint</a>
+<a href="#section-47">What is delivered, what remains open, and the next step</a>
+<a href="#section-48">Reproducible source and evidence map</a>
+<a href="#section-51">Complete commit ledger through the saved checkpoint</a><p style="margin-top:24px"><a href="development-work-record.md">Markdown source ↗</a></p></aside><main><div class="document-meta">60 historical milestones · checkpoint 3097bc8 · 16,439 words<br>Original evidence is linked from this local repository.</div><h1>Vector Rush complete development work record</h1>
+<p>This document records the development of Vector Rush from the first design on September 7, 2026 through the saved September 8 checkpoint <code>3097bc8</code>. It explains what we inspected, what those inspections revealed, which tools and source changes we used, and what the subsequent checks actually established. It includes rejected models, failed visual experiments, debugging mistakes and incomplete checks as well as accepted work.</p>
+<p>The result is an original playable macOS anti-gravity racing prototype: one circuit, six racers, a three-lap race, keyboard/gamepad controls, a custom HUD, authored craft and environment assets, synthesized audio and reproducible evidence. Its presentation improved in several specific areas, but the complete game did not earn the requested AAA-level verdict. The latest saved app combines improved night atmosphere with the clearer earlier road treatment; production road response remains unfinished.</p>
+<p>“We” refers to the integrator and the explicitly assigned asset, gameplay and review agents. An independent critic&#39;s observations are attributed as review findings; the document does not imply that one person manually performed every operation. Dates in the commit ledger use America/Los_Angeles time. Asset and native reports sometimes retain UTC timestamps.</p>
+<h2 id="section-1">How to read this record</h2>
+<p>The chapters follow the development of each system, with commit anchors to reconnect overlapping work to the chronology. Each substantive entry describes the evidence or problem, the implemented action, the tool or source involved, and the result with its limits. The final ledger lists all 60 recorded commits through the checkpoint. Linked source recipes, images and reports provide the detailed evidence behind the narrative.</p>
+<p>The earliest implementation and corrections were partly combined in commit <code>acc8252</code>; GitHub history was requested after development had begun. Those early edits cannot honestly be reconstructed as separate commits. Some rejected early model images survive without the exact corresponding source mesh. The record identifies those limits rather than inventing a complete command-by-command replay.</p>
+<h2 id="section-2">Tools and what we actually used them for</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Tool or method</th>
+<th>Actual role in this project</th>
+<th>What it does not establish</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Built-in image generation</td>
+<td>Created the original coastal concept, the three Nocturne target images and the later two-panel environment concept. Exact prompts and provenance were saved.</td>
+<td>Generated targets are not native game screenshots or proof that the implementation achieved them.</td>
+</tr>
+<tr>
+<td>Image inspection</td>
+<td>Parent and critics opened studio renders and native PNGs to evaluate silhouette, gaps, contact defects, material response, road artifacts, city composition, HUD and controls.</td>
+<td>A still image cannot prove continuous motion, audio quality, handling or performance.</td>
+</tr>
+<tr>
+<td>Python inside Blender through <code>bpy</code></td>
+<td>Constructed and revised meshes, applied modifiers, assigned materials, prepared UVs, rendered inspection views, baked maps, exported FBX and audited reimported geometry.</td>
+<td>A successful model script or studio render is not native-game visual acceptance.</td>
+</tr>
+<tr>
+<td>Blender background command line</td>
+<td>Executed reproducible asset scripts and bake/render/audit jobs. The wrapper uses <code>--factory-startup --background --python</code>; preserved later logs confirm background execution.</td>
+<td>BlenderMCP addon registration in a log does not prove an MCP command performed the modeling.</td>
+</tr>
+<tr>
+<td>Blender MCP</td>
+<td>Was available and explicitly permitted by the owner as an optional route. The specific operations in this record are attributed to MCP only if there is evidence of such an invocation. The preserved modeling recipes and identified run logs primarily establish Python/CLI work.</td>
+<td>It would be inaccurate to relabel all Blender work as MCP-driven merely because the plugin was installed.</td>
+</tr>
+<tr>
+<td>Python outside Blender</td>
+<td>Generated texture/livery masks, inspected structured telemetry and mesh/export data, checked hashes and channels, selected natural route crossings, compared capture states, validated PNG streams, verified archive/video identities and assembled records.</td>
+<td>Numerical integrity checks do not replace visual criticism.</td>
+</tr>
+<tr>
+<td>C# and shader editing</td>
+<td>Implemented the game systems, procedural world assembly, lighting/material integration, custom shaders, native inspection/capture components and diagnosed gameplay/rendering fixes.</td>
+<td>Editing a value is not evidence that a retained shader variant or native runtime behaves as intended.</td>
+</tr>
+<tr>
+<td>Unity Editor in batch mode</td>
+<td>Prepared/imported assets and serialized settings, ran EditMode tests and built the native macOS player through project-owned wrappers.</td>
+<td>A clean compile or test pass is not a complete playability or art-quality pass.</td>
+</tr>
+<tr>
+<td>Native macOS game launches</td>
+<td>Recorded actual rendering, exercised normal physics with labeled automated steering, verified race/restart/pause behavior and sampled real-time frame intervals.</td>
+<td>Fixed simulation-time captures do not measure real-time frame rate; automated driving does not become human play.</td>
+</tr>
+<tr>
+<td>Desktop UI control and input checks</td>
+<td>Exercised selected native menu/pointer/keyboard flows and checked display/app state when capture was obstructed. Virtual gamepad tests separately exercised input logic.</td>
+<td>These checks do not imply a sustained human race or physical-controller hardware test.</td>
+</tr>
+<tr>
+<td>FFmpeg</td>
+<td>Encoded original sequential PNGs at their recorded cadence and decoded finished videos to check file integrity.</td>
+<td>Complete decoding does not mean a reviewer watched every frame at normal speed.</td>
+</tr>
+<tr>
+<td>Git and GitHub</td>
+<td>Preserved source, editable assets, selected native evidence, critiques and separate correction commits; pushed to the approved private repository.</td>
+<td>Source publication did not authorize a GitHub release, and local app archives were kept out of Git.</td>
+</tr>
+</tbody></table></div>
+<p>The project pinned the user&#39;s installed Unity <strong>6000.6.0f1</strong>, URP <strong>17.6.0</strong>, Input System <strong>1.20.0</strong> and Test Framework <strong>1.8.0</strong>. Blender <strong>5.2.0 LTS</strong>, Xcode and FFmpeg were already available. We installed/configured the official Unity CLI <strong>1.0.0-beta.8</strong> and added the experimental Unity Pipeline <strong>0.6.0-exp.1</strong> project tooling; the native build/test wrapper still invoked the pinned Editor&#39;s batch methods. The owner installed the Editor, rather than us claiming to have installed it. The target machine was an Apple M2 Max with 32 GB RAM. See the <a href="toolchain.md">toolchain record</a>.</p>
+<h2 id="section-3">Original scope and changes in direction</h2>
+<p>The owner initially requested a visually exceptional original racing game inspired by Wipeout Omega&#39;s quality, parallel asset/gameplay work, reference images and a harsh independent critic. We rewrote this into a practical build brief with a bounded vertical slice, original assets/branding, explicit ownership, native validation and honest limits. The first theme was Solstice: a bright coastal circuit with ivory architecture, blue ocean, cliffs and a twin-nacelle craft.</p>
+<p>After playing/reviewing the coastal prototype, the owner rejected its visual quality and asked to try an easier-to-control night-road setting, stronger propulsion and further iteration. We created Nocturne targets, then prioritized ship shape under an independent reviewer. The owner later clarified that the primary form should become coherent and close enough to advance, rather than indefinitely matching every reference contour. Work then moved through materials, propulsion, HUD, environment construction, closer racing, landmarks and selective lighting.</p>
+<p>The owner subsequently observed that the earlier coast still looked stronger as a whole. Our comparison agreed: detailed local improvements had not guaranteed better complete-image hierarchy. A newly supplied night-racing clip then established the desired integrated finish, while the owner chose to retain the night direction. We planned the production pass, began its lighting/road stage, and stopped at the owner&#39;s requested checkpoint. The latest request asks for this detailed retrospective and a plan for the next development step; it does not retroactively change the acceptance status of any earlier build.</p>
+<p>Reference records: <a href="GPT6-BUILD-PROMPT.md">original brief</a>, <a href="../references/generation-prompt.txt">coastal concept prompt</a>, <a href="../references/nocturne/README.md">Nocturne references and exact prompts</a>, <a href="environment-art-direction/concept-provenance.md">environment concept provenance</a>, <a href="../references/night-production-video.md">supplied video brief</a>.</p>
+<p><img loading="lazy" src="../evidence/run-09-coastal/05-crest.png" alt="Earlier coastal native racing image"></p>
+<p><em>Earlier coastal build, actual native racing image. Large white structures, blue ocean and shaded road made a stronger broad composition than several more detailed later revisions. The coast/night comparison chapter returns to that finding.</em></p>
+<h2 id="section-4">Gameplay, input, presentation and native validation audit</h2>
+<p>This chapter reconstructs the work completed on 7–8 September 2026 from committed source, existing reports and preserved evidence. It is a documentation audit: no Unity execution, new playtest, performance run or runtime edit was performed for it. The audited checkpoint is <code>3097bc8</code> on <code>build/first-playable</code>. Dates in native JSON/logs are often UTC and therefore fall on 8 September when the corresponding local work occurred on 7 September.</p>
+<p>The initial implementation was developed in parallel and recorded as a combined checkpoint. <a href="implementation-plan.md">The implementation plan</a> assigns gameplay scripts to the gameplay worker, track/setup/integration and native execution to the parent, and HUD/audio to the presentation task. Later it explicitly assigns IonPropulsion/VehicleVFX and the HUD evidence harness to gameplay, RaceHUD/integration to the parent, and native visual review to Astra. Commit author metadata records the repository identity, not the individual agent who wrote every line. Attribution below follows those recorded ownership statements; it does not infer an agent&#39;s identity from Git authorship.</p>
+<h3 id="section-5">1. First playable: implementation and corrective source review</h3>
+<p><strong>Request and boundary.</strong> <a href="https://github.com/emrickk/vector-rush/commit/ca58eec">Design commit <code>ca58eec</code></a> defined an original one-course anti-gravity racer: one craft design, five rivals, three laps, keyboard/gamepad controls, race menus, procedural audio and an Apple Silicon native build. <a href="design.md">The design contract</a> fixed metres, +Y up, +Z forward, a 22 m track and the interface between track, gameplay and presentation. The integrated source was preserved in <a href="https://github.com/emrickk/vector-rush/commit/acc8252"><code>acc8252</code></a>. As <a href="development-history.md">development history</a> states, several early implementation/correction edits preceded that checkpoint; there are no individual historical commits for all of them.</p>
+<p><strong>Actual implementation.</strong> <a href="../UnityProject/Assets/Scripts/VectorBootstrap.cs">VectorBootstrap</a> creates the track/world, six rigidbody racers, a director, camera and presentation. It sets a 100 Hz physics step (<code>Time.fixedDeltaTime=1/100</code>) and caps accumulated delta at 0.1 s. <a href="../UnityProject/Assets/Scripts/World/TrackPath.cs">TrackPath</a> supplies Catmull–Rom positions, arc-length evaluation, local forward/right/up frames and closest progress. Reconstructing its 1,200-segment arc-length table for the later pace audit gave approximately 1,844.517 m.</p>
+<p><a href="../UnityProject/Assets/Scripts/Gameplay/HoverVehicle.cs">HoverVehicle</a> uses four downward suspension probes at local X ± 1.5/Z ± 2.2 m. Its body is 850 kg, with gravity disabled, continuous dynamic collision, interpolation, linear damping 0.05 and a lowered centre of mass. <code>FixedUpdate</code> applies hover springs/damping, downward acceleration, alignment torque, steering torque, forward thrust, braking and lateral-slip damping. Baseline cruise/boost limits are 78/108 m/s and acceleration 34 m/s². Boost requires grounded flight, throttle above 0.1 and reserve above 0.01; it consumes 0.23 reserve/s, regenerates 0.12/s and multiplies thrust by 1.65. Airbrakes modify yaw and lateral grip. Recovery uses the last validated checkpoint, resets pose/velocity and costs 0.15 reserve; automatic thresholds include 2.7 s airborne and 4.5 s stalled. These are actual force-based mechanics, not movement along a prerecorded spline.</p>
+<p><a href="../UnityProject/Assets/Scripts/Gameplay/RaceProgress.cs">RaceProgress</a> has 12 ordered sectors, explicit start arming, forward crossing checks, invalid-sample/re-entry rejection and a race-distance value limited by validated progress. <a href="../UnityProject/Assets/Scripts/Gameplay/RaceDirector.cs">RaceDirector</a> owns Menu → Countdown → Racing → Finished, pause/resume and reset. It measures laps from actual crossing fractions, maintains finish order and freezes the field when the player finishes. <a href="../UnityProject/Assets/Scripts/Gameplay/ChaseCamera.cs">ChaseCamera</a> follows the physics craft with authored distance 10.5 m/height 4.6 m, speed response and optional impact shake. Later night art changes did not constitute a camera redesign.</p>
+<p><strong>Problems exposed by the first independent source review.</strong> <a href="critique-01.md">Critique 01</a> preceded runtime acceptance and reported six concrete integration/race defects. <a href="critique-02.md">Critique 02</a> separately inspected the corrected source and the 17-test XML:</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Finding and evidence</th>
+<th>Actual corrective operation</th>
+<th>Verified outcome and limit</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Hover height 2.5 m and a 1.25 m collider left its bottom at 1.995 m, above the 1.2 m barrier.</td>
+<td>Hover height became 1.55 m; collider 5.2 × 1.2 × 7.2 m, centred at (0, .12, .1); barrier raised to 2 m.</td>
+<td>Corrected level overlap is .93 m. Source geometry supports containment; that arithmetic alone did not demonstrate glancing contact.</td>
+</tr>
+<tr>
+<td>Barrier shell triangles faced into the wall.</td>
+<td>Reversed mirrored triangle winding in <code>WorldBuilder</code>.</td>
+<td>Source re-review confirmed inward-facing road-side normals and upward tops; subsequent runtime imagery was a separate check.</td>
+</tr>
+<tr>
+<td>A projected off-track crossing could award a gate.</td>
+<td><code>RaceDirector.IsValidGateSample</code> now requires lateral position ≤ half-width + .75 m, height .25 to hover-height + 2 m and forward speed &gt; .5 m/s; <code>RaceProgress.Sample</code> requires consecutive valid samples.</td>
+<td>Tests reject off-track crossings/re-entry and invalid finish samples. This is bounded rule coverage, not proof against every possible shortcut.</td>
+</tr>
+<tr>
+<td>Prestart recovery always moved to .995, gaining the player about 4.777 m.</td>
+<td><code>RaceProgress</code> retains the racer&#39;s actual starting progress until the first forward crossing.</td>
+<td><code>StartingGridRecoveryStillRequiresForwardStartCrossing</code> passes.</td>
+</tr>
+<tr>
+<td>Same-physics-step finish order followed racer-list order.</td>
+<td>Calculate <code>LastCrossingFraction</code>, sort same-step finishers and interpolate crossing time.</td>
+<td>Fraction test distinguishes crossings; no actual photo-finish race was demonstrated.</td>
+</tr>
+<tr>
+<td>Known Ceramic/WhiteMark slots fell through to hull ivory.</td>
+<td>Explicit runtime material mappings preserve dark engine casing and white markings.</td>
+<td>Source mapping fixed; native material/art quality remained separately reviewed.</td>
+</tr>
+</tbody></table></div>
+<p><a href="../evidence/editmode-results-initial.xml">The initial XML</a> contains 17/17 passes. It verifies executed EditMode rules, not a playable race. The first native race then completed three laps in <strong>155.43 s with seven player recoveries</strong>, preserved in <a href="../evidence/run-01/race-verification.txt">run 01 verification</a>. <a href="critique-runtime-01.md">Runtime critique 01</a> still rejected the visuals and found broken essential HUD text. The integrated checkpoint included subsequent controller/readability corrections; <a href="https://github.com/emrickk/vector-rush/commit/c68efd6"><code>c68efd6</code></a> records the next native run at <strong>112.58 s, zero player recoveries</strong>, with three countdown-pause/reset checks. NOVA still recovered once. These early checks did not yet include the later complete restart-to-movement assertions.</p>
+<h3 id="section-6">2. Native toolchain and the difference between build success and usable output</h3>
+<p>The project used the owner&#39;s installed Unity <strong>6000.6.0f 1</strong>, URP <strong>17.6.0</strong>, Input System <strong>1.20.0</strong>, Test Framework <strong>1.8.0</strong>, Blender <strong>5.2.0 LTS</strong>, and Apple M2 Max/32 GB host. <a href="toolchain.md">Toolchain record</a> documents the separately installed official Unity CLI 1.0.0-beta.8 and project Pipeline 0.6.0-exp.1 package. <a href="../UnityProject/Packages/manifest.json">The manifest</a> pins the actual project packages. The record does not claim that the experimental Pipeline tool or Unity CLI performed every operation: <a href="../tools/unity.sh">tools/unity.sh</a> actually invokes the pinned Editor for preparation, EditMode tests and builds.</p>
+<p><a href="../UnityProject/Assets/Editor/VectorRushSetup.cs">VectorRushSetup.Prepare/BuildMac</a> persists the scene, renderer and materials; configures Linear colour, HDR, MSAA 4, Forward+, per-pixel additional lights, windowed/resizable 1920×1080, Mono and both input backends; and builds <code>Assets/Scenes/Solstice.unity</code> to the local app. <code>BuildMac</code> already calls <code>Prepare</code>. The source uses a serialized URP additional-light property because the installed API does not expose the needed public setter. Compiler/build outcomes were recorded separately from visual and playability verdicts.</p>
+<p>Two rendering setup faults directly affected gameplay presentation. <a href="https://github.com/emrickk/vector-rush/commit/43a4d95"><code>43a4d95</code></a> restores the missing renderer <code>PostProcessData</code> and a saved emissive Lit keyword/colour, so configured ACES/bloom/grading and emissive variants survive native preparation. It also replaces opaque Lit trail ribbons with additive vertex-alpha propulsion. <a href="../evidence/road-diagnostic-05/diag-01-baseline.png">The native baseline image</a> was inspected after the fix. The result supported improved visible road/craft presentation, not a universal road-artifact diagnosis or AAA acceptance.</p>
+<h3 id="section-7">3. Track physics, paused input and macOS pointer corrections</h3>
+<p><strong>Track continuity.</strong> Road banding prompted numerical examination of discontinuous bank frames and wide twisting quads. <a href="https://github.com/emrickk/vector-rush/commit/f0401f7"><code>f0401f7</code></a> changed <code>TrackPath.Evaluate</code> from segment-discrete heading/bank to continuous <code>Spline(t)</code> and analytic <code>SplineTangent(t)</code>. It projects incoming/outgoing curve vectors onto the horizontal plane so grade cannot create lateral bank; signed turn uses <code>atan2</code>, multiplied by −2.5 and clamped to ± 17°. <code>WorldBuilder.Ribbon</code> retains 960 longitudinal segments but gives ribbons wider than 5 m twelve lateral columns instead of one. <a href="../evidence/run-04-geometry/race-verification.txt">Run 04</a> finished in <strong>112.64 s, zero player recoveries</strong> and verified both results-to-racing and paused-race-to-racing launches, including reset time/laps/energy/recoveries and renewed movement. Road shading still failed visually: fixing geometric continuity did not prove that every later dark band came from the mesh.</p>
+<p><strong>Paused recovery.</strong> Unity <code>Update</code> still runs while paused, while <code>FixedUpdate</code> does not. A recovery button edge could therefore remain queued until resume. <a href="https://github.com/emrickk/vector-rush/commit/fece904"><code>fece904</code></a> makes <code>HoverVehicle.Update</code> clear steering, throttle, brakes, boost and recovery requests whenever the director is absent or not Racing. <a href="../UnityProject/Assets/Tests/Editor/HoverVehicleInputTests.cs">HoverVehicleInputTests</a> drive a temporary Input System gamepad to prove pause rejection without spending reserve, and that ordinary racing recovery still works. An initial fixture failed to exercise EditMode input correctly: <a href="../evidence/editmode-results-input-fixture-failed.xml">its preserved XML</a> records 17 passes/2 failures. The fixture was corrected to explicitly process player input and restore package update settings; the recorded rerun passed 19/19. The failed fixture is not concealed or misreported as a game regression.</p>
+<p><strong>Pointer cause and fix.</strong> Native macOS IMGUI events carried a desktop-origin offset, while Input System reported correct window pixels. An initial correction before <code>GUI.matrix</code> was insufficient because changing the matrix restored raw event position. <a href="https://github.com/emrickk/vector-rush/commit/c122f6e"><code>c122f6e</code></a> adds optional input diagnostics and applies <code>Event.current.mousePosition = correctedMouse / scale</code> <strong>after</strong> the root canvas scale, converting bottom-origin Input System Y via <code>Screen.height - y</code>. It restores the raw event/matrix afterward. <a href="../evidence/native-input-verification.txt">Native activation evidence</a> records actual visible-window actions: outside-click rejection; Start, camera-shake toggle, Resume and Restart at 1280×800; and outside-click rejection, Start, Resume and Quit at 1920×1080. The implementation plan separately records keyboard Start/Pause/Resume and throttle taps reaching 21 km/h. These are actual input checks, not direct callback invocation, but they are not sustained human driving or physical-gamepad testing.</p>
+<h3 id="section-8">4. Propulsion and audio: presentation changed in response to observed failures</h3>
+<p>The daytime opaque wake was replaced by <a href="../UnityProject/Assets/Shaders/IonTrail.shader">IonTrail.shader</a> and fading additive trails in <a href="https://github.com/emrickk/vector-rush/commit/43a4d95"><code>43a4d95</code></a>. The first night effect in <a href="https://github.com/emrickk/vector-rush/commit/d3fad40"><code>d3fad40</code></a> still read as a hard crystal/cone. After <a href="critique-night-01.md">night critique 01</a>, <a href="https://github.com/emrickk/vector-rush/commit/742776c"><code>742776c</code></a> changed the plume to crossed translucent density sheets rather than a closed cone. <a href="../UnityProject/Assets/Scripts/Presentation/IonPropulsion.cs">IonPropulsion.CreatePlume</a> uses three crossed sheets, fourteen rows and shader fading before mesh edges. Authored engine-anchor support later preserved attachment to the imported V3 geometry with the older fallback, rather than changing the physics collider to fit VFX.</p>
+<p><a href="ship-reviews/007-native-gallery-and-boost-stills.md">Native review 007</a> found the plume too faint beyond the nozzle and the gallery too black. <a href="https://github.com/emrickk/vector-rush/commit/184629c"><code>184629c</code></a> enlarged the short attached plasma envelope and reduced nozzle point-light spill alongside the separate gallery correction. <a href="ship-reviews/008-gallery-wash-and-plume-correction.md">Review 008</a> compared selected matched native gallery/boost stills. Motion 03 captured 360 frames, including 32 observed boost frames; this supported improved attachment and readability in those images, not a continuously watched motion verdict.</p>
+<p><strong>Throttle correction.</strong> The owner then rejected the always-on flame appearance. The old <code>IonPropulsion.Update</code> used <code>.18 + speed*.50</code> in ordinary Racing and <code>.08</code> outside it; visible thrust persisted while coasting. <a href="https://github.com/emrickk/vector-rush/commit/e7a6735"><code>e7a6735</code></a> exposes <code>HoverVehicle.ThrottleInput</code> and changes demand to actual clamped throttle × <strong>1.35 while boosting</strong>, zero outside Racing. Exponential response rates are <strong>18/s rising and 26/s falling</strong>, with response below .003 snapped to zero. Plume length, width and intensity follow response; both plume renderers disable at zero. Faint powered cores/annuli remain distinct. Pause freezes presentation. This change does not alter propulsion force, vehicle speed or user controls.</p>
+<p><a href="../UnityProject/Assets/Scripts/ThrottleEvidence.cs">ThrottleEvidence</a> disables testing autopilot, creates a temporary virtual Input System gamepad, supplies stick/trigger/button state through the input update path and records end-of-frame telemetry. It does not assign speed, body pose, engine demand or VFX response. <code>Time.captureFramerate=0</code>; it is an input/rendering test, not a performance test. The six native stages are off, quarter, full, lift-off while coasting, boost and off after boost. <a href="../evidence/throttle-native-01/throttle-evidence.json">The report</a> verifies .25/1.0/1.35 settled demand and response, and release below .02 in <strong>0.150131 s while still travelling 242.018 km/h</strong>, within the specified .25 s/80 km/h gate; it later reaches zero. Parent inspected quarter/full/release/boost PNGs. Three added input cases bring the suite to <strong>32/32</strong>. A malformed new <code>.meta</code> GUID caused the first compile failure and was corrected before the passing build. Later traffic in the scripted sequence prevents treating this as a full-race handling verdict. <a href="../evidence/throttle-native-01/build-manifest.json">Its manifest</a> identifies the separate corrected archive.</p>
+<p><strong>Audio is implemented but not listening-validated.</strong> <a href="../UnityProject/Assets/Scripts/Presentation/RaceAudio.cs">RaceAudio</a> synthesizes original 22,050 Hz core/turbine/wind/energy loops and countdown/start/finish/impact signals; it uses no licensed soundtrack or external recordings. <code>Update</code> still derives engine pitch and volume primarily from speed (<code>SpeedKph/420</code>), with active-phase fades and boost state. <code>PlayImpact</code> rate-limits collision sounds. The throttle-driven visual change did <strong>not</strong> also convert engine audio to throttle load. No silent preview can establish audible mix quality, and no sustained manual-with-audio acceptance is recorded.</p>
+<h3 id="section-9">5. HUD redesign: first native failure, correction and final awareness cue</h3>
+<p>The owner requested a more polished HUD after the throttle fix. <a href="https://github.com/emrickk/vector-rush/commit/14b1212"><code>14b1212</code></a> replaced distributed telemetry cards with position/lap, timing, a live circuit map and unified speed/boost instrument; bundled Rajdhani SemiBold with its OFL licence; added actual lap/GO feedback; and removed stale underlying telemetry from pause/results. <a href="hud-design.md">HUD design</a> explains the data: actual TrackPath, live world-position markers, directional player arrow, actual reserve and lap times, smoothed speed rather than invented RPM/gears/sector values.</p>
+<p>The gameplay worker owned <a href="../UnityProject/Assets/Scripts/HudEvidence.cs">HudEvidence</a> and its bootstrap hook; the parent owned <a href="../UnityProject/Assets/Scripts/Presentation/RaceHUD.cs">RaceHUD</a>, typography and integration; Astra authored independent reviews. The harness follows ordinary race transitions and vehicle physics, briefly freezing for matched aspect stills. It observes boost and real lap events rather than assigning phase/lap/speed/energy.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Iteration</th>
+<th>Observed problem → actual change</th>
+<th>Native result and limit</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>First HUD</td>
+<td><code>Line()</code> used <code>GUIUtility.RotateAroundPivot</code> under root scaling. Rotated strokes fragmented/offscreen at 1280×800 and 1920×810, although text/rectangles were positioned correctly. Zero/unavailable timers looked broken; control hints were too small.</td>
+<td><a href="hud-reviews/002-native-first-pass.md">Review 002</a> inspected all 18 native phase/aspect views and <strong>failed</strong> responsive acceptance despite a completed 112.603 s race with zero player recoveries.</td>
+</tr>
+<tr>
+<td>Responsive correction</td>
+<td>Compose local line translation/rotation after the saved root scale (<code>before * Matrix4x4.TRS</code>); antialias strokes; render valid zero time and unavailable <code>--</code>; enlarge hints; add actual final-lap capture.</td>
+<td><a href="hud-reviews/003-native-responsive-correction.md">Review 003</a> inspected all <strong>21 views: seven states × three sizes</strong>. Full map/arc/arrow and controls now fit. Final-lap event was observed at race time 75.368 and pictured at 75.698; results 112.603 s. A seconds/fraction gap remained.</td>
+</tr>
+<tr>
+<td>Final timer polish</td>
+<td>Tighten seconds-to-milliseconds spacing while retaining smaller fractions.</td>
+<td><a href="hud-reviews/004-final-timer-and-contrast.md">Review 004</a> accepts four inspected 1080p exterior/gallery/boost/lap 2 frames from the separate 360-frame preview. One small label intersects an overhead lamp. This was not continuous video viewing.</td>
+</tr>
+</tbody></table></div>
+<p>The existing <strong>32 tests</strong> passed; <a href="../evidence/hud-input-01/scope.md">HUD native input scope</a> records CUA clicking visible Start/Resume/Restart/Quit, Escape pause and outside-Start rejection at 1280×800, rather than invoking callbacks. This input run preceded only the final timing-spacing change. <a href="../evidence/hud-build-manifest.json">HUD build manifest</a> distinguishes that coverage from the silent 15-second 1080p/24-simulation-fps preview. Physical gamepads, low/empty energy, results pointer activation and subjective continuous transitions were not all verified.</p>
+<p>After pace tuning, <a href="environment-reviews/009-close-race-critique.md">independent close-race critique 009</a> found that nearby rivals behind the camera remained hard to perceive. <a href="https://github.com/emrickk/vector-rush/commit/1c0a92f"><code>1c0a92f</code></a> adds <code>RaceHUD.UpdateRivalCue</code>: choose the nearest unfinished rival by validated signed race-distance gap within 100 m, additionally require wrapped track separation within 100 m and physical distance under 100 m, and show name/metres/AHEAD/BEHIND (SIDE BY SIDE only below 2 m). This avoids counting a lapped or separate-branch craft as nearby racing. <a href="environment-reviews/010-close-race-verification.md">Parent verification 010</a>, explicitly <strong>not a second independent critique</strong>, checks KIRA 3 m/BEHIND, AXIOM27 m/BEHIND and AXIOM 17 m/BEHIND against −3.404/−27.115/−16.882 m telemetry. The cue supports awareness; it does not demonstrate an overtake.</p>
+<h3 id="section-10">6. Rival safety first: why zero recoveries did not mean competitive racing</h3>
+<p>The older night logs repeated three grounded stalls exactly: NOVA at 8.57 s/progress.07248/lateral 7.97 m, RENN at 16.34 s/.07172/7.98 m and KIRA at 17.12 s/.30516/7.97 m, all zero speed after 4.50 stalled seconds with recent impact. Matching pre-V3 events meant the imported V3 art was not evidence of a newly introduced physics failure. <a href="ai-wall-contact-diagnosis.md">Wall-contact diagnosis</a> compares <a href="../evidence/night-02-player.log">night 02 log</a> and <a href="../evidence/night-v3-motion-03.log">V3 motion 03 log</a>.</p>
+<p>The 5.2×1.2×7.2 m box projects about 3.67 m laterally at 20° yaw; a centre at 7.97 m approaches the barrier&#39;s inner face at 11.7 m. That geometry and reduced low-speed yaw authority supported a persistent-contact mechanism, although the initiating contact/yaw had not been recorded.</p>
+<p>The gameplay worker implemented a bounded rival-only <code>ApplyRivalCorridorGuard</code> and clearance helpers, integrated with the combined night milestone <a href="https://github.com/emrickk/vector-rush/commit/ee0e9ea"><code>ee0e9ea</code></a>. It previews <code>.45s</code> of lateral drift; activates above 6.2 m and releases below 5.6 m; temporarily clamps target within ± 4.6 m; caps desired speed at 42 m/s; and suppresses AI boost. It preserves reserved lanes 0/± 5.8 m, the collider, recovery timing and player/testing-player exclusion. While guarding, <code>KeepCorrectionClear</code> respects racers within ± 12 m longitudinally using projected box widths +.4 m (at least 5.5 m), and applies the existing following rule to traffic up to 65 m on the corrected path. It uses ordinary steering/throttle/braking, not teleportation.</p>
+<p>Ten focused guard/clearance cases took the suite from 19 to<strong>29 passes</strong>. <a href="../evidence/night-v4-race-01/race-verification.txt">Night-v 4 race evidence</a> shows 112.60 s, three player laps, zero player recoveries; the full telemetry/log reports zero for all six and no recurrence of the three early stalls. Both complete restart launches and all three countdown-pause checks passed. Rivals had only completed 2.2656–2.7417 laps when the player finished, because the director freezes everyone then. This solved a bounded stall problem through the observed race; it did not demonstrate every rival finishing or a competitive field.</p>
+<h3 id="section-11">7. Closer racing: measured failed caps, pursuit correction, physical assistance and final calibration</h3>
+<p>The owner authorized slowing the actual player, followed by one visual critique/correction and delivery. <a href="pace-reviews/001-baseline-diagnosis.md">Pace review 001</a> first analysed the existing 1,008-frame environment full-lap capture. It reconstructed longitudinal separation using unwrapped track progress, not Euclidean distance across course branches. After five seconds there were <strong>zero frames within 30/40/60 m of a rival</strong>. The fastest rival had the least inferred edge-guard duty; Rivals 1/3/5 spent long stretches outside. This was an inference from 24 fps pose samples, explicitly lacking controller/contact telemetry.</p>
+<p><a href="https://github.com/emrickk/vector-rush/commit/fc0ee39"><code>fc0ee39</code></a> added <a href="../UnityProject/Assets/Scripts/PaceEvidence.cs">PaceEvidence</a> and read-only driver fields for actual guard, desired speed, brake, reserved lane, settings, impacts and race progress. It runs the real player with testing autopilot through ordinary physics, <code>Time.captureFramerate=24</code>, approximately 0.1 s telemetry sampling, full three-player-lap outcome and optional pack screenshots. No performance claim attaches to this mode.</p>
+<p><a href="pace-reviews/002-native-pace-comparison.md">Pace review 002</a> independently recalculated signed gaps as <code>(rival.RaceProgress − player.RaceProgress) × track.Length</code>, checking recorded values within.000061 m, then duration-weighted states after 5 s. It separately grouped every player lap and galleries .390–.432/.860–.902. It excludes already-finished rivals and cross-checks unwrapped physical progress so frozen finish progress cannot create fake proximity. Positive means ahead; all close observations in these completed candidates were behind. Some earlier development-history headline values are <strong>Euclidean</strong> thresholds; the table below consistently uses the validated longitudinal metric from review 002.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Trial / committed milestone</th>
+<th>Actual player cruise/boost, m/s</th>
+<th>Finish, simulation s / samples</th>
+<th>Within 60 m after 5 s</th>
+<th>Lap 1/2/3 within 60 m</th>
+<th>Mean nearest gap, m</th>
+<th>Nearest finish gap, m / rivals within 200 m</th>
+<th>Verdict</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="../evidence/pace-baseline-01/pace-evidence.json">Baseline</a>, <code>fc0ee39</code></td>
+<td>78/108</td>
+<td>112.603 /1,127</td>
+<td>0%</td>
+<td>0/0/0%</td>
+<td>280.1</td>
+<td>476.6 /0</td>
+<td>Solitary after launch despite zero recoveries.</td>
+</tr>
+<tr>
+<td><a href="../evidence/pace-candidate-01/pace-evidence.json">01</a>, <a href="https://github.com/emrickk/vector-rush/commit/5ea643a"><code>5ea643a</code></a></td>
+<td>60/82</td>
+<td>120.912 /1,210</td>
+<td>26.6%</td>
+<td>11.7/25.1/41.6%</td>
+<td>81.5</td>
+<td>177.1 /1</td>
+<td>Improvement; all three closeness/finish gates fail.</td>
+</tr>
+<tr>
+<td><a href="../evidence/pace-candidate-02/pace-evidence.json">02</a>, <a href="https://github.com/emrickk/vector-rush/commit/4c043ed"><code>4c043ed</code></a></td>
+<td>55/75</td>
+<td>125.969 /1,261</td>
+<td>33.1%</td>
+<td>77.2/26.1/0%</td>
+<td>152.9</td>
+<td>494.1 /0</td>
+<td>Slower cap still collapses late; cap-only tuning rejected.</td>
+</tr>
+<tr>
+<td><a href="../evidence/pace-candidate-03/pace-evidence.json">03</a>, <a href="https://github.com/emrickk/vector-rush/commit/171a26a"><code>171a26a</code></a></td>
+<td>60/82 + pursuit</td>
+<td>120.708 /1,208</td>
+<td>27.9%</td>
+<td>69.7/15.6/2.5%</td>
+<td>113.3</td>
+<td>167.1 /1</td>
+<td>Yaw mapping corrected; persistent rail state and closeness failure remain.</td>
+</tr>
+<tr>
+<td><a href="../evidence/pace-candidate-04/pace-evidence.json">04</a>, <a href="https://github.com/emrickk/vector-rush/commit/d630e55"><code>d630e55</code></a></td>
+<td>60/82 + pursuit/side force</td>
+<td>120.716 /1,208</td>
+<td>38.3%</td>
+<td>76.1/23.5/18.8%</td>
+<td>78.4</td>
+<td>240.0 /0</td>
+<td>Physical edge exposure improves; pace still separates.</td>
+</tr>
+<tr>
+<td><a href="../evidence/pace-candidate-05/pace-evidence.json">05</a>, <a href="https://github.com/emrickk/vector-rush/commit/df176bf"><code>df176bf</code></a></td>
+<td>55/75 + same controller</td>
+<td>125.567 /1,257</td>
+<td>66.4%</td>
+<td>82.7/77.3/40.7%</td>
+<td>49.2</td>
+<td>160.4 /2</td>
+<td>Sustained overall proximity passes; nearest finish gate fails.</td>
+</tr>
+<tr>
+<td><a href="../evidence/pace-candidate-06/pace-evidence.json">06</a>, <a href="https://github.com/emrickk/vector-rush/commit/5735895"><code>5735895</code></a></td>
+<td>53/72 + same controller</td>
+<td>128.320 /1,285</td>
+<td>80.9%</td>
+<td>86.2/77.7/79.2%</td>
+<td>38.4</td>
+<td>100.85 /2</td>
+<td>Retain for intended sustained proximity; literal 100 m gate still narrowly fails.</td>
+</tr>
+</tbody></table></div>
+<p>Every listed run completed with <strong>zero recoveries across all six racers</strong>. All five rivals remained unfinished when the player finished; these are finish-distance gaps, not invented rival finish-time spreads. Build GUIDs and report hashes are retained in each report/analysis pair. These are sequential native runs with changed interactions, not identical-input rival replays.</p>
+<p><strong>Why the second cap failed.</strong> Candidate 02 raised actual guard duties to 82.5/78.2/81.8/64.8/62.8% for Rivals 1–5. Rivals 2/4 mean speeds fell from 160.8/163.7 km/h in 01 to 141.1/145.0 km/h. Approximately 48%/37% of their post-start samples were guarded at absolute lane&gt;8 m despite reserved lane+5.8 m. Changing relative arrival timing changed traffic/contact outcomes: player speed reduction was not monotonic improvement. The telemetry&#39;s <code>AITargetLane</code> exposed only reserved lane, so it could not uniquely distinguish blocked inward clearance from understeering; candidate 03 added <code>AIResolvedTargetLane</code> after clearance resolution.</p>
+<p><strong>What pursuit changed, and why it was insufficient.</strong> Old steering was <code>clamp(angleDegrees/26)</code>; physical yaw multiplied by 1.12 above 26 m/s, a small-angle gain about 2.468rad/s per radian. A pure-pursuit approximation calls for <code>2*forwardSpeed*sin(angle)/planarChord</code>; the old gain was below the approximate 3.248 at 42 m/s and 4.082 at 75 m/s for existing lookahead. <code>PursuitSteering</code> uses nonnegative forward speed, actual planar chord clamped to at least 1 m, and divides desired yaw by the same <code>1.12*lerp(.25,1,speed/26)</code> authority before clamping steering ± 1. Four known-radius cases failed the original mapping; the suite then passed<strong>37</strong>. This function affects every AI-driven craft, including testing autopilot, while manual stick/keyboard steering is separate. Native candidate 03 still failed: correct pursuit algebra alone did not free the bodies.</p>
+<p><strong>Causal discrimination after 03.</strong> The analysis reconstructed hull orientation, velocity direction and the actual resolved target. At guarded |lane|&gt;8 m, mean slip was only.80–1.45° (median.18–.37°), while the existing inward target angle was about 13° and target lateral error 4.11–4.38 m. A velocity-heading change would add only about.7–1.1° on average; evidence did not support slip as the main remedy. Projected collider-to-barrier clearance averaged.064–.104 m, with 82–94% of those outer-edge samples below.15 m. This was a reconstructed local-plane approximation, not actual recorded contact points, but it supported the long hull&#39;s stern blocking inward yaw.</p>
+<p><strong>Physical escape assistance.</strong> <code>RivalCorridorAcceleration</code> returns zero for player, inactive guard, or a target not at least.05 m inward. Otherwise it clamps <code>(targetLane-currentLane)*3 - lateralSpeed*2</code> to**± 6 m/s²**. <code>DriveAI</code> applies the result with <code>Body.AddForce(frame.Right*acceleration, ForceMode.Acceleration)</code> after collision-clear target resolution. It assigns neither position nor velocity, preserves steering/braking/traffic restrictions, and its damping may oppose fast inward travel. Two mirrored contact cases failed the old zero-force response; the completed suite passed<strong>42</strong>. In 04, rival |lane|&gt;8 m exposure fell from 20.0–40.5% to 3.3–5.0%, and longest guarded outer episodes were.79–2.00 s. Guard duty remained 41.8–65.6%, so this is mitigation in a deterministic race, not proof of zero contact or universally solved AI.</p>
+<p><strong>Final actual-player calibration.</strong> <a href="../UnityProject/Assets/Scripts/VectorBootstrap.cs">VectorBootstrap</a> applies 53/72 directly to the <code>i==0</code> player, not only to its testing autopilot; rival engine defaults and acceleration stay unchanged. In 06, post-start within 30/40/60/100 m is 56.0/66.4/80.9/98.1%. Mean gap stays 35.2/40.4/39.3 m by lap; both galleries have a rival within 60 m for 100% of sampled duration. The player averages 154.6 km/h, strongest rivals 155.4/155.5. Signed finish gaps are −248.87/−361.31/−100.85/−112.95/−469.23 m. The reviewer retained this setting for the bounded objective while explicitly recording the 100.85 m miss and <strong>no actual pass/rank change</strong>. Nearby telemetry behind the camera is not evidence of visible wheel-to-wheel action or manual-player balance.</p>
+<p>After the HUD/light-only visual correction, <a href="../evidence/close-race-final/pace-comparison.json">final pace comparison</a> reproduces all 1,285 sampled racer states/timestamps of 06 exactly. That is stronger invariance evidence for those presentation edits than a compile alone, while remaining specific to the scripted run.</p>
+<h3 id="section-12">8. Native performance, test coverage and delivery boundaries</h3>
+<p>The native <a href="../UnityProject/Assets/Scripts/RaceEvidence.cs">RaceEvidence</a> harness separates modes. Its replay path sets captureFramerate 24 and records 360 end-of-frame images/metadata; regular profiling collects <code>Time.unscaledDeltaTime*1000</code> over 60 wall-clock seconds, sorts observed intervals, and records percentiles plus Unity allocated memory. <code>VerifyRace</code> waits for the actual director result; <code>VerifyRestartLaunch</code> checks source phase, reset state, Racing after 4.2 s and renewed speed&gt;10 km/h. Three separate countdown-pause checks confirm that the countdown remains frozen. These tests automate the ordinary control/physics route; they are not human driving assessments.</p>
+<p>All performance rows below are native 1920×1080, Apple M2 Max, VSync 1. They are <strong>observed frame intervals</strong>, not isolated GPU timings or guaranteed frame rates. Variable display refresh and outside workloads limit cross-run causality.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Preserved run</th>
+<th align="right">Samples</th>
+<th>Mean / P 95 / P 99, ms</th>
+<th align="right">Unity allocated MiB</th>
+<th>Qualification</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="../evidence/run-02/runtime-metrics.txt">run 02</a></td>
+<td align="right">3,758</td>
+<td>15.97 /16.82 /16.89</td>
+<td align="right">184.8</td>
+<td>112.58 s race, zero player recoveries; one rival recovery remained.</td>
+</tr>
+<tr>
+<td><a href="../evidence/run-06-models/runtime-metrics.txt">run 06 models</a></td>
+<td align="right">3,527</td>
+<td>17.02 /18.86 /25.07</td>
+<td align="right">196.9</td>
+<td>Authoring overlapped; not isolated final performance.</td>
+</tr>
+<tr>
+<td><a href="../evidence/run-09-coastal/runtime-metrics.txt">run 09 coastal</a></td>
+<td align="right">3,595</td>
+<td>16.69 /16.76 /16.96</td>
+<td align="right">203.6</td>
+<td>No Editor or asset generation during sample;112.64 s race.</td>
+</tr>
+<tr>
+<td><a href="../evidence/night-01/runtime-metrics.txt">night 01</a></td>
+<td align="right">3,601</td>
+<td>16.67 /16.79 /16.85</td>
+<td align="right">237.9</td>
+<td>Visual target still failed.</td>
+</tr>
+<tr>
+<td><a href="../evidence/night-02/runtime-metrics.txt">night 02</a></td>
+<td align="right">3,601</td>
+<td>16.67 /16.82 /17.31</td>
+<td align="right">241.0</td>
+<td>Static visual target still failed.</td>
+</tr>
+<tr>
+<td><a href="../evidence/night-v4-race-01/runtime-metrics.txt">night-v4</a></td>
+<td align="right">3,529</td>
+<td>17.01 /20.60 /25.34</td>
+<td align="right">250.3</td>
+<td>No build/bake overlapped; idle desktop apps remained. No locked 60 fps claim.</td>
+</tr>
+<tr>
+<td><a href="../evidence/environment-final-performance/runtime-metrics.txt">environment final</a></td>
+<td align="right">6,804</td>
+<td>8.82 /15.14 /15.99</td>
+<td align="right">240.1</td>
+<td>No build/bake/encoding;32-test source regression passed.</td>
+</tr>
+<tr>
+<td><a href="../evidence/close-race-final/performance/runtime-metrics.txt">close-race final</a></td>
+<td align="right">7,189</td>
+<td>8.35 /9.22 /9.32</td>
+<td align="right">239.5</td>
+<td>128.32 s race, zero all-racer recoveries,2 full restarts +3 pause checks.</td>
+</tr>
+<tr>
+<td><a href="../evidence/landmarks-final/performance/runtime-metrics.txt">landmarks first</a></td>
+<td align="right">4,499</td>
+<td>13.27 /16.66 /188.14</td>
+<td align="right">241.1</td>
+<td>Real long intervals preserved; cause undetermined.</td>
+</tr>
+<tr>
+<td><a href="../evidence/landmarks-final/performance-repeat/runtime-metrics.txt">landmarks repeat</a></td>
+<td align="right">7,162</td>
+<td>8.38 /9.23 /9.33</td>
+<td align="right">241.2</td>
+<td>Same build returned near prior; does not erase first hitch.</td>
+</tr>
+<tr>
+<td><a href="../evidence/lighting-depth-final/performance/runtime-metrics.txt">lighting-depth final</a></td>
+<td align="right">7,184</td>
+<td>8.35 /9.21 /9.33</td>
+<td align="right">240.7</td>
+<td>Consistent with prior repeat;128.32 s race, all six zero recoveries,2+3 restart/pause checks.</td>
+</tr>
+</tbody></table></div>
+<p><a href="../evidence/landmarks-final/performance-comparison.json">Landmark comparison</a> records Chrome GPU-helper CPU activity but correctly refuses to identify it as the hitch cause: the good repeat also had that activity, and CPU snapshots are not GPU utilisation. <a href="../evidence/lighting-depth-final/performance-comparison.json">Lighting-depth comparison</a> notes that no build/encoding/asset generation ran during its sample; an existing idle Editor was left untouched. Neither comparison proves total system isolation.</p>
+<p>Regression coverage grew from 17 race-rule tests to 19 with paused-input cases,29 with corridor/clearance,32 with analog-throttle cases,37 with pursuit mapping and 42 with lateral assistance. <a href="../evidence/close-race-final/editmode-results.xml">Final close-race XML</a> and <a href="../evidence/lighting-depth-final/editmode-results.xml">lighting-depth XML</a> both record 42/42. Tests cover ordered forward laps, reverse/duplicate/skipped crossings, shortcut clamping, respawn/reset/invalid inputs, crossing fractions, pause/ordinary recovery, analog throttle, pursuit and guard helpers. They do not certify subjective handling, every traffic configuration or all GUI states. This audit read the existing XML; it did not rerun tests.</p>
+<p><strong>Artifacts and publication.</strong> <a href="https://github.com/emrickk/vector-rush/commit/3351c38"><code>3351c38</code></a> packaged the coastal app: <a href="../evidence/build-manifest.json">manifest</a>,46,728,192 bytes and ZIP integrity pass, with a silent 1280×720/15 s preview. Later night-v4 and throttle fixes have separate manifests; the old clip does not pretend to show the new throttle effect. <a href="https://github.com/emrickk/vector-rush/commit/1c0a92f"><code>1c0a92f</code></a> identifies final close-race build<code>7da2883ade4f4223b7a611db8cf60eb6</code>,54,531,835byte archive/441 entries/CRC pass,189 app-file hashes, a 15 s preview and 42.75 s full-lap excerpt. The latter spans recorded start-line crossings; both are silent actual native rendering with automated steering at 24 simulationfps. Selected PNGs and decode checks establish content/file validity, not continuous human viewing.</p>
+<p>Source/assets/evidence were committed and pushed to the private repository. The attempted close-race GitHub release was rejected by automatic approval review because release-asset publication required separate authorization; <strong>no release was published</strong>, clarified in <a href="https://github.com/emrickk/vector-rush/commit/e8805d4"><code>e8805d4</code></a>. A local verified app archive is not a GitHub release.</p>
+<p>The last fully checked lighting-depth delivery at <a href="https://github.com/emrickk/vector-rush/commit/a948825"><code>a948825</code></a> uses GUID<code>5c49b92643bd4d41820ba81857fdf8c7</code>:1,440 native frames;42.75 s full lap and 24 s lighting excerpt decoded; ten alternate-aspect station views;42 tests;193 source/resource/settings hashes and 189 app hashes unchanged after tests;56,664,092byte archive with 441 entries/CRC pass. <a href="../evidence/lighting-depth-final/build-manifest.json">Its manifest</a> is the evidence authority. Exact prior-camera anchor comparisons failed due to small natural drift and remain labelled failures. A display-locked performance attempt was recorded as blocked in<code>e5196cc</code>; the subsequent unlocked race/performance check completed in<code>a948825</code>, rather than retroactively treating the blocked launch as a pass.</p>
+<p>The newer owner-requested checkpoint <a href="https://github.com/emrickk/vector-rush/commit/3097bc8"><code>3097bc8</code></a> is a <strong>different app</strong>, GUID<code>40bed5f53c2449418e7fb56bf59739f6</code>, with accepted atmosphere and the clearer road control. <a href="HANDOFF.md">Handoff</a> and <a href="../evidence/night-production/lighting-road/checkpoint/checkpoint-validation.json">checkpoint validation</a> limit it to a successful native build, two short fog/title-to-race runs, five validated PNGs and unchanged 197 source/189 app hashes. It has no new 42-test run, full race/performance, alternate aspects, full-circuit, watched-motion or manual/audio acceptance, and no new ZIP/release. Gameplay remained paused; this documentation task does not reopen it.</p>
+<h3 id="section-13">Remaining gameplay and experience limits</h3>
+<p>The prototype has one course, one craft shape and five rivals. There are no weapons, multiplayer, campaign or additional circuits. Physical gamepad hardware, sustained manual-player balance/handling, audible mix/engine-load response, broad nondeterministic AI coverage, genuine observed overtaking, all-rival independent finishes, low-energy HUD behaviour and continuous normal-speed audiovisual quality remain unproven. Existing procedural sound and decorative speed-pad signals must not be advertised as new functional systems. Independent visual reviews repeatedly reject an overall AAA claim despite narrowly accepting specific fixes. The record supports an increasingly usable native prototype and reproducible corrective process, with the failed trials and literal remaining gates intact.</p>
+<h2 id="section-14">Ship production audit: original Kestrel through the contact-corrected native craft</h2>
+<p>This record follows the ship through authored geometry, rejected alternatives, controlled inspection, runtime material baking and native integration. It documents the evidence available in the repository; it does not rerun Blender, Unity or a visual critique. Visual findings below are attributed to the preserved independent reviews. Those reviews repeatedly distinguish a useful production advancement from a final hero-asset or AAA acceptance.</p>
+<p>The implementation was concrete Python/Blender authoring followed by Unity integration. The retained generators use Blender&#39;s <code>bpy</code> API, while the production records include background Blender build, render, bake and reimport-audit logs. For example, the <a href="../evidence/ship-v3/pass-02-build.log">pass02 build log</a> records FBX export, saved Blender source and the actual clay image; the <a href="../evidence/ship-v3/pass-03-bake-01.log">pass03 bake log</a> records reading the staged source and baking maps. <a href="../tools/blender.sh">The Blender wrapper</a> and <a href="asset-regeneration.md">regeneration documentation</a> describe explicit staged command-line operations. This is evidence of a scripted background CLI workflow. It is not evidence that an MCP modeling session performed these operations, and no MCP provenance is claimed here.</p>
+<h3 id="section-15">1. The first craft established an editable asset pipeline</h3>
+<p>The original craft survives as <a href="../SourceAssets/Kestrel07.blend">Kestrel07.blend</a>, <a href="../SourceAssets/build_assets.py">build_assets.py</a> and <a href="../SourceAssets/asset-stats.json">asset-stats.json</a>. The Python recipe constructs geometry using named lofts, polygon slabs, boxes, cylinders, rings, rods and text. Its loft helper creates octagonal cross sections; a dedicated glazing function constructs a curved canopy from successive sections. The recipe also authors exposed engine rings and blades, intake details and hydraulic links, rather than relying on an image pasted onto a proxy.</p>
+<p>The original manifest records 120 editable source objects, nine exported meshes, 29,922 vertices and 51,772 triangles. Its source bounds are 5.4375 × 7.487 × 1.6941 metres in source XYZ. The source convention is nose toward −Y and up toward +Z; FBX is exported for −Z forward and +Y up. These numbers describe that retained revision. They should not be used as the final game&#39;s ship inventory.</p>
+<p>The <a href="../evidence/asset-renders/hero-rear-three-quarter.png">original rear-quarter</a>, <a href="../evidence/asset-renders/hero-front-three-quarter.png">front-quarter</a> and <a href="../evidence/asset-renders/hero-top.png">top</a> images preserve the initial asset appearance. The accompanying <a href="../evidence/asset-renders/fbx-validation.json">FBX validation record</a> establishes a separate export-check artifact. Neither studio imagery nor a successful export demonstrates native racing quality. The useful foundation was the ability to retain an editable source, reproduce geometry with Python, export material batches and compare actual images across revisions.</p>
+<p>The top-level <a href="../SourceAssets/README.md">source README</a> is a historical V2-era handoff and calls the original files legacy V1. Its statement that V2 is current is time-specific; subsequent V3/pass04 records supersede it. Keeping this distinction prevents a convenient old README from silently replacing the final asset identity.</p>
+<h3 id="section-16">2. Sculpted V2 improved assembly, then failed the hero review</h3>
+<p>V2 is retained in <a href="../SourceAssets/hero-v2/Kestrel07-v2.blend">Kestrel07-v2.blend</a> and <a href="../SourceAssets/hero-v2/build_hero_v2.py">build_hero_v2.py</a>. Its <a href="../SourceAssets/hero-v2/REVISION-NOTES.md">revision notes</a> document an earlier rejected sculpted pass: inflated armor, padded intake rails, thick grille bars, detached race plaques, rubber-like fin edging, an underbody filling the channels and no visible rear emission. The actual <a href="../evidence/hero-v2/first-pass/hero-front-three-quarter.png">first-pass front</a> and <a href="../evidence/hero-v2/first-pass/hero-rear-three-quarter.png">rear</a> images survive. The exact first-pass source and FBX do not. The current V2 generator represents the corrected pass, so it cannot be presented as a fully reproducible archive of that missing intermediate revision.</p>
+<p>The documented correction altered actual construction: broader planar ceramic crowns and controlled longitudinal edges; unequal outer flank panels; narrower intake rails over seven thin swept vanes; shoulder-conforming number fields; removal of rounded fin piping; and a narrower keel that reopened the longitudinal gaps. It lowered the cockpit crown and narrowed the sill. The engine fix was particularly concrete: the first sculpted pass&#39;s carbon core physically occluded the throat. The revised core ends before the luminous chamber, and an intermediate emissive annulus sits 0.295 m behind the exit. A later local cut lowered the carbon pod crown beneath the intake so the well and individual vanes could be seen.</p>
+<p>The <a href="../SourceAssets/hero-v2/asset-stats.json">V2 manifest</a> records 142 editable source objects, nine exported meshes, 39,008 vertices and 73,364 triangles. The <a href="../SourceAssets/hero-v2/INTEGRATION.md">integration contract</a> identifies nine material names and no required texture payload. It also records main Unity nozzle exits at <code>(±1.68, −0.035, −3.405)</code>, facing local −Z. Reusing older effects at ±1.9 would visibly separate propulsion from the mouths. This is an example of geometry changes requiring an explicit native attachment contract.</p>
+<p>These improvements did not earn acceptance. <a href="ship-reviews/001-baseline-rejected.md">Independent review 001</a> compared the corrected <a href="../evidence/hero-v2/renders/hero-rear-three-quarter.png">V2 rear</a>, <a href="../evidence/hero-v2/renders/hero-top.png">top</a>, <a href="../evidence/hero-v2/renders/hero-chase.png">chase</a> and <a href="../evidence/ship-baseline-03/02-start.png">native baseline</a> against <a href="../references/nocturne/C-craft-materials.png">reference C</a>. It rejected the swollen three-body reading, bulbous teal canopy, dominant rear slab fins, disconnected-looking pipes, uniform toy-like finish and luminous nozzle outlines. Ragged number edges and raised-looking citron accents compounded the construction problems. The reference was an aspirational target, not implemented-game evidence.</p>
+<p>The resulting instruction was to rebuild large forms before adding weathering or fasteners. This preserved a causal link: the evidence showed primary silhouette and surface problems, so the next Python/Blender work changed nacelle sections, canopy volume, intakes and engine integration. Lighting alone was not credited as a solution to defects already visible under neutral studio conditions.</p>
+<p><img loading="lazy" src="../evidence/hero-v2/renders/hero-rear-three-quarter.png" alt="Rejected V2 rear-quarter studio render"></p>
+<p><em>Corrected V2 studio render, subsequently rejected by the independent ship review. This is an authored asset render, not a native racing screenshot.</em></p>
+<h3 id="section-17">3. V3 pass01 overcorrected into a box-like form</h3>
+<p>The immutable <a href="../SourceAssets/hero-v3/pass-01/recipe_snapshot.py">pass01 recipe</a>, <a href="../SourceAssets/hero-v3/pass-01/Kestrel07-v3.blend">source</a>, <a href="../SourceAssets/hero-v3/pass-01/HeroShip.fbx">FBX</a> and <a href="../SourceAssets/hero-v3/pass-01/asset-stats.json">manifest</a> preserve the next candidate. It removed tall fins, lowered and lengthened the center, integrated the white nacelle shell around each engine and replaced puffy raised intake rails. The staged manifest records 21,176 triangles and source bounds of 5.14 × 6.885 × 1.515 m.</p>
+<p><a href="ship-reviews/002-form-pass-01.md">Review 002</a> recognized those changes but rejected primary form again. The decisive <a href="../evidence/ship-v3/pass-01/08-clay-side.png">clay side</a> and <a href="../evidence/ship-v3/pass-01/07-clay-top.png">top</a> showed long nearly straight beams, broad flat roofs and short forebody tapers. The <a href="../evidence/ship-v3/pass-01/02-neutral-rear-quarter.png">neutral rear</a> exposed abrupt shoulders, a coarse canopy wedge and rectangular intake wells. More detail would have subdivided the blockout without fixing its contour.</p>
+<p>The prescribed correction was specific: shape the aft engine shoulder; introduce a cockpit-area waist; lower and slim the forebody; change the underside return along the craft; lengthen and sweep the intake with a ramped recess; and give the canopy a shallow convex crown while retaining its low height. Major panel boundaries also needed supported seams instead of deep cross-cuts. These were coupled surface changes, not a blanket subdivision or bevel increase.</p>
+<p>Technical integration was also held. The saved <a href="../evidence/ship-v3/pass-01/topology-audit.json">topology audit</a> reported boundary edges at rear rims, and tangent-export warnings remained. The reviewer distinguished the worker&#39;s diagnosis of a collapsing thin return from an independently rerun calculation. Both the mesh repair and its rendered appearance were required; a clean topology report alone could not pass form.</p>
+<h3 id="section-18">4. Native rig calibration made the comparison meaningful</h3>
+<p>The first native V2 neutral-rig attempt had a world-pose and lighting calibration failure and was excluded from material judgment. <a href="ship-reviews/003-native-rig-calibration.md">Review 003</a> accepted the repaired setup after examining the eight images and <a href="../evidence/ship-native-v2-neutral-02/inspection-scope.json">scope metadata</a>. It accepted the inspection apparatus, not the rejected V2 ship.</p>
+<p>The repaired <a href="../evidence/ship-native-v2-neutral-02/01-studio-rear-three-quarter.png">rear-quarter</a> and <a href="../evidence/ship-native-v2-neutral-02/04-studio-top-ORTHOGRAPHIC.png">orthographic top</a> placed the whole craft correctly above the floor with visible lighting and reflections. Runtime and canonical bounds agreed to floating-point precision. The metadata recorded eight calibration checks and a completed reflection probe. The <a href="../evidence/ship-native-v2-neutral-02/05-studio-engine-emission-OFF.png">emission OFF</a> and <a href="../evidence/ship-native-v2-neutral-02/06-studio-engine-emission-ON.png">ON</a> views used identical camera pose, lens and framing. This made the physical collar and chamber distinguishable from the luminous contribution.</p>
+<p><a href="../UnityProject/Assets/Scripts/Presentation/ShipInspection.cs">ShipInspection.cs</a> is the native inspection implementation. Later V3 controls retain fixed neutral lighting, ACES at exposure zero, no bloom, vignette or fog, and no propulsion effects in studio views. That removes several changing presentation variables from geometry and material comparisons. Ordinary gameplay screenshots remain separate evidence because their race pose, effects, lighting and camera can differ.</p>
+<h3 id="section-19">5. Pass02 reached practical form readiness</h3>
+<p>The <a href="../SourceAssets/hero-v3/pass-02/recipe_snapshot.py">pass02 recipe snapshot</a> implements longitudinally refined sections, a waisted nacelle envelope, shaped forward and aft crowns, changing lower returns and a controlled convex canopy. Named source objects preserve these construction roles. The <a href="../SourceAssets/hero-v3/pass-02/asset-stats.json">manifest</a> records 38,036 staged triangles and bounds of 5.2256 × 6.885 × 1.5197 m. The increase from pass01 is a technical consequence of the candidate, not a quality score.</p>
+<p>The first completed <a href="../evidence/ship-v3/pass-02/01-clay-rear-quarter.png">rear clay image</a> supported a provisional advancement direction in <a href="ship-reviews/004-form-pass-02-provisional.md">review 004</a>. At that moment, the remaining angles were incomplete and V3 was still staged. The review deliberately did not backdate a full pass. After the user clarified that a close, coherent shape should advance into materials and the whole game&#39;s presentation, <a href="ship-reviews/005-form-readiness-pass-02.md">review 005</a> inspected the completed <a href="../evidence/ship-v3/pass-02/07-clay-top.png">top</a>, <a href="../evidence/ship-v3/pass-02/08-clay-side.png">side</a> and <a href="../evidence/ship-v3/pass-02/05-clay-chase.png">chase</a>.</p>
+<p>Those views supported freezing the major form: a deliberate waist, lower forebody, longer integrated intakes, coherent dark center and recessed engines. Simple mounts, long aft panels and basic collars remained finish opportunities. Resumed captures used 32 samples without denoising, which limited fine surface judgments. The <a href="../evidence/ship-v3/pass-02/README.md">capture record</a> preserves seven actual studio captures and states that optional remaining neutral/perspective views were stopped after readiness. The documentation must not imply every planned render completed.</p>
+<p>The <a href="../evidence/ship-v3/pass-02/export-audit.json">export audit</a> separately reported manifold source geometry, triangulated/manifold runtime meshes, valid tangents after FBX reimport and matching staged runtime/FBX triangle totals. The independent critic read this supplied report rather than rerunning it. Practical form readiness authorized finish work; native material, motion and overall-quality acceptance remained open.</p>
+<h3 id="section-20">6. Flush livery and baked runtime materials preserved the approved geometry</h3>
+<p><a href="../SourceAssets/hero-v3/build_finish_v3.py">build_finish_v3.py</a> loads the immutable pass02 source and writes a new <a href="../SourceAssets/hero-v3/pass-03-finish/asset-stats.json">pass03 finish revision</a>. It adds a packed <code>SHIP_LIVERY</code> node group for citron and 07 paint, with source-position projection and upper-surface masks. The <a href="../SourceAssets/hero-v3/pass-03-finish/finish-contract.json">finish contract</a> explicitly states that no livery geometry was added. The finish also splits compact luminous disk meshes into <code>EngineCore</code>, allowing near-white core emission to differ from the dim cyan <code>Engine</code> annuli.</p>
+<p>The UV policy matters: approved Ivory, Graphite, Glass, Metal and Ceramic runtime UVs were retained verbatim; Engine and EngineCore alone were re-atlased after their material split. The exact <code>EXPORT_RUNTIME</code> meshes became the final FBX source. Re-unwrapping those meshes after baking would invalidate the maps.</p>
+<p><a href="../tools/ship/bake_materials.py">bake_materials.py</a> opens these joined runtime meshes, requires their existing UVs and writes a fresh output directory plus a separate baked-material Blender file. It uses CPU Cycles, a 16-pixel bake margin and no selected-to-active high-to-low transfer. Connected components receive small deterministic tone variation; position-driven procedural grain supplies restrained roughness and bump. Livery is carried through the coating replacement. Normal, albedo, roughness and AO are baked, and metallic/smoothness is packed for Unity.</p>
+<p>The <a href="../SourceAssets/hero-v3/pass-03-maps-01/material-manifest.json">pass03 manifest</a> records 1024-pixel outputs for four mapped categories: Ivory, Graphite, Metal and Ceramic. Runtime inputs are sRGB base color; linear metallic RGB with smoothness in alpha; linear occlusion sampled from green; and tangent-space OpenGL +Y normals. The authoring roughness images also remain in the package. The <a href="../tools/ship/README.md">pipeline contract</a> and <a href="../UnityProject/Assets/Scripts/Presentation/ShipSurfaceMaps.cs">ShipSurfaceMaps.cs</a> connect these payloads to Unity. A smoothness multiplier of one means the texture controls smoothness, not that every surface is a mirror.</p>
+<p>The baker saves its preview using actual baked maps. <a href="ship-reviews/006-source-baked-native-finish.md">Review 006</a> compared the <a href="../evidence/ship-v3/pass-03-finish/01-neutral-rear-quarter.png">source finish</a>, <a href="../evidence/ship-v3/pass-03-baked-preview/01-baked-rear.png">baked rear</a>, <a href="../evidence/ship-v3/pass-03-baked-preview/02-baked-chase.png">baked chase</a> and all eight <a href="../evidence/ship-native-v3-01/inspection-scope.json">native V3 captures</a>. Armor, graphite, glazing and metal remained distinguishable, the flush aft number survived ordinary chase size, and matched engine OFF/ON views established physical depth plus a compact core. This cleared material/import readiness with follow-ups. It also exposed jagged canopy, intake and nozzle borders and weak propulsion volume, which became the next corrections.</p>
+<h3 id="section-21">7. Propulsion and gallery integration were judged together in gameplay</h3>
+<p><a href="../UnityProject/Assets/Scripts/Presentation/IonPropulsion.cs">IonPropulsion.cs</a> consumes <a href="../UnityProject/Assets/Resources/Art/HeroShipEngineAnchors.json">authored anchors</a> through <a href="../UnityProject/Assets/Scripts/Presentation/ShipEngineAnchors.cs">ShipEngineAnchors.cs</a>. Effects are parented to the craft&#39;s visual root. The implementation separates a recessed core, thin annuli, short translucent crossed-sheet plumes and limited local lights. Its current response uses throttle and boost demand, with presentation frozen during pause. These source facts explain intended behavior; they do not independently establish motion stability.</p>
+<p><a href="ship-reviews/007-native-gallery-and-boost-stills.md">Review 007</a> found that warm gallery lighting reached the ivory hull and canopy, but wall construction read as black slabs outlined in orange. The observed-boost still showed blue bowls and road spill more strongly than an attached translucent exhaust body. The bounded change improved broad wall wash and charcoal surface separation while tuning plume visibility and reducing dominant blue spill.</p>
+<p><a href="ship-reviews/008-gallery-wash-and-plume-correction.md">Review 008</a> compared <a href="../evidence/night-v3-motion-03/selected/amber-mid.png">motion03 gallery middle</a> with <a href="../evidence/night-v3-motion-02/selected/amber-mid.png">motion02 middle</a>, and the corresponding <a href="../evidence/night-v3-motion-03/selected/observed-boost.png">corrected boost</a>. It accepted the bounded still-image improvement: wall cassettes and returns became readable, and short soft cyan tails remained attached in sampled cruise and boost poses. The <a href="../evidence/night-v3-motion-03/selected/selection.json">selection record</a> preserves frame associations; telemetry identifies frame 146 as boost active at 334.5 km/h.</p>
+<p>This evidence is an automated normal-physics recording at 24 simulation frames per second. Selected stills cannot verify attachment between frames, yaw/bank stability, flicker or transition smoothness. The <a href="../evidence/night-v3-motion-03/asset-identity.json">motion03 identity</a> still uses pass03 ship geometry; it cannot validate the separate contact correction that followed.</p>
+<h3 id="section-22">8. The 1,165-vertex correction isolated a real surface conflict</h3>
+<p>The pass03 <a href="../evidence/ship-native-v3-01/07-studio-canopy-close.png">canopy close-up</a> showed a silver/gray stepped shard across lower glazing. Related defects already existed in authoring previews, so the diagnosis could not reasonably stop at night lighting. <a href="../SourceAssets/hero-v3/diagnose_surface_contacts.py">diagnose_surface_contacts.py</a> and the preserved <a href="../evidence/ship-v3/pass03-surface-contact-audit.log">surface-audit log</a> investigated the actual adjacent geometry.</p>
+<p>The <a href="../evidence/ship-v3/pass-04-contacts/README.md">correction report</a> and <a href="../evidence/ship-v3/pass-04-contacts/validation-summary.json">validation summary</a> identify competing Graphite/glass/armor surfaces: near-parallel glazing/sill contacts, exactly coplanar end caps, and positive-area overlap at intake and nozzle returns. <a href="../SourceAssets/hero-v3/contact_correction_v3.py">contact_correction_v3.py</a> lowered the narrow sill 40 mm and shortened it 1%, recessed nacelle backing returns 15 mm and enlarged the buried graphite intake opening 15 mm. Only three Graphite objects changed: 529 sill vertices plus 318 vertices in each structural shell, totalling 1,165 runtime Graphite positions.</p>
+<p>Armor, glazing and engine positions, runtime topology, all UV coordinates, packed livery and engine anchors stayed fixed. The named competing coplanar overlaps fell to zero, and canopy/sill near-parallel centroids within 2 mm fell from 145 to zero. Other hidden and noncoplanar assembly intersections remained. The generic whole-source equality check correctly became false because three objects were intentionally changed; specific change allowlists and UV equality passed. This is a bounded contact repair, not an assertion that every object intersection was removed.</p>
+<p>The native control kept all 16 runtime surface-map hashes identical to pass03. <a href="ship-reviews/009-native-contact-repair-control.md">Review 009</a> compared the corrected <a href="../evidence/ship-native-v4-control-01/07-studio-canopy-close.png">canopy</a>, <a href="../evidence/ship-native-v4-control-01/01-studio-rear-three-quarter.png">rear</a> and <a href="../evidence/ship-native-v4-control-01/06-studio-engine-emission-ON.png">engine ON</a> against the matched old cameras. It accepted the removal of jagged overlaps while preserving the large silhouette. The unchanged-map control isolates geometry much more convincingly than a simultaneous geometry, texture and lighting replacement.</p>
+<p>The correction then required refreshed contact-dependent maps because moved source positions affect procedural grain and AO despite stable UV alignment. <a href="../SourceAssets/hero-v3/pass-04-maps-01/material-manifest.json">Pass04 maps</a> and the <a href="../evidence/ship-v3/pass-04-bake-01.log">pass04 bake log</a> preserve that refresh. Review 009 accepted the geometry control; it did not retrospectively accept these later maps. The <a href="../evidence/night-v4-motion-02/asset-identity.json">final combined identity</a> records their eventual integration.</p>
+<p><img loading="lazy" src="../evidence/ship-native-v4-control-01/07-studio-canopy-close.png" alt="Native canopy after the bounded contact correction"></p>
+<p><em>Actual native control after the contact repair. Old surface maps were retained for this comparison so the corrected border could be attributed to geometry.</em></p>
+<h3 id="section-23">9. The triangle discrepancy was accounted for rather than hidden</h3>
+<p>Review 006 retained an unresolved difference: 38,036 staged FBX triangles versus 37,686 native triangles. The <a href="../evidence/ship-v3/triangle-accounting-pass03/README.md">triangle reconciliation</a> used the exact pass03 FBX and native identity, with no new render or geometry change. Direct binary parsing found 332 duplicate-position degenerate triangles. Converting FBX centimetre coordinates to float32 collapsed another 18. Together these reproduced all 350 native reductions: 330 Ceramic triangles and 20 Engine triangles.</p>
+<p>All seven native mesh categories were present. EngineCore, Glass, Graphite, Ivory and Metal retained their per-mesh triangle totals. The <a href="../evidence/ship-v3/triangle-accounting-pass03/triangle-reconciliation.json">detailed reconciliation</a> therefore strongly supports import-time degenerate removal, rather than a missing component. The exact internal importer step was not instrumented; this is a matching emulation, not an importer call trace.</p>
+<p>The corrected native control still contains 37,686 triangles. Graphite&#39;s imported vertex count changes from 9,328 to 9,354 while its 9,034 triangles remain fixed. Thus unchanged source topology and UVs must not be rewritten as an identical Unity vertex inventory. This distinction preserves both the successful bounded repair and the true import behavior.</p>
+<p>The ship advanced from a reproducible first craft through two explicit visual rejections to a coherent native prototype with baked finish, visible short propulsion and a controlled contact repair. <a href="ship-reviews/010-night-playable-milestone.md">The milestone review</a> permits packaging the combined playable prototype, while preserving road-pattern, architecture, continuous-motion and manual-control limitations. No reviewed stage establishes final AAA quality. The durable achievement is the traceable sequence of evidence, diagnosis, authored change and scoped verification—not the existence of a clean build or a flattering render.</p>
+<h2 id="section-24">Environment: from coastal kit to constructed night districts</h2>
+<p>This part of the record follows the environment through the coastal V2 kit, the change to night, the V3 transit district, and the V4 landmarks and fixture-shadow correction. It distinguishes source authoring, native image findings, and the narrower verification each correction actually earned. The preserved production path is Python using Blender&#39;s <code>bpy</code> API, with background Blender CLI execution for authoring, FBX export, round-trip inspection and offline renders. These files do not establish an interactive Blender MCP session. Unity C# then places the exports, remaps materials, constructs the road and galleries, and records the native game. The <a href="development-history.md">development history</a> preserves separate failed candidates and corrective milestones.</p>
+<h3 id="section-25">Coastal V2: replace anonymous cubes with authored architecture</h3>
+<p>The starting critique was specific. <a href="companion-review-01.md">Companion review 01</a> inspected native run03 and found blank striped towers, large coastal polygon facets and weak water/horizon depth. The generated <a href="../references/solstice-chase-concept.png">Solstice target</a> was an art direction image, not a screenshot proving that the game already achieved that scene. The response was an authored three-asset package, rather than a claim that adding noise to the original blocks would solve their construction.</p>
+<p>The retained <a href="../SourceAssets/environment-v2/build_environment.py">environment generator</a> builds TerraceTower A with tapering ceramic structure, recessed curtain glazing, open garden floors, entrance construction, balustrades and screened roof equipment. SplitTower B uses unequal blades, a full-height opening and connecting bridges. These have deliberately different large silhouettes and inhabited floor rhythms. The <a href="../evidence/environment-v2/first-pass/01-kit-hero.png">first kit image</a>, <a href="../evidence/environment-v2/06-kit-revised.png">revised kit</a>, and <a href="../evidence/environment-v2/11-tower-A-medium.png">medium tower inspection</a> retain the offline appearance separately from the native game.</p>
+<p>The <a href="../SourceAssets/environment-v2/asset_stats.json">asset statistics</a> record 39,452 triangles for TerraceTower A and 22,916 for SplitTower B, each exported as one renderer. The <a href="../SourceAssets/environment-v2/INTEGRATION.md">integration contract</a> specifies metres, a base-centered origin, Unity FBX axis conversion, shared material names, restrained uniform scaling and removal of the old primitive building groups. Those details matter: leaving the old cubes inside an imported tower could hide the very recessed glazing and open floors being reviewed. Native run06 confirmed that terraces and distinct silhouettes survived import, while <a href="visual-modeling-review-03.md">the modeling review</a> still found nearly black glass and isolated thin platforms in open water. Better source models had not yet made a believable waterfront.</p>
+<h3 id="section-26">Cliff revisions: shape failures remained visible after texture improvement</h3>
+<p>The cliff was not accepted on its first attractive-looking material render. The modeling review records a first form resembling stacked clay and a second resembling cut concrete. Retained images include <a href="../evidence/environment-v2/05-cliff-revised.png">the revised cliff</a>, <a href="../evidence/environment-v2/08-cliff-fracture-final.png">fractured geometry pass</a>, and <a href="../evidence/environment-v2/10-runtime-distance-final.png">distance check</a>. Their role is a correction trail, not three independent accepted deliverables.</p>
+<p>The final generator replaces a simple radial outline with an irregular polygonal headland. It computes a varying upland height, a lower wave-cut shelf, localized bedding displacements, narrow erosion clefts and fractured planar noise at several physical scales. Its summit is built through successive broken rings rather than a single central peak, with separate shoreline fragments and scrub. <a href="../SourceAssets/environment-v2/refine_cliff.py">refine_cliff.py</a> opens the existing editable scene, removes only the cliff object, executes the revised geology section, exports that mesh and refreshes the specific inspection views. That is a concrete Python/Blender operation preserving the already handed-off towers while revising geology.</p>
+<p>A separate <a href="../SourceAssets/environment-v2/stone_texture.py">procedural limestone experiment</a> uses NumPy spectral noise and directional streaks to create portable albedo, normal, roughness and packed metallic/smoothness maps. It supplies mineral grain without pretending that a texture can author a headland silhouette. Those <code>Solstice_Limestone_*</code> images remain in staging to reproduce rejected surface trials. They were superseded by the scanned Rock 3 selection.</p>
+<p>The <a href="../SourceAssets/environment-v2/rock3_material.py">Rock 3 material recipe</a> rebuilds the Blender node material around source albedo, OpenGL normal and roughness maps. <a href="../SourceAssets/environment-v2/textures/Rock3_PROVENANCE.md">Provenance</a> identifies Rob Tuytel / Poly Haven and CC0; the original maps are third-party scans, not generated project imagery. The named URP derivative packs RGB zero and alpha equal to one minus source roughness. Runtime mapping uses normal strength 0.75 and fourfold tiling on the cliff&#39;s metric UV channel, giving 2.5-metre tiles. The source scan&#39;s documented width is 1.5 metres, so the larger trial scale was an explicit chase-distance choice.</p>
+<p>The <a href="../evidence/environment-v2/12-cliff-scanned-close.png">scanned close image</a>, <a href="../evidence/environment-v2/13-cliff-scanned-distance.png">scanned distance image</a>, and <a href="../evidence/environment-v2/14-kit-scanned.png">assembled scanned kit</a> show the selected surface stage. The cliff export contains 37,424 triangles. Its <a href="../SourceAssets/environment-v2/export_audit.json">FBX round-trip audit</a> reports finite vertices, one metric UV channel and no zero-area triangles. The frozen SplitTower export separately retains 52 zero-area cap tessellation triangles; this was recorded instead of silently rewriting a handed-off asset. Neither valid export geometry nor scanned texture detail removed the cliff&#39;s broad upright planes and simple plateau. Approval was limited to background and middle-distance evaluation.</p>
+<h3 id="section-27">Unity coast integration: foundations, duplicate placement and an honest inspection failure</h3>
+<p>Run06&#39;s isolated platforms led to Unity-side connected quays: deep caissons, seawalls, shared promenades, service buildings and piled jetties grouped the eight authored towers into three waterfront districts. <a href="critique-coastal-final.md">The coastal critique</a> connects that source change to the native <a href="../evidence/run-09-coastal/05-crest.png">crest</a> and <a href="../evidence/run-09-coastal/06-city-descent.png">descent</a>. It accepts the improved foundation relationship while noting that reclaimed platforms beside rock masses are still not a fully natural connected coast.</p>
+<p>A placement audit found two accepted cliff centers only about 1.48 metres apart despite the module&#39;s roughly 88 × 61 metre footprint. A 40-metre minimum accepted-center separation removed the near-duplicate. This is a useful example of image review and source arithmetic complementing one another: the source established a concrete overlapping-placement problem, and the native views checked the result. The remaining fixed padding checks did not become an exhaustive transformed-vertex intersection certificate.</p>
+<p>The first <a href="../evidence/run-09-coastal/07-coast-inspection.png">dedicated coast inspection</a> was obstructed by architecture. It was retained as failed evidence. A replacement <a href="../evidence/coast-inspection-10/07-coast-inspection.png">elevated native view</a> exposed the top, faces, clefts, scrub and shoreline fragments and closed that camera gap. It also confirmed the limitations: smooth large faces, a soft plateau outline, sparse shoreline detail and repetitive water. The verdict remained improved prototype integration with AAA visual quality rejected.</p>
+<p>The coastal road fix was similarly bounded. Earlier bank discontinuities and broad twisting quads prompted continuous curvature-based banking and lateral tessellation. Renderer-resource and emission corrections then improved the native baseline. Later matched controls found that disabling SSAO did not remove the unwanted road response, reflection suppression removed much of it, and disabling sun shadows did not. A dedicated matte Lit deck excluded environment reflections and specular highlights while preserving diffuse light, shadows and contact occlusion. <a href="../evidence/road-diagnostic-05/diag-01-baseline.png">The retained diagnostic baseline</a> and run09 establish the observed outcome, not one proven renderer-level cause for all historical bands.</p>
+<h3 id="section-28">Changing the scene to night did not automatically solve depth</h3>
+<p>The first night pass replaced active coastline with midnight architecture, occupied-window patterns, a dark sky, 58 overhead lamps and two open light galleries. Native <a href="../evidence/night-01/02-start.png">night01 start</a> and <a href="../evidence/night-01/06-city-descent.png">descent</a> exposed broad underlit road areas, isolated towers over black ground and hard crystal-like propulsion. The history records a successful build and a failed visual target together.</p>
+<p>The next correction added stepped skyline depth rings, mid-rise and low urban fabric, service avenues and varied occupied-window suites. Broader neutral road illumination and softer propulsion improved <a href="../evidence/night-02/02-start.png">night02</a>, but the review still rejected sharp bright distant windows, repeated facade families and overly even road light. Subsequent work retained explicit fog variants and developed enclosed overhead cassettes. The three generated <a href="../references/nocturne">Nocturne references</a> remained target imagery, with the amber corridor selected as a manageable composition direction. The project did not treat them as native results.</p>
+<h3 id="section-29">V3 benchmark: five real cameras before more environment production</h3>
+<p><a href="environment-reviews/001-benchmark-direction.md">Environment review 001</a> selected an actual 264-frame passage: open approach, gallery entry, middle, exit and skyline release. Frames 0, 170, 190, 210 and 240 became its five anchors. The difficult open setup and black-ceiling middle were deliberately included; the benchmark did not crop away failures to showcase only the warm portal.</p>
+<p>The initial replay metadata lacked numerical camera/racer transforms. The unchanged <a href="../evidence/environment-baseline-01/baseline-manifest.json">baseline manifest</a> and <a href="../evidence/environment-baseline-01/environment-evidence.json">native evidence report</a> closed that gap before art changes. They preserved actual poses, FOV, source identity and original image hashes. The eleven-second sequence used automated steering through normal physics at 24 simulation frames per second. Having all frames available did not mean that an independent reviewer had watched continuous normal-speed playback.</p>
+<p>The benchmark&#39;s composition instructions led to authored near architecture, supported gallery construction and quieter distant layers. The station had to be the same object through exit and reveal; placement could not be independently optimized for disconnected screenshots. Clearance, road banking, camera, ship and HUD remained stable references.</p>
+<h3 id="section-30">Transit source pass01 to pass02: correct the beam basis before native import</h3>
+<p>The <a href="../SourceAssets/environment-v3/build_transit_kit.py">transit recipe</a> creates a station with a two-leaf folded canopy, clerestory, open platform, deep room reveals, columns, knees and an asymmetric stair core. A lower service workshop and platform buttress complete the package. Editable collections remain distinct from the combined export collection and non-exported studio. This makes source construction inspectable while delivering one runtime mesh for each family.</p>
+<p>The <a href="../evidence/environment-v3/pass-01-transit/01-transit-kit-studio.png">first studio image</a> exposed the buttress knee protruding above its cap. In the <a href="../SourceAssets/environment-v3/pass-01-transit/recipe_snapshot.py">pass01 recipe</a>, the beam orientation relied on a tracking quaternion. <a href="../SourceAssets/environment-v3/pass-02-transit/recipe_snapshot.py">Pass02</a> constructs an explicit orthogonal basis from the beam direction, a reference axis, and cross products. That resolves the beam&#39;s roll, keeping the support below its ledge; the workshop was also separated in the <a href="../evidence/environment-v3/pass-02-transit/01-transit-kit-studio.png">revised studio view</a>.</p>
+<p>The <a href="../SourceAssets/environment-v3/pass-02-transit/asset-stats.json">pass02 statistics</a> record 13,424 station triangles, 2,972 workshop triangles and 648 buttress triangles. The <a href="../evidence/environment-v3/pass-02-transit/export-roundtrip-audit.json">round-trip audit</a> checks FBX dimensions, manifold edges, triangle area, UV0 and tangents. Overlapping metric UV0 uses four metres per tile; it is not a unique baked atlas. A 12,000-point whole-course audit also checked footprint clearance against other course branches. Those checks supported import readiness; they did not guarantee that the station would face the chase camera correctly.</p>
+<h3 id="section-31">Native candidate01 failed: move and turn the station using the actual views</h3>
+<p>Unity integrated those exports alongside deep chamfered gallery portals, continuous shells, supported deck fascias and maintenance ledges. Gallery geometry was combined into fourteen batches; 36 gallery lights were reallocated to reveal upper surfaces and six conflicting exterior fixtures suppressed. <a href="environment-reviews/004-first-environment-candidate.md">Review 004</a> found a much better constructed ceiling but rejected the city composition. In <a href="../evidence/environment-candidate-01/04-exit.png">candidate01 exit</a> and <a href="../evidence/environment-candidate-01/05-reveal.png">reveal</a>, the intended station failed to read while a blank blue wall and nearly black tower dominated.</p>
+<p>The <a href="../SourceAssets/environment-v3/pass-03-city-correction/README.md">city-correction record</a> explains the source findings: the station had already passed behind the camera at the reveal, the opposite workshop presented its rear wall, middle towers lacked occupied windows, and the approach lacked a close terrace/service relationship. The station moved from progress 0.918 to 0.970 at the same 33-metre right offset. Both it and the workshop rotated 180 degrees. Projection through the recorded candidate cameras rejected an intermediate 0.958 placement because the reveal would crop the profile too strongly.</p>
+<p>This correction also reused the coastal towers without reshaping them. The <a href="../SourceAssets/environment-v3/pass-03-city-correction/night-tower-recipe-snapshot.py">night-tower recipe</a> applies the import transform and asserts unchanged vertex coordinates and polygon connectivity, then assigns selected glazing polygons to <code>WarmWindow</code>. The <a href="../SourceAssets/environment-v3/pass-03-city-correction/night-tower-stats.json">statistics</a> record 21 assigned polygons for Terrace A and 26 for Split B. Existing topology and UV limitations remain; this is a material-assignment variant, not a new clean-mesh claim. Four local architectural fills reveal canopy and middle-tower surfaces, and a uniformly scaled terrace/service grouping establishes the approach&#39;s left side.</p>
+<p><a href="../evidence/environment-candidate-02/05-reveal.png">Candidate02 reveal</a> gives the formerly blank workshop roof depth, openings and ventilation, with station canopy and lit supports opposite it. <a href="environment-reviews/005-corrected-environment-candidate.md">Review 005</a> accepted the composition for further verification. It still identified flat amber panes and a conventional, partly cropped station silhouette. The actual camera comparison remained outside exact-match tolerance, so these are meaningful composition comparisons rather than pixel-controlled lighting experiments.</p>
+<h3 id="section-32">Road diagnostics: retain exclusions and reject unsupported cures</h3>
+<p>The parallel road investigation deliberately tested one frozen native view. <a href="environment-reviews/002-road-diagnostic.md">Review 002</a> inspected twelve controls. The large diagonal polygon survived constant smoothness, zero normal scale with original keywords, calibrated untextured Lit, and removal of every additional light. The <a href="../evidence/road-surface-01/04-calibrated-simple-Lit.png">calibrated-Lit image</a> and <a href="../evidence/road-surface-01/07-no-additional-lights.png">no-additional-lights image</a> therefore excluded explanations that depended on those inputs alone. The directional moon and its shadows remained active.</p>
+<p>A second seventeen-view run tested continuous ribbon normals and directional-shadow suppression. <a href="environment-reviews/003-road-normal-shadow-controls.md">Review 003</a> rejected both as demonstrated fixes: the conspicuous target was already weaker in the second run&#39;s changed baseline, which also had a different pose, gallery construction and light set. Incorrect global-up normals moved highlights but were unsuitable for a banked road. The original normals and shadow settings stayed. Narrowing the road&#39;s dampness variation into a satin finish was labeled a deliberate material redesign, not proof that the periodic-mask seam or triangulation caused every visible band.</p>
+<h3 id="section-33">Candidate03: intermediate frames found defects missed by the five anchors</h3>
+<p><a href="environment-reviews/006-sequence-continuity.md">Review 006</a> inspected 44 unique frames from candidate02 using contact-sheet samples and selected originals. It found a pale plate projecting over the left gutter at frames 144–150 and a wall-colored V through the left hatch backing at frames 200–206. These defects were not a request for another city rebuild. Source follow-through identified a banked-road bearing and a hatch straddling angled wall panels.</p>
+<p>The final correction aligned the bearing with the bank and attached the hatch to one half-panel. Nearby glazing gained shaded glass, soft room illumination and dark interruptions within the existing groups. <a href="environment-reviews/008-final-environment-art.md">Review 008</a> directly compared the original failing views with candidate03 and accepted these still-art corrections: <a href="../evidence/environment-candidate-03/frames/frame-0148.png">frame148</a> has the clear edge and <a href="../evidence/environment-candidate-03/frames/frame-0204.png">frame204</a> the complete hatch backing. It retained the broad road bands, modest station identity and brief exterior-lamp overlap with <code>BEST LAP</code> as limitations.</p>
+<p>The first full-lap capture then failed for a different reason: instrumentation selected the five anchor labels near wrapped pre-start progress. That run was preserved as an evidence failure. The harness was changed to arm only after entering the early circuit and require actual lap advancement. <a href="environment-reviews/007-final-continuity-aspects.md">Review 007</a> verifies the corrected 1,008-frame capture, 37 uniquely inspected full-lap frames, and all ten alternate-aspect anchors at 1280 × 800 and 1920 × 810. It closes the two construction defects and bounded route/craft/shell checks. It does not claim that all frames were watched or that shimmer and lamp rhythm were accepted.</p>
+<p>A later close-race review made one further local environment correction. <a href="environment-reviews/009-close-race-critique.md">Review 009</a> found the cool gallery&#39;s repeated blue-white upper pools too dominant. Their peak was reduced from 78 to 52, position moved inward 0.72 metres, range extended from 20 to 22 metres and tint softened; the warm gallery stayed the regression reference. <a href="environment-reviews/010-close-race-verification.md">Review 010</a> compares the <a href="../evidence/close-race-visual-before/selected/frame-0455.png">before</a> and <a href="../evidence/close-race-final/full-lap/selected/frame-0455.png">after</a>, finding weaker pools with ribs, fixtures, ceiling and road edge preserved.</p>
+<h3 id="section-34">V4 landmarks: three source passes, one published asset choice</h3>
+<p>The next user-selected scope was recognizable landmarks followed by road finish. <a href="environment-reviews/011-landmark-direction.md">Direction 011</a> used actual first- and middle-sector views to nominate a split signal mast on the opening right bend and lower, wider thermal works on the middle left. Their different silhouettes and alternating visual weight were intended to replace repeated window-tower identity. Nearby masses had to retreat so new landmarks could read without becoming brighter or larger to overpower them.</p>
+<p><a href="../SourceAssets/environment-v4/build_landmarks.py">build_landmarks.py</a> authors unequal leaning pylons, structural ties, an offset skyroom and service halls for the mast. The plant receives three staggered cylindrical vessels, recessed fan wells, a service podium and supported pipe gallery. Pass01&#39;s <a href="../SourceAssets/environment-v4/pass-01-landmarks/02-thermal-studio.png">thermal studio</a> exposed radial folds and fan blades rotating around the asset origin, disconnecting them from the intended drums. Pass02 creates those parts at their local origin, applies rotation there, then sets their object locations. The <a href="../SourceAssets/environment-v4/pass-02-landmarks/02-thermal-studio.png">corrected thermal image</a> restores the bounded silhouette; measured width drops from about 51.359 to 44.700 metres.</p>
+<p>The <a href="../SourceAssets/environment-v4/pass-02-landmarks/export-audit.json">published pass02 audit</a> retains 13,580 mast triangles and 27,736 thermal triangles: 41,316 across two runtime renderers, with zero nonmanifold edges and zero degenerate triangles. It also records one zero tangent on the mast after FBX reimport. Pass03 attempted integer-tile UV separation on identical geometry but failed to eliminate that tangent defect. <a href="../SourceAssets/environment-v4/INTEGRATION.md">The integration record</a> explicitly keeps pass02 published and pass03 diagnostic-only. The defect was documented because those materials use no tangent-space normal maps; a future normal-map addition would require correction first.</p>
+<p>The <a href="../SourceAssets/environment-v4/placement-audit.json">placement audit</a> covers all course branches at 12,000 samples. The 123-metre mast is at progress 0.230, right offset 56 metres; the 90.95-metre thermal works is at 0.625, left offset 51 metres. Full footprint centerline clearances are 29.000 and 25.306 metres. Unity reserves both plots before procedural district placement, with separating-axis overlap checks and padding. Projection estimates established recognition windows, while native captures remained responsible for actual facing, light, occlusion and scale.</p>
+<h3 id="section-35">Native landmark correction: remove the competitor instead of enlarging the hero</h3>
+<p><a href="environment-reviews/012-landmarks-native-critique.md">Review 012</a> directly inspected fifteen candidate01 originals and fifteen baseline originals. The mast&#39;s paired uprights, sky gap and offset room read in <a href="../evidence/landmarks-candidate-01/selected/frame-0175.png">frame175</a>, and the thermal drums, podium and pipes worked at <a href="../evidence/landmarks-candidate-01/selected/frame-0606.png">frame606</a>. Its required correction was a separate huge striped slab beside the mast, still consuming more screen area than the landmark.</p>
+<p>Source and projection identified that <code>BenchmarkSkyline</code> placement at local (−226, 0, 467), transformed to world approximately (333.658, 0, −45.411), height 113 metres. The Unity correction deleted this one placement. <a href="environment-reviews/013-landmark-correction-verification.md">Review 013</a> checked candidate02 frames 148, 166 and 175 against candidate01 plus a retained station reveal. <a href="../evidence/landmarks-candidate-02/selected/frame-0175.png">The corrected frame175</a> gives the existing mast more sky and a recessed backdrop. No asset rebuild, brighter trim or relocation was needed. Candidate02&#39;s manifest changed only <code>NightDistrict.cs</code> among its listed shared source entries. This closed the bounded composition milestone with simplified foundations and repeated far architecture still acknowledged.</p>
+<h3 id="section-36">Fixture shadow A/B/A: a specific causal result after earlier unresolved bands</h3>
+<p>The final road investigation began with a more concrete hypothesis than an angular-looking polygon. <a href="road-reviews/next-road-finish-diagnosis.md">The CPU projection diagnosis</a> reconstructed road fixture55 and the moon direction using the native reveal&#39;s camera. Predicted pole base, arm junction and inner arm shadow positions were approximately (1707,685), (1361,807) and (902,799) pixels. They corresponded to the visible L in the <a href="../evidence/close-race-final/full-lap/05-reveal.png">current reveal</a>. These were source-derived projection estimates, not a shadow-buffer capture.</p>
+<p>The opt-in native harness reached progress 0.9462143 through normal physics and froze actual rendered camera/racer poses. It captured <a href="../evidence/road-fixture-caster-01/00-baseline.png">baseline A</a>, <a href="../evidence/road-fixture-caster-01/01-fixture-casters-off.png">caster-off B</a>, and <a href="../evidence/road-fixture-caster-01/02-baseline-restored.png">restored A</a>. Only <code>shadowCastingMode</code> changed for <code>Track lighting steelwork</code>, <code>Cool linear road lamps</code> and <code>Amber linear road lamps</code>. Mesh visibility, emission, lights, moon, road material, mesh and collider identities remained fixed; all 101 recorded light states matched.</p>
+<p><a href="road-reviews/002-fixture-caster-native.md">Road review 002</a> confirms that the L disappears in B and returns in restored A, while the thin authored expansion seam remains. Readback records On/Off/On for all three renderers and verified restoration. Baseline/restored images are not byte-identical. The result identifies this fixture family&#39;s contribution to the current pole-and-arm shape, not the cause of the earlier cool-gallery polygon or every historical damp-road boundary.</p>
+<p>Commit <code>34b1c01</code> records the bounded shipping correction: disable casting only on those three combined fixture renderers, retaining their visible housings, luminous diffusers and illumination. <a href="road-reviews/003-final-road-verification.md">Road review 003</a> inspected ten final originals across ordinary landmark passes and boosted exterior samples, with exact corresponding camera/racer metadata. It finds the diagnosed L absent while useful pools, vehicle grounding and landmark depth remain. <a href="environment-reviews/014-landmarks-final-verification.md">Environment review014</a> records the final combined build, 1,440 captured frames, matching station anchors, 42 passing Unity tests and separate real-time race checks. This closes the landmark and selected road-shadow milestone. Sampled acceptance, encoded previews and successful tests remain distinct from continuous subjective-motion or AAA visual acceptance; the subsequent V5 lighting/material work belongs to the next chapter.</p>
+<h2 id="section-37">Later lighting work and the production finish checkpoint</h2>
+<h3 id="section-38">Selective lighting and architecture materials</h3>
+<p><strong>What we inspected.</strong> We retained seven native landmark approach/passing images and the final-station reveal from the accepted landmark build <code>b709ef36660443b7bdec08170d00b8df</code>. The images showed recognizable mast and thermal-plant shapes, but lower service entrances, pipe supports and structural returns were much darker than the upper drums and rooms. The source audit found that the four existing washes mainly aimed upward: the mast lights were at local heights 48/57 m and aimed toward 77/89 m; the thermal lights were around 53/51 m and aimed toward 60 m.</p>
+<p><strong>What we did.</strong> The material author generated four original 512 × 512 color and metallic/smoothness pairs: warm ceramic, cast concrete, satin titanium and service coating. The integrator assigned them to five existing landmark material regions through <code>NightArchitectureFinishes.cs</code>, preserving the existing base colors and emission. The helper set the material smoothness multiplier to 1 so the packed alpha could control the finish; concrete subsequently used a .78 multiplier. That .78 was a multiplier of the map, not a claim that the whole concrete surface had smoothness .78. Color images used sRGB; packed data used linear import, repeat wrapping and mipmaps. A retained <code>ArchitectureFinishLit.mat</code> preserved the required Lit keywords in native builds.</p>
+<p>We added one mast bracing/soffit fill and one thermal end-portal wash, and retargeted a former thermal rear wash toward the pipe supports/service returns. This produced six architectural washes rather than four. The end-portal wash at local (−7, 32, −54) aimed toward (2, 16, −39); its position addressed the end façade actually visible during the early approach. The mast change revealed visible middle-height bracing rather than claiming that the distant ground base had become fully readable. Route, geometry, global moon/ambient/fog, road material and the proven fixture shadow correction stayed fixed in this comparison.</p>
+<p><strong>What the technical check found.</strong> The URP Forward+ configuration did not establish reliable vehicle exclusion through <code>Light.cullingMask</code>: light layers were disabled, and clustered additional lights did not use the same per-object mapping as ordinary forward lighting. We therefore judged actual craft spill in native images instead of treating the layer mask as proof of isolation. The custom <code>NightWindows.shader</code> used main light, spherical harmonics and room emission, but no additional-light loop or glossy probe sampling; adding a local wash could reveal standard Lit structures without producing equivalent shading on the procedural window panes.</p>
+<p><strong>Verification and outcome.</strong> Build <code>5c49b92643bd4d41820ba81857fdf8c7</code> recorded 1,440 native PNGs. Independent review 016 compared eight candidate/baseline pairs and accepted the focused material/light improvement. The thermal entrances, couplings and support-face contrast improved; the mast&#39;s amber pane remained comparatively flat. Parent inspections at frames 360, 455, 678 and 1004 checked additional circuit contexts. An existing warm wash on the craft in frame 678 was present in the earlier build too, so it was not reported as a newly caused regression.</p>
+<p>All 42 existing tests passed on that delivery. A separate real-time race completed three laps in 128.32 seconds with zero recoveries across all six racers, both restart launches and three countdown/pause checks passing. Its 7,184 intervals yielded mean 8.35 ms, P95 9.21 ms and P99 9.33 ms, with 240.7 MiB allocated. No build, asset generation or video encoding overlapped the sample. The two alternate-aspect captures produced ten valid station-context PNGs in total. They did not prove every landmark approach at those aspects.</p>
+<p>The first two alternate-aspect attempts produced no frames while the display was locked. We preserved both attempts, stopped only our own stalled player processes, and retried after the display became available; no source or native binary changed. The completed 42.75-second lap used original frames 15–1040; the 24-second preview used frames 130–705. FFmpeg encoded continuous, silent native footage at 24 simulation frames per second and then decoded both videos completely. The local archive contained 441 ZIP entries, measured 56,664,092 bytes and passed CRC validation. The 193 source hashes, 189 app-file hashes and archive identity remained unchanged after checking.</p>
+<p><strong>Records:</strong> <a href="lighting-reviews/001-lighting-source-audit.md">source audit</a>, <a href="lighting-reviews/002-native-delivery-verification.md">native verification</a>, <a href="environment-reviews/016-lighting-material-native-critique.md">independent review 016</a>, <a href="../SourceAssets/environment-v5-materials/INTEGRATION.md">material integration</a>, <a href="../evidence/lighting-depth-final/build-manifest.json">delivery manifest</a>. Commits: <code>06ab6b5</code>, <code>6614dd8</code>, <code>5fa8c1c</code>, <code>e5196cc</code>, <code>a948825</code>.</p>
+<h3 id="section-39">Comparing the improved night game with the earlier coast</h3>
+<p><strong>What triggered the work.</strong> The owner said the earlier bright coastal version felt closer to the desired quality. We stopped implementation to compare the actual images instead of assuming that more completed tasks meant a better-looking whole game.</p>
+<p><strong>What we inspected and found.</strong> The parent inspected coastal race/crest/descent images, the later night crest/descent, and current mast/thermal views. A separate critic inspected its own named set. Coastal images separated white structures, blue water, shaded road and brown rock into large readable areas. Night images contained more constructed detail, but many surfaces and foundations collapsed into a similar dark value range; windows and cyan outlines supplied much of the contrast. The mast, thermal plant, galleries, HUD and corrected race behavior were improvements, but they did not establish a stronger complete image.</p>
+<p><strong>What we checked in code.</strong> We compared coastal commit <code>3351c38</code> with night delivery <code>a948825</code>. <code>ChaseCamera.cs</code> was byte-identical. The changed feeling therefore could not be attributed to a newly modified chase-camera file. Directional light had changed from warm intensity 1.65/shadow strength .75 to cool .62/.4; ambient changed from (.36, .43, .49) to (.095, .115, .155), and fog from a light .0007-density field to dark .0015. Both versions already had ACES and high-quality SMAA. Player cruise/boost had changed from 78/108 to 53/72 m/s, but similarly located stills had much closer displayed speeds; pace alone could not explain the image hierarchy.</p>
+<p><strong>Output and limitation.</strong> We saved a comparison page using unaltered native images and an explicit account of the process problem: local fixes had been accepted without consistently checking the whole scene against the strongest previous baseline. A coastal restoration experiment was proposed, not implemented. The owner subsequently chose to keep improving night, superseding that proposed restoration.</p>
+<p><strong>Records:</strong> <a href="environment-reviews/018-coastal-versus-current-synthesis.md">parent comparative review</a>, <a href="environment-reviews/017-first-versus-current-independent.md">independent comparison</a>, <a href="environment-reviews/coastal-current-comparison.html">original-image comparison</a>. Commit: <code>0897743</code>.</p>
+<h3 id="section-40">Turning the supplied video into an actionable plan</h3>
+<p>The owner supplied a 10.112-second 1920 × 1080, 30 fps night-racing clip and described it as the same concept with a more polished level of execution. We inspected twelve samples spanning approximately .42–9.69 seconds. The useful mechanisms were broad road reflections, layered city atmosphere, nearby visible opponents, route enclosure and coordinated light. The source clip&#39;s renderer and origin were unverified; we did not infer an engine, claim it was real-time, or copy its phase/shield mechanics, eight-racer count, exact artwork or UI. Audio was not assessed.</p>
+<p>We saved a source identity and visual-mechanism brief, then wrote an eight-task implementation plan: baseline; light/road; connected city; craft finish; racing/motion/audio; integrated acceptance; circuit rollout; final verification/delivery. The first benchmark was the current opening-city interval from the mast approach through the first gallery portal, including its conspicuous slowdown rather than cutting around it. The independent critic specified separate visual, watched-motion/manual-play and technical gates. All six experience dimensions had to meet the target; “approaching” and unobserved coverage could not close the benchmark. This was a planning milestone, with no game changes or new native results.</p>
+<p><strong>Records:</strong> <a href="../references/night-production-video.md">video reference brief</a>, <a href="superpowers/specs/2026-09-08-night-production-finish-design.md">design and acceptance</a>, <a href="superpowers/plans/2026-09-08-night-production-finish.md">implementation plan</a>, <a href="environment-reviews/019-production-finish-plan-critique.md">independent plan critique</a>. Commit: <code>ccb68cd</code>.</p>
+<h3 id="section-41">Establishing the Stage 1 baseline</h3>
+<p><strong>What we selected.</strong> The owner authorized Stage 1, meaning lighting and road response plus the prerequisite baseline, not all eight production tasks. From the unchanged accepted capture, Python selected the first natural crossings of progress .15, .22, .30, .37 and .43. The selection logic required forward progress within the same lap and rejected the initial near-.99 state as a false crossing. It produced frames 149/211/283/398/472. Thermal 606/641 and station 1004 were separate global-change controls. We copied the original PNGs without altering them and retained their camera, racer, speed, progress and timing records.</p>
+<p>FFmpeg encoded original frames 121–480 into a 360-frame, 15.000-second baseline passage at 24 simulation fps, then decoded the complete file. The interval covered approximately progress .119–.439 and race time 5.17–20.13 seconds, including the slowdown around .33–.39. We also drew a schematic layout of intended foreground route, nearby structure, middle city and skyline contributions. The schematic was a design diagram, not an edited native image offered as evidence.</p>
+<p><strong>Fresh real-time check.</strong> A sandboxed launch aborted before useful output. Automatic approval review initially rejected an unrestricted performance run because a stale Unity process and Blender activity might overlap. Read-only provenance checks identified our own earlier licensing-failed Unity batch job; we stopped that job. A separate Blender GUI was visually confirmed idle and left untouched. With no build or encoder active, the subsequent approved baseline run completed normally: 7,189 intervals, mean 8.35/P95 9.18/P99 9.31 ms, 241.9 MiB allocated. The separate race completed three laps in 128.32 seconds and passed both restarts and three countdown-pause checks. Encoding began only after that process exited.</p>
+<p>Independent review 020 found weak broad road response and insufficient open-city depth. It did not convert those images or decoder checks into a watched-motion verdict.</p>
+<p><strong>Records:</strong> <a href="../evidence/night-production/baseline/selection.json">baseline selection</a>, <a href="../evidence/night-production/baseline/benchmark.mp4">baseline clip</a>, <a href="environment-reviews/020-production-baseline.md">baseline review</a>, <a href="../evidence/night-production/baseline/performance/runtime-metrics.txt">runtime intervals</a>. Commit: <code>2b8e751</code>.</p>
+<h3 id="section-42">Candidate A changes the broad lighting environment</h3>
+<p>We kept road geometry, maps, normals, reflection-off state, roughness, craft payloads, camera, race/AI and postprocessing fixed. In C# and the sky shader we changed the documented lighting group below. This was a combined lighting candidate, not a one-variable causal experiment among its own light contributions.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Contribution</th>
+<th>Baseline</th>
+<th>Candidate A</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Ambient SH RGB</td>
+<td>.095 / .115 / .155</td>
+<td>.14 / .16 / .18</td>
+</tr>
+<tr>
+<td>Moon RGB and intensity</td>
+<td>.64 / .74 / 1 at .62</td>
+<td>.78 / .85 / .92 at .78</td>
+</tr>
+<tr>
+<td>Assigned Exp2 fog RGB and density</td>
+<td>.028 / .045 / .075 at .0015</td>
+<td>.041 / .074 / .086 at .0018</td>
+</tr>
+<tr>
+<td>Linear sky horizon</td>
+<td>.039 / .053 / .084</td>
+<td>.047 / .081 / .096</td>
+</tr>
+<tr>
+<td>Linear sky zenith</td>
+<td>.0015 / .0028 / .009</td>
+<td>.0015 / .0035 / .008</td>
+</tr>
+<tr>
+<td>Cool exterior road-pool RGB and intensity</td>
+<td>.74 / .86 / 1 at 390</td>
+<td>.68 / .86 / .91 at 460</td>
+</tr>
+</tbody></table></div>
+<p>The moon shadow strength, warm pools, gallery/landmark lights, fixture counts and positions, the three non-casting fixture groups, bloom and exposure remained fixed. <code>BuildMac</code> called <code>Prepare</code> internally, including serialized fog retention, so a duplicate preparation run was unnecessary.</p>
+<p>Native build <code>9a03e9b1767f4b89abd9c3bf938f7898</code> completed 1,440 frames. The five crossings became 149/211/283/398/473; the three controls were 606/642/1004. A reusable Python validator read PNG chunks, checked their CRCs, decompressed image streams and checked dimensions and hashes. All 195 source and 189 app files remained unchanged. All exact-pose checks failed: the comparisons were nearby natural crossings with reported camera drift, not matched pixels.</p>
+<p>The parent and independent reviewer saw clearer neutral deck/mast/structure surfaces and preserved warm controls. City masses still looked shallow against the brighter background, and the road remained plain. A was retained as a useful control, not accepted as Stage 1 completion. Commit: <code>af71d07</code>.</p>
+<h3 id="section-43">Candidate B tests the retained road reflection variant</h3>
+<p><strong>Exact operation.</strong> In <code>VectorRushSetup.cs</code>, <code>PrepareRoadReflectionMaterial</code> loaded or created <code>Resources/RoadSurfaceReflections.mat</code>, copied all properties from the original road material, set <code>_EnvironmentReflections=1</code>, removed <code>_ENVIRONMENTREFLECTIONS_OFF</code>, and saved the material. The original <code>RoadSurface.mat</code> stayed intact. <code>WorldBuilder.Build</code> selected the new template for the running deck. We kept A&#39;s light, fog, sky, generated maps, effective smoothness .315–.45, geometry and the original 256 px global probe unchanged.</p>
+<p><strong>Observed result.</strong> Build <code>de942ca116044e6eb2141c36b547d8a3</code> again produced 1,440 validated frames with 197 source/189 app identities unchanged. Independent inspection of all eight B originals against A showed a darker deck and weaker panel readability, without useful broad reflected-source shapes. Thermal/workshop details survived but did not compensate for the road regression. B was rejected and preserved.</p>
+<p>Reading local URP source also corrected a terminology issue: <code>_ENVIRONMENTREFLECTIONS_OFF</code> skips cubemap sampling but can still return the glossy-environment fallback. We therefore did not describe A as removing every form of indirect specular. Commit: <code>e57df91</code>.</p>
+<h3 id="section-44">The fog diagnosis identifies an actual color-space error</h3>
+<p><strong>Observed problem.</strong> Raising the sky brightness had not given the distant building faces enough separation. Instead of repeatedly lifting ambient light, we checked the fog upload. Local URP code consumed <code>unity_FogColor</code> directly; the engine&#39;s upload path was not in the inspected managed source, so a conversion mismatch remained a hypothesis.</p>
+<p><strong>Exact diagnostic.</strong> We added a small report to the existing <code>RaceEvidence.DiagnoseFog</code> coroutine, after its rendered fog-on image. It logged active color space, assigned <code>RenderSettings.fogColor</code>, that color&#39;s <code>.linear</code> conversion, <code>Shader.GetGlobalVector(&quot;unity_FogColor&quot;)</code>, and <code>unity_FogParams</code>. It then captured the same paused title view with fog disabled and restored the original state. A zero/unavailable built-in readback was explicitly defined as inconclusive.</p>
+<p>Native diagnostic build <code>1f13c130ce6f4d9895edf31998701007</code> returned a nonzero result:</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Value</th>
+<th>RGB</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Assigned fog</td>
+<td>.041 / .074 / .086</td>
+</tr>
+<tr>
+<td>Assigned color converted to linear</td>
+<td>.00317427842 / .00645073876 / .007985829</td>
+</tr>
+<tr>
+<td>Actual shader global</td>
+<td>.00317427842 / .00645073876 / .007985829</td>
+</tr>
+</tbody></table></div>
+<p>This confirmed that the renderer received substantially darker values than the intended linear sky palette. We changed runtime and serialized scene setup to <code>new Color(.041f,.074f,.086f).gamma</code>, retaining density and every B light/road setting. The next native readback returned approximately <code>.041/.074/.086</code> as intended. This was a measured correction, not a guessed color tweak.</p>
+<p>Candidate C build <code>1287761a66a64ff9bb7a952eb5519b0a</code> completed 1,440 valid frames with 197 source/189 app hashes unchanged. Independent inspection found clear near/middle/far city layers in 149/211/283, a better distant reveal in 473/1004, and retained thermal pipe/drum/coupling and workshop contrast. It accepted the fog correction. C still inherited B&#39;s dark road, so Stage 1 remained open. The full-production depth rating advanced only to “approaching.”</p>
+<p><strong>Records:</strong> <a href="../evidence/night-production/lighting-road/fog-readback/fog-state.txt">before readback</a>, <a href="../evidence/night-production/lighting-road/C/fog-readback/fog-state.txt">corrected readback</a>, <a href="environment-reviews/021-stage1-lighting-road-native.md">A/B/C independent review</a>. Commits: <code>b5fcb37</code>, <code>9d2badd</code>.</p>
+<p><img loading="lazy" src="../evidence/night-production/lighting-road/B/selected/frame-0149.png" alt="Candidate B opening approach before corrected fog upload"></p>
+<p><em>Candidate B: original native opening approach; reflection-enabled road, incorrectly dark fog upload.</em></p>
+<p><img loading="lazy" src="../evidence/night-production/lighting-road/C/selected/frame-0149.png" alt="Candidate C opening approach after corrected fog upload"></p>
+<p><em>Candidate C: original native opening approach after the measured fog correction. These are nearby natural-crossing comparisons; exact-pose tolerance did not pass. The road remained unfinished.</em></p>
+<h3 id="section-45">Candidate D tests two local reflection probes</h3>
+<p>We next tried the plan&#39;s bounded alternative to a whole-circuit cubemap. Local URP code showed that Forward+ could weight reflection probes by fragment world position when blending/atlas sampling were active; this mattered because the road was one large renderer. Setting only a smaller probe volume would not establish that behavior.</p>
+<p>In <code>WorldBuilder.cs</code>, two probes were placed at track progress .19 and .315, 5 m above the banked centerline. Their influence bounds were derived by sampling intervals .11–.27 and .25–.39, including a 17 m half-corridor and padding each side by 22 m horizontally/32 m vertically. Each used 256 px HDR, box projection, 20 m blending, importance 10, intensity .8, near/far clips .3/1200 m and a geometry mask excluding layer 8. The original global probe remained the fallback. Pipeline blending, box projection and atlas settings were retained through the Editor setup.</p>
+<p>We captured the global probe and then each local probe once, retaining each <code>RenderProbe()</code> ID and waiting up to 120 frames for <code>IsFinishedRendering</code>. Success and timeout were logged separately. This was not per-frame probe rendering. We documented that the box approximation could not exactly reproduce every curved barrier, near lamp and distant tower, and that excluding vehicle geometry did not independently exclude its illumination.</p>
+<p>All three native captures reported ready, with no timeout. Build <code>5edbc3cfa5be45358031fe8050f71d28</code> completed 1,440 validated frames; 197 source/189 app hashes stayed unchanged. The parent inspected all five primary originals. The deck still lacked a sufficient improvement in broad, source-related response. D was not selected. There was no independent D motion/performance verdict. The roughness remained fixed; its effective .315–.45 smoothness strongly blurred thin lamp sources, so higher probe resolution alone was not expected to solve that filtering.</p>
+<p>The owner requested wrap-up before the planned single roughness adjustment. A read-only SSR contingency stopped without implementation: installed feature source was guarded by <code>URP_SCREEN_SPACE_REFLECTION</code>, with no enabling define found in the inspected project settings/runtime assembly. Source presence was not treated as verified native availability. D source and evidence were preserved in commit <code>69ba4af</code>.</p>
+<h3 id="section-46">Restoring the safe checkpoint and stopping</h3>
+<p>At the owner&#39;s wrap-up request we restored A&#39;s clearer <code>RoadSurface</code> template, retained C&#39;s accepted fog correction, and removed D&#39;s two local probes and pipeline blending/box-projection changes. The unused reflection material, all failed candidates and separate review commits remained available. No roughness adjustment, SSR, later city/craft/racing work, release or merge was started.</p>
+<p>Final checkpoint build <code>40bed5f53c2449418e7fb56bf59739f6</code> built successfully. Two short native launches exited zero: a fog readback and an automated title-to-race smoke check. Five 1920 × 1080 PNGs passed CRC/decompression checks. All 197 source and 189 app hashes remained unchanged. The parent-inspected starting view showed readable road panels, player, nearby rival, HUD and layered city haze. The project game/Unity processes were confirmed closed.</p>
+<p>That check did not repeat the full benchmark/circuit, test suite, alternate aspects, three-lap/performance sample, continuous viewing or manual audio play for the combined checkpoint. We updated README, plans, history and the durable handoff with this exact limitation. The source and evidence were pushed as <code>3097bc8</code>; the working tree was clean. Stage 1 remained partly delivered with road-response acceptance open. The previous fully checked archive and videos remained separate from the newer checkpoint app.</p>
+<p><strong>Records:</strong> <a href="../evidence/night-production/lighting-road/decision.md">complete lighting decision log</a>, <a href="../evidence/night-production/lighting-road/checkpoint/checkpoint-validation.json">checkpoint validation</a>, <a href="HANDOFF.md">handoff</a>.</p>
+<h2 id="section-47">What is delivered, what remains open, and the next step</h2>
+<p>The historical record ends at source checkpoint <code>3097bc8</code>. It preserves a playable macOS game, original editable assets, authored texture recipes, native evidence, independent critiques and corrective Git history. It also preserves the reasons the overall presentation still falls short of the desired production finish. Acceptance of the ship form, gallery construction or a particular material pass was always narrower than acceptance of the whole game.</p>
+<p>The latest app combines the corrected fog with the readable reflection-off road. Its limited title/start/fog validation is recorded above. The previous lighting-depth archive has the broader tests, three-lap/performance and alternate-aspect evidence; those results must not be transferred to the newer app by assumption. The <a href="HANDOFF.md">checkpoint handoff</a> records both identities.</p>
+<p><img loading="lazy" src="../evidence/night-production/lighting-road/checkpoint/smoke/02-start.png" alt="Actual native race start at the saved checkpoint; this is a short smoke-check image, not a complete benchmark verdict."></p>
+<p><em>Saved checkpoint: actual native rendering, original PNG. The road panel pattern, craft, nearby rival, HUD and atmospheric city layers are visible. This frame alone does not establish how reflections or racing feel in motion.</em></p>
+<p>The owner has asked to continue and explain the next step. The proposed next pass is deliberately focused: record the actual combined checkpoint through the opening passage; review the moving highlights; make one road-smoothness comparison with the atmosphere and reflection state fixed; check five opening views plus thermal/station controls; then retain or reject the candidate. If it still lacks useful source-related road response, reassess the reflection technique instead of accumulating more light and material tweaks. Verify the selected app with separate native behavior/performance checks and preserve the decision. See the <a href="next-road-pass.md">concrete next-road plan</a>. Writing this retrospective and plan did not launch a new game or asset experiment.</p>
+<h2 id="section-48">Reproducible source and evidence map</h2>
+<p>The source families below connect the narrative to the actual assets and tools. Versioned snapshots matter: the current convenience script may contain a later correction, while a pass directory preserves the recipe that produced that pass. Not every historic output is regenerated by running only one current script.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Source family</th>
+<th>Concrete retained implementation</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>First authored ship</td>
+<td><a href="../SourceAssets/build_assets.py">build_assets.py</a>, <a href="../SourceAssets/Kestrel07.blend">Kestrel07.blend</a></td>
+<td>Initial lofts, slabs, hardware, materials, studio views and FBX export.</td>
+</tr>
+<tr>
+<td>V2 ship</td>
+<td><a href="../SourceAssets/hero-v2/build_hero_v2.py">build_hero_v2.py</a>, <a href="../SourceAssets/hero-v2/INTEGRATION.md">integration</a></td>
+<td>Curved nacelle/cowl profiles, revised silhouette, export anchors and runtime contracts.</td>
+</tr>
+<tr>
+<td>V3 ship form and finish</td>
+<td><a href="../SourceAssets/hero-v3/build_hero_v3.py">build_hero_v3.py</a>, <a href="../SourceAssets/hero-v3/build_finish_v3.py">build_finish_v3.py</a>, <a href="../SourceAssets/hero-v3/make_livery_v3.py">make_livery_v3.py</a></td>
+<td>Versioned primary form, runtime UV layout and original painted mask.</td>
+</tr>
+<tr>
+<td>V3 contact correction</td>
+<td><a href="../SourceAssets/hero-v3/contact_correction_v3.py">contact_correction_v3.py</a>, <a href="../SourceAssets/hero-v3/diagnose_surface_contacts.py">diagnose_surface_contacts.py</a>, <a href="../SourceAssets/hero-v3/verify_export.py">verify_export.py</a></td>
+<td>Specific Graphite vertex edits, before/after contact reports and export verification.</td>
+</tr>
+<tr>
+<td>Baked ship maps</td>
+<td><a href="../tools/ship/bake_materials.py">bake_materials.py</a>, <a href="../tools/ship/README.md">bake workflow</a>, <a href="../SourceAssets/hero-v3/pass-04-maps-01/material-manifest.json">final manifest</a></td>
+<td>Source-driven material bake and runtime texture-channel contract.</td>
+</tr>
+<tr>
+<td>Coastal kit</td>
+<td><a href="../SourceAssets/environment-v2/build_environment.py">build_environment.py</a>, <a href="../SourceAssets/environment-v2/refine_cliff.py">refine_cliff.py</a>, <a href="../SourceAssets/environment-v2/stone_texture.py">stone_texture.py</a>, <a href="../SourceAssets/environment-v2/rock3_material.py">rock3_material.py</a></td>
+<td>Harbor architecture, cliff geometry and separate original/CC0 surface attempts.</td>
+</tr>
+<tr>
+<td>Transit kit</td>
+<td><a href="../SourceAssets/environment-v3/build_transit_kit.py">build_transit_kit.py</a>, <a href="../SourceAssets/environment-v3/plan_transit_placement.py">plan_transit_placement.py</a>, <a href="../SourceAssets/environment-v3/build_night_tower_variants.py">build_night_tower_variants.py</a></td>
+<td>Station/workshop/buttress meshes, track-relative placement and quieter night towers.</td>
+</tr>
+<tr>
+<td>Landmarks</td>
+<td><a href="../SourceAssets/environment-v4/build_landmarks.py">build_landmarks.py</a>, <a href="../SourceAssets/environment-v4/placement_audit.py">placement_audit.py</a>, <a href="../SourceAssets/environment-v4/audit_exports.py">audit_exports.py</a></td>
+<td>Signal mast/thermal works, reserved footprints, versioned asset and export checks.</td>
+</tr>
+<tr>
+<td>Architecture finishes</td>
+<td><a href="../SourceAssets/environment-v5-materials/generate_finishes.py">generate_finishes.py</a>, <a href="../SourceAssets/environment-v5-materials/validate_assets.py">validate_assets.py</a></td>
+<td>Original material maps and channel/range validation.</td>
+</tr>
+<tr>
+<td>Runtime world</td>
+<td><a href="../UnityProject/Assets/Scripts/World/WorldBuilder.cs">WorldBuilder.cs</a>, <a href="../UnityProject/Assets/Scripts/World/TrackPath.cs">TrackPath.cs</a>, <a href="../UnityProject/Assets/Scripts/World/NightDistrict.cs">NightDistrict.cs</a>, <a href="../UnityProject/Assets/Scripts/World/NightLandmarks.cs">NightLandmarks.cs</a></td>
+<td>Track/world assembly, banked sampling, galleries/city and integrated landmarks.</td>
+</tr>
+<tr>
+<td>Lighting and finishes</td>
+<td><a href="../UnityProject/Assets/Scripts/World/NightTrackLighting.cs">NightTrackLighting.cs</a>, <a href="../UnityProject/Assets/Scripts/World/NightArchitectureFinishes.cs">NightArchitectureFinishes.cs</a></td>
+<td>Visible fixture/light pairs, selective fills and retained material variants.</td>
+</tr>
+<tr>
+<td>Race and presentation</td>
+<td><a href="../UnityProject/Assets/Scripts/Gameplay/">Gameplay</a>, <a href="../UnityProject/Assets/Scripts/Presentation/">Presentation</a></td>
+<td>Hover handling, progression, AI, chase camera, HUD, sound, propulsion and ship-map integration.</td>
+</tr>
+<tr>
+<td>Import/build retention</td>
+<td><a href="../UnityProject/Assets/Editor/VectorRushSetup.cs">Editor setup</a>, <a href="../tools/unity.sh">Unity wrapper</a>, <a href="../tools/blender.sh">Blender wrapper</a></td>
+<td>Reproducible Editor preparation, tests/builds and background asset authoring.</td>
+</tr>
+</tbody></table></div>
+<h3 id="section-49">Native evidence tools</h3>
+<p>These are purpose-built C# components inside the native player, not external screenshot mockups. Each report&#39;s flags and metadata determine what its output proves.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Role in this project</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="../UnityProject/Assets/Scripts/RaceEvidence.cs">RaceEvidence</a></td>
+<td>Title/start/results route snapshots; separate real-time metrics, race/restart/pause checks; later fog diagnostic.</td>
+</tr>
+<tr>
+<td><a href="../UnityProject/Assets/Scripts/Presentation/ShipInspection.cs">ShipInspection</a></td>
+<td>Controlled native camera and lighting rig for neutral/clay/night/finish comparisons.</td>
+</tr>
+<tr>
+<td><a href="../UnityProject/Assets/Scripts/ThrottleEvidence.cs">ThrottleEvidence</a></td>
+<td>Held-throttle and lift-off response, with rendered propulsion and telemetry.</td>
+</tr>
+<tr>
+<td><a href="../UnityProject/Assets/Scripts/HudEvidence.cs">HudEvidence</a></td>
+<td>HUD states and aspect-specific native views.</td>
+</tr>
+<tr>
+<td><a href="../UnityProject/Assets/Scripts/EnvironmentEvidence.cs">EnvironmentEvidence</a></td>
+<td>Full-circuit simulation-time captures, camera/vehicle state and sampled passage views.</td>
+</tr>
+<tr>
+<td><a href="../UnityProject/Assets/Scripts/RoadSurfaceEvidence.cs">RoadSurfaceEvidence</a></td>
+<td>Paused controlled material/light/normal/shadow experiments, including restored-state tests.</td>
+</tr>
+<tr>
+<td><a href="../UnityProject/Assets/Scripts/PaceEvidence.cs">PaceEvidence</a></td>
+<td>Validated racer progress, separation, recovery/wall contact and timed pack views.</td>
+</tr>
+<tr>
+<td><a href="../evidence/night-production/lighting-road/verify_capture.py">Lighting capture validator</a></td>
+<td>PNG CRC/decompression, report identities, original crossing selections and comparison validation.</td>
+</tr>
+</tbody></table></div>
+<h3 id="section-50">Evidence availability and interpretation</h3>
+<p>Selected original PNGs, JSON/TXT reports, source snapshots and reviews are tracked. Full frame sequences and app/build caches may remain local and ignored. Native <code>.app</code> bundles and ZIP archives are local deliverables; they are not included in the Git repository. A link to an ignored local output can resolve on this workstation without being available in a fresh clone. Generated references are kept in <code>references/</code> with provenance and must remain labeled as targets.</p>
+<p>Commands and script links above describe retained workflows, not instructions to rerun all of them blindly. Rebuilding can replace the current app. Use the versioned authoring and regeneration contracts when reproducing an old asset, and isolate the specific historical commit when a faithful old runtime is required. The documentation pass itself only reads records and writes documents.</p>
+<h2 id="section-51">Complete commit ledger through the saved checkpoint</h2>
+<p>All 60 commits below are in the repository history through <code>3097bc8</code>, in chronological order. Times are the recorded commit author times with their <code>−07:00</code> offset (America/Los_Angeles during this period). Titles are preserved verbatim. The ledger shows when work was checkpointed; it does not imply every individual tool operation was a separate commit.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>#</th>
+<th>Local date/time</th>
+<th>Commit</th>
+<th>Recorded milestone</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>2026-09-07 16:45:38</td>
+<td><a href="https://github.com/emrickk/vector-rush/commit/ca58eec">ca58eec</a></td>
+<td>docs: define Vector Rush first playable and parallel ownership</td>
+</tr>
+<tr>
+<td>2</td>
+<td>2026-09-07 17:28:13</td>
+<td><a href="https://github.com/emrickk/vector-rush/commit/acc8252">acc8252</a></td>
+<td>feat: checkpoint integrated Vector Rush playable and authoring assets</td>
+</tr>
+<tr>
+<td>3</td>
+<td>2026-09-07 17:32:40</td>
+<td><a href="https://github.com/emrickk/vector-rush/commit/c68efd6">c68efd6</a></td>
+<td>test: verify three-lap native race with zero player recoveries</td>
+</tr>
+<tr>
+<td>4</td>
+<td>2026-09-07 17:40:58</td>
+<td><a href="https://github.com/emrickk/vector-rush/commit/3933177">3933177</a></td>
+<td>feat: refine rival livery and grandstand with final visual review</td>
+</tr>
+<tr>
+<td>5</td>
+<td>2026-09-07 18:12:48</td>
+<td><a href="https://github.com/emrickk/vector-rush/commit/f0401f7">f0401f7</a></td>
+<td>fix: make track banking continuous and tessellate wide road spans</td>
+</tr>
+<tr>
+<td>6</td>
+<td>2026-09-07 18:27:05</td>
+<td><a href="https://github.com/emrickk/vector-rush/commit/43a4d95">43a4d95</a></td>
+<td>fix: restore URP postprocessing and translucent ion propulsion</td>
+</tr>
+<tr>
+<td>7</td>
+<td>2026-09-07 18:28:51</td>
+<td><a href="https://github.com/emrickk/vector-rush/commit/321d01b">321d01b</a></td>
+<td>feat: integrate reviewed Kestrel V2 and authored harbor towers</td>
+</tr>
+<tr>
+<td>8</td>
+<td>2026-09-07 18:32:52</td>
+<td><a href="https://github.com/emrickk/vector-rush/commit/fece904">fece904</a></td>
+<td>fix: discard vehicle recovery input while paused</td>
+</tr>
+<tr>
+<td>9</td>
+<td>2026-09-07 18:48:46</td>
+<td><a href="https://github.com/emrickk/vector-rush/commit/c122f6e">c122f6e</a></td>
+<td>fix: normalize macOS pointer coordinates after GUI scaling</td>
+</tr>
+<tr>
+<td>10</td>
+<td>2026-09-07 18:53:32</td>
+<td><a href="https://github.com/emrickk/vector-rush/commit/aff931a">aff931a</a></td>
+<td>build: stage versioned asset regeneration and preserve texture provenance</td>
+</tr>
+<tr>
+<td>11</td>
+<td>2026-09-07 19:02:15</td>
+<td><a href="https://github.com/emrickk/vector-rush/commit/df0c186">df0c186</a></td>
+<td>feat: integrate textured coastal districts and stable matte track</td>
+</tr>
+<tr>
+<td>12</td>
+<td>2026-09-07 19:08:04</td>
+<td><a href="https://github.com/emrickk/vector-rush/commit/3351c38">3351c38</a></td>
+<td>docs: deliver verified native build and current gameplay evidence</td>
+</tr>
+<tr>
+<td>13</td>
+<td>2026-09-07 19:40:13</td>
+<td><a href="https://github.com/emrickk/vector-rush/commit/d3fad40">d3fad40</a></td>
+<td>Add first midnight urban pass and preserve failed native visual review</td>
+</tr>
+<tr>
+<td>14</td>
+<td>2026-09-07 19:47:15</td>
+<td><a href="https://github.com/emrickk/vector-rush/commit/742776c">742776c</a></td>
+<td>Deepen night city and road lighting and soften propulsion after native critique</td>
+</tr>
+<tr>
+<td>15</td>
+<td>2026-09-07 19:58:26</td>
+<td><a href="https://github.com/emrickk/vector-rush/commit/790e6b5">790e6b5</a></td>
+<td>Establish generated Nocturne visual targets before further iteration</td>
+</tr>
+<tr>
+<td>16</td>
+<td>2026-09-07 20:14:56</td>
+<td><a href="https://github.com/emrickk/vector-rush/commit/f24e7a9">f24e7a9</a></td>
+<td>Record Astra ship rejection and production gates with native baseline</td>
+</tr>
+<tr>
+<td>17</td>
+<td>2026-09-07 20:26:55</td>
+<td><a href="https://github.com/emrickk/vector-rush/commit/3190705">3190705</a></td>
+<td>Preserve rejected V3 form pass with Astra critique and correction plan</td>
+</tr>
+<tr>
+<td>18</td>
+<td>2026-09-07 20:37:04</td>
+<td><a href="https://github.com/emrickk/vector-rush/commit/e815698">e815698</a></td>
+<td>Calibrate native ship inspection and preserve independent setup review</td>
+</tr>
+<tr>
+<td>19</td>
+<td>2026-09-07 20:41:49</td>
+<td><a href="https://github.com/emrickk/vector-rush/commit/79da2eb">79da2eb</a></td>
+<td>Checkpoint coherent V3 ship and staged integration at user wrap-up</td>
+</tr>
+<tr>
+<td>20</td>
+<td>2026-09-07 20:55:45</td>
+<td><a href="https://github.com/emrickk/vector-rush/commit/69875b0">69875b0</a></td>
+<td>Accept coherent V3 primary form and advance to finish work</td>
+</tr>
+<tr>
+<td>21</td>
+<td>2026-09-07 21:25:02</td>
+<td><a href="https://github.com/emrickk/vector-rush/commit/457886c">457886c</a></td>
+<td>Integrate V3 baked finish and preserve native review evidence</td>
+</tr>
+<tr>
+<td>22</td>
+<td>2026-09-07 21:36:22</td>
+<td><a href="https://github.com/emrickk/vector-rush/commit/184629c">184629c</a></td>
+<td>Give galleries readable construction and engines attached plasma trails</td>
+</tr>
+<tr>
+<td>23</td>
+<td>2026-09-07 21:45:29</td>
+<td><a href="https://github.com/emrickk/vector-rush/commit/f8d0ec7">f8d0ec7</a></td>
+<td>Repair ship surface contacts and verify native geometry control</td>
+</tr>
+<tr>
+<td>24</td>
+<td>2026-09-07 22:04:47</td>
+<td><a href="https://github.com/emrickk/vector-rush/commit/ee0e9ea">ee0e9ea</a></td>
+<td>Validate and package the improved night racing milestone</td>
+</tr>
+<tr>
+<td>25</td>
+<td>2026-09-07 22:23:54</td>
+<td><a href="https://github.com/emrickk/vector-rush/commit/e7a6735">e7a6735</a></td>
+<td>Drive exhaust from throttle and verify native lift-off response</td>
+</tr>
+<tr>
+<td>26</td>
+<td>2026-09-07 22:47:35</td>
+<td><a href="https://github.com/emrickk/vector-rush/commit/14b1212">14b1212</a></td>
+<td>Redesign racing HUD with live circuit map and verify native scaling</td>
+</tr>
+<tr>
+<td>27</td>
+<td>2026-09-08 00:33:41</td>
+<td><a href="https://github.com/emrickk/vector-rush/commit/6fa91de">6fa91de</a></td>
+<td>Critique current racing slice and define the next quality gates</td>
+</tr>
+<tr>
+<td>28</td>
+<td>2026-09-08 00:41:30</td>
+<td><a href="https://github.com/emrickk/vector-rush/commit/0320b3c">0320b3c</a></td>
+<td>Prioritize city and track visuals with a bounded environment plan</td>
+</tr>
+<tr>
+<td>29</td>
+<td>2026-09-08 01:03:21</td>
+<td><a href="https://github.com/emrickk/vector-rush/commit/75858e7">75858e7</a></td>
+<td>Lock native environment benchmark and controlled road diagnostics</td>
+</tr>
+<tr>
+<td>30</td>
+<td>2026-09-08 01:27:29</td>
+<td><a href="https://github.com/emrickk/vector-rush/commit/f4a9820">f4a9820</a></td>
+<td>Build constructed transit and gallery candidate; preserve failed review</td>
+</tr>
+<tr>
+<td>31</td>
+<td>2026-09-08 01:50:04</td>
+<td><a href="https://github.com/emrickk/vector-rush/commit/9a27bca">9a27bca</a></td>
+<td>Refine environment composition and preserve native review evidence</td>
+</tr>
+<tr>
+<td>32</td>
+<td>2026-09-08 02:08:23</td>
+<td><a href="https://github.com/emrickk/vector-rush/commit/3e6efa6">3e6efa6</a></td>
+<td>Deliver corrected environment benchmark with final native verification</td>
+</tr>
+<tr>
+<td>33</td>
+<td>2026-09-08 02:21:42</td>
+<td><a href="https://github.com/emrickk/vector-rush/commit/fc0ee39">fc0ee39</a></td>
+<td>Measure native race separation before player pace adjustment</td>
+</tr>
+<tr>
+<td>34</td>
+<td>2026-09-08 02:25:12</td>
+<td><a href="https://github.com/emrickk/vector-rush/commit/5ea643a">5ea643a</a></td>
+<td>Test fixed player pace reduction and preserve remaining separation</td>
+</tr>
+<tr>
+<td>35</td>
+<td>2026-09-08 02:30:07</td>
+<td><a href="https://github.com/emrickk/vector-rush/commit/4c043ed">4c043ed</a></td>
+<td>Preserve failed second pace cap and diagnose lateral tracking loss</td>
+</tr>
+<tr>
+<td>36</td>
+<td>2026-09-08 02:39:14</td>
+<td><a href="https://github.com/emrickk/vector-rush/commit/171a26a">171a26a</a></td>
+<td>Correct pursuit yaw and preserve remaining native wall-contact lock</td>
+</tr>
+<tr>
+<td>37</td>
+<td>2026-09-08 02:45:35</td>
+<td><a href="https://github.com/emrickk/vector-rush/commit/d630e55">d630e55</a></td>
+<td>Free guarded rivals from rail contact with bounded lateral control</td>
+</tr>
+<tr>
+<td>38</td>
+<td>2026-09-08 02:49:29</td>
+<td><a href="https://github.com/emrickk/vector-rush/commit/df176bf">df176bf</a></td>
+<td>Establish sustained nearby racing with corrected rival control</td>
+</tr>
+<tr>
+<td>39</td>
+<td>2026-09-08 02:54:10</td>
+<td><a href="https://github.com/emrickk/vector-rush/commit/5735895">5735895</a></td>
+<td>Set final player pace for sustained nearby racing</td>
+</tr>
+<tr>
+<td>40</td>
+<td>2026-09-08 03:10:00</td>
+<td><a href="https://github.com/emrickk/vector-rush/commit/1c0a92f">1c0a92f</a></td>
+<td>Polish rival awareness and gallery lighting, verify and package final build</td>
+</tr>
+<tr>
+<td>41</td>
+<td>2026-09-08 03:11:27</td>
+<td><a href="https://github.com/emrickk/vector-rush/commit/e8805d4">e8805d4</a></td>
+<td>Clarify local build delivery and pending release authorization</td>
+</tr>
+<tr>
+<td>42</td>
+<td>2026-09-08 10:11:51</td>
+<td><a href="https://github.com/emrickk/vector-rush/commit/1e39835">1e39835</a></td>
+<td>Lock native race-camera references for landmark composition</td>
+</tr>
+<tr>
+<td>43</td>
+<td>2026-09-08 10:29:19</td>
+<td><a href="https://github.com/emrickk/vector-rush/commit/0d01fd0">0d01fd0</a></td>
+<td>Add two authored landmarks and preserve native composition critique</td>
+</tr>
+<tr>
+<td>44</td>
+<td>2026-09-08 10:34:12</td>
+<td><a href="https://github.com/emrickk/vector-rush/commit/9d6b326">9d6b326</a></td>
+<td>Clear the signal landmark silhouette and verify native composition</td>
+</tr>
+<tr>
+<td>45</td>
+<td>2026-09-08 10:36:45</td>
+<td><a href="https://github.com/emrickk/vector-rush/commit/34b1c01">34b1c01</a></td>
+<td>Verify fixture-shadow cause and clean the satin road lighting</td>
+</tr>
+<tr>
+<td>46</td>
+<td>2026-09-08 11:07:24</td>
+<td><a href="https://github.com/emrickk/vector-rush/commit/6b5e09d">6b5e09d</a></td>
+<td>Deliver verified landmarks and road finish with current native previews</td>
+</tr>
+<tr>
+<td>47</td>
+<td>2026-09-08 12:53:27</td>
+<td><a href="https://github.com/emrickk/vector-rush/commit/06ab6b5">06ab6b5</a></td>
+<td>Define lighting and material depth pass with native baseline</td>
+</tr>
+<tr>
+<td>48</td>
+<td>2026-09-08 13:07:23</td>
+<td><a href="https://github.com/emrickk/vector-rush/commit/6614dd8">6614dd8</a></td>
+<td>Add architecture finish kit and selective structural lighting</td>
+</tr>
+<tr>
+<td>49</td>
+<td>2026-09-08 13:13:51</td>
+<td><a href="https://github.com/emrickk/vector-rush/commit/5fa8c1c">5fa8c1c</a></td>
+<td>Accept native lighting and material depth candidate</td>
+</tr>
+<tr>
+<td>50</td>
+<td>2026-09-08 13:22:34</td>
+<td><a href="https://github.com/emrickk/vector-rush/commit/e5196cc">e5196cc</a></td>
+<td>Package lighting depth preview and preserve display-locked validation blocker</td>
+</tr>
+<tr>
+<td>51</td>
+<td>2026-09-08 13:49:13</td>
+<td><a href="https://github.com/emrickk/vector-rush/commit/a948825">a948825</a></td>
+<td>Complete lighting depth native race and delivery verification</td>
+</tr>
+<tr>
+<td>52</td>
+<td>2026-09-08 13:58:04</td>
+<td><a href="https://github.com/emrickk/vector-rush/commit/0897743">0897743</a></td>
+<td>Review coastal versus current visual direction and preserve native comparison</td>
+</tr>
+<tr>
+<td>53</td>
+<td>2026-09-08 14:28:05</td>
+<td><a href="https://github.com/emrickk/vector-rush/commit/ccb68cd">ccb68cd</a></td>
+<td>Plan production night finish with native benchmark acceptance gates</td>
+</tr>
+<tr>
+<td>54</td>
+<td>2026-09-08 14:48:22</td>
+<td><a href="https://github.com/emrickk/vector-rush/commit/2b8e751">2b8e751</a></td>
+<td>Establish native opening-city lighting and road baseline</td>
+</tr>
+<tr>
+<td>55</td>
+<td>2026-09-08 14:56:16</td>
+<td><a href="https://github.com/emrickk/vector-rush/commit/af71d07">af71d07</a></td>
+<td>Preserve broad night lighting candidate before road reflection comparison</td>
+</tr>
+<tr>
+<td>56</td>
+<td>2026-09-08 15:03:29</td>
+<td><a href="https://github.com/emrickk/vector-rush/commit/e57df91">e57df91</a></td>
+<td>Preserve controlled native road reflection variant and its limitations</td>
+</tr>
+<tr>
+<td>57</td>
+<td>2026-09-08 15:13:07</td>
+<td><a href="https://github.com/emrickk/vector-rush/commit/b5fcb37">b5fcb37</a></td>
+<td>fix: align native night fog with the linear atmosphere palette</td>
+</tr>
+<tr>
+<td>58</td>
+<td>2026-09-08 15:19:07</td>
+<td><a href="https://github.com/emrickk/vector-rush/commit/9d2badd">9d2badd</a></td>
+<td>review: retain corrected night atmosphere and reject dark road response</td>
+</tr>
+<tr>
+<td>59</td>
+<td>2026-09-08 15:23:37</td>
+<td><a href="https://github.com/emrickk/vector-rush/commit/69ba4af">69ba4af</a></td>
+<td>experiment: preserve bounded night-road probes and native verdict</td>
+</tr>
+<tr>
+<td>60</td>
+<td>2026-09-08 15:30:38</td>
+<td><a href="https://github.com/emrickk/vector-rush/commit/3097bc8">3097bc8</a></td>
+<td>chore: checkpoint accepted night atmosphere and clearer road for handoff</td>
+</tr>
+</tbody></table></div>
+</main></div>
+<footer>Historical record through checkpoint 3097bc8. Linked native captures, recipes and critiques retain their own acceptance limits.</footer>
+<script>const links=[...document.querySelectorAll('aside a[href^="#"]')];const observer=new IntersectionObserver(entries=>{for(const e of entries){if(e.isIntersecting){links.forEach(a=>a.classList.toggle('active',a.hash==='#'+e.target.id));}}},{rootMargin:'0px 0px -65% 0px'});document.querySelectorAll('h2[id]').forEach(h=>observer.observe(h));</script>
+</body></html>

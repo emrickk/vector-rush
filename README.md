@@ -2,13 +2,15 @@
 
 A playable, original anti-gravity racing prototype for Apple Silicon macOS. Pilot Kestrel 07 through three laps of Nocturne Circuit against five rivals. The current development direction is a night urban circuit.
 
+[Complete illustrated work record](docs/development-work-record.html) · [Markdown edition](docs/development-work-record.md)
+
 [Private GitHub repository](https://github.com/emrickk/vector-rush) · [Build brief](docs/GPT6-BUILD-PROMPT.md) · [Development history](docs/development-history.md) · [Ship art plan](docs/ship-art-plan.md)
 
-## Stage 1 checkpoint — paused at owner request
+## Stage 1 — road-response work resumed
 
 The owner has selected the supplied night-racing video as the target for a more coherent, polished version of this same game. The [production finish plan](docs/superpowers/plans/2026-09-08-night-production-finish.md) keeps the night direction and existing work. It starts with one representative 15-second opening-city passage: broad lighting and road response, connected construction, craft materials, then visible racing, motion and sound. Full-circuit rollout follows separate visual, watched-motion/manual-play and technical gates. The [design and acceptance criteria](docs/superpowers/specs/2026-09-08-night-production-finish-design.md) and [independent planning critique](docs/environment-reviews/019-production-finish-plan-critique.md) define the standard.
 
-The baseline and lighting experiments are complete as a resumable checkpoint. The accepted fog correction adds city depth; the clearer reflection-off road is restored after the reflection candidates failed to show a worthwhile benefit. Stage 1 remains incomplete against its production road-response target. Work is paused at the owner's request; see the [current handoff](docs/HANDOFF.md) and [independent A/B/C review](docs/environment-reviews/021-stage1-lighting-road-native.md). The earlier coastal-restoration suggestion is superseded by the chosen night direction.
+The baseline and lighting experiments are complete as a resumable checkpoint. The accepted fog correction adds city depth; the clearer reflection-off road is restored after the reflection candidates failed to show a worthwhile benefit. Stage 1 remains incomplete against its production road-response target. The owner has resumed work with a bounded [road-response comparison](docs/next-road-pass.md); the saved checkpoint remains the control. See the [current handoff](docs/HANDOFF.md) and [independent A/B/C review](docs/environment-reviews/021-stage1-lighting-road-native.md). The earlier coastal-restoration suggestion is superseded by the chosen night direction.
 
 ## Previous accepted delivery — lighting and material depth
 
