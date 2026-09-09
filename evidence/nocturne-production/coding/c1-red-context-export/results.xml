@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="1" result="Failed(Child)" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-09 09:21:25Z" end-time="2026-09-09 09:21:25Z" duration="0.0489275">
+  <test-suite type="TestSuite" id="1000" name="Vector Rush" fullname="Vector Rush" runstate="Runnable" testcasecount="55" result="Failed" site="Child" start-time="2026-09-09 09:21:25Z" end-time="2026-09-09 09:21:25Z" duration="0.048928" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1073" name="VectorRush.EditorTests.dll" fullname="/Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Library/ScriptAssemblies/VectorRush.EditorTests.dll" runstate="Runnable" testcasecount="55" result="Failed" site="Child" start-time="2026-09-09 09:21:25Z" end-time="2026-09-09 09:21:25Z" duration="0.037218" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="23908" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestSuite" id="1074" name="VectorRush" fullname="VectorRush" runstate="Runnable" testcasecount="55" result="Failed" site="Child" start-time="2026-09-09 09:21:25Z" end-time="2026-09-09 09:21:25Z" duration="0.034886" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="TestSuite" id="1075" name="Tests" fullname="VectorRush.Tests" runstate="Runnable" testcasecount="55" result="Failed" site="Child" start-time="2026-09-09 09:21:25Z" end-time="2026-09-09 09:21:25Z" duration="0.029298" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="TestFixture" id="1022" name="ProductionBoundaryTests" fullname="VectorRush.Tests.ProductionBoundaryTests" classname="VectorRush.Tests.ProductionBoundaryTests" runstate="Runnable" testcasecount="13" result="Failed" site="Child" start-time="2026-09-09 09:21:25Z" end-time="2026-09-09 09:21:25Z" duration="0.027260" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-case id="1027" name="ContextExportWritesExactClosedCourseAndHashesItsBytes" fullname="VectorRush.Tests.ProductionBoundaryTests.ContextExportWritesExactClosedCourseAndHashesItsBytes" methodname="ContextExportWritesExactClosedCourseAndHashesItsBytes" classname="VectorRush.Tests.ProductionBoundaryTests" runstate="Runnable" seed="482037328" result="Failed" start-time="2026-09-09 09:21:25Z" end-time="2026-09-09 09:21:25Z" duration="0.014925" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[  Expected: not null
+  But was:  null
+]]></message>
+                <stack-trace><![CDATA[at VectorRush.Tests.ProductionBoundaryTests.ContextExportWritesExactClosedCourseAndHashesItsBytes () [0x0004f] in /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Tests/Editor/ProductionBoundaryTests.cs:51
+]]></stack-trace>
+              </failure>
+              <output><![CDATA[Saving results to: /Users/anping/Library/Application Support/Vector Studio/Vector Rush/TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

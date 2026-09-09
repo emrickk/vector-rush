@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="6" result="Passed" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-09 09:37:05Z" end-time="2026-09-09 09:37:05Z" duration="0.0749762">
+  <test-suite type="TestSuite" id="1000" name="Vector Rush" fullname="Vector Rush" runstate="Runnable" testcasecount="61" result="Passed" start-time="2026-09-09 09:37:05Z" end-time="2026-09-09 09:37:05Z" duration="0.074976" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <test-suite type="Assembly" id="1080" name="VectorRush.EditorTests.dll" fullname="/Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Library/ScriptAssemblies/VectorRush.EditorTests.dll" runstate="Runnable" testcasecount="61" result="Passed" start-time="2026-09-09 09:37:05Z" end-time="2026-09-09 09:37:05Z" duration="0.069516" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="30548" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1081" name="VectorRush" fullname="VectorRush" runstate="Runnable" testcasecount="61" result="Passed" start-time="2026-09-09 09:37:05Z" end-time="2026-09-09 09:37:05Z" duration="0.069015" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1082" name="Tests" fullname="VectorRush.Tests" runstate="Runnable" testcasecount="61" result="Passed" start-time="2026-09-09 09:37:05Z" end-time="2026-09-09 09:37:05Z" duration="0.068491" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1022" name="ProductionArtImporterTests" fullname="VectorRush.Tests.ProductionArtImporterTests" classname="VectorRush.Tests.ProductionArtImporterTests" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-09-09 09:37:05Z" end-time="2026-09-09 09:37:05Z" duration="0.066905" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1024" name="CompleteImmutablePackageValidatesBeforeImport" fullname="VectorRush.Tests.ProductionArtImporterTests.CompleteImmutablePackageValidatesBeforeImport" methodname="CompleteImmutablePackageValidatesBeforeImport" classname="VectorRush.Tests.ProductionArtImporterTests" runstate="Runnable" seed="1539476746" result="Passed" start-time="2026-09-09 09:37:05Z" end-time="2026-09-09 09:37:05Z" duration="0.027960" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1026" name="DuplicateMaterialIdIsRejected" fullname="VectorRush.Tests.ProductionArtImporterTests.DuplicateMaterialIdIsRejected" methodname="DuplicateMaterialIdIsRejected" classname="VectorRush.Tests.ProductionArtImporterTests" runstate="Runnable" seed="665480863" result="Passed" start-time="2026-09-09 09:37:05Z" end-time="2026-09-09 09:37:05Z" duration="0.008372" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1023" name="ImporterAndJsonContractsAreAvailableToTheEditor" fullname="VectorRush.Tests.ProductionArtImporterTests.ImporterAndJsonContractsAreAvailableToTheEditor" methodname="ImporterAndJsonContractsAreAvailableToTheEditor" classname="VectorRush.Tests.ProductionArtImporterTests" runstate="Runnable" seed="2065395205" result="Passed" start-time="2026-09-09 09:37:05Z" end-time="2026-09-09 09:37:05Z" duration="0.001492" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1027" name="NonUnitPlacementScaleIsRejected" fullname="VectorRush.Tests.ProductionArtImporterTests.NonUnitPlacementScaleIsRejected" methodname="NonUnitPlacementScaleIsRejected" classname="VectorRush.Tests.ProductionArtImporterTests" runstate="Runnable" seed="1873622523" result="Passed" start-time="2026-09-09 09:37:05Z" end-time="2026-09-09 09:37:05Z" duration="0.006811" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1028" name="PayloadMutationAfterReadyIsRejectedByChecksum" fullname="VectorRush.Tests.ProductionArtImporterTests.PayloadMutationAfterReadyIsRejectedByChecksum" methodname="PayloadMutationAfterReadyIsRejectedByChecksum" classname="VectorRush.Tests.ProductionArtImporterTests" runstate="Runnable" seed="31360848" result="Passed" start-time="2026-09-09 09:37:05Z" end-time="2026-09-09 09:37:05Z" duration="0.006686" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1025" name="TraversalPathIsRejectedEvenWhenTheEscapedFileExists" fullname="VectorRush.Tests.ProductionArtImporterTests.TraversalPathIsRejectedEvenWhenTheEscapedFileExists" methodname="TraversalPathIsRejectedEvenWhenTheEscapedFileExists" classname="VectorRush.Tests.ProductionArtImporterTests" runstate="Runnable" seed="1804114426" result="Passed" start-time="2026-09-09 09:37:05Z" end-time="2026-09-09 09:37:05Z" duration="0.006275" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[Saving results to: /Users/anping/Library/Application Support/Vector Studio/Vector Rush/TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

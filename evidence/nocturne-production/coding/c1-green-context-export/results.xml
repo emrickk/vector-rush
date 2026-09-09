@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="1" result="Passed" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-09 09:25:16Z" end-time="2026-09-09 09:25:16Z" duration="0.0733616">
+  <test-suite type="TestSuite" id="1000" name="Vector Rush" fullname="Vector Rush" runstate="Runnable" testcasecount="55" result="Passed" start-time="2026-09-09 09:25:16Z" end-time="2026-09-09 09:25:16Z" duration="0.073362" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <test-suite type="Assembly" id="1073" name="VectorRush.EditorTests.dll" fullname="/Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Library/ScriptAssemblies/VectorRush.EditorTests.dll" runstate="Runnable" testcasecount="55" result="Passed" start-time="2026-09-09 09:25:16Z" end-time="2026-09-09 09:25:16Z" duration="0.067992" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="26655" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1074" name="VectorRush" fullname="VectorRush" runstate="Runnable" testcasecount="55" result="Passed" start-time="2026-09-09 09:25:16Z" end-time="2026-09-09 09:25:16Z" duration="0.067333" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1075" name="Tests" fullname="VectorRush.Tests" runstate="Runnable" testcasecount="55" result="Passed" start-time="2026-09-09 09:25:16Z" end-time="2026-09-09 09:25:16Z" duration="0.066924" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1022" name="ProductionBoundaryTests" fullname="VectorRush.Tests.ProductionBoundaryTests" classname="VectorRush.Tests.ProductionBoundaryTests" runstate="Runnable" testcasecount="13" result="Passed" start-time="2026-09-09 09:25:16Z" end-time="2026-09-09 09:25:16Z" duration="0.065556" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1027" name="ContextExportWritesExactClosedCourseAndHashesItsBytes" fullname="VectorRush.Tests.ProductionBoundaryTests.ContextExportWritesExactClosedCourseAndHashesItsBytes" methodname="ContextExportWritesExactClosedCourseAndHashesItsBytes" classname="VectorRush.Tests.ProductionBoundaryTests" runstate="Runnable" seed="916664452" result="Passed" start-time="2026-09-09 09:25:16Z" end-time="2026-09-09 09:25:16Z" duration="0.056849" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[PRODUCTION_CONTEXT_EXPORTED /var/folders/yj/p9svvlr143jfnrwwn1ymv34h0000gn/T/VectorRush-Context-e5bbf08dba564530b44d22ac82efcc53/geometry-context.json sha256=0d2c250f3250507f9429a9f04abd3e443c81022441b6f6d30faa6a8d17e82046 courseHash=598718f08e5c308a41b8e9f1b562ff8cd4e2bc9f661a91f4e34164cf7c820059
+Saving results to: /Users/anping/Library/Application Support/Vector Studio/Vector Rush/TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

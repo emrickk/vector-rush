@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="8" result="Passed" total="8" passed="8" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-09 10:12:33Z" end-time="2026-09-09 10:12:33Z" duration="0.0649569">
+  <test-suite type="TestSuite" id="1000" name="Vector Rush" fullname="Vector Rush" runstate="Runnable" testcasecount="69" result="Passed" start-time="2026-09-09 10:12:33Z" end-time="2026-09-09 10:12:33Z" duration="0.064957" total="8" passed="8" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <test-suite type="Assembly" id="1089" name="VectorRush.EditorTests.dll" fullname="/Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Library/ScriptAssemblies/VectorRush.EditorTests.dll" runstate="Runnable" testcasecount="69" result="Passed" start-time="2026-09-09 10:12:33Z" end-time="2026-09-09 10:12:33Z" duration="0.060195" total="8" passed="8" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="36572" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1090" name="VectorRush" fullname="VectorRush" runstate="Runnable" testcasecount="69" result="Passed" start-time="2026-09-09 10:12:33Z" end-time="2026-09-09 10:12:33Z" duration="0.059561" total="8" passed="8" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1091" name="Tests" fullname="VectorRush.Tests" runstate="Runnable" testcasecount="69" result="Passed" start-time="2026-09-09 10:12:33Z" end-time="2026-09-09 10:12:33Z" duration="0.055647" total="8" passed="8" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1015" name="HoverVehicleInputTests" fullname="VectorRush.Tests.HoverVehicleInputTests" classname="VectorRush.Tests.HoverVehicleInputTests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-09-09 10:12:33Z" end-time="2026-09-09 10:12:33Z" duration="0.046211" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="ParameterizedMethod" id="1020" name="AnalogThrottleIsReportedIndependentlyOfHighCoastingSpeed" fullname="VectorRush.Tests.HoverVehicleInputTests.AnalogThrottleIsReportedIndependentlyOfHighCoastingSpeed" classname="VectorRush.Tests.HoverVehicleInputTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-09-09 10:12:33Z" end-time="2026-09-09 10:12:33Z" duration="0.032463" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1018" name="AnalogThrottleIsReportedIndependentlyOfHighCoastingSpeed(0.25f)" fullname="VectorRush.Tests.HoverVehicleInputTests.AnalogThrottleIsReportedIndependentlyOfHighCoastingSpeed(0.25f)" methodname="AnalogThrottleIsReportedIndependentlyOfHighCoastingSpeed" classname="VectorRush.Tests.HoverVehicleInputTests" runstate="Runnable" seed="1459865386" result="Passed" start-time="2026-09-09 10:12:33Z" end-time="2026-09-09 10:12:33Z" duration="0.028109" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1019" name="AnalogThrottleIsReportedIndependentlyOfHighCoastingSpeed(1.0f)" fullname="VectorRush.Tests.HoverVehicleInputTests.AnalogThrottleIsReportedIndependentlyOfHighCoastingSpeed(1.0f)" methodname="AnalogThrottleIsReportedIndependentlyOfHighCoastingSpeed" classname="VectorRush.Tests.HoverVehicleInputTests" runstate="Runnable" seed="1124579081" result="Passed" start-time="2026-09-09 10:12:33Z" end-time="2026-09-09 10:12:33Z" duration="0.001150" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-case id="1016" name="RecoveryPressedDuringPauseDoesNotExecuteOrSpendBoostAfterResume" fullname="VectorRush.Tests.HoverVehicleInputTests.RecoveryPressedDuringPauseDoesNotExecuteOrSpendBoostAfterResume" methodname="RecoveryPressedDuringPauseDoesNotExecuteOrSpendBoostAfterResume" classname="VectorRush.Tests.HoverVehicleInputTests" runstate="Runnable" seed="1998038861" result="Passed" start-time="2026-09-09 10:12:33Z" end-time="2026-09-09 10:12:33Z" duration="0.004415" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1017" name="RecoveryPressedWhileRacingStillExecutes" fullname="VectorRush.Tests.HoverVehicleInputTests.RecoveryPressedWhileRacingStillExecutes" methodname="RecoveryPressedWhileRacingStillExecutes" classname="VectorRush.Tests.HoverVehicleInputTests" runstate="Runnable" seed="863322856" result="Passed" start-time="2026-09-09 10:12:33Z" end-time="2026-09-09 10:12:33Z" duration="0.002549" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[VECTOR_RUSH_RECOVERY racer=YOU reason=manual raceTime=0.00 lap=0 from=0.99241 to=0.99241 speedKph=0.0 lateral=-4.00 height=1.55 grounded=False airborneSeconds=0.02 stalledSeconds=0.00 impactAgo=100.08 impactSpeed=0.0 count=1
+]]></output>
+            </test-case>
+            <test-case id="1021" name="ReleasingTriggerReportsZeroThrottleWhileCoastingSpeedRemainsHigh" fullname="VectorRush.Tests.HoverVehicleInputTests.ReleasingTriggerReportsZeroThrottleWhileCoastingSpeedRemainsHigh" methodname="ReleasingTriggerReportsZeroThrottleWhileCoastingSpeedRemainsHigh" classname="VectorRush.Tests.HoverVehicleInputTests" runstate="Runnable" seed="13330110" result="Passed" start-time="2026-09-09 10:12:33Z" end-time="2026-09-09 10:12:33Z" duration="0.001090" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1048" name="RaceFinishLifecycleTests" fullname="VectorRush.Tests.RaceFinishLifecycleTests" classname="VectorRush.Tests.RaceFinishLifecycleTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-09-09 10:12:33Z" end-time="2026-09-09 10:12:33Z" duration="0.003355" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1049" name="PlayerResultStaysImmutableWhileRivalsFinishAndOnlyTimeoutRemainderDnf" fullname="VectorRush.Tests.RaceFinishLifecycleTests.PlayerResultStaysImmutableWhileRivalsFinishAndOnlyTimeoutRemainderDnf" methodname="PlayerResultStaysImmutableWhileRivalsFinishAndOnlyTimeoutRemainderDnf" classname="VectorRush.Tests.RaceFinishLifecycleTests" runstate="Runnable" seed="2016045250" result="Passed" start-time="2026-09-09 10:12:33Z" end-time="2026-09-09 10:12:33Z" duration="0.001521" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1051" name="RecordObjectsExposeReadOnlyIdentityAndResultProperties" fullname="VectorRush.Tests.RaceFinishLifecycleTests.RecordObjectsExposeReadOnlyIdentityAndResultProperties" methodname="RecordObjectsExposeReadOnlyIdentityAndResultProperties" classname="VectorRush.Tests.RaceFinishLifecycleTests" runstate="Runnable" seed="189433818" result="Passed" start-time="2026-09-09 10:12:33Z" end-time="2026-09-09 10:12:33Z" duration="0.000116" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1050" name="RestartClearsRecordsAndPauseDoesNotAdvanceRaceOrTimeout" fullname="VectorRush.Tests.RaceFinishLifecycleTests.RestartClearsRecordsAndPauseDoesNotAdvanceRaceOrTimeout" methodname="RestartClearsRecordsAndPauseDoesNotAdvanceRaceOrTimeout" classname="VectorRush.Tests.RaceFinishLifecycleTests" runstate="Runnable" seed="1792916813" result="Passed" start-time="2026-09-09 10:12:33Z" end-time="2026-09-09 10:12:33Z" duration="0.000669" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[Saving results to: /Users/anping/Library/Application Support/Vector Studio/Vector Rush/TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

@@ -26,5 +26,10 @@ namespace VectorRush
             material.SetTextureScale("_BaseMap",Vector2.one);
             return material;
         }
+
+        public static Material Create(CraftMaterialFactory factory,string name,string key,Color tint,float smoothness,float metallic)
+        {
+            return factory.CreateMapped(name,key,tint,smoothness,metallic);
+        }
     }
 }

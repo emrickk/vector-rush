@@ -17,6 +17,7 @@ namespace VectorRush
         public void Initialize(HoverVehicle vehicle)
         {
             target = vehicle;
+            ShakeEnabled = PlayerPreferences.Current.ShakeEnabled;
             lens = GetComponent<Camera>();
             lens.nearClipPlane = .18f;
             lens.farClipPlane = 5000f;

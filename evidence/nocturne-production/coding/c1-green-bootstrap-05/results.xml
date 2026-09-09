@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="1" result="Failed(Child)" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-09 09:16:25Z" end-time="2026-09-09 09:16:25Z" duration="0.1810326">
+  <test-suite type="TestSuite" id="1000" name="Vector Rush" fullname="Vector Rush" runstate="Runnable" testcasecount="53" result="Failed" site="Child" start-time="2026-09-09 09:16:25Z" end-time="2026-09-09 09:16:25Z" duration="0.181033" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1071" name="VectorRush.EditorTests.dll" fullname="/Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Library/ScriptAssemblies/VectorRush.EditorTests.dll" runstate="Runnable" testcasecount="53" result="Failed" site="Child" start-time="2026-09-09 09:16:25Z" end-time="2026-09-09 09:16:25Z" duration="0.173392" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="22823" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestSuite" id="1072" name="VectorRush" fullname="VectorRush" runstate="Runnable" testcasecount="53" result="Failed" site="Child" start-time="2026-09-09 09:16:25Z" end-time="2026-09-09 09:16:25Z" duration="0.172434" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="TestSuite" id="1073" name="Tests" fullname="VectorRush.Tests" runstate="Runnable" testcasecount="53" result="Failed" site="Child" start-time="2026-09-09 09:16:25Z" end-time="2026-09-09 09:16:25Z" duration="0.171696" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="TestFixture" id="1022" name="ProductionBoundaryTests" fullname="VectorRush.Tests.ProductionBoundaryTests" classname="VectorRush.Tests.ProductionBoundaryTests" runstate="Runnable" testcasecount="11" result="Failed" site="Child" start-time="2026-09-09 09:16:25Z" end-time="2026-09-09 09:16:25Z" duration="0.169413" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-case id="1033" name="ProductionBootstrapUsesTheSavedTrackAndSingleSavedCamera" fullname="VectorRush.Tests.ProductionBoundaryTests.ProductionBootstrapUsesTheSavedTrackAndSingleSavedCamera" methodname="ProductionBootstrapUsesTheSavedTrackAndSingleSavedCamera" classname="VectorRush.Tests.ProductionBoundaryTests" runstate="Runnable" seed="1418566119" result="Failed" start-time="2026-09-09 09:16:25Z" end-time="2026-09-09 09:16:25Z" duration="0.157458" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[Unhandled log message: '[Error] Radiance inside engine throat: Destroy may not be called from edit mode! Use DestroyImmediate instead.
+Destroying an object in edit mode destroys it permanently'. Use UnityEngine.TestTools.LogAssert.Expect]]></message>
+                <stack-trace><![CDATA[UnityEngine.Object:Destroy (UnityEngine.Object)
+VectorRush.IonPropulsion:Initialize (VectorRush.HoverVehicle) (at Assets/Scripts/Presentation/IonPropulsion.cs:61)
+VectorRush.VectorBootstrap:Awake () (at Assets/Scripts/VectorBootstrap.cs:94)
+System.Reflection.MethodBase:Invoke (object,object[])
+VectorRush.Tests.ProductionBoundaryTests:Invoke (object,string) (at Assets/Tests/Editor/ProductionBoundaryTests.cs:218)
+VectorRush.Tests.ProductionBoundaryTests:ProductionBootstrapUsesTheSavedTrackAndSingleSavedCamera () (at Assets/Tests/Editor/ProductionBoundaryTests.cs:193)
+System.Reflection.MethodBase:Invoke (object,object[])
+NUnit.Framework.Internal.Reflect:InvokeMethod (System.Reflection.MethodInfo,object,object[])
+NUnit.Framework.Internal.MethodWrapper:Invoke (object,object[])
+NUnit.Framework.Internal.Commands.TestMethodCommand:RunNonAsyncTestMethod (NUnit.Framework.Internal.ITestExecutionContext)
+NUnit.Framework.Internal.Commands.TestMethodCommand:RunTestMethod (NUnit.Framework.Internal.ITestExecutionContext)
+NUnit.Framework.Internal.Commands.TestMethodCommand:Execute (NUnit.Framework.Internal.ITestExecutionContext)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+]]></stack-trace>
+              </failure>
+              <output><![CDATA[Radiance inside engine throat: Destroy may not be called from edit mode! Use DestroyImmediate instead.
+Destroying an object in edit mode destroys it permanently
+Radiance inside engine throat: Destroy may not be called from edit mode! Use DestroyImmediate instead.
+Destroying an object in edit mode destroys it permanently
+Radiance inside engine throat: Destroy may not be called from edit mode! Use DestroyImmediate instead.
+Destroying an object in edit mode destroys it permanently
+Radiance inside engine throat: Destroy may not be called from edit mode! Use DestroyImmediate instead.
+Destroying an object in edit mode destroys it permanently
+Radiance inside engine throat: Destroy may not be called from edit mode! Use DestroyImmediate instead.
+Destroying an object in edit mode destroys it permanently
+Radiance inside engine throat: Destroy may not be called from edit mode! Use DestroyImmediate instead.
+Destroying an object in edit mode destroys it permanently
+Radiance inside engine throat: Destroy may not be called from edit mode! Use DestroyImmediate instead.
+Destroying an object in edit mode destroys it permanently
+Radiance inside engine throat: Destroy may not be called from edit mode! Use DestroyImmediate instead.
+Destroying an object in edit mode destroys it permanently
+Radiance inside engine throat: Destroy may not be called from edit mode! Use DestroyImmediate instead.
+Destroying an object in edit mode destroys it permanently
+Radiance inside engine throat: Destroy may not be called from edit mode! Use DestroyImmediate instead.
+Destroying an object in edit mode destroys it permanently
+Radiance inside engine throat: Destroy may not be called from edit mode! Use DestroyImmediate instead.
+Destroying an object in edit mode destroys it permanently
+Radiance inside engine throat: Destroy may not be called from edit mode! Use DestroyImmediate instead.
+Destroying an object in edit mode destroys it permanently
+Radiance inside engine throat: Destroy may not be called from edit mode! Use DestroyImmediate instead.
+Destroying an object in edit mode destroys it permanently
+Radiance inside engine throat: Destroy may not be called from edit mode! Use DestroyImmediate instead.
+Destroying an object in edit mode destroys it permanently
+Radiance inside engine throat: Destroy may not be called from edit mode! Use DestroyImmediate instead.
+Destroying an object in edit mode destroys it permanently
+Radiance inside engine throat: Destroy may not be called from edit mode! Use DestroyImmediate instead.
+Destroying an object in edit mode destroys it permanently
+Radiance inside engine throat: Destroy may not be called from edit mode! Use DestroyImmediate instead.
+Destroying an object in edit mode destroys it permanently
+Radiance inside engine throat: Destroy may not be called from edit mode! Use DestroyImmediate instead.
+Destroying an object in edit mode destroys it permanently
+Saving results to: /Users/anping/Library/Application Support/Vector Studio/Vector Rush/TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

@@ -24,3 +24,6 @@ evidence/nocturne-v2/**/full-lap/*.png
 
 # Python validation bytecode is local cache.
 __pycache__/
+
+# Production editor/diagnostic logs may include local licensing details.
+evidence/nocturne-production/**/*.log

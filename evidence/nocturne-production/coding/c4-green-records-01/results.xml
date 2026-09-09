@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="4" result="Passed" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-09 10:15:18Z" end-time="2026-09-09 10:15:18Z" duration="0.0370574">
+  <test-suite type="TestSuite" id="1000" name="Vector Rush" fullname="Vector Rush" runstate="Runnable" testcasecount="73" result="Passed" start-time="2026-09-09 10:15:18Z" end-time="2026-09-09 10:15:18Z" duration="0.037057" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <test-suite type="Assembly" id="1094" name="VectorRush.EditorTests.dll" fullname="/Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Library/ScriptAssemblies/VectorRush.EditorTests.dll" runstate="Runnable" testcasecount="73" result="Passed" start-time="2026-09-09 10:15:18Z" end-time="2026-09-09 10:15:18Z" duration="0.031916" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="36927" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1095" name="VectorRush" fullname="VectorRush" runstate="Runnable" testcasecount="73" result="Passed" start-time="2026-09-09 10:15:18Z" end-time="2026-09-09 10:15:18Z" duration="0.031083" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1096" name="Tests" fullname="VectorRush.Tests" runstate="Runnable" testcasecount="73" result="Passed" start-time="2026-09-09 10:15:18Z" end-time="2026-09-09 10:15:18Z" duration="0.030357" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1070" name="RaceRecordsTests" fullname="VectorRush.Tests.RaceRecordsTests" classname="VectorRush.Tests.RaceRecordsTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-09-09 10:15:18Z" end-time="2026-09-09 10:15:18Z" duration="0.028852" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1074" name="CorruptFileFallsBackSafelyAndDoesNotEraseUnrelatedFiles" fullname="VectorRush.Tests.RaceRecordsTests.CorruptFileFallsBackSafelyAndDoesNotEraseUnrelatedFiles" methodname="CorruptFileFallsBackSafelyAndDoesNotEraseUnrelatedFiles" classname="VectorRush.Tests.RaceRecordsTests" runstate="Runnable" seed="1844397511" result="Passed" start-time="2026-09-09 10:15:18Z" end-time="2026-09-09 10:15:18Z" duration="0.011422" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[Race records are malformed and were ignored without modifying the file: JSON parse error: Missing a name for object member.
+]]></output>
+            </test-case>
+            <test-case id="1072" name="CourseAndRulesIdentityAreIsolatedAndAutomatedRunIsExcluded" fullname="VectorRush.Tests.RaceRecordsTests.CourseAndRulesIdentityAreIsolatedAndAutomatedRunIsExcluded" methodname="CourseAndRulesIdentityAreIsolatedAndAutomatedRunIsExcluded" classname="VectorRush.Tests.RaceRecordsTests" runstate="Runnable" seed="807458703" result="Passed" start-time="2026-09-09 10:15:18Z" end-time="2026-09-09 10:15:18Z" duration="0.006260" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1071" name="ManualResultsCreatePreserveAndReplaceBestTimesWithSignedDelta" fullname="VectorRush.Tests.RaceRecordsTests.ManualResultsCreatePreserveAndReplaceBestTimesWithSignedDelta" methodname="ManualResultsCreatePreserveAndReplaceBestTimesWithSignedDelta" classname="VectorRush.Tests.RaceRecordsTests" runstate="Runnable" seed="794813584" result="Passed" start-time="2026-09-09 10:15:18Z" end-time="2026-09-09 10:15:18Z" duration="0.001802" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1073" name="RelaunchLoadsLastValidRecordAndAtomicWriteLeavesNoTemporaryFile" fullname="VectorRush.Tests.RaceRecordsTests.RelaunchLoadsLastValidRecordAndAtomicWriteLeavesNoTemporaryFile" methodname="RelaunchLoadsLastValidRecordAndAtomicWriteLeavesNoTemporaryFile" classname="VectorRush.Tests.RaceRecordsTests" runstate="Runnable" seed="521744423" result="Passed" start-time="2026-09-09 10:15:18Z" end-time="2026-09-09 10:15:18Z" duration="0.001678" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[Saving results to: /Users/anping/Library/Application Support/Vector Studio/Vector Rush/TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

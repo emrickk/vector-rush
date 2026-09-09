@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="1" result="Passed" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-09 09:30:06Z" end-time="2026-09-09 09:30:06Z" duration="0.032625">
+  <test-suite type="TestSuite" id="1000" name="Vector Rush" fullname="Vector Rush" runstate="Runnable" testcasecount="56" result="Passed" start-time="2026-09-09 09:30:06Z" end-time="2026-09-09 09:30:06Z" duration="0.032625" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <test-suite type="Assembly" id="1075" name="VectorRush.EditorTests.dll" fullname="/Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Library/ScriptAssemblies/VectorRush.EditorTests.dll" runstate="Runnable" testcasecount="56" result="Passed" start-time="2026-09-09 09:30:06Z" end-time="2026-09-09 09:30:06Z" duration="0.026854" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="29915" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1076" name="VectorRush" fullname="VectorRush" runstate="Runnable" testcasecount="56" result="Passed" start-time="2026-09-09 09:30:06Z" end-time="2026-09-09 09:30:06Z" duration="0.023119" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1077" name="Tests" fullname="VectorRush.Tests" runstate="Runnable" testcasecount="56" result="Passed" start-time="2026-09-09 09:30:06Z" end-time="2026-09-09 09:30:06Z" duration="0.022581" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1022" name="ProductionArtImporterTests" fullname="VectorRush.Tests.ProductionArtImporterTests" classname="VectorRush.Tests.ProductionArtImporterTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-09-09 09:30:06Z" end-time="2026-09-09 09:30:06Z" duration="0.020597" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1023" name="ImporterAndJsonContractsAreAvailableToTheEditor" fullname="VectorRush.Tests.ProductionArtImporterTests.ImporterAndJsonContractsAreAvailableToTheEditor" methodname="ImporterAndJsonContractsAreAvailableToTheEditor" classname="VectorRush.Tests.ProductionArtImporterTests" runstate="Runnable" seed="1511138353" result="Passed" start-time="2026-09-09 09:30:06Z" end-time="2026-09-09 09:30:06Z" duration="0.008511" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[Saving results to: /Users/anping/Library/Application Support/Vector Studio/Vector Rush/TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

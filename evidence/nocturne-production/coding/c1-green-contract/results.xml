@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="5" result="Passed" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-09 09:04:29Z" end-time="2026-09-09 09:04:29Z" duration="0.0606355">
+  <test-suite type="TestSuite" id="1000" name="Vector Rush" fullname="Vector Rush" runstate="Runnable" testcasecount="47" result="Passed" start-time="2026-09-09 09:04:29Z" end-time="2026-09-09 09:04:29Z" duration="0.060636" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <test-suite type="Assembly" id="1065" name="VectorRush.EditorTests.dll" fullname="/Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Library/ScriptAssemblies/VectorRush.EditorTests.dll" runstate="Runnable" testcasecount="47" result="Passed" start-time="2026-09-09 09:04:29Z" end-time="2026-09-09 09:04:29Z" duration="0.046294" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="17745" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1066" name="VectorRush" fullname="VectorRush" runstate="Runnable" testcasecount="47" result="Passed" start-time="2026-09-09 09:04:29Z" end-time="2026-09-09 09:04:29Z" duration="0.045068" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1067" name="Tests" fullname="VectorRush.Tests" runstate="Runnable" testcasecount="47" result="Passed" start-time="2026-09-09 09:04:29Z" end-time="2026-09-09 09:04:29Z" duration="0.044212" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1022" name="ProductionBoundaryTests" fullname="VectorRush.Tests.ProductionBoundaryTests" classname="VectorRush.Tests.ProductionBoundaryTests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-09-09 09:04:29Z" end-time="2026-09-09 09:04:29Z" duration="0.040808" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1027" name="CraftFactoryExposesOwnedRuntimeMaterialContract" fullname="VectorRush.Tests.ProductionBoundaryTests.CraftFactoryExposesOwnedRuntimeMaterialContract" methodname="CraftFactoryExposesOwnedRuntimeMaterialContract" classname="VectorRush.Tests.ProductionBoundaryTests" runstate="Runnable" seed="1786460549" result="Passed" start-time="2026-09-09 09:04:29Z" end-time="2026-09-09 09:04:29Z" duration="0.018160" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1025" name="CraftMaterialFactoryRuntimeBoundaryIsAvailable" fullname="VectorRush.Tests.ProductionBoundaryTests.CraftMaterialFactoryRuntimeBoundaryIsAvailable" methodname="CraftMaterialFactoryRuntimeBoundaryIsAvailable" classname="VectorRush.Tests.ProductionBoundaryTests" runstate="Runnable" seed="1443605306" result="Passed" start-time="2026-09-09 09:04:29Z" end-time="2026-09-09 09:04:29Z" duration="0.001095" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1024" name="ProductionMaterialLibraryRuntimeBoundaryIsAvailable" fullname="VectorRush.Tests.ProductionBoundaryTests.ProductionMaterialLibraryRuntimeBoundaryIsAvailable" methodname="ProductionMaterialLibraryRuntimeBoundaryIsAvailable" classname="VectorRush.Tests.ProductionBoundaryTests" runstate="Runnable" seed="75968404" result="Passed" start-time="2026-09-09 09:04:29Z" end-time="2026-09-09 09:04:29Z" duration="0.000258" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1026" name="ProductionWorldExposesTheSceneAuthoredContract" fullname="VectorRush.Tests.ProductionBoundaryTests.ProductionWorldExposesTheSceneAuthoredContract" methodname="ProductionWorldExposesTheSceneAuthoredContract" classname="VectorRush.Tests.ProductionBoundaryTests" runstate="Runnable" seed="1290863878" result="Passed" start-time="2026-09-09 09:04:29Z" end-time="2026-09-09 09:04:29Z" duration="0.000494" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1023" name="ProductionWorldRuntimeBoundaryIsAvailable" fullname="VectorRush.Tests.ProductionBoundaryTests.ProductionWorldRuntimeBoundaryIsAvailable" methodname="ProductionWorldRuntimeBoundaryIsAvailable" classname="VectorRush.Tests.ProductionBoundaryTests" runstate="Runnable" seed="1319918477" result="Passed" start-time="2026-09-09 09:04:29Z" end-time="2026-09-09 09:04:29Z" duration="0.000193" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[Saving results to: /Users/anping/Library/Application Support/Vector Studio/Vector Rush/TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

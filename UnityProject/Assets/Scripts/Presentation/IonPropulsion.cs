@@ -19,7 +19,7 @@ namespace VectorRush
         MaterialPropertyBlock properties;
         float response;
         public float ExhaustResponse => response;
-        public float ExhaustDemand => vehicle && RaceDirector.Instance && RaceDirector.Instance.Phase == RacePhase.Racing
+        public float ExhaustDemand => vehicle && RaceDirector.Instance && RaceDirector.Instance.CanSimulate(vehicle)
             ? vehicle.ThrottleInput * (vehicle.IsBoosting ? 1.35f : 1f) : 0f;
 
         // Native engine allocations must run in a Unity lifecycle callback.

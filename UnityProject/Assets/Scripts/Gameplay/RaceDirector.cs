@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 #if ENABLE_INPUT_SYSTEM
 using UnityEngine.InputSystem;
@@ -21,7 +23,14 @@ namespace VectorRush
         public int Position { get; private set; } = 1;
         public float BestLap { get; private set; }
         public float LastLap { get; private set; }
-        public float FinishTime => RaceTime;
+        public float FinishTime => lifecycle == null ? RaceTime : lifecycle.PlayerPresentationTime;
+        public float SimulationTime => lifecycle == null ? RaceTime : lifecycle.SimulationTime;
+        public bool HasPendingRivals => lifecycle != null && lifecycle.HasPendingRivals;
+        public IReadOnlyList<RacerFinishRecord> FinishRecords => lifecycle == null ? Array.Empty<RacerFinishRecord>() : lifecycle.Records;
+        public RaceRecordComparison CurrentRecordComparison { get; private set; }
+        public const string DrivingRulesId = "vector-rush-rules-v1";
+        public event Action<RacerFinishRecord> RacerResolved;
+        public event Action RaceRestarted;
 
         TrackPath track;
         RacePhase beforePause;
@@ -29,6 +38,10 @@ namespace VectorRush
         bool playerCrossedStart;
         readonly List<HoverVehicle> finishOrder = new List<HoverVehicle>();
         readonly List<HoverVehicle> stepFinishers = new List<HoverVehicle>();
+        readonly Dictionary<HoverVehicle, string> racerIds = new Dictionary<HoverVehicle, string>();
+        RaceFinishLifecycle lifecycle;
+        RaceRecords raceRecords;
+        string courseIdentity;
 
         void Awake()
         {
@@ -36,11 +49,24 @@ namespace VectorRush
             Instance = this;
         }
 
-        public void Initialize(TrackPath circuit, List<HoverVehicle> vehicles)
+        public void Initialize(TrackPath circuit, List<HoverVehicle> vehicles, string courseHash = null, RaceRecords records = null)
         {
             track = circuit;
             Racers = vehicles ?? new List<HoverVehicle>();
             Player = Racers.Find(racer => racer && racer.IsPlayer);
+            racerIds.Clear();
+            var identities = new List<RacerIdentity>();
+            for (int i = 0; i < Racers.Count; i++)
+            {
+                HoverVehicle racer = Racers[i];
+                if (!racer) continue;
+                string id = "racer-" + i;
+                racerIds.Add(racer, id);
+                identities.Add(new RacerIdentity(id, racer.DisplayName, racer.IsPlayer));
+            }
+            lifecycle = identities.Count > 0 && identities.Count(value => value.IsPlayer) == 1 ? new RaceFinishLifecycle(identities, 60f) : null;
+            courseIdentity = string.IsNullOrWhiteSpace(courseHash) ? "legacy-solstice-course-v1" : courseHash;
+            raceRecords = records;
             Time.timeScale = 1f;
             Phase = RacePhase.Menu;
             FreezeVehicles(true);
@@ -55,11 +81,14 @@ namespace VectorRush
             foreach (var racer in Racers) if (racer) racer.ResetForRace();
             FreezeVehicles(true);
             finishOrder.Clear();
+            lifecycle?.Reset();
+            CurrentRecordComparison = null;
             RaceTime = LastLap = BestLap = playerLapStart = 0f;
             playerCrossedStart = false;
             CountdownRemaining = 3f;
             Phase = RacePhase.Countdown;
             UpdatePosition();
+            RaceRestarted?.Invoke();
         }
 
         public void RestartRace() => StartRace();
@@ -83,7 +112,7 @@ namespace VectorRush
         {
             bool pausePressed = false;
 #if ENABLE_LEGACY_INPUT_MANAGER
-            pausePressed = Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P);
+            pausePressed = PlayerPreferences.Current.WasPressedThisFrame(PlayerAction.Pause) || Input.GetKeyDown(KeyCode.P);
 #endif
 #if ENABLE_INPUT_SYSTEM
 #if !ENABLE_LEGACY_INPUT_MANAGER
@@ -91,7 +120,7 @@ namespace VectorRush
 #endif
             pausePressed |= Gamepad.current != null && Gamepad.current.startButton.wasPressedThisFrame;
 #endif
-            if (pausePressed) TogglePause();
+            if (pausePressed && !RaceHUD.KeyboardCaptureActive) TogglePause();
             if (Phase != RacePhase.Countdown) return;
             CountdownRemaining = Mathf.Max(0f, CountdownRemaining - Time.deltaTime);
             if (CountdownRemaining <= 0f)
@@ -103,13 +132,14 @@ namespace VectorRush
 
         void FixedUpdate()
         {
-            if (Phase != RacePhase.Racing || !track) return;
-            float tickStart = RaceTime;
-            RaceTime += Time.fixedDeltaTime;
+            if ((Phase != RacePhase.Racing && !(Phase == RacePhase.Finished && lifecycle != null && lifecycle.HasPendingRivals)) || !track || lifecycle == null) return;
+            float tickStart = lifecycle.SimulationTime;
+            lifecycle.Advance(Time.fixedDeltaTime);
+            RaceTime = lifecycle.PlayerPresentationTime;
             stepFinishers.Clear();
             foreach (var racer in Racers)
             {
-                if (!racer || finishOrder.Contains(racer)) continue;
+                if (!racer || !CanSimulate(racer)) continue;
                 float progress = track.ClosestProgress(racer.Body.position);
                 var frame = track.Evaluate(progress);
                 bool valid = IsValidGateSample(frame, racer.Body.position, racer.Body.linearVelocity, track.Width, racer.HoverHeight);
@@ -132,14 +162,61 @@ namespace VectorRush
                 if (racer.ProgressTracker.CompletedLaps >= TotalLaps) stepFinishers.Add(racer);
             }
             stepFinishers.Sort((a, b) => a.ProgressTracker.LastCrossingFraction.CompareTo(b.ProgressTracker.LastCrossingFraction));
-            finishOrder.AddRange(stepFinishers);
+            bool playerFinishedThisStep = false;
+            foreach (HoverVehicle racer in stepFinishers)
+            {
+                float crossingTime = tickStart + racer.ProgressTracker.LastCrossingFraction * Time.fixedDeltaTime;
+                RacerFinishRecord record = lifecycle.RecordFinish(racerIds[racer], crossingTime);
+                finishOrder.Add(racer);
+                if (racer.Body) racer.Body.isKinematic = true;
+                RacerResolved?.Invoke(record);
+                if (racer == Player)
+                {
+                    playerFinishedThisStep = true;
+                    TryStorePlayerRecord(record.FinishTime);
+                }
+            }
             UpdatePosition();
-            if (Player && finishOrder.Contains(Player))
+            if (playerFinishedThisStep)
             {
                 Phase = RacePhase.Finished;
-                RaceTime = tickStart + Player.ProgressTracker.LastCrossingFraction * Time.fixedDeltaTime;
-                FreezeVehicles(true);
+                RaceTime = lifecycle.PlayerPresentationTime;
+                ApplySimulationLocks();
             }
+            else if (Phase == RacePhase.Finished)
+            {
+                foreach (RacerFinishRecord record in lifecycle.Records)
+                {
+                    if (record.Status != RacerResultStatus.DidNotFinish) continue;
+                    HoverVehicle racer = racerIds.FirstOrDefault(value => value.Value == record.RacerId).Key;
+                    if (racer && racer.Body && !racer.Body.isKinematic)
+                    {
+                        racer.Body.isKinematic = true;
+                        RacerResolved?.Invoke(record);
+                    }
+                }
+            }
+        }
+
+        void TryStorePlayerRecord(float finishTime)
+        {
+            if (BestLap <= 0f || finishTime <= 0f) return;
+            bool automated = Player && Player.AutopilotForTesting;
+            foreach (string argument in Environment.GetCommandLineArgs())
+                if (argument.IndexOf("evidence", StringComparison.OrdinalIgnoreCase) >= 0) { automated = true; break; }
+            try
+            {
+                if (raceRecords == null) raceRecords = new RaceRecords();
+                CurrentRecordComparison = raceRecords.Submit(courseIdentity, DrivingRulesId, BestLap, finishTime, automated);
+            }
+            catch (Exception error) { Debug.LogError("Unable to persist race record: " + error.Message); }
+        }
+
+        public bool CanSimulate(HoverVehicle racer)
+        {
+            if (!racer || lifecycle == null || !racerIds.TryGetValue(racer, out string id)) return false;
+            if (Phase != RacePhase.Racing && Phase != RacePhase.Finished) return false;
+            return lifecycle.CanSimulate(id);
         }
 
         public static bool IsValidGateSample(TrackFrame frame, Vector3 position, Vector3 velocity, float width, float hoverHeight)
@@ -165,6 +242,12 @@ namespace VectorRush
         {
             foreach (var racer in Racers)
                 if (racer && racer.Body) racer.Body.isKinematic = freeze;
+        }
+
+        void ApplySimulationLocks()
+        {
+            foreach (HoverVehicle racer in Racers)
+                if (racer && racer.Body) racer.Body.isKinematic = !CanSimulate(racer);
         }
 
         void OnDestroy()

@@ -1,5 +1,7 @@
 # Vector Rush handoff — 2026-09-08
 
+**Latest transfer — 2026-09-09:** Start with [the production handoff guide](production-handoffs/START_HERE.md). It supersedes the historical next steps below and links the complete Sol/Astra packet, current coding checkpoint, and owner-first review requirement.
+
 ## Latest requested direction review
 
 The owner found SSR's visible difference negligible and requested parallel critics and an improvement approach. [Three independent reports and synthesis](visual-target-reviews/002-improvement-approach.md) recommend parking SSR and making one opening passage visibly more complete through connected existing/new construction, local lighting and material separation. The narrow lamp-aim proposal is supporting work, not the next headline result. A small gallery study can calibrate surface response. No new runtime or asset implementation is included in this review.
