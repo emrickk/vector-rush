@@ -87,3 +87,7 @@ The previous fully checked local delivery remains `Builds/VectorRush-macOS-light
 No game work should remain running after the final push. The integrator and critic own no continuing Unity, encoder, render or agent job. An unrelated Blender GUI was left untouched. Earlier automatic approval review rejected a performance launch because a stale Unity job might overlap; read-only provenance established it was our licensing-failed batch job, it was stopped, and the subsequent baseline run was approved. That issue was resolved; it is not a pending approval or reason to kill unrelated apps.
 
 Native runs require the existing approved unrestricted game launch; sandboxed launches can abort before useful output. The project wrapper is `./tools/unity.sh`; `BuildMac` already calls `Prepare`, so do not duplicate preparation by habit. Editor licensing/build logs remain ignored. Preserve existing archives, original assets, Unity `.meta` files and all failed experiments.
+
+## Nocturne V2 implementation plan
+
+The reference-aligned [implementation plan](superpowers/plans/2026-09-08-nocturne-v2-execution.md) is prepared: isolated reflection feasibility, road/light finish, connected city, architectural finish, craft materials, integrated play validation, then circuit rollout/delivery. It preserves the restored control and starts with a separately named preview app. Runtime implementation has not started.
