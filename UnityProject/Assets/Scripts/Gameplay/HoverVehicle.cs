@@ -93,16 +93,17 @@ namespace VectorRush
                 return;
             }
             if (!IsPlayer || AutopilotForTesting) return;
+            PlayerPreferences preferences = PlayerPreferences.Current;
             steering = throttle = brake = leftBrake = rightBrake = 0f;
             boostHeld = false;
 #if ENABLE_LEGACY_INPUT_MANAGER
-            steering = (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow) ? 1f : 0f) - (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow) ? 1f : 0f);
-            throttle = Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow) ? 1f : 0f;
-            brake = Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow) ? 1f : 0f;
-            leftBrake = Input.GetKey(KeyCode.Q) ? 1f : 0f;
-            rightBrake = Input.GetKey(KeyCode.E) ? 1f : 0f;
-            boostHeld = Input.GetKey(KeyCode.Space);
-            recoveryRequested |= Input.GetKeyDown(KeyCode.R);
+            steering = (preferences.IsHeld(PlayerAction.SteerRight) || Input.GetKey(KeyCode.RightArrow) ? 1f : 0f) - (preferences.IsHeld(PlayerAction.SteerLeft) || Input.GetKey(KeyCode.LeftArrow) ? 1f : 0f);
+            throttle = preferences.IsHeld(PlayerAction.Throttle) || Input.GetKey(KeyCode.UpArrow) ? 1f : 0f;
+            brake = preferences.IsHeld(PlayerAction.Brake) || Input.GetKey(KeyCode.DownArrow) ? 1f : 0f;
+            leftBrake = preferences.IsHeld(PlayerAction.AirbrakeLeft) ? 1f : 0f;
+            rightBrake = preferences.IsHeld(PlayerAction.AirbrakeRight) ? 1f : 0f;
+            boostHeld = preferences.IsHeld(PlayerAction.Boost);
+            recoveryRequested |= preferences.WasPressedThisFrame(PlayerAction.Recover);
 #endif
 #if ENABLE_INPUT_SYSTEM
 #if !ENABLE_LEGACY_INPUT_MANAGER
@@ -130,14 +131,15 @@ namespace VectorRush
                 recoveryRequested |= pad.buttonNorth.wasPressedThisFrame;
             }
 #endif
+            steering = Mathf.Clamp(steering * preferences.SteeringSensitivity, -1.5f, 1.5f);
         }
 
         void FixedUpdate()
         {
             if (!track || !Body) return;
             var director = RaceDirector.Instance;
-            bool racing = director && director.Phase == RacePhase.Racing;
-            if (!racing)
+            bool simulating = director && director.CanSimulate(this);
+            if (!simulating)
             {
                 IsBoosting = false;
                 recoveryRequested = false;

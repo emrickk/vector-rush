@@ -1,5 +1,9 @@
 # Development history
 
+## Production PR transfer — 2026-09-09
+
+Owner requested all current work and plans in a PR for another agent. This checkpoint preserves pending opening04 source/evidence and partial Sol production code, tests, Unity metadata, route context, and a [portable handoff](production-handoffs/START_HERE.md). It is a work-in-progress transfer, not production completion or quality acceptance. Intermediate red/green test XML is preserved; see the Sol checkpoint for validation limits. Native apps, caches and local editor/licensing logs remain excluded. No independent review was performed during packaging.
+
 The first design commit was recorded before implementation. GitHub was requested after the first native playtest and during the second visual iteration. Earlier uncommitted intermediate edits cannot be recovered as historical commits; the implementation checkpoint preserves their current combined result.
 
 ## Recorded milestones

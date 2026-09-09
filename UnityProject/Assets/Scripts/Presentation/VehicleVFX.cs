@@ -58,7 +58,7 @@ namespace VectorRush
             previousPhase = phase;
             if (phase == RacePhase.Paused) return;
             float speed = Mathf.Clamp01(vehicle.SpeedKph / 340f);
-            bool boost = phase == RacePhase.Racing && vehicle.IsBoosting;
+            bool boost = RaceDirector.Instance && RaceDirector.Instance.CanSimulate(vehicle) && vehicle.IsBoosting;
             if (boost)
             {
                 emissionCredit += Time.deltaTime * (vehicle.IsPlayer ? 35f : 10f);
@@ -66,7 +66,7 @@ namespace VectorRush
                 for(int i=0;i<count;i++) { EmitIon(-1); EmitIon(1); }
             }
             else emissionCredit = 0;
-            float grounded = phase == RacePhase.Racing ? (vehicle.IsGrounded ? 1f : .15f) : .75f;
+            float grounded = RaceDirector.Instance && RaceDirector.Instance.CanSimulate(vehicle) ? (vehicle.IsGrounded ? 1f : .15f) : .75f;
             float target = (boost ? 15f : 7f + speed*3f) * grounded;
             for(int i=0;i<suspension.Length;i++)
                 if(suspension[i]) suspension[i].intensity = Mathf.Lerp(suspension[i].intensity,target,1f-Mathf.Exp(-7f*Time.deltaTime));

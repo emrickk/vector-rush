@@ -1,0 +1,9 @@
+{
+  "buildReport": "Success",
+  "editorExitCode": 0,
+  "baselineAndRegionalTemplateGuardsPassed": true,
+  "app": "Builds/Vector Rush-opening-04.app",
+  "configuration": "ManagedCodeVariant.Instrumented; BuildOptions.None; SSRinactive; SSAOunchanged",
+  "artRevision": "Final second correction: originalroad restored; previousconstruction/gallery/fixturestudy retained",
+  "nativeVerificationPending": true
+}

@@ -1,3 +1,4 @@
+using System.Linq;
 using UnityEngine;
 #if ENABLE_INPUT_SYSTEM
 using UnityEngine.InputSystem;
@@ -8,6 +9,7 @@ namespace VectorRush
     /// <summary>Resolution-independent presentation. Race rules stay in RaceDirector.</summary>
     public sealed class RaceHUD : MonoBehaviour
     {
+        public static bool KeyboardCaptureActive { get; private set; }
         RaceDirector director;
         ChaseCamera chaseCamera;
         Texture2D white, sideShade, bottomShade, stroke;
@@ -28,6 +30,15 @@ namespace VectorRush
         float width, height;
         bool ready;
         bool inputEvidence;
+        PlayerPreferences preferences;
+        MenuFocusController focus;
+        RacePhase focusPhase;
+        bool settingsOpen;
+        bool bindingsOpen;
+        bool focusSettingsOpen;
+        bool focusBindingsOpen;
+        PlayerAction? bindingCapture;
+        string bindingError;
         bool showRivalCue;
         string rivalName, rivalGapLabel;
         int rivalMetres = -1, rivalRelation;
@@ -38,6 +49,8 @@ namespace VectorRush
             chaseCamera = FindAnyObjectByType<ChaseCamera>();
             circuit = VectorBootstrap.Instance != null ? VectorBootstrap.Instance.Track : FindAnyObjectByType<TrackPath>();
             inputEvidence = System.Array.IndexOf(System.Environment.GetCommandLineArgs(), "-inputEvidence") >= 0;
+            preferences = PlayerPreferences.Current;
+            ApplyPreferences();
             if (inputEvidence) Debug.Log("[InputEvidence] enabled; original and InputSystem-corrected pointer coordinates are recorded; HUD uses InputSystem window coordinates.");
         }
 
@@ -55,23 +68,39 @@ namespace VectorRush
             }
             if (director.Phase == RacePhase.Racing) lapNotice = Mathf.Max(0, lapNotice - Time.deltaTime);
             observedPhase = director.Phase;
-            bool accept = false, restart = false;
+            EnsureFocus();
+            bool accept = false, restart = false, moveUp = false, moveDown = false, moveLeft = false, moveRight = false, back = false;
 #if ENABLE_LEGACY_INPUT_MANAGER
-            accept = Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter);
-            restart = Input.GetKeyDown(KeyCode.R);
+            accept = preferences.WasPressedThisFrame(PlayerAction.Confirm) || Input.GetKeyDown(KeyCode.KeypadEnter);
+            restart = preferences.WasPressedThisFrame(PlayerAction.Restart);
+            moveUp = Input.GetKeyDown(KeyCode.UpArrow); moveDown = Input.GetKeyDown(KeyCode.DownArrow);
+            moveLeft = Input.GetKeyDown(KeyCode.LeftArrow); moveRight = Input.GetKeyDown(KeyCode.RightArrow);
+            back = Input.GetKeyDown(KeyCode.Backspace);
 #endif
 #if ENABLE_INPUT_SYSTEM
             if (inputEvidence && Mouse.current != null && (Mouse.current.leftButton.wasPressedThisFrame || Mouse.current.leftButton.wasReleasedThisFrame))
                 Debug.Log($"[InputEvidence] InputSystem frame={Time.frameCount} position={Mouse.current.position.ReadValue()} down={Mouse.current.leftButton.wasPressedThisFrame} up={Mouse.current.leftButton.wasReleasedThisFrame} held={Mouse.current.leftButton.isPressed} screen={Screen.width}x{Screen.height} phase={director.Phase}");
             accept |= Gamepad.current != null && Gamepad.current.buttonSouth.wasPressedThisFrame;
+            if (Gamepad.current != null)
+            {
+                moveUp |= Gamepad.current.dpad.up.wasPressedThisFrame;
+                moveDown |= Gamepad.current.dpad.down.wasPressedThisFrame;
+                moveLeft |= Gamepad.current.dpad.left.wasPressedThisFrame;
+                moveRight |= Gamepad.current.dpad.right.wasPressedThisFrame;
+                back |= Gamepad.current.buttonEast.wasPressedThisFrame;
+            }
 #if !ENABLE_LEGACY_INPUT_MANAGER
             accept |= Keyboard.current != null && (Keyboard.current.enterKey.wasPressedThisFrame || Keyboard.current.numpadEnterKey.wasPressedThisFrame);
             restart |= Keyboard.current != null && Keyboard.current.rKey.wasPressedThisFrame;
 #endif
 #endif
-            if (accept && director.Phase == RacePhase.Menu) director.StartRace();
-            else if ((accept || restart) && director.Phase == RacePhase.Finished) director.RestartRace();
-            else if (restart && director.Phase == RacePhase.Paused) director.RestartRace();
+            if (moveUp) focus.Move(-1);
+            if (moveDown) focus.Move(1);
+            if (settingsOpen && (moveLeft || moveRight)) AdjustFocusedSetting(moveRight ? 1 : -1);
+            if (back && bindingsOpen) { bindingsOpen = false; bindingCapture = null; KeyboardCaptureActive = false; EnsureFocus(true); }
+            else if (back && settingsOpen) { settingsOpen = false; EnsureFocus(true); }
+            if (accept) ActivateFocused();
+            else if (restart && !settingsOpen && (director.Phase == RacePhase.Finished || director.Phase == RacePhase.Paused)) director.RestartRace();
         }
 
         void UpdateRivalCue()
@@ -191,7 +220,10 @@ namespace VectorRush
             GUI.color = Color.white;
             GUI.DrawTexture(new Rect(0, height - 320, width, 320), bottomShade);
 
-            if (director.Phase == RacePhase.Menu) DrawMenu();
+            CaptureBindingEvent();
+            if (bindingsOpen) DrawBindings();
+            else if (settingsOpen) DrawSettings();
+            else if (director.Phase == RacePhase.Menu) DrawMenu();
             else
             {
                 if (director.Phase != RacePhase.Finished && director.Phase != RacePhase.Paused) DrawTelemetry();
@@ -215,8 +247,8 @@ namespace VectorRush
             Text("NOCTURNE CIRCUIT", 76, y + 320, 680, 40, 30, ivory, true);
             Text("MIDNIGHT EXHIBITION  /  6 PILOTS  /  3 LAPS", 76, y + 367, 720, 32, 19, muted);
             if (Button("START RACE", "ENTER / A", 76, y + 440, 450, true)) director.StartRace();
-            ShakeToggle(76, y + 525, 450);
-            if (Button("QUIT", "", 76, y + 589, 450, false, 48)) Application.Quit();
+            if (Button("SETTINGS", "", 76, y + 525, 450)) OpenSettings();
+            if (Button("QUIT", "", 76, y + 600, 450, false, 48)) Application.Quit();
             Controls(76, height - 128);
             Text("02 / NOCTURNE", width - 380, height - 99, 306, 32, 20, ivory, false, TextAnchor.MiddleRight);
             Text("ORIGINAL RACE PROTOTYPE", width - 420, height - 64, 346, 25, 14, muted, false, TextAnchor.MiddleRight);
@@ -387,7 +419,7 @@ namespace VectorRush
             Text("NOCTURNE CIRCUIT", x + 3, y + 82, 480, 30, 18, muted);
             if (Button("RESUME", "ESC / START", x, y + 148, 480, true)) director.TogglePause();
             if (Button("RESTART RACE", "R", x, y + 233, 480)) director.RestartRace();
-            ShakeToggle(x, y + 309, 480);
+            if (Button("SETTINGS", "", x, y + 309, 480)) OpenSettings();
             if (Button("QUIT", "", x, y + 380, 480, false, 48)) Application.Quit();
             Controls(76, height - 112);
         }
@@ -406,8 +438,52 @@ namespace VectorRush
             Text(TimeLabel(director.RaceTime), x, y + 442, 300, 55, 36, ivory, true);
             Text("BEST LAP", x + 359, y + 407, 270, 28, 17, muted);
             Text(TimeLabel(director.BestLap), x + 359, y + 442, 310, 55, 36, ivory, true);
-            if (Button("RACE AGAIN", "ENTER / A", x, y + 541, 450, true)) director.RestartRace();
-            if (Button("QUIT", "", x, y + 629, 450, false, 48)) Application.Quit();
+            RaceRecordComparison record = director.CurrentRecordComparison;
+            if (record != null)
+            {
+                string previous = record.HadPreviousRaceBest ? TimeLabel(record.PreviousBestRace) : "FIRST VALID RESULT";
+                string delta = record.HadPreviousRaceBest ? SignedTimeLabel(record.RaceDelta) : "—";
+                Text(record.ExcludedAutomatedRun ? "AUTOMATED RUN / PERSONAL BEST EXCLUDED" : "PREVIOUS BEST  " + previous + "    DELTA  " + delta,
+                    x, y + 505, 760, 27, 17, record.ExcludedAutomatedRun ? muted : (record.RaceDelta <= 0f ? acid : ivory));
+            }
+            if (Button("RACE AGAIN", "ENTER / A", x, y + 555, 450, true)) director.RestartRace();
+            if (Button("SETTINGS", "", x, y + 635, 450, false, 48)) OpenSettings();
+            if (Button("QUIT", "", x, y + 695, 450, false, 48)) Application.Quit();
+        }
+
+        void DrawSettings()
+        {
+            Box(0, 0, width, height, new Color(.006f, .014f, .022f, .94f));
+            float x = width * .5f - 300f, y = height * .12f;
+            Text("SETTINGS", x, y, 600, 80, 60, ivory, true, TextAnchor.MiddleCenter);
+            Text("DPAD / ARROWS TO NAVIGATE AND ADJUST", x, y + 78, 600, 28, 17, muted, false, TextAnchor.MiddleCenter);
+            if (Button("MASTER VOLUME", Percent(preferences.MasterVolume), x, y + 130, 600)) AdjustSetting(PlayerActionSetting.Master, 1);
+            if (Button("MUSIC VOLUME", Percent(preferences.MusicVolume), x, y + 205, 600)) AdjustSetting(PlayerActionSetting.Music, 1);
+            if (Button("EFFECTS VOLUME", Percent(preferences.EffectsVolume), x, y + 280, 600)) AdjustSetting(PlayerActionSetting.Effects, 1);
+            if (Button("STEERING SENSITIVITY", preferences.SteeringSensitivity.ToString("0.0"), x, y + 355, 600)) AdjustSetting(PlayerActionSetting.Sensitivity, 1);
+            if (Button("CAMERA SHAKE", preferences.ShakeEnabled ? "ON" : "OFF", x, y + 430, 600)) ToggleShake();
+            if (Button("KEY BINDINGS", "", x, y + 505, 600)) OpenBindings();
+            if (Button("RESET DEFAULTS", "", x, y + 580, 600)) { preferences.ResetDefaults(); SaveAndApplyPreferences(); }
+            if (Button("BACK", "B / BACKSPACE", x, y + 655, 600, true)) { settingsOpen = false; EnsureFocus(true); }
+        }
+
+        void DrawBindings()
+        {
+            Box(0, 0, width, height, new Color(.006f, .014f, .022f, .96f));
+            float x = width * .5f - 340f, y = 70f;
+            Text("KEY BINDINGS", x, y, 680, 66, 49, ivory, true, TextAnchor.MiddleCenter);
+            Text(bindingCapture.HasValue ? "PRESS A KEY FOR " + PlayerPreferences.ActionLabel(bindingCapture.Value).ToUpperInvariant() : "SELECT AN ACTION, THEN PRESS A KEY",
+                x, y + 67, 680, 28, 17, bindingCapture.HasValue ? acid : muted, false, TextAnchor.MiddleCenter);
+            PlayerAction[] actions = (PlayerAction[])System.Enum.GetValues(typeof(PlayerAction));
+            for (int i = 0; i < actions.Length; i++)
+            {
+                PlayerAction action = actions[i];
+                if (Button(PlayerPreferences.ActionLabel(action).ToUpperInvariant(), preferences.BindingFor(action).ToString(), x, y + 112 + i * 58, 680, false, 49, BindingFocusId(action)))
+                    BeginBinding(action);
+            }
+            if (!string.IsNullOrEmpty(bindingError)) Text(bindingError, x, y + 112 + actions.Length * 58, 680, 27, 17, new Color(1f, .48f, .31f), false, TextAnchor.MiddleCenter);
+            if (Button("BACK", "B / BACKSPACE", x, y + 148 + actions.Length * 58, 680, true, 54))
+            { bindingsOpen = false; bindingCapture = null; KeyboardCaptureActive = false; EnsureFocus(true); }
         }
 
         void ShakeToggle(float x, float y, float w)
@@ -418,17 +494,128 @@ namespace VectorRush
                 chaseCamera.ShakeEnabled = !enabled;
         }
 
+        void EnsureFocus(bool force = false)
+        {
+            if (!force && focus != null && focusPhase == director.Phase && focusSettingsOpen == settingsOpen && focusBindingsOpen == bindingsOpen) return;
+            focusPhase = director.Phase;
+            focusSettingsOpen = settingsOpen;
+            focusBindingsOpen = bindingsOpen;
+            if (bindingsOpen)
+            {
+                var ids = ((PlayerAction[])System.Enum.GetValues(typeof(PlayerAction))).Select(BindingFocusId).Concat(new[] { "back" });
+                focus = new MenuFocusController(ids);
+            }
+            else if (settingsOpen) focus = new MenuFocusController(new[] { "master volume", "music volume", "effects volume", "steering sensitivity", "camera shake", "key bindings", "reset defaults", "back" });
+            else if (director.Phase == RacePhase.Menu) focus = new MenuFocusController(new[] { "start race", "settings", "quit" });
+            else if (director.Phase == RacePhase.Paused) focus = new MenuFocusController(new[] { "resume", "restart race", "settings", "quit" });
+            else if (director.Phase == RacePhase.Finished) focus = new MenuFocusController(new[] { "race again", "settings", "quit" });
+            else focus = new MenuFocusController(new[] { "pause" });
+        }
+
+        void ActivateFocused()
+        {
+            string action = focus.Activate();
+            switch (action)
+            {
+                case "start race": director.StartRace(); break;
+                case "resume": director.TogglePause(); break;
+                case "restart race":
+                case "race again": director.RestartRace(); break;
+                case "settings": OpenSettings(); break;
+                case "quit": Application.Quit(); break;
+                case "master volume": AdjustSetting(PlayerActionSetting.Master, 1); break;
+                case "music volume": AdjustSetting(PlayerActionSetting.Music, 1); break;
+                case "effects volume": AdjustSetting(PlayerActionSetting.Effects, 1); break;
+                case "steering sensitivity": AdjustSetting(PlayerActionSetting.Sensitivity, 1); break;
+                case "camera shake": ToggleShake(); break;
+                case "key bindings": OpenBindings(); break;
+                case "reset defaults": preferences.ResetDefaults(); SaveAndApplyPreferences(); break;
+                case "back":
+                    if (bindingsOpen) { bindingsOpen = false; bindingCapture = null; KeyboardCaptureActive = false; }
+                    else settingsOpen = false;
+                    EnsureFocus(true);
+                    break;
+                default:
+                    if (action.StartsWith("bind:", System.StringComparison.Ordinal) && System.Enum.TryParse(action.Substring(5), out PlayerAction binding)) BeginBinding(binding);
+                    break;
+            }
+        }
+
+        void AdjustFocusedSetting(int direction)
+        {
+            switch (focus.SelectedAction)
+            {
+                case "master volume": AdjustSetting(PlayerActionSetting.Master, direction); break;
+                case "music volume": AdjustSetting(PlayerActionSetting.Music, direction); break;
+                case "effects volume": AdjustSetting(PlayerActionSetting.Effects, direction); break;
+                case "steering sensitivity": AdjustSetting(PlayerActionSetting.Sensitivity, direction); break;
+                case "camera shake": ToggleShake(); break;
+            }
+        }
+
+        void AdjustSetting(PlayerActionSetting setting, int direction)
+        {
+            float delta = direction * .1f;
+            if (setting == PlayerActionSetting.Master) preferences.SetVolumes(Wrap01(preferences.MasterVolume + delta), preferences.MusicVolume, preferences.EffectsVolume);
+            else if (setting == PlayerActionSetting.Music) preferences.SetVolumes(preferences.MasterVolume, Wrap01(preferences.MusicVolume + delta), preferences.EffectsVolume);
+            else if (setting == PlayerActionSetting.Effects) preferences.SetVolumes(preferences.MasterVolume, preferences.MusicVolume, Wrap01(preferences.EffectsVolume + delta));
+            else preferences.SetSteeringSensitivity(Mathf.Clamp(preferences.SteeringSensitivity + delta, .5f, 1.5f));
+            SaveAndApplyPreferences();
+        }
+
+        void ToggleShake()
+        {
+            preferences.SetShake(!preferences.ShakeEnabled);
+            SaveAndApplyPreferences();
+        }
+
+        void OpenSettings() { settingsOpen = true; bindingsOpen = false; EnsureFocus(true); }
+        void OpenBindings() { bindingsOpen = true; bindingCapture = null; bindingError = null; KeyboardCaptureActive = false; EnsureFocus(true); }
+        void BeginBinding(PlayerAction action) { bindingCapture = action; bindingError = "PRESS A KEY — BACKSPACE CANCELS"; KeyboardCaptureActive = true; }
+
+        void CaptureBindingEvent()
+        {
+            if (!bindingsOpen || !bindingCapture.HasValue || Event.current == null || Event.current.type != EventType.KeyDown) return;
+            KeyCode key = Event.current.keyCode;
+            if (key == KeyCode.Backspace) { bindingCapture = null; bindingError = null; KeyboardCaptureActive = false; Event.current.Use(); return; }
+            if (key == KeyCode.None) return;
+            if (preferences.TryRebind(bindingCapture.Value, key, out string error))
+            {
+                bindingError = "BOUND " + PlayerPreferences.ActionLabel(bindingCapture.Value).ToUpperInvariant() + " TO " + key;
+                bindingCapture = null;
+                KeyboardCaptureActive = false;
+                SaveAndApplyPreferences();
+            }
+            else bindingError = error;
+            Event.current.Use();
+        }
+
+        static string BindingFocusId(PlayerAction action) => "bind:" + action;
+        void SaveAndApplyPreferences() { preferences.Save(); ApplyPreferences(); }
+        void ApplyPreferences()
+        {
+            AudioListener.volume = preferences.MasterVolume;
+            if (chaseCamera == null) chaseCamera = FindAnyObjectByType<ChaseCamera>();
+            if (chaseCamera != null) chaseCamera.ShakeEnabled = preferences.ShakeEnabled;
+        }
+
+        static float Wrap01(float value) => value > 1.001f ? 0f : value < -.001f ? 1f : Mathf.Clamp01(value);
+        static string Percent(float value) => Mathf.RoundToInt(value * 100f) + "%";
+        enum PlayerActionSetting { Master, Music, Effects, Sensitivity }
+
         void Controls(float x, float y)
         {
             Text("WASD / ARROWS   PILOT     SPACE   BOOST     Q / E   AIRBRAKES", x, y, 1170, 30, 21, ivory);
             Text("R   RECOVER     ESC / P   PAUSE     CONTROLLER: STICK + RT / LT · A BOOST · LB / RB AIRBRAKES · Y RECOVER", x, y + 36, 1640, 29, 18, muted);
         }
 
-        bool Button(string label, string hint, float x, float y, float w, bool primary = false, float h = 64)
+        bool Button(string label, string hint, float x, float y, float w, bool primary = false, float h = 64, string focusId = null)
         {
             var rect = new Rect(x, y, w, h);
             bool hover = rect.Contains(Event.current.mousePosition);
-            Box(x, y, w, h, primary ? (hover ? ivory : acid) : (hover ? new Color(.18f, .28f, .28f, .94f) : ink));
+            bool selected = focus != null && string.Equals(focus.SelectedAction, focusId ?? label.ToLowerInvariant(), System.StringComparison.Ordinal);
+            Box(x, y, w, h, primary ? (hover || selected ? ivory : acid) : (hover || selected ? new Color(.18f, .28f, .28f, .94f) : ink));
+            if (selected) Box(x, y, 4, h, acid);
             if (!primary) Box(x, y + h - 1, w, 1, new Color(.44f, .63f, .63f, .35f));
             Color color = primary ? new Color(.04f, .095f, .10f) : ivory;
             Text(label, x + 21, y + 1, w - 140, h - 2, primary ? 24 : 22, color, true, TextAnchor.MiddleLeft);
@@ -465,8 +652,16 @@ namespace VectorRush
             return (millis / 60000).ToString("00") + ":" + ((millis / 1000) % 60).ToString("00") + "." + (millis % 1000).ToString("000");
         }
 
+        public static string SignedTimeLabel(float seconds)
+        {
+            if (float.IsNaN(seconds) || float.IsInfinity(seconds)) return "—";
+            string sign = seconds < 0f ? "−" : "+";
+            return sign + TimeLabel(Mathf.Max(.001f, Mathf.Abs(seconds)));
+        }
+
         void OnDestroy()
         {
+            KeyboardCaptureActive = false;
             if (stroke != null) Destroy(stroke);
             if (sideShade != null) Destroy(sideShade);
             if (bottomShade != null) Destroy(bottomShade);

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="1" result="Failed(Child)" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-09 09:12:07Z" end-time="2026-09-09 09:12:07Z" duration="0.0699738">
+  <test-suite type="TestSuite" id="1000" name="Vector Rush" fullname="Vector Rush" runstate="Runnable" testcasecount="53" result="Failed" site="Child" start-time="2026-09-09 09:12:07Z" end-time="2026-09-09 09:12:07Z" duration="0.069974" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1071" name="VectorRush.EditorTests.dll" fullname="/Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Library/ScriptAssemblies/VectorRush.EditorTests.dll" runstate="Runnable" testcasecount="53" result="Failed" site="Child" start-time="2026-09-09 09:12:07Z" end-time="2026-09-09 09:12:07Z" duration="0.057737" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="21478" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestSuite" id="1072" name="VectorRush" fullname="VectorRush" runstate="Runnable" testcasecount="53" result="Failed" site="Child" start-time="2026-09-09 09:12:07Z" end-time="2026-09-09 09:12:07Z" duration="0.056528" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="TestSuite" id="1073" name="Tests" fullname="VectorRush.Tests" runstate="Runnable" testcasecount="53" result="Failed" site="Child" start-time="2026-09-09 09:12:07Z" end-time="2026-09-09 09:12:07Z" duration="0.055532" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="TestFixture" id="1022" name="ProductionBoundaryTests" fullname="VectorRush.Tests.ProductionBoundaryTests" classname="VectorRush.Tests.ProductionBoundaryTests" runstate="Runnable" testcasecount="11" result="Failed" site="Child" start-time="2026-09-09 09:12:07Z" end-time="2026-09-09 09:12:07Z" duration="0.052256" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-case id="1033" name="ProductionBootstrapUsesTheSavedTrackAndSingleSavedCamera" fullname="VectorRush.Tests.ProductionBoundaryTests.ProductionBootstrapUsesTheSavedTrackAndSingleSavedCamera" methodname="ProductionBootstrapUsesTheSavedTrackAndSingleSavedCamera" classname="VectorRush.Tests.ProductionBoundaryTests" runstate="Runnable" seed="1395219292" result="Failed" label="Error" start-time="2026-09-09 09:12:07Z" end-time="2026-09-09 09:12:07Z" duration="0.033679" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[System.Reflection.TargetInvocationException : Exception has been thrown by the target of an invocation.
+  ----> System.InvalidOperationException : Production scene requires exactly one active gameplay camera; found 2]]></message>
+                <stack-trace><![CDATA[  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00083] in <0e19fd8bd8e94908bba2ee4f803bc6a7>:0 
+  at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <0e19fd8bd8e94908bba2ee4f803bc6a7>:0 
+  at VectorRush.Tests.ProductionBoundaryTests.Invoke (System.Object target, System.String method) [0x00000] in /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Tests/Editor/ProductionBoundaryTests.cs:212 
+  at VectorRush.Tests.ProductionBoundaryTests.ProductionBootstrapUsesTheSavedTrackAndSingleSavedCamera () [0x000e8] in /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Tests/Editor/ProductionBoundaryTests.cs:190 
+  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <0e19fd8bd8e94908bba2ee4f803bc6a7>:0 
+--InvalidOperationException
+  at VectorRush.VectorBootstrap.ResolveProductionCamera () [0x00043] in /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Scripts/VectorBootstrap.cs:109 
+  at VectorRush.VectorBootstrap.Awake () [0x00090] in /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Scripts/VectorBootstrap.cs:32 
+  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <0e19fd8bd8e94908bba2ee4f803bc6a7>:0 ]]></stack-trace>
+              </failure>
+              <output><![CDATA[Saving results to: /Users/anping/Library/Application Support/Vector Studio/Vector Rush/TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

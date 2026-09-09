@@ -1,0 +1,83 @@
+Mono path[0] = '/Users/anping/Documents/Stuff/AI Space/Vector Rush/Builds/Vector Rush-opening-04.app/Contents/Resources/Data/Managed'
+Mono config path = '/Users/anping/Documents/Stuff/AI Space/Vector Rush/Builds/Vector Rush-opening-04.app/Contents/MonoBleedingEdge/etc'
+CodeReloadManager initialized
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+ preferred device: Apple M2 Max (high power)
+Metal devices available: 1
+0: Apple M2 Max (high power)
+Using device Apple M2 Max (high power)
+Initialize engine version: 6000.6.0f1 (f7f8ed4d1e24)
+[EntityIdStore] init: VM path (explicit commit), pageSize=16384, blockCount=262144, entitiesPerBlock=1024, slots reserved=4294967296 bytes
+[Subsystems] Discovering subsystems at path /Users/anping/Documents/Stuff/AI Space/Vector Rush/Builds/Vector Rush-opening-04.app/Contents/Resources/Data/UnitySubsystems
+GfxDevice: creating device client; kGfxThreadingModeThreaded
+Initializing Metal device caps: Apple M2 Max
+Mac GPU Family: 2
+Apple GPU Family: 8
+MSL Version: 3.0
+Has Float MSAA: 1
+Has Float Filtering: 1
+ReadWrite Texture Tier: 2
+Begin MonoManager ReloadAssembly
+- Finished resetting the current domain, in  0.013 seconds
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Metal RecreateSurface[0x10ece6780]: surface size 1920x1080
+UnloadTime: 1.129083 ms
+VR_OPENING_FINISH_CONFIGURATION mode=off constructionEnabled=False surfaceEnabled=False cameraPhysicsUnchanged=true
+VECTOR_RUSH_LANDMARK resource=Nocturne_SplitSignal_Mast center=(304.13, 0.00, 24.65) halfFootprint=(27.00, 33.00)
+VECTOR_RUSH_LANDMARK resource=Nocturne_ThermalExchange_Works center=(-155.88, 0.00, 148.33) halfFootprint=(23.00, 43.00)
+VR_SSR_REQUESTED False compiled=true mode=Disabled
+VR_SSR_DIAGNOSTICS enabled; CPU marker samples do not prove GPU output correctness. Depth/normal/smoothness image inspection remains external.
+VR_SSR_NATIVE_RESOURCES container=False
+VR_SSR_NATIVE_FEATURE renderer=VectorRenderer active=False afterOpaque=False
+VR_SSR_NATIVE_FEATURE_RESOURCE m_Shader=UNINITIALIZED
+VR_SSR_NATIVE_FEATURE_RESOURCE m_BlitShader=UNINITIALIZED
+VR_SSR_NATIVE_FEATURE_RESOURCE m_Material=UNINITIALIZED
+VR_SSR_NATIVE_FEATURE_RESOURCE m_BlitMaterial=UNINITIALIZED
+VR_SSR_NATIVE_FEATURE_COUNT 1 introspectionAvailable=True
+VR_SSR_NATIVE_VOLUME {"active":true,"mode":{"m_OverrideState":true,"m_Value":0},"reflectionStrength":{"m_OverrideState":true,"m_Value":1.0},"clampReflectedColor":{"m_OverrideState":false,"m_Value":false},"maxColorValue":{"m_OverrideState":false,"m_Value":1.0},"resolution":{"m_OverrideState":true,"m_Value":2},"upscalingMethod":{"m_OverrideState":true,"m_Value":0},"marchingMethod":{"m_OverrideState":true,"m_Value":0},"hitRefinementSteps":{"m_OverrideState":true,"m_Value":5},"finalThicknessMultiplier":{"m_OverrideState":true,"m_Value":0.05000000074505806},"roughnessFilter":{"m_OverrideState":true,"m_Value":2},"roughnessScale":{"m_OverrideState":true,"m_Value":0.0},"minimumSmoothness":{"m_OverrideState":true,"m_Value":0.05000000074505806},"smoothnessFadeStart":{"m_OverrideState":true,"m_Value":0.10000000149011612},"normalFade":{"m_OverrideState":false,"m_Value":0.0},"screenEdgeFadeDistance":{"m_OverrideState":false,"m_Value":0.20000000298023224},"reflectSky":{"m_OverrideState":true,"m_Value":false},"maxRayLength":{"m_OverrideState":true,"m_Value":30.0},"rayLengthFade":{"m_OverrideState":false,"m_Value":1.0},"maxRaySteps":{"m_OverrideState":true,"m_Value":32},"objectThickness":{"m_OverrideState":true,"m_Value":0.32499998807907104},"temporalFiltering":{"m_OverrideState":true,"m_Value":false},"baseBlendFactor":{"m_OverrideState":false,"m_Value":0.949999988079071}}
+VR_SSR_NATIVE_ROAD_TEMPLATE optOut=False templateOnly=true
+VR_SSR_NATIVE_ROAD_INSTANCE found=True
+VR_SSR_NATIVE_ROAD_MATERIAL name=Satin graphite running deck shader=Universal Render Pipeline/Lit keywords=_EMISSION,_ENVIRONMENTREFLECTIONS_OFF,_METALLICSPECGLOSSMAP,_NORMALMAP
+VR_SSR_NATIVE_ROAD_FLOAT _Smoothness=0.9
+VR_SSR_NATIVE_ROAD_FLOAT _BumpScale=0.25
+VR_SSR_NATIVE_ROAD_FLOAT _EnvironmentReflections=0
+VR_SSR_NATIVE_ROAD_MAP _BaseMap=Deck aggregate pixelsInspected=false
+VR_SSR_NATIVE_ROAD_MAP _MetallicGlossMap=Satin deck service wear pixelsInspected=false
+VR_SSR_NATIVE_ROAD_MAP _BumpMap=Deck fine relief pixelsInspected=false
+VR_SSR_CPU_MARKER name=SSR valid=False framesWithPositiveSamples=0 maxNanoseconds=0 gpuOutputVerified=false
+VR_SSR_CPU_MARKER name=SSR - Upscaling valid=False framesWithPositiveSamples=0 maxNanoseconds=0 gpuOutputVerified=false
+VR_SSR_CPU_MARKER name=SSR - Depth Pyramid Generation valid=False framesWithPositiveSamples=0 maxNanoseconds=0 gpuOutputVerified=false
+VR_SSR_CPU_MARKER name=SSR - Final Blit valid=False framesWithPositiveSamples=0 maxNanoseconds=0 gpuOutputVerified=false
+VR_SSR_CPU_MARKER name=Inl_SSR valid=False framesWithPositiveSamples=0 maxNanoseconds=0 gpuOutputVerified=false
+VR_SSR_CPU_MARKER name=Inl_SSR - Upscaling valid=False framesWithPositiveSamples=0 maxNanoseconds=0 gpuOutputVerified=false
+Thread 0x16d5eb000 may have been prematurely finalized
+VR_SSR_CPU_MARKER name=SSR valid=False framesWithPositiveSamples=0 maxNanoseconds=0 gpuOutputVerified=false
+VR_SSR_CPU_MARKER name=SSR - Upscaling valid=False framesWithPositiveSamples=0 maxNanoseconds=0 gpuOutputVerified=false
+VR_SSR_CPU_MARKER name=SSR - Depth Pyramid Generation valid=False framesWithPositiveSamples=0 maxNanoseconds=0 gpuOutputVerified=false
+VR_SSR_CPU_MARKER name=SSR - Final Blit valid=False framesWithPositiveSamples=0 maxNanoseconds=0 gpuOutputVerified=false
+VR_SSR_CPU_MARKER name=Inl_SSR valid=False framesWithPositiveSamples=0 maxNanoseconds=0 gpuOutputVerified=false
+VR_SSR_CPU_MARKER name=Inl_SSR - Upscaling valid=False framesWithPositiveSamples=0 maxNanoseconds=0 gpuOutputVerified=false
+[Physics::Module] Cleanup current backend.
+[Physics::Module] Id: 0xf2b8ea05
+Input System module state changed to: ShutdownInProgress.
+Input Polling Thread exited.
+Input System module state changed to: Shutdown.
+Thread 0x16c04b000 may have been prematurely finalized
+Thread 0x16c0d7000 may have been prematurely finalized
+Thread 0x16c307000 may have been prematurely finalized
+Thread 0x16bfbf000 may have been prematurely finalized
+Thread 0x16c4ab000 may have been prematurely finalized
+Thread 0x16c163000 may have been prematurely finalized
+Thread 0x16c393000 may have been prematurely finalized
+Thread 0x16c537000 may have been prematurely finalized
+Thread 0x16c41f000 may have been prematurely finalized
+Thread 0x16c1ef000 may have been prematurely finalized
+Thread 0x16c27b000 may have been prematurely finalized
+CodeReloadManager destroyed

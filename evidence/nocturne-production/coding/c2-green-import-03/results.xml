@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="8" result="Failed(Child)" total="8" passed="7" failed="1" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-09 09:48:33Z" end-time="2026-09-09 09:48:37Z" duration="4.1222054">
+  <test-suite type="TestSuite" id="1000" name="Vector Rush" fullname="Vector Rush" runstate="Runnable" testcasecount="63" result="Failed" site="Child" start-time="2026-09-09 09:48:33Z" end-time="2026-09-09 09:48:37Z" duration="4.122205" total="8" passed="7" failed="1" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1082" name="VectorRush.EditorTests.dll" fullname="/Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Library/ScriptAssemblies/VectorRush.EditorTests.dll" runstate="Runnable" testcasecount="63" result="Failed" site="Child" start-time="2026-09-09 09:48:33Z" end-time="2026-09-09 09:48:37Z" duration="4.117281" total="8" passed="7" failed="1" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="33545" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestSuite" id="1083" name="VectorRush" fullname="VectorRush" runstate="Runnable" testcasecount="63" result="Failed" site="Child" start-time="2026-09-09 09:48:33Z" end-time="2026-09-09 09:48:37Z" duration="4.116790" total="8" passed="7" failed="1" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="TestSuite" id="1084" name="Tests" fullname="VectorRush.Tests" runstate="Runnable" testcasecount="63" result="Failed" site="Child" start-time="2026-09-09 09:48:33Z" end-time="2026-09-09 09:48:37Z" duration="4.116305" total="8" passed="7" failed="1" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="TestFixture" id="1022" name="ProductionArtImporterTests" fullname="VectorRush.Tests.ProductionArtImporterTests" classname="VectorRush.Tests.ProductionArtImporterTests" runstate="Runnable" testcasecount="8" result="Failed" site="Child" start-time="2026-09-09 09:48:33Z" end-time="2026-09-09 09:48:37Z" duration="4.114734" total="8" passed="7" failed="1" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-case id="1024" name="CompleteImmutablePackageValidatesBeforeImport" fullname="VectorRush.Tests.ProductionArtImporterTests.CompleteImmutablePackageValidatesBeforeImport" methodname="CompleteImmutablePackageValidatesBeforeImport" classname="VectorRush.Tests.ProductionArtImporterTests" runstate="Runnable" seed="1935975781" result="Passed" start-time="2026-09-09 09:48:33Z" end-time="2026-09-09 09:48:33Z" duration="0.069969" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1026" name="DuplicateMaterialIdIsRejected" fullname="VectorRush.Tests.ProductionArtImporterTests.DuplicateMaterialIdIsRejected" methodname="DuplicateMaterialIdIsRejected" classname="VectorRush.Tests.ProductionArtImporterTests" runstate="Runnable" seed="1109017775" result="Passed" start-time="2026-09-09 09:48:33Z" end-time="2026-09-09 09:48:33Z" duration="0.053183" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1030" name="ImportCopiesImmutablePayloadAndCreatesPersistentConfiguredAssets" fullname="VectorRush.Tests.ProductionArtImporterTests.ImportCopiesImmutablePayloadAndCreatesPersistentConfiguredAssets" methodname="ImportCopiesImmutablePayloadAndCreatesPersistentConfiguredAssets" classname="VectorRush.Tests.ProductionArtImporterTests" runstate="Runnable" seed="769149270" result="Failed" start-time="2026-09-09 09:48:33Z" end-time="2026-09-09 09:48:37Z" duration="3.586085" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[Unhandled log message: '[Error] Blender could not be launched.
+Make sure that Blender is installed correctly and in your PATH.'. Use UnityEngine.TestTools.LogAssert.Expect]]></message>
+                <stack-trace><![CDATA[UnityEngine.StackTraceUtility:ExtractStackTrace ()
+VectorRush.Editor.ProductionArtImporter:ImportPackage (string,string,string,string) (at Assets/Editor/Production/ProductionArtImporter.cs:109)
+VectorRush.Tests.ProductionArtImporterTests:ImportCopiesImmutablePayloadAndCreatesPersistentConfiguredAssets () (at Assets/Tests/Editor/ProductionArtImporterTests.cs:150)
+System.Reflection.MethodBase:Invoke (object,object[])
+NUnit.Framework.Internal.Reflect:InvokeMethod (System.Reflection.MethodInfo,object,object[])
+NUnit.Framework.Internal.MethodWrapper:Invoke (object,object[])
+NUnit.Framework.Internal.Commands.TestMethodCommand:RunNonAsyncTestMethod (NUnit.Framework.Internal.ITestExecutionContext)
+NUnit.Framework.Internal.Commands.TestMethodCommand:RunTestMethod (NUnit.Framework.Internal.ITestExecutionContext)
+NUnit.Framework.Internal.Commands.TestMethodCommand:Execute (NUnit.Framework.Internal.ITestExecutionContext)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+]]></stack-trace>
+              </failure>
+              <output><![CDATA[Blender could not be launched.
+Make sure that Blender is installed correctly and in your PATH.
+File 'Diagnostic_LOD1' has inconsistent LOD naming (_LOD1 found but no _LOD0).
+File 'Diagnostic_LOD1' has inconsistent LOD naming (_LOD1 found but no _LOD0).
+]]></output>
+            </test-case>
+            <test-case id="1023" name="ImporterAndJsonContractsAreAvailableToTheEditor" fullname="VectorRush.Tests.ProductionArtImporterTests.ImporterAndJsonContractsAreAvailableToTheEditor" methodname="ImporterAndJsonContractsAreAvailableToTheEditor" classname="VectorRush.Tests.ProductionArtImporterTests" runstate="Runnable" seed="1349663757" result="Passed" start-time="2026-09-09 09:48:37Z" end-time="2026-09-09 09:48:37Z" duration="0.042938" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1029" name="InvalidPackageDoesNotMutateExistingImportDestinations" fullname="VectorRush.Tests.ProductionArtImporterTests.InvalidPackageDoesNotMutateExistingImportDestinations" methodname="InvalidPackageDoesNotMutateExistingImportDestinations" classname="VectorRush.Tests.ProductionArtImporterTests" runstate="Runnable" seed="582977143" result="Passed" start-time="2026-09-09 09:48:37Z" end-time="2026-09-09 09:48:37Z" duration="0.201532" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1027" name="NonUnitPlacementScaleIsRejected" fullname="VectorRush.Tests.ProductionArtImporterTests.NonUnitPlacementScaleIsRejected" methodname="NonUnitPlacementScaleIsRejected" classname="VectorRush.Tests.ProductionArtImporterTests" runstate="Runnable" seed="1679537737" result="Passed" start-time="2026-09-09 09:48:37Z" end-time="2026-09-09 09:48:37Z" duration="0.049062" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1028" name="PayloadMutationAfterReadyIsRejectedByChecksum" fullname="VectorRush.Tests.ProductionArtImporterTests.PayloadMutationAfterReadyIsRejectedByChecksum" methodname="PayloadMutationAfterReadyIsRejectedByChecksum" classname="VectorRush.Tests.ProductionArtImporterTests" runstate="Runnable" seed="641933259" result="Passed" start-time="2026-09-09 09:48:37Z" end-time="2026-09-09 09:48:37Z" duration="0.045890" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1025" name="TraversalPathIsRejectedEvenWhenTheEscapedFileExists" fullname="VectorRush.Tests.ProductionArtImporterTests.TraversalPathIsRejectedEvenWhenTheEscapedFileExists" methodname="TraversalPathIsRejectedEvenWhenTheEscapedFileExists" classname="VectorRush.Tests.ProductionArtImporterTests" runstate="Runnable" seed="686873731" result="Passed" start-time="2026-09-09 09:48:37Z" end-time="2026-09-09 09:48:37Z" duration="0.053619" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[Saving results to: /Users/anping/Library/Application Support/Vector Studio/Vector Rush/TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

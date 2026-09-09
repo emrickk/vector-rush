@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="1" result="Failed(Child)" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-09 09:51:13Z" end-time="2026-09-09 09:51:13Z" duration="0.0901289">
+  <test-suite type="TestSuite" id="1000" name="Vector Rush" fullname="Vector Rush" runstate="Runnable" testcasecount="64" result="Failed" site="Child" start-time="2026-09-09 09:51:13Z" end-time="2026-09-09 09:51:13Z" duration="0.090129" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1083" name="VectorRush.EditorTests.dll" fullname="/Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Library/ScriptAssemblies/VectorRush.EditorTests.dll" runstate="Runnable" testcasecount="64" result="Failed" site="Child" start-time="2026-09-09 09:51:13Z" end-time="2026-09-09 09:51:13Z" duration="0.085110" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="34105" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestSuite" id="1084" name="VectorRush" fullname="VectorRush" runstate="Runnable" testcasecount="64" result="Failed" site="Child" start-time="2026-09-09 09:51:13Z" end-time="2026-09-09 09:51:13Z" duration="0.084684" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="TestSuite" id="1085" name="Tests" fullname="VectorRush.Tests" runstate="Runnable" testcasecount="64" result="Failed" site="Child" start-time="2026-09-09 09:51:13Z" end-time="2026-09-09 09:51:13Z" duration="0.084357" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="TestFixture" id="1022" name="ProductionArtImporterTests" fullname="VectorRush.Tests.ProductionArtImporterTests" classname="VectorRush.Tests.ProductionArtImporterTests" runstate="Runnable" testcasecount="9" result="Failed" site="Child" start-time="2026-09-09 09:51:13Z" end-time="2026-09-09 09:51:13Z" duration="0.082793" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-case id="1025" name="ContractNestedTrackProfilePointsAreAcceptedAndFlattened" fullname="VectorRush.Tests.ProductionArtImporterTests.ContractNestedTrackProfilePointsAreAcceptedAndFlattened" methodname="ContractNestedTrackProfilePointsAreAcceptedAndFlattened" classname="VectorRush.Tests.ProductionArtImporterTests" runstate="Runnable" seed="2040361091" result="Failed" label="Error" start-time="2026-09-09 09:51:13Z" end-time="2026-09-09 09:51:13Z" duration="0.075252" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[System.IO.InvalidDataException : Track strip pointsXY must contain at least two XY points: DiagnosticFascia]]></message>
+                <stack-trace><![CDATA[  at VectorRush.Editor.ProductionArtImporter.ValidateTrackProfile (VectorRush.Editor.ProductionTrackProfile profile, VectorRush.Editor.ProductionArtManifest manifest) [0x001e7] in /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Editor/Production/ProductionArtImporter.cs:608 
+  at VectorRush.Editor.ProductionArtImporter.ValidatePackage (System.String absolutePackageDirectory, System.String expectedCourseHash) [0x002ed] in /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Editor/Production/ProductionArtImporter.cs:80 
+  at VectorRush.Tests.ProductionArtImporterTests.ContractNestedTrackProfilePointsAreAcceptedAndFlattened () [0x00023] in /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Tests/Editor/ProductionArtImporterTests.cs:63 
+  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <0e19fd8bd8e94908bba2ee4f803bc6a7>:0 ]]></stack-trace>
+              </failure>
+              <output><![CDATA[Saving results to: /Users/anping/Library/Application Support/Vector Studio/Vector Rush/TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

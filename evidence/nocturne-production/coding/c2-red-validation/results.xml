@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="6" result="Failed(Child)" total="6" passed="1" failed="5" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-09 09:33:49Z" end-time="2026-09-09 09:33:49Z" duration="0.0690791">
+  <test-suite type="TestSuite" id="1000" name="Vector Rush" fullname="Vector Rush" runstate="Runnable" testcasecount="61" result="Failed" site="Child" start-time="2026-09-09 09:33:49Z" end-time="2026-09-09 09:33:49Z" duration="0.069079" total="6" passed="1" failed="5" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1080" name="VectorRush.EditorTests.dll" fullname="/Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Library/ScriptAssemblies/VectorRush.EditorTests.dll" runstate="Runnable" testcasecount="61" result="Failed" site="Child" start-time="2026-09-09 09:33:49Z" end-time="2026-09-09 09:33:49Z" duration="0.063420" total="6" passed="1" failed="5" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="30320" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestSuite" id="1081" name="VectorRush" fullname="VectorRush" runstate="Runnable" testcasecount="61" result="Failed" site="Child" start-time="2026-09-09 09:33:49Z" end-time="2026-09-09 09:33:49Z" duration="0.062744" total="6" passed="1" failed="5" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="TestSuite" id="1082" name="Tests" fullname="VectorRush.Tests" runstate="Runnable" testcasecount="61" result="Failed" site="Child" start-time="2026-09-09 09:33:49Z" end-time="2026-09-09 09:33:49Z" duration="0.062088" total="6" passed="1" failed="5" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="TestFixture" id="1022" name="ProductionArtImporterTests" fullname="VectorRush.Tests.ProductionArtImporterTests" classname="VectorRush.Tests.ProductionArtImporterTests" runstate="Runnable" testcasecount="6" result="Failed" site="Child" start-time="2026-09-09 09:33:49Z" end-time="2026-09-09 09:33:49Z" duration="0.060229" total="6" passed="1" failed="5" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-case id="1024" name="CompleteImmutablePackageValidatesBeforeImport" fullname="VectorRush.Tests.ProductionArtImporterTests.CompleteImmutablePackageValidatesBeforeImport" methodname="CompleteImmutablePackageValidatesBeforeImport" classname="VectorRush.Tests.ProductionArtImporterTests" runstate="Runnable" seed="1959068936" result="Failed" label="Error" start-time="2026-09-09 09:33:49Z" end-time="2026-09-09 09:33:49Z" duration="0.016860" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[System.NotImplementedException : The method or operation is not implemented.]]></message>
+                <stack-trace><![CDATA[  at VectorRush.Tests.ProductionArtImporterTests.CompleteImmutablePackageValidatesBeforeImport () [0x00008] in /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Tests/Editor/ProductionArtImporterTests.cs:34 
+  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <0e19fd8bd8e94908bba2ee4f803bc6a7>:0 ]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="1026" name="DuplicateMaterialIdIsRejected" fullname="VectorRush.Tests.ProductionArtImporterTests.DuplicateMaterialIdIsRejected" methodname="DuplicateMaterialIdIsRejected" classname="VectorRush.Tests.ProductionArtImporterTests" runstate="Runnable" seed="558110802" result="Failed" start-time="2026-09-09 09:33:49Z" end-time="2026-09-09 09:33:49Z" duration="0.011053" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[  Expected: <System.IO.InvalidDataException>
+  But was:  <System.NotImplementedException: The method or operation is not implemented.
+  at VectorRush.Tests.ProductionArtImporterTests+<>c__DisplayClass3_0.<DuplicateMaterialIdIsRejected>b__1 () [0x00000] in /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Tests/Editor/ProductionArtImporterTests.cs:64 
+  at NUnit.Framework.Assert.Throws (NUnit.Framework.Constraints.IResolveConstraint expression, NUnit.Framework.TestDelegate code, System.String message, System.Object[] args) [0x00043] in <8b63e8ac0a4746599ed207982825ae6c>:0 >
+]]></message>
+                <stack-trace><![CDATA[at VectorRush.Tests.ProductionArtImporterTests.DuplicateMaterialIdIsRejected () [0x00031] in /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Tests/Editor/ProductionArtImporterTests.cs:64
+]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="1023" name="ImporterAndJsonContractsAreAvailableToTheEditor" fullname="VectorRush.Tests.ProductionArtImporterTests.ImporterAndJsonContractsAreAvailableToTheEditor" methodname="ImporterAndJsonContractsAreAvailableToTheEditor" classname="VectorRush.Tests.ProductionArtImporterTests" runstate="Runnable" seed="341106068" result="Passed" start-time="2026-09-09 09:33:49Z" end-time="2026-09-09 09:33:49Z" duration="0.004314" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1027" name="NonUnitPlacementScaleIsRejected" fullname="VectorRush.Tests.ProductionArtImporterTests.NonUnitPlacementScaleIsRejected" methodname="NonUnitPlacementScaleIsRejected" classname="VectorRush.Tests.ProductionArtImporterTests" runstate="Runnable" seed="755851666" result="Failed" start-time="2026-09-09 09:33:49Z" end-time="2026-09-09 09:33:49Z" duration="0.005887" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[  Expected: <System.IO.InvalidDataException>
+  But was:  <System.NotImplementedException: The method or operation is not implemented.
+  at VectorRush.Tests.ProductionArtImporterTests+<>c__DisplayClass4_0.<NonUnitPlacementScaleIsRejected>b__1 () [0x00000] in /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Tests/Editor/ProductionArtImporterTests.cs:76 
+  at NUnit.Framework.Assert.Throws (NUnit.Framework.Constraints.IResolveConstraint expression, NUnit.Framework.TestDelegate code, System.String message, System.Object[] args) [0x00043] in <8b63e8ac0a4746599ed207982825ae6c>:0 >
+]]></message>
+                <stack-trace><![CDATA[at VectorRush.Tests.ProductionArtImporterTests.NonUnitPlacementScaleIsRejected () [0x00031] in /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Tests/Editor/ProductionArtImporterTests.cs:76
+]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="1028" name="PayloadMutationAfterReadyIsRejectedByChecksum" fullname="VectorRush.Tests.ProductionArtImporterTests.PayloadMutationAfterReadyIsRejectedByChecksum" methodname="PayloadMutationAfterReadyIsRejectedByChecksum" classname="VectorRush.Tests.ProductionArtImporterTests" runstate="Runnable" seed="1943104520" result="Failed" start-time="2026-09-09 09:33:49Z" end-time="2026-09-09 09:33:49Z" duration="0.006242" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[  Expected: <System.IO.InvalidDataException>
+  But was:  <System.NotImplementedException: The method or operation is not implemented.
+  at VectorRush.Tests.ProductionArtImporterTests+<>c__DisplayClass5_0.<PayloadMutationAfterReadyIsRejectedByChecksum>b__0 () [0x00000] in /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Tests/Editor/ProductionArtImporterTests.cs:89 
+  at NUnit.Framework.Assert.Throws (NUnit.Framework.Constraints.IResolveConstraint expression, NUnit.Framework.TestDelegate code, System.String message, System.Object[] args) [0x00043] in <8b63e8ac0a4746599ed207982825ae6c>:0 >
+]]></message>
+                <stack-trace><![CDATA[at VectorRush.Tests.ProductionArtImporterTests.PayloadMutationAfterReadyIsRejectedByChecksum () [0x00032] in /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Tests/Editor/ProductionArtImporterTests.cs:89
+]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="1025" name="TraversalPathIsRejectedEvenWhenTheEscapedFileExists" fullname="VectorRush.Tests.ProductionArtImporterTests.TraversalPathIsRejectedEvenWhenTheEscapedFileExists" methodname="TraversalPathIsRejectedEvenWhenTheEscapedFileExists" classname="VectorRush.Tests.ProductionArtImporterTests" runstate="Runnable" seed="1555830209" result="Failed" start-time="2026-09-09 09:33:49Z" end-time="2026-09-09 09:33:49Z" duration="0.005748" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[  Expected: <System.IO.InvalidDataException>
+  But was:  <System.NotImplementedException: The method or operation is not implemented.
+  at VectorRush.Tests.ProductionArtImporterTests+<>c__DisplayClass2_0.<TraversalPathIsRejectedEvenWhenTheEscapedFileExists>b__1 () [0x00000] in /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Tests/Editor/ProductionArtImporterTests.cs:48 
+  at NUnit.Framework.Assert.Throws (NUnit.Framework.Constraints.IResolveConstraint expression, NUnit.Framework.TestDelegate code, System.String message, System.Object[] args) [0x00043] in <8b63e8ac0a4746599ed207982825ae6c>:0 >
+]]></message>
+                <stack-trace><![CDATA[at VectorRush.Tests.ProductionArtImporterTests.TraversalPathIsRejectedEvenWhenTheEscapedFileExists () [0x00050] in /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Tests/Editor/ProductionArtImporterTests.cs:48
+]]></stack-trace>
+              </failure>
+              <output><![CDATA[Saving results to: /Users/anping/Library/Application Support/Vector Studio/Vector Rush/TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

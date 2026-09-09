@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="8" result="Failed(Child)" total="8" passed="7" failed="1" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-09 09:47:59Z" end-time="2026-09-09 09:48:00Z" duration="0.979087">
+  <test-suite type="TestSuite" id="1000" name="Vector Rush" fullname="Vector Rush" runstate="Runnable" testcasecount="63" result="Failed" site="Child" start-time="2026-09-09 09:47:59Z" end-time="2026-09-09 09:48:00Z" duration="0.979087" total="8" passed="7" failed="1" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1082" name="VectorRush.EditorTests.dll" fullname="/Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Library/ScriptAssemblies/VectorRush.EditorTests.dll" runstate="Runnable" testcasecount="63" result="Failed" site="Child" start-time="2026-09-09 09:47:59Z" end-time="2026-09-09 09:48:00Z" duration="0.974303" total="8" passed="7" failed="1" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="33419" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestSuite" id="1083" name="VectorRush" fullname="VectorRush" runstate="Runnable" testcasecount="63" result="Failed" site="Child" start-time="2026-09-09 09:47:59Z" end-time="2026-09-09 09:48:00Z" duration="0.973749" total="8" passed="7" failed="1" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="TestSuite" id="1084" name="Tests" fullname="VectorRush.Tests" runstate="Runnable" testcasecount="63" result="Failed" site="Child" start-time="2026-09-09 09:47:59Z" end-time="2026-09-09 09:48:00Z" duration="0.973331" total="8" passed="7" failed="1" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="TestFixture" id="1022" name="ProductionArtImporterTests" fullname="VectorRush.Tests.ProductionArtImporterTests" classname="VectorRush.Tests.ProductionArtImporterTests" runstate="Runnable" testcasecount="8" result="Failed" site="Child" start-time="2026-09-09 09:47:59Z" end-time="2026-09-09 09:48:00Z" duration="0.971863" total="8" passed="7" failed="1" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-case id="1024" name="CompleteImmutablePackageValidatesBeforeImport" fullname="VectorRush.Tests.ProductionArtImporterTests.CompleteImmutablePackageValidatesBeforeImport" methodname="CompleteImmutablePackageValidatesBeforeImport" classname="VectorRush.Tests.ProductionArtImporterTests" runstate="Runnable" seed="831305828" result="Passed" start-time="2026-09-09 09:47:59Z" end-time="2026-09-09 09:47:59Z" duration="0.070000" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1026" name="DuplicateMaterialIdIsRejected" fullname="VectorRush.Tests.ProductionArtImporterTests.DuplicateMaterialIdIsRejected" methodname="DuplicateMaterialIdIsRejected" classname="VectorRush.Tests.ProductionArtImporterTests" runstate="Runnable" seed="1329502777" result="Passed" start-time="2026-09-09 09:47:59Z" end-time="2026-09-09 09:47:59Z" duration="0.049022" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1030" name="ImportCopiesImmutablePayloadAndCreatesPersistentConfiguredAssets" fullname="VectorRush.Tests.ProductionArtImporterTests.ImportCopiesImmutablePayloadAndCreatesPersistentConfiguredAssets" methodname="ImportCopiesImmutablePayloadAndCreatesPersistentConfiguredAssets" classname="VectorRush.Tests.ProductionArtImporterTests" runstate="Runnable" seed="1997939693" result="Failed" label="Error" start-time="2026-09-09 09:47:59Z" end-time="2026-09-09 09:47:59Z" duration="0.439677" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[System.IO.InvalidDataException : Payload is not an importable FBX model: meshes/Diagnostic_LOD0.fbx]]></message>
+                <stack-trace><![CDATA[  at VectorRush.Editor.ProductionArtImporter.ConfigurePayloadImporters (VectorRush.Editor.ValidatedProductionPackage package, System.String artStage) [0x000c6] in /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Editor/Production/ProductionArtImporter.cs:163 
+  at VectorRush.Editor.ProductionArtImporter.ImportPackage (System.String absolutePackageDirectory, System.String expectedCourseHash, System.String artDestinationRoot, System.String worldDestinationRoot) [0x0015e] in /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Editor/Production/ProductionArtImporter.cs:134 
+  at VectorRush.Tests.ProductionArtImporterTests.ImportCopiesImmutablePayloadAndCreatesPersistentConfiguredAssets () [0x0004a] in /Users/anping/Documents/Stuff/AI Space/Vector Rush/UnityProject/Assets/Tests/Editor/ProductionArtImporterTests.cs:150 
+  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <0e19fd8bd8e94908bba2ee4f803bc6a7>:0 ]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="1023" name="ImporterAndJsonContractsAreAvailableToTheEditor" fullname="VectorRush.Tests.ProductionArtImporterTests.ImporterAndJsonContractsAreAvailableToTheEditor" methodname="ImporterAndJsonContractsAreAvailableToTheEditor" classname="VectorRush.Tests.ProductionArtImporterTests" runstate="Runnable" seed="1610483385" result="Passed" start-time="2026-09-09 09:47:59Z" end-time="2026-09-09 09:47:59Z" duration="0.043538" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1029" name="InvalidPackageDoesNotMutateExistingImportDestinations" fullname="VectorRush.Tests.ProductionArtImporterTests.InvalidPackageDoesNotMutateExistingImportDestinations" methodname="InvalidPackageDoesNotMutateExistingImportDestinations" classname="VectorRush.Tests.ProductionArtImporterTests" runstate="Runnable" seed="1231165330" result="Passed" start-time="2026-09-09 09:47:59Z" end-time="2026-09-09 09:47:59Z" duration="0.203693" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1027" name="NonUnitPlacementScaleIsRejected" fullname="VectorRush.Tests.ProductionArtImporterTests.NonUnitPlacementScaleIsRejected" methodname="NonUnitPlacementScaleIsRejected" classname="VectorRush.Tests.ProductionArtImporterTests" runstate="Runnable" seed="1184410941" result="Passed" start-time="2026-09-09 09:47:59Z" end-time="2026-09-09 09:48:00Z" duration="0.049216" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1028" name="PayloadMutationAfterReadyIsRejectedByChecksum" fullname="VectorRush.Tests.ProductionArtImporterTests.PayloadMutationAfterReadyIsRejectedByChecksum" methodname="PayloadMutationAfterReadyIsRejectedByChecksum" classname="VectorRush.Tests.ProductionArtImporterTests" runstate="Runnable" seed="2006703718" result="Passed" start-time="2026-09-09 09:48:00Z" end-time="2026-09-09 09:48:00Z" duration="0.057340" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1025" name="TraversalPathIsRejectedEvenWhenTheEscapedFileExists" fullname="VectorRush.Tests.ProductionArtImporterTests.TraversalPathIsRejectedEvenWhenTheEscapedFileExists" methodname="TraversalPathIsRejectedEvenWhenTheEscapedFileExists" classname="VectorRush.Tests.ProductionArtImporterTests" runstate="Runnable" seed="1483167012" result="Passed" start-time="2026-09-09 09:48:00Z" end-time="2026-09-09 09:48:00Z" duration="0.050600" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[Saving results to: /Users/anping/Library/Application Support/Vector Studio/Vector Rush/TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>
