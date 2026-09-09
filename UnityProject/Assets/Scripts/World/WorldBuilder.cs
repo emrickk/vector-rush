@@ -12,7 +12,6 @@ namespace VectorRush
         readonly List<Mesh> ownedMeshes=new List<Mesh>();
         readonly List<Material> ownedMaterials=new List<Material>();
         Texture2D roadGrain,roadNormals,roadSmoothness;
-        OpeningRoadFinish openingSurface;
         ReflectionProbe coastalProbe;
         public Material Ivory => ivory;
         public Material Signal => signal;
@@ -53,10 +52,6 @@ namespace VectorRush
             }
             roadGrain.SetPixels(pixels);roadGrain.Apply(true,true);roadNormals.SetPixels(normals);roadNormals.Apply(true,true);roadSmoothness.SetPixels(masks);roadSmoothness.Apply(true,true);
             road.SetTexture("_BaseMap",roadGrain);road.SetTexture("_BumpMap",roadNormals);road.SetTexture("_MetallicGlossMap",roadSmoothness);road.SetTextureScale("_BaseMap",new Vector2(3,1));
-            if(OpeningFinishPreview.SurfaceEnabled){
-                openingSurface=gameObject.AddComponent<OpeningRoadFinish>();
-                openingSurface.Configure(this,track,roadGrain,roadNormals,masks,textureSize);
-            }
             ivory=MakeMaterial("Ceramic ivory",new Color(.22f,.28f,.33f),.5f,.3f);
             graphite=MakeMaterial("Structural graphite",new Color(.025f,.05f,.065f),.55f,.5f);
             signal=MakeMaterial("Signal citron",new Color(.56f,.75f,.006f),.4f,0f);
@@ -155,8 +150,6 @@ namespace VectorRush
             var mesh=new Mesh{name=name};mesh.vertices=vertices;mesh.uv=uv;mesh.triangles=triangles;mesh.RecalculateNormals();mesh.RecalculateTangents();mesh.RecalculateBounds();ownedMeshes.Add(mesh);
             var go=new GameObject(name);go.transform.SetParent(transform,false);go.AddComponent<MeshFilter>().sharedMesh=mesh;var renderer=go.AddComponent<MeshRenderer>();renderer.sharedMaterial=mat;
             if(collider) go.AddComponent<MeshCollider>().sharedMesh=mesh;
-            // The preview changes rendering only. The original complete mesh stays on the collider.
-            if(openingSurface&&name=="Running surface")openingSurface.Build(mesh,renderer);
         }
         public GameObject Box(string name,Vector3 position,Vector3 scale,Quaternion rotation,Material mat)
         {

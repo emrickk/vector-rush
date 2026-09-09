@@ -468,3 +468,7 @@ Separate appGUID5b0ab4accd4c40279591b27098ff49ed builds and exits0; both templat
 Independent003f inspects all18 off/combined originals: construction now adds useful occupied fronts at.15/.22, depth at.30 remains, later views broadly preserve hierarchy. Combined surface is rejected because broad cloudy patches replace the control road's directional response, especially in the warm gallery. Fine-normal frequency restoration did not recover that response.
 
 Final permitted substantive correction: remove the regional road integration and retain the complete original road mesh/material/all three maps, while keeping useful construction and the bounded gallery/fixture study for one last combined comparison. This removes a demonstrated regression and does not claim the broader reflected-source road goal. If the retained surface/lighting state still regresses, select the verified construction-only state rather than perform a third art sweep.
+
+## 2026-09-09 — Final correction restores original road rendering
+
+Removed WorldBuilder's regional road integration. Independent source review confirms the full pre-opening road mesh/material/generated maps/collider path is restored; construction and scoped gallery/fixture study are unchanged. The helper remains isolated as historical experimental source. Whitespace/source comparison passes; separate opening04 native compilation and combined-preservation review follow.
