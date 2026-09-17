@@ -1,3 +1,9 @@
+## 2026-09-17 — Game P5 native blur candidate built and captured
+
+Build `4f55e8e349664a9383025faeaadb2250` succeeded from RainAtmosphereStage5 with the course hash preserved. App: `/Users/anping.wang/output/vector-rush-p5/SpeedBlur01.app`. Capture: `native-01/opening-evidence.json`, 432/432 native 1280x720 frames, 18 simulation seconds at 24 Hz, ordinary physics and scripted steering, silent. Video: `/Users/anping.wang/output/vector-rush-p5/speed-blur-native.mp4`.
+
+Recorded speeds span 65.24–178.24 km/h and blur intensity spans approximately zero–.1500. Slow and faster native frames were inspected: scene details resolve at low speed; the faster frame shows more streaking near the periphery with readable HUD. This clip does not reach boost/top speed, prove real-time performance, or establish reference-city artistic acceptance. Tests cover the high-speed curve and low-speed boost gating; high-speed native comparison and integration with Game P4's billboard candidate remain open. No whole-city asset pass was performed. Temporary render-pipeline assignments made by the normal build wrapper were restored in source after building.
+
 ## 2026-09-17 — Game P5 approval recovery and passing Unity tests
 
 After verifying the wrapper's local test scope, the same Unity test request was retried through the existing automatic reviewer with a detailed justification and fresh output path. It was approved; no approval policy, permission profile, provider or license settings changed. Unity resolved licensing entitlements and exited successfully: 284/284 EditMode tests passed, zero failed or skipped (`/Users/anping.wang/output/vector-rush-p5/tests-04/results.xml`). The subsequent native build request was also approved. The precise earlier content-filter trigger remains unknown. Full local recovery record: `/Users/anping.wang/output/vector-rush-p5/approval-recovery.md`.
