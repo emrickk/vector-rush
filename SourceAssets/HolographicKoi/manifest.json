@@ -1,0 +1,13 @@
+{
+  "materials": [
+    "body",
+    "membrane",
+    "filament",
+    "eye",
+    "gill"
+  ],
+  "triangles": 91412,
+  "renderers": 5,
+  "finRays": 202,
+  "source": "Authored geometry guided by the two owner-supplied luminous koi references; no generated bitmap used."
+}

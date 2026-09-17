@@ -1,3 +1,15 @@
+## Current koi candidate — Stage 10 revision 04
+
+Implemented the owner correction below as a separate scene and native build. Read `docs/current-game/holographic-koi-2026-09-17/README.md` for actual approach/underpass evidence and limits. 296 tests pass; use `holo-koi-build`. Stage 9 is rejected comparison only, Stage 8 remains default pending owner review. No external push or delegation.
+
+## Owner correction — giant swimming koi overhead
+
+The owner says the koi feels concrete, the tail does not move visibly, and the fish should swim around at giant scale with the player driving closely beneath it. Stage 10 must now be a large translucent aerial swimmer crossing above the bend, with obvious whole-body travel and strong tail motion. Overhead visual placement is authorized; preserve the driving corridor and all gameplay. The old beside-road sculpture envelope is superseded for the airborne fish, while the solid projector remains outside the road.
+
+## Owner-approved luminous koi rebuild — September 17, 2026
+
+The owner rejected the ceramic koi and ring as unpolished and insufficiently luminous/cyberpunk, supplied two luminous koi city references, and asked to redo it. Rebuild one landmark with full-bodied anatomy, flowing filament fins, continuous swimming deformation, red-orange self-emission, light spill and a discreet projection platform. Use a separate Stage 10 based on preserved Stage 8; retain rejected Stage 9 only as comparison. Subdue the nearby competing VOLT/ORBIT cluster using candidate-only material copies. Preserve course/collisions, handling, ship, HUD and weather. Inspect native visual impact and motion before reporting technical checks. No broader city rebuild, additional landmarks, delegation or publication.
+
 ## Owner-approved turn focal-point trial — September 17, 2026
 
 The owner approved trying the Koi Lantern Tower proposal: one new architectural landmark at an outdoor bend exit, using Scenario concept/surface artwork and actual 3D sculpture, tower, lighting and restrained fin animation. Build on Stage 8 ef3d386 in a separate Stage 9 candidate. Preserve course/collisions, ship, HUD, weather and handling. Verify the approach through the actual chase camera; show native motion. This authorizes only the first landmark, not the Reactor Atrium or Last Train Terminal. The Stage 9 revision 02 trial now builds, passes 294 tests and the native three-lap check; its actual turn replay is delivered in the current handoff. Stage 8 remains default and `koi-build` selects the trial. Await owner focal-placement/artistic review; no automatic additional landmarks, delegation or publication.

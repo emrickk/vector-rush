@@ -1,3 +1,11 @@
+# Giant swimming koi overhead — September 17, 2026
+
+Current koi review candidate: **Stage 10 revision 04**, `Assets/Scenes/HolographicKoiStage10.unity`, build `78beb07b1d4e4bec9b7e3f6dae64c6c3`. The owner rejected the solid-looking fixed koi and asked for a giant swimmer close overhead. This candidate adds approximately 130 m scale, translucent red-orange light, whole-body roaming and correctly weighted tail/fin deformation. The native approach passes beneath the fish; the moving road reflection follows it.
+
+[Native turn replay](http://127.0.0.1:8778/review/) · [Milestone, images, evidence and limits](current-game/holographic-koi-2026-09-17/README.md). 296 tests pass; the separate native three-lap race has six finishers, zero recoveries and no frames over 33.3 ms. The replay was opened and playback verified. Use `tools/current-game.sh holo-koi-build`; ordinary builds remain Stage 8. The prior Stage 9 koi is rejected and kept only for comparison. Preserve the other game work. Local milestone only; owner visual acceptance remains open.
+
+---
+
 # Koi Lantern turn trial — September 17, 2026
 
 The owner approved trying one new focal landmark at a turn exit. **Stage 9 revision 02** is implemented and natively verified: `Assets/Scenes/KoiLanternStage9.unity`, build `4140d7c362e242ad82952bc854aa91fb`. New 3D koi/amber ring/market tower with restrained fin animation, Scenario concept and enamel material. Native inspection prompted curved fins and a 20% larger sculpture for approach readability.

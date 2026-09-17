@@ -591,3 +591,12 @@ Full-lap placement completed as Stage 8 revision 02: all three artworks visible 
 Owner approved the first of three proposed focal landmarks. Produce Scenario concept and surface artwork, author an editable 3D koi/amber ring/market tower, survey a bend using the recorded driving camera, integrate a separate Stage 9 scene and inspect native approach footage. Preserve existing driving/gameplay/weather. Adjust only landmark composition as needed for clear sightlines. Deliver one verified turn and a local milestone; no automatic repetition across the course.
 
 Koi trial completed locally as Stage 9 revision 02: new authored 3D landmark, Scenario concept/enamel assets, corrected curved fins and larger sculpture, 294 passing tests, native approach replay and separate three-lap race pass. [Evidence and remaining owner review](current-game/koi-landmark-2026-09-17/README.md). Stage 8 remains default; no additional landmarks implemented.
+
+## Owner-directed luminous koi replacement
+
+Stage 9 is visually rejected. Rebuild the anatomy, flowing fins/tail and luminous material around the two supplied references. Replace the decorative hoop with a projection installation, add local illumination and a wet-road reflection, and reduce competing nearby signage in the candidate only. Inspect actual native approach and sustained motion, adjust if necessary, then record validation and a local milestone. Keep earlier scenes preserved.
+
+### Stage 10 owner correction: overhead swimmer
+Rework the new koi into a giant translucent animated fish above the bend. Add whole-body roaming and visibly sweeping tail/fin deformation; validate the swept overhead clearance, inspect actual chase-camera approach and underpass, then deliver native motion. The previous fixed-scale beside-road placement is rejected.
+
+Stage 10 revision 04 complete for owner review: native approach/underpass and tail sweep inspected, browser replay playback verified, 296 tests pass, isolated three-lap race completes with six finishers and zero recoveries. Saved as a local candidate; Stage 8 default and older content preserved.
