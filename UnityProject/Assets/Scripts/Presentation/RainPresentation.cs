@@ -11,6 +11,12 @@ namespace VectorRush
     public sealed class RainPresentation : MonoBehaviour
     {
         public AudioClip rainLoop;
+        public RainShelterProfile shelterProfile;
+        public float PlayerWetness { get; private set; } = 1;
+        readonly ParticleSystem.Particle[] particleBuffer=new ParticleSystem.Particle[2600];
+        float nextCull,roofDistance=-100;
+        bool cameraCovered;
+        int culledRain,culledSpray;
         public float emissionPerSecond=1750;
         public float OutdoorExposure { get; private set; }
         public int RainCount => rain ? rain.particleCount : 0;
@@ -49,7 +55,7 @@ namespace VectorRush
             var args=Environment.GetCommandLineArgs();int flag=Array.IndexOf(args,"-productionValidation");
             if(flag>=0&&flag+2<args.Length&&args[flag+2]=="preview"){
                 evidence=Path.Combine(args[flag+1],"weather.csv");
-                File.WriteAllText(evidence,"seconds,progress,speedKph,exposure,rainParticles,sprayParticles,rainVolume\n");
+                File.WriteAllText(evidence,"seconds,progress,speedKph,exposure,rainParticles,sprayParticles,rainVolume,wetness,roofDepth,fogDensity,culledRain,culledSpray\n");
             }
         }
         ParticleSystem Create(string name,Material material,int budget,bool mist)
@@ -73,10 +79,20 @@ namespace VectorRush
             float dt=Time.deltaTime;var camera=owner.Camera.transform;
             if(initialized && Vector3.Distance(previousCamera,camera.position)>35){rain.Clear();spray.Clear();credit=0;}
             previousCamera=camera.position;initialized=true;
-            if(Time.time>=nextShelter){nextShelter=Time.time+.12f;OutdoorExposure=Mathf.MoveTowards(OutdoorExposure,IsSheltered(camera.position)?0:1,.35f);}
-            sound.volume=Mathf.Lerp(sound.volume,AudioLevel(OutdoorExposure,PlayerPreferences.Current.EffectsVolume,false),1-Mathf.Exp(-dt*5));
+            if(Time.time>=nextShelter){
+                nextShelter=Time.time+.12f;cameraCovered=IsSheltered(camera.position);
+                OutdoorExposure=Mathf.MoveTowards(OutdoorExposure,cameraCovered?0:1,.35f);
+                if(shelterProfile)roofDistance=shelterProfile.Distance(owner.Track.ClosestProgress(camera.position));
+            }
+            if(shelterProfile){
+                PlayerWetness=shelterProfile.Wetness(owner.Director.Player.TrackProgress);
+                float fogTarget=Mathf.Lerp(.0028f,.0055f,RainShelterProfile.FogExposureAtDistance(roofDistance));
+                RenderSettings.fogDensity=Mathf.Lerp(RenderSettings.fogDensity,fogTarget,1-Mathf.Exp(-dt*3));
+                if(Time.time>=nextCull){nextCull=Time.time+.06f;culledSpray+=CullSheltered(spray);if(cameraCovered)culledRain+=CullSheltered(rain);}
+            }
+            sound.volume=Mathf.Lerp(sound.volume,(shelterProfile ? .19f*RainShelterProfile.RainAudibilityAtDistance(roofDistance)*PlayerPreferences.Current.EffectsVolume:AudioLevel(OutdoorExposure,PlayerPreferences.Current.EffectsVolume,false)),1-Mathf.Exp(-dt*5));
             lowPass.cutoffFrequency=Mathf.Lerp(900,7500,OutdoorExposure);
-            if(evidence!=null&&Time.time>=nextEvidence){nextEvidence=Time.time+.25f;File.AppendAllText(evidence,string.Format(CultureInfo.InvariantCulture,"{0:F3},{1:F5},{2:F2},{3:F3},{4},{5},{6:F4}\n",Time.time,owner.Director.Player.TrackProgress,owner.Director.Player.SpeedKph,OutdoorExposure,RainCount,SprayCount,RainVolume));}
+            if(evidence!=null&&Time.time>=nextEvidence){nextEvidence=Time.time+.25f;File.AppendAllText(evidence,string.Format(CultureInfo.InvariantCulture,"{0:F3},{1:F5},{2:F2},{3:F3},{4},{5},{6:F4},{7:F3},{8:F2},{9:F5},{10},{11}\n",Time.time,owner.Director.Player.TrackProgress,owner.Director.Player.SpeedKph,OutdoorExposure,RainCount,SprayCount,RainVolume,PlayerWetness,roofDistance,RenderSettings.fogDensity,culledRain,culledSpray));}
             Vector3 forward=Vector3.ProjectOnPlane(camera.forward,Vector3.up).normalized;
             Vector3 right=Vector3.Cross(Vector3.up,forward);
             credit+=dt*emissionPerSecond;int count=Mathf.Min(70,(int)credit);credit-=count;
@@ -95,15 +111,23 @@ namespace VectorRush
             {
                 if(Vector3.SqrMagnitude(vehicle.transform.position-camera.position)>10000)continue;
                 float speed=Mathf.Clamp01(vehicle.SpeedKph/180f);if(speed<.15f)continue;
+                float wetness=shelterProfile?shelterProfile.Wetness(vehicle.TrackProgress):1;if(wetness<=.001f)continue;
                 var f=owner.Track.Evaluate(vehicle.TrackProgress);
                 for(int i=0;i<amount;i++)
                 {
                     Vector3 p=vehicle.transform.position-vehicle.transform.forward*3.2f+vehicle.transform.right*Range(-2.1f,2.1f);
                     // Project onto the real banked road instead of emitting at exhaust height.
                     p-=f.Up*Vector3.Dot(p-f.Position,f.Up);p+=f.Up*.24f;
-                    spray.Emit(new ParticleSystem.EmitParams{position=p,velocity=-vehicle.transform.forward*Range(2,6)+f.Up*Range(.4f,1.1f)+f.Right*Range(-1,1),startLifetime=Range(.28f,.48f),startSize=Range(.35f,.75f)*speed,startColor=new Color(.44f,.59f,.63f,.17f*speed)},1);
+                    if(shelterProfile&&IsSheltered(p))continue;
+                    spray.Emit(new ParticleSystem.EmitParams{position=p,velocity=-vehicle.transform.forward*Range(2,6)+f.Up*Range(.4f,1.1f)+f.Right*Range(-1,1),startLifetime=Range(.28f,.48f),startSize=Range(.35f,.75f)*speed,startColor=new Color(.44f,.59f,.63f,.17f*speed*wetness)},1);
                 }
             }
+        }
+        int CullSheltered(ParticleSystem ps)
+        {
+            int count=ps.GetParticles(particleBuffer),removed=0;
+            for(int i=0;i<count;i++)if(IsSheltered(particleBuffer[i].position)){particleBuffer[i].remainingLifetime=0;removed++;}
+            if(removed>0)ps.SetParticles(particleBuffer,count);return removed;
         }
         void OnDestroy(){if(rainMaterial)Destroy(rainMaterial);if(sprayMaterial)Destroy(sprayMaterial);}
     }

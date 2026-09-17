@@ -2,16 +2,16 @@
 
 ## Current game checkpoint — start here (2026-09-17)
 
-**New agents: read [CURRENT-GAME-HANDOFF.md](docs/CURRENT-GAME-HANDOFF.md) first.** It supersedes the historical instructions and scene choices below. The owner resumed implementation and approved road smoothing and the rain presentation pass. This is a playable review candidate; owner acceptance remains open.
+**New agents: read [CURRENT-GAME-HANDOFF.md](docs/CURRENT-GAME-HANDOFF.md) first.** It supersedes the historical instructions and scene choices below. The owner resumed implementation and approved road smoothing, rain and the tunnel/atmosphere correction. This is a playable review candidate; owner acceptance remains open.
 
-- **Current candidate:** `UnityProject/Assets/Scenes/RainRoadStage4.unity` — fine rain, wet reflections, ship spray and sheltered audio on the corrected road. The dry scene is retained.
+- **Current candidate:** `UnityProject/Assets/Scenes/RainAtmosphereStage5.unity` — stronger city haze, dry covered road, sheltered rain/spray and rain audio fading deeper into the tunnel. Prior scenes are retained.
 - **Preserved HUD-finished baseline:** `UnityProject/Assets/Scenes/EnvironmentStructureStage1.unity` — finished Saira HUD, earlier environment.
 - **Unity:** 6000.6.0f1 / URP 17.6.0; open `UnityProject` in Unity Hub, then open the candidate scene explicitly. Do **not** run old `prepare` recipes or start from `Solstice.unity`.
 - **Included:** game code, serialized scenes/meshes/materials, Unity `.meta` files, editable source assets, pinned packages, tests, authoring scripts, plans, approved reference and selected native evidence.
 - **Excluded:** other workspaces, native apps, Unity caches, raw capture streams and local/private logs. The game can be rebuilt from this project; no old local folder is required for ordinary opening/building.
 - **Build/test:** [portable current-game commands](tools/current-game.sh). See the handoff for exact invocations, verification limits and the next work.
 
-[Latest native rain screenshot](docs/current-game/rain-2026-09-17/city-rain.jpg) · [Approved direction reference](docs/current-game/evidence/underground-descent-reference.png) · [Public repository](https://github.com/emrickk/vector-rush)
+[Latest native tunnel comparison](docs/current-game/atmosphere-2026-09-17/comparison-tunnel.jpg) · [Approved direction reference](docs/current-game/evidence/underground-descent-reference.png) · [Public repository](https://github.com/emrickk/vector-rush)
 
 ---
 

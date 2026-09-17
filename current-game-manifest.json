@@ -14,13 +14,13 @@
     },
     {
       "path": "AGENTS.md",
-      "bytes": 11030,
-      "sha256": "771216d26e3ade9def62b00e19bbb5007ca1ef6c198c8409392df00cc24205f2"
+      "bytes": 11561,
+      "sha256": "6759eecc5c823fbfc427bb4e8d8b01e6416133440078c5a20a7356fc6a783413"
     },
     {
       "path": "README.md",
-      "bytes": 15618,
-      "sha256": "8f91c0d4b3c640cd089946c307788fbbffa2c38e83b6136f2905b274fc82d2f4"
+      "bytes": 15675,
+      "sha256": "08a46a0f5d997477859914155bbe272dba2954ca7ad292758984718214c4cf29"
     },
     {
       "path": "SourceAssets/Branding/Apex/README.md",
@@ -3643,6 +3643,741 @@
       "sha256": "dfd94fe4cbecaffd7f2269985bdb959682e782eeb02003a5bca1dc4bce4bde1c"
     },
     {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5.meta",
+      "bytes": 172,
+      "sha256": "e9ee59295344153ee3faf92abb8342f68c36e3ed82e1a0562992e0025f54c078"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/RoofProfile.asset",
+      "bytes": 39044,
+      "sha256": "c6439d2f62c2dc4dcbe67ecec5d5363c38d3968529ca832e1bd43c011ec5aacc"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/RoofProfile.asset.meta",
+      "bytes": 189,
+      "sha256": "1e4b5d190275643a667f42ff1733facd4b85f4059b6d7912eba010faa6698e70"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-0-0.mat",
+      "bytes": 4253,
+      "sha256": "854d0a7ab586f3184e2b2a040e049fb400624b7aa0caca35a0b9a35f6111bf30"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-0-0.mat.meta",
+      "bytes": 188,
+      "sha256": "cb68b572f895408b90dfda68d4416b0e5dee091b128836c6455065d2be0c2135"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-0-1.mat",
+      "bytes": 4264,
+      "sha256": "f13d250aa37d31d769fa72aff41dd357141fa0a70fb1c7f4ef7cc0311e94668d"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-0-1.mat.meta",
+      "bytes": 188,
+      "sha256": "8dbf1b2096b53c79dcf66a45e9d0bab6b44bf03b62009d6cf707228f86aa5558"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-0-10.mat",
+      "bytes": 4262,
+      "sha256": "651d68fcb2f1c9d2196d8c095a05f7a71bea5e7201dd5f5498d84d5089c8e92e"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-0-10.mat.meta",
+      "bytes": 188,
+      "sha256": "767e7522d6b34628dd5d76c52a29e033cee295107ac160a8c8134b67e8c14883"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-0-11.mat",
+      "bytes": 4265,
+      "sha256": "ca27efa2e11751d08233f56ff8c8e2bc1750084f451d7039177237141ef3bc1a"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-0-11.mat.meta",
+      "bytes": 188,
+      "sha256": "28a0264fff7f7a6e2e62c5e661af764a31bb7db08b5be8de8dd754b2c462bdd2"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-0-12.mat",
+      "bytes": 4272,
+      "sha256": "751c09d6d76822081258f9f03607bd9d702216ad63b5a22445ecdeb5a9200a8d"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-0-12.mat.meta",
+      "bytes": 188,
+      "sha256": "297cc9c1e2303a941a3b4e88e6406523473f131b265dc8c1fe9213dd8173976a"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-0-13.mat",
+      "bytes": 4265,
+      "sha256": "fb5f6a08044bba03b7a6fbfeabdcfb4ce46661938ccd62ae3989e5264394112f"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-0-13.mat.meta",
+      "bytes": 188,
+      "sha256": "a0068b5721972a34b5691701149b3d3f5eec3e43853b566ab7e29b4e45d73c78"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-0-14.mat",
+      "bytes": 4276,
+      "sha256": "7935cc4425189e70fd265f05d395094a49f46a03ffef46e1a765d8771959f9f2"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-0-14.mat.meta",
+      "bytes": 188,
+      "sha256": "c48ac2d7ed8798d5d8a6ceb688017bdac940c8ff0ab6c8448a5c997dafb1615c"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-0-15.mat",
+      "bytes": 4281,
+      "sha256": "05cb5bdefc785c18daffc68cd13f977e50ad7e139761cf4e2723561d4d746a80"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-0-15.mat.meta",
+      "bytes": 188,
+      "sha256": "1b215d542263b98386a56cb43c091efd7e2ff73cfd952776f0f4b130178066f8"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-0-16.mat",
+      "bytes": 4260,
+      "sha256": "26dd7234a7ed539b5c9d2583d7891829d89096dcaeea0db51935d5ff7a2316da"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-0-16.mat.meta",
+      "bytes": 188,
+      "sha256": "bcab72375029fc96df4aa1bd18dd7e8b3f329b421c47f32abf6f61e14196356e"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-0-2.mat",
+      "bytes": 4272,
+      "sha256": "06381773a988b4b0e4403f31774edad8100195c1104c5bbf21a459e62609d004"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-0-2.mat.meta",
+      "bytes": 188,
+      "sha256": "8ab5937b4e4f18f9e761296275ffe8bbad8bed6d2ecd7c5e7b88693f6b0d649b"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-0-3.mat",
+      "bytes": 4276,
+      "sha256": "b936a88d20e4d352eb54add4babf15ede3cd13f99d335a074bb66ae53e43d972"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-0-3.mat.meta",
+      "bytes": 188,
+      "sha256": "ceaa233ba3d3a6e0126d79c11040632979d75d8408609a2d26d7f26b1340fc0a"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-0-4.mat",
+      "bytes": 4266,
+      "sha256": "7d836acaf270484c8565cd4c162069e8f969ada33d528ea7f5863fa0ef6d83b4"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-0-4.mat.meta",
+      "bytes": 188,
+      "sha256": "8b916b506fea52793961420de34c16ba505ee40e7531e136da3cbfed592f3f4f"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-0-5.mat",
+      "bytes": 4264,
+      "sha256": "015a37e8ed2208f9526cb522e2372f92a80897ab7beaf4635355251b651dba9a"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-0-5.mat.meta",
+      "bytes": 188,
+      "sha256": "1e7c54cb8869eda53d7f26d4cae59ee00f8a2dc91ede64247561668f656e861b"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-0-6.mat",
+      "bytes": 4262,
+      "sha256": "53c42899f18068734d8e380afa07f02766011980ce40cba8a3a8e60ef68ac1cf"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-0-6.mat.meta",
+      "bytes": 188,
+      "sha256": "8a7761b8207a1f3512154d0324a8d3834c33d744e3966190b6b0aa876da84466"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-0-7.mat",
+      "bytes": 4268,
+      "sha256": "a3df524018e1599e201a1fdce6f2a669a2cfdabe36662eefa81af684211f6305"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-0-7.mat.meta",
+      "bytes": 188,
+      "sha256": "a28376d89211d05d17e026578452e54188a727d1b083427e2157e46f1ffc60a9"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-0-8.mat",
+      "bytes": 4269,
+      "sha256": "2bdad7feeaabc9cb43e323b91f7ca557277a23176b9026c70ef3cc4be4440bb1"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-0-8.mat.meta",
+      "bytes": 188,
+      "sha256": "2710d83d074bdb196244295c2457a2f7f4cbe31a690b4c3c6d5bf8d2e98a06e0"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-0-9.mat",
+      "bytes": 4278,
+      "sha256": "2fb4bea7be13376ebe23336bf8366ef3c03211cb79329e37773573e2ff82783c"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-0-9.mat.meta",
+      "bytes": 188,
+      "sha256": "51e1948b28c99048cc8d9b74fac104485dfa22cfafeb2e3596b569884a851896"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-0.asset",
+      "bytes": 5908642,
+      "sha256": "fe3a1e5712c57c6722c83ad330628b538c19a7dfb9f34edcca2786f1f2a857f2"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-0.asset.meta",
+      "bytes": 188,
+      "sha256": "826ddd1b2fd10505d2f2084ad70d2aa835192960e0b767d1b4bf52f31ce52f9d"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-1-0.mat",
+      "bytes": 1936,
+      "sha256": "ebc89329d5290cc1ebfc428924fadd58163ac5f52fbd620bb2eabf5c1bdc9703"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-1-0.mat.meta",
+      "bytes": 188,
+      "sha256": "0df12d85ffd856ecf464989bf899ada655d1daa8d1dd14c1e458206c44a33add"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-1-1.mat",
+      "bytes": 1940,
+      "sha256": "3d41852fad69c95bc7ba368bd2b278d06cdc2976556c112055a9ae2ee9436f9c"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-1-1.mat.meta",
+      "bytes": 188,
+      "sha256": "8c4068b925b9bda88e7c8b912ed1e304874034dc16fe24ee90342b8301513743"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-1-10.mat",
+      "bytes": 1940,
+      "sha256": "833fe53aa5d27004525ecce2a1b93f6a8610725d769ff2be50dd25744f07b13c"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-1-10.mat.meta",
+      "bytes": 188,
+      "sha256": "5a48f433a002030e6d741c0c4ae0da1b21961532195822e63e46e46a49870a11"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-1-11.mat",
+      "bytes": 1941,
+      "sha256": "6eee47965beb7fc15d532e376ae5bb8a8443bf7b046e00e5b7f51957972c37ab"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-1-11.mat.meta",
+      "bytes": 188,
+      "sha256": "20596528c4a6b52d8520b6b9ae7e189c43ea209a3cda4ed177bda658b377e7a0"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-1-12.mat",
+      "bytes": 1943,
+      "sha256": "cba9451f704a93508ec6018a85f2dd20bbc46496182d787bf99582082f0a11d7"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-1-12.mat.meta",
+      "bytes": 188,
+      "sha256": "86efd738c7c2a519b60fb74cf52697da99e579278a6366aa4c319f57224a039d"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-1-13.mat",
+      "bytes": 1943,
+      "sha256": "378580a31ea2e3c8c930543b8d555f177698ae65b1dd29db0ac6ac4c77f27d2c"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-1-13.mat.meta",
+      "bytes": 188,
+      "sha256": "6cb6a21b650eaad934df642bbf061f01223a5d13accfb95e0569b579c91b89b4"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-1-14.mat",
+      "bytes": 1943,
+      "sha256": "922078d1156823e4ab5e62080f109ebae0ae14861b1a46e30dffb234dca6fa69"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-1-14.mat.meta",
+      "bytes": 188,
+      "sha256": "30206a8354352eb7ee9024fedd6dec291bfe520ddc10522536f8cf2785cbc8ce"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-1-15.mat",
+      "bytes": 1941,
+      "sha256": "01901da52061cc248a1453405a4942b8b80ff0000eaa0bf066d165ed7be0ac9e"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-1-15.mat.meta",
+      "bytes": 188,
+      "sha256": "e617bdae661995c8d85bf55e5c8f82c5a2af8cd7a4c1ab8961b986c98e5ccf32"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-1-16.mat",
+      "bytes": 1937,
+      "sha256": "6ba78416a10fd264a02cc26ffa6c05728c34fdaf43881cf259832b5e7141dbae"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-1-16.mat.meta",
+      "bytes": 188,
+      "sha256": "6cdbae62cc9498b78d294937de10831fe5e0f9605b9e72a08552ba76f2f4fa1c"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-1-2.mat",
+      "bytes": 1939,
+      "sha256": "e7c3a7b99bd9e6e0bee6a25aa26a60cd5d32e247220c4a4a64b01e4e057dea38"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-1-2.mat.meta",
+      "bytes": 188,
+      "sha256": "e7ecdd979bf64e23e08a2ffd75e90365f299c4def682360583e575048b7c4943"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-1-3.mat",
+      "bytes": 1942,
+      "sha256": "b5f6af4f48c56b4d240cd889faa831f3f36d48f47307750f71fadb120b41f5fd"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-1-3.mat.meta",
+      "bytes": 188,
+      "sha256": "c7e1cb64f42053f4a20733b1d19945e98c548f7451d363eca2732d0475bec8e4"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-1-4.mat",
+      "bytes": 1938,
+      "sha256": "2d6f4d76ad225292db2eecbb2dd970ccfad9db80794d5e45616751546c730003"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-1-4.mat.meta",
+      "bytes": 188,
+      "sha256": "51f387176416da48d47b112330ab0e881075037231dcc456507defb1ccefdade"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-1-5.mat",
+      "bytes": 1942,
+      "sha256": "42b2899040cef20c281d49f1a384fbc99c12688a38a5f72498bf85342173b76c"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-1-5.mat.meta",
+      "bytes": 188,
+      "sha256": "dcd65235cbbb1c16fb8801fadd3f5df8e264d9a03bf5c75f3aa827d40918dca2"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-1-6.mat",
+      "bytes": 1939,
+      "sha256": "b7a0f439b44f992bc210020f0dafdc92af83d517f58eab60be29d8312da5dea5"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-1-6.mat.meta",
+      "bytes": 188,
+      "sha256": "754ee7f9b0970499b4618f4c8c24cbcf6a65a4a000ddfd6ccd2d926e8b0f43e7"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-1-7.mat",
+      "bytes": 1940,
+      "sha256": "98824c687fda2dfa8e6b841f73ff792120a24a183c1e39366bb41a896aa62c3a"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-1-7.mat.meta",
+      "bytes": 188,
+      "sha256": "7e13c55239683479f64648f3721655178ad0e7733bfb69ef9750accfea1ae110"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-1-8.mat",
+      "bytes": 1937,
+      "sha256": "bd66f35a3378aa12ca4c31eeb3f48054e82994383569244da89387ce2ff400df"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-1-8.mat.meta",
+      "bytes": 188,
+      "sha256": "c0d4f4de7a0fa7fb202e74368f604a3959484eb3563103fe43468b9b1365587d"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-1-9.mat",
+      "bytes": 1942,
+      "sha256": "14ba5973625a9912dc814496454d1933c2b534f351673f544e671ae591edde18"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-1-9.mat.meta",
+      "bytes": 188,
+      "sha256": "fe47826802da573e5cfa401c6d33df4627d74238f5dbfff9f973da9af3aba740"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-1.asset",
+      "bytes": 5908638,
+      "sha256": "b99658a9569000254916c7d197276b4609d82c593e4de1193aa8cbc4c2e8b808"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-1.asset.meta",
+      "bytes": 188,
+      "sha256": "2d49b30d82eac781e8774327ffe36cdbdb9dedc409709d4dc1b0b5962e8bb58c"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-2-0.mat",
+      "bytes": 817,
+      "sha256": "5cd146cafca02c66df3a860294694bf898a184d51f75112752ae71e8c83543a5"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-2-0.mat.meta",
+      "bytes": 188,
+      "sha256": "4b64ad477905e65332d1a977626787688294850d38ad84572f15ffd7a4cee515"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-2-1.mat",
+      "bytes": 827,
+      "sha256": "d40c9344d23e0ae969f0d363c6e930d6c5667006402a06b17660a1781b2e5ac5"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-2-1.mat.meta",
+      "bytes": 188,
+      "sha256": "e6d9f38f9ee4df9c3fbe69abe288ea0e761a5187457bbeb54054e19af7831c2d"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-2-10.mat",
+      "bytes": 825,
+      "sha256": "4083361cfb0cf4b1dc34e5a23b214744321e759de69e9c94169df287470124a1"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-2-10.mat.meta",
+      "bytes": 188,
+      "sha256": "6394edf63ecc06b3d631c9033beec77c68e81f7d304d47a1eeacb681b9ec4a84"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-2-11.mat",
+      "bytes": 826,
+      "sha256": "4bb6ba13f9a4ca0ed25666b9012c51f55bb06b304e669c90d308adb6893c97fa"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-2-11.mat.meta",
+      "bytes": 188,
+      "sha256": "803030b39b225026324836c8cf7da5e2eb5a27f3500797919d3fcdc42bded1c1"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-2-12.mat",
+      "bytes": 821,
+      "sha256": "8a7e402be43e9fe773f8e0a7caae7d2b6ec02eefe962ec6a5d89a45045a2d2cb"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-2-12.mat.meta",
+      "bytes": 188,
+      "sha256": "b297f8b2017a9d1562b98fb5cec27ea7195462f27449c58495de622f7d3e4451"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-2-13.mat",
+      "bytes": 826,
+      "sha256": "86e27adb2813fd8308a8829628f7a8b7dfd58eb9ca756624b6cabc6cf9a8e65b"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-2-13.mat.meta",
+      "bytes": 188,
+      "sha256": "30796a63f8381582b33b04ecc04af00916386f6e653ec3255c993a3a756207ff"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-2-14.mat",
+      "bytes": 826,
+      "sha256": "4a4354832e1ef681cfcb3413fcf7af1da7c89733193d51125da5a09d849ba571"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-2-14.mat.meta",
+      "bytes": 188,
+      "sha256": "6a001bc96d1a293fc345ecb518230ebaeb9e036466aadfb160168f6f0969a376"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-2-15.mat",
+      "bytes": 827,
+      "sha256": "75e0147ce2b65bc17d024e943124ad71c15c2efd6f0ead2a9f67f7c042b4b4b3"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-2-15.mat.meta",
+      "bytes": 188,
+      "sha256": "4381eb5d4a1143878f0aeed9abe1ac784a200d0aa342d76d986ab1db8f082a1b"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-2-16.mat",
+      "bytes": 815,
+      "sha256": "8710f890fc4f42d2f42e2bde9c80b76e2e5ee1559d620d6be5fa42a5b94a758a"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-2-16.mat.meta",
+      "bytes": 188,
+      "sha256": "58efc93d556d0a301f886e9d0224d2447b150d4bfaef6080a67ecd071f310a66"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-2-2.mat",
+      "bytes": 827,
+      "sha256": "6a3c697ba9e51c2d1683e211742e538274fad4bfd2b16c99f9a53ded5839d409"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-2-2.mat.meta",
+      "bytes": 188,
+      "sha256": "4189bd807e94f3d2301e0e2b4e0c78c50d7418e11efea49dd8084ead06b4d8e0"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-2-3.mat",
+      "bytes": 827,
+      "sha256": "0b7b6e344875937829f308cbec750a8b8bd0aef0b5d8152e81d65d6dae096780"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-2-3.mat.meta",
+      "bytes": 188,
+      "sha256": "58437c1693ce8d0de27e4c49ff57ef24345187a1e139f0797892e06b105aa48a"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-2-4.mat",
+      "bytes": 818,
+      "sha256": "50671e21501288cafa50972be01805c1648fdf51a85166f37580d528f60a73e1"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-2-4.mat.meta",
+      "bytes": 188,
+      "sha256": "8c8bed195733b7b1401dd65838d8106195517760b36e18ac432d6307b864197b"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-2-5.mat",
+      "bytes": 826,
+      "sha256": "2e8ee889e0f17e3d5174dd2be16a3a006806fc2e9fcf99901b940cd0ce754c7a"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-2-5.mat.meta",
+      "bytes": 188,
+      "sha256": "264f4cbfdb64a962972b28a4aa33bb26163e265a3c87d397a77bfac55c93a09e"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-2-6.mat",
+      "bytes": 824,
+      "sha256": "2790ffdf75d6c0c9261d2405e7d0904a948c1972df810eec3ed5939861fb584d"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-2-6.mat.meta",
+      "bytes": 188,
+      "sha256": "455bd57ab941e1b078119fe579f84caf6feebf1005125b69f01651ce6c9992c5"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-2-7.mat",
+      "bytes": 827,
+      "sha256": "9db893e0f8aa0ec77450c889b4d55b2d99a716c32e9ea6b700d29069e8caff6f"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-2-7.mat.meta",
+      "bytes": 188,
+      "sha256": "8fc5c5dbaacbf0dd1cbca5ab137b8f39d289338014c9a5e36448ab366d22e061"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-2-8.mat",
+      "bytes": 820,
+      "sha256": "e007a49e686b6ac28db37da06c5ece05ec83ed9068d46a3459628058c0200427"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-2-8.mat.meta",
+      "bytes": 188,
+      "sha256": "272b8b993ca47caaf81826793194052fc40571b1bea84dcb8488de7182fa39c7"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-2-9.mat",
+      "bytes": 826,
+      "sha256": "5a3d32165d8a90063eb84cb19e96037acca1c02552d2f90e8a92cd5203cf7ebb"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-2-9.mat.meta",
+      "bytes": 188,
+      "sha256": "9f81cb38663e49511f8b310605a17d054a511ae4e02f9fafcdda32f472f2ec02"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-2.asset",
+      "bytes": 838718,
+      "sha256": "e7b18eb54fb55d77cb953319caa19bcdd4ad3b166e66c111a0e0d0e5f214dd4d"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-2.asset.meta",
+      "bytes": 188,
+      "sha256": "5ac4878cae501da6453d63b32eed604af80ff2975fdd7952feab754cdf83bb59"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-3-0.mat",
+      "bytes": 819,
+      "sha256": "c01ae9a6b1467a30c380ea12ed54f187c85ee8d882b68c2ed55646bf58341886"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-3-0.mat.meta",
+      "bytes": 188,
+      "sha256": "7f474271d052a8ab657fc1c87c762ce8b2610935903a85e33096e3b5c6a88be0"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-3-1.mat",
+      "bytes": 825,
+      "sha256": "0afa94b9568ee49866eab1b2d251e276dfb88407b14d9f411b814bfc4c464c3e"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-3-1.mat.meta",
+      "bytes": 188,
+      "sha256": "86146696d323a9e5e7e3219455b14e1972d7eeaca1fe46d4a23b90e400e7e628"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-3-10.mat",
+      "bytes": 823,
+      "sha256": "280a9a027a528ecb3a0199c5fceee8621696dba5a210a1eb4b0d993bbfa37c2b"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-3-10.mat.meta",
+      "bytes": 188,
+      "sha256": "ed19e058b083635c89fce6a3fdf7307e103205e62d1fa7f2702c92692d18591d"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-3-11.mat",
+      "bytes": 824,
+      "sha256": "dfbbd0f61bf80e8b35f43d43279c7389eb0591e3dcdca8336c82a3f0cc3ea59c"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-3-11.mat.meta",
+      "bytes": 188,
+      "sha256": "0fe1e9ae83b921675943f9374736d1394aa54564c29ee9b55baf302fa4da34be"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-3-12.mat",
+      "bytes": 818,
+      "sha256": "c6dd6b26c5c4adce8c97c54f173cbb54bc17871d7f3fc3758e4ec2643fe5c3a5"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-3-12.mat.meta",
+      "bytes": 188,
+      "sha256": "de1f9378450a4d7732180435ad66e2227d0593a1da90a94ff979ecf75673fc49"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-3-13.mat",
+      "bytes": 825,
+      "sha256": "2278fd2b17aef6c82c1154857984ad483d6f6e6b49417b64cecbf07e2890adf8"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-3-13.mat.meta",
+      "bytes": 188,
+      "sha256": "6a7241e633c0e3a7fbfb507baf8ca012ebd9e9837d41083806e6c94dee34d3df"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-3-14.mat",
+      "bytes": 825,
+      "sha256": "43069c78a4a95b15e74cc768ea95caa48691cc13694f2a3a0a4e5da655666894"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-3-14.mat.meta",
+      "bytes": 188,
+      "sha256": "4102a0a53b800f7374d6b059eda01eb6d7a2833ff0a024655980629c3f121656"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-3-15.mat",
+      "bytes": 826,
+      "sha256": "bcfc762df904b97f22a1ed3e938c60533c2658a4b9804582b5b01eb3f83dfa93"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-3-15.mat.meta",
+      "bytes": 188,
+      "sha256": "b97c0b69cc6cee23446f70e94bcac271eba931c7b80a74061fabdb5e327b4549"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-3-16.mat",
+      "bytes": 818,
+      "sha256": "9388334a142f22cbad54797985831f8c717687bb909db24c2525d951b9dc8280"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-3-16.mat.meta",
+      "bytes": 188,
+      "sha256": "352b41c53d6e9503ef1c6fb132bd3c3a19c7a2e4f89f5b34ff4ed0a14012179f"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-3-2.mat",
+      "bytes": 827,
+      "sha256": "ec5812a63fe23369249eb34282bf21b70b4c5664495304935e445505e98d2733"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-3-2.mat.meta",
+      "bytes": 188,
+      "sha256": "8fd874573a79134088ca0d45b045e5b933fcc5e338682cad23207b88a7310335"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-3-3.mat",
+      "bytes": 824,
+      "sha256": "6d59bad6c4ba509bc6959854197f907cd9810c28a66ce9eca7f7009ab9d9cf4b"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-3-3.mat.meta",
+      "bytes": 188,
+      "sha256": "c38a98cba66fd43402d4a24e46d03d77d7fcace9bf24b7fe6869a26c64b2077a"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-3-4.mat",
+      "bytes": 817,
+      "sha256": "831e07b602ff77e9c99ac361c679556856427e3b5e9f189ec16cc636a489f85d"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-3-4.mat.meta",
+      "bytes": 188,
+      "sha256": "44d011c190bd441d9507983ff6355a7f67838768effafb07f5023e3f59a8f6ee"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-3-5.mat",
+      "bytes": 825,
+      "sha256": "6f553644854aeb1fd3bb6e377edb87511ec328fc7032e8f03976f2d76c4b7cbc"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-3-5.mat.meta",
+      "bytes": 188,
+      "sha256": "ae164ea8fbe76cae5846b0ffabd9c9d781513b529d35f514c8b4657a088a7298"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-3-6.mat",
+      "bytes": 820,
+      "sha256": "1e6e0bf092bb3d6d289d778b5d493791ada0db19e847bb7bbe3f42f92c24d37b"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-3-6.mat.meta",
+      "bytes": 188,
+      "sha256": "23d5b48387b77315836351abfbe0a7ff10f4ffe747694809081dc3da8d2c270d"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-3-7.mat",
+      "bytes": 827,
+      "sha256": "8dab37b08c8fb6fcbf1ebf024c85f6860a20626ac3d7203930da633e8c41d6a1"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-3-7.mat.meta",
+      "bytes": 188,
+      "sha256": "4f054c3eb3969ce58d6fb61a4feae6db2e3b11b1ca6d7d0d7713d961aa2a0387"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-3-8.mat",
+      "bytes": 815,
+      "sha256": "0d07360573a530c6bbbe2fb556989635a430357d578f338f3e30835913794982"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-3-8.mat.meta",
+      "bytes": 188,
+      "sha256": "bac9124418930d41806bd9f2baeffddc830788ea268281e1cf0d5e77b0df110c"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-3-9.mat",
+      "bytes": 824,
+      "sha256": "3b91f2623f3d089df815513ca3baba49419a96cfc93b4bc87fac47e5d8144f70"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-3-9.mat.meta",
+      "bytes": 188,
+      "sha256": "85c060720a614872cb117dfe8775b1ef2573f511e9017d1a751e994276babd09"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-3.asset",
+      "bytes": 838718,
+      "sha256": "9b744477937a57b2f7c1f67491e0d7149238d0de07a2da7df5e6207eb46ad805"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainAtmosphereStage5/Surface-3.asset.meta",
+      "bytes": 188,
+      "sha256": "6ed0b05454285c0f4499415f8150455cfaf2e32c2aecf1a8221735d9b7d1ad94"
+    },
+    {
       "path": "UnityProject/Assets/Art/RainRoadStage4.meta",
       "bytes": 172,
       "sha256": "5743d5588407aeeb260fed309a4dfb9557be57d8d60c4ccc8a81695ac221663d"
@@ -7183,6 +7918,16 @@
       "sha256": "9ed9a0660796d45c6f6af3736e3f70e385e355a6b8f10687eeb0253282dd7519"
     },
     {
+      "path": "UnityProject/Assets/Editor/Production/AtmosphereSceneSetup.cs",
+      "bytes": 6297,
+      "sha256": "32b8c257702094a4c53ee23ff363475193bb43697b6701fb76d55e0f3108f9ff"
+    },
+    {
+      "path": "UnityProject/Assets/Editor/Production/AtmosphereSceneSetup.cs.meta",
+      "bytes": 60,
+      "sha256": "34cb690e4d818b5d70e58e2cb3df405d9097f10fc5bd7647f50a400ca53e4670"
+    },
+    {
       "path": "UnityProject/Assets/Editor/Production/EnvironmentStructureSetup.cs",
       "bytes": 13842,
       "sha256": "66490281810b88c7a51afb926fc2d7889efdafdec6248b1dc72e996eec5277de"
@@ -9958,6 +10703,16 @@
       "sha256": "30f67ba1a12a4558f29a4aee78ad8254c5e19395cd91068e6c310418c5dadc4a"
     },
     {
+      "path": "UnityProject/Assets/Scenes/RainAtmosphereStage5.unity",
+      "bytes": 1092291,
+      "sha256": "ec57a8ce4745081261ac669e0849d45156d5127c65f2c1c42692711ca4109c08"
+    },
+    {
+      "path": "UnityProject/Assets/Scenes/RainAtmosphereStage5.unity.meta",
+      "bytes": 155,
+      "sha256": "a08edbec5146d647c7e8b970ad612d99c77c691431f1f948ef0c033701845cfd"
+    },
+    {
       "path": "UnityProject/Assets/Scenes/RainRoadStage4.unity",
       "bytes": 1087683,
       "sha256": "b448333d105d23bde5b336b8d3db33a11d82e8c622aa08b8ef4f2edc81100f8f"
@@ -10274,13 +11029,23 @@
     },
     {
       "path": "UnityProject/Assets/Scripts/Presentation/RainPresentation.cs",
-      "bytes": 7925,
-      "sha256": "6fba898970c49ed41b218e7a4b43221bd1eccc64c552dac7a22678028d66c51c"
+      "bytes": 9752,
+      "sha256": "61595f059a1e1c689e329d995aa19e49ce41345fbc0aec9f189a1603c68d5fa1"
     },
     {
       "path": "UnityProject/Assets/Scripts/Presentation/RainPresentation.cs.meta",
       "bytes": 60,
       "sha256": "1a0648884dc01ab73d18def0b28e5691eab55a30557dd8903becea57c994fc0d"
+    },
+    {
+      "path": "UnityProject/Assets/Scripts/Presentation/RainShelterProfile.cs",
+      "bytes": 1037,
+      "sha256": "b5ec986f69c3b8b5e769ca84e3e4b0d63498912dd5bd236c2759717772205565"
+    },
+    {
+      "path": "UnityProject/Assets/Scripts/Presentation/RainShelterProfile.cs.meta",
+      "bytes": 60,
+      "sha256": "1ff8cb3d7144b9360b82d6be91dd0e64fd8e0a94ac6136c56cf4e1f1d6fe6efa"
     },
     {
       "path": "UnityProject/Assets/Scripts/Presentation/RoadReflectionPreview.cs",
@@ -10986,6 +11751,16 @@
       "path": "UnityProject/Assets/Tests/Editor/ArcadeHudTests.cs.meta",
       "bytes": 59,
       "sha256": "a5afcd01014cd80fea6324ebfcefb3fded7ea2ddadc3f8a774749f86bc7b5537"
+    },
+    {
+      "path": "UnityProject/Assets/Tests/Editor/AtmosphereTests.cs",
+      "bytes": 2521,
+      "sha256": "f0a85515ffed43c0917a2d6f2c9af4ec77b06e6242ceb49e127b6010bdb800e1"
+    },
+    {
+      "path": "UnityProject/Assets/Tests/Editor/AtmosphereTests.cs.meta",
+      "bytes": 60,
+      "sha256": "6e7a280c0748d44b4ccd4f4dbfc7cd10a8def0d4842607d732243b08f27ad649"
     },
     {
       "path": "UnityProject/Assets/Tests/Editor/CityReflectionPersistenceTests.cs",
@@ -12914,8 +13689,8 @@
     },
     {
       "path": "docs/CURRENT-GAME-HANDOFF.md",
-      "bytes": 17089,
-      "sha256": "b6a2a11f941869cec548e59c11fa63169e53b09f98095e870ec70d65f7f79457"
+      "bytes": 18354,
+      "sha256": "2f351ade1c2b210343793c6be549b018df93b3c6f806afe64b954ec26e5d7c10"
     },
     {
       "path": "docs/GPT6-BUILD-PROMPT.md",
@@ -13101,6 +13876,81 @@
       "path": "docs/critique-runtime-03.md",
       "bytes": 5791,
       "sha256": "5a7425e72b45f05092e45a6cd37dba38ff8fce1118f8bae0a277bb99f9799995"
+    },
+    {
+      "path": "docs/current-game/atmosphere-2026-09-17/README.md",
+      "bytes": 4742,
+      "sha256": "ca6f22bb3722786e43d26d153a3accb0eb587f5b86224e1a71a23bc81dc6518b"
+    },
+    {
+      "path": "docs/current-game/atmosphere-2026-09-17/authoring.txt",
+      "bytes": 277,
+      "sha256": "92342db110fb1f4a284c0f7c34b92cf3c5b5730ceb548eded982ae43b757e944"
+    },
+    {
+      "path": "docs/current-game/atmosphere-2026-09-17/build-identity.json",
+      "bytes": 487,
+      "sha256": "4253326eda2e82e62dc3efbfd21640ae6d0b34766ccd087c1dff20e0b43b8fe5"
+    },
+    {
+      "path": "docs/current-game/atmosphere-2026-09-17/city.jpg",
+      "bytes": 207698,
+      "sha256": "8022858b62c13d9984f0293bd310115a68808ea5abd40400ceaf148789d39457"
+    },
+    {
+      "path": "docs/current-game/atmosphere-2026-09-17/comparison-city.jpg",
+      "bytes": 146530,
+      "sha256": "c0c536b4d22ba9623bbc57bcb0f508ce59b41101a46237743103d58c67a64a71"
+    },
+    {
+      "path": "docs/current-game/atmosphere-2026-09-17/comparison-descent.jpg",
+      "bytes": 114173,
+      "sha256": "6da852e6bb7fd1a2c916657e709ae196c86f2be2f787f462a61fc870cb7a9118"
+    },
+    {
+      "path": "docs/current-game/atmosphere-2026-09-17/comparison-tunnel.jpg",
+      "bytes": 123978,
+      "sha256": "6f0ea642ea139dda92105809b0ef843008ace40b0c617151bbc580764c4f9374"
+    },
+    {
+      "path": "docs/current-game/atmosphere-2026-09-17/exit.jpg",
+      "bytes": 175178,
+      "sha256": "7c49cf276026dd99217fad23d879ba7f083e60bdc972d3876d0c95dbea602059"
+    },
+    {
+      "path": "docs/current-game/atmosphere-2026-09-17/performance-validation.json",
+      "bytes": 2019,
+      "sha256": "c0b38d1053c539a7159957b13d4d5840d24e30af2eef55b08f9fa64226ee0848"
+    },
+    {
+      "path": "docs/current-game/atmosphere-2026-09-17/portal.jpg",
+      "bytes": 146227,
+      "sha256": "06cee175a5b844c8638a2791524e514f13d8a4d78ea7c95975286c84dd5cc0f6"
+    },
+    {
+      "path": "docs/current-game/atmosphere-2026-09-17/preview-validation.json",
+      "bytes": 646,
+      "sha256": "8b3c2f24def2e2a82f4503e6b9a8afa741d263b5f856558a5182450c5f502e62"
+    },
+    {
+      "path": "docs/current-game/atmosphere-2026-09-17/selected-frames.json",
+      "bytes": 5741,
+      "sha256": "3b9daf7d05c6a871fe4ae79a79055d29ef868f69858d8b588d823a87d1409814"
+    },
+    {
+      "path": "docs/current-game/atmosphere-2026-09-17/test-results.xml",
+      "bytes": 229262,
+      "sha256": "61ab95299bc22bee6c260fead9e3ce2982c320fcc2533f7f2feae9fbd26498f6"
+    },
+    {
+      "path": "docs/current-game/atmosphere-2026-09-17/tunnel.jpg",
+      "bytes": 159163,
+      "sha256": "af40f6aa2356e5d6aaae6b041c26800f42d3b62abf2e786ca6a75d0fec4ae7af"
+    },
+    {
+      "path": "docs/current-game/atmosphere-2026-09-17/weather.csv",
+      "bytes": 13669,
+      "sha256": "da5e5dc7df291c8977fe482e7661b8ca3600c20c29d0b3ae361495bbdfeb644d"
     },
     {
       "path": "docs/current-game/evidence/after-approach.png",
@@ -13389,8 +14239,8 @@
     },
     {
       "path": "docs/development-history.md",
-      "bytes": 136019,
-      "sha256": "b032dd2f4a3f3564bbe272464f802936dade607f1733523afff1a36c800335ea"
+      "bytes": 137116,
+      "sha256": "15d8543cc81958eb6550e3e574d8c2b30e7432a360c08c988fc2eef10a84e7f5"
     },
     {
       "path": "docs/development-work-record.html",
@@ -13569,8 +14419,8 @@
     },
     {
       "path": "docs/implementation-plan.md",
-      "bytes": 80147,
-      "sha256": "0dd1f93a3e7308fb36abd400dd782e90480cf70eeee558637be863e01fac35d2"
+      "bytes": 80994,
+      "sha256": "56945b963f93b2a5e4ab1772c4fa713e2f8383f68cafc7cdac7ff9f2af6b8978"
     },
     {
       "path": "docs/lighting-reviews/001-lighting-source-audit.md",
@@ -14429,8 +15279,8 @@
     },
     {
       "path": "tools/current-game.sh",
-      "bytes": 2076,
-      "sha256": "28ce684df10b3182aa36973049909bdf69ebc2a42eb001bbc1c7585585a6e3df"
+      "bytes": 2082,
+      "sha256": "94dea2525caf508156aa3cf9c1ca432f45a0e6cf8c5143a9f98288efb5373ac3"
     },
     {
       "path": "tools/encode-stage2.py",

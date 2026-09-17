@@ -1,6 +1,10 @@
 # Vector Rush development workflow
 
-## Owner-approved rain pass — 2026-09-17 (current)
+## Owner-approved atmosphere correction — 2026-09-17 (current)
+
+Owner approved stronger outdoor city haze, no tunnel rain/spray, a dry covered road and rain audio fading with depth. Current candidate is `Assets/Scenes/RainAtmosphereStage5.unity`; the wrapper builds it. Prior scenes remain preserved. Read the current handoff and atmosphere milestone. Do not alter handling, ship, HUD, course or collision geometry. Owner visual acceptance remains open; do not expand gameplay or the wider art rollout automatically.
+
+## Owner-approved rain pass — 2026-09-17 (previous milestone)
 
 The owner approved restrained rain, wet reflections, low ship spray and sheltered rain audio with handling unchanged. Current candidate is `Assets/Scenes/RainRoadStage4.unity`. `SmoothRoadStage3.unity` is the preserved dry comparison. Read the current rain handoff before continuing; owner visual acceptance remains open.
 

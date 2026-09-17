@@ -531,3 +531,9 @@ Implemented the owner-approved curve/banking correction in an isolated candidate
 Add restrained rain streaks with actual shelter checks, wet road response, subtle ship spray and rain audio that softens under cover. Preserve handling, road geometry, HUD and ship. Author a separate RainRoadStage4 candidate; verify native outdoor/tunnel footage, dry-scene preservation, effects mute/pause and uncaptured performance before publishing.
 
 Rain pass completed for owner review: 279 tests, native outdoor/tunnel capture and isolated three-lap/performance run passed. See [rain milestone](current-game/rain-2026-09-17/README.md). No handling or broader environment changes.
+
+## Owner-approved atmosphere correction, September 17, 2026
+
+Dry covered road, no tunnel rain/spray, rain sound fading with distance from portals; stronger outdoor city haze while nearby road stays readable. Bake coverage from actual roof colliders, use an 8 m wet-to-dry transition outside roof edges, preserve original vertex positions and collision meshes. Verify native outdoor/portal/interior/exit views, shelter/material regression checks and isolated performance.
+
+Atmosphere correction implemented in the separate Stage 5 scene. 282 tests and a complete 43.029-second native capture passed; tunnel road is visibly dry in the matched comparison. See [atmosphere milestone](current-game/atmosphere-2026-09-17/README.md) for isolated performance results and review limits. Owner visual/audio judgment and manual/controller feel remain open.

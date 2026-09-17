@@ -1,6 +1,15 @@
 # Current Vector Rush game — new-agent handoff
 
-## Rain candidate, September 17, 2026 (current)
+## Atmosphere correction, September 17, 2026 (current)
+
+Owner approved restoring outdoor haze, dry tunnel road, no sheltered rain/spray, and rain audio fading deeper inside. Current scene `Assets/Scenes/RainAtmosphereStage5.unity`, revision `rain-atmosphere-stage5-01`, build `0aea73895a504a62b9380a8ec3e39c83`. The portable wrapper builds this scene. [Atmosphere milestone and measured evidence](current-game/atmosphere-2026-09-17/README.md).
+
+282 tests passed. A complete 43.029-second native lap has 1,009 timestamped frames at 23.4375 Hz and captured audio. Matched comparisons show the wet-to-dry road correction. The isolated 1920×1080 three-lap race passed with six finishers, zero recoveries, frozen results, pause and restart checks. Frame delivery: 8.33479 ms mean, 8.33334 ms P95/P99, 17.20417 ms maximum, zero frames above 33.3 ms.
+
+Course hash remains `a43cff0540e9b86cc0d60810b1f19e6cd49ae52d69e41ea43f6fb5b590790abc`; driving geometry, collisions, handling, ship and HUD are preserved. Prior dry and rain scenes remain. Apex icon relay is preserved and this build succeeds with it. Next is owner review of haze, tunnel transitions and sound; no wider art rollout is authorized. Do not interpret technical checks as artistic acceptance.
+
+
+## Rain candidate, September 17, 2026 (previous milestone)
 
 The owner approved the rain presentation pass with handling unchanged. Current scene `Assets/Scenes/RainRoadStage4.unity`, revision `rain-road-stage4-02`, native build `79586df76e61472b8a858042da9574b5`. [Rain milestone and measured evidence](current-game/rain-2026-09-17/README.md). The portable wrapper builds this scene. 279 tests passed and a 43.029-second native lap recorded outdoor rain and tunnel shelter. Read the milestone for uncaptured performance results.
 

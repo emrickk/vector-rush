@@ -1,0 +1,9 @@
+scene=Assets/Scenes/RainAtmosphereStage5.unity
+course=a43cff0540e9b86cc0d60810b1f19e6cd49ae52d69e41ea43f6fb5b590790abc
+roofSamples=373
+totalSamples=3840
+renderSurfaces=4
+transitionMetresOutsideRoof=8
+drySceneUnchanged=true
+colliderMeshesUnchanged=true
+outdoorFogDensity=0.0055

@@ -1,0 +1,11 @@
+{
+    "status": "NATIVE_EXPERIENCE_BUILD_COMPLETE_NOT_QUALITY_ACCEPTED",
+    "unityVersion": "6000.6.0f1",
+    "buildGuid": "0aea73895a504a62b9380a8ec3e39c83",
+    "scene": "Assets/Scenes/RainAtmosphereStage5.unity",
+    "appPath": "/Users/anping.wang/output/vector-rush-atmosphere-2026-09-17/Atmosphere01.app",
+    "courseHash": "a43cff0540e9b86cc0d60810b1f19e6cd49ae52d69e41ea43f6fb5b590790abc",
+    "artRevision": "rain-atmosphere-stage5-01",
+    "renderers": 119,
+    "lights": 256
+}
