@@ -35,15 +35,18 @@ namespace VectorRush
         MotionBlur blur;
         float boostEnvelope;
         ChaseCamera chase;
+        bool progressiveCityBlur;
 
         public float CurrentIntensity { get; private set; }
+        bool UsePresentationBlur => progressiveCityBlur || (chase && chase.MotionPresentationEnabled && !chase.LegacyComparisonMode);
 
-        public void Initialize(HoverVehicle craft, MotionBlur motionBlur)
+        public void Initialize(HoverVehicle craft, MotionBlur motionBlur, bool progressiveCity = false)
         {
             vehicle = craft;
+            progressiveCityBlur = progressiveCity;
             blur = motionBlur;
             chase = GetComponent<ChaseCamera>();
-            if (chase && chase.MotionPresentationEnabled && !chase.LegacyComparisonMode && blur != null)
+            if (UsePresentationBlur && blur != null)
             {
                 blur.mode.Override(MotionBlurMode.CameraAndObjects);
                 blur.quality.Override(MotionBlurQuality.High);
@@ -68,10 +71,10 @@ namespace VectorRush
             float speed = ChaseCameraMotion.Speed01(vehicle.SpeedKph);
             float target = SpeedMotionBlurModel.TargetIntensity(speed, boostEnvelope,
                 PlayerPreferences.Current.ReducedInterfaceMotion);
-            if (chase && chase.MotionPresentationEnabled && !chase.LegacyComparisonMode)
+            if (UsePresentationBlur)
             {
                 target = SpeedMotionBlurModel.PresentationIntensity(speed, boostEnvelope, PlayerPreferences.Current.ReducedInterfaceMotion);
-                if (chase.IsViewTransitioning) { CurrentIntensity = 0; Apply(); return; }
+                if (chase && chase.IsViewTransitioning) { CurrentIntensity = 0; Apply(); return; }
             }
             CurrentIntensity = Mathf.Lerp(CurrentIntensity, target,
                 1f - Mathf.Exp(-(target > CurrentIntensity ? 5.5f : 8f) * Time.deltaTime));

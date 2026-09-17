@@ -147,7 +147,10 @@ namespace VectorRush
             }
             if (blur == null) return;
             var controller = Camera.GetComponent<SpeedMotionBlur>() ?? Camera.gameObject.AddComponent<SpeedMotionBlur>();
-            controller.Initialize(player, blur);
+            // Opt this candidate into the blur pass independently of the older camera redesign.
+            bool progressiveCity = productionWorld && productionWorld.artRevision == "rain-atmosphere-stage5-01"
+                && Array.IndexOf(Environment.GetCommandLineArgs(), "-motionBaseline") < 0;
+            controller.Initialize(player, blur, progressiveCity);
         }
 
         void OnDestroy(){if(Instance==this)Instance=null;productionMaterials?.Dispose();productionMaterials=null;Time.timeScale=1;}
