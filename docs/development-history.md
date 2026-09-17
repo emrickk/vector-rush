@@ -1,3 +1,7 @@
+## 2026-09-17 — Game P5 approval recovery and passing Unity tests
+
+After verifying the wrapper's local test scope, the same Unity test request was retried through the existing automatic reviewer with a detailed justification and fresh output path. It was approved; no approval policy, permission profile, provider or license settings changed. Unity resolved licensing entitlements and exited successfully: 284/284 EditMode tests passed, zero failed or skipped (`/Users/anping.wang/output/vector-rush-p5/tests-04/results.xml`). The subsequent native build request was also approved. The precise earlier content-filter trigger remains unknown. Full local recovery record: `/Users/anping.wang/output/vector-rush-p5/approval-recovery.md`.
+
 ## 2026-09-17 — Game P5 speed-blur source candidate (verification blocked)
 
 Continued the owner's Game P5 approval: detail at low speed, increasing blur at high speed. Isolated branch `game/p5-speed-blur` starts from `f79e4e7`; Game P4's uncommitted billboard work remains in `vector-rush-relay` and was not changed.
