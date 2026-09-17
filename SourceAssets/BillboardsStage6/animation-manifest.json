@@ -1,0 +1,66 @@
+[
+  {
+    "campaign": "aurora",
+    "frameCount": 64,
+    "duration": 5,
+    "playback": "loop",
+    "atlasSize": [
+      3072,
+      4608
+    ],
+    "frameSize": [
+      384,
+      576
+    ],
+    "motionDifferenceMean": 3.3761860411844133,
+    "videoSha256": "3d795443e10a996bcf0b5de1f16f8547cd637b32e79a4cbee66f9efcb6401faf"
+  },
+  {
+    "campaign": "volt",
+    "frameCount": 64,
+    "duration": 5,
+    "playback": "loop",
+    "atlasSize": [
+      3072,
+      4608
+    ],
+    "frameSize": [
+      384,
+      576
+    ],
+    "motionDifferenceMean": 17.148110472125772,
+    "videoSha256": "a3c3ccbc7bded0fac2911e064a485affafb9cbebd228cea91785b2a89da5d454"
+  },
+  {
+    "campaign": "echo",
+    "frameCount": 64,
+    "duration": 10,
+    "playback": "ping-pong",
+    "atlasSize": [
+      3072,
+      4608
+    ],
+    "frameSize": [
+      384,
+      576
+    ],
+    "motionDifferenceMean": 39.428985218942906,
+    "videoSha256": "0c6bdc0ffc8675b0717cca7e6f39fe80a0492bcca07effa9e97a57b2efd2f24b"
+  },
+  {
+    "campaign": "orbit",
+    "frameCount": 64,
+    "duration": 5,
+    "playback": "loop",
+    "atlasSize": [
+      3072,
+      4608
+    ],
+    "frameSize": [
+      384,
+      576
+    ],
+    "motionDifferenceMean": 5.963323145736883,
+    "videoSha256": "a01975579ef987894963b4bef8ead66886d0babba24520764e6bd17238417269"
+  }
+]

@@ -548,3 +548,29 @@ Steps: (1) inventory retained/replaced assets and author material/sign sources; 
 ### Night-city kit continuation result
 
 The material/model/import/review-package steps are complete for asset review. Current evidence and limitations are in `docs/night-city-art-2026-09-17/README.md`. Keep publication local and await owner art judgment before any full-track placement or blur rollout.
+
+## Owner-approved animated billboard pass, September 17, 2026
+
+Owner approved the shown Cyberpunk-inspired reference direction and explicitly requires actual animation in Unity. Add original varied advertisement artwork through Scenario, different screen proportions/mounting treatments, independently timed animated ad layers and scrolling typography, plus a few rotating/bobbing 3D holographic display objects. Preserve atmosphere Stage 5, fog/rain/shelter, all driving geometry and collisions, ship, HUD and handling. Author a separate Stage 6 scene. Completion requires native motion evidence showing the displays changing over time, current regression checks and an isolated uncaptured performance/race run. Static images alone do not satisfy this step.
+
+Owner correction during native review: the first candidate is too dense in its opening eight seconds, signs sit at similar heights, face the racer uniformly, flicker harshly and use one display per building. Replace that repeated placement with sparse architectural clusters, height hierarchy, fixed facade/corner orientations and composed stacks/strips/segmented displays. Leave intervening buildings clear. Correct screen/housing depth overlap and distant texture aliasing, then inspect the opening and animation before publication. Previous Stage 6 captures are rejected layout evidence, not an accepted milestone.
+
+Corrected Stage 6 candidate delivered for owner review: 10 screens/five clusters, four actual video campaigns, final native driving and fixed-camera playback, 286 tests, and isolated six-finisher/zero-recovery three-lap lifecycle verification. See [the billboard milestone](current-game/billboards-2026-09-17/README.md). Artistic acceptance remains open.
+
+
+## Billboard driving-readability correction — September 17, 2026
+
+Owner finds most corrected displays invisible from the driving camera and too small. Lower and enlarge hero displays, move the triptych onto the visible outer bend, and correct the corner/landscape approach faces. Retain five sparse groups, independent facade orientations, animation and the z-fighting fix. Verify projected visibility using the recorded chase camera, then inspect a new complete native driving capture. Close-up shots are supplementary and cannot establish driving readability. Preserve all gameplay/weather/collision behavior. GitHub publication remains blocked pending the owner's explicit approval in this task; continue local implementation and native delivery.
+
+Candidate 05 completed with native chase-camera comparison, 286 passing tests, full lap capture, and separate six-finisher/zero-recovery three-lap lifecycle/performance verification. The new build is ready for owner review; see the driving-readability milestone.
+
+
+## Billboard architectural finish and pacing — September 17, 2026
+
+Owner approved convincing mounts, frames and facade recesses; balanced screen brightness against fog; gentler portrait motion, stronger product motion and slower tickers; investigation of candidate 05's two timing hitches. Preserve candidate 05's display positions/dimensions and gameplay/weather. Add facade-connected visual supports and recessed cabinet framing, then compare native driving footage. Remove avoidable performance-recorder allocations/logging, record bounded hitch diagnostics, and run isolated repeat measurements. Do not attribute the old hitches without evidence. Keep source local while publication approval remains pending.
+
+Candidate 06 complete locally: facade-connected mounts/cabinets, balanced emission and campaign pacing, 286 passing tests, native driving/detail captures, and two uncaptured three-lap measurements. The old long stalls did not recur; one 41.47 ms hitch in run A and none above 33.3 ms in run B do not establish a cause. See [finish milestone](current-game/billboard-finish-2026-09-17/README.md). Capture intervals were uneven; artistic acceptance remains open.
+
+## Owner-directed P4 and night-city integration — September 17, 2026
+
+Use latest local Game P4 b787b5f as the playable baseline. Merge its actual animated billboards, mounting, pacing and diagnostic work intact. Build a separate Stage 7 scene that composes the reviewed NightCityKit into the opening city district: grounded service podiums, inhabited frontage, rooftop equipment and differentiated background architecture around existing sparse animated displays. Preserve road/collision, gameplay, ship, HUD and weather/shelter. Verify geometry clearance and baseline component parity, inspect native driving motion against P4, correct visible issues, then run current tests and isolated race/performance validation. Save source and review locally. The previous speed-responsive blur candidate is considered only after the city integration is visually coherent; do not substitute blur for resolved art.

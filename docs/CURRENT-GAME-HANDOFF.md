@@ -1,5 +1,30 @@
 # Current Vector Rush game — new-agent handoff
 
+## Billboard architectural finish — September 17, 2026 (current local candidate)
+
+Owner approved mounts/framing, brightness balance, animation pacing and hitch investigation. Current scene `Assets/Scenes/AnimatedBillboardsStage6.unity`, revision `animated-billboards-stage6-06`, build `e2e0c129118247348e77af4c98d57deb`. Candidate 05 placement/size/orientations are retained. Added cabinet lips, hoods and ledges, with braced supports reaching actual facades and two shared structural connections. Original buildings are not carved. Campaign-specific gains and periods, softer facade wash and slower tickers refine presentation. [Finish milestone and native comparison](current-game/billboard-finish-2026-09-17/README.md).
+
+286 tests passed. Native driving and detail captures complete; the 46.101-second driving recording has uneven intervals and is not a performance benchmark. Two separate uncaptured 1080p three-lap runs passed six-finisher/zero-recovery and result/pause/restart checks. Run A had one 41.47 ms hitch with no recorded GC delta or focus change; run B had none above 33.3 ms. The old 190.926 ms stalls did not recur; no repeatable cause was found. Per-hitch diagnostics are opt-in evidence instrumentation.
+
+Local review: `http://127.0.0.1:8773/review/`; app: `/Users/anping.wang/output/vector-rush-billboards-2026-09-17/Billboards06.app`. Course/collisions, handling, HUD, ship, fog/rain and dry tunnel remain preserved. Game P5 blur is separate. Owner visual acceptance remains open. Source remains local because automatic approval review blocked earlier GitHub publication; direct publication approval is pending. Next is owner review of the actual driving replay; no automatic wider rollout or agent dispatch.
+
+## Billboard driving readability — September 17, 2026 (previous local candidate)
+
+Owner rejected candidate 04's poor driving visibility and small signs. Current scene remains `Assets/Scenes/AnimatedBillboardsStage6.unity`, now revision `animated-billboards-stage6-05`, build `6b98ead89ba04809a6da20de39b5e546`. Main screens are larger/lower; the corner and wide landscape use approach-facing architectural planes; the triptych moved onto the visible outer bend. Five sparse clusters and actual animation remain. [Readability milestone and native comparison](current-game/billboard-readability-2026-09-17/README.md).
+
+286 tests passed and the final native 43.029-second / 1,009-frame lap completed. Isolated three-lap run passed with six finishers, zero recoveries, and results/pause/restart checks; exact timing is in the milestone. Owner visual acceptance remains open. Stage 5 weather/dry tunnel, course/collisions, handling, ship and HUD remain preserved. The current local source includes unpublished billboard work: automatic approval review blocked the GitHub push; await direct publication approval in this task. Game P5 blur remains separate. Next is owner review from the actual driving camera, not acceptance based on close-ups.
+
+## Animated city displays — September 17, 2026 (previous candidate)
+
+Owner requested actual animated ads, then rejected the first layout for opening density, repeated heights/headings, harsh flicker and one sign per building. Current review candidate: `Assets/Scenes/AnimatedBillboardsStage6.unity`, revision `animated-billboards-stage6-04`, build `668888fd7612468c8a867cc8e3cb65ee`. The wrapper builds this scene. [Billboard milestone, native comparisons and measured evidence](current-game/billboards-2026-09-17/README.md).
+
+10 screens form five architectural clusters: high portrait, stacked portrait/ticker, corner pair, synchronized triptych and low landscape/projecting blade. Four original Scenario video campaigns animate in Unity; one kinetic orbital object remains. Surface separation fixes the screen/housing overlap; filtering and removal of fine scanlines reduce distant shimmer. Stage 5 weather, dry tunnel, course, collisions, handling, ship and HUD are preserved.
+
+286 tests passed. Final native evidence: 43.029-second lap / 1,009 frames with audio, and 35.008-second fixed-camera animation / 401 frames. Isolated 1920×1080 three-lap race completed with six finishers, zero recoveries, frozen results, pause and restart checks. Exact timing is in the milestone. Owner artistic acceptance and manual/controller feel remain open. Do not treat the rejected candidates 01/02 as accepted work. Game P5 speed blur is a separate unintegrated branch; do not silently overwrite or claim it here.
+
+Next is owner review of opening density, facade composition and animation. No automatic wider-city rollout or agent dispatch. Preserve prior scenes and source identities.
+
+
 ## Atmosphere correction, September 17, 2026 (current)
 
 Owner approved restoring outdoor haze, dry tunnel road, no sheltered rain/spray, and rain audio fading deeper inside. Current scene `Assets/Scenes/RainAtmosphereStage5.unity`, revision `rain-atmosphere-stage5-01`, build `0aea73895a504a62b9380a8ec3e39c83`. The portable wrapper builds this scene. [Atmosphere milestone and measured evidence](current-game/atmosphere-2026-09-17/README.md).

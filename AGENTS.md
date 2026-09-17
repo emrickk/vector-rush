@@ -1,8 +1,16 @@
+## Owner-directed Game P4 integration — September 17, 2026
+
+The owner now requests building on Game P4 and finishing the work here. Base: P4 `b787b5f`, billboard revision 06. Integrate NightCityKit into a separate playable Stage 7 candidate, preserving P4 animated displays, weather/shelter, course/collisions, ship, HUD and handling. This supersedes the prior asset-viewer-only hold. Inspect real driving footage and validate native runtime. Keep publication local; do not dispatch agents.
+
 ## Current art-first continuation — September 17, 2026
 
 The latest Game P5 owner instruction is to finish polished art materials/assets first. This branch is the isolated NightCityKit package, not the racing/blur branch. Read `docs/night-city-art-2026-09-17/README.md`; inspect the gallery and its labeled native Unity evidence. Preserve current racing scenes, ship, HUD, handling and weather. Keep this milestone local. Track placement, Game P4 animation integration, speed-blur integration and owner artistic acceptance remain open; do not silently promote the asset viewer to the current game or dispatch agents.
 
 # Vector Rush development workflow
+
+## Owner-approved animated billboard correction — 2026-09-17 (current)
+
+Owner approved real Unity animation and requested sparse opening placement, varied heights, architectural orientations, composed display clusters and flicker correction. Current candidate is `Assets/Scenes/AnimatedBillboardsStage6.unity`, revision `animated-billboards-stage6-06`: retains candidate 05 driving visibility and adds facade-connected cabinet supports, balanced light and distinct animation pacing. Two diagnostic runs did not reproduce candidate 05's long stalls; no cause is established. Read the current handoff and billboard-finish milestone. GitHub publication remains blocked pending direct owner approval; keep work local. Prior Stage 5 weather and dry tunnel, course/collisions, handling, ship and HUD are preserved. Owner visual acceptance remains open; no automatic broader rollout or delegation. Game P5 blur work is separate and not integrated here.
 
 ## Owner-approved atmosphere correction — 2026-09-17 (current)
 

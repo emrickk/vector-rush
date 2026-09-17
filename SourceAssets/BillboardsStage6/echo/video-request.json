@@ -1,0 +1,6 @@
+{
+  "prompt": "Animate the illustrated DJ with unmistakable character movement. She rhythmically nods and tilts her head left then right, closes her eyes and smiles, visibly lifts her right hand off the headphone and places it back, her long hair swings and settles. The illustrated hand, head and hair must move clearly, not only the light or background. Polished 2D anime animation, locked camera, preserve the original character, clothing and graphic design. Keep all letters and logo exactly fixed. No camera pan, no zoom, no cuts, no new objects. A complete lively five-second dance gesture, not a static poster.",
+  "duration": "5",
+  "cfgScale": 0.5,
+  "generateAudio": false
+}

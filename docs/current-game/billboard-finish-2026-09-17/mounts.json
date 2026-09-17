@@ -1,0 +1,74 @@
+{
+    "mounts": [
+        {
+            "display": "Cluster 0 / Display 00 / AURORA",
+            "supportedBy": "",
+            "anchors": 2,
+            "nearestFacade": 11.24383544921875,
+            "farthestFacade": 11.24383544921875
+        },
+        {
+            "display": "Cluster 1 / Display 01 / ECHO",
+            "supportedBy": "",
+            "anchors": 4,
+            "nearestFacade": 4.980437755584717,
+            "farthestFacade": 4.980437755584717
+        },
+        {
+            "display": "Cluster 1 / Display 02 / ECHO",
+            "supportedBy": "",
+            "anchors": 2,
+            "nearestFacade": 4.980437755584717,
+            "farthestFacade": 4.980437755584717
+        },
+        {
+            "display": "Cluster 2 / Display 03 / VOLT",
+            "supportedBy": "",
+            "anchors": 4,
+            "nearestFacade": 14.373563766479492,
+            "farthestFacade": 14.373563766479492
+        },
+        {
+            "display": "Cluster 2 / Display 04 / ORBIT",
+            "supportedBy": "Cluster 2 / Display 03 / VOLT",
+            "anchors": 0,
+            "nearestFacade": 0.0,
+            "farthestFacade": 0.0
+        },
+        {
+            "display": "Cluster 3 / Display 05 / AURORA",
+            "supportedBy": "",
+            "anchors": 4,
+            "nearestFacade": 10.005675315856934,
+            "farthestFacade": 10.005675315856934
+        },
+        {
+            "display": "Cluster 3 / Display 06 / AURORA",
+            "supportedBy": "",
+            "anchors": 4,
+            "nearestFacade": 10.005675315856934,
+            "farthestFacade": 10.005675315856934
+        },
+        {
+            "display": "Cluster 3 / Display 07 / AURORA",
+            "supportedBy": "",
+            "anchors": 4,
+            "nearestFacade": 10.005675315856934,
+            "farthestFacade": 10.005675315856934
+        },
+        {
+            "display": "Cluster 4 / Display 08 / ORBIT",
+            "supportedBy": "",
+            "anchors": 2,
+            "nearestFacade": 3.9423599243164063,
+            "farthestFacade": 3.9423599243164063
+        },
+        {
+            "display": "Cluster 4 / Display 09 / VOLT",
+            "supportedBy": "Cluster 4 / Display 08 / ORBIT",
+            "anchors": 0,
+            "nearestFacade": 0.0,
+            "farthestFacade": 0.0
+        }
+    ]
+}

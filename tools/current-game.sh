@@ -3,7 +3,7 @@
 set -euo pipefail
 task_root="$(cd "$(dirname "$0")/.." && pwd)"
 task_editor="${VECTOR_UNITY_EDITOR:-/Applications/Unity/Hub/Editor/6000.6.0f1/Unity.app/Contents/MacOS/Unity}"
-task_scene="Assets/Scenes/RainAtmosphereStage5.unity"
+task_scene="Assets/Scenes/AnimatedBillboardsStage6.unity"
 if [[ ! -x "$task_editor" ]]; then
   echo 'Install Unity 6000.6.0f1 and set VECTOR_UNITY_EDITOR to its executable.' >&2
   exit 2

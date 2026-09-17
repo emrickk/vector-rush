@@ -1,0 +1,34 @@
+{
+  "buildGuid": "668888fd7612468c8a867cc8e3cb65ee",
+  "complete": true,
+  "frames": 401,
+  "duration": 35.008426666259766,
+  "scope": "Native fixed-camera animated displays, real-time Time.time; no manual driving or performance claim.",
+  "groups": {
+    "0": {
+      "frames": 69,
+      "start": 0.0015263557434082031,
+      "end": 5.982960224151611
+    },
+    "1": {
+      "frames": 125,
+      "start": 6.016300678253174,
+      "end": 17.0071964263916
+    },
+    "3": {
+      "frames": 69,
+      "start": 17.033267974853516,
+      "end": 22.986297607421875
+    },
+    "6": {
+      "frames": 69,
+      "start": 23.03544807434082,
+      "end": 29.002546310424805
+    },
+    "8": {
+      "frames": 69,
+      "start": 29.041044235229492,
+      "end": 35.008426666259766
+    }
+  }
+}

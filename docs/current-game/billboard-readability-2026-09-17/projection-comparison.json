@@ -1,0 +1,149 @@
+{
+  "scope": "Geometric projection only; excludes building occlusion. Same recorded candidate04 camera path. Center within inset viewport and height above 12 percent.",
+  "results": {
+    "04": [
+      {
+        "sign": 0,
+        "group": "0",
+        "readableProjectionSeconds": 0.0,
+        "start": null,
+        "end": null
+      },
+      {
+        "sign": 1,
+        "group": "1",
+        "readableProjectionSeconds": 0.81,
+        "start": 4.1,
+        "end": 4.86
+      },
+      {
+        "sign": 2,
+        "group": "1",
+        "readableProjectionSeconds": 0.0,
+        "start": null,
+        "end": null
+      },
+      {
+        "sign": 3,
+        "group": "2",
+        "readableProjectionSeconds": 0.09,
+        "start": 6.57,
+        "end": 6.61
+      },
+      {
+        "sign": 4,
+        "group": "2",
+        "readableProjectionSeconds": 0.0,
+        "start": null,
+        "end": null
+      },
+      {
+        "sign": 5,
+        "group": "3",
+        "readableProjectionSeconds": 0.85,
+        "start": 7.68,
+        "end": 8.49
+      },
+      {
+        "sign": 6,
+        "group": "3",
+        "readableProjectionSeconds": 0.81,
+        "start": 7.55,
+        "end": 8.32
+      },
+      {
+        "sign": 7,
+        "group": "3",
+        "readableProjectionSeconds": 0.81,
+        "start": 7.42,
+        "end": 8.19
+      },
+      {
+        "sign": 8,
+        "group": "4",
+        "readableProjectionSeconds": 0.0,
+        "start": null,
+        "end": null
+      },
+      {
+        "sign": 9,
+        "group": "4",
+        "readableProjectionSeconds": 0.0,
+        "start": null,
+        "end": null
+      }
+    ],
+    "05": [
+      {
+        "sign": 0,
+        "group": "0",
+        "readableProjectionSeconds": 2.35,
+        "start": 0.0,
+        "end": 2.3
+      },
+      {
+        "sign": 1,
+        "group": "1",
+        "readableProjectionSeconds": 3.03,
+        "start": 2.9,
+        "end": 5.89
+      },
+      {
+        "sign": 2,
+        "group": "1",
+        "readableProjectionSeconds": 0.0,
+        "start": null,
+        "end": null
+      },
+      {
+        "sign": 3,
+        "group": "2",
+        "readableProjectionSeconds": 0.64,
+        "start": 6.66,
+        "end": 7.25
+      },
+      {
+        "sign": 4,
+        "group": "2",
+        "readableProjectionSeconds": 3.58,
+        "start": 3.41,
+        "end": 6.95
+      },
+      {
+        "sign": 5,
+        "group": "3",
+        "readableProjectionSeconds": 3.54,
+        "start": 4.91,
+        "end": 8.41
+      },
+      {
+        "sign": 6,
+        "group": "3",
+        "readableProjectionSeconds": 3.46,
+        "start": 4.78,
+        "end": 8.19
+      },
+      {
+        "sign": 7,
+        "group": "3",
+        "readableProjectionSeconds": 3.46,
+        "start": 4.57,
+        "end": 7.98
+      },
+      {
+        "sign": 8,
+        "group": "4",
+        "readableProjectionSeconds": 0.68,
+        "start": 9.64,
+        "end": 10.28
+      },
+      {
+        "sign": 9,
+        "group": "4",
+        "readableProjectionSeconds": 0.0,
+        "start": null,
+        "end": null
+      }
+    ]
+  }
+}

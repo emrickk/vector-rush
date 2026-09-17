@@ -2,6 +2,24 @@
 
 Recovered the later Game P5 instruction that prioritizes polished art assets before racing presentation. Continued its existing isolated worktree and source assets. Delivered 19 prefabs / 38 LOD meshes, 33 Unity materials, 69 maps, six drawn sign designs and three Scenario ads. Fixed volume persistence, material/source retention, rail supports, review sign placement and texture directionality. All 282 existing tests pass; the final review-lighting/layout adjustment compiled and rebuilt. Native review build `b154fc6beded40999e21c9d816c53aba` completed both warmed captures. Package checks verify source/engine parity and unchanged racing scenes. [Asset gallery and rebuild guide](night-city-art-2026-09-17/README.md). Owner artistic review and racing integration remain open; no external publication.
 
+## 2026-09-17 — Make animated billboards readable from the driving camera
+
+Owner found candidate 04 mostly invisible and too small. Candidate 05 enlarges/lowers the primary displays, changes the corner and landscape to road-approach facade planes, and relocates the triptych onto the visible outer bend. Five sparse groups and animation remain; no gameplay, weather or collision changes. Native chase-camera comparisons replace close-ups as the primary layout evidence.
+
+286 tests passed; complete 43.029-second native lap with 1,009 timestamped frames and audio. Isolated 1920×1080 three-lap run: six finishers, zero recoveries; results, pause and restart checks passed. Frame delivery: 8.391 ms mean, 8.995 ms P95, 9.301 ms P99, 190.926 ms maximum, 2 frames above 33.3 ms. These are warmed frame-delivery measurements, not GPU timings.
+
+[Readability milestone](current-game/billboard-readability-2026-09-17/README.md). Owner artistic acceptance remains open. Local source only: GitHub publication is still blocked pending direct approval. Prior 04 layout and its results remain historical.
+
+## 2026-09-17 — Animated billboard clusters and flicker correction
+
+Owner requested actual animated ads, then rejected the first layout for opening density, repeated heights/headings, harsh flicker and one sign per building. Current review candidate: `Assets/Scenes/AnimatedBillboardsStage6.unity`, revision `animated-billboards-stage6-04`, build `668888fd7612468c8a867cc8e3cb65ee`. The wrapper builds this scene. [Billboard milestone, native comparisons and measured evidence](current-game/billboards-2026-09-17/README.md).
+
+10 screens form five architectural clusters: high portrait, stacked portrait/ticker, corner pair, synchronized triptych and low landscape/projecting blade. Four original Scenario video campaigns animate in Unity; one kinetic orbital object remains. Surface separation fixes the screen/housing overlap; filtering and removal of fine scanlines reduce distant shimmer. Stage 5 weather, dry tunnel, course, collisions, handling, ship and HUD are preserved.
+
+286 tests passed. Final native evidence: 43.029-second lap / 1,009 frames with audio, and 35.008-second fixed-camera animation / 401 frames. Isolated 1920×1080 three-lap race completed with six finishers, zero recoveries, frozen results, pause and restart checks. Exact timing is in the milestone. Owner artistic acceptance and manual/controller feel remain open. Do not treat the rejected candidates 01/02 as accepted work. Game P5 speed blur is a separate unintegrated branch; do not silently overwrite or claim it here.
+
+Next is owner review of opening density, facade composition and animation. No automatic wider-city rollout or agent dispatch. Preserve prior scenes and source identities.
+
 # Development history
 
 ## 2026-09-17 — Rain presentation on the corrected road
@@ -770,3 +788,9 @@ See [milestone and matched native comparisons](current-game/underground-finish-2
 Owner approved dry covered road, no tunnel rain/spray, rain sound fading with depth and stronger outdoor haze. Added a collider-derived shelter profile and spatial road material palette in `RainAtmosphereStage5.unity`; the current-game wrapper selects it. Original vertex positions/collision meshes, course, ship, HUD and handling remain preserved. Retained prior scenes and the merged Apex icon.
 
 282 tests passed. A 43.029-second native lap provides 1,009 timestamped frames, captured audio and shelter telemetry; inspected before/after views visibly remove wet tunnel reflections. The isolated 1920×1080 three-lap race passed with six finishers, zero recoveries, frozen results, pause and restart checks. Frame delivery: 8.33479 ms mean, 8.33334 ms P95/P99, 17.20417 ms maximum, zero frames above 33.3 ms. See [the atmosphere milestone](current-game/atmosphere-2026-09-17/README.md) for exact evidence and local review/build paths. This remains an owner-review candidate, with wider art and manual/controller acceptance open.
+
+## September 17, 2026 — billboard mounts, lighting and pacing (candidate 06)
+
+Retained candidate 05 display placement and sizes. Added inset cabinet framing, hoods/ledges and a combined braced-support mesh anchored to actual facade triangles; two signs share neighbouring anchored structures. Building meshes are not carved and no colliders are added. Balanced campaign emission/facade wash, slowed portrait/ticker motion and accelerated product loops. Added bounded per-hitch time/progress/GC/focus diagnostics in opt-in performance evidence.
+
+286 tests passed. Native 46.101-second driving replay and 35-second detail capture completed; uneven capture intervals are disclosed. Two separate 1080p three-lap runs completed with six finishers, zero recoveries and intact lifecycle checks. Run A: mean 8.35 ms, P99 9.24 ms, one 41.47 ms hitch. Run B: mean/P99 8.33 ms, no frames above 33.3 ms. Candidate 05's 190.926 ms stalls did not recur; no cause established. Gameplay/course/weather are preserved. [Evidence and limitations](current-game/billboard-finish-2026-09-17/README.md). Local source milestone; publication approval and owner artistic acceptance remain open.
