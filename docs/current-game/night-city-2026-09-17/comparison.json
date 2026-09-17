@@ -1,0 +1,326 @@
+[
+  {
+    "targetProgress": 0.025,
+    "label": "P4 baseline",
+    "buildGuid": "e2e0c129118247348e77af4c98d57deb",
+    "frame": {
+      "file": "frames/frame-00025.png",
+      "seconds": 1.0666666666666664,
+      "progress": 0.02530580945312977,
+      "cameraPosition": {
+        "x": 32.456138610839844,
+        "y": 38.49736404418945,
+        "z": -224.13902282714844
+      },
+      "cameraRotation": {
+        "x": 0.0408339723944664,
+        "y": 0.7295758724212646,
+        "z": -0.04922539368271828,
+        "w": 0.6809026598930359
+      },
+      "fov": 70.52433776855469
+    },
+    "image": "view-00-0.jpg",
+    "nativeSize": [
+      1280,
+      720
+    ]
+  },
+  {
+    "targetProgress": 0.025,
+    "label": "Stage 7 city integration",
+    "buildGuid": "f86cee2c911749a783c67594a6e48fd1",
+    "frame": {
+      "file": "frames/frame-00019.png",
+      "seconds": 1.045333333333332,
+      "progress": 0.025045817717909813,
+      "cameraPosition": {
+        "x": 32.93177795410156,
+        "y": 38.5008430480957,
+        "z": -224.14503479003906
+      },
+      "cameraRotation": {
+        "x": 0.042544055730104446,
+        "y": 0.7305065393447876,
+        "z": -0.050948113203048706,
+        "w": 0.6796723008155823
+      },
+      "fov": 70.52925872802734
+    },
+    "image": "view-00-1.jpg",
+    "nativeSize": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "targetProgress": 0.065,
+    "label": "P4 baseline",
+    "buildGuid": "e2e0c129118247348e77af4c98d57deb",
+    "frame": {
+      "file": "frames/frame-00063.png",
+      "seconds": 2.6880000000000006,
+      "progress": 0.06467816978693008,
+      "cameraPosition": {
+        "x": 103.16364288330078,
+        "y": 38.05559158325195,
+        "z": -224.36512756347656
+      },
+      "cameraRotation": {
+        "x": 0.07534374296665192,
+        "y": 0.6543312072753906,
+        "z": -0.00886070542037487,
+        "w": 0.7523931860923767
+      },
+      "fov": 70.3934326171875
+    },
+    "image": "view-01-0.jpg",
+    "nativeSize": [
+      1280,
+      720
+    ]
+  },
+  {
+    "targetProgress": 0.065,
+    "label": "Stage 7 city integration",
+    "buildGuid": "f86cee2c911749a783c67594a6e48fd1",
+    "frame": {
+      "file": "frames/frame-00047.png",
+      "seconds": 2.687999999999999,
+      "progress": 0.06547527015209198,
+      "cameraPosition": {
+        "x": 105.5771255493164,
+        "y": 38.057228088378906,
+        "z": -224.1541290283203
+      },
+      "cameraRotation": {
+        "x": 0.07723058760166168,
+        "y": 0.6506500244140625,
+        "z": -0.008386589586734772,
+        "w": 0.7553936839103699
+      },
+      "fov": 70.4363021850586
+    },
+    "image": "view-01-1.jpg",
+    "nativeSize": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "targetProgress": 0.145,
+    "label": "P4 baseline",
+    "buildGuid": "e2e0c129118247348e77af4c98d57deb",
+    "frame": {
+      "file": "frames/frame-00139.png",
+      "seconds": 5.930666666666667,
+      "progress": 0.144709512591362,
+      "cameraPosition": {
+        "x": 227.93087768554688,
+        "y": 44.51589584350586,
+        "z": -161.11451721191406
+      },
+      "cameraRotation": {
+        "x": 0.05181994289159775,
+        "y": 0.3071461319923401,
+        "z": 0.048450686037540436,
+        "w": 0.9490144848823547
+      },
+      "fov": 70.73246765136719
+    },
+    "image": "view-02-0.jpg",
+    "nativeSize": [
+      1280,
+      720
+    ]
+  },
+  {
+    "targetProgress": 0.145,
+    "label": "Stage 7 city integration",
+    "buildGuid": "f86cee2c911749a783c67594a6e48fd1",
+    "frame": {
+      "file": "frames/frame-00102.png",
+      "seconds": 5.930666666666665,
+      "progress": 0.1452336311340332,
+      "cameraPosition": {
+        "x": 229.47073364257812,
+        "y": 44.67063903808594,
+        "z": -159.6269073486328
+      },
+      "cameraRotation": {
+        "x": 0.054120469838380814,
+        "y": 0.2954074442386627,
+        "z": 0.049388278275728226,
+        "w": 0.9525577425956726
+      },
+      "fov": 70.73322296142578
+    },
+    "image": "view-02-1.jpg",
+    "nativeSize": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "targetProgress": 0.225,
+    "label": "P4 baseline",
+    "buildGuid": "e2e0c129118247348e77af4c98d57deb",
+    "frame": {
+      "file": "frames/frame-00209.png",
+      "seconds": 8.917333333333334,
+      "progress": 0.2254144847393036,
+      "cameraPosition": {
+        "x": 258.59417724609375,
+        "y": 56.43848419189453,
+        "z": -24.69954490661621
+      },
+      "cameraRotation": {
+        "x": 0.011543918401002884,
+        "y": -0.16825805604457855,
+        "z": 0.0769691988825798,
+        "w": 0.9826656579971313
+      },
+      "fov": 70.75738525390625
+    },
+    "image": "view-03-0.jpg",
+    "nativeSize": [
+      1280,
+      720
+    ]
+  },
+  {
+    "targetProgress": 0.225,
+    "label": "Stage 7 city integration",
+    "buildGuid": "f86cee2c911749a783c67594a6e48fd1",
+    "frame": {
+      "file": "frames/frame-00152.png",
+      "seconds": 8.874666666666666,
+      "progress": 0.22489051520824432,
+      "cameraPosition": {
+        "x": 258.76055908203125,
+        "y": 56.401737213134766,
+        "z": -24.984094619750977
+      },
+      "cameraRotation": {
+        "x": 0.014851239509880543,
+        "y": -0.17060618102550507,
+        "z": 0.07774956524372101,
+        "w": 0.9821547865867615
+      },
+      "fov": 70.75769805908203
+    },
+    "image": "view-03-1.jpg",
+    "nativeSize": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "targetProgress": 0.27,
+    "label": "P4 baseline",
+    "buildGuid": "e2e0c129118247348e77af4c98d57deb",
+    "frame": {
+      "file": "frames/frame-00248.png",
+      "seconds": 10.581333333333335,
+      "progress": 0.26971402764320374,
+      "cameraPosition": {
+        "x": 216.0876922607422,
+        "y": 64.6545639038086,
+        "z": 41.61193084716797
+      },
+      "cameraRotation": {
+        "x": 0.007630294654518366,
+        "y": -0.4007263481616974,
+        "z": 0.029915623366832733,
+        "w": 0.9156774878501892
+      },
+      "fov": 71.03334045410156
+    },
+    "image": "view-04-0.jpg",
+    "nativeSize": [
+      1280,
+      720
+    ]
+  },
+  {
+    "targetProgress": 0.27,
+    "label": "Stage 7 city integration",
+    "buildGuid": "f86cee2c911749a783c67594a6e48fd1",
+    "frame": {
+      "file": "frames/frame-00182.png",
+      "seconds": 10.581333333333333,
+      "progress": 0.27024978399276733,
+      "cameraPosition": {
+        "x": 214.87551879882812,
+        "y": 64.803466796875,
+        "z": 42.7299690246582
+      },
+      "cameraRotation": {
+        "x": 0.010690146125853062,
+        "y": -0.3998277485370636,
+        "z": 0.029745157808065414,
+        "w": 0.9160451889038086
+      },
+      "fov": 70.82438659667969
+    },
+    "image": "view-04-1.jpg",
+    "nativeSize": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "targetProgress": 0.82,
+    "label": "P4 baseline",
+    "buildGuid": "e2e0c129118247348e77af4c98d57deb",
+    "frame": {
+      "file": "frames/frame-00857.png",
+      "seconds": 36.565333333333335,
+      "progress": 0.8197408318519592,
+      "cameraPosition": {
+        "x": -263.75091552734375,
+        "y": 17.733068466186523,
+        "z": -106.47930908203125
+      },
+      "cameraRotation": {
+        "x": 0.089666947722435,
+        "y": 0.9840903878211975,
+        "z": -0.1357230842113495,
+        "w": -0.07145035266876221
+      },
+      "fov": 69.32239532470703
+    },
+    "image": "view-05-0.jpg",
+    "nativeSize": [
+      1280,
+      720
+    ]
+  },
+  {
+    "targetProgress": 0.82,
+    "label": "Stage 7 city integration",
+    "buildGuid": "f86cee2c911749a783c67594a6e48fd1",
+    "frame": {
+      "file": "frames/frame-00668.png",
+      "seconds": 36.586666666666666,
+      "progress": 0.8203712105751038,
+      "cameraPosition": {
+        "x": -264.7649841308594,
+        "y": 17.603906631469727,
+        "z": -108.20407104492188
+      },
+      "cameraRotation": {
+        "x": 0.09326177835464478,
+        "y": 0.9853984713554382,
+        "z": -0.13615956902503967,
+        "w": -0.04186467081308365
+      },
+      "fov": 69.39867401123047
+    },
+    "image": "view-05-1.jpg",
+    "nativeSize": [
+      1920,
+      1080
+    ]
+  }
+]

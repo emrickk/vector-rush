@@ -14,7 +14,7 @@ namespace VectorRush.Editor
         const string Kit = "Assets/Art/NightCityKit";
         const string Root = "Assets/Art/NightCityStage7";
         struct Triangle { public Vector3 a,b,c; }
-        [Serializable] public class Site { public float progress; public int side; public Vector3 road,wall,normal; public float distance; }
+        [Serializable] public class Site { public float progress; public int side; public Vector3 road,wall,normal; public float distance; public bool clear; }
         [Serializable] class Survey { public List<Site> sites = new(); }
         static List<Triangle> Facades(ProductionWorld world)
         {
@@ -50,16 +50,21 @@ namespace VectorRush.Editor
             EditorSceneManager.OpenScene(BillboardSceneSetup.Candidate,OpenSceneMode.Single);
             var world=UnityEngine.Object.FindFirstObjectByType<ProductionWorld>();world.ValidateReady();
             var faces=Facades(world);var survey=new Survey();
-            for(float p=.03f;p<.305f;p+=.0075f)foreach(int side in new[]{-1,1}) {
-                var f=world.track.Evaluate(p);var right=Vector3.ProjectOnPlane(f.Right,Vector3.up).normalized;
-                if(Hit(f.Position-Vector3.up*3,right*side,faces,out var hit,out var n))survey.sites.Add(new Site{progress=p,side=side,road=f.Position,wall=hit,normal=n,distance=Vector3.Distance(hit,f.Position-Vector3.up*3)});
+            track=world.track;siteFacades=faces;footprints.Clear();
+            for(int sample=10;sample<=120;sample++)foreach(int side in new[]{-1,1}) {
+                float progress=sample*.0025f;
+                var frame=track.Evaluate(progress);var right=Vector3.ProjectOnPlane(frame.Right,Vector3.up).normalized;
+                if(!Hit(frame.Position-Vector3.up*3,right*side,faces,out var hit,out var normal))continue;
+                var site=new Site{progress=progress,side=side,road=frame.Position,wall=hit,normal=normal,distance=Vector3.Distance(hit,frame.Position-Vector3.up*3)};
+                site.clear=site.distance>=26&&site.distance<=60&&CanPlace(site,out _,out _);
+                survey.sites.Add(site);
             }
             File.WriteAllText(ProductionSceneSetup.RequiredFlag("-productionEvidence")+"/sites.json",JsonUtility.ToJson(survey,true));
             Debug.Log("NIGHT_CITY_SITE_SURVEY_COMPLETE");
         }
         [Serializable] class IntegrationReport
         {
-            public string sourceRevision="animated-billboards-stage6-06",revision="night-city-stage7-01",courseHash;
+            public string sourceRevision="animated-billboards-stage6-06",revision="night-city-stage7-02",courseHash;
             public bool sourceSceneUnchanged,collidersUnchanged,billboardsUnchanged;
             public int prefabs;public List<Site> sites=new();
         }
@@ -82,7 +87,7 @@ namespace VectorRush.Editor
             placed=0;footprints.Clear();var faces=Facades(world);siteFacades=faces;
             var report=new IntegrationReport{courseHash=world.courseHash};
             // Alternate sides and leave gaps around P4's large animated compositions.
-            float[] targets={.055f,.105f,.167f,.230f,.280f};int[] sides={-1,1,-1,1,-1};
+            float[] targets={.0375f,.095f,.160f,.240f,.285f};int[] sides={-1,1,-1,1,-1};
             for(int i=0;i<targets.Length;i++) {
                 Site site=null;
                 foreach(float delta in new[]{0f,-.004f,.004f,-.008f,.008f}) {
@@ -92,7 +97,7 @@ namespace VectorRush.Editor
                     float gap=Vector3.Distance(wall,f.Position-Vector3.up*3);
                     if(gap<26||gap>60)continue;
                     var proposed=new Site{progress=targets[i]+delta,side=sides[i],road=f.Position,wall=wall,normal=normal,distance=gap};
-                    if(CanPlace(proposed,out _,out _)){site=proposed;break;}
+                    if(CanPlace(proposed,out _,out _)){proposed.clear=true;site=proposed;break;}
                 }
                 if(site==null)throw new InvalidDataException("No clear facade site for terrace "+i+". Inspect survey before changing layout.");
                 BuildTerrace(site,i);report.sites.Add(site);
@@ -111,7 +116,7 @@ namespace VectorRush.Editor
         }
         static bool CanPlace(Site site,out Vector3 center,out float depth)
         {
-            depth=Mathf.Clamp(site.distance-23,6,11);center=site.wall+site.normal*(depth*.5f+.15f);center.y=site.road.y-4.5f;
+            depth=Mathf.Clamp(site.distance-23,6,11);center=site.wall+site.normal*(depth*.5f+.15f);center.y=site.road.y-(site.side>0?.5f:4.5f);
             var q=Quaternion.LookRotation(site.normal);Vector3 size=new Vector3(15,1,depth);
             var bounds=new Bounds(center,new Vector3(Mathf.Abs(site.normal.z)*15+Mathf.Abs(site.normal.x)*depth,1,Mathf.Abs(site.normal.x)*15+Mathf.Abs(site.normal.z)*depth));
             if(footprints.Any(b=>b.Intersects(bounds)))return false;
@@ -146,13 +151,15 @@ namespace VectorRush.Editor
             Block(node,"Wet roof coping",new Vector3(0,.10f,0),new Vector3(15.6f,.20f,depth+.6f),"corrugated_steel_wet");
             // Source units are metres. The slightly enlarged service architecture reads beside the viaduct.
             float back=-depth*.5f;
+            Block(node,"Shop service room",new Vector3(-2.1f,2.3f,back+1.0f),new Vector3(8.15f,4.2f,2.2f),"ceramic_tiles");
+            Block(node,"Shop structural roof",new Vector3(-2.1f,4.5f,back+1.0f),new Vector3(8.4f,.2f,2.4f),"corrugated_steel_wet");
             Place(node,"Shopfront",new Vector3(-2.1f,.2f,back+2.1f),1.25f);
             Place(node,"CoolingUnit",new Vector3(4.1f,.2f,back+2.8f),1.15f);
             Place(node,index%2==0?"WaterTank":"RoofExtractor",new Vector3(4.6f,.2f,depth*.5f-2),1.15f);
-            Place(node,"DuctBank",new Vector3(-3.5f,4.95f,back+1.8f),.8f);
+            Place(node,"DuctBank",new Vector3(-3.5f,4.6f,back+.7f),.65f);
             Place(node,"PowerCabinet",new Vector3(1.5f,.2f,depth*.5f-1.4f),1);
-            if(index==1||index==3)Place(node,"NeonRoofSign",new Vector3(-2.2f,4.95f,back+3.2f),.85f);
-            else Place(node,"Sign_square",new Vector3(-5.5f,2.7f,back+4.5f),.75f);
+            if(index==1||index==3)Place(node,"NeonRoofSign",new Vector3(-2.2f,4.6f,back+1.8f),.85f);
+            else Place(node,"Sign_square",new Vector3(-5.5f,.2f,back+4.5f),.75f);
             // Broken parapet runs leave the shop entry and service access readable.
             foreach(float x in new[]{-7.3f,7.3f})Block(node,"Raised side parapet",new Vector3(x,.7f,0),new Vector3(.32f,1.0f,depth+.15f),"painted_graphite");
             Block(node,"Front parapet left",new Vector3(-5.1f,.7f,depth*.5f),new Vector3(4.2f,1,.3f),"painted_graphite");

@@ -33,5 +33,46 @@ namespace VectorRush.Tests
             foreach(var group in groups){Assert.That(group.lodCount,Is.EqualTo(2));foreach(var lod in group.GetLODs())Assert.That(lod.renderers.All(r=>r),Is.True);}
             foreach(var renderer in root.GetComponentsInChildren<MeshRenderer>())Assert.That(renderer.sharedMaterials.All(m=>m),Is.True);
         }
+
+        [Test] public void IntegratedMeshesClearTheDrivingCorridorAndAnimatedScreens()
+        {
+            EditorSceneManager.OpenScene(Editor.NightCityIntegrationSetup.Candidate,OpenSceneMode.Single);
+            var world=Object.FindFirstObjectByType<ProductionWorld>();
+            var root=GameObject.Find("Night city / occupied service terraces");
+            var renderers=root.GetComponentsInChildren<MeshRenderer>();
+            var screens=Object.FindFirstObjectByType<AnimatedBillboards>().displays;
+            foreach(var renderer in renderers)
+            {
+                foreach(var screen in screens)
+                    Assert.That(renderer.bounds.Intersects(screen.GetComponent<Renderer>().bounds),Is.False,renderer.name+" intersects "+screen.name);
+                for(int sample=0;sample<2400;sample++)
+                {
+                    var frame=world.track.Evaluate(sample/2400f);
+                    for(int lateral=-6;lateral<=6;lateral++)
+                    {
+                        var point=frame.Position+frame.Right*lateral/6f*(world.track.Width*.5f+3);
+                        var bounds=renderer.bounds;
+                        bool overlaps=point.x>=bounds.min.x&&point.x<=bounds.max.x&&point.z>=bounds.min.z&&point.z<=bounds.max.z;
+                        Assert.That(overlaps,Is.False,renderer.name+" overlaps road at "+sample/2400f);
+                    }
+                }
+            }
+        }
+
+        [Test] public void RooftopEquipmentHasAStructuralSupportingRoof()
+        {
+            EditorSceneManager.OpenScene(Editor.NightCityIntegrationSetup.Candidate,OpenSceneMode.Single);
+            var root=GameObject.Find("Night city / occupied service terraces");
+            foreach(Transform terrace in root.transform)
+            {
+                var roof=terrace.Find("Shop structural roof").GetComponent<MeshFilter>().sharedMesh.bounds;
+                float surface=terrace.Find("Shop structural roof").localPosition.y+roof.max.y;
+                foreach(Transform child in terrace)
+                {
+                    if(!child.name.StartsWith("NC_DuctBank")&&!child.name.StartsWith("NC_NeonRoofSign"))continue;
+                    Assert.That(child.localPosition.y,Is.EqualTo(surface).Within(.01f),child.name);
+                }
+            }
+        }
     }
 }

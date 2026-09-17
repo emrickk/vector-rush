@@ -2,6 +2,8 @@
 
 The owner now requests building on Game P4 and finishing the work here. Base: P4 `b787b5f`, billboard revision 06. Integrate NightCityKit into a separate playable Stage 7 candidate, preserving P4 animated displays, weather/shelter, course/collisions, ship, HUD and handling. This supersedes the prior asset-viewer-only hold. Inspect real driving footage and validate native runtime. Keep publication local; do not dispatch agents.
 
+Current local playable candidate is `Assets/Scenes/NightCityStage7.unity`, revision `night-city-stage7-02`. It builds and passes 290 tests; the foreground native three-lap race passes. Read the current handoff for the preserved failed unfocused run, resolution caveat, native replay and owner-review boundary. The portable wrapper selects Stage 7; `p4-build` retains the exact Stage 6 comparison. The owner approved committing and pushing this milestone on September 17, 2026. No owner artistic acceptance or speed-blur integration is implied.
+
 ## Current art-first continuation — September 17, 2026
 
 The latest Game P5 owner instruction is to finish polished art materials/assets first. This branch is the isolated NightCityKit package, not the racing/blur branch. Read `docs/night-city-art-2026-09-17/README.md`; inspect the gallery and its labeled native Unity evidence. Preserve current racing scenes, ship, HUD, handling and weather. Keep this milestone local. Track placement, Game P4 animation integration, speed-blur integration and owner artistic acceptance remain open; do not silently promote the asset viewer to the current game or dispatch agents.

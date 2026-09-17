@@ -1,0 +1,11 @@
+{
+    "status": "NATIVE_EXPERIENCE_BUILD_COMPLETE_NOT_QUALITY_ACCEPTED",
+    "unityVersion": "6000.6.0f1",
+    "buildGuid": "f86cee2c911749a783c67594a6e48fd1",
+    "scene": "Assets/Scenes/NightCityStage7.unity",
+    "appPath": "/Users/anping.wang/output/vector-rush-p4-city-integration-2026-09-17/NightCityStage7-02.app",
+    "courseHash": "a43cff0540e9b86cc0d60810b1f19e6cd49ae52d69e41ea43f6fb5b590790abc",
+    "artRevision": "night-city-stage7-02",
+    "renderers": 263,
+    "lights": 266
+}

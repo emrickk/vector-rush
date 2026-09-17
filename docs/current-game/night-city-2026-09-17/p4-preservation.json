@@ -1,0 +1,7 @@
+{
+  "baseline": "b787b5f",
+  "branch": "integration/p4-night-city-20260917",
+  "originalUnityFilesVerified": 2169,
+  "modifiedOrDeletedOriginalUnityFiles": [],
+  "scope": "All original P4 Assets, Packages and ProjectSettings remain byte-identical according to Git. Stage 7 assets, authoring and tests are additive. Local source only; no publication manifest was regenerated."
+}
