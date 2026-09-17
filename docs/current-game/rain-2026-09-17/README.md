@@ -31,3 +31,7 @@ Rain has a fixed intensity; no weather controls, traction changes, windshield dr
 `RainPresentation` uses bounded world-space particle systems, private random streams, environment-only raycasts and the existing effects volume. It pauses particles/audio with game pause. Captures optionally record weather telemetry; ordinary play does not write it. `RainSceneSetup.Prepare` copies the dry candidate and clones only wet materials, preserving mesh references. Use a fresh authoring evidence folder; the tool replaces its own rain scene/materials.
 
 `tools/generate-city-rain.py` exactly reproduces `Assets/Audio/Rain/CityRain.wav`: original filtered stereo noise with a loop crossfade, no external recordings or API assets. The particle shader is original procedural shading. Unity 6000.6.0f1 and existing project dependencies suffice to build.
+
+## Relay integration
+
+Preserved the newer owner-selected Apex icon commit when publishing this rain milestone. That merge adds branding assets and default icon settings, plus history notes, without changing rain or driving implementation. The measured RainRoad03 app was built before that icon-only merge; its runtime validation is unchanged, but it does not claim the new application icon.
