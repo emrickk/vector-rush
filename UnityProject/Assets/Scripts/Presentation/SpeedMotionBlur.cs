@@ -8,7 +8,11 @@ namespace VectorRush
         public static float PresentationIntensity(float speed01, float boost01, bool reducedMotion)
         {
             if (reducedMotion) return 0;
-            return Mathf.Clamp(Mathf.SmoothStep(0f, .32f, Mathf.InverseLerp(.12f, .72f, speed01)) + Mathf.Clamp01(boost01) * .08f, 0f, .4f);
+            // Resolve city detail below 95 km/h; keep gaining blur up to 380 km/h.
+            // Gate boost by speed too, so pressing boost at rest cannot smear the city.
+            float motion = Mathf.InverseLerp(.25f, 1f, speed01);
+            float speedBlur = Mathf.SmoothStep(0f, .72f, motion);
+            return Mathf.Clamp01(speedBlur + Mathf.Clamp01(boost01) * .16f * motion);
         }
 
         public static float TargetIntensity(float speed01, float boost01, bool reducedMotion)
@@ -43,7 +47,7 @@ namespace VectorRush
             {
                 blur.mode.Override(MotionBlurMode.CameraAndObjects);
                 blur.quality.Override(MotionBlurQuality.High);
-                blur.clamp.Override(.035f);
+                blur.clamp.Override(.06f);
             }
             ResetState();
         }
@@ -70,7 +74,7 @@ namespace VectorRush
                 if (chase.IsViewTransitioning) { CurrentIntensity = 0; Apply(); return; }
             }
             CurrentIntensity = Mathf.Lerp(CurrentIntensity, target,
-                1f - Mathf.Exp(-(target > CurrentIntensity ? 5.5f : 3.5f) * Time.deltaTime));
+                1f - Mathf.Exp(-(target > CurrentIntensity ? 5.5f : 8f) * Time.deltaTime));
             Apply();
         }
 

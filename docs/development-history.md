@@ -1,3 +1,11 @@
+## 2026-09-17 — Game P5 speed-blur source candidate (verification blocked)
+
+Continued the owner's Game P5 approval: detail at low speed, increasing blur at high speed. Isolated branch `game/p5-speed-blur` starts from `f79e4e7`; Game P4's uncommitted billboard work remains in `vector-rush-relay` and was not changed.
+
+Presentation blur now starts above 95 km/h, grows through 380 km/h to .72, and reaches .88 with boost. Boost contribution is speed-gated; deceleration smoothing clears faster. Motion-vector clamp rises from .035 to .06. Existing camera/object vectors retain depth-dependent apparent motion. Reduced Motion, phase reset and view-transition suppression remain. No scene, ship, HUD, handling or geometry edit; reference-city asset/detail work is still pending.
+
+Updated existing tests and added low-speed boost gating and high-speed monotonicity assertions. `git diff --check` passed. Unity tests did not execute: sandboxed startup could not connect to macOS licensing services, and automatic approval review rejected the elevated test launch with a disconnected review stream / content_filter error. No native build, performance result or visual acceptance is claimed. Resume by closing the stalled isolated Unity process if needed, then run the wrapper tests, build and native low/fast/deceleration capture. Do not publish or integrate this unverified tuning as a completed milestone.
+
 # Development history
 
 ## 2026-09-17 — Rain presentation on the corrected road

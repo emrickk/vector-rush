@@ -1,3 +1,7 @@
+## Game P5 continuation: speed-dependent city clarity (2026-09-17)
+
+Owner approved detail at low speed and increasingly strong blur at racing speed. Work is isolated on `game/p5-speed-blur`, based on atmosphere commit `f79e4e7`, while Game P4 owns billboards. Preserve scene, city assets, ship, HUD, course and handling. Use the existing URP camera/object motion vectors for distance-dependent streaking. Validate low-speed/boost gating and increasing high-speed intensity, then build and inspect native motion. Visual acceptance remains open; wider reference-city detail is not delivered by this blur tuning.
+
 # Vector Rush Implementation Plan
 
 ## Selected Apex application icon — 2026-09-17

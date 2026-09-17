@@ -37,11 +37,31 @@ namespace VectorRush.Tests
         public void PresentationBlurEngagesAtOrdinaryCruiseAndHonorsReducedMotion()
         {
             float cruise = ChaseCameraMotion.Speed01(175f);
-            Assert.That(SpeedMotionBlurModel.PresentationIntensity(cruise, 0, false), Is.GreaterThan(.15f));
+            Assert.That(SpeedMotionBlurModel.PresentationIntensity(cruise, 0, false), Is.GreaterThan(.1f));
             Assert.That(SpeedMotionBlurModel.PresentationIntensity(cruise, 0, false), Is.LessThan(.3f));
             Assert.That(SpeedMotionBlurModel.PresentationIntensity(0, 0, false), Is.Zero);
             Assert.That(SpeedMotionBlurModel.PresentationIntensity(1, 1, true), Is.Zero);
-            Assert.That(SpeedMotionBlurModel.PresentationIntensity(3, 3, false), Is.EqualTo(.4f).Within(.001f));
+            Assert.That(SpeedMotionBlurModel.PresentationIntensity(3, 3, false), Is.EqualTo(.88f).Within(.001f));
+        }
+
+        [Test]
+        public void CityDetailReturnsAtLowSpeedEvenWhileBoosting()
+        {
+            foreach (float kph in new[] { 0f, 40f, 95f })
+                Assert.That(SpeedMotionBlurModel.PresentationIntensity(ChaseCameraMotion.Speed01(kph), 1, false), Is.Zero);
+        }
+
+        [Test]
+        public void BlurContinuesIncreasingFromCruiseThroughTopSpeed()
+        {
+            float previous = 0;
+            foreach (float kph in new[] { 120f, 175f, 240f, 300f, 340f, 380f })
+            {
+                float intensity = SpeedMotionBlurModel.PresentationIntensity(ChaseCameraMotion.Speed01(kph), 0, false);
+                Assert.That(intensity, Is.GreaterThan(previous), $"Blur must keep increasing at {kph} km/h");
+                previous = intensity;
+            }
+            Assert.That(SpeedMotionBlurModel.PresentationIntensity(1, 1, false), Is.GreaterThan(previous));
         }
 
         [Test]
