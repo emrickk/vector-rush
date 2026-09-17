@@ -1,5 +1,9 @@
 # Vector Rush development workflow
 
+## Owner-approved animated billboard correction — 2026-09-17 (current)
+
+Owner approved real Unity animation and requested sparse opening placement, varied heights, architectural orientations, composed display clusters and flicker correction. Current candidate is `Assets/Scenes/AnimatedBillboardsStage6.unity`; read the current handoff and billboard milestone. Prior Stage 5 weather and dry tunnel, course/collisions, handling, ship and HUD are preserved. Owner visual acceptance remains open; no automatic broader rollout or delegation. Game P5 blur work is separate and not integrated here.
+
 ## Owner-approved atmosphere correction — 2026-09-17 (current)
 
 Owner approved stronger outdoor city haze, no tunnel rain/spray, a dry covered road and rain audio fading with depth. Current candidate is `Assets/Scenes/RainAtmosphereStage5.unity`; the wrapper builds it. Prior scenes remain preserved. Read the current handoff and atmosphere milestone. Do not alter handling, ship, HUD, course or collision geometry. Owner visual acceptance remains open; do not expand gameplay or the wider art rollout automatically.

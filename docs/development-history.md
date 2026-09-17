@@ -1,3 +1,13 @@
+## 2026-09-17 — Animated billboard clusters and flicker correction
+
+Owner requested actual animated ads, then rejected the first layout for opening density, repeated heights/headings, harsh flicker and one sign per building. Current review candidate: `Assets/Scenes/AnimatedBillboardsStage6.unity`, revision `animated-billboards-stage6-04`, build `668888fd7612468c8a867cc8e3cb65ee`. The wrapper builds this scene. [Billboard milestone, native comparisons and measured evidence](current-game/billboards-2026-09-17/README.md).
+
+10 screens form five architectural clusters: high portrait, stacked portrait/ticker, corner pair, synchronized triptych and low landscape/projecting blade. Four original Scenario video campaigns animate in Unity; one kinetic orbital object remains. Surface separation fixes the screen/housing overlap; filtering and removal of fine scanlines reduce distant shimmer. Stage 5 weather, dry tunnel, course, collisions, handling, ship and HUD are preserved.
+
+286 tests passed. Final native evidence: 43.029-second lap / 1,009 frames with audio, and 35.008-second fixed-camera animation / 401 frames. Isolated 1920×1080 three-lap race completed with six finishers, zero recoveries, frozen results, pause and restart checks. Exact timing is in the milestone. Owner artistic acceptance and manual/controller feel remain open. Do not treat the rejected candidates 01/02 as accepted work. Game P5 speed blur is a separate unintegrated branch; do not silently overwrite or claim it here.
+
+Next is owner review of opening density, facade composition and animation. No automatic wider-city rollout or agent dispatch. Preserve prior scenes and source identities.
+
 # Development history
 
 ## 2026-09-17 — Rain presentation on the corrected road

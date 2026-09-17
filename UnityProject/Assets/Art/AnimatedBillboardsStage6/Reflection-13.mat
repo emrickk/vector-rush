@@ -1,0 +1,84 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Surface-1-13 / animated ads
+  m_Shader: {fileID: 4800000, guid: df60b1922241c48288e4e28486049d11, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _City0:
+        m_Texture: {fileID: 8900000, guid: 2a582dae6c48449ef928dbbb2bb475fe, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _City1:
+        m_Texture: {fileID: 8900000, guid: b9ab0dce9e71b45d2a4531b72730a315, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _City2:
+        m_Texture: {fileID: 8900000, guid: f7d016563b3ff474da9c832fc0609937, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Frames0:
+        m_Texture: {fileID: 2800000, guid: d3c0011383c1c460c9bcda58b1e1b459, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Frames1:
+        m_Texture: {fileID: 2800000, guid: 9b6e971da32c442d7b37c6b7a214311e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Frames2:
+        m_Texture: {fileID: 2800000, guid: 41d2dec03012049b3837a1ec959eda3b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Frames3:
+        m_Texture: {fileID: 2800000, guid: a1d0aeea6683642558550b57eb480289, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SignData:
+        m_Texture: {fileID: 2800000, guid: 1e958cc0b67b94613bab9a590e3a5b67, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SignImages:
+        m_Texture: {fileID: 18700000, guid: 640deed513f034f5e84ce188b68e4804, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SurfaceMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Ticker:
+        m_Texture: {fileID: 2800000, guid: f4b94d3dbd9fb47dfbf39231866def21, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Titles:
+        m_Texture: {fileID: 2800000, guid: 4f1e0b26fd87c4ad0b01a4f22b3bef14, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _RoadSurface: 1
+    - _SignCount: 10
+    - _Strength: 0.69437504
+    m_Colors:
+    - _Capture0: {r: 209.89825, g: 48.849567, b: -184.89319, a: 0}
+    - _Capture1: {r: 254.57298, g: 64.96091, b: -1.426991, a: 0}
+    - _Capture2: {r: 154.81743, g: 72.941345, b: 105.569214, a: 0}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1

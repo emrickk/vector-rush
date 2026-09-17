@@ -14,13 +14,143 @@
     },
     {
       "path": "AGENTS.md",
-      "bytes": 11561,
-      "sha256": "6759eecc5c823fbfc427bb4e8d8b01e6416133440078c5a20a7356fc6a783413"
+      "bytes": 12157,
+      "sha256": "2267f0810b3b992ba3dc448afc5947b2309dec2aeee6c90a803efb8471a7afa4"
     },
     {
       "path": "README.md",
-      "bytes": 15675,
-      "sha256": "08a46a0f5d997477859914155bbe272dba2954ca7ad292758984718214c4cf29"
+      "bytes": 15767,
+      "sha256": "1c5a1bace04fba0e4b5cbfd137bd2b89a31c81504976038181669f589c77fcf2"
+    },
+    {
+      "path": "SourceAssets/BillboardsStage6/README.md",
+      "bytes": 2172,
+      "sha256": "12c66b4c32db32283ee4b2c213a0f1b8cc82835302897e6dd0ff21b91f26f2e2"
+    },
+    {
+      "path": "SourceAssets/BillboardsStage6/animation-manifest.json",
+      "bytes": 1323,
+      "sha256": "158e53aa3705dcbe85234593dc494703d73891e03d33ff7e247cc9f4df0cbc3d"
+    },
+    {
+      "path": "SourceAssets/BillboardsStage6/aurora/animation.mp4",
+      "bytes": 2568509,
+      "sha256": "3d795443e10a996bcf0b5de1f16f8547cd637b32e79a4cbee66f9efcb6401faf"
+    },
+    {
+      "path": "SourceAssets/BillboardsStage6/aurora/art.png",
+      "bytes": 2238255,
+      "sha256": "9f2121bb9511581e8195c1f54dabeddff6a86632da1bd0d455fbd07c57541d68"
+    },
+    {
+      "path": "SourceAssets/BillboardsStage6/aurora/job.json",
+      "bytes": 102,
+      "sha256": "80518e9fda09e8e3269e1a420844b9997f65c0626eb764fe65537521ff28db97"
+    },
+    {
+      "path": "SourceAssets/BillboardsStage6/aurora/request.json",
+      "bytes": 1051,
+      "sha256": "d15a0e155c934d4de8220c3415307d3cd33713e1ee05825810b3e243d6403be3"
+    },
+    {
+      "path": "SourceAssets/BillboardsStage6/aurora/video-job.json",
+      "bytes": 100,
+      "sha256": "2f1a81794db587377918965d91d11467744bf38793d1fcd055760b0112bbf323"
+    },
+    {
+      "path": "SourceAssets/BillboardsStage6/aurora/video-request.json",
+      "bytes": 578,
+      "sha256": "74b6fb9cde4152b26d5a9b0e9fec0f82bb978343b0038809378364742224fa8b"
+    },
+    {
+      "path": "SourceAssets/BillboardsStage6/echo/animation.mp4",
+      "bytes": 16616558,
+      "sha256": "0c6bdc0ffc8675b0717cca7e6f39fe80a0492bcca07effa9e97a57b2efd2f24b"
+    },
+    {
+      "path": "SourceAssets/BillboardsStage6/echo/art.png",
+      "bytes": 2606309,
+      "sha256": "7a7a93007fb0347252ef2cc0f2553af1ce432dcb62b2483b13864aa6f35b45b4"
+    },
+    {
+      "path": "SourceAssets/BillboardsStage6/echo/job.json",
+      "bytes": 102,
+      "sha256": "eb499d9a76b3917096b18acd62ab9f78f62e02cf949cb11609723beaddfd50c3"
+    },
+    {
+      "path": "SourceAssets/BillboardsStage6/echo/request.json",
+      "bytes": 964,
+      "sha256": "b7e2ee83c9c7524c84d303b9848e80a88f084a612c9fa9e416e3a714fc17d3dc"
+    },
+    {
+      "path": "SourceAssets/BillboardsStage6/echo/video-job.json",
+      "bytes": 100,
+      "sha256": "1faf89d8f87edf04cd63498d95b86489ec301adaddcc5d6ee857b5a64dd804ee"
+    },
+    {
+      "path": "SourceAssets/BillboardsStage6/echo/video-request.json",
+      "bytes": 684,
+      "sha256": "4c01c1103d942d5240d352fa8f8277f7b0c768e3e6a7aefd735618067560d6f2"
+    },
+    {
+      "path": "SourceAssets/BillboardsStage6/orbit/animation.mp4",
+      "bytes": 11290493,
+      "sha256": "a01975579ef987894963b4bef8ead66886d0babba24520764e6bd17238417269"
+    },
+    {
+      "path": "SourceAssets/BillboardsStage6/orbit/art.png",
+      "bytes": 1942977,
+      "sha256": "c7344be2250502c46cda8ce982b52e2950954951a51e5c4be0923540b5a32a58"
+    },
+    {
+      "path": "SourceAssets/BillboardsStage6/orbit/job.json",
+      "bytes": 102,
+      "sha256": "e9645099b6867149544b97db40653eb3e536dc56b8c84b831afcff895bd1faab"
+    },
+    {
+      "path": "SourceAssets/BillboardsStage6/orbit/request.json",
+      "bytes": 958,
+      "sha256": "5206bc86dda07932906daf6e44dc36a29d02dee61e86a30c53b4aec3f142ed56"
+    },
+    {
+      "path": "SourceAssets/BillboardsStage6/orbit/video-job.json",
+      "bytes": 100,
+      "sha256": "767a5a56cd9ff0faf15786099aecd8cc094722dafefbbdab27c51b4abc96bea8"
+    },
+    {
+      "path": "SourceAssets/BillboardsStage6/orbit/video-request.json",
+      "bytes": 576,
+      "sha256": "4a1a16b91a7c0e099c13c1b3826ebb54072d9629e1d6512014c9c2bf22989e5b"
+    },
+    {
+      "path": "SourceAssets/BillboardsStage6/volt/animation.mp4",
+      "bytes": 15027709,
+      "sha256": "a3c3ccbc7bded0fac2911e064a485affafb9cbebd228cea91785b2a89da5d454"
+    },
+    {
+      "path": "SourceAssets/BillboardsStage6/volt/art.png",
+      "bytes": 2523719,
+      "sha256": "e5a9e06697e07cd0ecc56180f655d25ad296f7f6cb2d15405aaeabcb99883cfb"
+    },
+    {
+      "path": "SourceAssets/BillboardsStage6/volt/job.json",
+      "bytes": 102,
+      "sha256": "4baa085e02770bc8ea1a7475bde52a0f964c504a7926bddc1c94df459cf46267"
+    },
+    {
+      "path": "SourceAssets/BillboardsStage6/volt/request.json",
+      "bytes": 964,
+      "sha256": "b47e2ad836ac1913096c8e5caeb569ad59da4f7c3ee3ca16ef19cceb2f122be6"
+    },
+    {
+      "path": "SourceAssets/BillboardsStage6/volt/video-job.json",
+      "bytes": 100,
+      "sha256": "2c72683311590f14012ce637e1630bd421b0bb863123648893c7e9d788472522"
+    },
+    {
+      "path": "SourceAssets/BillboardsStage6/volt/video-request.json",
+      "bytes": 517,
+      "sha256": "27c1bf5e9f0ac66905c1472fb0d3523ce5a68216709b4c9207422e3f46178461"
     },
     {
       "path": "SourceAssets/Branding/Apex/README.md",
@@ -3571,6 +3701,711 @@
       "path": "UnityProject/Assets/Art.meta",
       "bytes": 172,
       "sha256": "ed50e17a7123df3f8e7c70c885d168f54968208b0464b0e53d7a367c30c3f6f7"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6.meta",
+      "bytes": 172,
+      "sha256": "c3371718710eb95784e02e971de105efbb34465e0b39a43bdd9a184c18d2fd7d"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Campaign-0.mat",
+      "bytes": 1868,
+      "sha256": "e8c2035db784ece7bf62239040a7297388a74cf2b12f46fe2e0b05c0007836a7"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Campaign-0.mat.meta",
+      "bytes": 188,
+      "sha256": "a87cab93ef866256595fef264f85be11abe4f02b6bcb85339426183c1ac3691f"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Campaign-1.mat",
+      "bytes": 1866,
+      "sha256": "ce0d2e50f6e14d8137d4b640ed30bfa83e7f8e4ac82b3bf23b4001b507f104a3"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Campaign-1.mat.meta",
+      "bytes": 188,
+      "sha256": "6101599863f4bc2cf1de46a022eef0ed0ed8df1ca6c8425eaa02274c15e0a7cd"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Campaign-10.mat",
+      "bytes": 1816,
+      "sha256": "5dcef1b8f59d70aa5e157597fab0d3d5c125b86e87b9de32c9d9deb68e42d9d5"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Campaign-10.mat.meta",
+      "bytes": 188,
+      "sha256": "6128382d79181545a0f4a1e0339e4574ff5907da7ccc804d5a37b1b88a34a835"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Campaign-11.mat",
+      "bytes": 1817,
+      "sha256": "c3b462744b81dd1eec566e52f6d62a8fa27afe23a8afd4959bee635f2e7c8aa0"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Campaign-11.mat.meta",
+      "bytes": 188,
+      "sha256": "5a376271677947c254bae8a3f4f40cd46ef336d446d3cfbe3d6039eb4c4bd084"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Campaign-12.mat",
+      "bytes": 1812,
+      "sha256": "437e818776eabd8809458f9fb4edf9142d8ad4c75e4b59fc48116624ada482f0"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Campaign-12.mat.meta",
+      "bytes": 188,
+      "sha256": "548bceedfd0e8f5ae44c2fbd770f0c289a3f1aa6f853c31983140b0e4f74e063"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Campaign-13.mat",
+      "bytes": 1810,
+      "sha256": "418d10806843dc9f0b0b72706d857b710a3b811711688ff092a98fd3427c7797"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Campaign-13.mat.meta",
+      "bytes": 188,
+      "sha256": "17043e80d22301715b3f69ab12404cf4e73d97dcfdc040f823815c017f97d8b9"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Campaign-14.mat",
+      "bytes": 1818,
+      "sha256": "355dbdbd1c4cd3683d5107c6255e322aea8410fcaba8cf83ec4eafb7dde5cde1"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Campaign-14.mat.meta",
+      "bytes": 188,
+      "sha256": "5640b1b07e8b097b0f56880b09c07cd3681999c1e9eb05845253dcbe78abe8d4"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Campaign-15.mat",
+      "bytes": 1818,
+      "sha256": "f437864ff139b577bde06c0df0f3307103e158a4ebd6edab3bcd346a5a4372cc"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Campaign-15.mat.meta",
+      "bytes": 188,
+      "sha256": "7e198292f185cb9c2199350c743389c70e7ba682b29a2ed4148b87b025893e91"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Campaign-16.mat",
+      "bytes": 1818,
+      "sha256": "c2f11f008ca734e28f619672c5ceef9aa944c455ae465613ba54f1e5ef00e0d2"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Campaign-16.mat.meta",
+      "bytes": 188,
+      "sha256": "f060f13334b0d954e5ad1b29e02db53bfadb256dfc672dd27c039113305ab156"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Campaign-2.mat",
+      "bytes": 1871,
+      "sha256": "13f276ffda28e2375f7e0c26e0c2412a3fdd52b27a65d6404addb89c5753d291"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Campaign-2.mat.meta",
+      "bytes": 188,
+      "sha256": "d8bd1ea1fadf370b9fb02a8e8c735d4213ab96c0de8061bd0b885beb564bf938"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Campaign-3.mat",
+      "bytes": 1867,
+      "sha256": "a9f0f3eb3316464a7cd33196d3b2ced5fee56a40661a9ae7d63f6c3b55e96f66"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Campaign-3.mat.meta",
+      "bytes": 188,
+      "sha256": "156c901f3ac04980aaa9c3d7bb77dcafe1b27caa51cd0298b005b066be949730"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Campaign-4.mat",
+      "bytes": 1866,
+      "sha256": "f4d66d856e7a1d85fd30d93f5b818e6d8e5d93b82c50d24279158e08695133bf"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Campaign-4.mat.meta",
+      "bytes": 188,
+      "sha256": "cb0f64364643aac79ca1d419f8e8889bf4488f1c02596eff7dc63895bdd02891"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Campaign-5.mat",
+      "bytes": 1886,
+      "sha256": "581be6fc036416b70405623ffefb89dd8f9ed90cf4a8e3ec48fda386a94615a6"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Campaign-5.mat.meta",
+      "bytes": 188,
+      "sha256": "0a2e34f0a38950e178e99b5add626f8261e7b209e0af5ab59531d0c131d0bfd6"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Campaign-6.mat",
+      "bytes": 1895,
+      "sha256": "3cc35a4c17ddc5c041b75004d0fe35f34cbfea3d1432ca58c9167081a7c0408c"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Campaign-6.mat.meta",
+      "bytes": 188,
+      "sha256": "f8ebd8a181d56a41df8a9d806b3a0055fb48b6544984b26a28968049d90ddb04"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Campaign-7.mat",
+      "bytes": 1894,
+      "sha256": "b7b5f0135133b339446f547b57e2108fda3d73e2d24bbc37a67f40508c413cbb"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Campaign-7.mat.meta",
+      "bytes": 188,
+      "sha256": "b8ce9406d67fc4f0f5d73ac515bc366f55105ff7066bb5a0d6d5e9a65f4da053"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Campaign-8.mat",
+      "bytes": 1871,
+      "sha256": "ec4d3b1440b752c5c7e6255cef8138fde2470e313387fcefea4f3f0867ac0e32"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Campaign-8.mat.meta",
+      "bytes": 188,
+      "sha256": "3580f99888cd79006c00355fc5961dc0e59a10502622aaa46455af3df98feb40"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Campaign-9.mat",
+      "bytes": 1864,
+      "sha256": "960d6ac5241c5b1efd0c407a246d275cf72d8bcf33d023b91a0cd17101b19a80"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Campaign-9.mat.meta",
+      "bytes": 188,
+      "sha256": "3c1404f40e90e4d17375a7fc92277646bf4264692c3a03de1749808d6ed8c2e6"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Display accent 0.mat",
+      "bytes": 3903,
+      "sha256": "b8b38d4bc461fe2af14ff21efc447005660f14f9abd957a2288d0618cde49177"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Display accent 0.mat.meta",
+      "bytes": 188,
+      "sha256": "7eb0d6fa21c88420c94203724dc9e3f5bc22c5d5d9ebb142dfa10fd98317d5b5"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Display accent 1.mat",
+      "bytes": 3907,
+      "sha256": "f4f5c51382951e8321ade51827af165e00fe125dfdabb8495222a46b7d3c2f39"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Display accent 1.mat.meta",
+      "bytes": 188,
+      "sha256": "0ab96d2be6a013bc4ecc5d457a98c66dc65e835ff793f2d494f44b3b5b921e38"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Display accent 2.mat",
+      "bytes": 3904,
+      "sha256": "1211f2fc4ed30dd74accab969e228c12f39460d1772eb2fa951e48146d0a8214"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Display accent 2.mat.meta",
+      "bytes": 188,
+      "sha256": "10213a003f4faca1d2637efc3e7f7626fb56186a448d13c196a2caa6b37b8830"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Display accent 3.mat",
+      "bytes": 3907,
+      "sha256": "6ac1c9ab044aeea9845bc6ccdc11812eda30eece7a8c3b3ab3ea5e2ae5afdb82"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Display accent 3.mat.meta",
+      "bytes": 188,
+      "sha256": "986a2a7c91ef45963b758050e8d2892c1a6fe055deba1a76b65aeed19459793e"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Display housings.mat",
+      "bytes": 3876,
+      "sha256": "fa1dcb359cd5a6ca61c5f5df69605bcdf300a1b606dc51830c2c5e27a7bc75ea"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Display housings.mat.meta",
+      "bytes": 188,
+      "sha256": "b19743a7d273ec70f777312857b049bd8ff9a5f4115af781e959651113442689"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Former-frame-batch-0.asset",
+      "bytes": 47692060,
+      "sha256": "d88bc98d4a52cef6c3c6541af39173aad9a013fa5967ae0ab374f0c5816a2824"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Former-frame-batch-0.asset.meta",
+      "bytes": 188,
+      "sha256": "efd2daab816d2c89fd6fe47bf398fcf880c43f241abed8a2196b887ecbd4c2b8"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Frames0.png",
+      "bytes": 8450455,
+      "sha256": "bcc0cbace9afb38f13558c308dd323ffd47ab4834366a323fe0c8cbb387dce9c"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Frames0.png.meta",
+      "bytes": 3069,
+      "sha256": "1adf6f63716ec8b74dfab3af2f8a3a040d35b86e9d989265d87cdc540bb2ae14"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Frames1.png",
+      "bytes": 14705734,
+      "sha256": "614fed902ee2d5306ee0025e5461ee31adce79249d331b8cf6359fa54efb304c"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Frames1.png.meta",
+      "bytes": 3069,
+      "sha256": "fa05057dbd9ebf6ca702dbb60d2cdad5e3ff4103a3c230ed84dc27bc0d6af6f7"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Frames2.png",
+      "bytes": 17458232,
+      "sha256": "dd5829c3f8f24f3fcc176d1e300879d1f7bc9031382feabbd7c832f7c486256b"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Frames2.png.meta",
+      "bytes": 3069,
+      "sha256": "cadebc649c244d67e454133224efc7fdee803e1f6da8642990f0021dd8ab1b2e"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Frames3.png",
+      "bytes": 9661266,
+      "sha256": "f2e64409c7f450bc61e69116e893b634fb6f3fda326da524ad05df0c7930e054"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Frames3.png.meta",
+      "bytes": 3069,
+      "sha256": "6f0a866eb111f527fa1b56a0c04818c129474ece754dd6ff61c26eda26d024c4"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Kinetic-1.asset",
+      "bytes": 44952,
+      "sha256": "7039f265bfae1fc8905d9dc0f834fce15b22fc0dfe8dd0dea06db5858d5da337"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Kinetic-1.asset.meta",
+      "bytes": 188,
+      "sha256": "a5012b68d8e0d1adca2ffe6faa50ec213bdb4355ae9aacb6a68bcefd18f83fb7"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Kinetic-2.asset",
+      "bytes": 40324,
+      "sha256": "4a72744914a3cde189e68582e6b38c66ef74bf41eecda942f7684e0e5467df19"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Kinetic-2.asset.meta",
+      "bytes": 188,
+      "sha256": "3ad7c9d12f22b7463b98b0e3af6f38e7ad674f6154f69df6b08058f03af6781d"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Kinetic-3.asset",
+      "bytes": 44952,
+      "sha256": "7039f265bfae1fc8905d9dc0f834fce15b22fc0dfe8dd0dea06db5858d5da337"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Kinetic-3.asset.meta",
+      "bytes": 188,
+      "sha256": "b35a6a18f16b4b01958c51ea09b161930253ce33eebb098ed056371b41502aac"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Kinetic-4.asset",
+      "bytes": 40324,
+      "sha256": "4a72744914a3cde189e68582e6b38c66ef74bf41eecda942f7684e0e5467df19"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Kinetic-4.asset.meta",
+      "bytes": 188,
+      "sha256": "cbac62a48d3b5c0288562bdbd0dea97753a54a1675cbdb8eaa0474244ea8a421"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Kinetic-5.asset",
+      "bytes": 44952,
+      "sha256": "7039f265bfae1fc8905d9dc0f834fce15b22fc0dfe8dd0dea06db5858d5da337"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Kinetic-5.asset.meta",
+      "bytes": 188,
+      "sha256": "403826ff1fef62f5517adf6cf6edeeac62bc68cd91fdf881c4f31f65b6dd8dbe"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Kinetic-6.asset",
+      "bytes": 40324,
+      "sha256": "4a72744914a3cde189e68582e6b38c66ef74bf41eecda942f7684e0e5467df19"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Kinetic-6.asset.meta",
+      "bytes": 188,
+      "sha256": "7ac62c2c4e115dbe9e01c28a2daa0e120107f6fe2add4b578be4ae3f31687fb5"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Reflection-0.mat",
+      "bytes": 2927,
+      "sha256": "463b2c5c2b1fee70efe2cd3cdda23d181c152b5887e217bccd656f705c920d50"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Reflection-0.mat.meta",
+      "bytes": 188,
+      "sha256": "5da2989170d53ed6bdd9714c2ab4634c906c6c4573b74630bde39ca46f255f5c"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Reflection-1.mat",
+      "bytes": 2931,
+      "sha256": "33c3a61e3dca1b1709ad750b39ae0b44a6682a04dd416975bae9c5560f0eda78"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Reflection-1.mat.meta",
+      "bytes": 188,
+      "sha256": "1f73e637bb17c82669a0dff4b4bec54802b72a133c0fb8f6dc588db65d27ed23"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Reflection-10.mat",
+      "bytes": 2931,
+      "sha256": "0d47bc42101194d0b5d9c39e033156cfb3680820c2faaa184d0c69576c7d4e29"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Reflection-10.mat.meta",
+      "bytes": 188,
+      "sha256": "3240b084bd1c29e3ddc3f74952db499aceb0c8c8b7346ab709a249aa07579f2c"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Reflection-11.mat",
+      "bytes": 2932,
+      "sha256": "3ceb4b70566151409e38986e5f01fbc4f5c1cb13917a8bc345e002e9663afb14"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Reflection-11.mat.meta",
+      "bytes": 188,
+      "sha256": "c55034ec3fd383e98a97610dbcedaf76c89102e13b6db2d770e522a80acb08e6"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Reflection-12.mat",
+      "bytes": 2934,
+      "sha256": "8307920f50b2ab675e54ba3de9b2024ed555755ab1c8979928a55bbb67da0010"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Reflection-12.mat.meta",
+      "bytes": 188,
+      "sha256": "74bc1a7395a3fd91200c3abcfa7b902dd5b43c70357d6089a4f655890d79e293"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Reflection-13.mat",
+      "bytes": 2934,
+      "sha256": "358707c03c32a8da2f51f05cfc4932fb3b0bf9e51584aa3367be5a16c15cd4d9"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Reflection-13.mat.meta",
+      "bytes": 188,
+      "sha256": "218bd066b3ace8a5db91e858225192e4ec77e959b7fe113b714263fe3b7b0b35"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Reflection-14.mat",
+      "bytes": 2934,
+      "sha256": "97effc39b1f03d4905db80d2babe59f20c22890e1d182f9680a2b7ad591596df"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Reflection-14.mat.meta",
+      "bytes": 188,
+      "sha256": "7b22573c55d97aa3d23b3c54391ace98dbd82afde646853ab8779a7acc067388"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Reflection-15.mat",
+      "bytes": 2932,
+      "sha256": "2c9a623f520c6e9f70cbfd7d2e57188a7a512e5402df6236f933765907e65672"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Reflection-15.mat.meta",
+      "bytes": 188,
+      "sha256": "e508a6358e46e09d7c77a46f4af5ca357c327e9495201bb66ca6cf2faf1c0f38"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Reflection-16.mat",
+      "bytes": 2928,
+      "sha256": "989195006599f95ecd52b552b9635d88c344126fe5fa9f92e05e10db3b47adae"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Reflection-16.mat.meta",
+      "bytes": 188,
+      "sha256": "602308d509ffec6c318050e026744333c6a1f94e816431ec1f8cc0d6d775f3ce"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Reflection-2.mat",
+      "bytes": 2930,
+      "sha256": "661f901e237d4330de31582623d8213837c81c20742d051e9f9d276c600761b3"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Reflection-2.mat.meta",
+      "bytes": 188,
+      "sha256": "4ea1bbea72f86b09fdb752ca633c0cf21b0819fbbfd2580ec46c78484f12a79d"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Reflection-3.mat",
+      "bytes": 2933,
+      "sha256": "342b5b82cfe2e6f5bdb2cab874edc24ed20c05a9424bf78ddb975121544186ce"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Reflection-3.mat.meta",
+      "bytes": 188,
+      "sha256": "105d6521fa299c2b9f78b8e9b97997bd99fd2bed073f631a5229c8dcd38962b9"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Reflection-4.mat",
+      "bytes": 2929,
+      "sha256": "e82459d5799249c7a8b8e0bdba39867490af52364d246ae70f5b582e83f3a0a2"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Reflection-4.mat.meta",
+      "bytes": 188,
+      "sha256": "656a60d3e1c4f9b9a39da432593cb407e68f76ce587f56bc84a8b26da1dd5305"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Reflection-5.mat",
+      "bytes": 2933,
+      "sha256": "5c1d7b46222baf47f2e40f03dbfb084ee23e2edc83f345b1ea3232dae08d445c"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Reflection-5.mat.meta",
+      "bytes": 188,
+      "sha256": "d53e93a130627ffbf9a8528a6a67cd7d135213d8ba126e729d3cbbf31bf9f521"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Reflection-6.mat",
+      "bytes": 2930,
+      "sha256": "13bfaf7b30b13c7c905df8ee683ee0dc340751778a0dc96653af1c9a286d9260"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Reflection-6.mat.meta",
+      "bytes": 188,
+      "sha256": "1afef2e5d2d47427eb654266c9653731e09815c712e0649ebf31f2f1ba7d4d19"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Reflection-7.mat",
+      "bytes": 2931,
+      "sha256": "bf3e98e11946073710477045cb45b7d323cdc33028fdcfce2cbf32f454577480"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Reflection-7.mat.meta",
+      "bytes": 188,
+      "sha256": "e5889d091c8615f683c9e8f41de93413c80a2ae4047db77c4822c5dc82fbd428"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Reflection-8.mat",
+      "bytes": 2928,
+      "sha256": "a5076a6205e89b1d3b6b6e97c240b342819da437552e6c1689d6d89916505489"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Reflection-8.mat.meta",
+      "bytes": 188,
+      "sha256": "0299d70da94eff58a611a8d0a9781909783b7699df5ad2578d1f99869706d334"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Reflection-9.mat",
+      "bytes": 2933,
+      "sha256": "8a9cad2cfb77c3b355d03babc2f0fcd63ef244ef9bce86570533a44902c3dcbe"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Reflection-9.mat.meta",
+      "bytes": 188,
+      "sha256": "c8cb8f8724a3e45d9a9abef0702771af4b308ca0dda24cd1acfb5f0178f3d69a"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Screen-0.asset",
+      "bytes": 3718,
+      "sha256": "ce2cf25ceca96c015b052c6bb4f53fa7b4974d21c80af7f2f3a273aee70e4b50"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Screen-0.asset.meta",
+      "bytes": 188,
+      "sha256": "2386761cdbeae90432e546174b3b36e6eaa020c2c62b1c359f116ec4323fc6ec"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Screen-1.asset",
+      "bytes": 3720,
+      "sha256": "c0d6ce0ccbe995be83ac984256e234e1977378dbcb8970ad85cc07365dd1952c"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Screen-1.asset.meta",
+      "bytes": 188,
+      "sha256": "cb0d892485ecfa378af37e9af3940b7929351d61ff1130d4a35df8b684eaa303"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Screen-10.asset",
+      "bytes": 3716,
+      "sha256": "12d0316387c86b153f86f5aacb7c090fdf0eefaa6bf3d4d2613a77c56bf1edd9"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Screen-10.asset.meta",
+      "bytes": 188,
+      "sha256": "357c1836575edd43fc5dd778332f95825072c46f33d4e41cdee60e877c130486"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Screen-11.asset",
+      "bytes": 3720,
+      "sha256": "411006315e8e765fc3f19e635f0be57bd7b7019668cfc4fb3105759c068b6b59"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Screen-11.asset.meta",
+      "bytes": 188,
+      "sha256": "f4549f0846384911456e00b257cebe60e844a1e746ecfbb8c8bc99066fec9912"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Screen-12.asset",
+      "bytes": 3724,
+      "sha256": "ef4b9bd98116f8e21bdd11f76afe2197fca942cad427f729f3091f0550b1caf0"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Screen-12.asset.meta",
+      "bytes": 188,
+      "sha256": "66d12b6078ab5e9222c4c5cdb74d5302080b5ffd248ed1b7cef47c5d25b14639"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Screen-13.asset",
+      "bytes": 3714,
+      "sha256": "28bb9952168d102eb1a8d3e98bc2850190b242da5299700b52321218528595ef"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Screen-13.asset.meta",
+      "bytes": 188,
+      "sha256": "e42e91bd346e1e2f420b833e11bf7391d2bd19357bfe3ab14462935f20f83bd4"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Screen-14.asset",
+      "bytes": 7237,
+      "sha256": "45d66fe695b5cb57f08ed4f410784e9d108be3b92f8e5aae353ead75faa84cc5"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Screen-14.asset.meta",
+      "bytes": 188,
+      "sha256": "d40d16751912f32bab54650e2f0a7af04b452ac30ac4fecb58200fdc45f3eefe"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Screen-15.asset",
+      "bytes": 3714,
+      "sha256": "edbdc3869476baa5f4af04587b57a910fd366374ad1598b1c147c4c4f026e3fb"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Screen-15.asset.meta",
+      "bytes": 188,
+      "sha256": "ffb24432fe32a2425b71bc840e04f8179c76a537fa396091558a52c762b40927"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Screen-16.asset",
+      "bytes": 3720,
+      "sha256": "411006315e8e765fc3f19e635f0be57bd7b7019668cfc4fb3105759c068b6b59"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Screen-16.asset.meta",
+      "bytes": 188,
+      "sha256": "345e2903eb053a7cb017bf9491bd4d69fde68e5c96aa9bd1c3c8692a069d624d"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Screen-2.asset",
+      "bytes": 3722,
+      "sha256": "03b5df328bc4b4216fa283a5dd18f1377a28f28378cc31976f78db73b4365347"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Screen-2.asset.meta",
+      "bytes": 188,
+      "sha256": "c3c26ccfd02e76d4639ccf3186bafd62c23e7d5ade34804ed50ab95967403eb1"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Screen-3.asset",
+      "bytes": 3714,
+      "sha256": "4a92b10146f57c228a6fa4e4707ab5ea40c419826e74f6313bb966a9802d04cd"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Screen-3.asset.meta",
+      "bytes": 188,
+      "sha256": "6705094783451b276a490c6cfe1c68399493d4c0baf8794d7752574482987218"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Screen-4.asset",
+      "bytes": 3714,
+      "sha256": "4a92b10146f57c228a6fa4e4707ab5ea40c419826e74f6313bb966a9802d04cd"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Screen-4.asset.meta",
+      "bytes": 188,
+      "sha256": "6f426d4a51c2b77e14f66ac4e477507f35bb53c18c19a598565fc90d93812eaa"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Screen-5.asset",
+      "bytes": 3720,
+      "sha256": "8866daef55eecccdc607748104e69c203b28ed1f4019f1d4eddff920577cc0b7"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Screen-5.asset.meta",
+      "bytes": 188,
+      "sha256": "846f2bf88739c65838de64a1a67b7f770ba403d88a66ddf18f1f2b464d2bff8e"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Screen-6.asset",
+      "bytes": 3720,
+      "sha256": "8866daef55eecccdc607748104e69c203b28ed1f4019f1d4eddff920577cc0b7"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Screen-6.asset.meta",
+      "bytes": 188,
+      "sha256": "ab80aeff3dc018ab98ab2711e9eb6f84881a2e981c3818501517d702cd0c5259"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Screen-7.asset",
+      "bytes": 3720,
+      "sha256": "8866daef55eecccdc607748104e69c203b28ed1f4019f1d4eddff920577cc0b7"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Screen-7.asset.meta",
+      "bytes": 188,
+      "sha256": "8204a01efb50cd1bc26d137095e814e7db5e11d81f7d5ff2b0f10c5a357fea49"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Screen-8.asset",
+      "bytes": 3720,
+      "sha256": "6f16d6e7ca97aaf5cf6f1e42fbea1b01075d1fb47439a13bb312e1809ead117a"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Screen-8.asset.meta",
+      "bytes": 188,
+      "sha256": "2fd82fe5dbd6dcdd38e378434098a203f1f924ef8df4de8e83b2ab7b2597c989"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Screen-9.asset",
+      "bytes": 3720,
+      "sha256": "3e5f6fd0e85180c29650dda26e37e459220dc7c36ee88d84a18763d4d8491294"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Screen-9.asset.meta",
+      "bytes": 188,
+      "sha256": "a7df7cc3ca6d83bd27d59ddc81f8d2b9201e32e62a1ef11b7b18a3d6232b4c49"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/SignPoses.asset",
+      "bytes": 3618,
+      "sha256": "286e6c12aebc35bfea69b5917d5c4ed949031a01f7d63d72de26ce05d8d70baa"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/SignPoses.asset.meta",
+      "bytes": 188,
+      "sha256": "f19db9e3fa58b1127242d3679ae813735b15d064cc66cd617a584d72decf5a30"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Ticker.png",
+      "bytes": 57761,
+      "sha256": "58d7f14b57b2cb01738ac23d66c12c47ef92364924e6c4787f8b333885aa3a7c"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Ticker.png.meta",
+      "bytes": 3069,
+      "sha256": "d4dffafe257014d56e6076b2ebf15be1b479e4e1d974175f2bff82f9cc8bca31"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Titles.png",
+      "bytes": 58159,
+      "sha256": "e50f0cb077ac3bcaec65bc15b17a83b6b3d79d60b3c6b87e6949a9b43f41a3c2"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Titles.png.meta",
+      "bytes": 3069,
+      "sha256": "d8fcc63dbebac252bd52a92b3cec21db03165d6ef527d2553f6610497ca456f6"
     },
     {
       "path": "UnityProject/Assets/Art/EnvironmentStructureStage1.meta",
@@ -7928,6 +8763,16 @@
       "sha256": "34cb690e4d818b5d70e58e2cb3df405d9097f10fc5bd7647f50a400ca53e4670"
     },
     {
+      "path": "UnityProject/Assets/Editor/Production/BillboardSceneSetup.cs",
+      "bytes": 15702,
+      "sha256": "ff8fa880ce742a0448bece080382c2d750fd6503bcb3de3cd3e42db27bb40097"
+    },
+    {
+      "path": "UnityProject/Assets/Editor/Production/BillboardSceneSetup.cs.meta",
+      "bytes": 59,
+      "sha256": "51ed012262f83e4b120d29b722225e8cb1adc4559148d4bae28a00272ac10396"
+    },
+    {
       "path": "UnityProject/Assets/Editor/Production/EnvironmentStructureSetup.cs",
       "bytes": 13842,
       "sha256": "66490281810b88c7a51afb926fc2d7889efdafdec6248b1dc72e996eec5277de"
@@ -10673,6 +11518,16 @@
       "sha256": "49aad67d255b20f5c592a7e8e32308cc7f9443f162d8246fb57b854691917acc"
     },
     {
+      "path": "UnityProject/Assets/Scenes/AnimatedBillboardsStage6.unity",
+      "bytes": 1225741,
+      "sha256": "e1f56f7a0fb9da36e04333b64d734a71cccb87970c06cca4bd63b336c2e5afa9"
+    },
+    {
+      "path": "UnityProject/Assets/Scenes/AnimatedBillboardsStage6.unity.meta",
+      "bytes": 155,
+      "sha256": "f4a39377e2a5debe7c56c45dca2d5061f794a9eadfcea9e18564d61d4466d229"
+    },
+    {
       "path": "UnityProject/Assets/Scenes/EnvironmentStructureStage1.unity",
       "bytes": 882347,
       "sha256": "83195acf00ea5140cb4600a1d686ca1cd1641683c7b16729aa8b7a57e4c2f7b5"
@@ -10906,6 +11761,26 @@
       "path": "UnityProject/Assets/Scripts/Presentation.meta",
       "bytes": 172,
       "sha256": "e13d188b307a164cbaad559a03f0fdec6aa3a3ddc738642b66a6450ca002c873"
+    },
+    {
+      "path": "UnityProject/Assets/Scripts/Presentation/AnimatedBillboards.cs",
+      "bytes": 1212,
+      "sha256": "b7d11ca21e8b7ebda8211d948b3c27f34804beb5e3e597960c4e0ba640cd782b"
+    },
+    {
+      "path": "UnityProject/Assets/Scripts/Presentation/AnimatedBillboards.cs.meta",
+      "bytes": 59,
+      "sha256": "7d7d26acf128a6b33f19756ddb8bb68d8d449ca41f3fb0c44ae26965d8b79f8a"
+    },
+    {
+      "path": "UnityProject/Assets/Scripts/Presentation/BillboardMotionEvidence.cs",
+      "bytes": 3183,
+      "sha256": "e2c2a4e0434b07d9a4dc2d0739e49e291ecf75e536bed23a94ae532354c572a0"
+    },
+    {
+      "path": "UnityProject/Assets/Scripts/Presentation/BillboardMotionEvidence.cs.meta",
+      "bytes": 59,
+      "sha256": "18a1f034751344b01018135d17367f6596e601b60f750a79dc06bd0500af27c4"
     },
     {
       "path": "UnityProject/Assets/Scripts/Presentation/CraftMaterialFactory.cs",
@@ -11623,6 +12498,36 @@
       "sha256": "ca789709e6907743004475ddcab686a76fad9ba36d7d09faa4ee33a664fd4d9c"
     },
     {
+      "path": "UnityProject/Assets/Shaders/AnimatedBillboard.shader",
+      "bytes": 1760,
+      "sha256": "358b9a855b9312e1b40d9df18e20ce06d766a7c6a0eba04585030015dbd84823"
+    },
+    {
+      "path": "UnityProject/Assets/Shaders/AnimatedBillboard.shader.meta",
+      "bytes": 204,
+      "sha256": "891aa812f8dfc53bc864e02ecc1e314ade63c6fcb112ae90cdae2ce02df145fe"
+    },
+    {
+      "path": "UnityProject/Assets/Shaders/AnimatedCityReflection.shader",
+      "bytes": 7451,
+      "sha256": "cd34c025774ef871eb189533ac3214919a3eb24d55ac50b18088e44b05a9c1e6"
+    },
+    {
+      "path": "UnityProject/Assets/Shaders/AnimatedCityReflection.shader.meta",
+      "bytes": 204,
+      "sha256": "3c1b72c837ba7fe6e2b36f006d83c8e5d2f47ae911201c339fc2f53533871a1e"
+    },
+    {
+      "path": "UnityProject/Assets/Shaders/BillboardPlayback.hlsl",
+      "bytes": 2489,
+      "sha256": "e2f28a8f3e653a744429fd8aff2860c1bc8ca9c8683a4737b477ba7f229598b6"
+    },
+    {
+      "path": "UnityProject/Assets/Shaders/BillboardPlayback.hlsl.meta",
+      "bytes": 161,
+      "sha256": "caad7bbc2fcd91e02e5a2f2c1ff381df192a5005eebe3da1503944e42e567e01"
+    },
+    {
       "path": "UnityProject/Assets/Shaders/CityGlassReflection.shader",
       "bytes": 6976,
       "sha256": "80898c2500bc13e21203d0a30aa3b6ba4642ff38d8e0f16e65df05f515d6c7a0"
@@ -11761,6 +12666,16 @@
       "path": "UnityProject/Assets/Tests/Editor/AtmosphereTests.cs.meta",
       "bytes": 60,
       "sha256": "6e7a280c0748d44b4ccd4f4dbfc7cd10a8def0d4842607d732243b08f27ad649"
+    },
+    {
+      "path": "UnityProject/Assets/Tests/Editor/BillboardTests.cs",
+      "bytes": 4385,
+      "sha256": "081eefe00dd08e012af77a827882de43e814410ec27ffb2512d6e61717c8be92"
+    },
+    {
+      "path": "UnityProject/Assets/Tests/Editor/BillboardTests.cs.meta",
+      "bytes": 59,
+      "sha256": "fb05fffae11033d5428b62587f05ffc71417d63a81192dfd046cbe9175853e2a"
     },
     {
       "path": "UnityProject/Assets/Tests/Editor/CityReflectionPersistenceTests.cs",
@@ -13689,8 +14604,8 @@
     },
     {
       "path": "docs/CURRENT-GAME-HANDOFF.md",
-      "bytes": 18354,
-      "sha256": "2f351ade1c2b210343793c6be549b018df93b3c6f806afe64b954ec26e5d7c10"
+      "bytes": 20024,
+      "sha256": "a31eedb4ea38174083a0ade0f63660f86a578e1d345e92a2c2cd0d5b52b1ba3c"
     },
     {
       "path": "docs/GPT6-BUILD-PROMPT.md",
@@ -13951,6 +14866,51 @@
       "path": "docs/current-game/atmosphere-2026-09-17/weather.csv",
       "bytes": 13669,
       "sha256": "da5e5dc7df291c8977fe482e7661b8ca3600c20c29d0b3ae361495bbdfeb644d"
+    },
+    {
+      "path": "docs/current-game/billboards-2026-09-17/README.md",
+      "bytes": 3840,
+      "sha256": "c0d509884c80dc7ae6e0b94bfda47704119603b4f497100e35e5ae7e5f390682"
+    },
+    {
+      "path": "docs/current-game/billboards-2026-09-17/authoring.json",
+      "bytes": 241,
+      "sha256": "e352500b878e3f460142d7eb79c4578cf968369e95923cf6bc63a0ed1506992a"
+    },
+    {
+      "path": "docs/current-game/billboards-2026-09-17/build-identity.json",
+      "bytes": 495,
+      "sha256": "fe3782924caa43be13b9eaa5310e059731005e5943656027f556016d193b23b6"
+    },
+    {
+      "path": "docs/current-game/billboards-2026-09-17/combinations.jpg",
+      "bytes": 152023,
+      "sha256": "16ac5eb57c265e80b0b9edd5e91021a991105fff69024fdd91139816d290e580"
+    },
+    {
+      "path": "docs/current-game/billboards-2026-09-17/motion-summary.json",
+      "bytes": 781,
+      "sha256": "04ecca911c91c3625b19e087f829591c6b3c0696e4c34a3568b328ea2c7ac8ee"
+    },
+    {
+      "path": "docs/current-game/billboards-2026-09-17/opening-comparison.jpg",
+      "bytes": 403937,
+      "sha256": "cd63736359034fc914f1a23ed4df1462d7d3818783ca6e8d7e8093167f15e3e6"
+    },
+    {
+      "path": "docs/current-game/billboards-2026-09-17/performance.json",
+      "bytes": 2017,
+      "sha256": "b1cd879db512c50691696d791da02d04af62841e7d4333eb25786850f9aa7ed2"
+    },
+    {
+      "path": "docs/current-game/billboards-2026-09-17/preview-validation.json",
+      "bytes": 657,
+      "sha256": "84d81f08ff161d3224bd1e3659cb8b57eb6c1c020a02426aab25dcdcd013a7cc"
+    },
+    {
+      "path": "docs/current-game/billboards-2026-09-17/tests.xml",
+      "bytes": 232273,
+      "sha256": "8b0a3c6c312c1809d2521355f818a8ae334c4cd2ab357cf6ffdbc84e4abb4259"
     },
     {
       "path": "docs/current-game/evidence/after-approach.png",
@@ -14239,8 +15199,8 @@
     },
     {
       "path": "docs/development-history.md",
-      "bytes": 137116,
-      "sha256": "15d8543cc81958eb6550e3e574d8c2b30e7432a360c08c988fc2eef10a84e7f5"
+      "bytes": 138795,
+      "sha256": "1bd875f0279527df0b378cb384aa4fcb12bedaa62a5cbbfccff6f8acc2ad4c00"
     },
     {
       "path": "docs/development-work-record.html",
@@ -14419,8 +15379,8 @@
     },
     {
       "path": "docs/implementation-plan.md",
-      "bytes": 80994,
-      "sha256": "56945b963f93b2a5e4ab1772c4fa713e2f8383f68cafc7cdac7ff9f2af6b8978"
+      "bytes": 82729,
+      "sha256": "d5156dec6473150dcfa2fa5991e5f8ad3d052bbc7f71cae94beaf167d4d305c8"
     },
     {
       "path": "docs/lighting-reviews/001-lighting-source-audit.md",
@@ -15268,6 +16228,11 @@
       "sha256": "933a14485ba428194e4e00a9ce8bb04c4c24460d65474fe5a37bce9dd5d1346c"
     },
     {
+      "path": "tools/billboards/pack_animations.py",
+      "bytes": 4028,
+      "sha256": "19d22564c40ddc6666a47f1a7ce47a2a45800c7226bf95aef478ab2da1d32766"
+    },
+    {
       "path": "tools/blender.sh",
       "bytes": 2998,
       "sha256": "b4a4c4981cdc51a75fe1859e0e10ece1c8c5fa638edf6b41c34c6a71e5d51185"
@@ -15279,8 +16244,8 @@
     },
     {
       "path": "tools/current-game.sh",
-      "bytes": 2082,
-      "sha256": "94dea2525caf508156aa3cf9c1ca432f45a0e6cf8c5143a9f98288efb5373ac3"
+      "bytes": 2086,
+      "sha256": "5fe9fa290fd0304e3afebf246cd2eb4614e17da1ddb8ce0c31c64b96274e0035"
     },
     {
       "path": "tools/encode-stage2.py",

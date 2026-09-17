@@ -1,0 +1,13 @@
+{
+  "capturedFrames": 1009,
+  "captureMeanHz": 23.437500000000004,
+  "captureMedianIntervalMs": 42.66666666666552,
+  "captureMaxIntervalMs": 42.66666666667618,
+  "buildGuid": "668888fd7612468c8a867cc8e3cb65ee",
+  "frames": 1009,
+  "durationSeconds": 43.02933333333334,
+  "audioSeconds": 43.029333333333334,
+  "peak": 0.16491714119911194,
+  "rms": 0.035868092778628985,
+  "scope": "Actual native game, automated steering through ordinary physics, real-time clock (no Time.captureFramerate). PNG captures at up to 30 Hz with actual DSP timestamps; listener output recorded as stereo float samples. Encoding uses recorded frame times. No performance claim."
+}
