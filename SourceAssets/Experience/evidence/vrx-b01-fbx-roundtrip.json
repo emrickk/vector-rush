@@ -1,0 +1,218 @@
+{
+  "status": "PASS FBX roundtrip",
+  "revision": "vrx-b01",
+  "models": 30,
+  "results": [
+    {
+      "assetId": "vrx_city_exchange_a",
+      "lod": "lod0",
+      "maxBoundsDeltaMetres": 1.0101618954649894e-06,
+      "uv0": true,
+      "materialSlotOrder": true
+    },
+    {
+      "assetId": "vrx_city_exchange_a",
+      "lod": "lod1",
+      "maxBoundsDeltaMetres": 1.0192217132498627e-06,
+      "uv0": true,
+      "materialSlotOrder": true
+    },
+    {
+      "assetId": "vrx_city_hotel_a",
+      "lod": "lod0",
+      "maxBoundsDeltaMetres": 9.5367431640625e-07,
+      "uv0": true,
+      "materialSlotOrder": true
+    },
+    {
+      "assetId": "vrx_city_hotel_a",
+      "lod": "lod1",
+      "maxBoundsDeltaMetres": 9.5367431640625e-07,
+      "uv0": true,
+      "materialSlotOrder": true
+    },
+    {
+      "assetId": "vrx_city_services_a",
+      "lod": "lod0",
+      "maxBoundsDeltaMetres": 1.2366555210974184e-06,
+      "uv0": true,
+      "materialSlotOrder": true
+    },
+    {
+      "assetId": "vrx_city_services_a",
+      "lod": "lod1",
+      "maxBoundsDeltaMetres": 1.2457153388822917e-06,
+      "uv0": true,
+      "materialSlotOrder": true
+    },
+    {
+      "assetId": "vrx_city_works_a",
+      "lod": "lod0",
+      "maxBoundsDeltaMetres": 1.2744045534418547e-06,
+      "uv0": true,
+      "materialSlotOrder": true
+    },
+    {
+      "assetId": "vrx_city_works_a",
+      "lod": "lod1",
+      "maxBoundsDeltaMetres": 1.283464371226728e-06,
+      "uv0": true,
+      "materialSlotOrder": true
+    },
+    {
+      "assetId": "vrx_city_podium_a",
+      "lod": "lod0",
+      "maxBoundsDeltaMetres": 9.5367431640625e-07,
+      "uv0": true,
+      "materialSlotOrder": true
+    },
+    {
+      "assetId": "vrx_city_podium_a",
+      "lod": "lod1",
+      "maxBoundsDeltaMetres": 9.5367431640625e-07,
+      "uv0": true,
+      "materialSlotOrder": true
+    },
+    {
+      "assetId": "vrx_track_guidance_a",
+      "lod": "lod0",
+      "maxBoundsDeltaMetres": 1.0380961157352431e-07,
+      "uv0": true,
+      "materialSlotOrder": true
+    },
+    {
+      "assetId": "vrx_track_guidance_a",
+      "lod": "lod1",
+      "maxBoundsDeltaMetres": 1.0569706176966065e-07,
+      "uv0": true,
+      "materialSlotOrder": true
+    },
+    {
+      "assetId": "vrx_city_exchange_b",
+      "lod": "lod0",
+      "maxBoundsDeltaMetres": 1.1611576837822213e-06,
+      "uv0": true,
+      "materialSlotOrder": true
+    },
+    {
+      "assetId": "vrx_city_exchange_b",
+      "lod": "lod1",
+      "maxBoundsDeltaMetres": 1.1702175015670946e-06,
+      "uv0": true,
+      "materialSlotOrder": true
+    },
+    {
+      "assetId": "vrx_city_hotel_b",
+      "lod": "lod0",
+      "maxBoundsDeltaMetres": 9.5367431640625e-07,
+      "uv0": true,
+      "materialSlotOrder": true
+    },
+    {
+      "assetId": "vrx_city_hotel_b",
+      "lod": "lod1",
+      "maxBoundsDeltaMetres": 9.5367431640625e-07,
+      "uv0": true,
+      "materialSlotOrder": true
+    },
+    {
+      "assetId": "vrx_city_services_b",
+      "lod": "lod0",
+      "maxBoundsDeltaMetres": 1.2366555210974184e-06,
+      "uv0": true,
+      "materialSlotOrder": true
+    },
+    {
+      "assetId": "vrx_city_services_b",
+      "lod": "lod1",
+      "maxBoundsDeltaMetres": 1.2457153388822917e-06,
+      "uv0": true,
+      "materialSlotOrder": true
+    },
+    {
+      "assetId": "vrx_city_works_b",
+      "lod": "lod0",
+      "maxBoundsDeltaMetres": 1.2744045534418547e-06,
+      "uv0": true,
+      "materialSlotOrder": true
+    },
+    {
+      "assetId": "vrx_city_works_b",
+      "lod": "lod1",
+      "maxBoundsDeltaMetres": 1.283464371226728e-06,
+      "uv0": true,
+      "materialSlotOrder": true
+    },
+    {
+      "assetId": "vrx_city_landmark_a",
+      "lod": "lod0",
+      "maxBoundsDeltaMetres": 1.1611576837822213e-06,
+      "uv0": true,
+      "materialSlotOrder": true
+    },
+    {
+      "assetId": "vrx_city_landmark_a",
+      "lod": "lod1",
+      "maxBoundsDeltaMetres": 1.1702175015670946e-06,
+      "uv0": true,
+      "materialSlotOrder": true
+    },
+    {
+      "assetId": "vrx_city_canopy_a",
+      "lod": "lod0",
+      "maxBoundsDeltaMetres": 9.814726809054264e-07,
+      "uv0": true,
+      "materialSlotOrder": true
+    },
+    {
+      "assetId": "vrx_city_canopy_a",
+      "lod": "lod1",
+      "maxBoundsDeltaMetres": 9.814726809054264e-07,
+      "uv0": true,
+      "materialSlotOrder": true
+    },
+    {
+      "assetId": "vrx_city_bridge_a",
+      "lod": "lod0",
+      "maxBoundsDeltaMetres": 1.9073486328125e-06,
+      "uv0": true,
+      "materialSlotOrder": true
+    },
+    {
+      "assetId": "vrx_city_bridge_a",
+      "lod": "lod1",
+      "maxBoundsDeltaMetres": 1.9073486328125e-06,
+      "uv0": true,
+      "materialSlotOrder": true
+    },
+    {
+      "assetId": "vrx_city_plant_a",
+      "lod": "lod0",
+      "maxBoundsDeltaMetres": 3.7748949921478925e-07,
+      "uv0": true,
+      "materialSlotOrder": true
+    },
+    {
+      "assetId": "vrx_city_plant_a",
+      "lod": "lod1",
+      "maxBoundsDeltaMetres": 3.7748949921478925e-07,
+      "uv0": true,
+      "materialSlotOrder": true
+    },
+    {
+      "assetId": "vrx_city_advert_a",
+      "lod": "lod0",
+      "maxBoundsDeltaMetres": 4.76837158203125e-07,
+      "uv0": true,
+      "materialSlotOrder": true
+    },
+    {
+      "assetId": "vrx_city_advert_a",
+      "lod": "lod1",
+      "maxBoundsDeltaMetres": 4.76837158203125e-07,
+      "uv0": true,
+      "materialSlotOrder": true
+    }
+  ],
+  "limitations": "Blender FBX reimport validates exported shape and slots. Unity import and moving usability are separate."
+}

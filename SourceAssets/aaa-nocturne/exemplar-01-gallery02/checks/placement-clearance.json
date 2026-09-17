@@ -1,0 +1,128 @@
+{
+  "opening-civic-right": {
+    "surfaceTriangleIntersections": 0,
+    "verticesInsideProtectedCorridorSamples": 0,
+    "minLateralMarginWithinProtectedHeightMeters": 6.0221778635663625,
+    "method": "BVH against all 1200 closed corridor cells plus every-frame vertex containment; 15m longitudinal candidate window."
+  },
+  "opening-service-left": {
+    "surfaceTriangleIntersections": 0,
+    "verticesInsideProtectedCorridorSamples": 0,
+    "minLateralMarginWithinProtectedHeightMeters": 4.002143761246316,
+    "method": "BVH against all 1200 closed corridor cells plus every-frame vertex containment; 15m longitudinal candidate window."
+  },
+  "warm-entry-portal": {
+    "surfaceTriangleIntersections": 0,
+    "verticesInsideProtectedCorridorSamples": 0,
+    "minLateralMarginWithinProtectedHeightMeters": 0.7162344160378851,
+    "method": "BVH against all 1200 closed corridor cells plus every-frame vertex containment; 15m longitudinal candidate window."
+  },
+  "warm-rib-01": {
+    "surfaceTriangleIntersections": 0,
+    "verticesInsideProtectedCorridorSamples": 0,
+    "minLateralMarginWithinProtectedHeightMeters": 0.6910287950873748,
+    "method": "BVH against all 1200 closed corridor cells plus every-frame vertex containment; 15m longitudinal candidate window."
+  },
+  "warm-rib-02": {
+    "surfaceTriangleIntersections": 0,
+    "verticesInsideProtectedCorridorSamples": 0,
+    "minLateralMarginWithinProtectedHeightMeters": 0.6363681649471573,
+    "method": "BVH against all 1200 closed corridor cells plus every-frame vertex containment; 15m longitudinal candidate window."
+  },
+  "warm-rib-03": {
+    "surfaceTriangleIntersections": 0,
+    "verticesInsideProtectedCorridorSamples": 0,
+    "minLateralMarginWithinProtectedHeightMeters": 0.584563114472207,
+    "method": "BVH against all 1200 closed corridor cells plus every-frame vertex containment; 15m longitudinal candidate window."
+  },
+  "warm-rib-04": {
+    "surfaceTriangleIntersections": 0,
+    "verticesInsideProtectedCorridorSamples": 0,
+    "minLateralMarginWithinProtectedHeightMeters": 0.46487469008624416,
+    "method": "BVH against all 1200 closed corridor cells plus every-frame vertex containment; 15m longitudinal candidate window."
+  },
+  "warm-rib-05": {
+    "surfaceTriangleIntersections": 0,
+    "verticesInsideProtectedCorridorSamples": 0,
+    "minLateralMarginWithinProtectedHeightMeters": 0.4509069253608011,
+    "method": "BVH against all 1200 closed corridor cells plus every-frame vertex containment; 15m longitudinal candidate window."
+  },
+  "warm-exit-portal": {
+    "surfaceTriangleIntersections": 0,
+    "verticesInsideProtectedCorridorSamples": 0,
+    "minLateralMarginWithinProtectedHeightMeters": 0.7726964623487103,
+    "method": "BVH against all 1200 closed corridor cells plus every-frame vertex containment; 15m longitudinal candidate window."
+  },
+  "warm-wall-span-01": {
+    "surfaceTriangleIntersections": 0,
+    "verticesInsideProtectedCorridorSamples": 0,
+    "minLateralMarginWithinProtectedHeightMeters": 0.6626569275528276,
+    "method": "BVH against all 1200 closed corridor cells plus every-frame vertex containment; 15m longitudinal candidate window."
+  },
+  "warm-ceiling-span-01": {
+    "surfaceTriangleIntersections": 0,
+    "verticesInsideProtectedCorridorSamples": 0,
+    "minLateralMarginWithinProtectedHeightMeters": null,
+    "method": "BVH against all 1200 closed corridor cells plus every-frame vertex containment; 15m longitudinal candidate window."
+  },
+  "warm-wall-span-02": {
+    "surfaceTriangleIntersections": 0,
+    "verticesInsideProtectedCorridorSamples": 0,
+    "minLateralMarginWithinProtectedHeightMeters": 0.5362209761000774,
+    "method": "BVH against all 1200 closed corridor cells plus every-frame vertex containment; 15m longitudinal candidate window."
+  },
+  "warm-ceiling-span-02": {
+    "surfaceTriangleIntersections": 0,
+    "verticesInsideProtectedCorridorSamples": 0,
+    "minLateralMarginWithinProtectedHeightMeters": null,
+    "method": "BVH against all 1200 closed corridor cells plus every-frame vertex containment; 15m longitudinal candidate window."
+  },
+  "warm-wall-span-03": {
+    "surfaceTriangleIntersections": 0,
+    "verticesInsideProtectedCorridorSamples": 0,
+    "minLateralMarginWithinProtectedHeightMeters": 0.6734978030999503,
+    "method": "BVH against all 1200 closed corridor cells plus every-frame vertex containment; 15m longitudinal candidate window."
+  },
+  "warm-ceiling-span-03": {
+    "surfaceTriangleIntersections": 0,
+    "verticesInsideProtectedCorridorSamples": 0,
+    "minLateralMarginWithinProtectedHeightMeters": null,
+    "method": "BVH against all 1200 closed corridor cells plus every-frame vertex containment; 15m longitudinal candidate window."
+  },
+  "warm-wall-span-04": {
+    "surfaceTriangleIntersections": 0,
+    "verticesInsideProtectedCorridorSamples": 0,
+    "minLateralMarginWithinProtectedHeightMeters": 0.3796643156905475,
+    "method": "BVH against all 1200 closed corridor cells plus every-frame vertex containment; 15m longitudinal candidate window."
+  },
+  "warm-ceiling-span-04": {
+    "surfaceTriangleIntersections": 0,
+    "verticesInsideProtectedCorridorSamples": 0,
+    "minLateralMarginWithinProtectedHeightMeters": null,
+    "method": "BVH against all 1200 closed corridor cells plus every-frame vertex containment; 15m longitudinal candidate window."
+  },
+  "warm-wall-span-05": {
+    "surfaceTriangleIntersections": 0,
+    "verticesInsideProtectedCorridorSamples": 0,
+    "minLateralMarginWithinProtectedHeightMeters": 0.5070010324161185,
+    "method": "BVH against all 1200 closed corridor cells plus every-frame vertex containment; 15m longitudinal candidate window."
+  },
+  "warm-ceiling-span-05": {
+    "surfaceTriangleIntersections": 0,
+    "verticesInsideProtectedCorridorSamples": 0,
+    "minLateralMarginWithinProtectedHeightMeters": null,
+    "method": "BVH against all 1200 closed corridor cells plus every-frame vertex containment; 15m longitudinal candidate window."
+  },
+  "warm-wall-span-06": {
+    "surfaceTriangleIntersections": 0,
+    "verticesInsideProtectedCorridorSamples": 0,
+    "minLateralMarginWithinProtectedHeightMeters": 0.5152186377072354,
+    "method": "BVH against all 1200 closed corridor cells plus every-frame vertex containment; 15m longitudinal candidate window."
+  },
+  "warm-ceiling-span-06": {
+    "surfaceTriangleIntersections": 0,
+    "verticesInsideProtectedCorridorSamples": 0,
+    "minLateralMarginWithinProtectedHeightMeters": null,
+    "method": "BVH against all 1200 closed corridor cells plus every-frame vertex containment; 15m longitudinal candidate window."
+  }
+}

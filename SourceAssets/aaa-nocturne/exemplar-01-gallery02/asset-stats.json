@@ -1,0 +1,658 @@
+{
+  "NA_CivicFacade_A_LOD0": {
+    "vertices": 16480,
+    "triangles": 32288,
+    "sourceBoundsMin": [
+      -5.175000190734863,
+      -13.399999618530273,
+      -8.699999809265137
+    ],
+    "sourceBoundsMax": [
+      5.589000225067139,
+      13.399999618530273,
+      17.421602249145508
+    ],
+    "unityBoundsMin": [
+      -5.175000190734863,
+      -8.699999809265137,
+      -13.399999618530273
+    ],
+    "unityBoundsMax": [
+      5.589000225067139,
+      17.421602249145508,
+      13.399999618530273
+    ],
+    "boundaryEdges": 0,
+    "nonmanifoldEdges": 0,
+    "degenerateTriangles": 0,
+    "duplicateTriangles": 0,
+    "zeroAreaUVTriangles": 0,
+    "closedComponents": 168,
+    "nonpositiveComponents": 0,
+    "finiteUV": true,
+    "materialSlots": [
+      "NA_Graphite",
+      "NA_Slate",
+      "NA_Aluminium",
+      "NA_Interior",
+      "NA_Ceramic",
+      "NA_Glass",
+      "NA_WarmDiffuser",
+      "NA_CoolDiffuser"
+    ],
+    "sourceParts": 168,
+    "fbxSha256": "6d8d699ed33aa712bc224c73a1b900b66f09ad34cdb33781acda431c837a07af"
+  },
+  "NA_CivicFacade_A_LOD1": {
+    "vertices": 2498,
+    "triangles": 4596,
+    "sourceBoundsMin": [
+      -5.175000190734863,
+      -13.399999618530273,
+      -8.699999809265137
+    ],
+    "sourceBoundsMax": [
+      5.589000225067139,
+      13.399999618530273,
+      17.421602249145508
+    ],
+    "unityBoundsMin": [
+      -5.175000190734863,
+      -8.699999809265137,
+      -13.399999618530273
+    ],
+    "unityBoundsMax": [
+      5.589000225067139,
+      17.421602249145508,
+      13.399999618530273
+    ],
+    "boundaryEdges": 0,
+    "nonmanifoldEdges": 0,
+    "degenerateTriangles": 0,
+    "duplicateTriangles": 0,
+    "zeroAreaUVTriangles": 0,
+    "closedComponents": 100,
+    "nonpositiveComponents": 0,
+    "finiteUV": true,
+    "materialSlots": [
+      "NA_Graphite",
+      "NA_Slate",
+      "NA_Aluminium",
+      "NA_Interior",
+      "NA_Ceramic",
+      "NA_Glass",
+      "NA_WarmDiffuser",
+      "NA_CoolDiffuser"
+    ],
+    "sourceParts": 100,
+    "fbxSha256": "52d81e1754664b529d6e8362c45b877698d71dccc373a3575f18a7890c6938bc"
+  },
+  "NA_ServiceFacade_A_LOD0": {
+    "vertices": 6744,
+    "triangles": 13220,
+    "sourceBoundsMin": [
+      -5.175000190734863,
+      -7.0,
+      -8.699999809265137
+    ],
+    "sourceBoundsMax": [
+      5.589000225067139,
+      7.0,
+      8.824999809265137
+    ],
+    "unityBoundsMin": [
+      -5.175000190734863,
+      -8.699999809265137,
+      -7.0
+    ],
+    "unityBoundsMax": [
+      5.589000225067139,
+      8.824999809265137,
+      7.0
+    ],
+    "boundaryEdges": 0,
+    "nonmanifoldEdges": 0,
+    "degenerateTriangles": 0,
+    "duplicateTriangles": 0,
+    "zeroAreaUVTriangles": 0,
+    "closedComponents": 67,
+    "nonpositiveComponents": 0,
+    "finiteUV": true,
+    "materialSlots": [
+      "NA_Graphite",
+      "NA_Slate",
+      "NA_Aluminium",
+      "NA_Interior",
+      "NA_Ceramic",
+      "NA_CoolDiffuser"
+    ],
+    "sourceParts": 67,
+    "fbxSha256": "63959e02b222cef93c757692adb466aa22a04411b670ca48c7acd4f641f57d6c"
+  },
+  "NA_ServiceFacade_A_LOD1": {
+    "vertices": 1404,
+    "triangles": 2588,
+    "sourceBoundsMin": [
+      -5.175000190734863,
+      -7.0,
+      -8.699999809265137
+    ],
+    "sourceBoundsMax": [
+      5.589000225067139,
+      7.0,
+      8.824999809265137
+    ],
+    "unityBoundsMin": [
+      -5.175000190734863,
+      -8.699999809265137,
+      -7.0
+    ],
+    "unityBoundsMax": [
+      5.589000225067139,
+      8.824999809265137,
+      7.0
+    ],
+    "boundaryEdges": 0,
+    "nonmanifoldEdges": 0,
+    "degenerateTriangles": 0,
+    "duplicateTriangles": 0,
+    "zeroAreaUVTriangles": 0,
+    "closedComponents": 55,
+    "nonpositiveComponents": 0,
+    "finiteUV": true,
+    "materialSlots": [
+      "NA_Graphite",
+      "NA_Slate",
+      "NA_Aluminium",
+      "NA_Interior",
+      "NA_Ceramic",
+      "NA_CoolDiffuser"
+    ],
+    "sourceParts": 55,
+    "fbxSha256": "16b4e67e10591d0c407954268d36020916c84efc9f0d9357736f25613d4ca491"
+  },
+  "NA_GalleryPortal_G02_LOD0": {
+    "vertices": 4704,
+    "triangles": 9228,
+    "sourceBoundsMin": [
+      -15.149999618530273,
+      -1.6100000143051147,
+      0.14499999582767487
+    ],
+    "sourceBoundsMax": [
+      15.149999618530273,
+      0.9049999713897705,
+      15.619999885559082
+    ],
+    "unityBoundsMin": [
+      -15.149999618530273,
+      0.14499999582767487,
+      -0.9049999713897705
+    ],
+    "unityBoundsMax": [
+      15.149999618530273,
+      15.619999885559082,
+      1.6100000143051147
+    ],
+    "boundaryEdges": 0,
+    "nonmanifoldEdges": 0,
+    "degenerateTriangles": 0,
+    "duplicateTriangles": 0,
+    "zeroAreaUVTriangles": 0,
+    "closedComponents": 45,
+    "nonpositiveComponents": 0,
+    "finiteUV": true,
+    "materialSlots": [
+      "NA_Graphite",
+      "NA_Aluminium",
+      "NA_Slate",
+      "NA_WarmDiffuser"
+    ],
+    "sourceParts": 45,
+    "fbxSha256": "17519b242384d97ec8aaf59cabcd5a08f2404494f488808a70c7952be16636ff"
+  },
+  "NA_GalleryPortal_G02_LOD1": {
+    "vertices": 600,
+    "triangles": 1116,
+    "sourceBoundsMin": [
+      -15.149999618530273,
+      -1.6100000143051147,
+      0.14499999582767487
+    ],
+    "sourceBoundsMax": [
+      15.149999618530273,
+      0.9049999713897705,
+      15.619999885559082
+    ],
+    "unityBoundsMin": [
+      -15.149999618530273,
+      0.14499999582767487,
+      -0.9049999713897705
+    ],
+    "unityBoundsMax": [
+      15.149999618530273,
+      15.619999885559082,
+      1.6100000143051147
+    ],
+    "boundaryEdges": 0,
+    "nonmanifoldEdges": 0,
+    "degenerateTriangles": 0,
+    "duplicateTriangles": 0,
+    "zeroAreaUVTriangles": 0,
+    "closedComponents": 21,
+    "nonpositiveComponents": 0,
+    "finiteUV": true,
+    "materialSlots": [
+      "NA_Graphite",
+      "NA_Aluminium",
+      "NA_Slate",
+      "NA_WarmDiffuser"
+    ],
+    "sourceParts": 21,
+    "fbxSha256": "48d9d3a198fe97c6bb6efcf0100d336237dc8586f4aa1cfffe489d17e6cdccf6"
+  },
+  "NA_GalleryRib_G02_LOD0": {
+    "vertices": 1440,
+    "triangles": 2836,
+    "sourceBoundsMin": [
+      -15.149999618530273,
+      -0.7799999713897705,
+      0.125
+    ],
+    "sourceBoundsMax": [
+      15.149999618530273,
+      0.7799999713897705,
+      15.619999885559082
+    ],
+    "unityBoundsMin": [
+      -15.149999618530273,
+      0.125,
+      -0.7799999713897705
+    ],
+    "unityBoundsMax": [
+      15.149999618530273,
+      15.619999885559082,
+      0.7799999713897705
+    ],
+    "boundaryEdges": 0,
+    "nonmanifoldEdges": 0,
+    "degenerateTriangles": 0,
+    "duplicateTriangles": 0,
+    "zeroAreaUVTriangles": 0,
+    "closedComponents": 11,
+    "nonpositiveComponents": 0,
+    "finiteUV": true,
+    "materialSlots": [
+      "NA_Graphite",
+      "NA_Aluminium",
+      "NA_Slate"
+    ],
+    "sourceParts": 11,
+    "fbxSha256": "00f16da92e4fcf7cbcdce138536458e0bcf22d6d88a6c84b825a25db221d7422"
+  },
+  "NA_GalleryRib_G02_LOD1": {
+    "vertices": 360,
+    "triangles": 676,
+    "sourceBoundsMin": [
+      -15.149999618530273,
+      -0.7799999713897705,
+      0.125
+    ],
+    "sourceBoundsMax": [
+      15.149999618530273,
+      0.7799999713897705,
+      15.619999885559082
+    ],
+    "unityBoundsMin": [
+      -15.149999618530273,
+      0.125,
+      -0.7799999713897705
+    ],
+    "unityBoundsMax": [
+      15.149999618530273,
+      15.619999885559082,
+      0.7799999713897705
+    ],
+    "boundaryEdges": 0,
+    "nonmanifoldEdges": 0,
+    "degenerateTriangles": 0,
+    "duplicateTriangles": 0,
+    "zeroAreaUVTriangles": 0,
+    "closedComponents": 11,
+    "nonpositiveComponents": 0,
+    "finiteUV": true,
+    "materialSlots": [
+      "NA_Graphite",
+      "NA_Aluminium",
+      "NA_Slate"
+    ],
+    "sourceParts": 11,
+    "fbxSha256": "ae4c98099a4695d00badad9bea32d3b0acaa931c2eb89d4c9a87b07f04835aca"
+  },
+  "NA_GalleryWallBay_S_G02_LOD0": {
+    "vertices": 7104,
+    "triangles": 13912,
+    "sourceBoundsMin": [
+      -15.104999542236328,
+      -12.579999923706055,
+      1.0
+    ],
+    "sourceBoundsMax": [
+      15.104999542236328,
+      0.2800000011920929,
+      15.224296569824219
+    ],
+    "unityBoundsMin": [
+      -15.104999542236328,
+      1.0,
+      -0.2800000011920929
+    ],
+    "unityBoundsMax": [
+      15.104999542236328,
+      15.224296569824219,
+      12.579999923706055
+    ],
+    "boundaryEdges": 0,
+    "nonmanifoldEdges": 0,
+    "degenerateTriangles": 0,
+    "duplicateTriangles": 0,
+    "zeroAreaUVTriangles": 0,
+    "closedComponents": 74,
+    "nonpositiveComponents": 0,
+    "finiteUV": true,
+    "materialSlots": [
+      "NA_Graphite",
+      "NA_Aluminium",
+      "NA_BronzePanel",
+      "NA_WarningMark",
+      "NA_Slate",
+      "NA_WarmDiffuser"
+    ],
+    "sourceParts": 74,
+    "fbxSha256": "1f50bc3f854acb662d6419097b0222fd04dc27d21ca2c7258b6e732865d3495c"
+  },
+  "NA_GalleryWallBay_S_G02_LOD1": {
+    "vertices": 1296,
+    "triangles": 2376,
+    "sourceBoundsMin": [
+      -15.104999542236328,
+      -12.579999923706055,
+      1.0
+    ],
+    "sourceBoundsMax": [
+      15.104999542236328,
+      0.2800000011920929,
+      15.215250968933105
+    ],
+    "unityBoundsMin": [
+      -15.104999542236328,
+      1.0,
+      -0.2800000011920929
+    ],
+    "unityBoundsMax": [
+      15.104999542236328,
+      15.215250968933105,
+      12.579999923706055
+    ],
+    "boundaryEdges": 0,
+    "nonmanifoldEdges": 0,
+    "degenerateTriangles": 0,
+    "duplicateTriangles": 0,
+    "zeroAreaUVTriangles": 0,
+    "closedComponents": 54,
+    "nonpositiveComponents": 0,
+    "finiteUV": true,
+    "materialSlots": [
+      "NA_Graphite",
+      "NA_Aluminium",
+      "NA_BronzePanel",
+      "NA_Slate",
+      "NA_WarmDiffuser"
+    ],
+    "sourceParts": 54,
+    "fbxSha256": "6e27c1087cd6f1e4e63d89fc74ed4641b9adafb7b55743c51b4262af1b9a2fef"
+  },
+  "NA_GalleryWallBay_L_G02_LOD0": {
+    "vertices": 7104,
+    "triangles": 13912,
+    "sourceBoundsMin": [
+      -15.104999542236328,
+      -14.119999885559082,
+      1.0
+    ],
+    "sourceBoundsMax": [
+      15.104999542236328,
+      0.2800000011920929,
+      15.224296569824219
+    ],
+    "unityBoundsMin": [
+      -15.104999542236328,
+      1.0,
+      -0.2800000011920929
+    ],
+    "unityBoundsMax": [
+      15.104999542236328,
+      15.224296569824219,
+      14.119999885559082
+    ],
+    "boundaryEdges": 0,
+    "nonmanifoldEdges": 0,
+    "degenerateTriangles": 0,
+    "duplicateTriangles": 0,
+    "zeroAreaUVTriangles": 0,
+    "closedComponents": 74,
+    "nonpositiveComponents": 0,
+    "finiteUV": true,
+    "materialSlots": [
+      "NA_Graphite",
+      "NA_Aluminium",
+      "NA_BronzePanel",
+      "NA_WarningMark",
+      "NA_Slate",
+      "NA_WarmDiffuser"
+    ],
+    "sourceParts": 74,
+    "fbxSha256": "ed45edae85f5a154f8c5580d9b6f940dfce61c85d55aa189218b88640480c0c2"
+  },
+  "NA_GalleryWallBay_L_G02_LOD1": {
+    "vertices": 1296,
+    "triangles": 2376,
+    "sourceBoundsMin": [
+      -15.104999542236328,
+      -14.119999885559082,
+      1.0
+    ],
+    "sourceBoundsMax": [
+      15.104999542236328,
+      0.2800000011920929,
+      15.215250968933105
+    ],
+    "unityBoundsMin": [
+      -15.104999542236328,
+      1.0,
+      -0.2800000011920929
+    ],
+    "unityBoundsMax": [
+      15.104999542236328,
+      15.215250968933105,
+      14.119999885559082
+    ],
+    "boundaryEdges": 0,
+    "nonmanifoldEdges": 0,
+    "degenerateTriangles": 0,
+    "duplicateTriangles": 0,
+    "zeroAreaUVTriangles": 0,
+    "closedComponents": 54,
+    "nonpositiveComponents": 0,
+    "finiteUV": true,
+    "materialSlots": [
+      "NA_Graphite",
+      "NA_Aluminium",
+      "NA_BronzePanel",
+      "NA_Slate",
+      "NA_WarmDiffuser"
+    ],
+    "sourceParts": 54,
+    "fbxSha256": "9bf6950b69c358d382dabd87808e369711b1c6fcda3cfc076edf3f7c90383e0f"
+  },
+  "NA_GalleryCeilingBay_S_G02_LOD0": {
+    "vertices": 1536,
+    "triangles": 3008,
+    "sourceBoundsMin": [
+      -10.25,
+      -12.449999809265137,
+      14.029999732971191
+    ],
+    "sourceBoundsMax": [
+      10.25,
+      0.15000000596046448,
+      15.390000343322754
+    ],
+    "unityBoundsMin": [
+      -10.25,
+      14.029999732971191,
+      -0.15000000596046448
+    ],
+    "unityBoundsMax": [
+      10.25,
+      15.390000343322754,
+      12.449999809265137
+    ],
+    "boundaryEdges": 0,
+    "nonmanifoldEdges": 0,
+    "degenerateTriangles": 0,
+    "duplicateTriangles": 0,
+    "zeroAreaUVTriangles": 0,
+    "closedComponents": 16,
+    "nonpositiveComponents": 0,
+    "finiteUV": true,
+    "materialSlots": [
+      "NA_Graphite",
+      "NA_BronzePanel",
+      "NA_Aluminium",
+      "NA_WarmDiffuser"
+    ],
+    "sourceParts": 16,
+    "fbxSha256": "52e0baad545cd16ae0f6b6163dc720eab516c18f8526e4b628d2a9c0f122f1f1"
+  },
+  "NA_GalleryCeilingBay_S_G02_LOD1": {
+    "vertices": 384,
+    "triangles": 704,
+    "sourceBoundsMin": [
+      -10.25,
+      -12.449999809265137,
+      14.029999732971191
+    ],
+    "sourceBoundsMax": [
+      10.25,
+      0.15000000596046448,
+      15.390000343322754
+    ],
+    "unityBoundsMin": [
+      -10.25,
+      14.029999732971191,
+      -0.15000000596046448
+    ],
+    "unityBoundsMax": [
+      10.25,
+      15.390000343322754,
+      12.449999809265137
+    ],
+    "boundaryEdges": 0,
+    "nonmanifoldEdges": 0,
+    "degenerateTriangles": 0,
+    "duplicateTriangles": 0,
+    "zeroAreaUVTriangles": 0,
+    "closedComponents": 16,
+    "nonpositiveComponents": 0,
+    "finiteUV": true,
+    "materialSlots": [
+      "NA_Graphite",
+      "NA_BronzePanel",
+      "NA_Aluminium",
+      "NA_WarmDiffuser"
+    ],
+    "sourceParts": 16,
+    "fbxSha256": "b1900eeb1d5d8ccfa7f302d8654509935fb47d804275f391e3cdaf809c691d4f"
+  },
+  "NA_GalleryCeilingBay_L_G02_LOD0": {
+    "vertices": 1536,
+    "triangles": 3008,
+    "sourceBoundsMin": [
+      -10.25,
+      -13.989999771118164,
+      14.029999732971191
+    ],
+    "sourceBoundsMax": [
+      10.25,
+      0.15000000596046448,
+      15.390000343322754
+    ],
+    "unityBoundsMin": [
+      -10.25,
+      14.029999732971191,
+      -0.15000000596046448
+    ],
+    "unityBoundsMax": [
+      10.25,
+      15.390000343322754,
+      13.989999771118164
+    ],
+    "boundaryEdges": 0,
+    "nonmanifoldEdges": 0,
+    "degenerateTriangles": 0,
+    "duplicateTriangles": 0,
+    "zeroAreaUVTriangles": 0,
+    "closedComponents": 16,
+    "nonpositiveComponents": 0,
+    "finiteUV": true,
+    "materialSlots": [
+      "NA_Graphite",
+      "NA_BronzePanel",
+      "NA_Aluminium",
+      "NA_WarmDiffuser"
+    ],
+    "sourceParts": 16,
+    "fbxSha256": "865ea0f52b8aa9650f90eeaff1fd0aa011a80a7be14349612c80f8ee9b0f013a"
+  },
+  "NA_GalleryCeilingBay_L_G02_LOD1": {
+    "vertices": 384,
+    "triangles": 704,
+    "sourceBoundsMin": [
+      -10.25,
+      -13.989999771118164,
+      14.029999732971191
+    ],
+    "sourceBoundsMax": [
+      10.25,
+      0.15000000596046448,
+      15.390000343322754
+    ],
+    "unityBoundsMin": [
+      -10.25,
+      14.029999732971191,
+      -0.15000000596046448
+    ],
+    "unityBoundsMax": [
+      10.25,
+      15.390000343322754,
+      13.989999771118164
+    ],
+    "boundaryEdges": 0,
+    "nonmanifoldEdges": 0,
+    "degenerateTriangles": 0,
+    "duplicateTriangles": 0,
+    "zeroAreaUVTriangles": 0,
+    "closedComponents": 16,
+    "nonpositiveComponents": 0,
+    "finiteUV": true,
+    "materialSlots": [
+      "NA_Graphite",
+      "NA_BronzePanel",
+      "NA_Aluminium",
+      "NA_WarmDiffuser"
+    ],
+    "sourceParts": 16,
+    "fbxSha256": "ccf2369bb539809532ddd1d16083d17303e0cbaf9b7a87ffec170da7fa06b29f"
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "provider": "Scenario",
+  "model": "model_openai-gpt-image-2",
+  "quality": "high",
+  "source_build_guid": "71c571078c934d3599898ec0eaf13382",
+  "status": "Four generated visual concepts; no game implementation",
+  "concepts": [
+    {
+      "id": "01-racing-hud",
+      "title": "Normal racing HUD",
+      "source_image": "sources/01-racing-hud.png",
+      "original_source_image": "/Users/anping.wang/Documents/Stuff/AI Space/Vector Rush Workspaces/2026-09-14-playable-race/artifacts/stage2/candidate-07/screens/1600x900/after/05-racing.png",
+      "source_sha256": "0e59c39a0d4d92e290febac56be2ba02bf458a47ecf4f4c3bb97168b9f8ae2ab",
+      "output_image": "01-racing-hud-concept.png",
+      "output_sha256": "0354ab638cffdf91f278c72f39813981dc4acfd8381d8180df7614f749229ca2",
+      "dimensions": [
+        2048,
+        1152
+      ],
+      "job_id": "job_Y4yMSaY7R6CtSnZxQrdMQV9e",
+      "style_reference": null,
+      "prompt_file": "01-racing-hud-prompt.txt",
+      "request_file": "01-racing-hud-request.json",
+      "status": "Generated and visually inspected; concept only"
+    },
+    {
+      "id": "02-boost-hud",
+      "title": "Boosted racing HUD",
+      "source_image": "sources/02-boost-hud.png",
+      "original_source_image": "/Users/anping.wang/Documents/Stuff/AI Space/Vector Rush Workspaces/2026-09-14-playable-race/artifacts/stage2/candidate-07/propulsion/1600x900/after/propulsion-boost.png",
+      "source_sha256": "01777a10cebf97c28c0f0b97c0de489b0d82888eb4481329adcd08dcbe1a4905",
+      "output_image": "02-boost-hud-concept.png",
+      "output_sha256": "e0e9b643a81603f0b58f79ecbb53c08bb768fe25d7893a1224f8d70aed45bd01",
+      "dimensions": [
+        2048,
+        1152
+      ],
+      "job_id": "job_Kc7pyHXEiARhwCzVsggMFrw9",
+      "style_reference": "01-racing-hud",
+      "prompt_file": "02-boost-hud-prompt.txt",
+      "request_file": "02-boost-hud-request.json",
+      "status": "Generated and visually inspected; concept only"
+    },
+    {
+      "id": "03-title-menu",
+      "title": "Title and main menu",
+      "source_image": "sources/03-title-menu.png",
+      "original_source_image": "/Users/anping.wang/Documents/Stuff/AI Space/Vector Rush Workspaces/2026-09-14-playable-race/artifacts/stage2/candidate-07/screens/1600x900/after/01-title.png",
+      "source_sha256": "5e2dcc6ce4fba60d1f84e964ffce7ede93341714ff346e1580421c0a2255ee1a",
+      "output_image": "03-title-menu-concept.png",
+      "output_sha256": "2ce97f709387b52f5f22f299ff9ed381dbbaef445342ec356ac4910253be8cd5",
+      "dimensions": [
+        2048,
+        1152
+      ],
+      "job_id": "job_oS4VceP3WtJLXGas4pPvj5YT",
+      "style_reference": null,
+      "prompt_file": "03-title-menu-prompt.txt",
+      "request_file": "03-title-menu-request.json",
+      "status": "Generated and visually inspected; concept only"
+    },
+    {
+      "id": "04-pause-menu",
+      "title": "Pause menu",
+      "source_image": "sources/04-pause-menu.png",
+      "original_source_image": "/Users/anping.wang/Documents/Stuff/AI Space/Vector Rush Workspaces/2026-09-14-playable-race/artifacts/stage2/candidate-07/screens/1600x900/after/06-paused.png",
+      "source_sha256": "517c6e9c85ad8ac357e6b7f40c50e7bd19ba82d7574627bcec67563a349856df",
+      "output_image": "04-pause-menu-concept.png",
+      "output_sha256": "5854e0cef5be1f2555170028696aa28fc64a8c1bfdb6dcc885030427364e42cf",
+      "dimensions": [
+        2048,
+        1152
+      ],
+      "job_id": "job_JJF1mL2LpzynmMSHTLYWfP5M",
+      "style_reference": "03-title-menu",
+      "prompt_file": "04-pause-menu-prompt.txt",
+      "request_file": "04-pause-menu-request.json",
+      "status": "Generated and visually inspected; concept only"
+    }
+  ]
+}

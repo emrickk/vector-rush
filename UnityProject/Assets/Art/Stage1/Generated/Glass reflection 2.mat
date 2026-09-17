@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: VectorRush/City Glass Reflection
+  m_Shader: {fileID: 4800000, guid: 5b6a244c22cba4ef5a65de9e6f361b10, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _City0:
+        m_Texture: {fileID: 8900000, guid: 2a582dae6c48449ef928dbbb2bb475fe, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _City1:
+        m_Texture: {fileID: 8900000, guid: b9ab0dce9e71b45d2a4531b72730a315, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _City2:
+        m_Texture: {fileID: 8900000, guid: f7d016563b3ff474da9c832fc0609937, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SignData:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SignImages:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SurfaceMap:
+        m_Texture: {fileID: 2800000, guid: bf7a6a110282b4b0d809e653987c41f9, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _RoadSurface: 0
+    - _SignCount: 0
+    - _Strength: 1.8
+    m_Colors:
+    - _Capture0: {r: 209.89825, g: 48.849567, b: -184.89319, a: 0}
+    - _Capture1: {r: 254.57298, g: 64.96091, b: -1.426991, a: 0}
+    - _Capture2: {r: 154.81743, g: 72.941345, b: 105.569214, a: 0}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1

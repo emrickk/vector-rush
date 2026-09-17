@@ -1,0 +1,15 @@
+Use case: ui-mockup.
+Asset type: a high-fidelity art-direction reference for Vector Rush, an existing futuristic anti-gravity racing game.
+Input image: edit target and exact game-world reference.
+Primary request: redesign the EXISTING interface to feel like a confidently art-directed premium racing game. The current interface is too utilitarian. Make a substantial visual proposal, not a small font or color adjustment.
+Shared direction: cinematic motorsport graphics; decisive custom-feeling condensed typography with controlled forward energy; warm-white primary information, luminous cyan propulsion, restrained acid-lime selection; deep neutral translucent support only where needed. Precise alignment, deliberate negative space, refined edge treatment, disciplined highlights and optical balance. Communicate tactile responsiveness and speed through the existing elements' composition. Keep the center of the driving view open.
+Invariants: preserve the screenshot's exact craft identity and geometry, city architecture, track, camera view, lighting and race situation. Change interface styling and placement only. Preserve the existing information and actions. No new screens, widgets, statistics, mechanics, settings, sponsors, slogans or features. No desktop dashboard cards, gratuitous tiny labels, dense sci-fi ornament, opaque cockpit frame, rainbow neon or gratuitous lens flare. This is an interface concept, not permission to improve the background scene.
+Output: one finished 16:9 reference image, not a mood board, explanation, wireframe, device frame or comparison collage. Keep all necessary text legible and correctly spelled.
+
+Screen-specific direction:
+Resolve the existing pause screen as part of the same premium motorsport identity. Emphasize RACE PAUSED and the RESUME action through scale, spacing and a tactile selection treatment; make the remaining existing actions quieter and clearly separated. Keep the frozen race visibly present with an elegant restrained scrim. Preserve the actual race position and time. Exact actions: RESUME; RESTART RACE; SETTINGS; RETURN TO TITLE; QUIT APPLICATION. No extra content, new controls or invented badges.
+
+
+Art direction emphasis: remove and redesign the old UI overlay, rather than tracing it. Make a bold, substantially more sophisticated visual proposal. Preserve the world pixels as faithfully as possible. Use refined smoked-glass depth, controlled luminous edges, exceptional typography and visually weighty active states. Avoid making the result look like an ordinary web dashboard. Do not add any information, option or interaction beyond the source.
+
+Input roles: Image 1 is the exact target screenshot: preserve its world, view, values and existing actions. Image 2 is the visual-style reference for the redesigned interface: reuse its type, spacing, material, hierarchy and color language. Do not copy Image 2 race values, world, camera or menu state.

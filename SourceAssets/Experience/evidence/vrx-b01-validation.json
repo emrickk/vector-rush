@@ -1,0 +1,12 @@
+{
+  "status": "PASS source/package checks only",
+  "revision": "vrx-b01",
+  "assets": 15,
+  "instances": 365,
+  "lod0TrianglesAllUniqueModels": 13376,
+  "lod1TrianglesAllUniqueModels": 7328,
+  "extraImageUncompressedRGBABytes": 21016576,
+  "checksummedFiles": 114,
+  "nativeImport": "unverified",
+  "movingUsability": "unverified"
+}

@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa62d293ae834a57841392b86d1764ef, type: 3}
+  m_Name: CraftMaterials
+  m_EditorClassIdentifier: VectorRush.Runtime::VectorRush.ProductionMaterialLibrary
+  craftSurfaceTemplate: {fileID: 2100000, guid: edd0a071d96fa4e50b2ec0a453523be9, type: 2}
+  craftMetalFallback: {fileID: 2100000, guid: 1f25559567c364e38b6c6c0d9153da82, type: 2}
+  craftGlass: {fileID: 2100000, guid: 390eace1c380e4c488bdb184d1dc33e5, type: 2}
+  craftEngineAccent: {fileID: 2100000, guid: 5f90ce61f59264118abb3cb0efa7f834, type: 2}
+  craftEngineCore: {fileID: 2100000, guid: 3b6dcc6c7e04c447e8a4ace139dd864c, type: 2}

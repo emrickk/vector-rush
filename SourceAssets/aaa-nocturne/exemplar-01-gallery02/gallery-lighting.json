@@ -1,0 +1,442 @@
+{
+  "schema": "aaa-nocturne-gallery-lighting-1",
+  "courseHash": "8c2161b930d43c505c8380ce30a719e6833a453d671353994f79b75e4c67a79e",
+  "fixtures": [
+    {
+      "id": "warm-entry-portal-ceiling-01",
+      "type": "spot",
+      "position": [
+        -241.98355102539062,
+        42.650543212890625,
+        -185.06629943847656
+      ],
+      "rgb": [
+        1.0,
+        0.67,
+        0.36
+      ],
+      "intensity": 500.0,
+      "range": 25.0,
+      "shadows": "soft",
+      "sourcePlacement": "warm-entry-portal",
+      "sourcePart": "Entry downward diffuser",
+      "aimDirection": [
+        -0.05606326460838318,
+        -0.9815189242362976,
+        -0.18296873569488525
+      ],
+      "outerAngle": 76.0,
+      "innerAngle": 36.0
+    },
+    {
+      "id": "warm-exit-portal-ceiling-01",
+      "type": "spot",
+      "position": [
+        -181.37112426757812,
+        41.752655029296875,
+        -223.447998046875
+      ],
+      "rgb": [
+        1.0,
+        0.67,
+        0.36
+      ],
+      "intensity": 500.0,
+      "range": 25.0,
+      "shadows": "soft",
+      "sourcePlacement": "warm-exit-portal",
+      "sourcePart": "Entry downward diffuser",
+      "aimDirection": [
+        -0.1602415144443512,
+        -0.978422999382019,
+        -0.13042667508125305
+      ],
+      "outerAngle": 76.0,
+      "innerAngle": 36.0
+    },
+    {
+      "id": "warm-wall-span-01-right-wall-01",
+      "type": "point",
+      "position": [
+        -250.329345703125,
+        34.04927062988281,
+        -199.0201873779297
+      ],
+      "rgb": [
+        1.0,
+        0.67,
+        0.36
+      ],
+      "intensity": 120.0,
+      "range": 8.5,
+      "shadows": "none",
+      "sourcePlacement": "warm-wall-span-01",
+      "sourcePart": "R inward wall diffuser"
+    },
+    {
+      "id": "warm-wall-span-01-left-wall-02",
+      "type": "point",
+      "position": [
+        -229.29010009765625,
+        29.684125900268555,
+        -182.05079650878906
+      ],
+      "rgb": [
+        1.0,
+        0.67,
+        0.36
+      ],
+      "intensity": 120.0,
+      "range": 8.5,
+      "shadows": "none",
+      "sourcePlacement": "warm-wall-span-01",
+      "sourcePart": "L inward wall diffuser"
+    },
+    {
+      "id": "warm-ceiling-span-01-ceiling-01",
+      "type": "spot",
+      "position": [
+        -237.99363708496094,
+        42.7287483215332,
+        -189.99301147460938
+      ],
+      "rgb": [
+        1.0,
+        0.67,
+        0.36
+      ],
+      "intensity": 500.0,
+      "range": 25.0,
+      "shadows": "soft",
+      "sourcePlacement": "warm-ceiling-span-01",
+      "sourcePart": "Ceiling downward diffuser",
+      "aimDirection": [
+        -0.06859954446554184,
+        -0.9834102988243103,
+        -0.1679234355688095
+      ],
+      "outerAngle": 76.0,
+      "innerAngle": 36.0
+    },
+    {
+      "id": "warm-wall-span-02-right-wall-01",
+      "type": "point",
+      "position": [
+        -240.26377868652344,
+        33.810272216796875,
+        -209.30718994140625
+      ],
+      "rgb": [
+        1.0,
+        0.67,
+        0.36
+      ],
+      "intensity": 120.0,
+      "range": 8.5,
+      "shadows": "none",
+      "sourcePlacement": "warm-wall-span-02",
+      "sourcePart": "R inward wall diffuser"
+    },
+    {
+      "id": "warm-wall-span-02-left-wall-02",
+      "type": "point",
+      "position": [
+        -220.98486328125,
+        29.25507354736328,
+        -190.40643310546875
+      ],
+      "rgb": [
+        1.0,
+        0.67,
+        0.36
+      ],
+      "intensity": 120.0,
+      "range": 8.5,
+      "shadows": "none",
+      "sourcePlacement": "warm-wall-span-02",
+      "sourcePart": "L inward wall diffuser"
+    },
+    {
+      "id": "warm-ceiling-span-02-ceiling-01",
+      "type": "spot",
+      "position": [
+        -228.82713317871094,
+        42.38490295410156,
+        -199.07449340820312
+      ],
+      "rgb": [
+        1.0,
+        0.67,
+        0.36
+      ],
+      "intensity": 500.0,
+      "range": 25.0,
+      "shadows": "soft",
+      "sourcePlacement": "warm-ceiling-span-02",
+      "sourcePart": "Ceiling downward diffuser",
+      "aimDirection": [
+        -0.05284355953335762,
+        -0.9817456603050232,
+        -0.18271024525165558
+      ],
+      "outerAngle": 76.0,
+      "innerAngle": 36.0
+    },
+    {
+      "id": "warm-wall-span-03-right-wall-01",
+      "type": "point",
+      "position": [
+        -229.02752685546875,
+        33.71712112426758,
+        -218.4046630859375
+      ],
+      "rgb": [
+        1.0,
+        0.67,
+        0.36
+      ],
+      "intensity": 120.0,
+      "range": 8.5,
+      "shadows": "none",
+      "sourcePlacement": "warm-wall-span-03",
+      "sourcePart": "R inward wall diffuser"
+    },
+    {
+      "id": "warm-wall-span-03-left-wall-02",
+      "type": "point",
+      "position": [
+        -212.05215454101562,
+        28.85674476623535,
+        -197.4791259765625
+      ],
+      "rgb": [
+        1.0,
+        0.67,
+        0.36
+      ],
+      "intensity": 120.0,
+      "range": 8.5,
+      "shadows": "none",
+      "sourcePlacement": "warm-wall-span-03",
+      "sourcePart": "L inward wall diffuser"
+    },
+    {
+      "id": "warm-ceiling-span-03-ceiling-01",
+      "type": "spot",
+      "position": [
+        -218.85816955566406,
+        42.12297821044922,
+        -206.78921508789062
+      ],
+      "rgb": [
+        1.0,
+        0.67,
+        0.36
+      ],
+      "intensity": 500.0,
+      "range": 25.0,
+      "shadows": "soft",
+      "sourcePlacement": "warm-ceiling-span-03",
+      "sourcePart": "Ceiling downward diffuser",
+      "aimDirection": [
+        -0.033511921763420105,
+        -0.9791707992553711,
+        -0.200253427028656
+      ],
+      "outerAngle": 76.0,
+      "innerAngle": 36.0
+    },
+    {
+      "id": "warm-wall-span-04-right-wall-01",
+      "type": "point",
+      "position": [
+        -216.82302856445312,
+        33.70989227294922,
+        -226.27178955078125
+      ],
+      "rgb": [
+        1.0,
+        0.67,
+        0.36
+      ],
+      "intensity": 120.0,
+      "range": 8.5,
+      "shadows": "none",
+      "sourcePlacement": "warm-wall-span-04",
+      "sourcePart": "R inward wall diffuser"
+    },
+    {
+      "id": "warm-wall-span-04-left-wall-02",
+      "type": "point",
+      "position": [
+        -202.2150115966797,
+        28.52165412902832,
+        -203.7029571533203
+      ],
+      "rgb": [
+        1.0,
+        0.67,
+        0.36
+      ],
+      "intensity": 120.0,
+      "range": 8.5,
+      "shadows": "none",
+      "sourcePlacement": "warm-wall-span-04",
+      "sourcePart": "L inward wall diffuser"
+    },
+    {
+      "id": "warm-ceiling-span-04-ceiling-01",
+      "type": "spot",
+      "position": [
+        -207.916015625,
+        41.929893493652344,
+        -213.53892517089844
+      ],
+      "rgb": [
+        1.0,
+        0.67,
+        0.36
+      ],
+      "intensity": 500.0,
+      "range": 25.0,
+      "shadows": "soft",
+      "sourcePlacement": "warm-ceiling-span-04",
+      "sourcePart": "Ceiling downward diffuser",
+      "aimDirection": [
+        -0.013226025737822056,
+        -0.9763283729553223,
+        -0.21588872373104095
+      ],
+      "outerAngle": 76.0,
+      "innerAngle": 36.0
+    },
+    {
+      "id": "warm-wall-span-05-right-wall-01",
+      "type": "point",
+      "position": [
+        -203.58615112304688,
+        33.922306060791016,
+        -232.50604248046875
+      ],
+      "rgb": [
+        1.0,
+        0.67,
+        0.36
+      ],
+      "intensity": 120.0,
+      "range": 8.5,
+      "shadows": "none",
+      "sourcePlacement": "warm-wall-span-05",
+      "sourcePart": "R inward wall diffuser"
+    },
+    {
+      "id": "warm-wall-span-05-left-wall-02",
+      "type": "point",
+      "position": [
+        -192.03305053710938,
+        28.14115333557129,
+        -208.3654327392578
+      ],
+      "rgb": [
+        1.0,
+        0.67,
+        0.36
+      ],
+      "intensity": 120.0,
+      "range": 8.5,
+      "shadows": "none",
+      "sourcePlacement": "warm-wall-span-05",
+      "sourcePart": "L inward wall diffuser"
+    },
+    {
+      "id": "warm-ceiling-span-05-ceiling-01",
+      "type": "spot",
+      "position": [
+        -196.41372680664062,
+        41.800960540771484,
+        -218.52476501464844
+      ],
+      "rgb": [
+        1.0,
+        0.67,
+        0.36
+      ],
+      "intensity": 500.0,
+      "range": 25.0,
+      "shadows": "soft",
+      "sourcePlacement": "warm-ceiling-span-05",
+      "sourcePart": "Ceiling downward diffuser",
+      "aimDirection": [
+        0.01160498894751072,
+        -0.9711641073226929,
+        -0.23812952637672424
+      ],
+      "outerAngle": 76.0,
+      "innerAngle": 36.0
+    },
+    {
+      "id": "warm-wall-span-06-right-wall-01",
+      "type": "point",
+      "position": [
+        -190.306884765625,
+        34.14579391479492,
+        -236.77810668945312
+      ],
+      "rgb": [
+        1.0,
+        0.67,
+        0.36
+      ],
+      "intensity": 120.0,
+      "range": 8.5,
+      "shadows": "none",
+      "sourcePlacement": "warm-wall-span-06",
+      "sourcePart": "R inward wall diffuser"
+    },
+    {
+      "id": "warm-wall-span-06-left-wall-02",
+      "type": "point",
+      "position": [
+        -182.03424072265625,
+        27.978748321533203,
+        -211.41680908203125
+      ],
+      "rgb": [
+        1.0,
+        0.67,
+        0.36
+      ],
+      "intensity": 120.0,
+      "range": 8.5,
+      "shadows": "none",
+      "sourcePlacement": "warm-wall-span-06",
+      "sourcePart": "L inward wall diffuser"
+    },
+    {
+      "id": "warm-ceiling-span-06-ceiling-01",
+      "type": "spot",
+      "position": [
+        -185.08460998535156,
+        41.800228118896484,
+        -221.84056091308594
+      ],
+      "rgb": [
+        1.0,
+        0.67,
+        0.36
+      ],
+      "intensity": 500.0,
+      "range": 25.0,
+      "shadows": "soft",
+      "sourcePlacement": "warm-ceiling-span-06",
+      "sourcePart": "Ceiling downward diffuser",
+      "aimDirection": [
+        0.047071345150470734,
+        -0.9669737219810486,
+        -0.2504916489124298
+      ],
+      "outerAngle": 76.0,
+      "innerAngle": 36.0
+    }
+  ]
+}

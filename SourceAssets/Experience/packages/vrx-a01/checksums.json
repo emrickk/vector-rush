@@ -1,0 +1,390 @@
+{
+  "contractVersion": 1,
+  "revision": "vrx-a01",
+  "files": [
+    {
+      "path": "ART-DIRECTION.md",
+      "sha256": "eb78ba2601cbeadd17f14476f1fa3cd0417a7490f22ba0e04e2b589e103ed7c0"
+    },
+    {
+      "path": "INTEGRATION.md",
+      "sha256": "4f05835fcfb743bc78ac7bcb136358313bfb6a1534a4b602f6a4ba33b9fc598b"
+    },
+    {
+      "path": "asset-stats.json",
+      "sha256": "76f96464a4e2f73c786909f8e96c9232f2239cbc6b25607df09050f565a3b8be"
+    },
+    {
+      "path": "city_recipe.py",
+      "sha256": "d1684867761a35a8fef5f4875af8adc93bef3ecd9923cd7d800dc7fd936787b1"
+    },
+    {
+      "path": "collision-proxies.json",
+      "sha256": "783f05522633d59b72f56837856d80a5c37262f29fe1f147d5c1a51e31c39906"
+    },
+    {
+      "path": "experience-assets.json",
+      "sha256": "242cdfd6d09e4f5e0384724781c6f4b2bd548f034ed3c0716ab7bf1f57ee2991"
+    },
+    {
+      "path": "fonts/vrx_font_display_a.ttf",
+      "sha256": "94bbd25a18ca665999feb05a537de9fd2b860dcfb78bbe9ca00270825bf235da"
+    },
+    {
+      "path": "fonts/vrx_font_display_a_OFL.txt",
+      "sha256": "f62ef357d3a1c3d27edd35a6e1ba350e8a8d13499797964eeadefbf0b3b15d1f"
+    },
+    {
+      "path": "fonts/vrx_font_text_a.ttf",
+      "sha256": "f8906f762cb73dca441da034bc363b2d8e2e68bc10d5c05e58717646c20cc4b4"
+    },
+    {
+      "path": "fonts/vrx_font_text_a_OFL.txt",
+      "sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f"
+    },
+    {
+      "path": "layout.json",
+      "sha256": "eec120369574935c5d9c7773c11cf1ed937f565a87ff11d220c30075723cf716"
+    },
+    {
+      "path": "lighting.json",
+      "sha256": "4b52dafbc59184f69fa7d563bcf87628efeb32376994d7c806636832b17993ef"
+    },
+    {
+      "path": "manifest.json",
+      "sha256": "c0e1374fd2b83ee9cb4eee1b376d91784ceeacd93dc04d717a48dd392c3bfc8d"
+    },
+    {
+      "path": "material-records.json",
+      "sha256": "0cc5fa1fbf286d5ea4d55c444055f0456c6bd6834e1da6d19245f5d295bab060"
+    },
+    {
+      "path": "meshes/vrx_city_exchange_a_LOD0.fbx",
+      "sha256": "1fff6a8c3189325b45189e329307faabaf82a519139816d0428b6fc43da5ffbe"
+    },
+    {
+      "path": "meshes/vrx_city_exchange_a_LOD1.fbx",
+      "sha256": "ce03781d4f2d0a046973ccfb7a9bffd511aa36e7c80da2bfa4aad4f1ececdfaf"
+    },
+    {
+      "path": "meshes/vrx_city_hotel_a_LOD0.fbx",
+      "sha256": "92329065c497e1512eb56d269c1579f0b7b25d9b4318c8d1a359f3b48d2d7b1c"
+    },
+    {
+      "path": "meshes/vrx_city_hotel_a_LOD1.fbx",
+      "sha256": "93a8672da4d7fd3be119e4a45d3cf3bcc51f700268c9d2f6f991062e2dd16e2b"
+    },
+    {
+      "path": "meshes/vrx_city_podium_a_LOD0.fbx",
+      "sha256": "1731901799065ee022c5299c7359e32939153ec345071f5e684eb4ef3b846fad"
+    },
+    {
+      "path": "meshes/vrx_city_podium_a_LOD1.fbx",
+      "sha256": "e04ded39649cf6ead023f46833b326dc2a9b17619c6fe43d0f9c61cf59e899da"
+    },
+    {
+      "path": "meshes/vrx_city_services_a_LOD0.fbx",
+      "sha256": "1d11c962f039fad96f43d8645af0279b3489d38b8f8de1e054e7519f4a644af3"
+    },
+    {
+      "path": "meshes/vrx_city_services_a_LOD1.fbx",
+      "sha256": "e7e67abf39594b295f4f7faba1e5ea14802956ce32669a4f2b581fc01a448030"
+    },
+    {
+      "path": "meshes/vrx_city_works_a_LOD0.fbx",
+      "sha256": "3ef46678cbaab9b98526f6e1b25c5c84fad54a9c9434966fa197e6c4ceb6a867"
+    },
+    {
+      "path": "meshes/vrx_city_works_a_LOD1.fbx",
+      "sha256": "31398dfd5ccc4a8c96a52f4efa4d0d3bbbd8c894c6588a8b5a3b0def91e83c00"
+    },
+    {
+      "path": "meshes/vrx_track_guidance_a_LOD0.fbx",
+      "sha256": "ee144a0ec7fe383e0d5b704689ddcaca51889b41464f312a9505383986f619b1"
+    },
+    {
+      "path": "meshes/vrx_track_guidance_a_LOD1.fbx",
+      "sha256": "f2ed80cf62a954aa651241c15d593511edca1c010bf0cc8eff9ac71c092c5fb9"
+    },
+    {
+      "path": "package_recipe.py",
+      "sha256": "c2153b9863b7a6e7c971646a3fbe81eeadf3e27b8c280de388a25a9bec09a486"
+    },
+    {
+      "path": "placement-checks.json",
+      "sha256": "da26683bad8d2f3b7c9312c082771ac2d211db98368ba50c2f0f39937396509d"
+    },
+    {
+      "path": "source/vrx_city_kit.blend",
+      "sha256": "18195724b6060b5597ff586db0a3163b4df04edf314312c9029e3f41fab99f61"
+    },
+    {
+      "path": "textures/vrx_mat_cyan_a_ao.png",
+      "sha256": "73d7ed9877bc3b373ef42a3cec0d2e94ee1b2f32c7296c6067032d2b3b949d3e"
+    },
+    {
+      "path": "textures/vrx_mat_cyan_a_base.png",
+      "sha256": "98d50030fe5055f7faf3138d1a97495a2a37a65ca34d5b9311ff6cc2cc938415"
+    },
+    {
+      "path": "textures/vrx_mat_cyan_a_emission.png",
+      "sha256": "73d7ed9877bc3b373ef42a3cec0d2e94ee1b2f32c7296c6067032d2b3b949d3e"
+    },
+    {
+      "path": "textures/vrx_mat_cyan_a_ms.png",
+      "sha256": "cc62bcd34835fd2a263d76cbaf652cbab126fa6ef7523dc875063eaa31d3962d"
+    },
+    {
+      "path": "textures/vrx_mat_cyan_a_normal.png",
+      "sha256": "c2060f1db1765f1325190c64f335171398952444910ac9485f898e2ee3cd2e29"
+    },
+    {
+      "path": "textures/vrx_mat_glass_a_ao.png",
+      "sha256": "73d7ed9877bc3b373ef42a3cec0d2e94ee1b2f32c7296c6067032d2b3b949d3e"
+    },
+    {
+      "path": "textures/vrx_mat_glass_a_base.png",
+      "sha256": "ec6e6aca018b7b890a0d42c5dee0c6af209aa0b6523fe868b62cd536cfa6823b"
+    },
+    {
+      "path": "textures/vrx_mat_glass_a_ms.png",
+      "sha256": "7c5e7b72029093a1922056adc55dd2ed008f7638b7157f37bcd21e730bc61b83"
+    },
+    {
+      "path": "textures/vrx_mat_glass_a_normal.png",
+      "sha256": "c2060f1db1765f1325190c64f335171398952444910ac9485f898e2ee3cd2e29"
+    },
+    {
+      "path": "textures/vrx_mat_hotelglass_a_ao.png",
+      "sha256": "73d7ed9877bc3b373ef42a3cec0d2e94ee1b2f32c7296c6067032d2b3b949d3e"
+    },
+    {
+      "path": "textures/vrx_mat_hotelglass_a_base.png",
+      "sha256": "89392d54611174ef7eeacd1033cc65ff0a8bc2da008712b9de86540f2b031500"
+    },
+    {
+      "path": "textures/vrx_mat_hotelglass_a_emission.png",
+      "sha256": "23fdb1c757e1f313527d1b34a71948d196ff7dadb96cca7bcdbef01ae39a4543"
+    },
+    {
+      "path": "textures/vrx_mat_hotelglass_a_ms.png",
+      "sha256": "996358a8ec77fcf86d754c14b56db96ab5c3abf81451aa86c573c2f02eba027d"
+    },
+    {
+      "path": "textures/vrx_mat_hotelglass_a_normal.png",
+      "sha256": "c2060f1db1765f1325190c64f335171398952444910ac9485f898e2ee3cd2e29"
+    },
+    {
+      "path": "textures/vrx_mat_magenta_a_ao.png",
+      "sha256": "73d7ed9877bc3b373ef42a3cec0d2e94ee1b2f32c7296c6067032d2b3b949d3e"
+    },
+    {
+      "path": "textures/vrx_mat_magenta_a_base.png",
+      "sha256": "d333fc4633a0d6506e77663c725cccf27d3598d1f4f969b701fdc8bc7a649c0e"
+    },
+    {
+      "path": "textures/vrx_mat_magenta_a_emission.png",
+      "sha256": "73d7ed9877bc3b373ef42a3cec0d2e94ee1b2f32c7296c6067032d2b3b949d3e"
+    },
+    {
+      "path": "textures/vrx_mat_magenta_a_ms.png",
+      "sha256": "55c1f120308788023a6ac2bf746f187824bbba35f9a42c06d9eb41b5bf04ee59"
+    },
+    {
+      "path": "textures/vrx_mat_magenta_a_normal.png",
+      "sha256": "c2060f1db1765f1325190c64f335171398952444910ac9485f898e2ee3cd2e29"
+    },
+    {
+      "path": "textures/vrx_mat_mineral_a_ao.png",
+      "sha256": "73d7ed9877bc3b373ef42a3cec0d2e94ee1b2f32c7296c6067032d2b3b949d3e"
+    },
+    {
+      "path": "textures/vrx_mat_mineral_a_base.png",
+      "sha256": "efb5df4a9626f42ca17cf99270f0f683b3a5b507f0cd482533a4c2d8cc7b7c16"
+    },
+    {
+      "path": "textures/vrx_mat_mineral_a_ms.png",
+      "sha256": "4be551ff2b60ef84d5bfa083af5e80ac9655daf90da97e9c44a45ec28e2c6413"
+    },
+    {
+      "path": "textures/vrx_mat_mineral_a_normal.png",
+      "sha256": "c2060f1db1765f1325190c64f335171398952444910ac9485f898e2ee3cd2e29"
+    },
+    {
+      "path": "textures/vrx_mat_occupied_a_ao.png",
+      "sha256": "73d7ed9877bc3b373ef42a3cec0d2e94ee1b2f32c7296c6067032d2b3b949d3e"
+    },
+    {
+      "path": "textures/vrx_mat_occupied_a_base.png",
+      "sha256": "880f53509923819159f44300fc271a9b17ae998c65c65ddeab782e03678b7dad"
+    },
+    {
+      "path": "textures/vrx_mat_occupied_a_emission.png",
+      "sha256": "9f0f193d0790538ebe9000fbd8fe0291a985aacd8bdc314e0c6db01f51dc1ae2"
+    },
+    {
+      "path": "textures/vrx_mat_occupied_a_ms.png",
+      "sha256": "df5b982d12418b85152eccdc20cac95740c4177ab9b327820418791414e6e395"
+    },
+    {
+      "path": "textures/vrx_mat_occupied_a_normal.png",
+      "sha256": "c2060f1db1765f1325190c64f335171398952444910ac9485f898e2ee3cd2e29"
+    },
+    {
+      "path": "textures/vrx_mat_officeglass_a_ao.png",
+      "sha256": "73d7ed9877bc3b373ef42a3cec0d2e94ee1b2f32c7296c6067032d2b3b949d3e"
+    },
+    {
+      "path": "textures/vrx_mat_officeglass_a_base.png",
+      "sha256": "315c3e93567b8be7ba4d071b4ad0f59ac2b8e213d9000e2aec093ddf9a48439b"
+    },
+    {
+      "path": "textures/vrx_mat_officeglass_a_emission.png",
+      "sha256": "410c92823a5b6f11c462ce368d3e0d53f00b3483ea9ba63f08e325cf7db2930b"
+    },
+    {
+      "path": "textures/vrx_mat_officeglass_a_ms.png",
+      "sha256": "8ff4747f87aeaff712dfcc3657515bc942a1e65c9785089042ab7741af7e5611"
+    },
+    {
+      "path": "textures/vrx_mat_officeglass_a_normal.png",
+      "sha256": "c2060f1db1765f1325190c64f335171398952444910ac9485f898e2ee3cd2e29"
+    },
+    {
+      "path": "textures/vrx_mat_serviceglass_a_ao.png",
+      "sha256": "73d7ed9877bc3b373ef42a3cec0d2e94ee1b2f32c7296c6067032d2b3b949d3e"
+    },
+    {
+      "path": "textures/vrx_mat_serviceglass_a_base.png",
+      "sha256": "514c1b4155a43bd4f12a36b8c96b8a81e5ff1589977c086e52e40373aa1df77a"
+    },
+    {
+      "path": "textures/vrx_mat_serviceglass_a_emission.png",
+      "sha256": "7a276e415f576b514eccb70b565cf8ad6a43ba6ae02ccf8b88298bbc2d5a904c"
+    },
+    {
+      "path": "textures/vrx_mat_serviceglass_a_ms.png",
+      "sha256": "182feaf18cc4ef1936c705f9d1929aa315b31e17b0d83583f59041d8918626a2"
+    },
+    {
+      "path": "textures/vrx_mat_serviceglass_a_normal.png",
+      "sha256": "c2060f1db1765f1325190c64f335171398952444910ac9485f898e2ee3cd2e29"
+    },
+    {
+      "path": "textures/vrx_mat_slate_a_ao.png",
+      "sha256": "73d7ed9877bc3b373ef42a3cec0d2e94ee1b2f32c7296c6067032d2b3b949d3e"
+    },
+    {
+      "path": "textures/vrx_mat_slate_a_base.png",
+      "sha256": "c071f610c6ac6bc5d0e633e1b4aa38ab4175e61e9de94fabf9aaedb739e5cb37"
+    },
+    {
+      "path": "textures/vrx_mat_slate_a_ms.png",
+      "sha256": "650f57da73baa24fa66841b8aa777d51feb5c434404d751a5cb7d0a294cac9cd"
+    },
+    {
+      "path": "textures/vrx_mat_slate_a_normal.png",
+      "sha256": "c2060f1db1765f1325190c64f335171398952444910ac9485f898e2ee3cd2e29"
+    },
+    {
+      "path": "textures/vrx_mat_titanium_a_ao.png",
+      "sha256": "73d7ed9877bc3b373ef42a3cec0d2e94ee1b2f32c7296c6067032d2b3b949d3e"
+    },
+    {
+      "path": "textures/vrx_mat_titanium_a_base.png",
+      "sha256": "53fbe91845b36da034ef7ee6e8ed1f63579f8784d0669b6f0d553ba213ea08c9"
+    },
+    {
+      "path": "textures/vrx_mat_titanium_a_ms.png",
+      "sha256": "4be7501d35d66477a2300a8225d2995961c4d00ab6017569208847ab26e83685"
+    },
+    {
+      "path": "textures/vrx_mat_titanium_a_normal.png",
+      "sha256": "c2060f1db1765f1325190c64f335171398952444910ac9485f898e2ee3cd2e29"
+    },
+    {
+      "path": "textures/vrx_mat_white_a_ao.png",
+      "sha256": "73d7ed9877bc3b373ef42a3cec0d2e94ee1b2f32c7296c6067032d2b3b949d3e"
+    },
+    {
+      "path": "textures/vrx_mat_white_a_base.png",
+      "sha256": "b956716188025170a55d64a268f012fc680f9e5cb98bad4d42134d1546e20b38"
+    },
+    {
+      "path": "textures/vrx_mat_white_a_emission.png",
+      "sha256": "73d7ed9877bc3b373ef42a3cec0d2e94ee1b2f32c7296c6067032d2b3b949d3e"
+    },
+    {
+      "path": "textures/vrx_mat_white_a_ms.png",
+      "sha256": "00e1b7c9f94f6e23c0feec219c8d4ffad7030aa50213955f9dd71a2697c34f3f"
+    },
+    {
+      "path": "textures/vrx_mat_white_a_normal.png",
+      "sha256": "c2060f1db1765f1325190c64f335171398952444910ac9485f898e2ee3cd2e29"
+    },
+    {
+      "path": "track-profile.json",
+      "sha256": "b2f46cbf2621967e23b0e1bb173fc4f457a3d38c96bc1dab359c2ed975466fdd"
+    },
+    {
+      "path": "ui/vrx_ui_advert_a.png",
+      "sha256": "fc64b9d0520bc29269f9f13d643df1b121a5dae70bdb8bad0cca56e7b59689c2"
+    },
+    {
+      "path": "ui/vrx_ui_boost_fill_a.png",
+      "sha256": "783f53bb419fb89da608c25632fe68d52ac41734172db3e9f0620d7ab9f26215"
+    },
+    {
+      "path": "ui/vrx_ui_boost_track_a.png",
+      "sha256": "cf89c313828114d5d31461db1a86f4f0bf7c9d7c2098355fbcf3189b621ac1f1"
+    },
+    {
+      "path": "ui/vrx_ui_chevron_a.png",
+      "sha256": "de8bd77b13abc063d97751125357664f8a7d3ca34202ad90ece41d0f704a19b0"
+    },
+    {
+      "path": "ui/vrx_ui_collision_a.png",
+      "sha256": "19d3c4f25e6c3afd89196378cd73995fdb862155f68282bb871c24802d53fbea"
+    },
+    {
+      "path": "ui/vrx_ui_panel_a.png",
+      "sha256": "5e024071a9c3392559724a9f9cf2bbc1b8fa55c66853bce48c1214378f389710"
+    },
+    {
+      "path": "ui/vrx_ui_rank_down_a.png",
+      "sha256": "a7b65448546f00b6493b998e3899898a59a2218e49b605b8ae78f9e2d7710e45"
+    },
+    {
+      "path": "ui/vrx_ui_rank_up_a.png",
+      "sha256": "86fabb7421ea9968ef9477f48c38a1ad249de2a129e5e64e518fee63ebd2e7ca"
+    },
+    {
+      "path": "ui/vrx_ui_selection_a.png",
+      "sha256": "17820ade771efbea9cb1b7dd233bf9a2fa9e8f79c2b20a57cf2acdd744d574b0"
+    },
+    {
+      "path": "ui/vrx_ui_wordmark_a.png",
+      "sha256": "a3d19881a7ecd7b3a6920923ae529b0bc2b7423eba6e374ee6aafcfeaad662d7"
+    },
+    {
+      "path": "vfx/vrx_vfx_core_a.png",
+      "sha256": "aa833328f2ebcd9630486d1a00e2a1b0372638489d07adbff35ed221a41ac774"
+    },
+    {
+      "path": "vfx/vrx_vfx_impact_a.png",
+      "sha256": "afd2aaf0bbecec1de33c24e5c9c73bcd733e2719fd1964d8b2f308f394e94217"
+    },
+    {
+      "path": "vfx/vrx_vfx_plume_a.png",
+      "sha256": "f24032bff1c94f20a3692a2e07553dfb1eb94f464ad21601c692c14673c2db5a"
+    },
+    {
+      "path": "vfx/vrx_vfx_spark_a.png",
+      "sha256": "4177383de088cb9949256ad36be85914a3046183ab8b377845aa48d0ed885c15"
+    },
+    {
+      "path": "vfx/vrx_vfx_wake_a.png",
+      "sha256": "f07817b18a7de4abfef243c10351984810ac9477de4e2c0e91bee831623ca2fd"
+    }
+  ]
+}

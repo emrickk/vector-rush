@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: f9c3d83bfa57547fa726c80f9babd95d
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects: {}
+  materials:
+    materialImportMode: 0
+  animations:
+    importAnimation: 0
+  meshes:
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useFileUnits: 1
+    useFileScale: 1
+    isReadable: 0
+  tangentSpace:
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 0
+  userData: Astra original asset; preserve material-slot order from manifest.

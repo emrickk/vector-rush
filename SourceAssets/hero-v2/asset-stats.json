@@ -1,0 +1,28 @@
+{
+  "revision": "KESTREL 07 sculpted V2",
+  "editable_source_objects": 142,
+  "exported_meshes": 9,
+  "vertices": 39008,
+  "triangles": 73364,
+  "source_dimensions_xyz": [
+    5.2651,
+    7.205,
+    1.9973
+  ],
+  "source_forward": "-Y",
+  "source_up": "+Z",
+  "fbx_axis_forward": "-Z",
+  "fbx_axis_up": "+Y",
+  "materials": [
+    "Ivory",
+    "Graphite",
+    "Glass",
+    "Signal",
+    "Engine",
+    "Metal",
+    "Ceramic",
+    "Ink",
+    "WhiteMark"
+  ],
+  "textures_required": false
+}

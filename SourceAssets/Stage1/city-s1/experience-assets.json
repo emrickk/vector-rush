@@ -1,0 +1,543 @@
+{
+  "contractVersion": 1,
+  "revision": "city-s1",
+  "courseHash": "598718f08e5c308a41b8e9f1b562ff8cd4e2bc9f661a91f4e34164cf7c820059",
+  "assets": [
+    {
+      "id": "vrx_font_display_a",
+      "path": "fonts/vrx_font_display_a.ttf",
+      "type": "font",
+      "revision": 1,
+      "source": "Retained repository font: Resources/Fonts/Rajdhani-SemiBold.ttf",
+      "license": "SIL Open Font License 1.1",
+      "licensePath": "fonts/vrx_font_display_a_OFL.txt",
+      "provenanceNames": [
+        "Copyright (c) 2014 Indian Type Foundry (info@indiantypefoundry.com)",
+        "Indian Type Foundry",
+        "Satya Rajpurohit, Jyotish Sonowal",
+        "http://www.indiantypefoundry.com"
+      ],
+      "weight": 600,
+      "glyphCount": 465,
+      "requiredHUDGlyphsMissing": [],
+      "coverage": {
+        "basicLatin": true,
+        "CJK": false,
+        "note": "No CJK coverage promised; keep existing fallback for other scripts."
+      },
+      "intendedRole": "speed/rank/title",
+      "referencePixelsAt1080p": [
+        84,
+        70,
+        64
+      ],
+      "import": {
+        "fontRenderingMode": "dynamic",
+        "fontSize": 32
+      }
+    },
+    {
+      "id": "vrx_font_text_a",
+      "path": "fonts/vrx_font_text_a.ttf",
+      "type": "font",
+      "revision": 1,
+      "source": "Retained repository font: Resources/Fonts/Barlow-Medium.ttf",
+      "license": "SIL Open Font License 1.1",
+      "licensePath": "fonts/vrx_font_text_a_OFL.txt",
+      "provenanceNames": [
+        "Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)",
+        "Jeremy Tribby",
+        "Tribby Type",
+        "https://tribby.com/"
+      ],
+      "weight": 500,
+      "glyphCount": 525,
+      "requiredHUDGlyphsMissing": [],
+      "coverage": {
+        "basicLatin": true,
+        "CJK": false,
+        "note": "No CJK coverage promised; keep existing fallback for other scripts."
+      },
+      "intendedRole": "menu/body/labels",
+      "referencePixelsAt1080p": [
+        28,
+        22,
+        20
+      ],
+      "import": {
+        "fontRenderingMode": "dynamic",
+        "fontSize": 32
+      }
+    },
+    {
+      "id": "vrx_ui_panel_a",
+      "path": "ui/vrx_ui_panel_a.png",
+      "type": "ui-graphic",
+      "revision": 1,
+      "source": "Original vector primitives and bundled OFL fonts; package_art.py",
+      "license": "Project-authored; font licences in fonts/",
+      "dimensions": [
+        640,
+        240
+      ],
+      "import": {
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "mipmaps": false,
+        "wrap": "clamp",
+        "filter": "bilinear",
+        "compression": "uncompressed"
+      },
+      "usage": "Texture2D/IMGUI; preserve aspect. Fill clipped by actual Boost01."
+    },
+    {
+      "id": "vrx_ui_selection_a",
+      "path": "ui/vrx_ui_selection_a.png",
+      "type": "ui-graphic",
+      "revision": 1,
+      "source": "Original vector primitives and bundled OFL fonts; package_art.py",
+      "license": "Project-authored; font licences in fonts/",
+      "dimensions": [
+        640,
+        104
+      ],
+      "import": {
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "mipmaps": false,
+        "wrap": "clamp",
+        "filter": "bilinear",
+        "compression": "uncompressed"
+      },
+      "usage": "Texture2D/IMGUI; preserve aspect. Fill clipped by actual Boost01."
+    },
+    {
+      "id": "vrx_ui_boost_track_a",
+      "path": "ui/vrx_ui_boost_track_a.png",
+      "type": "ui-graphic",
+      "revision": 1,
+      "source": "Original vector primitives and bundled OFL fonts; package_art.py",
+      "license": "Project-authored; font licences in fonts/",
+      "dimensions": [
+        512,
+        64
+      ],
+      "import": {
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "mipmaps": false,
+        "wrap": "clamp",
+        "filter": "bilinear",
+        "compression": "uncompressed"
+      },
+      "usage": "Texture2D/IMGUI; preserve aspect. Fill clipped by actual Boost01."
+    },
+    {
+      "id": "vrx_ui_boost_fill_a",
+      "path": "ui/vrx_ui_boost_fill_a.png",
+      "type": "ui-graphic",
+      "revision": 1,
+      "source": "Original vector primitives and bundled OFL fonts; package_art.py",
+      "license": "Project-authored; font licences in fonts/",
+      "dimensions": [
+        512,
+        64
+      ],
+      "import": {
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "mipmaps": false,
+        "wrap": "clamp",
+        "filter": "bilinear",
+        "compression": "uncompressed"
+      },
+      "usage": "Texture2D/IMGUI; preserve aspect. Fill clipped by actual Boost01."
+    },
+    {
+      "id": "vrx_ui_chevron_a",
+      "path": "ui/vrx_ui_chevron_a.png",
+      "type": "ui-graphic",
+      "revision": 1,
+      "source": "Original vector primitives and bundled OFL fonts; package_art.py",
+      "license": "Project-authored; font licences in fonts/",
+      "dimensions": [
+        128,
+        128
+      ],
+      "import": {
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "mipmaps": false,
+        "wrap": "clamp",
+        "filter": "bilinear",
+        "compression": "uncompressed"
+      },
+      "usage": "Texture2D/IMGUI; preserve aspect. Fill clipped by actual Boost01."
+    },
+    {
+      "id": "vrx_ui_collision_a",
+      "path": "ui/vrx_ui_collision_a.png",
+      "type": "ui-graphic",
+      "revision": 1,
+      "source": "Original vector primitives and bundled OFL fonts; package_art.py",
+      "license": "Project-authored; font licences in fonts/",
+      "dimensions": [
+        128,
+        128
+      ],
+      "import": {
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "mipmaps": false,
+        "wrap": "clamp",
+        "filter": "bilinear",
+        "compression": "uncompressed"
+      },
+      "usage": "Texture2D/IMGUI; preserve aspect. Fill clipped by actual Boost01."
+    },
+    {
+      "id": "vrx_ui_rank_up_a",
+      "path": "ui/vrx_ui_rank_up_a.png",
+      "type": "ui-graphic",
+      "revision": 1,
+      "source": "Original vector primitives and bundled OFL fonts; package_art.py",
+      "license": "Project-authored; font licences in fonts/",
+      "dimensions": [
+        128,
+        128
+      ],
+      "import": {
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "mipmaps": false,
+        "wrap": "clamp",
+        "filter": "bilinear",
+        "compression": "uncompressed"
+      },
+      "usage": "Texture2D/IMGUI; preserve aspect. Fill clipped by actual Boost01."
+    },
+    {
+      "id": "vrx_ui_rank_down_a",
+      "path": "ui/vrx_ui_rank_down_a.png",
+      "type": "ui-graphic",
+      "revision": 1,
+      "source": "Original vector primitives and bundled OFL fonts; package_art.py",
+      "license": "Project-authored; font licences in fonts/",
+      "dimensions": [
+        128,
+        128
+      ],
+      "import": {
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "mipmaps": false,
+        "wrap": "clamp",
+        "filter": "bilinear",
+        "compression": "uncompressed"
+      },
+      "usage": "Texture2D/IMGUI; preserve aspect. Fill clipped by actual Boost01."
+    },
+    {
+      "id": "vrx_ui_wordmark_a",
+      "path": "ui/vrx_ui_wordmark_a.png",
+      "type": "ui-graphic",
+      "revision": 1,
+      "source": "Original vector primitives and bundled OFL fonts; package_art.py",
+      "license": "Project-authored; font licences in fonts/",
+      "dimensions": [
+        1024,
+        180
+      ],
+      "import": {
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "mipmaps": false,
+        "wrap": "clamp",
+        "filter": "bilinear",
+        "compression": "uncompressed"
+      },
+      "usage": "Texture2D/IMGUI; preserve aspect. Fill clipped by actual Boost01."
+    },
+    {
+      "id": "vrx_ui_advert_a",
+      "path": "ui/vrx_ui_advert_a.png",
+      "type": "ui-graphic",
+      "revision": 1,
+      "source": "Original vector primitives and bundled OFL fonts; package_art.py",
+      "license": "Project-authored; font licences in fonts/",
+      "dimensions": [
+        1024,
+        512
+      ],
+      "import": {
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "mipmaps": false,
+        "wrap": "clamp",
+        "filter": "bilinear",
+        "compression": "uncompressed"
+      },
+      "usage": "Texture2D/IMGUI; preserve aspect. Fill clipped by actual Boost01."
+    },
+    {
+      "id": "vrx_vfx_plume_a",
+      "path": "vfx/vrx_vfx_plume_a.png",
+      "type": "vfx-atlas",
+      "revision": 1,
+      "source": "Original deterministic periodic field; scripts/package_art.py",
+      "license": "Project-authored; no third-party content",
+      "import": {
+        "colorSpace": "linear",
+        "sRGB": false,
+        "alpha": "straight",
+        "mipmaps": false,
+        "wrap": "clamp",
+        "filter": "bilinear",
+        "compression": "uncompressed",
+        "maxSize": 1024
+      },
+      "atlas": {
+        "grid": [
+          4,
+          4
+        ],
+        "frameCount": 16,
+        "fps": 24,
+        "frameOrder": "left-to-right, top-to-bottom",
+        "uvOrigin": "bottom-left; rowUV = rows - 1 - floor(frame / cols)",
+        "frameInsetPixels": 4,
+        "channels": "RGB linear emitted colour; A coverage",
+        "longitudinalAxis": "+U nozzle-to-tail",
+        "loop": true,
+        "playback": "sequential"
+      },
+      "validation": {
+        "adjacentAlphaMAE": [
+          0.010619177166524888,
+          0.010786711734863782,
+          0.0109693109457897,
+          0.011060578234374849,
+          0.010978786488788495,
+          0.010886303192605466,
+          0.010968250384334494,
+          0.011125018695579369,
+          0.011188063660386712,
+          0.011063939205696125,
+          0.010849736762796023,
+          0.010700875377018616,
+          0.01065458299893473,
+          0.010637039983961212,
+          0.010578691265150124,
+          0.010546824455594291
+        ],
+        "wrapAlphaMAE": 0.010546824455594291,
+        "claim": "Numerical continuity only; native moving appearance pending"
+      }
+    },
+    {
+      "id": "vrx_vfx_core_a",
+      "path": "vfx/vrx_vfx_core_a.png",
+      "type": "vfx-atlas",
+      "revision": 1,
+      "source": "Original deterministic periodic field; scripts/package_art.py",
+      "license": "Project-authored; no third-party content",
+      "import": {
+        "colorSpace": "linear",
+        "sRGB": false,
+        "alpha": "straight",
+        "mipmaps": false,
+        "wrap": "clamp",
+        "filter": "bilinear",
+        "compression": "uncompressed",
+        "maxSize": 1024
+      },
+      "atlas": {
+        "grid": [
+          4,
+          4
+        ],
+        "frameCount": 16,
+        "fps": 24,
+        "frameOrder": "left-to-right, top-to-bottom",
+        "uvOrigin": "bottom-left; rowUV = rows - 1 - floor(frame / cols)",
+        "frameInsetPixels": 4,
+        "channels": "RGB linear emitted colour; A coverage",
+        "longitudinalAxis": "+U nozzle-to-tail",
+        "loop": true,
+        "playback": "sequential"
+      },
+      "validation": {
+        "adjacentAlphaMAE": [
+          0.0009015918870111065,
+          0.0008778077913800908,
+          0.0008894244356432214,
+          0.0009346252860849744,
+          0.0009864542452252445,
+          0.001020581849217469,
+          0.001025973713402113,
+          0.0009947833041861755,
+          0.000939776790656547,
+          0.0008920969425570751,
+          0.0008857142009664242,
+          0.0009160595348446765,
+          0.0009569560844687801,
+          0.0009849307299683511,
+          0.0009826850626654005,
+          0.0009427731688830849
+        ],
+        "wrapAlphaMAE": 0.0009427731688830849,
+        "claim": "Numerical continuity only; native moving appearance pending"
+      }
+    },
+    {
+      "id": "vrx_vfx_wake_a",
+      "path": "vfx/vrx_vfx_wake_a.png",
+      "type": "vfx-atlas",
+      "revision": 1,
+      "source": "Original deterministic periodic field; scripts/package_art.py",
+      "license": "Project-authored; no third-party content",
+      "import": {
+        "colorSpace": "linear",
+        "sRGB": false,
+        "alpha": "straight",
+        "mipmaps": false,
+        "wrap": "clamp",
+        "filter": "bilinear",
+        "compression": "uncompressed",
+        "maxSize": 1024
+      },
+      "atlas": {
+        "grid": [
+          4,
+          4
+        ],
+        "frameCount": 16,
+        "fps": 24,
+        "frameOrder": "left-to-right, top-to-bottom",
+        "uvOrigin": "bottom-left; rowUV = rows - 1 - floor(frame / cols)",
+        "frameInsetPixels": 4,
+        "channels": "RGB linear emitted colour; A coverage",
+        "longitudinalAxis": "+U nozzle-to-tail",
+        "loop": true,
+        "playback": "sequential"
+      },
+      "validation": {
+        "adjacentAlphaMAE": [
+          0.0033434369866442333,
+          0.00334733597453765,
+          0.003372138032482977,
+          0.0034066404850297705,
+          0.003433380661912115,
+          0.003451207513025774,
+          0.003475681936957667,
+          0.0035076955735125737,
+          0.0035287639269472298,
+          0.0035210555345909556,
+          0.0034823436269569635,
+          0.0034327418320292593,
+          0.003400160102079209,
+          0.003390449318877482,
+          0.0033803143102829336,
+          0.0033591081733022653
+        ],
+        "wrapAlphaMAE": 0.0033591081733022653,
+        "claim": "Numerical continuity only; native moving appearance pending"
+      }
+    },
+    {
+      "id": "vrx_vfx_impact_a",
+      "path": "vfx/vrx_vfx_impact_a.png",
+      "type": "vfx-atlas",
+      "revision": 1,
+      "source": "Original deterministic periodic field; scripts/package_art.py",
+      "license": "Project-authored; no third-party content",
+      "import": {
+        "colorSpace": "linear",
+        "sRGB": false,
+        "alpha": "straight",
+        "mipmaps": false,
+        "wrap": "clamp",
+        "filter": "bilinear",
+        "compression": "uncompressed",
+        "maxSize": 1024
+      },
+      "atlas": {
+        "grid": [
+          4,
+          2
+        ],
+        "frameCount": 8,
+        "fps": 24,
+        "frameOrder": "left-to-right, top-to-bottom",
+        "uvOrigin": "bottom-left; rowUV = rows - 1 - floor(frame / cols)",
+        "frameInsetPixels": 4,
+        "channels": "RGB linear emitted colour; A coverage",
+        "longitudinalAxis": "+U nozzle-to-tail",
+        "loop": false,
+        "playback": "sequential"
+      },
+      "validation": {
+        "adjacentAlphaMAE": [
+          0.009438454047796611,
+          0.010414474721051743,
+          0.009527565440471817,
+          0.00898386731373688,
+          0.00959832612519083,
+          0.010618640358384727,
+          0.006690133089891301,
+          0.004350530251499107
+        ],
+        "wrapAlphaMAE": 0.004350530251499107,
+        "claim": "Numerical continuity only; native moving appearance pending"
+      }
+    },
+    {
+      "id": "vrx_vfx_spark_a",
+      "path": "vfx/vrx_vfx_spark_a.png",
+      "type": "vfx-atlas",
+      "revision": 1,
+      "source": "Original deterministic periodic field; scripts/package_art.py",
+      "license": "Project-authored; no third-party content",
+      "import": {
+        "colorSpace": "linear",
+        "sRGB": false,
+        "alpha": "straight",
+        "mipmaps": false,
+        "wrap": "clamp",
+        "filter": "bilinear",
+        "compression": "uncompressed",
+        "maxSize": 1024
+      },
+      "atlas": {
+        "grid": [
+          4,
+          2
+        ],
+        "frameCount": 8,
+        "fps": 24,
+        "frameOrder": "left-to-right, top-to-bottom",
+        "uvOrigin": "bottom-left; rowUV = rows - 1 - floor(frame / cols)",
+        "frameInsetPixels": 4,
+        "channels": "RGB linear emitted colour; A coverage",
+        "longitudinalAxis": "+U nozzle-to-tail",
+        "loop": false,
+        "playback": "random static tile per spark"
+      },
+      "validation": {
+        "adjacentAlphaMAE": [
+          0.011089025966337613,
+          0.008601701399591214,
+          0.013018431062147527,
+          0.005681601518891895,
+          0.014292842996911047,
+          0.002475644600512762,
+          0.014848142592392337,
+          0.002911039789920875
+        ],
+        "wrapAlphaMAE": 0.002911039789920875,
+        "claim": "Numerical continuity only; native moving appearance pending"
+      }
+    }
+  ],
+  "status": "assets ready for integration / native validation pending"
+}

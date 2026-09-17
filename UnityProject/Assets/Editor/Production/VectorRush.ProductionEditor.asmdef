@@ -1,0 +1,7 @@
+{
+  "name": "VectorRush.ProductionEditor",
+  "rootNamespace": "VectorRush.Editor",
+  "references": ["VectorRush.Runtime", "Unity.RenderPipelines.Core.Runtime", "Unity.RenderPipelines.Universal.Runtime"],
+  "includePlatforms": ["Editor"],
+  "autoReferenced": true
+}

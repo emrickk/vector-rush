@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vector Rush / Interface direction</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main id="stage" class="stage" aria-label="Vector Rush interactive interface reference">
+  <div class="world"></div><div class="shade"></div>
+  <div class="race-only">
+    <section class="classification">
+      <div class="eyebrow"><i class="brandmark"></i> NOCTURNE <span>/</span> EXHIBITION</div>
+      <div class="position-line"><div class="position">02<span>/06</span></div><div class="lap"><span class="label">LAP</span><strong>01<span>/03</span></strong><div class="lap-bars"><i></i><i></i><i></i></div></div></div>
+      <div class="rival"><span class="arrow">↓</span> KIRA <strong>22<span>m</span></strong><span class="label">BEHIND</span></div>
+    </section>
+    <section class="timing"><div class="timing-line"><span class="label">RACE</span><strong>00:09<span>.660</span></strong></div><div class="timing-line secondary"><span class="label">PERSONAL BEST</span><span>00:42.186</span></div><div class="sector"><span class="label">SECTOR 01</span><strong>−0.214</strong><span class="chevrons">‹‹</span></div></section>
+    <section class="map"><div class="map-art"><svg viewBox="0 0 180 180" aria-label="Nocturne course map"><path id="track" d=""/><circle id="player" r="5"/><circle class="rival-dot" cx="152" cy="68" r="3"/></svg></div><div class="map-name">NOCTURNE<span>1.84 KM / CIRCUIT 01</span></div></section>
+    <section class="instrument"><div class="boost-announcement"><span class="pulse"></span> OVERDRIVE <span>ENGAGED</span></div><div class="speedline"><div class="speed" id="speed">173</div><div class="speed-meta"><span>KM/H</span><div class="speed-ticks">╱╱╱</div></div></div><div class="speed-scale"><i></i></div><div class="energy-head"><span><b class="energy-icon">ϟ</b> BOOST <span id="boost-state">READY</span></span><strong id="energy">100<span>%</span></strong></div><div class="energy-track"><i></i></div><div class="boost-key"><kbd>SHIFT</kbd><span id="boost-instruction">HOLD TO BOOST</span></div></section>
+    <div class="boost-edge"></div>
+  </div>
+  <section class="menu-view screen" data-screen="title">
+    <div class="edition"><i class="brandmark"></i> ANTI-GRAVITY RACING <span>VOL. 01</span></div>
+    <h1 class="wordmark">VECTOR<br><span>RUSH</span></h1>
+    <div class="title-description"><span class="accent-rule"></span><span>NOCTURNE CIRCUIT<br><small>MIDNIGHT EXHIBITION / 6 PILOTS / 3 LAPS</small></span></div>
+    <nav class="main-actions"><button class="primary" data-view="race"><span>START RACE</span><span class="action-tail"><kbd>↵</kbd> ↗</span></button><button data-view="settings"><span>SETTINGS</span><span>→</span></button><button data-view="controls"><span>CONTROLS</span><span>→</span></button></nav>
+    <div class="menu-foot"><span>NOCTURNE / 01</span><span>LOCAL EXHIBITION</span></div>
+  </section>
+  <section class="results-view screen" data-screen="results">
+    <div class="edition"><i class="brandmark"></i> NOCTURNE CIRCUIT <span>RACE COMPLETE</span></div>
+    <h1 class="result-title">RACE <em>COMPLETE.</em></h1>
+    <div class="result-position"><strong>02</strong><div><span>OF 06 PILOTS</span><b>PODIUM FINISH</b></div></div>
+    <div class="result-stats"><div><label>RACE TIME</label><strong>02:09<span>.166</span></strong></div><div><label>BEST LAP <b>NEW PB</b></label><strong>00:42<span>.186</span></strong></div></div>
+    <div class="sectors-row"><span>VS PERSONAL BEST</span><b>S1 <i>−0.214</i></b><b>S2 <i>−0.086</i></b><b>S3 <i>−0.132</i></b></div>
+    <div class="results-actions"><button class="primary" data-view="race">RACE AGAIN <span>↗</span></button><button data-view="title">MAIN MENU <span>→</span></button></div>
+    <div class="leaderboard"><div class="leaderboard-label">FINAL CLASSIFICATION <span>3 LAPS</span></div><div><span>01</span><b>NOVA</b><strong>01:52.866</strong></div><div class="you"><span>02</span><b>YOU <small>+16.300</small></b><strong>02:09.166</strong></div><div><span>03</span><b>KIRA</b><strong>02:09.783</strong></div><div><span>04</span><b>AXIOM</b><strong>02:12.571</strong></div><div><span>05</span><b>RENN</b><strong>02:14.034</strong></div><div><span>06</span><b>SOL</b><strong>02:17.031</strong></div></div>
+  </section>
+  <section class="settings-view screen" data-screen="settings">
+    <div class="edition"><i class="brandmark"></i> VECTOR RUSH <span>CONFIGURATION</span></div><h1><em>SETTINGS.</em></h1>
+    <nav class="settings-nav"><button class="selected" data-settings="audio">AUDIO <span>01</span></button><button data-settings="controls">CONTROLS <span>02</span></button><button data-settings="comfort">DISPLAY & COMFORT <span>03</span></button></nav>
+    <div class="settings-content" id="settings-content"></div>
+    <button class="back-button" data-view="title"><kbd>ESC</kbd> BACK TO MENU</button>
+  </section>
+  <section class="pause-view screen" data-screen="pause"><div class="edition"><i class="brandmark"></i> NOCTURNE / LAP 01 OF 03</div><h1>RACE<br><em>PAUSED.</em></h1><div class="pause-info">02 / 06 <span>00:09.660</span></div><nav class="main-actions"><button class="primary" data-view="race">RESUME <span>↗</span></button><button data-view="race">RESTART RACE <span>→</span></button><button data-view="settings">SETTINGS <span>→</span></button><button data-view="title">RETURN TO TITLE <span>→</span></button></nav></section>
+  <div class="reference-tag">INTERFACE DESIGN REFERENCE · NATIVE GAME BACKGROUND · ILLUSTRATIVE UI DATA</div>
+</main>
+<aside class="review-bar"><div><strong>VECTOR RUSH</strong><span>STAGE 2A / INTERFACE DIRECTION</span></div><nav><button data-view="baseline">Current HUD</button><button data-view="race">Race HUD</button><button data-view="boost">Boost HUD</button><button data-view="title">Title</button><button data-view="results">Results</button><button data-view="pause">Pause</button><button data-view="settings">Settings</button></nav></aside>
+<script src="app.js"></script>
+</body></html>

@@ -1,0 +1,120 @@
+{
+  "schema": "vrx-event-storyboard-1",
+  "events": {
+    "boost": [
+      [
+        "0 ms",
+        "IsBoosting rises",
+        "BOOST",
+        0.25
+      ],
+      [
+        "80 ms",
+        "Label and seam arrive",
+        "BOOST",
+        0.7
+      ],
+      [
+        "160 ms",
+        "Peak emphasis",
+        "BOOST",
+        1
+      ],
+      [
+        "240 ms",
+        "Steady sustain",
+        "BOOST",
+        0.9
+      ],
+      [
+        "release",
+        "State falls",
+        "BOOST",
+        0.45
+      ],
+      [
+        "+180 ms",
+        "Label clears",
+        "",
+        0
+      ]
+    ],
+    "rank": [
+      [
+        "0 ms",
+        "Position 04 to 03",
+        "03",
+        0.35
+      ],
+      [
+        "110 ms",
+        "Number emphasis",
+        "03",
+        1
+      ],
+      [
+        "280 ms",
+        "Hold",
+        "03",
+        0.9
+      ],
+      [
+        "560 ms",
+        "Hold ends",
+        "03",
+        0.9
+      ],
+      [
+        "650 ms",
+        "Arrow fades",
+        "03",
+        0.45
+      ],
+      [
+        "730 ms",
+        "Stable rank",
+        "03",
+        0
+      ]
+    ],
+    "contact": [
+      [
+        "enter",
+        "Light graze",
+        "",
+        0.18
+      ],
+      [
+        "35 ms",
+        "Local flash ends",
+        "",
+        0.08
+      ],
+      [
+        "stay",
+        "Bounded scrape",
+        "",
+        0.22
+      ],
+      [
+        "exit",
+        "Emission stops",
+        "",
+        0
+      ],
+      [
+        "heavy",
+        "One warning onset",
+        "CONTACT",
+        1
+      ],
+      [
+        "+300 ms",
+        "Warning clears",
+        "",
+        0
+      ]
+    ]
+  },
+  "note": "These times describe envelopes following real events; no fabricated gameplay timeline."
+}

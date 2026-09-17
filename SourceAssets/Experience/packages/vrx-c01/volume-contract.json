@@ -1,0 +1,33 @@
+{
+  "id": "vrx_vfx_volume_a",
+  "path": "meshes/vrx_vfx_volume_a.fbx",
+  "type": "vfx-mesh",
+  "revision": 1,
+  "source": "Original Astra longitudinal shell; ship_blender.py",
+  "license": "Project-authored",
+  "triangles": 768,
+  "vertices": 429,
+  "pivot": "nozzle exit at origin",
+  "unityBoundsMin": [
+    -0.3839665726080379,
+    -0.3839665726080379,
+    -4
+  ],
+  "unityBoundsMax": [
+    0.3839665726080379,
+    0.3839665726080379,
+    0
+  ],
+  "outwardSideNormalsVerified": true,
+  "uv": "U 0 nozzle to 1 tail; V 0..1 around circumference, duplicated seam. This is a shell UV, not billboard width.",
+  "vertexColor": "RGB one; A longitudinal (1-U)^1.4 fade",
+  "shaderRequest": "Sample a separate scalar longitudinal/circumferential field or map body atlas V by view-facing normal. Do not wrap the flat body atlas around the tube without adapting its cross-section.",
+  "normals": "smooth outward sides, open ends intentionally; soft alpha and depth intersection fade required",
+  "import": {
+    "normals": "import",
+    "tangents": "calculateMikk",
+    "collider": "none",
+    "scale": 1
+  },
+  "usage": "Optional core/body volume foundation. Bind to actual engine exit; preserve existing craft mesh."
+}

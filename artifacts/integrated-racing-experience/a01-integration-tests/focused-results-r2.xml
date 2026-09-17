@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="34" result="Passed" total="34" passed="34" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-16 02:09:10Z" end-time="2026-09-16 02:09:14Z" duration="3.5100784">
+  <test-suite type="TestSuite" id="1000" name="Vector Rush" fullname="Vector Rush" runstate="Runnable" testcasecount="246" result="Passed" start-time="2026-09-16 02:09:10Z" end-time="2026-09-16 02:09:14Z" duration="3.510078" total="34" passed="34" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <test-suite type="Assembly" id="1311" name="VectorRush.EditorTests.dll" fullname="/Users/anping.wang/Documents/Stuff/AI Space/Projects/Games/Vector Rush Family/Vector Rush Workspaces 2/2026-09-14-playable-race/experience-workspaces/integration/UnityProject/Library/ScriptAssemblies/VectorRush.EditorTests.dll" runstate="Runnable" testcasecount="246" result="Passed" start-time="2026-09-16 02:09:10Z" end-time="2026-09-16 02:09:14Z" duration="3.505194" total="34" passed="34" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="2213" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1312" name="VectorRush" fullname="VectorRush" runstate="Runnable" testcasecount="246" result="Passed" start-time="2026-09-16 02:09:10Z" end-time="2026-09-16 02:09:14Z" duration="3.500277" total="34" passed="34" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1313" name="Tests" fullname="VectorRush.Tests" runstate="Runnable" testcasecount="246" result="Passed" start-time="2026-09-16 02:09:10Z" end-time="2026-09-16 02:09:14Z" duration="3.498890" total="34" passed="34" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1101" name="MotionVFXContractTests" fullname="VectorRush.Tests.MotionVFXContractTests" classname="VectorRush.Tests.MotionVFXContractTests" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-09-16 02:09:10Z" end-time="2026-09-16 02:09:10Z" duration="0.015738" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1102" name="CameraFovIsBoundedAndBoostAddsAControlledStep" fullname="VectorRush.Tests.MotionVFXContractTests.CameraFovIsBoundedAndBoostAddsAControlledStep" methodname="CameraFovIsBoundedAndBoostAddsAControlledStep" classname="VectorRush.Tests.MotionVFXContractTests" runstate="Runnable" seed="891440838" result="Passed" start-time="2026-09-16 02:09:10Z" end-time="2026-09-16 02:09:10Z" duration="0.005612" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1106" name="ContactKeysAreStableAndColliderSpecific" fullname="VectorRush.Tests.MotionVFXContractTests.ContactKeysAreStableAndColliderSpecific" methodname="ContactKeysAreStableAndColliderSpecific" classname="VectorRush.Tests.MotionVFXContractTests" runstate="Runnable" seed="1287177002" result="Passed" start-time="2026-09-16 02:09:10Z" end-time="2026-09-16 02:09:10Z" duration="0.001789" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1105" name="ContactModelSeparatesImpactFromEstablishedScrape" fullname="VectorRush.Tests.MotionVFXContractTests.ContactModelSeparatesImpactFromEstablishedScrape" methodname="ContactModelSeparatesImpactFromEstablishedScrape" classname="VectorRush.Tests.MotionVFXContractTests" runstate="Runnable" seed="1481765189" result="Passed" start-time="2026-09-16 02:09:10Z" end-time="2026-09-16 02:09:10Z" duration="0.001392" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1107" name="IntegrationBridgePreservesContactPhaseAndStableIdentity" fullname="VectorRush.Tests.MotionVFXContractTests.IntegrationBridgePreservesContactPhaseAndStableIdentity" methodname="IntegrationBridgePreservesContactPhaseAndStableIdentity" classname="VectorRush.Tests.MotionVFXContractTests" runstate="Runnable" seed="672829321" result="Passed" start-time="2026-09-16 02:09:10Z" end-time="2026-09-16 02:09:10Z" duration="0.000399" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1104" name="ReducedMotionDisablesOptionalMotionBlur" fullname="VectorRush.Tests.MotionVFXContractTests.ReducedMotionDisablesOptionalMotionBlur" methodname="ReducedMotionDisablesOptionalMotionBlur" classname="VectorRush.Tests.MotionVFXContractTests" runstate="Runnable" seed="1718867666" result="Passed" start-time="2026-09-16 02:09:10Z" end-time="2026-09-16 02:09:10Z" duration="0.000267" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1103" name="TurnLookAheadContractsWithoutChangingRaceSpeed" fullname="VectorRush.Tests.MotionVFXContractTests.TurnLookAheadContractsWithoutChangingRaceSpeed" methodname="TurnLookAheadContractsWithoutChangingRaceSpeed" classname="VectorRush.Tests.MotionVFXContractTests" runstate="Runnable" seed="975097759" result="Passed" start-time="2026-09-16 02:09:10Z" end-time="2026-09-16 02:09:10Z" duration="0.000132" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1124" name="PresentationPolishAudioTests" fullname="VectorRush.Tests.PresentationPolishAudioTests" classname="VectorRush.Tests.PresentationPolishAudioTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-09-16 02:09:10Z" end-time="2026-09-16 02:09:10Z" duration="0.001880" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1126" name="BoostHasASeparateContinuousLayerWithoutChangingAirflow" fullname="VectorRush.Tests.PresentationPolishAudioTests.BoostHasASeparateContinuousLayerWithoutChangingAirflow" methodname="BoostHasASeparateContinuousLayerWithoutChangingAirflow" classname="VectorRush.Tests.PresentationPolishAudioTests" runstate="Runnable" seed="443549099" result="Passed" start-time="2026-09-16 02:09:10Z" end-time="2026-09-16 02:09:10Z" duration="0.000204" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1128" name="ContactIntensitySeparatesNormalAndTangentialMotion" fullname="VectorRush.Tests.PresentationPolishAudioTests.ContactIntensitySeparatesNormalAndTangentialMotion" methodname="ContactIntensitySeparatesNormalAndTangentialMotion" classname="VectorRush.Tests.PresentationPolishAudioTests" runstate="Runnable" seed="431381463" result="Passed" start-time="2026-09-16 02:09:10Z" end-time="2026-09-16 02:09:10Z" duration="0.000222" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1127" name="ContactMixSeparatesTransientImpactFromSustainedScrape" fullname="VectorRush.Tests.PresentationPolishAudioTests.ContactMixSeparatesTransientImpactFromSustainedScrape" methodname="ContactMixSeparatesTransientImpactFromSustainedScrape" classname="VectorRush.Tests.PresentationPolishAudioTests" runstate="Runnable" seed="1579223433" result="Passed" start-time="2026-09-16 02:09:10Z" end-time="2026-09-16 02:09:10Z" duration="0.000191" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1125" name="ImpactFeedbackSeparatesContactSeverityWithoutExceedingMixHeadroom" fullname="VectorRush.Tests.PresentationPolishAudioTests.ImpactFeedbackSeparatesContactSeverityWithoutExceedingMixHeadroom" methodname="ImpactFeedbackSeparatesContactSeverityWithoutExceedingMixHeadroom" classname="VectorRush.Tests.PresentationPolishAudioTests" runstate="Runnable" seed="492329643" result="Passed" start-time="2026-09-16 02:09:10Z" end-time="2026-09-16 02:09:10Z" duration="0.000330" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1129" name="ProductionArtImporterTests" fullname="VectorRush.Tests.ProductionArtImporterTests" classname="VectorRush.Tests.ProductionArtImporterTests" runstate="Runnable" testcasecount="11" result="Passed" start-time="2026-09-16 02:09:10Z" end-time="2026-09-16 02:09:14Z" duration="3.434481" total="11" passed="11" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1131" name="CompleteImmutablePackageValidatesBeforeImport" fullname="VectorRush.Tests.ProductionArtImporterTests.CompleteImmutablePackageValidatesBeforeImport" methodname="CompleteImmutablePackageValidatesBeforeImport" classname="VectorRush.Tests.ProductionArtImporterTests" runstate="Runnable" seed="74802086" result="Passed" start-time="2026-09-16 02:09:10Z" end-time="2026-09-16 02:09:10Z" duration="0.102952" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1132" name="ContractNestedTrackProfilePointsAreAcceptedAndFlattened" fullname="VectorRush.Tests.ProductionArtImporterTests.ContractNestedTrackProfilePointsAreAcceptedAndFlattened" methodname="ContractNestedTrackProfilePointsAreAcceptedAndFlattened" classname="VectorRush.Tests.ProductionArtImporterTests" runstate="Runnable" seed="974249815" result="Passed" start-time="2026-09-16 02:09:10Z" end-time="2026-09-16 02:09:10Z" duration="0.041085" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1139" name="DiagnosticSceneSurvivesReopenWithPersistentProductionReferences" fullname="VectorRush.Tests.ProductionArtImporterTests.DiagnosticSceneSurvivesReopenWithPersistentProductionReferences" methodname="DiagnosticSceneSurvivesReopenWithPersistentProductionReferences" classname="VectorRush.Tests.ProductionArtImporterTests" runstate="Runnable" seed="928791358" result="Passed" start-time="2026-09-16 02:09:10Z" end-time="2026-09-16 02:09:12Z" duration="1.841876" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[File 'Diagnostic_LOD1' has inconsistent LOD naming (_LOD1 found but no _LOD0).
+File 'Diagnostic_LOD1' has inconsistent LOD naming (_LOD1 found but no _LOD0).
+]]></output>
+            </test-case>
+            <test-case id="1134" name="DuplicateMaterialIdIsRejected" fullname="VectorRush.Tests.ProductionArtImporterTests.DuplicateMaterialIdIsRejected" methodname="DuplicateMaterialIdIsRejected" classname="VectorRush.Tests.ProductionArtImporterTests" runstate="Runnable" seed="1754325825" result="Passed" start-time="2026-09-16 02:09:12Z" end-time="2026-09-16 02:09:12Z" duration="0.037925" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1140" name="FullCourseOrientedClearanceReportsTheOffendingInstanceAndPosition" fullname="VectorRush.Tests.ProductionArtImporterTests.FullCourseOrientedClearanceReportsTheOffendingInstanceAndPosition" methodname="FullCourseOrientedClearanceReportsTheOffendingInstanceAndPosition" classname="VectorRush.Tests.ProductionArtImporterTests" runstate="Runnable" seed="949082385" result="Passed" start-time="2026-09-16 02:09:12Z" end-time="2026-09-16 02:09:12Z" duration="0.041715" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1138" name="ImportCopiesImmutablePayloadAndCreatesPersistentConfiguredAssets" fullname="VectorRush.Tests.ProductionArtImporterTests.ImportCopiesImmutablePayloadAndCreatesPersistentConfiguredAssets" methodname="ImportCopiesImmutablePayloadAndCreatesPersistentConfiguredAssets" classname="VectorRush.Tests.ProductionArtImporterTests" runstate="Runnable" seed="731022190" result="Passed" start-time="2026-09-16 02:09:12Z" end-time="2026-09-16 02:09:13Z" duration="0.975691" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[File 'Diagnostic_LOD1' has inconsistent LOD naming (_LOD1 found but no _LOD0).
+File 'Diagnostic_LOD1' has inconsistent LOD naming (_LOD1 found but no _LOD0).
+]]></output>
+            </test-case>
+            <test-case id="1130" name="ImporterAndJsonContractsAreAvailableToTheEditor" fullname="VectorRush.Tests.ProductionArtImporterTests.ImporterAndJsonContractsAreAvailableToTheEditor" methodname="ImporterAndJsonContractsAreAvailableToTheEditor" classname="VectorRush.Tests.ProductionArtImporterTests" runstate="Runnable" seed="2087160781" result="Passed" start-time="2026-09-16 02:09:13Z" end-time="2026-09-16 02:09:13Z" duration="0.034765" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1137" name="InvalidPackageDoesNotMutateExistingImportDestinations" fullname="VectorRush.Tests.ProductionArtImporterTests.InvalidPackageDoesNotMutateExistingImportDestinations" methodname="InvalidPackageDoesNotMutateExistingImportDestinations" classname="VectorRush.Tests.ProductionArtImporterTests" runstate="Runnable" seed="2090013611" result="Passed" start-time="2026-09-16 02:09:13Z" end-time="2026-09-16 02:09:14Z" duration="0.241570" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1135" name="NonUnitPlacementScaleIsRejected" fullname="VectorRush.Tests.ProductionArtImporterTests.NonUnitPlacementScaleIsRejected" methodname="NonUnitPlacementScaleIsRejected" classname="VectorRush.Tests.ProductionArtImporterTests" runstate="Runnable" seed="1839783908" result="Passed" start-time="2026-09-16 02:09:14Z" end-time="2026-09-16 02:09:14Z" duration="0.036598" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1136" name="PayloadMutationAfterReadyIsRejectedByChecksum" fullname="VectorRush.Tests.ProductionArtImporterTests.PayloadMutationAfterReadyIsRejectedByChecksum" methodname="PayloadMutationAfterReadyIsRejectedByChecksum" classname="VectorRush.Tests.ProductionArtImporterTests" runstate="Runnable" seed="240406856" result="Passed" start-time="2026-09-16 02:09:14Z" end-time="2026-09-16 02:09:14Z" duration="0.036960" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1133" name="TraversalPathIsRejectedEvenWhenTheEscapedFileExists" fullname="VectorRush.Tests.ProductionArtImporterTests.TraversalPathIsRejectedEvenWhenTheEscapedFileExists" methodname="TraversalPathIsRejectedEvenWhenTheEscapedFileExists" classname="VectorRush.Tests.ProductionArtImporterTests" runstate="Runnable" seed="1838331655" result="Passed" start-time="2026-09-16 02:09:14Z" end-time="2026-09-16 02:09:14Z" duration="0.041250" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1141" name="ProductionBoundaryTests" fullname="VectorRush.Tests.ProductionBoundaryTests" classname="VectorRush.Tests.ProductionBoundaryTests" runstate="Runnable" testcasecount="13" result="Passed" start-time="2026-09-16 02:09:14Z" end-time="2026-09-16 02:09:14Z" duration="0.041132" total="13" passed="13" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1146" name="ContextExportWritesExactClosedCourseAndHashesItsBytes" fullname="VectorRush.Tests.ProductionBoundaryTests.ContextExportWritesExactClosedCourseAndHashesItsBytes" methodname="ContextExportWritesExactClosedCourseAndHashesItsBytes" classname="VectorRush.Tests.ProductionBoundaryTests" runstate="Runnable" seed="698667780" result="Passed" start-time="2026-09-16 02:09:14Z" end-time="2026-09-16 02:09:14Z" duration="0.025443" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1153" name="CraftFactoryCannotCreateAfterDisposal" fullname="VectorRush.Tests.ProductionBoundaryTests.CraftFactoryCannotCreateAfterDisposal" methodname="CraftFactoryCannotCreateAfterDisposal" classname="VectorRush.Tests.ProductionBoundaryTests" runstate="Runnable" seed="37096595" result="Passed" start-time="2026-09-16 02:09:14Z" end-time="2026-09-16 02:09:14Z" duration="0.000770" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1148" name="CraftFactoryExposesOwnedRuntimeMaterialContract" fullname="VectorRush.Tests.ProductionBoundaryTests.CraftFactoryExposesOwnedRuntimeMaterialContract" methodname="CraftFactoryExposesOwnedRuntimeMaterialContract" classname="VectorRush.Tests.ProductionBoundaryTests" runstate="Runnable" seed="633275503" result="Passed" start-time="2026-09-16 02:09:14Z" end-time="2026-09-16 02:09:14Z" duration="0.000155" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1152" name="CraftFactoryOwnsOnlyTheMaterialInstancesItCreates" fullname="VectorRush.Tests.ProductionBoundaryTests.CraftFactoryOwnsOnlyTheMaterialInstancesItCreates" methodname="CraftFactoryOwnsOnlyTheMaterialInstancesItCreates" classname="VectorRush.Tests.ProductionBoundaryTests" runstate="Runnable" seed="2127519907" result="Passed" start-time="2026-09-16 02:09:14Z" end-time="2026-09-16 02:09:14Z" duration="0.000541" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1144" name="CraftMaterialFactoryRuntimeBoundaryIsAvailable" fullname="VectorRush.Tests.ProductionBoundaryTests.CraftMaterialFactoryRuntimeBoundaryIsAvailable" methodname="CraftMaterialFactoryRuntimeBoundaryIsAvailable" classname="VectorRush.Tests.ProductionBoundaryTests" runstate="Runnable" seed="1724183403" result="Passed" start-time="2026-09-16 02:09:14Z" end-time="2026-09-16 02:09:14Z" duration="0.000097" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1154" name="ProductionBootstrapUsesTheSavedTrackAndSingleSavedCamera" fullname="VectorRush.Tests.ProductionBoundaryTests.ProductionBootstrapUsesTheSavedTrackAndSingleSavedCamera" methodname="ProductionBootstrapUsesTheSavedTrackAndSingleSavedCamera" classname="VectorRush.Tests.ProductionBoundaryTests" runstate="Runnable" seed="54021096" result="Passed" start-time="2026-09-16 02:09:14Z" end-time="2026-09-16 02:09:14Z" duration="0.008416" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1143" name="ProductionMaterialLibraryRuntimeBoundaryIsAvailable" fullname="VectorRush.Tests.ProductionBoundaryTests.ProductionMaterialLibraryRuntimeBoundaryIsAvailable" methodname="ProductionMaterialLibraryRuntimeBoundaryIsAvailable" classname="VectorRush.Tests.ProductionBoundaryTests" runstate="Runnable" seed="1116120673" result="Passed" start-time="2026-09-16 02:09:14Z" end-time="2026-09-16 02:09:14Z" duration="0.000118" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1145" name="ProductionSceneSetupExposesAllBatchEntrypoints" fullname="VectorRush.Tests.ProductionBoundaryTests.ProductionSceneSetupExposesAllBatchEntrypoints" methodname="ProductionSceneSetupExposesAllBatchEntrypoints" classname="VectorRush.Tests.ProductionBoundaryTests" runstate="Runnable" seed="465095992" result="Passed" start-time="2026-09-16 02:09:14Z" end-time="2026-09-16 02:09:14Z" duration="0.000329" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1150" name="ProductionWorldAcceptsCompleteIdentitySceneWithoutGeneratingAnything" fullname="VectorRush.Tests.ProductionBoundaryTests.ProductionWorldAcceptsCompleteIdentitySceneWithoutGeneratingAnything" methodname="ProductionWorldAcceptsCompleteIdentitySceneWithoutGeneratingAnything" classname="VectorRush.Tests.ProductionBoundaryTests" runstate="Runnable" seed="797740175" result="Passed" start-time="2026-09-16 02:09:14Z" end-time="2026-09-16 02:09:14Z" duration="0.000590" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1147" name="ProductionWorldExposesTheSceneAuthoredContract" fullname="VectorRush.Tests.ProductionBoundaryTests.ProductionWorldExposesTheSceneAuthoredContract" methodname="ProductionWorldExposesTheSceneAuthoredContract" classname="VectorRush.Tests.ProductionBoundaryTests" runstate="Runnable" seed="1627813299" result="Passed" start-time="2026-09-16 02:09:14Z" end-time="2026-09-16 02:09:14Z" duration="0.000135" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1149" name="ProductionWorldRejectsMissingTrackWithoutGeneratingAnything" fullname="VectorRush.Tests.ProductionBoundaryTests.ProductionWorldRejectsMissingTrackWithoutGeneratingAnything" methodname="ProductionWorldRejectsMissingTrackWithoutGeneratingAnything" classname="VectorRush.Tests.ProductionBoundaryTests" runstate="Runnable" seed="824442819" result="Passed" start-time="2026-09-16 02:09:14Z" end-time="2026-09-16 02:09:14Z" duration="0.000228" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1151" name="ProductionWorldRejectsMovedTrackRoot" fullname="VectorRush.Tests.ProductionBoundaryTests.ProductionWorldRejectsMovedTrackRoot" methodname="ProductionWorldRejectsMovedTrackRoot" classname="VectorRush.Tests.ProductionBoundaryTests" runstate="Runnable" seed="211123642" result="Passed" start-time="2026-09-16 02:09:14Z" end-time="2026-09-16 02:09:14Z" duration="0.000339" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1142" name="ProductionWorldRuntimeBoundaryIsAvailable" fullname="VectorRush.Tests.ProductionBoundaryTests.ProductionWorldRuntimeBoundaryIsAvailable" methodname="ProductionWorldRuntimeBoundaryIsAvailable" classname="VectorRush.Tests.ProductionBoundaryTests" runstate="Runnable" seed="1650414205" result="Passed" start-time="2026-09-16 02:09:14Z" end-time="2026-09-16 02:09:14Z" duration="0.000047" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[Saving results to: /Users/anping.wang/Library/Application Support/Vector Studio/Vector Rush/TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

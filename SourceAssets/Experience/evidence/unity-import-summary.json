@@ -1,0 +1,840 @@
+{
+  "unityVersion": "6000.6.0f1",
+  "mode": "batchmode -nographics asset import only; no production scene changes",
+  "exitCode": 0,
+  "importsCompleted": 137,
+  "models": 31,
+  "textures": 86,
+  "fonts": 2,
+  "allPayloadBytesAndMetadataUnchanged": true,
+  "csharpCompilationErrors": false,
+  "assetImportFailures": false,
+  "renderPipelineIssues": [
+    "Two FXC/dx11 compiler process failures for package Hidden/ProbeVolume/VoxelizeScene (VoxelizeMesh and VoxelizeMeshInstanced). Unity restarted the compiler and completed import. These are not an ExperienceArt payload rejection; native rendering is unverified."
+  ],
+  "nativeMovingUsability": "pending 01 production integration",
+  "imports": [
+    {
+      "path": "Assets/Resources/ExperienceArt/textures",
+      "guid": "411d50c38c7b5cd48d821a89409ed725",
+      "importer": "DefaultImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/design",
+      "guid": "55e52e3e2f335ecbb980be80c2ebf54e",
+      "importer": "DefaultImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/ui",
+      "guid": "956dface457c534ea238ac6c5cc25070",
+      "importer": "DefaultImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/vfx",
+      "guid": "3625c1a06a66550eabefa0e0904b86e1",
+      "importer": "DefaultImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/meshes",
+      "guid": "b665855ca7265c2eb07f3cbc4edc7529",
+      "importer": "DefaultImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/ship",
+      "guid": "bc7b6aec52245add8eb1d5362c4d3e8d",
+      "importer": "DefaultImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/fonts",
+      "guid": "cef6317e9bff59a388ef6ce226985745",
+      "importer": "DefaultImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/ship/vrx_ship_ceramic_a_base.png",
+      "guid": "302595b0378a57f4b88b5e9ba416233f",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/ship/vrx_ship_ivory_a_ao.png",
+      "guid": "30081c55ef5b5bb08704f7d10c0ef9c0",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/ship/vrx_ship_graphite_a_normal.png",
+      "guid": "30a8c4be1b2357838ddb2c4545dd2738",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/textures/vrx_mat_white_a_normal.png",
+      "guid": "40c894592aff5869962778ee6025792d",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/textures/vrx_mat_cyan_a_base.png",
+      "guid": "70636bbb01bc5c8bad48c510ecfbb309",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/vfx/vrx_vfx_core_a.png",
+      "guid": "d04e375c97aa5587b7e9e93287bd3e57",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/textures/vrx_mat_glass_a_base.png",
+      "guid": "71c18b071b0a54dc91a17a58c8b6fdc3",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/textures/vrx_mat_glass_a_ms.png",
+      "guid": "a182629b7972578d9d66e2822e96bb1d",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/ship/vrx_ship_graphite_a_base.png",
+      "guid": "a19305cae560538d86ac9b3e23e1e849",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/textures/vrx_mat_serviceglass_a_ms.png",
+      "guid": "d140c05afd1c55eda4d73603c5b03645",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/textures/vrx_mat_titanium_a_base.png",
+      "guid": "d14900fe23cc5acd923065dd4cc9880f",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/ship/vrx_ship_metal_a_base.png",
+      "guid": "e12363e4e7ea5efc969b6ba255d0ea39",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/textures/vrx_mat_occupied_a_base.png",
+      "guid": "221f79cff27a5d778acd8060b0ef2e14",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/textures/vrx_mat_magenta_a_ao.png",
+      "guid": "627cc8ba5c615a5882237c37db1046a7",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/ui/vrx_ui_selection_a.png",
+      "guid": "92e8455ea7ab5531aba49fe3435db996",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/ship/vrx_ship_ceramic_a_energy.png",
+      "guid": "92098e16f9ee5a2e812ab4b9ef5d2055",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/ship/vrx_ship_ivory_a_normal.png",
+      "guid": "e2501d88d75f5de9b0119722f70f22c4",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/ship/vrx_ship_ivory_a_ms.png",
+      "guid": "73d7ae8408425299ae427826e6f9e94f",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/ui/vrx_ui_advert_a.png",
+      "guid": "933a35c8eff35d65b88e0d9bf442f709",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/textures/vrx_mat_hotelglass_a_ms.png",
+      "guid": "e3eb0d8d2b685df3844b83a7e13b2e18",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/textures/vrx_mat_titanium_a_ao.png",
+      "guid": "240d56b05a175c9093515fed6c8e634b",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/textures/vrx_mat_white_a_base.png",
+      "guid": "24bdc767609c5d76a05994fa5e55b2ca",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/textures/vrx_mat_occupied_a_emission.png",
+      "guid": "4427c4a842e653a68ac5de7d686330db",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/textures/vrx_mat_magenta_a_emission.png",
+      "guid": "542d3111ccb659b7991af453cdea1268",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/ui/vrx_ui_boost_track_a.png",
+      "guid": "74075f44972b5acca493a71aca931ea8",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/textures/vrx_mat_officeglass_a_emission.png",
+      "guid": "c47b73ee1d815350b5536ad1f61b8a7b",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/ship/vrx_ship_ivory_a_energy.png",
+      "guid": "d455f4df1ef955658da90019e18cd59a",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/textures/vrx_mat_white_a_ao.png",
+      "guid": "2539caf29a9a570b8172ae5a2f837dd8",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/vfx/vrx_vfx_plume_a.png",
+      "guid": "454fa150262658bc83d22ff269ac757e",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/textures/vrx_mat_occupied_a_ao.png",
+      "guid": "c57fcb19d38c518dbb28086d22ae32c7",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/ship/vrx_ship_ceramic_a_normal.png",
+      "guid": "d5a7dc5ad53852a2a9695a54fe45c145",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/textures/vrx_mat_hotelglass_a_ao.png",
+      "guid": "a66a0fb811515825bb891b6bb8090ae8",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/ship/vrx_ship_graphite_a_ao.png",
+      "guid": "a66ee171523655a9990b47a8d382ec90",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/textures/vrx_mat_magenta_a_normal.png",
+      "guid": "b626126b261156fab73eacb6d81ac76b",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/textures/vrx_mat_cyan_a_emission.png",
+      "guid": "d6d4b5b487695482b53ffe8129da36a7",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/textures/vrx_mat_slate_a_ao.png",
+      "guid": "f6ef5c12eda45236b59378bc7a35cfa2",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/textures/vrx_mat_cyan_a_normal.png",
+      "guid": "27751565e3815bac85c8ed38f4a128d4",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/vfx/vrx_vfx_impact_a.png",
+      "guid": "47b470626f7353229321b5927a8ad50a",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/textures/vrx_mat_cyan_a_ao.png",
+      "guid": "6715ad3ce337520ba8cb05fec04a5708",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/textures/vrx_mat_mineral_a_base.png",
+      "guid": "676dd9b66b155261a683a9024933b43f",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/ship/vrx_ship_ceramic_a_ao.png",
+      "guid": "879cce89031c51a88a3738c5a3b55b09",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/textures/vrx_mat_slate_a_ms.png",
+      "guid": "c7cabb9fcd0251d390c46cd4cbd2ffb7",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/textures/vrx_mat_serviceglass_a_emission.png",
+      "guid": "d7396e6808bc58d2aa2224301eead698",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/ship/vrx_ship_metal_a_ao.png",
+      "guid": "48856d54757e54799df737feb5644403",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/ship/vrx_ship_metal_a_energy.png",
+      "guid": "68c3f5b818d556c28fe4a8b2e526da2c",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/textures/vrx_mat_white_a_emission.png",
+      "guid": "78ad9848cf55590aafe9309cec8fac9e",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/textures/vrx_mat_officeglass_a_ao.png",
+      "guid": "d831ccf230645d18a48e6894d3afd019",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/textures/vrx_mat_hotelglass_a_emission.png",
+      "guid": "d89f81a1741a541e9340cad83c6f6797",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/textures/vrx_mat_titanium_a_normal.png",
+      "guid": "e8732c50fc4c5137802b4af3f85c182e",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/textures/vrx_mat_officeglass_a_ms.png",
+      "guid": "e8067bd365ba5e11a47c250d71ca8e76",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/ship/vrx_ship_ivory_a_base.png",
+      "guid": "097335ed951150a19aaffa48df7a9038",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/textures/vrx_mat_officeglass_a_base.png",
+      "guid": "09e377a91d5956c1b411c37b6abfa2a6",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/textures/vrx_mat_mineral_a_ao.png",
+      "guid": "09e624ed0afb5979990e1251c5da2209",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/textures/vrx_mat_mineral_a_normal.png",
+      "guid": "5994bc394b865a28bde8fae646991ba3",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/vfx/vrx_vfx_spark_a.png",
+      "guid": "79c874bac2da54559d616e54cb42571d",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/textures/vrx_mat_serviceglass_a_base.png",
+      "guid": "99e4b7f309f1547dad3b052c080fc698",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/ui/vrx_ui_panel_a.png",
+      "guid": "d994ddb7d6e55e479bc4e40f1c03b5ab",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/ship/vrx_ship_metal_a_normal.png",
+      "guid": "e9024120981f5d52a39f4d4609f91ff7",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/textures/vrx_mat_titanium_a_ms.png",
+      "guid": "0a3f3ea890a4519d8b1e90175c5ad5a0",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/textures/vrx_mat_officeglass_a_normal.png",
+      "guid": "3a180bb58bf955f8a0a3fb9f3ec502a1",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/textures/vrx_mat_slate_a_normal.png",
+      "guid": "4aa7634209a356fc9d30d5797ecd4131",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/textures/vrx_mat_hotelglass_a_normal.png",
+      "guid": "5a2631cdf7b35a6db0633756208205de",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/textures/vrx_mat_mineral_a_ms.png",
+      "guid": "faed92d51a5c586db716d9f81c6070e5",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/ui/vrx_ui_rank_down_a.png",
+      "guid": "0bbd1fba6a5158e1957996a9f81b7b53",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/textures/vrx_mat_magenta_a_ms.png",
+      "guid": "4bbd5fd9b64954dcaa26346a1839d6b4",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/textures/vrx_mat_glass_a_normal.png",
+      "guid": "eba6e0a616bf5598bb4f47ea9cb14505",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/ship/vrx_ship_graphite_a_energy.png",
+      "guid": "0caa8d4a817e5a93b1a2adf9a3ed60bd",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/ship/vrx_ship_metal_a_ms.png",
+      "guid": "6cd0aa960321593daa6fce00cec610ae",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/textures/vrx_mat_cyan_a_ms.png",
+      "guid": "7c8f55039b86527eb141a2cb9d5989cf",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/textures/vrx_mat_glass_a_ao.png",
+      "guid": "8c52df1bd76a5ef98b966508eff36d29",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/ui/vrx_ui_chevron_a.png",
+      "guid": "8c240c9aa70b5918960b93c1c5aafbda",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/textures/vrx_mat_magenta_a_base.png",
+      "guid": "8c26d3328a57525692c715162115f130",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/textures/vrx_mat_hotelglass_a_base.png",
+      "guid": "acbecf88593f58ed90971e6da54c6ac6",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/textures/vrx_mat_serviceglass_a_normal.png",
+      "guid": "ecc67dba6a165056ba3f3b9e24ca3d87",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/vfx/vrx_vfx_wake_a.png",
+      "guid": "fc580cfdbf045aa7b4d7b9367fecac00",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/textures/vrx_mat_white_a_ms.png",
+      "guid": "5dd76438081f5287bfdc9317cb966e43",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/textures/vrx_mat_serviceglass_a_ao.png",
+      "guid": "dda47c8c02735057887d95dfe4591ace",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/ship/vrx_ship_ceramic_a_ms.png",
+      "guid": "fdc74ae1789f58fc9f336f780edaa83b",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/ui/vrx_ui_rank_up_a.png",
+      "guid": "fddb906922185b8e85d067f81acb6234",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/textures/vrx_mat_occupied_a_ms.png",
+      "guid": "4e25a67449485febb1921626706d38ce",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/ui/vrx_ui_wordmark_a.png",
+      "guid": "4e6e9dc4ef8356128f967af52061efd4",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/ui/vrx_ui_boost_fill_a.png",
+      "guid": "6e323af4fd405f9a998a014c508a858f",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/textures/vrx_mat_occupied_a_normal.png",
+      "guid": "de413c3ade7156f5a51f8b18efc4dd2c",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/ui/vrx_ui_collision_a.png",
+      "guid": "1fe55de7e48958e597a5422f184180ca",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/textures/vrx_mat_slate_a_base.png",
+      "guid": "df079ba426b05ed997cf2b7d52162e31",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/ship/vrx_ship_graphite_a_ms.png",
+      "guid": "efa618f1c1775aee87d967825e36e369",
+      "importer": "TextureImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/fonts/vrx_font_text_a.ttf",
+      "guid": "b755f70b311c5e1aadbd501212276a32",
+      "importer": "TrueTypeFontImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/fonts/vrx_font_display_a.ttf",
+      "guid": "587764656cb450c380b44a103f8b5bc2",
+      "importer": "TrueTypeFontImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/meshes/vrx_city_advert_a_LOD0.fbx",
+      "guid": "001c30f72c375350887d5890c864439e",
+      "importer": "FBXImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/meshes/vrx_city_exchange_a_LOD0.fbx",
+      "guid": "500a07f591a3512d9c4c33d21d0406ea",
+      "importer": "FBXImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/meshes/vrx_city_services_b_LOD1.fbx",
+      "guid": "e012a8c928fd5f9289cf7ad037ec7a6b",
+      "importer": "FBXImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/meshes/vrx_city_works_b_LOD0.fbx",
+      "guid": "3185d9809356536a86968d239a44a137",
+      "importer": "FBXImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/meshes/vrx_city_services_b_LOD0.fbx",
+      "guid": "41887acbae965a5e9640c0b9b29dfdb0",
+      "importer": "FBXImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/meshes/vrx_city_canopy_a_LOD0.fbx",
+      "guid": "91db34f25e4d5e668e06debe65f01b9a",
+      "importer": "FBXImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/meshes/vrx_city_exchange_b_LOD1.fbx",
+      "guid": "42ea32207aff5cf9bb128d8c82535b6a",
+      "importer": "FBXImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/meshes/vrx_city_podium_a_LOD0.fbx",
+      "guid": "f431ff1aa4c45a2880166e19ba352e46",
+      "importer": "FBXImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/meshes/vrx_city_podium_a_LOD1.fbx",
+      "guid": "f409ed4ea5365b51a60bdbb8c63ea436",
+      "importer": "FBXImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/meshes/vrx_track_guidance_a_LOD0.fbx",
+      "guid": "1643541553e55051863699f8606b3a43",
+      "importer": "FBXImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/meshes/vrx_city_hotel_b_LOD1.fbx",
+      "guid": "f6fce896288555ca981d64d3d7fd3ecf",
+      "importer": "FBXImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/meshes/vrx_city_hotel_a_LOD0.fbx",
+      "guid": "776737a9e51f5c4fbbad9d813ff2e52d",
+      "importer": "FBXImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/meshes/vrx_city_exchange_a_LOD1.fbx",
+      "guid": "48df2a95758d58418603fa985a88b320",
+      "importer": "FBXImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/meshes/vrx_city_works_b_LOD1.fbx",
+      "guid": "b8c3c975e3ef583c85eff1503e100f69",
+      "importer": "FBXImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/meshes/vrx_track_guidance_a_LOD1.fbx",
+      "guid": "d8bbefbb0b52519787d858b71fcc6b69",
+      "importer": "FBXImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/meshes/vrx_city_works_a_LOD0.fbx",
+      "guid": "394515bfba79590bad88053a6a400bf7",
+      "importer": "FBXImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/meshes/vrx_vfx_volume_a.fbx",
+      "guid": "f9c3d83bfa57547fa726c80f9babd95d",
+      "importer": "FBXImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/meshes/vrx_city_plant_a_LOD1.fbx",
+      "guid": "5bc316d3e84153adba44e2d05f445cc8",
+      "importer": "FBXImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/meshes/vrx_city_plant_a_LOD0.fbx",
+      "guid": "6ba347ba04b954adbd81b4fe11db42ff",
+      "importer": "FBXImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/meshes/vrx_city_landmark_a_LOD0.fbx",
+      "guid": "bc6b6237c6e257f593e0af08d2625e46",
+      "importer": "FBXImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/meshes/vrx_city_bridge_a_LOD0.fbx",
+      "guid": "ccb0c2fdaec252d399bc570344fdf56c",
+      "importer": "FBXImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/meshes/vrx_city_advert_a_LOD1.fbx",
+      "guid": "ccd47581295651ddba8cc30f447b5662",
+      "importer": "FBXImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/meshes/vrx_city_exchange_b_LOD0.fbx",
+      "guid": "7df3c9256eb85468a372afe829b9ede7",
+      "importer": "FBXImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/meshes/vrx_city_services_a_LOD0.fbx",
+      "guid": "9d0a08cdb8b250199b05a1dfeb6fd0fe",
+      "importer": "FBXImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/meshes/vrx_city_hotel_b_LOD0.fbx",
+      "guid": "ada7bfd7c7035c4b93b9369e45815bcd",
+      "importer": "FBXImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/meshes/vrx_city_canopy_a_LOD1.fbx",
+      "guid": "7ea48c09aca25612930f148a2d7f4109",
+      "importer": "FBXImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/meshes/vrx_city_bridge_a_LOD1.fbx",
+      "guid": "be521814071959d0a6c47b3eb7c4029a",
+      "importer": "FBXImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/meshes/vrx_city_hotel_a_LOD1.fbx",
+      "guid": "be4e80f72b0658b98dbe620f8380686b",
+      "importer": "FBXImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/meshes/vrx_city_works_a_LOD1.fbx",
+      "guid": "7fd5e553dd36503cad4414b3b29067a9",
+      "importer": "FBXImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/meshes/vrx_city_landmark_a_LOD1.fbx",
+      "guid": "af64ed46f9e35e589df4339efe32abba",
+      "importer": "FBXImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/meshes/vrx_city_services_a_LOD1.fbx",
+      "guid": "ef12456177f05b3e8b0428b705d6a75d",
+      "importer": "FBXImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/experience-assets.json",
+      "guid": "317765a8095f5309a0bb0446c6aa78e1",
+      "importer": "TextScriptImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/ship/ship-finish-contract.json",
+      "guid": "c23611a6f58b5f3685d9b1b21dc34756",
+      "importer": "TextScriptImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/collision-proxies.json",
+      "guid": "d240edc42e6e524cbac13bb2982ccaac",
+      "importer": "TextScriptImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/ship/volume-contract.json",
+      "guid": "c3794520bc0153ff91b24c4abbb1c342",
+      "importer": "TextScriptImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/asset-stats.json",
+      "guid": "16bb86664be8585cba8286c5f9bc5d4d",
+      "importer": "TextScriptImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/layout.json",
+      "guid": "09dfea53e74c50659e82298bd3e4c5d1",
+      "importer": "TextScriptImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/fonts/vrx_font_text_a_OFL.txt",
+      "guid": "59baa46deec2569585c0b1eac18b0812",
+      "importer": "TextScriptImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/design/vrx_ui_tokens_a.json",
+      "guid": "5b344c27a8815ad597bbcde3578066e3",
+      "importer": "TextScriptImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/fonts/vrx_font_display_a_OFL.txt",
+      "guid": "3daddb94fc6e5019a0d645dbd494015c",
+      "importer": "TextScriptImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/manifest.json",
+      "guid": "3ec18890f065510181b89da93698048d",
+      "importer": "TextScriptImporter",
+      "completed": true
+    },
+    {
+      "path": "Assets/Resources/ExperienceArt/design/vrx_event_storyboard_a.json",
+      "guid": "ef10c26c3aa4539c8e2428b15db3ff65",
+      "importer": "TextScriptImporter",
+      "completed": true
+    }
+  ]
+}

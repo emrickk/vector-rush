@@ -1,0 +1,31 @@
+{
+  "revision": "pass-03-finish",
+  "recipe_sha256": "c2727d6c130f44eec8de0d0fbb6c8bfcf7f80cc5f7be06697b887cc80eb2ab19",
+  "source_dimensions_xyz": [
+    5.2256,
+    6.885,
+    1.5197
+  ],
+  "source_forward": "-Y",
+  "source_up": "+Z",
+  "unity_mapping": "(X,Z,-Y)",
+  "source_meshes": 70,
+  "runtime_meshes": 7,
+  "triangles": 38036,
+  "nonmanifold_edges_by_source_mesh": {},
+  "materials_used": [
+    "Ivory",
+    "Graphite",
+    "Glass",
+    "Metal",
+    "Ceramic",
+    "Engine",
+    "EngineCore"
+  ],
+  "primary_form_only": false,
+  "studio_bloom": false,
+  "runtime_uv_policy": "Pass02 Ivory/Graphite/Glass/Metal/Ceramic runtime UVs preserved verbatim. Engine and EngineCore re-atlased after material split. EXPORT_RUNTIME is exact final FBX source; do not re-unwrap after bake.",
+  "form_source_sha256": "9660afd26a8ca522bc119f8811a80b06997f61f63ec81cefeccdbd16dd2c5f23",
+  "finish_recipe_sha256": "a7cd3028f6cac7a8561ccbb7858367014249e88dbdbdc352431703144dd6dba7",
+  "finish_scope": "Flush authored paint shader, coating preview hierarchy, compact EngineCore separated from dim cyan Engine rings. Major shape unchanged. Parent owns baked coating maps/native material integration."
+}

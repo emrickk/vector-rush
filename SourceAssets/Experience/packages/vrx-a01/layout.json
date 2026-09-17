@@ -1,0 +1,4551 @@
+{
+  "contractVersion": 1,
+  "revision": "vrx-a01",
+  "courseHash": "598718f08e5c308a41b8e9f1b562ff8cd4e2bc9f661a91f4e34164cf7c820059",
+  "zones": [
+    {
+      "id": "vrx_zone_exemplar_a",
+      "startProgress": 0,
+      "endProgress": 1
+    }
+  ],
+  "instances": [
+    {
+      "id": "vrx_city_exchange_a_001",
+      "assetId": "vrx_city_exchange_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        6.637045860290527,
+        3.5464420318603516,
+        -284.3592224121094
+      ],
+      "rotation": [
+        0.0,
+        0.7161245346069336,
+        0.0,
+        0.6979725956916809
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "upright",
+      "role": "middle",
+      "gi": "probe",
+      "sourceProgress": 0.004166666883975267,
+      "sourceLateral": 55.08592894313302,
+      "sourceVertical": -26.833924910928673
+    },
+    {
+      "id": "vrx_city_works_a_001",
+      "assetId": "vrx_city_works_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        34.5557975769043,
+        5.454160690307617,
+        -186.03245544433594
+      ],
+      "rotation": [
+        0.0,
+        0.7240400910377502,
+        0.0,
+        0.6897579431533813
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "upright",
+      "role": "middle",
+      "gi": "probe",
+      "sourceProgress": 0.017500000074505806,
+      "sourceLateral": -44.8709663195981,
+      "sourceVertical": -27.28777874213212
+    },
+    {
+      "id": "vrx_city_services_a_001",
+      "assetId": "vrx_city_services_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        47.043582916259766,
+        9.55229377746582,
+        -308.0635986328125
+      ],
+      "rotation": [
+        0.0,
+        0.7238030433654785,
+        0.0,
+        0.6900066137313843
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "upright",
+      "role": "middle",
+      "gi": "probe",
+      "sourceProgress": 0.027499999850988388,
+      "sourceLateral": 75.8378075184431,
+      "sourceVertical": -23.7089190938477
+    },
+    {
+      "id": "vrx_city_hotel_a_001",
+      "assetId": "vrx_city_hotel_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        80.85148620605469,
+        4.579689025878906,
+        -168.81436157226562
+      ],
+      "rotation": [
+        0.0,
+        0.7040075659751892,
+        0.0,
+        0.7101924419403076
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "upright",
+      "role": "middle",
+      "gi": "probe",
+      "sourceProgress": 0.04416666552424431,
+      "sourceLateral": -65.59352447045414,
+      "sourceVertical": -23.789490092066714
+    },
+    {
+      "id": "vrx_city_exchange_a_002",
+      "assetId": "vrx_city_exchange_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        108.2484359741211,
+        16.173749923706055,
+        -303.2283630371094
+      ],
+      "rotation": [
+        0.0,
+        0.672863245010376,
+        0.0,
+        0.7397668957710266
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "upright",
+      "role": "middle",
+      "gi": "probe",
+      "sourceProgress": 0.054999999701976776,
+      "sourceLateral": 69.81024274088139,
+      "sourceVertical": -22.967229195425027
+    },
+    {
+      "id": "vrx_city_exchange_a_003",
+      "assetId": "vrx_city_exchange_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        114.4400634765625,
+        -1.6187896728515625,
+        -176.697265625
+      ],
+      "rotation": [
+        0.0,
+        0.609329342842102,
+        0.0,
+        0.7929172515869141
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "upright",
+      "role": "middle",
+      "gi": "probe",
+      "sourceProgress": 0.06916666775941849,
+      "sourceLateral": -56.18019722590647,
+      "sourceVertical": -27.44003045002971
+    },
+    {
+      "id": "vrx_city_works_a_002",
+      "assetId": "vrx_city_works_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        175.9549102783203,
+        14.377195358276367,
+        -275.444091796875
+      ],
+      "rotation": [
+        0.0,
+        0.5556280612945557,
+        0.0,
+        0.831430971622467
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "upright",
+      "role": "middle",
+      "gi": "probe",
+      "sourceProgress": 0.0833333358168602,
+      "sourceLateral": 59.97803451818763,
+      "sourceVertical": -23.915391963536212
+    },
+    {
+      "id": "vrx_city_services_a_002",
+      "assetId": "vrx_city_services_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        144.9871368408203,
+        12.189952850341797,
+        -149.09844970703125
+      ],
+      "rotation": [
+        0.0,
+        0.5129595994949341,
+        0.0,
+        0.8584127426147461
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "upright",
+      "role": "middle",
+      "gi": "probe",
+      "sourceProgress": 0.09749999642372131,
+      "sourceLateral": -67.43421930636114,
+      "sourceVertical": -17.27982631465493
+    },
+    {
+      "id": "vrx_city_hotel_a_002",
+      "assetId": "vrx_city_hotel_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        224.48228454589844,
+        15.361635208129883,
+        -234.58599853515625
+      ],
+      "rotation": [
+        0.0,
+        0.4687380790710449,
+        0.0,
+        0.8833371996879578
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "upright",
+      "role": "middle",
+      "gi": "probe",
+      "sourceProgress": 0.11083333194255829,
+      "sourceLateral": 46.63274246759546,
+      "sourceVertical": -24.840602647437123
+    },
+    {
+      "id": "vrx_city_exchange_a_004",
+      "assetId": "vrx_city_exchange_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        183.8085174560547,
+        2.8098297119140625,
+        -140.12493896484375
+      ],
+      "rotation": [
+        0.0,
+        0.41400817036628723,
+        0.0,
+        0.9102731943130493
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "upright",
+      "role": "middle",
+      "gi": "probe",
+      "sourceProgress": 0.12416666746139526,
+      "sourceLateral": -54.52261094594027,
+      "sourceVertical": -28.76751094673502
+    },
+    {
+      "id": "vrx_city_exchange_a_005",
+      "assetId": "vrx_city_exchange_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        292.4886169433594,
+        22.062498092651367,
+        -213.44700622558594
+      ],
+      "rotation": [
+        0.0,
+        0.34435126185417175,
+        0.0,
+        0.938840925693512
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "upright",
+      "role": "middle",
+      "gi": "probe",
+      "sourceProgress": 0.1366666704416275,
+      "sourceLateral": 75.19284109000453,
+      "sourceVertical": -27.638062305297545
+    },
+    {
+      "id": "vrx_city_works_a_003",
+      "assetId": "vrx_city_works_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        163.267578125,
+        -1.696096420288086,
+        -94.74021911621094
+      ],
+      "rotation": [
+        0.0,
+        0.2316056191921234,
+        0.0,
+        0.9728097915649414
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "upright",
+      "role": "middle",
+      "gi": "probe",
+      "sourceProgress": 0.15166667103767395,
+      "sourceLateral": -100.56804973020486,
+      "sourceVertical": -29.128742569173767
+    },
+    {
+      "id": "vrx_city_services_a_003",
+      "assetId": "vrx_city_services_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        315.1947326660156,
+        26.993263244628906,
+        -146.88250732421875
+      ],
+      "rotation": [
+        0.0,
+        0.17760919034481049,
+        0.0,
+        0.9841011762619019
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "upright",
+      "role": "middle",
+      "gi": "probe",
+      "sourceProgress": 0.16083332896232605,
+      "sourceLateral": 62.818254774407436,
+      "sourceVertical": -22.490686175299142
+    },
+    {
+      "id": "vrx_city_hotel_a_003",
+      "assetId": "vrx_city_hotel_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        213.3181915283203,
+        18.092008590698242,
+        -82.61445617675781
+      ],
+      "rotation": [
+        0.0,
+        0.09532375633716583,
+        0.0,
+        0.9954463243484497
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "upright",
+      "role": "middle",
+      "gi": "probe",
+      "sourceProgress": 0.1783333271741867,
+      "sourceLateral": -52.90046133883881,
+      "sourceVertical": -21.52434446312255
+    },
+    {
+      "id": "vrx_city_exchange_a_006",
+      "assetId": "vrx_city_exchange_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        322.89874267578125,
+        34.9117431640625,
+        -79.15958404541016
+      ],
+      "rotation": [
+        0.0,
+        0.047679949551820755,
+        0.0,
+        0.9988626837730408
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "upright",
+      "role": "middle",
+      "gi": "probe",
+      "sourceProgress": 0.18916666507720947,
+      "sourceLateral": 56.27327874675472,
+      "sourceVertical": -17.138734709963064
+    },
+    {
+      "id": "vrx_city_exchange_a_007",
+      "assetId": "vrx_city_exchange_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        200.0054473876953,
+        11.07830810546875,
+        -49.19662857055664
+      ],
+      "rotation": [
+        0.0,
+        -0.017140474170446396,
+        0.0,
+        0.9998531341552734
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "upright",
+      "role": "middle",
+      "gi": "probe",
+      "sourceProgress": 0.20250000059604645,
+      "sourceLateral": -69.96781388704406,
+      "sourceVertical": -29.46487329174974
+    },
+    {
+      "id": "vrx_city_works_a_004",
+      "assetId": "vrx_city_works_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        320.68121337890625,
+        39.12289047241211,
+        -5.6389641761779785
+      ],
+      "rotation": [
+        0.0,
+        -0.1222645714879036,
+        0.0,
+        0.9924975633621216
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "upright",
+      "role": "middle",
+      "gi": "probe",
+      "sourceProgress": 0.21833333373069763,
+      "sourceLateral": 57.129247306000906,
+      "sourceVertical": -22.89290334390551
+    },
+    {
+      "id": "vrx_city_hotel_a_004",
+      "assetId": "vrx_city_hotel_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        301.5447998046875,
+        35.28749465942383,
+        61.72527313232422
+      ],
+      "rotation": [
+        0.0,
+        -0.3096688985824585,
+        0.0,
+        0.9508444666862488
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "upright",
+      "role": "middle",
+      "gi": "probe",
+      "sourceProgress": 0.24166665971279144,
+      "sourceLateral": 71.21384124133172,
+      "sourceVertical": -27.657048290261656
+    },
+    {
+      "id": "vrx_city_exchange_a_008",
+      "assetId": "vrx_city_exchange_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        189.5985565185547,
+        34.57982635498047,
+        10.09520435333252
+      ],
+      "rotation": [
+        0.0,
+        -0.3606637716293335,
+        0.0,
+        0.9326959252357483
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "upright",
+      "role": "middle",
+      "gi": "probe",
+      "sourceProgress": 0.2574999928474426,
+      "sourceLateral": -46.60783110839934,
+      "sourceVertical": -21.097109766597956
+    },
+    {
+      "id": "vrx_city_exchange_a_009",
+      "assetId": "vrx_city_exchange_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        240.3155517578125,
+        31.573165893554688,
+        94.20800018310547
+      ],
+      "rotation": [
+        0.0,
+        -0.3807530105113983,
+        0.0,
+        0.9246768355369568
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "upright",
+      "role": "middle",
+      "gi": "probe",
+      "sourceProgress": 0.27166667580604553,
+      "sourceLateral": 49.00238508356652,
+      "sourceVertical": -29.519973296959755
+    },
+    {
+      "id": "vrx_city_works_a_005",
+      "assetId": "vrx_city_works_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        141.77622985839844,
+        44.443809509277344,
+        24.90873146057129
+      ],
+      "rotation": [
+        0.0,
+        -0.38069039583206177,
+        0.0,
+        0.9247025847434998
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "upright",
+      "role": "middle",
+      "gi": "probe",
+      "sourceProgress": 0.28333333134651184,
+      "sourceLateral": -68.8841546373053,
+      "sourceVertical": -18.365300244027054
+    },
+    {
+      "id": "vrx_city_services_a_004",
+      "assetId": "vrx_city_services_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        213.5498046875,
+        53.103973388671875,
+        140.05734252929688
+      ],
+      "rotation": [
+        0.0,
+        -0.41397684812545776,
+        0.0,
+        0.9102874398231506
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "upright",
+      "role": "middle",
+      "gi": "probe",
+      "sourceProgress": 0.2983333468437195,
+      "sourceLateral": 61.12506518347456,
+      "sourceVertical": -17.49614702786573
+    },
+    {
+      "id": "vrx_city_hotel_a_005",
+      "assetId": "vrx_city_hotel_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        87.2933120727539,
+        32.49964904785156,
+        4.136050701141357
+      ],
+      "rotation": [
+        0.0,
+        -0.4806694984436035,
+        0.0,
+        0.8769018650054932
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "upright",
+      "role": "middle",
+      "gi": "probe",
+      "sourceProgress": 0.3125,
+      "sourceLateral": -122.89234020195158,
+      "sourceVertical": -23.287845837871792
+    },
+    {
+      "id": "vrx_city_hotel_a_006",
+      "assetId": "vrx_city_hotel_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        24.653766632080078,
+        8.13674545288086,
+        -73.11320495605469
+      ],
+      "rotation": [
+        0.0,
+        0.7204818725585938,
+        0.0,
+        0.693473756313324
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "upright",
+      "role": "far",
+      "gi": "probe",
+      "sourceProgress": 0.009999999776482582,
+      "sourceLateral": -156.921595775673,
+      "sourceVertical": -27.669379903477115
+    },
+    {
+      "id": "vrx_city_services_a_005",
+      "assetId": "vrx_city_services_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        88.68744659423828,
+        32.64990997314453,
+        -451.15814208984375
+      ],
+      "rotation": [
+        0.0,
+        0.7002630829811096,
+        0.0,
+        0.7138848900794983
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "upright",
+      "role": "far",
+      "gi": "probe",
+      "sourceProgress": 0.04583333432674408,
+      "sourceLateral": 217.94618267101316,
+      "sourceVertical": -14.10377165695771
+    },
+    {
+      "id": "vrx_city_works_a_006",
+      "assetId": "vrx_city_works_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        79.10265350341797,
+        -1.3299846649169922,
+        -43.118045806884766
+      ],
+      "rotation": [
+        0.0,
+        0.5631915926933289,
+        0.0,
+        0.826326310634613
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "upright",
+      "role": "far",
+      "gi": "probe",
+      "sourceProgress": 0.0808333307504654,
+      "sourceLateral": -192.2040370736097,
+      "sourceVertical": -20.02091869398292
+    },
+    {
+      "id": "vrx_city_exchange_a_010",
+      "assetId": "vrx_city_exchange_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        318.72271728515625,
+        20.528148651123047,
+        -338.2687072753906
+      ],
+      "rotation": [
+        0.0,
+        0.4465571939945221,
+        0.0,
+        0.8947551250457764
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "upright",
+      "role": "far",
+      "gi": "probe",
+      "sourceProgress": 0.11666666716337204,
+      "sourceLateral": 185.46915822568945,
+      "sourceVertical": -34.07729067454905
+    },
+    {
+      "id": "vrx_city_services_a_006",
+      "assetId": "vrx_city_services_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        487.5461120605469,
+        34.708736419677734,
+        -101.35416412353516
+      ],
+      "rotation": [
+        0.0,
+        0.055131521075963974,
+        0.0,
+        0.9984791278839111
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "upright",
+      "role": "far",
+      "gi": "probe",
+      "sourceProgress": 0.1875,
+      "sourceLateral": 221.5112199109852,
+      "sourceVertical": -33.60731218141982
+    },
+    {
+      "id": "vrx_city_exchange_a_011",
+      "assetId": "vrx_city_exchange_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        373.8166198730469,
+        39.867279052734375,
+        183.15911865234375
+      ],
+      "rotation": [
+        0.0,
+        -0.3641088008880615,
+        0.0,
+        0.9313564300537109
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "upright",
+      "role": "far",
+      "gi": "probe",
+      "sourceProgress": 0.2591666579246521,
+      "sourceLateral": 206.18935148632812,
+      "sourceVertical": -28.564488604016955
+    },
+    {
+      "id": "vrx_city_podium_a_001",
+      "assetId": "vrx_city_podium_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        81.15001678466797,
+        23.499759674072266,
+        -203.3212890625
+      ],
+      "rotation": [
+        0.0,
+        0.7040075659751892,
+        0.0,
+        0.7101924419403076
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "upright",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.04416666552424431,
+      "sourceLateral": -30,
+      "sourceVertical": -7
+    },
+    {
+      "id": "vrx_city_podium_a_002",
+      "assetId": "vrx_city_podium_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        260.3200988769531,
+        36.86316680908203,
+        -177.4476776123047
+      ],
+      "rotation": [
+        0.0,
+        0.32115477323532104,
+        0.0,
+        0.9470267295837402
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "upright",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.14000000059604645,
+      "sourceLateral": 30,
+      "sourceVertical": -7
+    },
+    {
+      "id": "vrx_city_podium_a_003",
+      "assetId": "vrx_city_podium_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        296.5857849121094,
+        45.21747589111328,
+        -45.15856170654297
+      ],
+      "rotation": [
+        0.0,
+        -0.026279136538505554,
+        0.0,
+        0.9996546506881714
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "upright",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.20416666567325592,
+      "sourceLateral": 30,
+      "sourceVertical": -7
+    },
+    {
+      "id": "vrx_city_podium_a_004",
+      "assetId": "vrx_city_podium_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        224.27816772460938,
+        43.208709716796875,
+        -6.690507888793945
+      ],
+      "rotation": [
+        0.0,
+        -0.27945560216903687,
+        0.0,
+        0.9601585865020752
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "upright",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.2358333319425583,
+      "sourceLateral": -30,
+      "sourceVertical": -7
+    },
+    {
+      "id": "vrx_city_podium_a_005",
+      "assetId": "vrx_city_podium_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        151.51730346679688,
+        51.088436126708984,
+        72.28803253173828
+      ],
+      "rotation": [
+        0.0,
+        -0.42559853196144104,
+        0.0,
+        0.9049121141433716
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "upright",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.30000001192092896,
+      "sourceLateral": -30,
+      "sourceVertical": -7
+    },
+    {
+      "id": "vrx_track_guidance_a_001",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        6.442744731903076,
+        32.552581787109375,
+        -217.38087463378906
+      ],
+      "rotation": [
+        -0.016425929963588715,
+        0.7152222394943237,
+        -0.007200140971690416,
+        0.6986669301986694
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.0033333334140479565,
+      "sourceLateral": -12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_002",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        5.851417064666748,
+        31.696868896484375,
+        -242.8596649169922
+      ],
+      "rotation": [
+        -0.016425929963588715,
+        0.7152222394943237,
+        -0.007200140971690416,
+        0.6986669301986694
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.0033333334140479565,
+      "sourceLateral": 12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_003",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        14.2494535446167,
+        32.55009460449219,
+        -217.6009063720703
+      ],
+      "rotation": [
+        -0.0129958251491189,
+        0.7186424136161804,
+        -0.005671439226716757,
+        0.6952352523803711
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.007499999832361937,
+      "sourceLateral": -12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_004",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        13.409022331237793,
+        31.87269401550293,
+        -243.0780487060547
+      ],
+      "rotation": [
+        -0.0129958251491189,
+        0.7186424136161804,
+        -0.005671439226716757,
+        0.6952352523803711
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.007499999832361937,
+      "sourceLateral": 12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_005",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        23.58429527282715,
+        32.52854537963867,
+        -217.95394897460938
+      ],
+      "rotation": [
+        -0.009165630675852299,
+        0.721896767616272,
+        -0.004041328560560942,
+        0.6919282674789429
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.012500000186264515,
+      "sourceLateral": -12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_006",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        22.505582809448242,
+        32.04848861694336,
+        -243.42660522460938
+      ],
+      "rotation": [
+        -0.009165630675852299,
+        0.721896767616272,
+        -0.004041328560560942,
+        0.6919282674789429
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.012500000186264515,
+      "sourceLateral": 12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_007",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        32.87538528442383,
+        32.4642219543457,
+        -218.37741088867188
+      ],
+      "rotation": [
+        -0.004977311007678509,
+        0.7240228056907654,
+        -0.0019104626262560487,
+        0.6897554397583008
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.017500000074505806,
+      "sourceLateral": -12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_008",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        31.64053726196289,
+        32.21323013305664,
+        -243.84625244140625
+      ],
+      "rotation": [
+        -0.004977311007678509,
+        0.7240228056907654,
+        -0.0019104626262560487,
+        0.6897554397583008
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.017500000074505806,
+      "sourceLateral": 12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_009",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        42.112648010253906,
+        32.35927963256836,
+        -218.8376007080078
+      ],
+      "rotation": [
+        -0.00043807426118291914,
+        0.7247555255889893,
+        0.0008134764502756298,
+        0.6890055537223816
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.02250000089406967,
+      "sourceLateral": -12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_010",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        40.823814392089844,
+        32.37166976928711,
+        -244.3050079345703
+      ],
+      "rotation": [
+        -0.00043807426118291914,
+        0.7247555255889893,
+        0.0008134764502756298,
+        0.6890055537223816
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.02250000089406967,
+      "sourceLateral": 12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_011",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        51.289405822753906,
+        32.21762466430664,
+        -219.2938690185547
+      ],
+      "rotation": [
+        0.004410421941429377,
+        0.723789632320404,
+        0.004222785122692585,
+        0.689993679523468
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.027499999850988388,
+      "sourceLateral": -12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_012",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        50.07105255126953,
+        32.52902603149414,
+        -244.76283264160156
+      ],
+      "rotation": [
+        0.004410421941429377,
+        0.723789632320404,
+        0.004222785122692585,
+        0.689993679523468
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.027499999850988388,
+      "sourceLateral": 12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_013",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        60.39310836791992,
+        32.0450325012207,
+        -219.69775390625
+      ],
+      "rotation": [
+        0.009488370269536972,
+        0.7207805514335632,
+        0.008413800038397312,
+        0.693047285079956
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.032499998807907104,
+      "sourceLateral": -12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_014",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        59.393741607666016,
+        32.69121170043945,
+        -245.16998291015625
+      ],
+      "rotation": [
+        0.009488370269536972,
+        0.7207805514335632,
+        0.008413800038397312,
+        0.693047285079956
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.032499998807907104,
+      "sourceLateral": 12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_015",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        69.41454315185547,
+        31.849519729614258,
+        -219.99366760253906
+      ],
+      "rotation": [
+        0.014666170813143253,
+        0.7153517007827759,
+        0.013477026484906673,
+        0.6984807252883911
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.03750000149011612,
+      "sourceLateral": -12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_016",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        68.8071517944336,
+        32.86466979980469,
+        -245.46620178222656
+      ],
+      "rotation": [
+        0.014666170813143253,
+        0.7153517007827759,
+        0.013477026484906673,
+        0.6984807252883911
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.03750000149011612,
+      "sourceLateral": 12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_017",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        76.86150360107422,
+        31.677621841430664,
+        -220.11277770996094
+      ],
+      "rotation": [
+        0.018896786496043205,
+        0.7086997628211975,
+        0.018388863652944565,
+        0.7050173282623291
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.0416666679084301,
+      "sourceLateral": -12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_018",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        76.72924041748047,
+        33.02180862426758,
+        -245.5769805908203
+      ],
+      "rotation": [
+        0.018896786496043205,
+        0.7086997628211975,
+        0.018388863652944565,
+        0.7050173282623291
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.0416666679084301,
+      "sourceLateral": 12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_019",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        85.70172119140625,
+        31.47390365600586,
+        -220.0443878173828
+      ],
+      "rotation": [
+        0.02361021749675274,
+        0.6978529095649719,
+        0.025089260190725327,
+        0.7154120802879333
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.046666666865348816,
+      "sourceLateral": -12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_020",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        86.33268737792969,
+        33.229610443115234,
+        -245.47605895996094
+      ],
+      "rotation": [
+        0.02361021749675274,
+        0.6978529095649719,
+        0.025089260190725327,
+        0.7154120802879333
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.046666666865348816,
+      "sourceLateral": 12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_021",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        94.4243392944336,
+        31.291685104370117,
+        -219.6792755126953
+      ],
+      "rotation": [
+        0.027554316446185112,
+        0.6836288571357727,
+        0.0325254462659359,
+        0.7285838723182678
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.05166666582226753,
+      "sourceLateral": -12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_022",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        96.0356216430664,
+        33.46094512939453,
+        -245.0356903076172
+      ],
+      "rotation": [
+        0.027554316446185112,
+        0.6836288571357727,
+        0.0325254462659359,
+        0.7285838723182678
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.05166666582226753,
+      "sourceLateral": 12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_023",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        103.0161361694336,
+        31.1550350189209,
+        -218.94813537597656
+      ],
+      "rotation": [
+        0.03027072735130787,
+        0.6659390926361084,
+        0.040373604744672775,
+        0.7442975044250488
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.05666666850447655,
+      "sourceLateral": -12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_024",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        105.81578826904297,
+        33.71566390991211,
+        -244.16429138183594
+      ],
+      "rotation": [
+        0.03027072735130787,
+        0.6659390926361084,
+        0.040373604744672775,
+        0.7442975044250488
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.05666666850447655,
+      "sourceLateral": 12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_025",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        111.46467590332031,
+        31.090036392211914,
+        -217.78749084472656
+      ],
+      "rotation": [
+        0.03133171424269676,
+        0.6449759602546692,
+        0.0481344573199749,
+        0.7620415687561035
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.061666667461395264,
+      "sourceLateral": -12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_026",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        115.63081359863281,
+        33.99135971069336,
+        -242.77699279785156
+      ],
+      "rotation": [
+        0.03133171424269676,
+        0.6449759602546692,
+        0.0481344573199749,
+        0.7620415687561035
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.061666667461395264,
+      "sourceLateral": 12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_027",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        119.75856018066406,
+        31.121183395385742,
+        -216.14537048339844
+      ],
+      "rotation": [
+        0.030459702014923096,
+        0.6212761402130127,
+        0.05518687888979912,
+        0.7810522317886353
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.06666667014360428,
+      "sourceLateral": -12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_028",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        125.41804504394531,
+        34.28459548950195,
+        -240.80735778808594
+      ],
+      "rotation": [
+        0.030459702014923096,
+        0.6212761402130127,
+        0.05518687888979912,
+        0.7810522317886353
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.06666667014360428,
+      "sourceLateral": 12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_029",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        127.8826675415039,
+        31.3498592376709,
+        -213.9776611328125
+      ],
+      "rotation": [
+        0.025677679106593132,
+        0.5957819223403931,
+        0.058287981897592545,
+        0.8006166815757751
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.0716666653752327,
+      "sourceLateral": -12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_030",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        135.1066436767578,
+        34.51005554199219,
+        -238.22796630859375
+      ],
+      "rotation": [
+        0.025677679106593132,
+        0.5957819223403931,
+        0.058287981897592545,
+        0.8006166815757751
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.0716666653752327,
+      "sourceLateral": 12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_031",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        134.63082885742188,
+        32.085636138916016,
+        -211.7032470703125
+      ],
+      "rotation": [
+        0.011216985993087292,
+        0.5786845684051514,
+        0.04418690875172615,
+        0.8142763376235962
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.07583333551883698,
+      "sourceLateral": -12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_032",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        142.95257568359375,
+        34.25168228149414,
+        -235.70962524414062
+      ],
+      "rotation": [
+        0.011216985993087292,
+        0.5786845684051514,
+        0.04418690875172615,
+        0.8142763376235962
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.07583333551883698,
+      "sourceLateral": 12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_033",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        142.81695556640625,
+        32.503257751464844,
+        -208.6535186767578
+      ],
+      "rotation": [
+        0.006847328040748835,
+        0.5632557272911072,
+        0.04207456856966019,
+        0.825182318687439
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.0808333307504654,
+      "sourceLateral": -12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_034",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        152.04656982421875,
+        34.47063446044922,
+        -232.34303283691406
+      ],
+      "rotation": [
+        0.006847328040748835,
+        0.5632557272911072,
+        0.04207456856966019,
+        0.825182318687439
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.0808333307504654,
+      "sourceLateral": 12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_035",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        150.90774536132812,
+        32.862186431884766,
+        -205.3015594482422
+      ],
+      "rotation": [
+        0.004575651604682207,
+        0.5482555627822876,
+        0.04261587932705879,
+        0.8352118134498596
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.08583333343267441,
+      "sourceLateral": -12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_036",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        160.98532104492188,
+        34.80538558959961,
+        -228.64500427246094
+      ],
+      "rotation": [
+        0.004575651604682207,
+        0.5482555627822876,
+        0.04261587932705879,
+        0.8352118134498596
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.08583333343267441,
+      "sourceLateral": 12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_037",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        158.88165283203125,
+        33.231727600097656,
+        -201.65972900390625
+      ],
+      "rotation": [
+        0.002707928651943803,
+        0.5333726406097412,
+        0.043584611266851425,
+        0.8447524309158325
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.09083333611488342,
+      "sourceLateral": -12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_038",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        169.77597045898438,
+        35.18312072753906,
+        -224.63265991210938
+      ],
+      "rotation": [
+        0.002707928651943803,
+        0.5333726406097412,
+        0.043584611266851425,
+        0.8447524309158325
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.09083333611488342,
+      "sourceLateral": 12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_039",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        166.72097778320312,
+        33.61234664916992,
+        -197.73883056640625
+      ],
+      "rotation": [
+        0.0011444712290540338,
+        0.5183091759681702,
+        0.044965289533138275,
+        0.8540096879005432
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.09583333134651184,
+      "sourceLateral": -12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_040",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        178.4169921875,
+        35.60103988647461,
+        -220.31088256835938
+      ],
+      "rotation": [
+        0.0011444712290540338,
+        0.5183091759681702,
+        0.044965289533138275,
+        0.8540096879005432
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.09583333134651184,
+      "sourceLateral": 12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_041",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        174.406982421875,
+        34.00419235229492,
+        -193.54493713378906
+      ],
+      "rotation": [
+        -0.0001903694064822048,
+        0.5027812719345093,
+        0.046761076897382736,
+        0.8631479740142822
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.10083333402872086,
+      "sourceLateral": -12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_042",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        186.90322875976562,
+        36.05775833129883,
+        -215.67808532714844
+      ],
+      "rotation": [
+        -0.0001903694064822048,
+        0.5027812719345093,
+        0.046761076897382736,
+        0.8631479740142822
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.10083333402872086,
+      "sourceLateral": 12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_043",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        181.9187469482422,
+        34.406227111816406,
+        -189.08041381835938
+      ],
+      "rotation": [
+        -0.00134089810308069,
+        0.48649901151657104,
+        0.04902251064777374,
+        0.8723036646842957
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.10583333671092987,
+      "sourceLateral": -12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_044",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        195.22544860839844,
+        36.55384826660156,
+        -210.72689819335938
+      ],
+      "rotation": [
+        -0.00134089810308069,
+        0.48649901151657104,
+        0.04902251064777374,
+        0.8723036646842957
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.10583333671092987,
+      "sourceLateral": 12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_045",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        188.027587890625,
+        34.748870849609375,
+        -185.1530303955078
+      ],
+      "rotation": [
+        -0.0022012698464095592,
+        0.4721287488937378,
+        0.05128539726138115,
+        0.8800337910652161
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.10999999940395355,
+      "sourceLateral": -12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_046",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        202.0252685546875,
+        36.997642517089844,
+        -206.34873962402344
+      ],
+      "rotation": [
+        -0.0022012698464095592,
+        0.4721287488937378,
+        0.05128539726138115,
+        0.8800337910652161
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.10999999940395355,
+      "sourceLateral": 12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_047",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        195.15223693847656,
+        35.16743850708008,
+        -180.1893768310547
+      ],
+      "rotation": [
+        -0.0031409389339387417,
+        0.45361536741256714,
+        0.054543692618608475,
+        0.8895213603973389
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.11500000208616257,
+      "sourceLateral": -12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_048",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        210.0063934326172,
+        37.56917953491211,
+        -200.7766571044922
+      ],
+      "rotation": [
+        -0.0031409389339387417,
+        0.45361536741256714,
+        0.054543692618608475,
+        0.8895213603973389
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.11500000208616257,
+      "sourceLateral": 12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_049",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        202.01919555664062,
+        35.59344482421875,
+        -174.947998046875
+      ],
+      "rotation": [
+        -0.004042061977088451,
+        0.4333255887031555,
+        0.05845366790890694,
+        0.899330735206604
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.11999999731779099,
+      "sourceLateral": -12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_050",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        217.76861572265625,
+        38.185142517089844,
+        -194.83489990234375
+      ],
+      "rotation": [
+        -0.004042061977088451,
+        0.4333255887031555,
+        0.05845366790890694,
+        0.899330735206604
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.11999999731779099,
+      "sourceLateral": 12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_051",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        208.58644104003906,
+        36.0241813659668,
+        -169.423828125
+      ],
+      "rotation": [
+        -0.004954405128955841,
+        0.41076111793518066,
+        0.06315736472606659,
+        0.9095394015312195
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.125,
+      "sourceLateral": -12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_052",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        225.27806091308594,
+        38.850040435791016,
+        -188.49356079101562
+      ],
+      "rotation": [
+        -0.004954405128955841,
+        0.41076111793518066,
+        0.06315736472606659,
+        0.9095394015312195
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.125,
+      "sourceLateral": 12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_053",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        214.80239868164062,
+        36.45705795288086,
+        -163.61212158203125
+      ],
+      "rotation": [
+        -0.005962655413895845,
+        0.3853098154067993,
+        0.06879933178424835,
+        0.9201996922492981
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.12999999523162842,
+      "sourceLateral": -12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_054",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        232.48934936523438,
+        39.56865310668945,
+        -181.7156982421875
+      ],
+      "rotation": [
+        -0.005962655413895845,
+        0.3853098154067993,
+        0.06879933178424835,
+        0.9201996922492981
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.12999999523162842,
+      "sourceLateral": 12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_055",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        220.60391235351562,
+        36.88958740234375,
+        -157.51007080078125
+      ],
+      "rotation": [
+        -0.0071982149966061115,
+        0.35621702671051025,
+        0.07552052289247513,
+        0.9313185811042786
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.13500000536441803,
+      "sourceLateral": -12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_056",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        239.34161376953125,
+        40.34583282470703,
+        -174.45712280273438
+      ],
+      "rotation": [
+        -0.0071982149966061115,
+        0.35621702671051025,
+        0.07552052289247513,
+        0.9313185811042786
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.13500000536441803,
+      "sourceLateral": 12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_057",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        225.91390991210938,
+        37.31839370727539,
+        -151.1202850341797
+      ],
+      "rotation": [
+        -0.00884044636040926,
+        0.32256847620010376,
+        0.08347970247268677,
+        0.9428162574768066
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.14000000059604645,
+      "sourceLateral": -12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_058",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        245.75192260742188,
+        41.18696975708008,
+        -166.66819763183594
+      ],
+      "rotation": [
+        -0.00884044636040926,
+        0.32256847620010376,
+        0.08347970247268677,
+        0.9428162574768066
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.14000000059604645,
+      "sourceLateral": 12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_059",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        229.89138793945312,
+        37.70823669433594,
+        -145.58140563964844
+      ],
+      "rotation": [
+        -0.011137807741761208,
+        0.2902631163597107,
+        0.08971814066171646,
+        0.9526667594909668
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.14416666328907013,
+      "sourceLateral": -12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_060",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        250.68399047851562,
+        41.90240478515625,
+        -159.73509216308594
+      ],
+      "rotation": [
+        -0.011137807741761208,
+        0.2902631163597107,
+        0.08971814066171646,
+        0.9526667594909668
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.14416666328907013,
+      "sourceLateral": 12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_061",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        234.0518035888672,
+        38.63807678222656,
+        -138.5841522216797
+      ],
+      "rotation": [
+        -0.01819603517651558,
+        0.2506761848926544,
+        0.08012820780277252,
+        0.9645775556564331
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.14916667342185974,
+      "sourceLateral": -12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_062",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        256.0195617675781,
+        42.34723663330078,
+        -150.99012756347656
+      ],
+      "rotation": [
+        -0.01819603517651558,
+        0.2506761848926544,
+        0.08012820780277252,
+        0.9645775556564331
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.14916667342185974,
+      "sourceLateral": 12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_063",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        237.7689666748047,
+        39.54688262939453,
+        -131.1436309814453
+      ],
+      "rotation": [
+        -0.02323462814092636,
+        0.21741271018981934,
+        0.07148102670907974,
+        0.9731816053390503
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.15416666865348816,
+      "sourceLateral": -12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_064",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        260.5976867675781,
+        42.83702087402344,
+        -142.01902770996094
+      ],
+      "rotation": [
+        -0.02323462814092636,
+        0.21741271018981934,
+        0.07148102670907974,
+        0.9731816053390503
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.15416666865348816,
+      "sourceLateral": 12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_065",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        241.0635528564453,
+        40.40436935424805,
+        -123.37980651855469
+      ],
+      "rotation": [
+        -0.026882292702794075,
+        0.18834929168224335,
+        0.06503573805093765,
+        0.9795776009559631
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.15916666388511658,
+      "sourceLateral": -12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_066",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        264.5386047363281,
+        43.39522933959961,
+        -132.8786163330078
+      ],
+      "rotation": [
+        -0.026882292702794075,
+        0.18834929168224335,
+        0.06503573805093765,
+        0.9795776009559631
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.15916666388511658,
+      "sourceLateral": 12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_067",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        243.95420837402344,
+        41.2262077331543,
+        -115.36994171142578
+      ],
+      "rotation": [
+        -0.02966584451496601,
+        0.16224801540374756,
+        0.060216765850782394,
+        0.9844640493392944
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.1641666740179062,
+      "sourceLateral": -12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_068",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        267.9267272949219,
+        44.00407791137695,
+        -123.60713958740234
+      ],
+      "rotation": [
+        -0.02966584451496601,
+        0.16224801540374756,
+        0.060216765850782394,
+        0.9844640493392944
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.1641666740179062,
+      "sourceLateral": 12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_069",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        246.45712280273438,
+        42.02122116088867,
+        -107.17154693603516
+      ],
+      "rotation": [
+        -0.031896933913230896,
+        0.13818886876106262,
+        0.05669540911912918,
+        0.988267183303833
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.1691666692495346,
+      "sourceLateral": -12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_070",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        270.8193054199219,
+        44.65396499633789,
+        -114.22872161865234
+      ],
+      "rotation": [
+        -0.031896933913230896,
+        0.13818886876106262,
+        0.05669540911912918,
+        0.988267183303833
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.1691666692495346,
+      "sourceLateral": 12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_071",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        248.58377075195312,
+        42.795352935791016,
+        -98.82923889160156
+      ],
+      "rotation": [
+        -0.0337800458073616,
+        0.11545708030462265,
+        0.054249804466962814,
+        0.9912545084953308
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.17416666448116302,
+      "sourceLateral": -12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_072",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        273.2538146972656,
+        45.338985443115234,
+        -104.759521484375
+      ],
+      "rotation": [
+        -0.0337800458073616,
+        0.11545708030462265,
+        0.054249804466962814,
+        0.9912545084953308
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.17416666448116302,
+      "sourceLateral": 12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_073",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        250.07284545898438,
+        43.427799224853516,
+        -91.7945327758789
+      ],
+      "rotation": [
+        -0.03518981114029884,
+        0.097102090716362,
+        0.0529094859957695,
+        0.993243932723999
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.1783333271741867,
+      "sourceLateral": -12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_074",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        274.9491882324219,
+        45.93368911743164,
+        -96.80823516845703
+      ],
+      "rotation": [
+        -0.03518981114029884,
+        0.097102090716362,
+        0.0529094859957695,
+        0.993243932723999
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.1783333271741867,
+      "sourceLateral": 12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_075",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        251.52127075195312,
+        44.17238998413086,
+        -83.28013610839844
+      ],
+      "rotation": [
+        -0.03678138554096222,
+        0.0753292441368103,
+        0.05211569741368294,
+        0.9951163530349731
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.18333333730697632,
+      "sourceLateral": -12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_076",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        276.5933532714844,
+        46.67600631713867,
+        -87.200927734375
+      ],
+      "rotation": [
+        -0.03678138554096222,
+        0.0753292441368103,
+        0.05211569741368294,
+        0.9951163530349731
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.18333333730697632,
+      "sourceLateral": 12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_077",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        252.5958709716797,
+        44.902862548828125,
+        -74.7143325805664
+      ],
+      "rotation": [
+        -0.03835611790418625,
+        0.05336384102702141,
+        0.05216033756732941,
+        0.996474027633667
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.18833333253860474,
+      "sourceLateral": -12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_078",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        277.8118591308594,
+        47.44927215576172,
+        -77.52832794189453
+      ],
+      "rotation": [
+        -0.03835611790418625,
+        0.05336384102702141,
+        0.05216033756732941,
+        0.996474027633667
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.18833333253860474,
+      "sourceLateral": 12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_079",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        253.2860565185547,
+        45.61913299560547,
+        -66.12572479248047
+      ],
+      "rotation": [
+        -0.040006425231695175,
+        0.030696097761392593,
+        0.05305763706564903,
+        0.9973174929618835
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.19333332777023315,
+      "sourceLateral": -12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_080",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        278.59442138671875,
+        48.25518035888672,
+        -67.79528045654297
+      ],
+      "rotation": [
+        -0.040006425231695175,
+        0.030696097761392593,
+        0.05305763706564903,
+        0.9973174929618835
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.19333332777023315,
+      "sourceLateral": 12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_081",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        253.57456970214844,
+        46.31888961791992,
+        -57.54585266113281
+      ],
+      "rotation": [
+        -0.04183398187160492,
+        0.006765353959053755,
+        0.05490356683731079,
+        0.9975919723510742
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.19833333790302277,
+      "sourceLateral": -12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_082",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        278.91851806640625,
+        49.09779739379883,
+        -58.00719451904297
+      ],
+      "rotation": [
+        -0.04183398187160492,
+        0.006765353959053755,
+        0.05490356683731079,
+        0.9975919723510742
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.19833333790302277,
+      "sourceLateral": 12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_083",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        253.43661499023438,
+        46.998600006103516,
+        -49.0105094909668
+      ],
+      "rotation": [
+        -0.04396911710500717,
+        -0.019096916541457176,
+        0.057837605476379395,
+        0.9971744418144226
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.20333333313465118,
+      "sourceLateral": -12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_084",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        278.7474060058594,
+        49.98280715942383,
+        -48.16901779174805
+      ],
+      "rotation": [
+        -0.04396911710500717,
+        -0.019096916541457176,
+        0.057837605476379395,
+        0.9971744418144226
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.20333333313465118,
+      "sourceLateral": 12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_085",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        252.83909606933594,
+        47.65165328979492,
+        -40.56464385986328
+      ],
+      "rotation": [
+        -0.04659417271614075,
+        -0.04772784188389778,
+        0.062101513147354126,
+        0.9958385825157166
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.2083333283662796,
+      "sourceLateral": -12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_086",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        278.0262451171875,
+        50.919063568115234,
+        -38.28822326660156
+      ],
+      "rotation": [
+        -0.04659417271614075,
+        -0.04772784188389778,
+        0.062101513147354126,
+        0.9958385825157166
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.2083333283662796,
+      "sourceLateral": 12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_087",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        251.96002197265625,
+        48.1690673828125,
+        -33.637699127197266
+      ],
+      "rotation": [
+        -0.04934753105044365,
+        -0.07448171079158783,
+        0.06688401103019714,
+        0.9937524199485779
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.21250000596046448,
+      "sourceLateral": -12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_088",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        276.9489440917969,
+        51.74629211425781,
+        -30.031192779541016
+      ],
+      "rotation": [
+        -0.04934753105044365,
+        -0.07448171079158783,
+        0.06688401103019714,
+        0.9937524199485779
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.21250000596046448,
+      "sourceLateral": 12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_089",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        250.42837524414062,
+        48.57588195800781,
+        -25.506023406982422
+      ],
+      "rotation": [
+        -0.054436229169368744,
+        -0.1109369695186615,
+        0.08118096739053726,
+        0.9890092611312866
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.2175000011920929,
+      "sourceLateral": -12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_090",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        274.964599609375,
+        52.97859191894531,
+        -20.135799407958984
+      ],
+      "rotation": [
+        -0.054436229169368744,
+        -0.1109369695186615,
+        0.08118096739053726,
+        0.9890092611312866
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.2175000011920929,
+      "sourceLateral": 12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_091",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        248.3243865966797,
+        48.829288482666016,
+        -17.917152404785156
+      ],
+      "rotation": [
+        -0.06567496061325073,
+        -0.16325680911540985,
+        0.101044662296772,
+        0.9791955947875977
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.2224999964237213,
+      "sourceLateral": -12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_092",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        271.94439697265625,
+        54.42216873168945,
+        -10.102716445922852
+      ],
+      "rotation": [
+        -0.06567496061325073,
+        -0.16325680911540985,
+        0.101044662296772,
+        0.9791955947875977
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.2224999964237213,
+      "sourceLateral": 12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_093",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        245.18873596191406,
+        50.21211624145508,
+        -10.686342239379883
+      ],
+      "rotation": [
+        -0.06900852918624878,
+        -0.21347889304161072,
+        0.0785362496972084,
+        0.9713375568389893
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.22750000655651093,
+      "sourceLateral": -12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_094",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        268.0499572753906,
+        54.85398483276367,
+        -0.3873847424983978
+      ],
+      "rotation": [
+        -0.06900852918624878,
+        -0.21347889304161072,
+        0.0785362496972084,
+        0.9713375568389893
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.22750000655651093,
+      "sourceLateral": 12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_095",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        241.3333740234375,
+        51.55892562866211,
+        -3.5322046279907227
+      ],
+      "rotation": [
+        -0.06903719902038574,
+        -0.2533195912837982,
+        0.05974813923239708,
+        0.9630644917488098
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.23250000178813934,
+      "sourceLateral": -12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_096",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        263.37860107421875,
+        55.38544845581055,
+        8.69954776763916
+      ],
+      "rotation": [
+        -0.06903719902038574,
+        -0.2533195912837982,
+        0.05974813923239708,
+        0.9630644917488098
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.23250000178813934,
+      "sourceLateral": 12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_097",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        236.89178466796875,
+        52.84638595581055,
+        3.514277458190918
+      ],
+      "rotation": [
+        -0.06719858199357986,
+        -0.2849135100841522,
+        0.04463876783847809,
+        0.9551523327827454
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.23749999701976776,
+      "sourceLateral": -12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_098",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        258.1501770019531,
+        55.99729537963867,
+        17.240219116210938
+      ],
+      "rotation": [
+        -0.06719858199357986,
+        -0.2849135100841522,
+        0.04463876783847809,
+        0.9551523327827454
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.23749999701976776,
+      "sourceLateral": 12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_099",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        231.9747314453125,
+        54.07143783569336,
+        10.43986701965332
+      ],
+      "rotation": [
+        -0.06429878622293472,
+        -0.310078501701355,
+        0.03254983574151993,
+        0.9479754567146301
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.24250000715255737,
+      "sourceLateral": -12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_100",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        252.51712036132812,
+        56.66193771362305,
+        25.32441520690918
+      ],
+      "rotation": [
+        -0.06429878622293472,
+        -0.310078501701355,
+        0.03254983574151993,
+        0.9479754567146301
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.24250000715255737,
+      "sourceLateral": 12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_101",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        227.58016967773438,
+        55.04593276977539,
+        16.118183135986328
+      ],
+      "rotation": [
+        -0.061377305537462234,
+        -0.32714882493019104,
+        0.024286186322569847,
+        0.9426646828651428
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.24666666984558105,
+      "sourceLateral": -12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_102",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        247.59173583984375,
+        57.23756790161133,
+        31.77013397216797
+      ],
+      "rotation": [
+        -0.061377305537462234,
+        -0.32714882493019104,
+        0.024286186322569847,
+        0.9426646828651428
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.24666666984558105,
+      "sourceLateral": 12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_103",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        222.0148162841797,
+        56.161258697509766,
+        22.828218460083008
+      ],
+      "rotation": [
+        -0.057441357523202896,
+        -0.3438462018966675,
+        0.01604960672557354,
+        0.9371300339698792
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.2516666650772095,
+      "sourceLateral": -12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_104",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        241.47193908691406,
+        57.93562698364258,
+        39.21485900878906
+      ],
+      "rotation": [
+        -0.057441357523202896,
+        -0.3438462018966675,
+        0.01604960672557354,
+        0.9371300339698792
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.2516666650772095,
+      "sourceLateral": 12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_105",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        216.18771362304688,
+        57.21808624267578,
+        29.439943313598633
+      ],
+      "rotation": [
+        -0.05310441181063652,
+        -0.35710659623146057,
+        0.009229613468050957,
+        0.9325071573257446
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.2566666603088379,
+      "sourceLateral": -12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_106",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        235.17959594726562,
+        58.62419128417969,
+        46.398170471191406
+      ],
+      "rotation": [
+        -0.05310441181063652,
+        -0.35710659623146057,
+        0.009229613468050957,
+        0.9325071573257446
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.2566666603088379,
+      "sourceLateral": 12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_107",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        210.14874267578125,
+        58.216434478759766,
+        35.972900390625
+      ],
+      "rotation": [
+        -0.04833277314901352,
+        -0.3674277663230896,
+        0.0034375227987766266,
+        0.928788959980011
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.2616666555404663,
+      "sourceLateral": -12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_108",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        228.76296997070312,
+        59.28496170043945,
+        53.36882781982422
+      ],
+      "rotation": [
+        -0.04833277314901352,
+        -0.3674277663230896,
+        0.0034375227987766266,
+        0.928788959980011
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.2616666555404663,
+      "sourceLateral": 12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_109",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        203.93927001953125,
+        59.15398406982422,
+        42.4512825012207
+      ],
+      "rotation": [
+        -0.04302432760596275,
+        -0.37509679794311523,
+        -0.001624993165023625,
+        0.9259852766990662
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.2666666805744171,
+      "sourceLateral": -12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_110",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        222.2635498046875,
+        59.900299072265625,
+        60.168888092041016
+      ],
+      "rotation": [
+        -0.04302432760596275,
+        -0.37509679794311523,
+        -0.001624993165023625,
+        0.9259852766990662
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.2666666805744171,
+      "sourceLateral": 12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_111",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        197.59437561035156,
+        60.02753448486328,
+        48.90459442138672
+      ],
+      "rotation": [
+        -0.036981649696826935,
+        -0.38020437955856323,
+        -0.006256703287363052,
+        0.9241416454315186
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.27166667580604553,
+      "sourceLateral": -12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_112",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        215.7200469970703,
+        60.449737548828125,
+        66.83589935302734
+      ],
+      "rotation": [
+        -0.036981649696826935,
+        -0.38020437955856323,
+        -0.006256703287363052,
+        0.9241416454315186
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.27166667580604553,
+      "sourceLateral": 12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_113",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        192.22723388671875,
+        60.702964782714844,
+        54.28859329223633
+      ],
+      "rotation": [
+        -0.031165052205324173,
+        -0.3824136555194855,
+        -0.010012035258114338,
+        0.9234112501144409
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.2758333384990692,
+      "sourceLateral": -12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_114",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        210.26385498046875,
+        60.839271545410156,
+        72.31388092041016
+      ],
+      "rotation": [
+        -0.031165052205324173,
+        -0.3824136555194855,
+        -0.010012035258114338,
+        0.9234112501144409
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.2758333384990692,
+      "sourceLateral": 12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_115",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        185.71656799316406,
+        61.44529724121094,
+        60.798606872558594
+      ],
+      "rotation": [
+        -0.022826990112662315,
+        -0.38224586844444275,
+        -0.014744158834218979,
+        0.9236609935760498
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.28083333373069763,
+      "sourceLateral": -12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_116",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        203.75376892089844,
+        61.19574737548828,
+        78.8221206665039
+      ],
+      "rotation": [
+        -0.022826990112662315,
+        -0.38224586844444275,
+        -0.014744158834218979,
+        0.9236609935760498
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.28083333373069763,
+      "sourceLateral": 12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_117",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        179.15777587890625,
+        62.108184814453125,
+        67.42704010009766
+      ],
+      "rotation": [
+        -0.012233415618538857,
+        -0.37813955545425415,
+        -0.0203534122556448,
+        0.9254440069198608
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.28583332896232605,
+      "sourceLateral": -12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_118",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        197.34417724609375,
+        61.38347625732422,
+        85.28704071044922
+      ],
+      "rotation": [
+        -0.012233415618538857,
+        -0.37813955545425415,
+        -0.0203534122556448,
+        0.9254440069198608
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.28583332896232605,
+      "sourceLateral": 12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_119",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        166.77804565429688,
+        60.05556106567383,
+        80.47075653076172
+      ],
+      "rotation": [
+        -0.02684292569756508,
+        -0.3937526345252991,
+        0.07342459261417389,
+        0.9158859848976135
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.2958333194255829,
+      "sourceLateral": -12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_120",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        184.09600830078125,
+        64.02427673339844,
+        98.76248931884766
+      ],
+      "rotation": [
+        -0.02684292569756508,
+        -0.3937526345252991,
+        0.07342459261417389,
+        0.9158859848976135
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.2958333194255829,
+      "sourceLateral": 12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_121",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        160.58094787597656,
+        60.29613494873047,
+        85.80681610107422
+      ],
+      "rotation": [
+        -0.011920931749045849,
+        -0.4310515820980072,
+        0.06203329190611839,
+        0.9001135230064392
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.3008333444595337,
+      "sourceLateral": -12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_122",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        176.4086151123047,
+        63.4058837890625,
+        105.5568618774414
+      ],
+      "rotation": [
+        -0.011920931749045849,
+        -0.4310515820980072,
+        0.06203329190611839,
+        0.9001135230064392
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.3008333444595337,
+      "sourceLateral": 12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_123",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        153.8304901123047,
+        60.340938568115234,
+        90.8575439453125
+      ],
+      "rotation": [
+        0.003641746938228607,
+        -0.45877084136009216,
+        0.05116597190499306,
+        0.8870728015899658
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.3058333396911621,
+      "sourceLateral": -12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_124",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        168.4629669189453,
+        62.57051467895508,
+        111.62216186523438
+      ],
+      "rotation": [
+        0.003641746938228607,
+        -0.45877084136009216,
+        0.05116597190499306,
+        0.8870728015899658
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.3058333396911621,
+      "sourceLateral": 12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_125",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        147.8531494140625,
+        60.240745544433594,
+        94.91220092773438
+      ],
+      "rotation": [
+        0.016984334215521812,
+        -0.4746066927909851,
+        0.0422028973698616,
+        0.8790216445922852
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.3100000023841858,
+      "sourceLateral": -12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_126",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        161.77447509765625,
+        61.72160339355469,
+        116.22541809082031
+      ],
+      "rotation": [
+        0.016984334215521812,
+        -0.4746066927909851,
+        0.0422028973698616,
+        0.8790216445922852
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.3100000023841858,
+      "sourceLateral": 12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_127",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        140.33236694335938,
+        59.98305130004883,
+        99.70059967041016
+      ],
+      "rotation": [
+        0.033709656447172165,
+        -0.4846428334712982,
+        0.030662009492516518,
+        0.8735243678092957
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.3149999976158142,
+      "sourceLateral": -12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_128",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        153.80560302734375,
+        60.51584243774414,
+        121.34403228759766
+      ],
+      "rotation": [
+        0.033709656447172165,
+        -0.4846428334712982,
+        0.030662009492516518,
+        0.8735243678092957
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.3149999976158142,
+      "sourceLateral": 12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_129",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        -27.954050064086914,
+        31.753320693969727,
+        -217.47618103027344
+      ],
+      "rotation": [
+        -0.01422051340341568,
+        0.6988872289657593,
+        0.0009844613960012794,
+        0.7150898575782776
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.9850000143051147,
+      "sourceLateral": -12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_130",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        -27.364713668823242,
+        31.282358169555664,
+        -242.9650115966797
+      ],
+      "rotation": [
+        -0.01422051340341568,
+        0.6988872289657593,
+        0.0009844613960012794,
+        0.7150898575782776
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.9850000143051147,
+      "sourceLateral": 12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_131",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        -18.640838623046875,
+        32.07682800292969,
+        -217.30026245117188
+      ],
+      "rotation": [
+        -0.017236782237887383,
+        0.7015036344528198,
+        -0.003153738332912326,
+        0.7124504446983337
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.9900000095367432,
+      "sourceLateral": -12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_132",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        -18.238819122314453,
+        31.345565795898438,
+        -242.78659057617188
+      ],
+      "rotation": [
+        -0.017236782237887383,
+        0.7015036344528198,
+        -0.003153738332912326,
+        0.7124504446983337
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.9900000095367432,
+      "sourceLateral": 12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_133",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        -9.270021438598633,
+        32.42033386230469,
+        -217.2157440185547
+      ],
+      "rotation": [
+        -0.021119797602295876,
+        0.7056052088737488,
+        -0.008462921716272831,
+        0.7082398533821106
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.9950000047683716,
+      "sourceLateral": -12.75,
+      "sourceVertical": 0.04
+    },
+    {
+      "id": "vrx_track_guidance_a_134",
+      "assetId": "vrx_track_guidance_a",
+      "zoneId": "vrx_zone_exemplar_a",
+      "position": [
+        -9.165485382080078,
+        31.35463523864746,
+        -242.69325256347656
+      ],
+      "rotation": [
+        -0.021119797602295876,
+        0.7056052088737488,
+        -0.008462921716272831,
+        0.7082398533821106
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "frameMode": "banked",
+      "role": "near",
+      "gi": "probe",
+      "sourceProgress": 0.9950000047683716,
+      "sourceLateral": 12.75,
+      "sourceVertical": 0.04
+    }
+  ],
+  "scope": "Only .98482 through wrap to .70. No full-circuit expansion."
+}

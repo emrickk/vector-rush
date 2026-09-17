@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Vector Rush · Interface references</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#080e12;color:#eef0e8;font:15px system-ui,sans-serif}
+header,main,footer{width:min(1500px,94vw);margin:auto}header{padding:28px 0 22px}
+.eyebrow{color:#ccfa42;text-transform:uppercase;letter-spacing:.16em;font-size:11px;font-weight:700}
+h1{font-size:clamp(24px,3vw,38px);font-weight:600;margin:8px 0}p{color:#aeb9be;line-height:1.5;margin:8px 0}
+nav{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 12px}button,.link{font:inherit;border:1px solid #334049;background:#111b22;color:#eaf0ec;padding:10px 16px;cursor:pointer;text-decoration:none;border-radius:4px}
+button[aria-pressed=true]{border-color:#ccfa42;background:#ccfa42;color:#122006}
+button:hover,.link:hover{border-color:#8ca5af}button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #46dcf5;outline-offset:3px}
+.toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:0 0 14px}.modes{display:flex;gap:6px;flex-wrap:wrap}.modes button{font-size:13px;padding:8px 14px}
+.frame{aspect-ratio:16/9;position:relative;border:1px solid #314047;overflow:hidden;background:#03090c}
+.frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
+#original{clip-path:inset(0 100% 0 0)}.tag{position:absolute;top:14px;background:#0c141ddd;border:1px solid #435462;padding:7px 10px;font-size:11px;letter-spacing:.09em;pointer-events:none}
+#currentTag{left:14px;display:none}#conceptTag{right:14px}.divider{position:absolute;top:0;bottom:0;width:2px;background:white;left:50%;display:none;pointer-events:none;box-shadow:0 0 5px black}
+.slider{display:flex;gap:16px;align-items:center;margin:18px 0 0}.slider[hidden]{display:none}.slider input{width:100%;accent-color:#ccfa42}.slider label{white-space:nowrap;font-size:13px;color:#b3bec4}
+.caption{display:flex;gap:20px;justify-content:space-between;align-items:center;margin:20px 0}.caption p{max-width:850px}.link{white-space:nowrap;font-size:13px}
+footer{border-top:1px solid #23323a;padding:20px 0 36px;font-size:12px;color:#82959d}
+@media(max-width:600px){.caption{align-items:flex-start;flex-direction:column}header{padding-top:18px}.tag{font-size:9px;padding:4px}nav button{flex:1 1 40%;font-size:12px}}
+</style>
+<header><div class="eyebrow">Vector Rush · Art direction</div><h1>Interface polish references</h1>
+<p>Generated in Scenario from the current game screenshots. Four concepts for visual review.</p>
+<nav id="tabs" aria-label="Choose screen"></nav></header>
+<main><div class="toolbar"><div class="modes" aria-label="Comparison mode">
+<button data-mode="concept" aria-pressed="true">Generated concept</button><button data-mode="current" aria-pressed="false">Current game</button><button data-mode="compare" aria-pressed="false">Compare</button>
+</div><span class="eyebrow" id="screenName"></span></div>
+<div class="frame"><img id="generated" alt=""><img id="original" alt=""><div class="divider" id="divider"></div><span class="tag" id="currentTag">CURRENT GAME</span><span class="tag" id="conceptTag">GENERATED CONCEPT</span></div>
+<div class="slider" id="sliderRow" hidden><label for="split">Current / concept</label><input id="split" type="range" min="0" max="100" value="50" aria-label="Amount of current screenshot visible"></div>
+<div class="caption"><p id="description"></p><a class="link" id="fullsize" target="_blank" rel="noopener">Open full-size concept ↗</a></div></main>
+<footer>Concept images only; no game changes. Generated backgrounds can differ slightly from the original. Existing actions and race data remain authoritative in the native screenshots. Static references do not demonstrate animation, performance or game feel.</footer>
+<script>
+const screens=[{"title": "Normal racing HUD", "source": "sources/01-racing-hud.png", "output": "01-racing-hud-concept.png", "description": "A stronger position readout and a sculpted speed/boost instrument, with a clear central driving view."}, {"title": "Boosted racing HUD", "source": "sources/02-boost-hud.png", "output": "02-boost-hud-concept.png", "description": "The same racing instruments under boost: concentrated cyan light, active energy and stronger exhaust emphasis."}, {"title": "Title and main menu", "source": "sources/03-title-menu.png", "output": "03-title-menu-concept.png", "description": "A more distinctive wordmark, confident menu hierarchy and a luminous, weightier Start Race selection."}, {"title": "Pause menu", "source": "sources/04-pause-menu.png", "output": "04-pause-menu-concept.png", "description": "The title menu's typography and selection treatment carried into the paused race."}];let selected=0,mode='concept';
+const $=id=>document.getElementById(id);
+screens.forEach((screen,i)=>{const b=document.createElement('button');b.textContent=screen.title;b.setAttribute('aria-pressed',i===0?'true':'false');b.onclick=()=>{selected=i;render()};$('tabs').appendChild(b)});
+function render(){
+const s=screens[selected];$('generated').src=s.output;$('generated').alt=s.title+' — generated concept';$('original').src=s.source;$('original').alt=s.title+' — current native screenshot';
+$('description').textContent=s.description;$('screenName').textContent=String(selected+1).padStart(2,'0')+' / 04';$('fullsize').href=s.output;
+[...$('tabs').children].forEach((b,i)=>b.setAttribute('aria-pressed',i===selected?'true':'false'));
+document.querySelectorAll('[data-mode]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.mode===mode?'true':'false'));
+const split=mode==='current'?100:mode==='concept'?0:Number($('split').value);$('original').style.clipPath=`inset(0 ${100-split}% 0 0)`;
+$('divider').style.left=split+'%';$('divider').style.display=mode==='compare'?'block':'none';$('sliderRow').hidden=mode!=='compare';
+$('currentTag').style.display=mode==='concept'?'none':'block';$('conceptTag').style.display=mode==='current'?'none':'block';
+}
+document.querySelectorAll('[data-mode]').forEach(b=>b.onclick=()=>{mode=b.dataset.mode;render()});$('split').oninput=render;render();
+</script></html>

@@ -1,0 +1,8 @@
+{
+  "contractVersion": 1,
+  "revision": "vrx-d01",
+  "courseHash": "598718f08e5c308a41b8e9f1b562ff8cd4e2bc9f661a91f4e34164cf7c820059",
+  "packageType": "experience-supplement",
+  "checksumsSha256": "4aa0ed0b11227d491f2b08b91edbdce8695ee1748f6ac7e40d73343d1dfea9db",
+  "requiresEnvironmentRevision": "vrx-b01"
+}

@@ -1,0 +1,1 @@
+Owner-provided neon street image: lighting/material reference only. Use localized color spill, textured reflections, dark architecture and atmospheric separation. Do not recreate the street, props, pedestrians or cars. The original racing video remains the route/camera comparison. Motion blur and camera switching are reserved for the next stage.

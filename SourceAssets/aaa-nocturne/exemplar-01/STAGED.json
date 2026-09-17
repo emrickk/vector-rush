@@ -1,0 +1,9 @@
+{
+  "revision": "exemplar-01",
+  "status": "TECHNICAL_PAYLOAD_COMPLETE_BLOCKED_VISUAL_REVIEW",
+  "courseHash": "32eb94bda0b257b30c3b111b2a67beb1626d1dca77577905ae021eee7bc36f07",
+  "checksumsSha256": "86d07dc969f3130ac81066d97a287ffe762228f9202b224ed4f605071e5a44e5",
+  "layoutComplete": false,
+  "nativeImportVerified": false,
+  "rendered": false
+}

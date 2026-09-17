@@ -1,0 +1,16 @@
+{
+  "group_node_name": "SHIP_LIVERY",
+  "node_group_name": "SHIP_LIVERY",
+  "input": "BaseColor",
+  "output": "Color",
+  "materials_using_group": [
+    "Ivory",
+    "Graphite"
+  ],
+  "projection": "Source/world XY with upper-normal and height masks",
+  "packed_image": "ship-livery-mask.png",
+  "livery_geometry_added": false,
+  "EngineCore": "compact near-white disk meshes only; native map before Engine substring",
+  "Engine": "thin dim cyan annuli only",
+  "source_form_unchanged": true
+}

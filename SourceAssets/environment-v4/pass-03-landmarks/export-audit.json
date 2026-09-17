@@ -1,0 +1,36 @@
+{
+  "Nocturne_SplitSignal_Mast": {
+    "status": "NOT_PUBLISHED_GEOMETRY_VALID_WITH_TANGENT_LIMITATION",
+    "mesh_count": 1,
+    "triangles": 13580,
+    "material_slots": 7,
+    "roundtrip_bounds_error_m": 2.408383124929969e-06,
+    "nonmanifold_edges": 0,
+    "degenerate_triangles": 0,
+    "uv0_finite": true,
+    "inside_reserved_footprint": true,
+    "fbx_sha256": "17750a4cbaa92bb25191d051697545674d8dcf8c17f43d5cb3133f87f29e6568",
+    "tangents_finite": true,
+    "tangents_unit": false,
+    "zero_tangent_loops": [
+      964
+    ],
+    "limitation": "Unused UV isolation experiment did not fix mast zero tangent. Runtime uses pass-02."
+  },
+  "Nocturne_ThermalExchange_Works": {
+    "status": "NOT_PUBLISHED_GEOMETRY_VALID",
+    "mesh_count": 1,
+    "triangles": 27736,
+    "material_slots": 8,
+    "roundtrip_bounds_error_m": 3.1633621802029666e-06,
+    "nonmanifold_edges": 0,
+    "degenerate_triangles": 0,
+    "uv0_finite": true,
+    "inside_reserved_footprint": true,
+    "fbx_sha256": "aab8f5a70e19528d0f5c41a72b0c7574da42140690666648dcfae80472e64549",
+    "tangents_finite": true,
+    "tangents_unit": true,
+    "zero_tangent_loops": [],
+    "limitation": "Unused UV isolation experiment did not fix mast zero tangent. Runtime uses pass-02."
+  }
+}

@@ -1,0 +1,11 @@
+{
+    "status": "NATIVE_EXPERIENCE_BUILD_COMPLETE_NOT_QUALITY_ACCEPTED",
+    "unityVersion": "6000.6.0f1",
+    "buildGuid": "c332adf9551842c698d1afaa4c56d5cb",
+    "scene": "Assets/Scenes/NocturneExperience.unity",
+    "appPath": "/Users/anping.wang/Documents/Stuff/AI Space/Projects/Games/Vector Rush Family/Vector Rush Workspaces 2/2026-09-14-playable-race/Builds/Vector Rush Experience A01 integration-03.app",
+    "courseHash": "598718f08e5c308a41b8e9f1b562ff8cd4e2bc9f661a91f4e34164cf7c820059",
+    "artRevision": "vrx-a01",
+    "renderers": 341,
+    "lights": 1
+}

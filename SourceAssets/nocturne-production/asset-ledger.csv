@@ -1,0 +1,16 @@
+family,decision,current_replacement,status
+Original craft,retain,Existing HeroShip and mapped ship surfaces,Native candidate uses retained craft identity
+Original spline and collision,retain,Persistent equivalent 960-segment road shoulders and barriers,Coordinate regression tests pass
+Runtime deck structure,replace,Saved continuous fascia ledges piers bearings and diagonal supports,Native visibility unreviewed
+Near city boxes,replace,Deterministic facades with recessed glazing floor bands mullions canopy and roof termination,Native finish unreviewed; parametric construction remains
+Cool gallery,replace,Saved wall ceiling rib vent portal and fixture batches,Native finish unreviewed; curvature joins need visual inspection
+Warm gallery,replace,Saved amber gallery and portal batches,Native finish unreviewed; curvature joins need visual inspection
+Thermal landmark,rework,Three vessels with support frames platforms railings and longitudinal service pipes,Native finish unreviewed; clearance not comprehensively proven
+Signal mast,rework,Paired signals with braced supporting frame and occupied room,Native finish unreviewed
+Station frontage,replace,Long civic facade plus supported concourse canopy,Native finish unreviewed
+Distant city,demote,Grouped quiet blocks and sparse occupied bands,Native silhouette unreviewed
+Road material,rework,Fine directional aggregate and scalar satin response,No accepted road finish or reflection verdict
+Legacy SSR,demote,Excluded from production renderer; version-guarded legacy prototype retained,Production uses direct lighting
+Blender source package,unfinished,Current authoring recipe is Unity C# with persistent mesh exports,No Blender source delivered
+Texture material families,unfinished,Most current materials are scalar URP Lit values,Full authored maps remain required for finish target
+Baked lighting reflections and LODs,unfinished,Current candidate uses saved realtime lights and no authored LODs,Not completed

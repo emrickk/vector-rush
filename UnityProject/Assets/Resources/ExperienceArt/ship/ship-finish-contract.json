@@ -1,0 +1,66 @@
+{
+  "revision": "vrx-c01",
+  "geometry": "Retain Art/HeroShip verbatim; no hull/collider/UV/anchor changes",
+  "sourceGeometrySha256": "f2cfabf5a3ff1f5785debb1c2b81a238f39073f784fc8ec134b4e71c1c397386",
+  "materials": [
+    {
+      "materialKey": "Ivory",
+      "baseSource": "UnityProject/Assets/Resources/Art/ShipSurfaces/Ivory_BaseColor.png",
+      "sourceSha256": "c4fcaeb7b6a8b00baca2c3c17a1f09e213ce46d752bc26c4456626930fd36056",
+      "changedAccentPixels": 3641
+    },
+    {
+      "materialKey": "Graphite",
+      "baseSource": "UnityProject/Assets/Resources/Art/ShipSurfaces/Graphite_BaseColor.png",
+      "sourceSha256": "d14f767965a7d023fc1fa06c0c83b79d7e06dd831405139aeaff51885a1687c7",
+      "changedAccentPixels": 4230
+    },
+    {
+      "materialKey": "Metal",
+      "baseSource": "UnityProject/Assets/Resources/Art/ShipSurfaces/Metal_BaseColor.png",
+      "sourceSha256": "b206919faad0f67f4f07579d9b66f381a55dd8eac44b971682cc7cce29b32da7",
+      "changedAccentPixels": 0
+    },
+    {
+      "materialKey": "Ceramic",
+      "baseSource": "UnityProject/Assets/Resources/Art/ShipSurfaces/Ceramic_BaseColor.png",
+      "sourceSha256": "24e519f7ab40414851755d3c3c7daea25b97e2f5a043fe7e0a7240cb9152b6cc",
+      "changedAccentPixels": 0
+    }
+  ],
+  "energyChannels": {
+    "R": "existing livery accent mask",
+    "G": "0.12 full-hull floor plus low-amplitude existing surface-edge mask",
+    "B": "reserved zero",
+    "A": "one"
+  },
+  "boost": {
+    "opaqueHull": true,
+    "baseAlbedoRetention": 0.78,
+    "accentEmissionLinear": [
+      0.035,
+      0.62,
+      1
+    ],
+    "accentEmissionIntensity": 3.4,
+    "surfaceEdgeEmissionIntensity": 0.45,
+    "fresnelOutlineWidthPixelsAt1080p": [
+      1.0,
+      2.2
+    ],
+    "fresnelEmissionIntensity": 1.8,
+    "onsetMs": 80,
+    "peakMs": 160,
+    "settleMs": 240,
+    "releaseMs": 180,
+    "rule": "Material-only on IsBoosting. No shield, transparency, geometry morph or gameplay."
+  },
+  "normalizedBindings": {
+    "_VRThrust": "engine brightness only; preserve 0.25 idle minimum at core",
+    "_VRBoost": "blend energy floor, accent emission and local cyan Fresnel outline",
+    "_VRBoostIgnition": "<=80 ms cyan-white accent emphasis, never whole-screen white",
+    "_VRBoostRelease": "180 ms hull energy decay; already emitted particles follow their lifetime"
+  },
+  "shaderRequestsFor03": "Use local per-renderer material properties; exclude canopy glass/nozzle interiors from whole-hull fill. Keep saturated cyan accents and a solid dark mass. Proposed emission: colour*(3.4*R + .45*G + 1.8*edgeFresnel)*boost, with soft bounded silhouette width.",
+  "limitations": "R mask follows existing livery. G includes a constant floor and UV texture-edge detail, not geometric curvature. Outline comes from shader, not the bitmap."
+}

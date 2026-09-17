@@ -1,0 +1,45 @@
+# Staged art importer
+
+Bounded step defined before implementation: implement a batch-only importer in `AAAExemplarImport.cs` and its metadata. Validate the finalized exemplar package, current TrackPath identity, files, transforms, material contracts and imported bounds before publishing optional Opening/Gallery resources. Preserve the original world and leave all replacement lists empty. Parent owns import/build, shared plan/history and git. No Unity/Blender process or visual inspection is authorized in this worker lane.
+
+Status: source implementation complete; **BLOCKED_VISUAL_REVIEW**. No artwork is adopted by this step. Unity import, native build and runtime validation have not run.
+
+## Parent invocation
+
+After the artist releases the heavy-work slot, copy the new importer and metadata into the parent's isolated Unity validation project alongside the existing AAA and Production editor/runtime contracts. The package must contain finalized `STAGED.json` and `checksums.json`. Run from that project's directory, with an absolute `-projectPath`. Example paths below are placeholders for the parent's isolated copy and a new evidence directory:
+
+```sh
+"/Applications/Unity/Hub/Editor/6000.6.0f1/Unity.app/Contents/MacOS/Unity" \
+  -batchmode -nographics -quit \
+  -projectPath "/absolute/path/to/isolated/UnityProject" \
+  -executeMethod VectorRush.Editor.AAAExemplarImport.ImportStaging \
+  -aaaArtPackage "/Users/anping.wang/Documents/Stuff/AI Space/Vector Rush/SourceAssets/aaa-nocturne/exemplar-01" \
+  -aaaEvidence "/private/tmp/vr-aaa-import-01-evidence" \
+  -logFile "/private/tmp/vr-aaa-import-01-unity.log"
+```
+
+`-aaaEvidence` must not exist, including as an empty directory, and must be outside both the Unity project and source package. Use canonical paths: symlinks are rejected (on macOS use `/private/tmp`, not `/tmp`). A missing/invalid flag or unsafe evidence location fails before a report directory is available; consult the Unity log. All subsequent failures produce `import-report.json` with the exception, source identities when available, completed bounds checks and rollback results. Success is `TECHNICAL_STAGING_COMPLETE` with `visualStatus: BLOCKED_VISUAL_REVIEW` and `nativeStatus: NOT_RUN`.
+
+Destination derives from the manifest revision: `Assets/Resources/AAA/Imported/exemplar-01`, or `exemplar-01-<revision>` when the artist supplies a corresponding finalized revision. Existing destination directories, files, metadata or AssetDatabase GUIDs are refused. Existing `Assets/Resources/AAA/OpeningExemplar.asset` or `GalleryExemplar.asset` are also refused. For repeated attempts, use a fresh isolated project copy or an artist-authored revision; do not overwrite the retained diagnostic staging. Parent owns any cleanup outside this worker's files.
+
+After technical import, independently run `-executeMethod VectorRush.Editor.AAAExemplarValidation.ValidateStaging` in the same isolated project. The importer also invokes this validator after publication and rolls resources back if it fails. Build the preserved original `Solstice` scene through the parent's existing build path; do not call `Prepare` or production scene generation. Optional native resource selection remains `-vrAAAExemplar opening` / `gallery`; baseline control is the same binary with the flag absent or `off`. Visual adoption remains blocked; these commands prepare a technical review candidate only.
+
+## Implemented safeguards and interpretation
+
+- Requires schema `aaa-nocturne-exemplar-1`, the finalized package marker, matching SHA-256 checksums for every listed file and coverage of all consumed payloads. Rejects duplicate JSON keys, path traversal, symlink paths, case-colliding source paths, unsafe IDs, missing files and nonfinite numbers. Rechecks package identity before resource publication.
+- Compares manifest, layout and STAGED course hashes to `ProductionSceneSetup.CourseHash` on a temporary current `TrackPath`. That existing helper only serializes `ReadCourse(track)` and hashes its UTF-8 bytes; no production preparation/build method runs. Every referenced frame is also compared against exact `TrackPath.Evaluate(progress)` before destination mutation.
+- Imports all ten actual FBXs into the new destination, with unit scale 1, file units and declared axis conversion. Imports authored normals/tangents, generates secondary lightmap UVs, disables imported cameras/lights/animation/colliders, and remaps exact named FBX material slots to persistent URP/Lit materials. The saved prefab component whitelist is checked through the existing AAA runtime validator.
+- Uses per-LOD `asset-stats.json` bounds, checks their source `(x,z,-y)` conversion and LOD0 agreement with the manifest, then measures actual imported vertices in prefab-root space. Any extrema discrepancy above 0.01 metre fails with expected/actual bounds in the report. No corrective scaling is applied. Extrema checks cannot establish every face's orientation; native facing and appearance remain open.
+- Base-color textures import as sRGB, normals as NormalMap with conversion disabled, and metallic/smoothness masks as linear data with alpha preserved. Mipmaps and repeat wrapping are enabled. Materials persist `_NORMALMAP`, `_METALLICSPECGLOSSMAP` and authored `_EMISSION` variants as applicable. Smoothness reads mask alpha. Textured base maps already contain the authored color, so their tint is white; scalar-only materials use declared linear color, metallic and `1 - roughness`. Metric UVs already include `/4` in the artist recipe: use declared `textureScale` directly, without dividing again by `metersPerTile`.
+- Each asset gets a prefab with real LOD0/LOD1 children. Screen heights 0.6 and 0.02 are explicitly reported technical staging defaults; the package supplies no authored switching distances. Imported meshes remain readable for diagnostics and textures use uncompressed staging imports; optimization is not claimed.
+- `viaduct` maps to Opening (2 placements, progress 0.079166666–0.100000001); `station` maps to Gallery (11 placements, progress 0.860000014–0.874166667). Actual spans derive from the layout. For each absolute world transform, offset is `inverse(route) * (worldPosition - frame.Position)` and local rotation is `inverse(route) * worldRotation`, where route comes from `AAABaselineIntegration.RouteRotation(frame, frameMode == "banked")`. Position and quaternion reconstruction are checked before saving. Positive uniform authored scale is retained. Source `offsetLateral`, `offsetVertical` and `flipAroundUp` are explanatory only and are not reapplied.
+- All replacement name arrays and volumes remain empty. No baseline object is removed or hidden. The physical diffuser geometry/materials are included in the FBXs, but `fixture-sockets.json` provides suggestions without native intensity/range/rotation. No Unity Light is guessed or created. A future nonempty manifest `lights` payload fails explicitly pending a schema-aware extension.
+- Prepared recipes are validated while staged inside the destination. Opening/Gallery active resource paths are published last with no overwrite; subsequent exceptions remove resources published by this run while retaining staged prefab/material evidence. Any rollback API failure is explicitly reported and must be resolved before building. These optional resources do not enable the default-off runtime hook by themselves.
+
+## Source-only checks and remaining limitations
+
+Standalone Roslyn compilation against installed Unity 6000.6.0f1 references passed with zero importer errors or warnings. This compiles the new importer alongside existing AAA and Production sources, referencing the existing runtime assembly. Existing ProductionSceneSetup obsolete-API warnings remain outside ownership. This is not a Unity Editor compilation/import pass. Compiler response file and log: `/private/tmp/aaa-import-source-check-20m_65pg/` (temporary local evidence).
+
+A read-only Python package check passed all 29 checksum entries, all five asset/ten LOD source-to-Unity bounds mappings, declared slot subsets, and both local layout spans. Observed source manifest SHA-256: `b534c6af6d883e0496bbc63e240a66ff73f6962c3f6aa49baf57fdf3bb92216a`; layout: `cd33cbb44dcb40e3aeb2552f9311161827ac7ecc2391ced8b4aa88e01fc33c85`. The importer checks live finalization rather than hardcoding these identities. Current course-hash equality is deliberately enforced inside Unity; it has not been executed by this worker.
+
+Remaining parent checks: actual FBX material remap/axis/scale import, persistent resource preflight, URP variants in the native build, additive overlap with retained original geometry, LOD transitions, camera/track clearance, appearance, continuous motion/audio, handling and isolated performance. The layout's `layoutComplete: false` remains reported; it describes a bounded exemplar, not completed circuit rollout. No native success, visual findings, original-art replacement, AAA acceptance or full rebuild completion is claimed. No Unity/Blender executable, agents, git operation, Bootstrap edit, shared pipeline edit or Prepare call was run by this worker.

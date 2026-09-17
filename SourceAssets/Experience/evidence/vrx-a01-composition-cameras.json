@@ -1,0 +1,53 @@
+[
+  {
+    "view": "entry",
+    "progress": 0.025,
+    "speedForCameraFormulaKph": 120,
+    "verticalFov": 68.78947368421052,
+    "unityCameraPosition": [
+      35.34792709350586,
+      38.022457122802734,
+      -231.23291015625
+    ],
+    "unityFocus": [
+      58.58404541015625,
+      34.441734313964844,
+      -232.41433715820312
+    ],
+    "claim": "Static Blender composition; settled normal-camera formula; no native motion or URP proof"
+  },
+  {
+    "view": "turn",
+    "progress": 0.15,
+    "speedForCameraFormulaKph": 245,
+    "verticalFov": 72.73684210526315,
+    "unityCameraPosition": [
+      239.6931610107422,
+      45.36585235595703,
+      -153.0916290283203
+    ],
+    "unityFocus": [
+      252.55905151367188,
+      43.78554916381836,
+      -130.10670471191406
+    ],
+    "claim": "Static Blender composition; settled normal-camera formula; no native motion or URP proof"
+  },
+  {
+    "view": "exit",
+    "progress": 0.28,
+    "speedForCameraFormulaKph": 180,
+    "verticalFov": 70.6842105263158,
+    "unityCameraPosition": [
+      203.73280334472656,
+      66.28407287597656,
+      60.864349365234375
+    ],
+    "unityFocus": [
+      186.17787170410156,
+      64.06034851074219,
+      78.39154052734375
+    ],
+    "claim": "Static Blender composition; settled normal-camera formula; no native motion or URP proof"
+  }
+]

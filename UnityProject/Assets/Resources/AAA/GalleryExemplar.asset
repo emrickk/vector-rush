@@ -1,0 +1,530 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43c3c4a23c294e578663097e994f449a, type: 3}
+  m_Name: GalleryExemplar
+  m_EditorClassIdentifier: VectorRush.Runtime::VectorRush.AAAExemplar
+  revision: exemplar-01-gallery02-lighting_a/station/BLOCKED_VISUAL_REVIEW
+  courseHash: 8c2161b930d43c505c8380ce30a719e6833a453d671353994f79b75e4c67a79e
+  sourceCourseSha256: 598718f08e5c308a41b8e9f1b562ff8cd4e2bc9f661a91f4e34164cf7c820059
+  startProgress: 0.86
+  endProgress: 0.902
+  fullSpanLayout: 1
+  atomicReplacement: 1
+  placements:
+  - semanticGroup: warm-entry-portal
+    prefab: {fileID: 3724846984621446199, guid: 9d9c8005dbe6849d29b5e617167672c4, type: 3}
+    progress: 0.86
+    followBank: 1
+    offset: {x: 0, y: 0, z: 0}
+    rotationDegrees: {x: 0.00000018045331, y: 0.0000022493493, z: -0.00000058617644}
+    scale: 1
+    replacementVolume:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0, y: 0, z: 0}
+    replaceRendererNames: []
+    replaceLightNames: []
+  - semanticGroup: warm-rib-01
+    prefab: {fileID: 7802127058809357734, guid: 66ec581351ac04141aa20d59505cbcd5, type: 3}
+    progress: 0.8666667
+    followBank: 1
+    offset: {x: 0, y: 0, z: 0}
+    rotationDegrees: {x: -0, y: 0, z: 0}
+    scale: 1
+    replacementVolume:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0, y: 0, z: 0}
+    replaceRendererNames: []
+    replaceLightNames: []
+  - semanticGroup: warm-rib-02
+    prefab: {fileID: 7802127058809357734, guid: 66ec581351ac04141aa20d59505cbcd5, type: 3}
+    progress: 0.87416667
+    followBank: 1
+    offset: {x: 0, y: 0, z: 0}
+    rotationDegrees: {x: -0, y: 0, z: 0}
+    scale: 1
+    replacementVolume:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0, y: 0, z: 0}
+    replaceRendererNames: []
+    replaceLightNames: []
+  - semanticGroup: warm-rib-03
+    prefab: {fileID: 7802127058809357734, guid: 66ec581351ac04141aa20d59505cbcd5, type: 3}
+    progress: 0.8808333
+    followBank: 1
+    offset: {x: 0, y: 0, z: 0}
+    rotationDegrees: {x: 0.0000002638939, y: 0.0000029842959, z: -0.0000008137842}
+    scale: 1
+    replacementVolume:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0, y: 0, z: 0}
+    replaceRendererNames: []
+    replaceLightNames: []
+  - semanticGroup: warm-rib-04
+    prefab: {fileID: 7802127058809357734, guid: 66ec581351ac04141aa20d59505cbcd5, type: 3}
+    progress: 0.8883333
+    followBank: 1
+    offset: {x: 0, y: 0, z: 0}
+    rotationDegrees: {x: -0.00000038384198, y: 0.0000021893493, z: -0.000001613723}
+    scale: 1
+    replacementVolume:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0, y: 0, z: 0}
+    replaceRendererNames: []
+    replaceLightNames: []
+  - semanticGroup: warm-rib-05
+    prefab: {fileID: 7802127058809357734, guid: 66ec581351ac04141aa20d59505cbcd5, type: 3}
+    progress: 0.895
+    followBank: 1
+    offset: {x: 0, y: 0, z: 0}
+    rotationDegrees: {x: -0, y: 0, z: 0}
+    scale: 1
+    replacementVolume:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0, y: 0, z: 0}
+    replaceRendererNames: []
+    replaceLightNames: []
+  - semanticGroup: warm-exit-portal
+    prefab: {fileID: 3724846984621446199, guid: 9d9c8005dbe6849d29b5e617167672c4, type: 3}
+    progress: 0.90166664
+    followBank: 1
+    offset: {x: 0, y: 0, z: 0}
+    rotationDegrees: {x: 0.0000005449743, y: 180, z: -0.0000008176798}
+    scale: 1
+    replacementVolume:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0, y: 0, z: 0}
+    replaceRendererNames: []
+    replaceLightNames: []
+  - semanticGroup: warm-wall-span-01
+    prefab: {fileID: 217167978535407548, guid: a03222d1b9d2944c0ae9d8c5628bf491, type: 3}
+    progress: 0.86
+    followBank: 1
+    offset: {x: 0, y: 0, z: 0}
+    rotationDegrees: {x: 0.00000018045331, y: 0.0000022493493, z: -0.00000058617644}
+    scale: 1
+    replacementVolume:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0, y: 0, z: 0}
+    replaceRendererNames: []
+    replaceLightNames: []
+  - semanticGroup: warm-ceiling-span-01
+    prefab: {fileID: 6641339713699199796, guid: 79aa30f5c9779489fb8966efb350bf62, type: 3}
+    progress: 0.86
+    followBank: 1
+    offset: {x: 0, y: 0, z: 0}
+    rotationDegrees: {x: 0.00000018045331, y: 0.0000022493493, z: -0.00000058617644}
+    scale: 1
+    replacementVolume:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0, y: 0, z: 0}
+    replaceRendererNames: []
+    replaceLightNames: []
+  - semanticGroup: warm-wall-span-02
+    prefab: {fileID: 8334523687955564609, guid: bf54e6719efcb41948dc4c442d012fb0, type: 3}
+    progress: 0.8666667
+    followBank: 1
+    offset: {x: 0, y: 0, z: 0}
+    rotationDegrees: {x: -0, y: 0, z: 0}
+    scale: 1
+    replacementVolume:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0, y: 0, z: 0}
+    replaceRendererNames: []
+    replaceLightNames: []
+  - semanticGroup: warm-ceiling-span-02
+    prefab: {fileID: 5424802731890195712, guid: 04c90edbbd42b48688ec104add6a57f8, type: 3}
+    progress: 0.8666667
+    followBank: 1
+    offset: {x: 0, y: 0, z: 0}
+    rotationDegrees: {x: -0, y: 0, z: 0}
+    scale: 1
+    replacementVolume:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0, y: 0, z: 0}
+    replaceRendererNames: []
+    replaceLightNames: []
+  - semanticGroup: warm-wall-span-03
+    prefab: {fileID: 217167978535407548, guid: a03222d1b9d2944c0ae9d8c5628bf491, type: 3}
+    progress: 0.87416667
+    followBank: 1
+    offset: {x: 0, y: 0, z: 0}
+    rotationDegrees: {x: -0, y: 0, z: 0}
+    scale: 1
+    replacementVolume:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0, y: 0, z: 0}
+    replaceRendererNames: []
+    replaceLightNames: []
+  - semanticGroup: warm-ceiling-span-03
+    prefab: {fileID: 6641339713699199796, guid: 79aa30f5c9779489fb8966efb350bf62, type: 3}
+    progress: 0.87416667
+    followBank: 1
+    offset: {x: 0, y: 0, z: 0}
+    rotationDegrees: {x: -0, y: 0, z: 0}
+    scale: 1
+    replacementVolume:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0, y: 0, z: 0}
+    replaceRendererNames: []
+    replaceLightNames: []
+  - semanticGroup: warm-wall-span-04
+    prefab: {fileID: 8334523687955564609, guid: bf54e6719efcb41948dc4c442d012fb0, type: 3}
+    progress: 0.8808333
+    followBank: 1
+    offset: {x: 0, y: 0, z: 0}
+    rotationDegrees: {x: 0.0000002638939, y: 0.0000029842959, z: -0.0000008137842}
+    scale: 1
+    replacementVolume:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0, y: 0, z: 0}
+    replaceRendererNames: []
+    replaceLightNames: []
+  - semanticGroup: warm-ceiling-span-04
+    prefab: {fileID: 5424802731890195712, guid: 04c90edbbd42b48688ec104add6a57f8, type: 3}
+    progress: 0.8808333
+    followBank: 1
+    offset: {x: 0, y: 0, z: 0}
+    rotationDegrees: {x: 0.0000002638939, y: 0.0000029842959, z: -0.0000008137842}
+    scale: 1
+    replacementVolume:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0, y: 0, z: 0}
+    replaceRendererNames: []
+    replaceLightNames: []
+  - semanticGroup: warm-wall-span-05
+    prefab: {fileID: 217167978535407548, guid: a03222d1b9d2944c0ae9d8c5628bf491, type: 3}
+    progress: 0.8883333
+    followBank: 1
+    offset: {x: 0, y: 0, z: 0}
+    rotationDegrees: {x: -0.00000038384198, y: 0.0000021893493, z: -0.000001613723}
+    scale: 1
+    replacementVolume:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0, y: 0, z: 0}
+    replaceRendererNames: []
+    replaceLightNames: []
+  - semanticGroup: warm-ceiling-span-05
+    prefab: {fileID: 6641339713699199796, guid: 79aa30f5c9779489fb8966efb350bf62, type: 3}
+    progress: 0.8883333
+    followBank: 1
+    offset: {x: 0, y: 0, z: 0}
+    rotationDegrees: {x: -0.00000038384198, y: 0.0000021893493, z: -0.000001613723}
+    scale: 1
+    replacementVolume:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0, y: 0, z: 0}
+    replaceRendererNames: []
+    replaceLightNames: []
+  - semanticGroup: warm-wall-span-06
+    prefab: {fileID: 217167978535407548, guid: a03222d1b9d2944c0ae9d8c5628bf491, type: 3}
+    progress: 0.895
+    followBank: 1
+    offset: {x: 0, y: 0, z: 0}
+    rotationDegrees: {x: -0, y: 0, z: 0}
+    scale: 1
+    replacementVolume:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0, y: 0, z: 0}
+    replaceRendererNames: []
+    replaceLightNames: []
+  - semanticGroup: warm-ceiling-span-06
+    prefab: {fileID: 6641339713699199796, guid: 79aa30f5c9779489fb8966efb350bf62, type: 3}
+    progress: 0.895
+    followBank: 1
+    offset: {x: 0, y: 0, z: 0}
+    rotationDegrees: {x: -0, y: 0, z: 0}
+    scale: 1
+    replacementVolume:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0, y: 0, z: 0}
+    replaceRendererNames: []
+    replaceLightNames: []
+  materials:
+  - sourceSlotName: NA_Slate
+    material: {fileID: 2100000, guid: 5c4f57b3a88d7493ba1ff33325751f5b, type: 2}
+  - sourceSlotName: NA_Ceramic
+    material: {fileID: 2100000, guid: 6577a5b3da38c4d3d84c075ad5a6d089, type: 2}
+  - sourceSlotName: NA_Graphite
+    material: {fileID: 2100000, guid: 69786bf21ffe744dcb3e38ce9495de40, type: 2}
+  - sourceSlotName: NA_Aluminium
+    material: {fileID: 2100000, guid: b44f9362a768842cca9a27dfadb11efa, type: 2}
+  - sourceSlotName: NA_Glass
+    material: {fileID: 2100000, guid: 4a9c93771f9cb4d8f9a7d1906e4c326a, type: 2}
+  - sourceSlotName: NA_Interior
+    material: {fileID: 2100000, guid: bbcfff40e572a43848b7b2cd64fe7d20, type: 2}
+  - sourceSlotName: NA_WarmDiffuser
+    material: {fileID: 2100000, guid: 02cedd1dbcad64aa28b3e65e396fbf48, type: 2}
+  - sourceSlotName: NA_CoolDiffuser
+    material: {fileID: 2100000, guid: 13412b11cc0004ae98f6d5ccb060191d, type: 2}
+  - sourceSlotName: NA_BronzePanel
+    material: {fileID: 2100000, guid: eee532cdaf1724647989bff2ffccb048, type: 2}
+  - sourceSlotName: NA_WarningMark
+    material: {fileID: 2100000, guid: 9b8602cc7b6ee4aeea07b6fb8b50c17e, type: 2}
+  rendererReplacements:
+  - name: Warm gallery primary portal structure
+    expectedCount: 1
+  - name: Warm gallery recessed ceramic cassettes
+    expectedCount: 1
+  - name: Warm gallery folded service returns
+    expectedCount: 1
+  - name: Warm gallery light and maintenance housings
+    expectedCount: 1
+  - name: Warm gallery integrated diffusers
+    expectedCount: 1
+  - name: Warm gallery maintenance markings
+    expectedCount: 1
+  lightReplacements:
+  - name: Warm gallery concealed surface wash
+    expectedCount: 12
+  - name: Warm gallery road pool
+    expectedCount: 6
+  lights:
+  - id: warm-entry-portal-ceiling-01
+    type: 0
+    worldPosition: {x: -241.98355, y: 42.650543, z: -185.0663}
+    worldDirection: {x: -0.056063265, y: -0.9815189, z: -0.18296874}
+    color: {r: 1, g: 0.67, b: 0.36, a: 1}
+    intensity: 500
+    range: 25
+    outerAngle: 76
+    innerAngle: 36
+    shadows: 2
+    housingSemanticGroup: warm-entry-portal
+    socket: Entry downward diffuser
+  - id: warm-exit-portal-ceiling-01
+    type: 0
+    worldPosition: {x: -181.37112, y: 41.752655, z: -223.448}
+    worldDirection: {x: -0.16024151, y: -0.978423, z: -0.13042668}
+    color: {r: 1, g: 0.67, b: 0.36, a: 1}
+    intensity: 500
+    range: 25
+    outerAngle: 76
+    innerAngle: 36
+    shadows: 2
+    housingSemanticGroup: warm-exit-portal
+    socket: Entry downward diffuser
+  - id: warm-wall-span-01-right-wall-01
+    type: 2
+    worldPosition: {x: -250.32935, y: 34.04927, z: -199.02019}
+    worldDirection: {x: 0, y: 0, z: 0}
+    color: {r: 1, g: 0.67, b: 0.36, a: 1}
+    intensity: 120
+    range: 8.5
+    outerAngle: 0
+    innerAngle: 0
+    shadows: 0
+    housingSemanticGroup: warm-wall-span-01
+    socket: R inward wall diffuser
+  - id: warm-wall-span-01-left-wall-02
+    type: 2
+    worldPosition: {x: -229.2901, y: 29.684126, z: -182.0508}
+    worldDirection: {x: 0, y: 0, z: 0}
+    color: {r: 1, g: 0.67, b: 0.36, a: 1}
+    intensity: 120
+    range: 8.5
+    outerAngle: 0
+    innerAngle: 0
+    shadows: 0
+    housingSemanticGroup: warm-wall-span-01
+    socket: L inward wall diffuser
+  - id: warm-ceiling-span-01-ceiling-01
+    type: 0
+    worldPosition: {x: -237.99364, y: 42.72875, z: -189.99301}
+    worldDirection: {x: -0.068599544, y: -0.9834103, z: -0.16792344}
+    color: {r: 1, g: 0.67, b: 0.36, a: 1}
+    intensity: 500
+    range: 25
+    outerAngle: 76
+    innerAngle: 36
+    shadows: 2
+    housingSemanticGroup: warm-ceiling-span-01
+    socket: Ceiling downward diffuser
+  - id: warm-wall-span-02-right-wall-01
+    type: 2
+    worldPosition: {x: -240.26378, y: 33.810272, z: -209.30719}
+    worldDirection: {x: 0, y: 0, z: 0}
+    color: {r: 1, g: 0.67, b: 0.36, a: 1}
+    intensity: 120
+    range: 8.5
+    outerAngle: 0
+    innerAngle: 0
+    shadows: 0
+    housingSemanticGroup: warm-wall-span-02
+    socket: R inward wall diffuser
+  - id: warm-wall-span-02-left-wall-02
+    type: 2
+    worldPosition: {x: -220.98486, y: 29.255074, z: -190.40643}
+    worldDirection: {x: 0, y: 0, z: 0}
+    color: {r: 1, g: 0.67, b: 0.36, a: 1}
+    intensity: 120
+    range: 8.5
+    outerAngle: 0
+    innerAngle: 0
+    shadows: 0
+    housingSemanticGroup: warm-wall-span-02
+    socket: L inward wall diffuser
+  - id: warm-ceiling-span-02-ceiling-01
+    type: 0
+    worldPosition: {x: -228.82713, y: 42.384903, z: -199.0745}
+    worldDirection: {x: -0.05284356, y: -0.98174566, z: -0.18271025}
+    color: {r: 1, g: 0.67, b: 0.36, a: 1}
+    intensity: 500
+    range: 25
+    outerAngle: 76
+    innerAngle: 36
+    shadows: 2
+    housingSemanticGroup: warm-ceiling-span-02
+    socket: Ceiling downward diffuser
+  - id: warm-wall-span-03-right-wall-01
+    type: 2
+    worldPosition: {x: -229.02753, y: 33.71712, z: -218.40466}
+    worldDirection: {x: 0, y: 0, z: 0}
+    color: {r: 1, g: 0.67, b: 0.36, a: 1}
+    intensity: 120
+    range: 8.5
+    outerAngle: 0
+    innerAngle: 0
+    shadows: 0
+    housingSemanticGroup: warm-wall-span-03
+    socket: R inward wall diffuser
+  - id: warm-wall-span-03-left-wall-02
+    type: 2
+    worldPosition: {x: -212.05215, y: 28.856745, z: -197.47913}
+    worldDirection: {x: 0, y: 0, z: 0}
+    color: {r: 1, g: 0.67, b: 0.36, a: 1}
+    intensity: 120
+    range: 8.5
+    outerAngle: 0
+    innerAngle: 0
+    shadows: 0
+    housingSemanticGroup: warm-wall-span-03
+    socket: L inward wall diffuser
+  - id: warm-ceiling-span-03-ceiling-01
+    type: 0
+    worldPosition: {x: -218.85817, y: 42.12298, z: -206.78922}
+    worldDirection: {x: -0.033511925, y: -0.97917086, z: -0.20025344}
+    color: {r: 1, g: 0.67, b: 0.36, a: 1}
+    intensity: 500
+    range: 25
+    outerAngle: 76
+    innerAngle: 36
+    shadows: 2
+    housingSemanticGroup: warm-ceiling-span-03
+    socket: Ceiling downward diffuser
+  - id: warm-wall-span-04-right-wall-01
+    type: 2
+    worldPosition: {x: -216.82303, y: 33.709892, z: -226.27179}
+    worldDirection: {x: 0, y: 0, z: 0}
+    color: {r: 1, g: 0.67, b: 0.36, a: 1}
+    intensity: 120
+    range: 8.5
+    outerAngle: 0
+    innerAngle: 0
+    shadows: 0
+    housingSemanticGroup: warm-wall-span-04
+    socket: R inward wall diffuser
+  - id: warm-wall-span-04-left-wall-02
+    type: 2
+    worldPosition: {x: -202.21501, y: 28.521654, z: -203.70296}
+    worldDirection: {x: 0, y: 0, z: 0}
+    color: {r: 1, g: 0.67, b: 0.36, a: 1}
+    intensity: 120
+    range: 8.5
+    outerAngle: 0
+    innerAngle: 0
+    shadows: 0
+    housingSemanticGroup: warm-wall-span-04
+    socket: L inward wall diffuser
+  - id: warm-ceiling-span-04-ceiling-01
+    type: 0
+    worldPosition: {x: -207.91602, y: 41.929893, z: -213.53893}
+    worldDirection: {x: -0.013226026, y: -0.9763284, z: -0.21588872}
+    color: {r: 1, g: 0.67, b: 0.36, a: 1}
+    intensity: 500
+    range: 25
+    outerAngle: 76
+    innerAngle: 36
+    shadows: 2
+    housingSemanticGroup: warm-ceiling-span-04
+    socket: Ceiling downward diffuser
+  - id: warm-wall-span-05-right-wall-01
+    type: 2
+    worldPosition: {x: -203.58615, y: 33.922306, z: -232.50604}
+    worldDirection: {x: 0, y: 0, z: 0}
+    color: {r: 1, g: 0.67, b: 0.36, a: 1}
+    intensity: 120
+    range: 8.5
+    outerAngle: 0
+    innerAngle: 0
+    shadows: 0
+    housingSemanticGroup: warm-wall-span-05
+    socket: R inward wall diffuser
+  - id: warm-wall-span-05-left-wall-02
+    type: 2
+    worldPosition: {x: -192.03305, y: 28.141153, z: -208.36543}
+    worldDirection: {x: 0, y: 0, z: 0}
+    color: {r: 1, g: 0.67, b: 0.36, a: 1}
+    intensity: 120
+    range: 8.5
+    outerAngle: 0
+    innerAngle: 0
+    shadows: 0
+    housingSemanticGroup: warm-wall-span-05
+    socket: L inward wall diffuser
+  - id: warm-ceiling-span-05-ceiling-01
+    type: 0
+    worldPosition: {x: -196.41373, y: 41.80096, z: -218.52477}
+    worldDirection: {x: 0.011604989, y: -0.9711641, z: -0.23812953}
+    color: {r: 1, g: 0.67, b: 0.36, a: 1}
+    intensity: 500
+    range: 25
+    outerAngle: 76
+    innerAngle: 36
+    shadows: 2
+    housingSemanticGroup: warm-ceiling-span-05
+    socket: Ceiling downward diffuser
+  - id: warm-wall-span-06-right-wall-01
+    type: 2
+    worldPosition: {x: -190.30688, y: 34.145794, z: -236.7781}
+    worldDirection: {x: 0, y: 0, z: 0}
+    color: {r: 1, g: 0.67, b: 0.36, a: 1}
+    intensity: 120
+    range: 8.5
+    outerAngle: 0
+    innerAngle: 0
+    shadows: 0
+    housingSemanticGroup: warm-wall-span-06
+    socket: R inward wall diffuser
+  - id: warm-wall-span-06-left-wall-02
+    type: 2
+    worldPosition: {x: -182.03424, y: 27.978748, z: -211.41681}
+    worldDirection: {x: 0, y: 0, z: 0}
+    color: {r: 1, g: 0.67, b: 0.36, a: 1}
+    intensity: 120
+    range: 8.5
+    outerAngle: 0
+    innerAngle: 0
+    shadows: 0
+    housingSemanticGroup: warm-wall-span-06
+    socket: L inward wall diffuser
+  - id: warm-ceiling-span-06-ceiling-01
+    type: 0
+    worldPosition: {x: -185.08461, y: 41.80023, z: -221.84056}
+    worldDirection: {x: 0.047071345, y: -0.9669737, z: -0.25049165}
+    color: {r: 1, g: 0.67, b: 0.36, a: 1}
+    intensity: 500
+    range: 25
+    outerAngle: 76
+    innerAngle: 36
+    shadows: 2
+    housingSemanticGroup: warm-ceiling-span-06
+    socket: Ceiling downward diffuser

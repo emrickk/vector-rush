@@ -1,0 +1,129 @@
+{
+  "schema": "vrx-art-tokens-1",
+  "revision": 1,
+  "referenceSize": [
+    1920,
+    1080
+  ],
+  "safeArea": {
+    "horizontal": 48,
+    "vertical": 36
+  },
+  "font": {
+    "display": "vrx_font_display_a",
+    "text": "vrx_font_text_a"
+  },
+  "pixels": {
+    "speed": 84,
+    "rank": 70,
+    "lapTime": 30,
+    "label": 20,
+    "menuRow": 28,
+    "menuTitle": 64
+  },
+  "tracking": {
+    "display": 1,
+    "event": 2,
+    "body": 0
+  },
+  "colorsSrgb": {
+    "background": "#091724",
+    "primary": "#DCEEF5",
+    "muted": "#8CAAB8",
+    "guidance": "#58D5FF",
+    "boost": "#58D5FF",
+    "impact": "#FFB057",
+    "sign": "#D94487"
+  },
+  "hud": {
+    "rank": {
+      "anchor": "top-left",
+      "offset": [
+        48,
+        36
+      ]
+    },
+    "raceTime": {
+      "anchor": "top-right",
+      "offset": [
+        48,
+        36
+      ]
+    },
+    "map": {
+      "anchor": "bottom-left",
+      "offset": [
+        48,
+        36
+      ]
+    },
+    "speedBoost": {
+      "anchor": "bottom-right",
+      "offset": [
+        48,
+        36
+      ],
+      "size": [
+        360,
+        210
+      ]
+    },
+    "clearCentre": {
+      "normalizedRect": [
+        0.26,
+        0.17,
+        0.48,
+        0.58
+      ]
+    }
+  },
+  "menu": {
+    "rows": [
+      "START RACE",
+      "SETTINGS",
+      "CONTROLS",
+      "QUIT APPLICATION"
+    ],
+    "rowHeight": 64,
+    "rowGap": 12,
+    "left": 80,
+    "top": 480,
+    "width": 560
+  },
+  "motion": {
+    "clock": "UI unscaled; freeze event progression while paused; reset on restart/return/recovery",
+    "boost": {
+      "enterMs": 80,
+      "peakMs": 160,
+      "settleMs": 240,
+      "exitMs": 180,
+      "scalePeak": 1.035,
+      "travelPx": 6
+    },
+    "rank": {
+      "enterMs": 110,
+      "holdMs": 450,
+      "exitMs": 170,
+      "scalePeak": 1.06,
+      "travelPx": 10,
+      "coalesceMs": 180
+    },
+    "collision": {
+      "flashMs": 35,
+      "edgeWarningMs": 300,
+      "travelPx": 0
+    },
+    "focus": {
+      "enterMs": 100,
+      "travelPx": 6,
+      "fadeMs": 100
+    },
+    "reduced": {
+      "travelPx": 0,
+      "scalePeak": 1,
+      "maxOpacityTransitionMs": 100
+    }
+  },
+  "behaviour": "Values and state availability come from RaceDirector/HoverVehicle/contacts. Tokens do not create gameplay.",
+  "audio": "Reuse current source synthesis. Timbre, envelopes and event coordination in INTEGRATION.md."
+}

@@ -1,0 +1,18 @@
+# Rival wall-contact diagnosis and bounded guard
+
+Three grounded rival stalls in `evidence/night-v3-motion-03.log` exactly match the earlier, pre-V3 `evidence/night-02-player.log`: NOVA at 8.57 seconds / progress 0.07248 / lateral 7.97 m; RENN at 16.34 / 0.07172 / 7.98 m; KIRA at 17.12 / 0.30516 / 7.97 m. Each reports zero speed and 4.50 stalled seconds with a recent impact. This is an existing behavior, not evidence that the V3 visual mesh introduced it.
+
+The physical collision box remains 5.2 × 1.2 × 7.2 m. The barrier's inner face is about 11.7 m from the centerline. At approximately 20 degrees of yaw the box projects about 3.67 m laterally; a center at 7.97 m then puts its outer corner near that barrier. Existing AI chooses 0 / ±5.8 m lanes and follows a speed-dependent forward target without an outer-edge drift guard. Low-speed yaw authority drops to 25 percent while throttle can remain high, allowing wall contact to persist until automatic recovery. This mechanism is consistent with the logs; the initiating contact and yaw were not recorded, so full causation is not proven.
+
+The correction applies only to non-player rivals in `HoverVehicle.DriveAI`. A 0.45-second lateral preview activates beyond a 6.2 m center corridor on the current 22 m track, releases below 5.6 m, temporarily clamps the steering target inside ±4.6 m, caps desired speed at 42 m/s, and suppresses the AI boost latch while active. Existing steering, braking and throttle implement the correction. It does not move the vehicle directly, change its physical properties, or change its reserved lane. Lower traffic-following speed limits remain in force. Player input and testing autopilot are excluded; collision shape, lane-selection rules, and recovery timing are unchanged.
+
+The temporary target also respects nearby traffic. Within ±12 m longitudinal separation, its inward movement is limited by both craft's current projected collision-box widths plus clearance; an already crowded craft is not told to move farther toward the wall. Traffic ahead within 65 m along the corrected lateral path receives the existing following-speed rule. These extra checks run only while the rival guard is active. They prevent the correction from blindly moving into a center-lane craft that the original reserved-lane comparison had excluded.
+
+Focused tests cover player exclusion, both logged wall sides, predicted outward drift, an unchanged stable outer lane, hysteresis release, preservation of slower traffic-following speed, symmetric adjacent-craft clearance, and a crowded target that must not move farther outward. They do not establish physical escape or race completion. Source/whitespace checks pass; Unity test execution and a native full-race comparison are parent-owned and pending. Compare rival recoveries with the three baseline events above, alongside player race completion and normal frame-time evidence.
+
+
+## Native validation
+
+The combined native candidate in `evidence/night-v4-race-01` completed three player laps in 112.60 seconds, first place, zero player recoveries. Final telemetry reports zero recoveries for all five rivals, and the entire log contains no recovery event. The three repeated early stalls from the old night baseline did not recur. Both restart launches and all three countdown-pause checks passed. The29-test regression suite passed, including 10 focused corridor/clearance cases.
+
+Scope: the race ends when the player finishes; rivals had completed 2.2656–2.7417 laps at that point. This supports the bounded stall correction through the observed 112.60-second race, not independent completion or competitive pacing of every rival.

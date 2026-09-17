@@ -1,0 +1,9 @@
+{
+  "buildGuid": "c332adf9551842c698d1afaa4c56d5cb",
+  "frames": 402,
+  "durationSeconds": 42.816,
+  "audioSeconds": 42.816,
+  "peak": 0.1433471292257309,
+  "rms": 0.03180835507247631,
+  "scope": "Actual native game, automated steering through ordinary physics, real-time clock (no Time.captureFramerate). PNG captures at approximately 10 Hz with actual DSP timestamps; listener output recorded as stereo float samples. Encoding uses recorded frame times. No performance claim."
+}

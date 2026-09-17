@@ -1,0 +1,102 @@
+{
+  "accepted": 168,
+  "rejectedCandidates": 17,
+  "courseSamples": 1201,
+  "protectedLateral": [
+    -12.2,
+    12.2
+  ],
+  "protectedVertical": [
+    -0.05,
+    8
+  ],
+  "method": "Conservative OBB versus expanded sampled road prisms; footprint SAT between buildings",
+  "limitations": "Camera volume, assembled old city overlap and moving occlusion require 01 native validation.",
+  "rejected": [
+    {
+      "assetId": "vrx_city_works_a",
+      "progress": 0.15161037114455195,
+      "lateral": -74.56804973020486
+    },
+    {
+      "assetId": "vrx_city_services_a",
+      "progress": 0.2287658653210811,
+      "lateral": -45.121786354414695
+    },
+    {
+      "assetId": "vrx_city_services_a",
+      "progress": 0.2287658653210811,
+      "lateral": -71.1217863544147
+    },
+    {
+      "assetId": "vrx_city_services_a",
+      "progress": 0.2287658653210811,
+      "lateral": -97.1217863544147
+    },
+    {
+      "assetId": "vrx_city_services_a",
+      "progress": 0.2287658653210811,
+      "lateral": -123.1217863544147
+    },
+    {
+      "assetId": "vrx_city_hotel_a",
+      "progress": 0.3124426651257425,
+      "lateral": -70.89234020195158
+    },
+    {
+      "assetId": "vrx_city_hotel_a",
+      "progress": 0.3124426651257425,
+      "lateral": -96.89234020195158
+    },
+    {
+      "assetId": "vrx_city_hotel_a",
+      "progress": 0.15222222222222223,
+      "lateral": -187.79471994131302
+    },
+    {
+      "assetId": "vrx_city_works_a",
+      "progress": 0.22333333333333333,
+      "lateral": -179.02213159437048
+    },
+    {
+      "assetId": "vrx_city_hotel_a",
+      "progress": 0.29444444444444445,
+      "lateral": -169.55149651730292
+    },
+    {
+      "assetId": "vrx_city_podium_a",
+      "progress": 0.012,
+      "lateral": 30
+    },
+    {
+      "assetId": "vrx_city_podium_a",
+      "progress": 0.076,
+      "lateral": 30
+    },
+    {
+      "assetId": "vrx_city_podium_a",
+      "progress": 0.108,
+      "lateral": -30
+    },
+    {
+      "assetId": "vrx_city_podium_a",
+      "progress": 0.17200000000000001,
+      "lateral": -30
+    },
+    {
+      "assetId": "vrx_city_podium_a",
+      "progress": 0.268,
+      "lateral": 30
+    },
+    {
+      "assetId": "vrx_track_guidance_a",
+      "progress": 0.29088015158943364,
+      "lateral": -12.75
+    },
+    {
+      "assetId": "vrx_track_guidance_a",
+      "progress": 0.29088015158943364,
+      "lateral": 12.75
+    }
+  ]
+}

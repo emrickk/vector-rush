@@ -1,0 +1,16 @@
+# AAA rebuild dispatch and ownership
+
+Owner rejects direct-production visuals; original native art and generated Nocturne targets are the baseline. Wipeout Omega Collection is the quality benchmark, not an asset source or a promise of parity. Latest instruction authorizes independent critic loops now. Exact older Sol/Astra assignments and review stop are superseded.
+
+| Worker | Owned output | Assignment |
+|---|---|---|
+| Visual critic | `docs/aaa-rebuild/critic-*.md` | Use the project-scoped `visual_critic` agent (`gpt-5.6-sol`, read-only). Inspect original/candidate/target originals; identify regressions and reject weak work. Never edit implementation. Declare inability to view images only when a fresh inspection attempt fails. Review further native revisions in separate reports. |
+| Architecture artist | `SourceAssets/aaa-nocturne/`, `docs/aaa-rebuild/art-handoff.md` | Actual Blender source, modeling/export recipes, exported modular assets and placement intent for a finished opening/gallery exemplar; read exact course. No Unity files. |
+| Rendering integrator | `UnityProject/Assets/Editor/AAA/`, `UnityProject/Assets/Scripts/World/AAA/`, `docs/aaa-rebuild/render-handoff.md` | Diagnose regression, preserve original art, implement reversible original-baseline material/lighting/asset integration hooks. No main production scene/assets/gameplay, no Editor/native GPU process. |
+| Parent | coordination, tests/native builds, `docs/implementation-plan.md`, history, shared entry wiring | Keep original/candidate identities, integrate reviewed assets, run evidence, commit/push scoped work; don't manufacture visual acceptance. |
+
+Only one heavy Blender render/Unity build/native capture runs at a time. Modeling/export without rendering can proceed alongside source work. No worker commits/pushes, rewrites history, touches credentials, or changes another lane. Workers do not spawn their own workers. Native subagent launches use `.codex/agents/visual-critic.toml`; a noninteractive CLI fallback must explicitly select `gpt-5.6-sol` and attach each required image with `--image`. Personal Codex configuration defaults spawned workers to Sol/high reasoning so generic critics do not inherit Astra. Astra remains the main-session default and is available explicitly for Blender/modeling and source tasks; its configured Bedrock route is text-only.
+
+Capability check on 2026-09-09: a minimal Responses request through `unity_litellm` gave Sol a synthetic PNG plus a harmless function tool. Sol correctly reported a red rounded square, blue circle, yellow triangle and black rectangle, and emitted the required function call. This establishes image and tool transport without treating synthetic evidence as a project-art review. A fresh critic must still inspect the actual Vector Rush files before any visual verdict.
+
+First loop ends in an inspected native exemplar and harsh critic verdict. Rejection triggers a different corrective hypothesis addressing cited failures. Whole-circuit rollout remains mandatory after a strong exemplar; gameplay/audio/UI/performance lanes follow as slots become available. They cannot substitute for visual work. Finish criteria include whole-lap appearance, continuous native motion/audio, human handling, race correctness and isolated performance; missing criteria remain open.

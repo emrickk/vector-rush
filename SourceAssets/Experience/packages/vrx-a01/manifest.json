@@ -1,0 +1,466 @@
+{
+  "contractVersion": 1,
+  "revision": "vrx-a01",
+  "courseHash": "598718f08e5c308a41b8e9f1b562ff8cd4e2bc9f661a91f4e34164cf7c820059",
+  "layoutComplete": false,
+  "sourceBlend": "source/vrx_city_kit.blend",
+  "assets": [
+    {
+      "id": "vrx_city_exchange_a",
+      "pivot": "ground-center",
+      "trackAssembly": false,
+      "collider": "none",
+      "lightmapUVs": "generate",
+      "lod0": "meshes/vrx_city_exchange_a_LOD0.fbx",
+      "boundsMin": [
+        -16.5,
+        0.0,
+        -15.100000381469727
+      ],
+      "boundsMax": [
+        21.5,
+        80.5999984741211,
+        15.100000381469727
+      ],
+      "materialSlots": [
+        "vrx_mat_mineral_a",
+        "vrx_mat_slate_a",
+        "vrx_mat_occupied_a",
+        "vrx_mat_titanium_a",
+        "vrx_mat_cyan_a",
+        "vrx_mat_officeglass_a"
+      ],
+      "lod1": "meshes/vrx_city_exchange_a_LOD1.fbx"
+    },
+    {
+      "id": "vrx_city_hotel_a",
+      "pivot": "ground-center",
+      "trackAssembly": false,
+      "collider": "none",
+      "lightmapUVs": "generate",
+      "lod0": "meshes/vrx_city_hotel_a_LOD0.fbx",
+      "boundsMin": [
+        -12.0,
+        0.0,
+        -13.600000381469727
+      ],
+      "boundsMax": [
+        12.0,
+        124.5,
+        13.600000381469727
+      ],
+      "materialSlots": [
+        "vrx_mat_mineral_a",
+        "vrx_mat_slate_a",
+        "vrx_mat_occupied_a",
+        "vrx_mat_titanium_a",
+        "vrx_mat_cyan_a",
+        "vrx_mat_hotelglass_a"
+      ],
+      "lod1": "meshes/vrx_city_hotel_a_LOD1.fbx"
+    },
+    {
+      "id": "vrx_city_services_a",
+      "pivot": "ground-center",
+      "trackAssembly": false,
+      "collider": "none",
+      "lightmapUVs": "generate",
+      "lod0": "meshes/vrx_city_services_a_LOD0.fbx",
+      "boundsMin": [
+        -19.5,
+        0.0,
+        -18.100000381469727
+      ],
+      "boundsMax": [
+        19.5,
+        49.099998474121094,
+        18.100000381469727
+      ],
+      "materialSlots": [
+        "vrx_mat_mineral_a",
+        "vrx_mat_slate_a",
+        "vrx_mat_occupied_a",
+        "vrx_mat_titanium_a",
+        "vrx_mat_cyan_a",
+        "vrx_mat_serviceglass_a"
+      ],
+      "lod1": "meshes/vrx_city_services_a_LOD1.fbx"
+    },
+    {
+      "id": "vrx_city_works_a",
+      "pivot": "ground-center",
+      "trackAssembly": false,
+      "collider": "none",
+      "lightmapUVs": "generate",
+      "lod0": "meshes/vrx_city_works_a_LOD0.fbx",
+      "boundsMin": [
+        -21.0,
+        0.0,
+        -18.600000381469727
+      ],
+      "boundsMax": [
+        25.0,
+        42.0,
+        18.600000381469727
+      ],
+      "materialSlots": [
+        "vrx_mat_mineral_a",
+        "vrx_mat_slate_a",
+        "vrx_mat_occupied_a",
+        "vrx_mat_titanium_a",
+        "vrx_mat_cyan_a",
+        "vrx_mat_glass_a"
+      ],
+      "lod1": "meshes/vrx_city_works_a_LOD1.fbx"
+    },
+    {
+      "id": "vrx_city_podium_a",
+      "pivot": "ground-center",
+      "trackAssembly": false,
+      "collider": "none",
+      "lightmapUVs": "generate",
+      "lod0": "meshes/vrx_city_podium_a_LOD0.fbx",
+      "boundsMin": [
+        -12.0,
+        0.0,
+        -11.600000381469727
+      ],
+      "boundsMax": [
+        12.0,
+        10.399999618530273,
+        11.600000381469727
+      ],
+      "materialSlots": [
+        "vrx_mat_mineral_a",
+        "vrx_mat_slate_a",
+        "vrx_mat_occupied_a",
+        "vrx_mat_titanium_a",
+        "vrx_mat_cyan_a"
+      ],
+      "lod1": "meshes/vrx_city_podium_a_LOD1.fbx"
+    },
+    {
+      "id": "vrx_track_guidance_a",
+      "pivot": "ground-center",
+      "trackAssembly": true,
+      "collider": "none",
+      "lightmapUVs": "generate",
+      "lod0": "meshes/vrx_track_guidance_a_LOD0.fbx",
+      "boundsMin": [
+        -0.375,
+        0.0,
+        -1.399999976158142
+      ],
+      "boundsMax": [
+        0.375,
+        0.5649999976158142,
+        1.399999976158142
+      ],
+      "materialSlots": [
+        "vrx_mat_slate_a",
+        "vrx_mat_cyan_a",
+        "vrx_mat_titanium_a"
+      ],
+      "lod1": "meshes/vrx_track_guidance_a_LOD1.fbx"
+    }
+  ],
+  "materials": [
+    {
+      "id": "vrx_mat_slate_a",
+      "baseColor": "textures/vrx_mat_slate_a_base.png",
+      "normal": "textures/vrx_mat_slate_a_normal.png",
+      "metallicSmoothness": "textures/vrx_mat_slate_a_ms.png",
+      "occlusion": "textures/vrx_mat_slate_a_ao.png",
+      "emission": "",
+      "metersPerTile": [
+        4,
+        4
+      ],
+      "uvMode": "metric",
+      "normalScale": 0.35,
+      "emissionColorLinear": [
+        0,
+        0,
+        0
+      ],
+      "emissionIntensity": 0,
+      "artisticMetallic": 0.1,
+      "artisticRoughness": 0.58,
+      "baseReflectanceLinear": [
+        0.025,
+        0.041,
+        0.057
+      ]
+    },
+    {
+      "id": "vrx_mat_mineral_a",
+      "baseColor": "textures/vrx_mat_mineral_a_base.png",
+      "normal": "textures/vrx_mat_mineral_a_normal.png",
+      "metallicSmoothness": "textures/vrx_mat_mineral_a_ms.png",
+      "occlusion": "textures/vrx_mat_mineral_a_ao.png",
+      "emission": "",
+      "metersPerTile": [
+        4,
+        4
+      ],
+      "uvMode": "metric",
+      "normalScale": 0.35,
+      "emissionColorLinear": [
+        0,
+        0,
+        0
+      ],
+      "emissionIntensity": 0,
+      "artisticMetallic": 0.04,
+      "artisticRoughness": 0.67,
+      "baseReflectanceLinear": [
+        0.3,
+        0.36,
+        0.39
+      ]
+    },
+    {
+      "id": "vrx_mat_titanium_a",
+      "baseColor": "textures/vrx_mat_titanium_a_base.png",
+      "normal": "textures/vrx_mat_titanium_a_normal.png",
+      "metallicSmoothness": "textures/vrx_mat_titanium_a_ms.png",
+      "occlusion": "textures/vrx_mat_titanium_a_ao.png",
+      "emission": "",
+      "metersPerTile": [
+        4,
+        4
+      ],
+      "uvMode": "metric",
+      "normalScale": 0.35,
+      "emissionColorLinear": [
+        0,
+        0,
+        0
+      ],
+      "emissionIntensity": 0,
+      "artisticMetallic": 0.78,
+      "artisticRoughness": 0.33,
+      "baseReflectanceLinear": [
+        0.18,
+        0.23,
+        0.27
+      ]
+    },
+    {
+      "id": "vrx_mat_glass_a",
+      "baseColor": "textures/vrx_mat_glass_a_base.png",
+      "normal": "textures/vrx_mat_glass_a_normal.png",
+      "metallicSmoothness": "textures/vrx_mat_glass_a_ms.png",
+      "occlusion": "textures/vrx_mat_glass_a_ao.png",
+      "emission": "",
+      "metersPerTile": [
+        4,
+        4
+      ],
+      "uvMode": "metric",
+      "normalScale": 0.35,
+      "emissionColorLinear": [
+        0,
+        0,
+        0
+      ],
+      "emissionIntensity": 0,
+      "artisticMetallic": 0.32,
+      "artisticRoughness": 0.23,
+      "baseReflectanceLinear": [
+        0.015,
+        0.047,
+        0.07
+      ]
+    },
+    {
+      "id": "vrx_mat_occupied_a",
+      "baseColor": "textures/vrx_mat_occupied_a_base.png",
+      "normal": "textures/vrx_mat_occupied_a_normal.png",
+      "metallicSmoothness": "textures/vrx_mat_occupied_a_ms.png",
+      "occlusion": "textures/vrx_mat_occupied_a_ao.png",
+      "emission": "textures/vrx_mat_occupied_a_emission.png",
+      "metersPerTile": [
+        4,
+        4
+      ],
+      "uvMode": "metric",
+      "normalScale": 0.35,
+      "emissionColorLinear": [
+        1,
+        0.48,
+        0.16
+      ],
+      "emissionIntensity": 1.25,
+      "artisticMetallic": 0.16,
+      "artisticRoughness": 0.38,
+      "baseReflectanceLinear": [
+        0.045,
+        0.058,
+        0.066
+      ]
+    },
+    {
+      "id": "vrx_mat_officeglass_a",
+      "baseColor": "textures/vrx_mat_officeglass_a_base.png",
+      "normal": "textures/vrx_mat_officeglass_a_normal.png",
+      "metallicSmoothness": "textures/vrx_mat_officeglass_a_ms.png",
+      "occlusion": "textures/vrx_mat_officeglass_a_ao.png",
+      "emission": "textures/vrx_mat_officeglass_a_emission.png",
+      "metersPerTile": [
+        4,
+        4
+      ],
+      "uvMode": "metric",
+      "normalScale": 0.35,
+      "emissionColorLinear": [
+        0.34,
+        0.62,
+        0.8
+      ],
+      "emissionIntensity": 0.72,
+      "artisticMetallic": 0.24,
+      "artisticRoughness": 0.26,
+      "baseReflectanceLinear": [
+        0.02,
+        0.049,
+        0.074
+      ]
+    },
+    {
+      "id": "vrx_mat_hotelglass_a",
+      "baseColor": "textures/vrx_mat_hotelglass_a_base.png",
+      "normal": "textures/vrx_mat_hotelglass_a_normal.png",
+      "metallicSmoothness": "textures/vrx_mat_hotelglass_a_ms.png",
+      "occlusion": "textures/vrx_mat_hotelglass_a_ao.png",
+      "emission": "textures/vrx_mat_hotelglass_a_emission.png",
+      "metersPerTile": [
+        4,
+        4
+      ],
+      "uvMode": "metric",
+      "normalScale": 0.35,
+      "emissionColorLinear": [
+        1,
+        0.55,
+        0.22
+      ],
+      "emissionIntensity": 1.0,
+      "artisticMetallic": 0.18,
+      "artisticRoughness": 0.31,
+      "baseReflectanceLinear": [
+        0.026,
+        0.044,
+        0.06
+      ]
+    },
+    {
+      "id": "vrx_mat_serviceglass_a",
+      "baseColor": "textures/vrx_mat_serviceglass_a_base.png",
+      "normal": "textures/vrx_mat_serviceglass_a_normal.png",
+      "metallicSmoothness": "textures/vrx_mat_serviceglass_a_ms.png",
+      "occlusion": "textures/vrx_mat_serviceglass_a_ao.png",
+      "emission": "textures/vrx_mat_serviceglass_a_emission.png",
+      "metersPerTile": [
+        4,
+        4
+      ],
+      "uvMode": "metric",
+      "normalScale": 0.35,
+      "emissionColorLinear": [
+        0.66,
+        0.77,
+        0.64
+      ],
+      "emissionIntensity": 0.65,
+      "artisticMetallic": 0.12,
+      "artisticRoughness": 0.43,
+      "baseReflectanceLinear": [
+        0.031,
+        0.049,
+        0.056
+      ]
+    },
+    {
+      "id": "vrx_mat_cyan_a",
+      "baseColor": "textures/vrx_mat_cyan_a_base.png",
+      "normal": "textures/vrx_mat_cyan_a_normal.png",
+      "metallicSmoothness": "textures/vrx_mat_cyan_a_ms.png",
+      "occlusion": "textures/vrx_mat_cyan_a_ao.png",
+      "emission": "textures/vrx_mat_cyan_a_emission.png",
+      "metersPerTile": [
+        4,
+        4
+      ],
+      "uvMode": "metric",
+      "normalScale": 0.35,
+      "emissionColorLinear": [
+        0.035,
+        0.65,
+        1
+      ],
+      "emissionIntensity": 3.2,
+      "artisticMetallic": 0.08,
+      "artisticRoughness": 0.31,
+      "baseReflectanceLinear": [
+        0.025,
+        0.15,
+        0.19
+      ]
+    },
+    {
+      "id": "vrx_mat_magenta_a",
+      "baseColor": "textures/vrx_mat_magenta_a_base.png",
+      "normal": "textures/vrx_mat_magenta_a_normal.png",
+      "metallicSmoothness": "textures/vrx_mat_magenta_a_ms.png",
+      "occlusion": "textures/vrx_mat_magenta_a_ao.png",
+      "emission": "textures/vrx_mat_magenta_a_emission.png",
+      "metersPerTile": [
+        4,
+        4
+      ],
+      "uvMode": "metric",
+      "normalScale": 0.35,
+      "emissionColorLinear": [
+        0.85,
+        0.025,
+        0.21
+      ],
+      "emissionIntensity": 1.6,
+      "artisticMetallic": 0.04,
+      "artisticRoughness": 0.4,
+      "baseReflectanceLinear": [
+        0.17,
+        0.026,
+        0.078
+      ]
+    },
+    {
+      "id": "vrx_mat_white_a",
+      "baseColor": "textures/vrx_mat_white_a_base.png",
+      "normal": "textures/vrx_mat_white_a_normal.png",
+      "metallicSmoothness": "textures/vrx_mat_white_a_ms.png",
+      "occlusion": "textures/vrx_mat_white_a_ao.png",
+      "emission": "textures/vrx_mat_white_a_emission.png",
+      "metersPerTile": [
+        4,
+        4
+      ],
+      "uvMode": "metric",
+      "normalScale": 0.35,
+      "emissionColorLinear": [
+        0.5,
+        0.8,
+        1
+      ],
+      "emissionIntensity": 1.2,
+      "artisticMetallic": 0.05,
+      "artisticRoughness": 0.32,
+      "baseReflectanceLinear": [
+        0.45,
+        0.55,
+        0.6
+      ]
+    }
+  ]
+}

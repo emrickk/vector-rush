@@ -1,0 +1,30 @@
+{
+  "checksums": [
+    {
+      "revision": "vrx-a01",
+      "verifiedFiles": 96
+    },
+    {
+      "revision": "vrx-b01",
+      "verifiedFiles": 114
+    },
+    {
+      "revision": "vrx-c01",
+      "verifiedFiles": 28
+    },
+    {
+      "revision": "vrx-d01",
+      "verifiedFiles": 5
+    }
+  ],
+  "textures": 86,
+  "RGBA8BaseBytes": 118272000,
+  "RGBA8WithConfiguredMipsEstimate": 150690474,
+  "allPlacedCityLOD0Triangles": 151796,
+  "uniqueCityLOD0Triangles": 13376,
+  "guidCount": 137,
+  "duplicateGuids": 0,
+  "textureBudget160MiB": true,
+  "triangleBudget180k": true,
+  "measurement": "Source estimates only; actual Unity residency and native draw calls/frame pacing unmeasured."
+}

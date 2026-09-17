@@ -1,0 +1,164 @@
+{
+  "status": "STAGED PROPOSAL \u2014 parent composition approval and actual camera validation pending",
+  "path_source": "UnityProject/Assets/Scripts/World/TrackPath.cs",
+  "path_length_m": 1844.5174329434412,
+  "clearance_method": "Horizontal distance from 12,000 all-course arc-length samples to oriented full exported bounding rectangles; subtract maximum sample segment length. Vertical separation never used to excuse lateral intrusion. No props colliders.",
+  "sample_segment_deduction_m": 0.15494596028562158,
+  "placements": [
+    {
+      "asset": "Nocturne_TransitStation_A",
+      "anchor_progress": 0.97,
+      "horizontal_right_offset_m": 33,
+      "floor_below_track_m": 7,
+      "origin_unity_xyz": [
+        -54.355795563042086,
+        23.835006375391085,
+        -263.9664866801287
+      ],
+      "yaw_degrees": -91.65580088631013,
+      "unity_local_axes": {
+        "+X": [
+          -0.02889515480694331,
+          0,
+          0.999582447839438
+        ],
+        "+Y": [
+          0,
+          1,
+          0
+        ],
+        "+Z": [
+          -0.999582447839438,
+          -0.0,
+          -0.02889515480694331
+        ]
+      },
+      "uniform_scale": 1,
+      "dimensions_xyz_m": [
+        23.0,
+        22.350000381469727,
+        64.0
+      ],
+      "min_centerline_to_oriented_export_bounds_m": 21.172111628692548,
+      "nearest_track_progress": 0.9875,
+      "at_least_14m_clear": true,
+      "at_least_18m_camera_margin": true,
+      "footprint_world_xz": [
+        [
+          -22.039752478403543,
+          -274.4370812503657
+        ],
+        [
+          -22.704341038963243,
+          -251.44668495005857
+        ],
+        [
+          -86.67761770068728,
+          -253.29597485770296
+        ],
+        [
+          -86.01302914012757,
+          -276.28637115801
+        ]
+      ],
+      "fbx_sha256": "31b506f0bae749e1e2785bc65607b0c7cd0550011cef244960bae97071a1b99e"
+    },
+    {
+      "asset": "Nocturne_ServiceWorkshop_A",
+      "anchor_progress": 0.948,
+      "horizontal_right_offset_m": -29,
+      "floor_below_track_m": 3,
+      "origin_unity_xyz": [
+        -96.10489530687326,
+        26.827175304618574,
+        -202.84137497374715
+      ],
+      "yaw_degrees": 89.53046537188571,
+      "unity_local_axes": {
+        "+X": [
+          0.008194833488871572,
+          0,
+          -0.9999664217882968
+        ],
+        "+Y": [
+          0,
+          1,
+          0
+        ],
+        "+Z": [
+          0.9999664217882968,
+          0.0,
+          0.008194833488871572
+        ]
+      },
+      "uniform_scale": 1,
+      "dimensions_xyz_m": [
+        8.0,
+        6.985000133514404,
+        18.0
+      ],
+      "min_centerline_to_oriented_export_bounds_m": 24.804486827492394,
+      "nearest_track_progress": 0.943,
+      "at_least_14m_clear": true,
+      "at_least_18m_camera_margin": true,
+      "footprint_world_xz": [
+        [
+          -105.13737243692341,
+          -198.9152627879938
+        ],
+        [
+          -105.07181376901244,
+          -206.91499416230016
+        ],
+        [
+          -87.0724181768231,
+          -206.7674871595005
+        ],
+        [
+          -87.13797684473408,
+          -198.76775578519414
+        ]
+      ],
+      "fbx_sha256": "90c3a0f99cfdffb3eebcbde8cf9670b58110f6bd9a2887409c5c83c82026e0c1"
+    }
+  ],
+  "station_supports": [
+    {
+      "origin_unity_xyz": [
+        -33.45124962283472,
+        12.700006375391085,
+        -260.3609410856646
+      ],
+      "yaw_degrees": -91.65580088631013,
+      "uniform_scale": 1,
+      "pedestal_from_ground_to_y_m": 12.700006375391085,
+      "pedestal_footprint_xz_m": [
+        4.4,
+        7.2
+      ],
+      "note": "Keep structural buttresses beneath station. They share its conservative 23 \u00d7 64 m footprint and therefore its all-branch lateral clearance."
+    },
+    {
+      "origin_unity_xyz": [
+        -74.43412998425168,
+        12.700006375391085,
+        -261.5456424327493
+      ],
+      "yaw_degrees": -91.65580088631013,
+      "uniform_scale": 1,
+      "pedestal_from_ground_to_y_m": 12.700006375391085,
+      "pedestal_footprint_xz_m": [
+        4.4,
+        7.2
+      ],
+      "note": "Keep structural buttresses beneath station. They share its conservative 23 \u00d7 64 m footprint and therefore its all-branch lateral clearance."
+    }
+  ],
+  "integration_notes": [
+    "Native candidate01 exposed the rear with the previous rotation. Station and workshop each rotate 180 degrees from candidate01; source X assumption was not a verified Unity imported facing.",
+    "Do not create continuous extra lamps; use grouped WarmWindow material for the recessed rooms.",
+    "Remove or recompose existing nearby generic blocks before adding these assets; no stacked district overlay.",
+    "Station datum is elevated; create the specified grounded supports and explicit service level before native review.",
+    "Existing Terrace A and Split B remain uniform scale only; final camera-driven coordinates belong in NightDistrict after approval."
+  ]
+}

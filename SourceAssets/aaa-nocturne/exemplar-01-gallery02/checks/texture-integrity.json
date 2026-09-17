@@ -1,0 +1,101 @@
+{
+  "NA_BronzePanel_BaseColor.png": {
+    "size": [
+      2048,
+      2048
+    ],
+    "bitDepth": 8,
+    "channels": 3,
+    "crcAndDecompression": "pass"
+  },
+  "NA_Ceramic_BaseColor.png": {
+    "size": [
+      2048,
+      2048
+    ],
+    "bitDepth": 8,
+    "channels": 3,
+    "crcAndDecompression": "pass"
+  },
+  "NA_Slate_BaseColor.png": {
+    "size": [
+      2048,
+      2048
+    ],
+    "bitDepth": 8,
+    "channels": 3,
+    "crcAndDecompression": "pass"
+  },
+  "NA_Graphite_MetallicSmoothness.png": {
+    "size": [
+      2048,
+      2048
+    ],
+    "bitDepth": 8,
+    "channels": 4,
+    "crcAndDecompression": "pass"
+  },
+  "NA_Graphite_BaseColor.png": {
+    "size": [
+      2048,
+      2048
+    ],
+    "bitDepth": 8,
+    "channels": 3,
+    "crcAndDecompression": "pass"
+  },
+  "NA_BronzePanel_MetallicSmoothness.png": {
+    "size": [
+      2048,
+      2048
+    ],
+    "bitDepth": 8,
+    "channels": 4,
+    "crcAndDecompression": "pass"
+  },
+  "NA_Slate_MetallicSmoothness.png": {
+    "size": [
+      2048,
+      2048
+    ],
+    "bitDepth": 8,
+    "channels": 4,
+    "crcAndDecompression": "pass"
+  },
+  "NA_Aluminium_MetallicSmoothness.png": {
+    "size": [
+      2048,
+      2048
+    ],
+    "bitDepth": 8,
+    "channels": 4,
+    "crcAndDecompression": "pass"
+  },
+  "NA_Aluminium_BaseColor.png": {
+    "size": [
+      2048,
+      2048
+    ],
+    "bitDepth": 8,
+    "channels": 3,
+    "crcAndDecompression": "pass"
+  },
+  "NA_Micro_Normal.png": {
+    "size": [
+      2048,
+      2048
+    ],
+    "bitDepth": 8,
+    "channels": 3,
+    "crcAndDecompression": "pass"
+  },
+  "NA_Ceramic_MetallicSmoothness.png": {
+    "size": [
+      2048,
+      2048
+    ],
+    "bitDepth": 8,
+    "channels": 4,
+    "crcAndDecompression": "pass"
+  }
+}

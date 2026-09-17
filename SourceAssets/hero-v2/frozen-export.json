@@ -1,0 +1,9 @@
+{
+  "file": "HeroShip.fbx",
+  "sha256": "61f634392f52c054a152641f16770b10b3c6eab7d37f5323cb627d2c084ee035",
+  "revision": "sculpted V2, manufactured surfaces, final intake and central throat clearance",
+  "triangles": 73364,
+  "material_batches": 9,
+  "status": "frozen for native visual evaluation",
+  "render_only_script": "render_inspection.py"
+}

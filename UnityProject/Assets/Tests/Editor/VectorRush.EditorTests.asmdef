@@ -1,0 +1,7 @@
+{
+  "name": "VectorRush.EditorTests",
+  "references": ["VectorRush.Runtime", "VectorRush.ProductionEditor", "Unity.InputSystem", "Unity.RenderPipelines.Core.Runtime", "Unity.RenderPipelines.Universal.Runtime"],
+  "includePlatforms": ["Editor"],
+  "optionalUnityReferences": ["TestAssemblies"],
+  "autoReferenced": false
+}

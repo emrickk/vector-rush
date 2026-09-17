@@ -1,0 +1,159 @@
+{
+  "fixtures": [
+    {
+      "assetId": "NA_CivicFacade_A",
+      "sourcePart": "Localized occupied transom",
+      "materialId": "NA_WarmDiffuser",
+      "centerUnityLocal": [
+        -2.129999876022339,
+        9.84000015258789,
+        10.319999694824219
+      ],
+      "description": "Physical diffuser centroid, not a tested native light position. Offset the native source outside its emitting surface; source strength is material intent only."
+    },
+    {
+      "assetId": "NA_CivicFacade_A",
+      "sourcePart": "Shielded bay diffuser",
+      "materialId": "NA_CoolDiffuser",
+      "centerUnityLocal": [
+        -3.549999952316284,
+        12.079999923706055,
+        9.59999942779541
+      ],
+      "description": "Physical diffuser centroid, not a tested native light position. Offset the native source outside its emitting surface; source strength is material intent only."
+    },
+    {
+      "assetId": "NA_CivicFacade_A",
+      "sourcePart": "Localized occupied transom.001",
+      "materialId": "NA_WarmDiffuser",
+      "centerUnityLocal": [
+        -2.129999876022339,
+        5.940000534057617,
+        3.9200000762939453
+      ],
+      "description": "Physical diffuser centroid, not a tested native light position. Offset the native source outside its emitting surface; source strength is material intent only."
+    },
+    {
+      "assetId": "NA_CivicFacade_A",
+      "sourcePart": "Shielded bay diffuser.001",
+      "materialId": "NA_CoolDiffuser",
+      "centerUnityLocal": [
+        -3.549999952316284,
+        12.079999923706055,
+        3.200000286102295
+      ],
+      "description": "Physical diffuser centroid, not a tested native light position. Offset the native source outside its emitting surface; source strength is material intent only."
+    },
+    {
+      "assetId": "NA_CivicFacade_A",
+      "sourcePart": "Shielded bay diffuser.002",
+      "materialId": "NA_CoolDiffuser",
+      "centerUnityLocal": [
+        -3.549999952316284,
+        12.079999923706055,
+        -3.1999998092651367
+      ],
+      "description": "Physical diffuser centroid, not a tested native light position. Offset the native source outside its emitting surface; source strength is material intent only."
+    },
+    {
+      "assetId": "NA_CivicFacade_A",
+      "sourcePart": "Localized occupied transom.002",
+      "materialId": "NA_WarmDiffuser",
+      "centerUnityLocal": [
+        -2.129999876022339,
+        9.84000015258789,
+        -8.880000114440918
+      ],
+      "description": "Physical diffuser centroid, not a tested native light position. Offset the native source outside its emitting surface; source strength is material intent only."
+    },
+    {
+      "assetId": "NA_CivicFacade_A",
+      "sourcePart": "Shielded bay diffuser.003",
+      "materialId": "NA_CoolDiffuser",
+      "centerUnityLocal": [
+        -3.549999952316284,
+        12.079999923706055,
+        -9.59999942779541
+      ],
+      "description": "Physical diffuser centroid, not a tested native light position. Offset the native source outside its emitting surface; source strength is material intent only."
+    },
+    {
+      "assetId": "NA_CivicFacade_A",
+      "sourcePart": "Stair warm landing strip",
+      "materialId": "NA_WarmDiffuser",
+      "centerUnityLocal": [
+        -0.3799999952316284,
+        15.180000305175781,
+        -10.050000190734863
+      ],
+      "description": "Physical diffuser centroid, not a tested native light position. Offset the native source outside its emitting surface; source strength is material intent only."
+    },
+    {
+      "assetId": "NA_ServiceFacade_A",
+      "sourcePart": "Shielded bay diffuser.004",
+      "materialId": "NA_CoolDiffuser",
+      "centerUnityLocal": [
+        -3.549999952316284,
+        5.580000400543213,
+        3.200000286102295
+      ],
+      "description": "Physical diffuser centroid, not a tested native light position. Offset the native source outside its emitting surface; source strength is material intent only."
+    },
+    {
+      "assetId": "NA_ServiceFacade_A",
+      "sourcePart": "Shielded bay diffuser.005",
+      "materialId": "NA_CoolDiffuser",
+      "centerUnityLocal": [
+        -3.549999952316284,
+        5.580000400543213,
+        -3.1999998092651367
+      ],
+      "description": "Physical diffuser centroid, not a tested native light position. Offset the native source outside its emitting surface; source strength is material intent only."
+    },
+    {
+      "assetId": "NA_GalleryPortal_A",
+      "sourcePart": "Entry shielded diffuser",
+      "materialId": "NA_WarmDiffuser",
+      "centerUnityLocal": [
+        -13.69999885559082,
+        8.399999618530273,
+        -0.15000000596046448
+      ],
+      "description": "Physical diffuser centroid, not a tested native light position. Offset the native source outside its emitting surface; source strength is material intent only."
+    },
+    {
+      "assetId": "NA_GalleryPortal_A",
+      "sourcePart": "Entry shielded diffuser.001",
+      "materialId": "NA_WarmDiffuser",
+      "centerUnityLocal": [
+        13.699999809265137,
+        8.399999618530273,
+        -0.15000000596046448
+      ],
+      "description": "Physical diffuser centroid, not a tested native light position. Offset the native source outside its emitting surface; source strength is material intent only."
+    },
+    {
+      "assetId": "NA_GalleryPortal_A",
+      "sourcePart": "Recessed brow diffuser",
+      "materialId": "NA_WarmDiffuser",
+      "centerUnityLocal": [
+        0.0,
+        14.180002212524414,
+        -1.2299998998641968
+      ],
+      "description": "Physical diffuser centroid, not a tested native light position. Offset the native source outside its emitting surface; source strength is material intent only."
+    },
+    {
+      "assetId": "NA_GalleryPanel_A",
+      "sourcePart": "Shielded maintenance diffuser",
+      "materialId": "NA_WarmDiffuser",
+      "centerUnityLocal": [
+        13.864999771118164,
+        3.0099997520446777,
+        -0.0
+      ],
+      "description": "Physical diffuser centroid, not a tested native light position. Offset the native source outside its emitting surface; source strength is material intent only."
+    }
+  ],
+  "runtimeLightsAuthored": false
+}

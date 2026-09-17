@@ -1,0 +1,373 @@
+{
+  "schema": "aaa-nocturne-exemplar-1",
+  "revision": "exemplar-01",
+  "courseHash": "32eb94bda0b257b30c3b111b2a67beb1626d1dca77577905ae021eee7bc36f07",
+  "layoutComplete": false,
+  "visualStatus": "BLOCKED_VISUAL_REVIEW",
+  "sourceBlend": "source/Nocturne_Architecture_Exemplar.blend",
+  "assets": [
+    {
+      "id": "NA_CivicFacade_A",
+      "lod0": "meshes/NA_CivicFacade_A_LOD0.fbx",
+      "lod1": "meshes/NA_CivicFacade_A_LOD1.fbx",
+      "pivot": "route-level center; source +X right, -Y forward, +Z up",
+      "boundsMin": [
+        -5.175000190734863,
+        -8.699999809265137,
+        -13.399999618530273
+      ],
+      "boundsMax": [
+        5.589000225067139,
+        17.421602249145508,
+        13.399999618530273
+      ],
+      "materialSlots": [
+        "NA_Graphite",
+        "NA_Slate",
+        "NA_Aluminium",
+        "NA_Interior",
+        "NA_Ceramic",
+        "NA_Glass",
+        "NA_WarmDiffuser",
+        "NA_CoolDiffuser"
+      ],
+      "lightmapUVs": "generate",
+      "collider": "none",
+      "trackAssembly": false
+    },
+    {
+      "id": "NA_ServiceFacade_A",
+      "lod0": "meshes/NA_ServiceFacade_A_LOD0.fbx",
+      "lod1": "meshes/NA_ServiceFacade_A_LOD1.fbx",
+      "pivot": "route-level center; source +X right, -Y forward, +Z up",
+      "boundsMin": [
+        -5.175000190734863,
+        -8.699999809265137,
+        -7.0
+      ],
+      "boundsMax": [
+        5.589000225067139,
+        8.824999809265137,
+        7.0
+      ],
+      "materialSlots": [
+        "NA_Graphite",
+        "NA_Slate",
+        "NA_Aluminium",
+        "NA_Interior",
+        "NA_Ceramic",
+        "NA_CoolDiffuser"
+      ],
+      "lightmapUVs": "generate",
+      "collider": "none",
+      "trackAssembly": false
+    },
+    {
+      "id": "NA_GalleryPortal_A",
+      "lod0": "meshes/NA_GalleryPortal_A_LOD0.fbx",
+      "lod1": "meshes/NA_GalleryPortal_A_LOD1.fbx",
+      "pivot": "route-level center; source +X right, -Y forward, +Z up",
+      "boundsMin": [
+        -15.430000305175781,
+        0.0,
+        -2.75
+      ],
+      "boundsMax": [
+        15.430000305175781,
+        16.075000762939453,
+        1.2000000476837158
+      ],
+      "materialSlots": [
+        "NA_Slate",
+        "NA_Graphite",
+        "NA_Ceramic",
+        "NA_Aluminium",
+        "NA_WarmDiffuser"
+      ],
+      "lightmapUVs": "generate",
+      "collider": "none",
+      "trackAssembly": false
+    },
+    {
+      "id": "NA_GalleryRib_A",
+      "lod0": "meshes/NA_GalleryRib_A_LOD0.fbx",
+      "lod1": "meshes/NA_GalleryRib_A_LOD1.fbx",
+      "pivot": "route-level center; source +X right, -Y forward, +Z up",
+      "boundsMin": [
+        -15.430000305175781,
+        0.0,
+        -0.9100000262260437
+      ],
+      "boundsMax": [
+        15.430000305175781,
+        16.075000762939453,
+        0.9100000262260437
+      ],
+      "materialSlots": [
+        "NA_Slate",
+        "NA_Graphite",
+        "NA_Aluminium"
+      ],
+      "lightmapUVs": "generate",
+      "collider": "none",
+      "trackAssembly": false
+    },
+    {
+      "id": "NA_GalleryPanel_A",
+      "lod0": "meshes/NA_GalleryPanel_A_LOD0.fbx",
+      "lod1": "meshes/NA_GalleryPanel_A_LOD1.fbx",
+      "pivot": "route-level center; source +X right, -Y forward, +Z up",
+      "boundsMin": [
+        10.350970268249512,
+        1.1200000047683716,
+        -2.700000047683716
+      ],
+      "boundsMax": [
+        14.9399995803833,
+        15.558691024780273,
+        2.700000047683716
+      ],
+      "materialSlots": [
+        "NA_Graphite",
+        "NA_Aluminium",
+        "NA_Ceramic",
+        "NA_WarmDiffuser"
+      ],
+      "lightmapUVs": "generate",
+      "collider": "none",
+      "trackAssembly": false
+    }
+  ],
+  "materials": [
+    {
+      "id": "NA_Slate",
+      "baseColorLinear": [
+        0.22,
+        0.29,
+        0.34
+      ],
+      "roughness": 0.67,
+      "metallic": 0.04,
+      "emissionColorLinear": [
+        0,
+        0,
+        0
+      ],
+      "emissionIntensity": 0,
+      "metersPerTile": [
+        4,
+        4
+      ],
+      "uvMode": "metric",
+      "normalScale": 0.3,
+      "textureScale": [
+        1,
+        1
+      ],
+      "baseColor": "textures/NA_Slate_BaseColor.png",
+      "metallicSmoothness": "textures/NA_Slate_MetallicSmoothness.png",
+      "normal": "textures/NA_Micro_Normal.png"
+    },
+    {
+      "id": "NA_Ceramic",
+      "baseColorLinear": [
+        0.36,
+        0.39,
+        0.4
+      ],
+      "roughness": 0.42,
+      "metallic": 0.1,
+      "emissionColorLinear": [
+        0,
+        0,
+        0
+      ],
+      "emissionIntensity": 0,
+      "metersPerTile": [
+        4,
+        4
+      ],
+      "uvMode": "metric",
+      "normalScale": 0.3,
+      "textureScale": [
+        1,
+        1
+      ],
+      "baseColor": "textures/NA_Ceramic_BaseColor.png",
+      "metallicSmoothness": "textures/NA_Ceramic_MetallicSmoothness.png",
+      "normal": "textures/NA_Micro_Normal.png"
+    },
+    {
+      "id": "NA_Graphite",
+      "baseColorLinear": [
+        0.043,
+        0.057,
+        0.071
+      ],
+      "roughness": 0.59,
+      "metallic": 0.32,
+      "emissionColorLinear": [
+        0,
+        0,
+        0
+      ],
+      "emissionIntensity": 0,
+      "metersPerTile": [
+        4,
+        4
+      ],
+      "uvMode": "metric",
+      "normalScale": 0.3,
+      "textureScale": [
+        1,
+        1
+      ],
+      "baseColor": "textures/NA_Graphite_BaseColor.png",
+      "metallicSmoothness": "textures/NA_Graphite_MetallicSmoothness.png",
+      "normal": "textures/NA_Micro_Normal.png"
+    },
+    {
+      "id": "NA_Aluminium",
+      "baseColorLinear": [
+        0.26,
+        0.3,
+        0.34
+      ],
+      "roughness": 0.36,
+      "metallic": 0.78,
+      "emissionColorLinear": [
+        0,
+        0,
+        0
+      ],
+      "emissionIntensity": 0,
+      "metersPerTile": [
+        4,
+        4
+      ],
+      "uvMode": "metric",
+      "normalScale": 0.3,
+      "textureScale": [
+        1,
+        1
+      ],
+      "baseColor": "textures/NA_Aluminium_BaseColor.png",
+      "metallicSmoothness": "textures/NA_Aluminium_MetallicSmoothness.png",
+      "normal": "textures/NA_Micro_Normal.png"
+    },
+    {
+      "id": "NA_Glass",
+      "baseColorLinear": [
+        0.023,
+        0.055,
+        0.067
+      ],
+      "roughness": 0.2,
+      "metallic": 0.45,
+      "emissionColorLinear": [
+        0,
+        0,
+        0
+      ],
+      "emissionIntensity": 0,
+      "metersPerTile": [
+        4,
+        4
+      ],
+      "uvMode": "metric",
+      "normalScale": 0.3,
+      "textureScale": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": "NA_Interior",
+      "baseColorLinear": [
+        0.13,
+        0.095,
+        0.061
+      ],
+      "roughness": 0.79,
+      "metallic": 0,
+      "emissionColorLinear": [
+        0,
+        0,
+        0
+      ],
+      "emissionIntensity": 0,
+      "metersPerTile": [
+        4,
+        4
+      ],
+      "uvMode": "metric",
+      "normalScale": 0.3,
+      "textureScale": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": "NA_WarmDiffuser",
+      "baseColorLinear": [
+        0.68,
+        0.39,
+        0.17
+      ],
+      "roughness": 0.38,
+      "metallic": 0,
+      "emissionColorLinear": [
+        0.68,
+        0.39,
+        0.17
+      ],
+      "emissionIntensity": 0.65,
+      "metersPerTile": [
+        4,
+        4
+      ],
+      "uvMode": "metric",
+      "normalScale": 0.3,
+      "textureScale": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": "NA_CoolDiffuser",
+      "baseColorLinear": [
+        0.55,
+        0.67,
+        0.73
+      ],
+      "roughness": 0.36,
+      "metallic": 0,
+      "emissionColorLinear": [
+        0.55,
+        0.67,
+        0.73
+      ],
+      "emissionIntensity": 0.8,
+      "metersPerTile": [
+        4,
+        4
+      ],
+      "uvMode": "metric",
+      "normalScale": 0.3,
+      "textureScale": [
+        1,
+        1
+      ]
+    }
+  ],
+  "exportConvention": {
+    "axis_forward": "-Z",
+    "axis_up": "Y",
+    "bake_space_transform": true,
+    "apply_scale_options": "FBX_SCALE_UNITS"
+  },
+  "sourceToUnity": "(x,z,-y)",
+  "unit": "metre",
+  "normals": "authored weighted split normals; FBX includes tangents",
+  "lightmapUVs": "Generate in Unity; UV0 deliberately overlaps metric tiles"
+}

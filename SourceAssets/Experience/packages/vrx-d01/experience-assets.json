@@ -1,0 +1,22 @@
+{
+  "contractVersion": 1,
+  "revision": "vrx-d01",
+  "assets": [
+    {
+      "id": "vrx_ui_tokens_a",
+      "path": "design/vrx_ui_tokens_a.json",
+      "type": "design-tokens",
+      "revision": 1,
+      "source": "Astra art specification grounded in existing HUD/menu actions",
+      "license": "Project-authored"
+    },
+    {
+      "id": "vrx_event_storyboard_a",
+      "path": "design/vrx_event_storyboard_a.json",
+      "type": "motion-specification",
+      "revision": 1,
+      "source": "Astra event timing specifications; no gameplay implementation",
+      "license": "Project-authored"
+    }
+  ]
+}

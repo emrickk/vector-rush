@@ -1,0 +1,80 @@
+{
+  "opening-civic-right": {
+    "surfaceTriangleIntersections": 0,
+    "verticesInsideProtectedCorridorSamples": 0,
+    "minLateralMarginWithinProtectedHeightMeters": 6.449335156657412,
+    "method": "BVH triangle intersection against 1200 closed corridor cells plus vertex containment across all frame planes; static sampled conservative corridor only"
+  },
+  "opening-service-left": {
+    "surfaceTriangleIntersections": 0,
+    "verticesInsideProtectedCorridorSamples": 0,
+    "minLateralMarginWithinProtectedHeightMeters": 4.002143788435173,
+    "method": "BVH triangle intersection against 1200 closed corridor cells plus vertex containment across all frame planes; static sampled conservative corridor only"
+  },
+  "warm-entry": {
+    "surfaceTriangleIntersections": 0,
+    "verticesInsideProtectedCorridorSamples": 0,
+    "minLateralMarginWithinProtectedHeightMeters": 1.3237164456651058,
+    "method": "BVH triangle intersection against 1200 closed corridor cells plus vertex containment across all frame planes; static sampled conservative corridor only"
+  },
+  "warm-rib-01": {
+    "surfaceTriangleIntersections": 0,
+    "verticesInsideProtectedCorridorSamples": 0,
+    "minLateralMarginWithinProtectedHeightMeters": 1.3266949902275762,
+    "method": "BVH triangle intersection against 1200 closed corridor cells plus vertex containment across all frame planes; static sampled conservative corridor only"
+  },
+  "warm-rib-02": {
+    "surfaceTriangleIntersections": 0,
+    "verticesInsideProtectedCorridorSamples": 0,
+    "minLateralMarginWithinProtectedHeightMeters": 1.3262685075759535,
+    "method": "BVH triangle intersection against 1200 closed corridor cells plus vertex containment across all frame planes; static sampled conservative corridor only"
+  },
+  "warm-panel-right-1034": {
+    "surfaceTriangleIntersections": 0,
+    "verticesInsideProtectedCorridorSamples": 0,
+    "minLateralMarginWithinProtectedHeightMeters": 1.6542645013036434,
+    "method": "BVH triangle intersection against 1200 closed corridor cells plus vertex containment across all frame planes; static sampled conservative corridor only"
+  },
+  "warm-panel-left-1034": {
+    "surfaceTriangleIntersections": 0,
+    "verticesInsideProtectedCorridorSamples": 0,
+    "minLateralMarginWithinProtectedHeightMeters": 1.6318647526105714,
+    "method": "BVH triangle intersection against 1200 closed corridor cells plus vertex containment across all frame planes; static sampled conservative corridor only"
+  },
+  "warm-panel-right-1038": {
+    "surfaceTriangleIntersections": 0,
+    "verticesInsideProtectedCorridorSamples": 0,
+    "minLateralMarginWithinProtectedHeightMeters": 1.6538761169548177,
+    "method": "BVH triangle intersection against 1200 closed corridor cells plus vertex containment across all frame planes; static sampled conservative corridor only"
+  },
+  "warm-panel-left-1038": {
+    "surfaceTriangleIntersections": 0,
+    "verticesInsideProtectedCorridorSamples": 0,
+    "minLateralMarginWithinProtectedHeightMeters": 1.631012192570136,
+    "method": "BVH triangle intersection against 1200 closed corridor cells plus vertex containment across all frame planes; static sampled conservative corridor only"
+  },
+  "warm-panel-right-1043": {
+    "surfaceTriangleIntersections": 0,
+    "verticesInsideProtectedCorridorSamples": 0,
+    "minLateralMarginWithinProtectedHeightMeters": 1.6535482192229178,
+    "method": "BVH triangle intersection against 1200 closed corridor cells plus vertex containment across all frame planes; static sampled conservative corridor only"
+  },
+  "warm-panel-left-1043": {
+    "surfaceTriangleIntersections": 0,
+    "verticesInsideProtectedCorridorSamples": 0,
+    "minLateralMarginWithinProtectedHeightMeters": 1.6295863520016258,
+    "method": "BVH triangle intersection against 1200 closed corridor cells plus vertex containment across all frame planes; static sampled conservative corridor only"
+  },
+  "warm-panel-right-1047": {
+    "surfaceTriangleIntersections": 0,
+    "verticesInsideProtectedCorridorSamples": 0,
+    "minLateralMarginWithinProtectedHeightMeters": 1.6533924510416007,
+    "method": "BVH triangle intersection against 1200 closed corridor cells plus vertex containment across all frame planes; static sampled conservative corridor only"
+  },
+  "warm-panel-left-1047": {
+    "surfaceTriangleIntersections": 0,
+    "verticesInsideProtectedCorridorSamples": 0,
+    "minLateralMarginWithinProtectedHeightMeters": 1.628544099467959,
+    "method": "BVH triangle intersection against 1200 closed corridor cells plus vertex containment across all frame planes; static sampled conservative corridor only"
+  }
+}

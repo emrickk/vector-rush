@@ -1,0 +1,115 @@
+{
+  "model": "Kestrel07-v2",
+  "source_forward": "-Y",
+  "source_up": "+Z",
+  "unity_conversion": "Unity (x,y,z) = source (x,z,-y)",
+  "engines": [
+    {
+      "name": "port_main",
+      "source_exit": [
+        -1.68,
+        3.405,
+        -0.035
+      ],
+      "source_throat": [
+        -1.68,
+        2.72,
+        -0.035
+      ],
+      "unity_exit": [
+        -1.68,
+        -0.035,
+        -3.405
+      ],
+      "unity_throat": [
+        -1.68,
+        -0.035,
+        -2.72
+      ],
+      "unity_thrust_direction": [
+        0,
+        0,
+        -1
+      ],
+      "exit_inner_radius": 0.4,
+      "source_intermediate_annulus": [
+        -1.68,
+        3.11,
+        -0.035
+      ],
+      "unity_intermediate_annulus": [
+        -1.68,
+        -0.035,
+        -3.11
+      ]
+    },
+    {
+      "name": "starboard_main",
+      "source_exit": [
+        1.68,
+        3.405,
+        -0.035
+      ],
+      "source_throat": [
+        1.68,
+        2.72,
+        -0.035
+      ],
+      "unity_exit": [
+        1.68,
+        -0.035,
+        -3.405
+      ],
+      "unity_throat": [
+        1.68,
+        -0.035,
+        -2.72
+      ],
+      "unity_thrust_direction": [
+        0,
+        0,
+        -1
+      ],
+      "exit_inner_radius": 0.4,
+      "source_intermediate_annulus": [
+        1.68,
+        3.11,
+        -0.035
+      ],
+      "unity_intermediate_annulus": [
+        1.68,
+        -0.035,
+        -3.11
+      ]
+    },
+    {
+      "name": "central_impulse",
+      "source_exit": [
+        0,
+        2.76,
+        -0.08
+      ],
+      "source_throat": [
+        0,
+        2.43,
+        -0.08
+      ],
+      "unity_exit": [
+        0,
+        -0.08,
+        -2.76
+      ],
+      "unity_throat": [
+        0,
+        -0.08,
+        -2.43
+      ],
+      "unity_thrust_direction": [
+        0,
+        0,
+        -1
+      ],
+      "exit_inner_radius": 0.14
+    }
+  ]
+}

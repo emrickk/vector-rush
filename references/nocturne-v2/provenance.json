@@ -1,0 +1,172 @@
+{
+  "createdUtc": "2026-09-09T03:00:26.101540+00:00",
+  "method": "built-in image_gen.imagegen, four calls; A is shared appearance reference for B/C/D; originals copied byte-for-byte",
+  "status": "Assistant-reviewed working art-direction targets, not implemented-game evidence or owner approval of every detail",
+  "baselineBuildGuid": "40bed5f53c2449418e7fb56bf59739f6",
+  "baselineFrames": [
+    {
+      "index": 149,
+      "width": 1920,
+      "height": 1080,
+      "raceTime": 6.330049514770508,
+      "progress": 0.1507684737443924,
+      "speedKph": 174.49374389648438,
+      "fieldOfView": 69.60492706298828,
+      "anchorFile": "",
+      "cameraPosition": {
+        "x": 236.18751525878906,
+        "y": 45.37022399902344,
+        "z": -152.1686553955078
+      },
+      "cameraRotation": {
+        "x": 0.06320855766534805,
+        "y": 0.2574051022529602,
+        "z": 0.06506156176328659,
+        "w": 0.9620365500450134
+      },
+      "playerVisualPosition": {
+        "x": 243.62506103515625,
+        "y": 41.673152923583984,
+        "z": -140.62255859375
+      },
+      "playerVisualRotation": {
+        "x": -0.001727893017232418,
+        "y": 0.20853585004806519,
+        "z": 0.13183586299419403,
+        "w": 0.9690868258476257
+      }
+    },
+    {
+      "index": 943,
+      "width": 1920,
+      "height": 1080,
+      "raceTime": 39.409393310546875,
+      "progress": 0.8730698823928833,
+      "speedKph": 174.72422790527344,
+      "fieldOfView": 69.56929016113281,
+      "anchorFile": "03-middle.png",
+      "cameraPosition": {
+        "x": -234.30181884765625,
+        "y": 34.32700729370117,
+        "z": -190.6021728515625
+      },
+      "cameraRotation": {
+        "x": 0.11454992741346359,
+        "y": 0.9015011191368103,
+        "z": -0.055367011576890945,
+        "w": 0.4136528968811035
+      },
+      "playerVisualPosition": {
+        "x": -224.75442504882812,
+        "y": 29.17795753479004,
+        "z": -199.809326171875
+      },
+      "playerVisualRotation": {
+        "x": -0.12188339233398438,
+        "y": -0.8842958211898804,
+        "z": -0.03358450159430504,
+        "w": -0.44948577880859375
+      }
+    },
+    {
+      "index": 607,
+      "width": 1920,
+      "height": 1080,
+      "raceTime": 25.410486221313477,
+      "progress": 0.5813168287277222,
+      "speedKph": 175.93540954589844,
+      "fieldOfView": 69.62525177001953,
+      "anchorFile": "",
+      "cameraPosition": {
+        "x": -130.13961791992188,
+        "y": 46.80978012084961,
+        "z": 244.27581787109375
+      },
+      "cameraRotation": {
+        "x": 0.025563208386301994,
+        "y": 0.9190904498100281,
+        "z": -0.03339127078652382,
+        "w": -0.3917963206768036
+      },
+      "playerVisualPosition": {
+        "x": -140.36854553222656,
+        "y": 43.711368560791016,
+        "z": 234.8172607421875
+      },
+      "playerVisualRotation": {
+        "x": -0.062069620937108994,
+        "y": -0.9228830933570862,
+        "z": -0.03309263288974762,
+        "w": 0.37860146164894104
+      }
+    }
+  ],
+  "historicalStudio": "D uses ship-native-v4-control-01/01-studio-rear-three-quarter.png for corrected geometry/camera identity. This is the historical contact-repair control with previous maps, not a newly rendered current-app material inspection. The generated D intentionally disables engine emission.",
+  "comparisonScope": "Qualitative full-frame and material comparisons. Generation preserves general composition, not calibrated poses or exact geometry. Native A/B/C retain HUD; targets omit it. No current-HUD evaluation is inferred. No motion/audio/performance or technical renderer feasibility is established.",
+  "files": [
+    {
+      "path": "references/nocturne-v2/A-opening-city.png",
+      "width": 1672,
+      "height": 941,
+      "bytes": 1955614,
+      "sha256": "ecf81c1033a5f9fdb66ea83c7548132ec36669786c1941e50d69b95b2093acdb",
+      "pngCRCAndDecompression": "passed"
+    },
+    {
+      "path": "references/nocturne-v2/B-amber-gallery.png",
+      "width": 1672,
+      "height": 941,
+      "bytes": 2154460,
+      "sha256": "ee77de91f406bb1356fd40ffaa17f05e66c7b56544350de309e3e20fcde563d6",
+      "pngCRCAndDecompression": "passed"
+    },
+    {
+      "path": "references/nocturne-v2/C-thermal-passage.png",
+      "width": 1672,
+      "height": 941,
+      "bytes": 1931008,
+      "sha256": "d4e712aa81e3e4f55ce2786b60773002d703e12df8531f3ec96f6c0a1453cd14",
+      "pngCRCAndDecompression": "passed"
+    },
+    {
+      "path": "references/nocturne-v2/D-craft-materials.png",
+      "width": 1672,
+      "height": 941,
+      "bytes": 1607875,
+      "sha256": "d8bc9b1a5f3af3927d737c5f2aba343265ecaadc724487549c95c3644f7db848",
+      "pngCRCAndDecompression": "passed"
+    },
+    {
+      "path": "evidence/night-production/road-response/control/selected/frame-0149.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 1155961,
+      "sha256": "a973d662e39556c2b69e0d26953db72de70b7f51108a1940fa9e75160e7b3f3c",
+      "pngCRCAndDecompression": "passed"
+    },
+    {
+      "path": "evidence/night-production/road-response/control/full-lap/03-middle.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 1516906,
+      "sha256": "1f8d6616b35a9ab68b9765fb8629dea9ad53639d551fd1485ce97abb15847035",
+      "pngCRCAndDecompression": "passed"
+    },
+    {
+      "path": "evidence/night-production/road-response/control/selected/frame-0607.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 1135555,
+      "sha256": "c391df468edca33bf35c4f74ebe7119c6fe5bdfa02b7e35addd8c698bc559aef",
+      "pngCRCAndDecompression": "passed"
+    },
+    {
+      "path": "evidence/ship-native-v4-control-01/01-studio-rear-three-quarter.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 699859,
+      "sha256": "f40cceab352d4459ae9be9348d06710feb4e8d4120c63457c9a13944d16005c5",
+      "pngCRCAndDecompression": "passed"
+    }
+  ]
+}

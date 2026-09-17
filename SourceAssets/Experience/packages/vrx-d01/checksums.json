@@ -1,0 +1,26 @@
+{
+  "contractVersion": 1,
+  "revision": "vrx-d01",
+  "files": [
+    {
+      "path": "INTEGRATION.md",
+      "sha256": "4f05835fcfb743bc78ac7bcb136358313bfb6a1534a4b602f6a4ba33b9fc598b"
+    },
+    {
+      "path": "design/vrx_event_storyboard_a.json",
+      "sha256": "e66d3ed117dc797948618e9bb70e67aef2155a4952ab1b638dee4daeb6d0fb16"
+    },
+    {
+      "path": "design/vrx_ui_tokens_a.json",
+      "sha256": "78d8c092c7727e8f3780585126d8fba2886e6b75202c9aa11152b815be77a600"
+    },
+    {
+      "path": "experience-assets.json",
+      "sha256": "cb2467237267ba3a5e412374fe4c44359a321b9d590b77b264e2ee01de9bea97"
+    },
+    {
+      "path": "ui_storyboards_recipe.py",
+      "sha256": "98c86d9348dff3f34b01a46a7a0f6fe3d07c34beaefc00556d0ccb008b972e1f"
+    }
+  ]
+}

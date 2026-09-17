@@ -1,0 +1,34 @@
+{
+  "generator": "build_opening.py",
+  "units": "metres",
+  "assets": [
+    {
+      "name": "MeridianExchange",
+      "parts": 203,
+      "vertices": 11368,
+      "triangles": 21924,
+      "fbxSha256": "ade5d7b073b2a0b2c3b6d413567cf7056afc4be4acaeec47ed9f76767961440f"
+    },
+    {
+      "name": "TransitTerraces",
+      "parts": 143,
+      "vertices": 8008,
+      "triangles": 15444,
+      "fbxSha256": "e1de2f3414ae3dc6418560061c5b71ee5fc1f8d4ccaf5abd234d10f020cd9e76"
+    },
+    {
+      "name": "RiversideOffices",
+      "parts": 110,
+      "vertices": 6160,
+      "triangles": 11880,
+      "fbxSha256": "fa57e75949c0a1e6223a929b7d5f742d7e32782d5d0c97e5f4c6eca23d2a788a"
+    },
+    {
+      "name": "CanalWorks",
+      "parts": 54,
+      "vertices": 3024,
+      "triangles": 5832,
+      "fbxSha256": "d8ecb7f59fe80ceb14b3c45b7fcfb97c9491ce8df71a2c9b78f84c31d8505a00"
+    }
+  ]
+}

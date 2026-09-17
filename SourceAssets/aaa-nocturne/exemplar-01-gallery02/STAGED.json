@@ -1,0 +1,10 @@
+{
+  "revision": "exemplar-01-gallery02-lighting_a",
+  "status": "TECHNICAL_PAYLOAD_COMPLETE_BLOCKED_VISUAL_REVIEW",
+  "courseHash": "8c2161b930d43c505c8380ce30a719e6833a453d671353994f79b75e4c67a79e",
+  "checksumsSha256": "c097348cceef01e805a9428d1f1ed3fbfe2d0b904ca915ce51f5aff929899ea7",
+  "layoutComplete": true,
+  "nativeImportVerified": false,
+  "rendered": true,
+  "visualStatus": "BLOCKED_VISUAL_REVIEW"
+}

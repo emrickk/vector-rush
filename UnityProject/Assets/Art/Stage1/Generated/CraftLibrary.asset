@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa62d293ae834a57841392b86d1764ef, type: 3}
+  m_Name: ProductionMaterialLibrary(Clone)
+  m_EditorClassIdentifier: VectorRush.Runtime::VectorRush.ProductionMaterialLibrary
+  stage1Finish: 1
+  craftSurfaceTemplate: {fileID: 2100000, guid: c29d6ff8a73a94870ac431157cf7bb99, type: 2}
+  craftMetalFallback: {fileID: 2100000, guid: 28874fb4a373844b6b9543ef644403c8, type: 2}
+  craftGlass: {fileID: 2100000, guid: 85ba2de5ad80d496189d4b476e96901c, type: 2}
+  craftEngineAccent: {fileID: 2100000, guid: cfbe1d136e9d242ff912decf3a64ca09, type: 2}
+  craftEngineCore: {fileID: 2100000, guid: a6ce3ee6b2d004a9b9032364dfa2b1b8, type: 2}

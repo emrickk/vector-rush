@@ -1,0 +1,542 @@
+{
+  "accepted": 365,
+  "rejectedCandidates": 105,
+  "courseSamples": 1201,
+  "protectedLateral": [
+    -12.2,
+    12.2
+  ],
+  "protectedVertical": [
+    -0.05,
+    8
+  ],
+  "method": "Conservative OBB versus expanded sampled road prisms; footprint SAT between buildings",
+  "limitations": "Camera volume, assembled old city overlap and moving occlusion require 01 native validation.",
+  "rejected": [
+    {
+      "assetId": "vrx_city_hotel_b",
+      "progress": 0.0612407241541814,
+      "lateral": -56.18019722590647
+    },
+    {
+      "assetId": "vrx_city_hotel_b",
+      "progress": 0.0612407241541814,
+      "lateral": -82.18019722590647
+    },
+    {
+      "assetId": "vrx_city_works_b",
+      "progress": 0.08559207667819724,
+      "lateral": -67.43421930636114
+    },
+    {
+      "assetId": "vrx_city_works_b",
+      "progress": 0.08559207667819724,
+      "lateral": -93.43421930636114
+    },
+    {
+      "assetId": "vrx_city_works_b",
+      "progress": 0.08559207667819724,
+      "lateral": -119.43421930636114
+    },
+    {
+      "assetId": "vrx_city_works_b",
+      "progress": 0.08559207667819724,
+      "lateral": -145.43421930636114
+    },
+    {
+      "assetId": "vrx_city_exchange_a",
+      "progress": 0.09788255364863908,
+      "lateral": 46.63274246759546
+    },
+    {
+      "assetId": "vrx_city_exchange_a",
+      "progress": 0.09788255364863908,
+      "lateral": 72.63274246759546
+    },
+    {
+      "assetId": "vrx_city_works_a",
+      "progress": 0.1332770378112186,
+      "lateral": -74.56804973020486
+    },
+    {
+      "assetId": "vrx_city_works_b",
+      "progress": 0.17770090803263905,
+      "lateral": -69.96781388704406
+    },
+    {
+      "assetId": "vrx_city_works_b",
+      "progress": 0.17770090803263905,
+      "lateral": -95.96781388704406
+    },
+    {
+      "assetId": "vrx_city_works_b",
+      "progress": 0.17770090803263905,
+      "lateral": -121.96781388704406
+    },
+    {
+      "assetId": "vrx_city_works_a",
+      "progress": 0.2255697772088541,
+      "lateral": -46.60783110839934
+    },
+    {
+      "assetId": "vrx_city_works_a",
+      "progress": 0.2255697772088541,
+      "lateral": -72.60783110839934
+    },
+    {
+      "assetId": "vrx_city_hotel_b",
+      "progress": 0.24839246328001266,
+      "lateral": -68.8841546373053
+    },
+    {
+      "assetId": "vrx_city_hotel_b",
+      "progress": 0.24839246328001266,
+      "lateral": -94.8841546373053
+    },
+    {
+      "assetId": "vrx_city_hotel_b",
+      "progress": 0.24839246328001266,
+      "lateral": -120.8841546373053
+    },
+    {
+      "assetId": "vrx_city_hotel_b",
+      "progress": 0.24839246328001266,
+      "lateral": -146.8841546373053
+    },
+    {
+      "assetId": "vrx_city_works_b",
+      "progress": 0.2741093317924091,
+      "lateral": -70.89234020195158
+    },
+    {
+      "assetId": "vrx_city_works_a",
+      "progress": 0.3199954652664402,
+      "lateral": -72.60448796439408
+    },
+    {
+      "assetId": "vrx_city_exchange_b",
+      "progress": 0.3294805498913148,
+      "lateral": 69.9150386822928
+    },
+    {
+      "assetId": "vrx_city_exchange_b",
+      "progress": 0.3294805498913148,
+      "lateral": 95.9150386822928
+    },
+    {
+      "assetId": "vrx_city_exchange_b",
+      "progress": 0.3294805498913148,
+      "lateral": 121.9150386822928
+    },
+    {
+      "assetId": "vrx_city_services_b",
+      "progress": 0.3542504864421888,
+      "lateral": 49.85207657365193
+    },
+    {
+      "assetId": "vrx_city_services_b",
+      "progress": 0.3542504864421888,
+      "lateral": 75.85207657365193
+    },
+    {
+      "assetId": "vrx_city_services_b",
+      "progress": 0.3542504864421888,
+      "lateral": 101.85207657365193
+    },
+    {
+      "assetId": "vrx_city_services_b",
+      "progress": 0.3542504864421888,
+      "lateral": 127.85207657365193
+    },
+    {
+      "assetId": "vrx_city_exchange_a",
+      "progress": 0.37491029206483945,
+      "lateral": 44.64681001809613
+    },
+    {
+      "assetId": "vrx_city_exchange_a",
+      "progress": 0.37491029206483945,
+      "lateral": 70.64681001809613
+    },
+    {
+      "assetId": "vrx_city_exchange_a",
+      "progress": 0.37491029206483945,
+      "lateral": 96.64681001809613
+    },
+    {
+      "assetId": "vrx_city_exchange_a",
+      "progress": 0.37491029206483945,
+      "lateral": 122.64681001809613
+    },
+    {
+      "assetId": "vrx_city_hotel_a",
+      "progress": 0.3871817931587726,
+      "lateral": -69.48215092206243
+    },
+    {
+      "assetId": "vrx_city_hotel_a",
+      "progress": 0.3871817931587726,
+      "lateral": -95.48215092206243
+    },
+    {
+      "assetId": "vrx_city_hotel_a",
+      "progress": 0.3871817931587726,
+      "lateral": -121.48215092206243
+    },
+    {
+      "assetId": "vrx_city_services_a",
+      "progress": 0.39998055078874295,
+      "lateral": 75.83647931256537
+    },
+    {
+      "assetId": "vrx_city_works_a",
+      "progress": 0.4102847506403152,
+      "lateral": -59.557618040338056
+    },
+    {
+      "assetId": "vrx_city_works_a",
+      "progress": 0.4102847506403152,
+      "lateral": -85.55761804033806
+    },
+    {
+      "assetId": "vrx_city_works_a",
+      "progress": 0.4102847506403152,
+      "lateral": -111.55761804033806
+    },
+    {
+      "assetId": "vrx_city_hotel_b",
+      "progress": 0.4345088278793412,
+      "lateral": -66.57271262799111
+    },
+    {
+      "assetId": "vrx_city_hotel_b",
+      "progress": 0.4345088278793412,
+      "lateral": -92.57271262799111
+    },
+    {
+      "assetId": "vrx_city_hotel_b",
+      "progress": 0.4345088278793412,
+      "lateral": -118.57271262799111
+    },
+    {
+      "assetId": "vrx_city_hotel_b",
+      "progress": 0.4345088278793412,
+      "lateral": -144.5727126279911
+    },
+    {
+      "assetId": "vrx_city_works_b",
+      "progress": 0.45641785179377786,
+      "lateral": -73.90303590773435
+    },
+    {
+      "assetId": "vrx_city_works_b",
+      "progress": 0.45641785179377786,
+      "lateral": -99.90303590773435
+    },
+    {
+      "assetId": "vrx_city_works_b",
+      "progress": 0.45641785179377786,
+      "lateral": -125.90303590773435
+    },
+    {
+      "assetId": "vrx_city_works_b",
+      "progress": 0.45641785179377786,
+      "lateral": -151.90303590773436
+    },
+    {
+      "assetId": "vrx_city_exchange_a",
+      "progress": 0.4703759102806937,
+      "lateral": 44.13565363447853
+    },
+    {
+      "assetId": "vrx_city_exchange_a",
+      "progress": 0.4703759102806937,
+      "lateral": 70.13565363447853
+    },
+    {
+      "assetId": "vrx_city_hotel_a",
+      "progress": 0.47941220307129984,
+      "lateral": -70.53767327560993
+    },
+    {
+      "assetId": "vrx_city_hotel_a",
+      "progress": 0.47941220307129984,
+      "lateral": -96.53767327560993
+    },
+    {
+      "assetId": "vrx_city_hotel_a",
+      "progress": 0.47941220307129984,
+      "lateral": -122.53767327560993
+    },
+    {
+      "assetId": "vrx_city_hotel_a",
+      "progress": 0.47941220307129984,
+      "lateral": -148.53767327560993
+    },
+    {
+      "assetId": "vrx_city_works_a",
+      "progress": 0.5043932975708915,
+      "lateral": -75.34872120150499
+    },
+    {
+      "assetId": "vrx_city_works_a",
+      "progress": 0.5043932975708915,
+      "lateral": -101.34872120150499
+    },
+    {
+      "assetId": "vrx_city_works_a",
+      "progress": 0.5043932975708915,
+      "lateral": -127.34872120150499
+    },
+    {
+      "assetId": "vrx_city_works_a",
+      "progress": 0.5043932975708915,
+      "lateral": -153.348721201505
+    },
+    {
+      "assetId": "vrx_city_works_b",
+      "progress": 0.5541026116921789,
+      "lateral": -47.9971386304324
+    },
+    {
+      "assetId": "vrx_city_works_b",
+      "progress": 0.5541026116921789,
+      "lateral": -73.9971386304324
+    },
+    {
+      "assetId": "vrx_city_works_b",
+      "progress": 0.5541026116921789,
+      "lateral": -99.9971386304324
+    },
+    {
+      "assetId": "vrx_city_hotel_a",
+      "progress": 0.6696455163331544,
+      "lateral": -63.87878007328327
+    },
+    {
+      "assetId": "vrx_city_hotel_a",
+      "progress": 0.6696455163331544,
+      "lateral": -89.87878007328327
+    },
+    {
+      "assetId": "vrx_city_hotel_a",
+      "progress": 0.6696455163331544,
+      "lateral": -115.87878007328327
+    },
+    {
+      "assetId": "vrx_city_works_a",
+      "progress": 0.6925197150740797,
+      "lateral": -61.99336070401584
+    },
+    {
+      "assetId": "vrx_city_works_a",
+      "progress": 0.6925197150740797,
+      "lateral": -87.99336070401584
+    },
+    {
+      "assetId": "vrx_city_works_a",
+      "progress": 0.6925197150740797,
+      "lateral": -113.99336070401584
+    },
+    {
+      "assetId": "vrx_city_works_a",
+      "progress": 0.6925197150740797,
+      "lateral": -139.99336070401586
+    },
+    {
+      "assetId": "vrx_city_works_a",
+      "progress": 0.08777777777777777,
+      "lateral": -172.24107501729839
+    },
+    {
+      "assetId": "vrx_city_hotel_b",
+      "progress": 0.16555555555555557,
+      "lateral": -178.38363115541398
+    },
+    {
+      "assetId": "vrx_city_works_b",
+      "progress": 0.2433333333333333,
+      "lateral": -209.49647036095544
+    },
+    {
+      "assetId": "vrx_city_hotel_a",
+      "progress": 0.3211111111111111,
+      "lateral": -171.25993897309723
+    },
+    {
+      "assetId": "vrx_city_services_b",
+      "progress": 0.36,
+      "lateral": 197.11515215867223
+    },
+    {
+      "assetId": "vrx_city_works_a",
+      "progress": 0.3988888888888889,
+      "lateral": -179.7630088263629
+    },
+    {
+      "assetId": "vrx_city_hotel_b",
+      "progress": 0.47666666666666657,
+      "lateral": -226.76865873171818
+    },
+    {
+      "assetId": "vrx_city_works_b",
+      "progress": 0.5544444444444444,
+      "lateral": -169.0866089147099
+    },
+    {
+      "assetId": "vrx_city_exchange_b",
+      "progress": 0.5933333333333334,
+      "lateral": 175.27506456711922
+    },
+    {
+      "assetId": "vrx_city_podium_a",
+      "progress": 0.012,
+      "lateral": 30
+    },
+    {
+      "assetId": "vrx_city_podium_a",
+      "progress": 0.041166666666666664,
+      "lateral": -30
+    },
+    {
+      "assetId": "vrx_city_podium_a",
+      "progress": 0.07033333333333333,
+      "lateral": 30
+    },
+    {
+      "assetId": "vrx_city_podium_a",
+      "progress": 0.09949999999999998,
+      "lateral": -30
+    },
+    {
+      "assetId": "vrx_city_podium_a",
+      "progress": 0.15783333333333335,
+      "lateral": -30
+    },
+    {
+      "assetId": "vrx_city_podium_a",
+      "progress": 0.18699999999999997,
+      "lateral": 30
+    },
+    {
+      "assetId": "vrx_city_podium_a",
+      "progress": 0.21616666666666665,
+      "lateral": -30
+    },
+    {
+      "assetId": "vrx_city_podium_a",
+      "progress": 0.24533333333333332,
+      "lateral": 30
+    },
+    {
+      "assetId": "vrx_city_podium_a",
+      "progress": 0.4203333333333333,
+      "lateral": 30
+    },
+    {
+      "assetId": "vrx_city_podium_a",
+      "progress": 0.537,
+      "lateral": 30
+    },
+    {
+      "assetId": "vrx_city_podium_a",
+      "progress": 0.5953333333333334,
+      "lateral": 30
+    },
+    {
+      "assetId": "vrx_city_podium_a",
+      "progress": 0.6244999999999999,
+      "lateral": -30
+    },
+    {
+      "assetId": "vrx_city_canopy_a",
+      "progress": 0.062,
+      "lateral": 29
+    },
+    {
+      "assetId": "vrx_city_canopy_a",
+      "progress": 0.21,
+      "lateral": -29
+    },
+    {
+      "assetId": "vrx_city_canopy_a",
+      "progress": 0.56,
+      "lateral": -29
+    },
+    {
+      "assetId": "vrx_city_advert_a",
+      "progress": 0.3,
+      "lateral": 26
+    },
+    {
+      "assetId": "vrx_city_advert_a",
+      "progress": 0.65,
+      "lateral": 26
+    },
+    {
+      "assetId": "vrx_track_guidance_a",
+      "progress": 0.29088015158943364,
+      "lateral": -12.75
+    },
+    {
+      "assetId": "vrx_track_guidance_a",
+      "progress": 0.29088015158943364,
+      "lateral": 12.75
+    },
+    {
+      "assetId": "vrx_track_guidance_a",
+      "progress": 0.3347940730183303,
+      "lateral": -12.75
+    },
+    {
+      "assetId": "vrx_track_guidance_a",
+      "progress": 0.3347940730183303,
+      "lateral": 12.75
+    },
+    {
+      "assetId": "vrx_track_guidance_a",
+      "progress": 0.33967339762154103,
+      "lateral": 12.75
+    },
+    {
+      "assetId": "vrx_track_guidance_a",
+      "progress": 0.34455272222475175,
+      "lateral": 12.75
+    },
+    {
+      "assetId": "vrx_track_guidance_a",
+      "progress": 0.34943204682796253,
+      "lateral": 12.75
+    },
+    {
+      "assetId": "vrx_track_guidance_a",
+      "progress": 0.35431137143117325,
+      "lateral": 12.75
+    },
+    {
+      "assetId": "vrx_track_guidance_a",
+      "progress": 0.3835873190504377,
+      "lateral": -12.75
+    },
+    {
+      "assetId": "vrx_track_guidance_a",
+      "progress": 0.3835873190504377,
+      "lateral": 12.75
+    },
+    {
+      "assetId": "vrx_track_guidance_a",
+      "progress": 0.3884666436536484,
+      "lateral": -12.75
+    },
+    {
+      "assetId": "vrx_track_guidance_a",
+      "progress": 0.3933459682568592,
+      "lateral": -12.75
+    },
+    {
+      "assetId": "vrx_track_guidance_a",
+      "progress": 0.6861054444495035,
+      "lateral": -12.75
+    }
+  ]
+}

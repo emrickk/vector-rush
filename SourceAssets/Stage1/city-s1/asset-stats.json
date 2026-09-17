@@ -1,0 +1,760 @@
+{
+  "vrx_city_exchange_a": [
+    {
+      "lod": 0,
+      "triangles": 1224,
+      "vertices": 736,
+      "nonmanifoldEdges": 0,
+      "degenerateTriangles": 0,
+      "materialSlots": [
+        "vrx_mat_mineral_a",
+        "vrx_mat_slate_a",
+        "vrx_mat_occupied_a",
+        "vrx_mat_titanium_a",
+        "vrx_mat_cyan_a",
+        "vrx_mat_officeglass_a"
+      ],
+      "boundsMinUnity": [
+        -16.5,
+        0.0,
+        -15.100000381469727
+      ],
+      "boundsMaxUnity": [
+        21.5,
+        80.5999984741211,
+        15.100000381469727
+      ]
+    },
+    {
+      "lod": 1,
+      "triangles": 588,
+      "vertices": 392,
+      "nonmanifoldEdges": 0,
+      "degenerateTriangles": 0,
+      "materialSlots": [
+        "vrx_mat_mineral_a",
+        "vrx_mat_slate_a",
+        "vrx_mat_occupied_a",
+        "vrx_mat_titanium_a",
+        "vrx_mat_cyan_a",
+        "vrx_mat_officeglass_a"
+      ],
+      "boundsMinUnity": [
+        -16.5,
+        0.0,
+        -15.100000381469727
+      ],
+      "boundsMaxUnity": [
+        21.5,
+        80.5999984741211,
+        15.100000381469727
+      ]
+    }
+  ],
+  "vrx_city_hotel_a": [
+    {
+      "lod": 0,
+      "triangles": 1248,
+      "vertices": 768,
+      "nonmanifoldEdges": 0,
+      "degenerateTriangles": 0,
+      "materialSlots": [
+        "vrx_mat_mineral_a",
+        "vrx_mat_slate_a",
+        "vrx_mat_occupied_a",
+        "vrx_mat_titanium_a",
+        "vrx_mat_cyan_a",
+        "vrx_mat_hotelglass_a"
+      ],
+      "boundsMinUnity": [
+        -12.0,
+        0.0,
+        -13.600000381469727
+      ],
+      "boundsMaxUnity": [
+        12.0,
+        124.5,
+        13.600000381469727
+      ]
+    },
+    {
+      "lod": 1,
+      "triangles": 672,
+      "vertices": 448,
+      "nonmanifoldEdges": 0,
+      "degenerateTriangles": 0,
+      "materialSlots": [
+        "vrx_mat_mineral_a",
+        "vrx_mat_slate_a",
+        "vrx_mat_occupied_a",
+        "vrx_mat_titanium_a",
+        "vrx_mat_cyan_a",
+        "vrx_mat_hotelglass_a"
+      ],
+      "boundsMinUnity": [
+        -12.0,
+        0.0,
+        -13.600000381469727
+      ],
+      "boundsMaxUnity": [
+        12.0,
+        124.5,
+        13.600000381469727
+      ]
+    }
+  ],
+  "vrx_city_services_a": [
+    {
+      "lod": 0,
+      "triangles": 1716,
+      "vertices": 1032,
+      "nonmanifoldEdges": 0,
+      "degenerateTriangles": 0,
+      "materialSlots": [
+        "vrx_mat_mineral_a",
+        "vrx_mat_slate_a",
+        "vrx_mat_occupied_a",
+        "vrx_mat_titanium_a",
+        "vrx_mat_cyan_a",
+        "vrx_mat_serviceglass_a"
+      ],
+      "boundsMinUnity": [
+        -19.5,
+        0.0,
+        -18.100000381469727
+      ],
+      "boundsMaxUnity": [
+        19.5,
+        48.5,
+        18.100000381469727
+      ]
+    },
+    {
+      "lod": 1,
+      "triangles": 888,
+      "vertices": 592,
+      "nonmanifoldEdges": 0,
+      "degenerateTriangles": 0,
+      "materialSlots": [
+        "vrx_mat_mineral_a",
+        "vrx_mat_slate_a",
+        "vrx_mat_occupied_a",
+        "vrx_mat_titanium_a",
+        "vrx_mat_cyan_a",
+        "vrx_mat_serviceglass_a"
+      ],
+      "boundsMinUnity": [
+        -19.5,
+        0.0,
+        -18.100000381469727
+      ],
+      "boundsMaxUnity": [
+        19.5,
+        48.5,
+        18.100000381469727
+      ]
+    }
+  ],
+  "vrx_city_works_a": [
+    {
+      "lod": 0,
+      "triangles": 1060,
+      "vertices": 662,
+      "nonmanifoldEdges": 0,
+      "degenerateTriangles": 0,
+      "materialSlots": [
+        "vrx_mat_mineral_a",
+        "vrx_mat_slate_a",
+        "vrx_mat_occupied_a",
+        "vrx_mat_titanium_a",
+        "vrx_mat_cyan_a",
+        "vrx_mat_glass_a"
+      ],
+      "boundsMinUnity": [
+        -21.0,
+        0.0,
+        -18.600000381469727
+      ],
+      "boundsMaxUnity": [
+        25.0,
+        42.0,
+        18.600000381469727
+      ]
+    },
+    {
+      "lod": 1,
+      "triangles": 640,
+      "vertices": 430,
+      "nonmanifoldEdges": 0,
+      "degenerateTriangles": 0,
+      "materialSlots": [
+        "vrx_mat_mineral_a",
+        "vrx_mat_slate_a",
+        "vrx_mat_occupied_a",
+        "vrx_mat_titanium_a",
+        "vrx_mat_cyan_a",
+        "vrx_mat_glass_a"
+      ],
+      "boundsMinUnity": [
+        -21.0,
+        0.0,
+        -18.600000381469727
+      ],
+      "boundsMaxUnity": [
+        25.0,
+        42.0,
+        18.600000381469727
+      ]
+    }
+  ],
+  "vrx_city_podium_a": [
+    {
+      "lod": 0,
+      "triangles": 480,
+      "vertices": 272,
+      "nonmanifoldEdges": 0,
+      "degenerateTriangles": 0,
+      "materialSlots": [
+        "vrx_mat_mineral_a",
+        "vrx_mat_slate_a",
+        "vrx_mat_occupied_a",
+        "vrx_mat_titanium_a",
+        "vrx_mat_cyan_a"
+      ],
+      "boundsMinUnity": [
+        -12.0,
+        0.0,
+        -11.600000381469727
+      ],
+      "boundsMaxUnity": [
+        12.0,
+        10.399999618530273,
+        11.600000381469727
+      ]
+    },
+    {
+      "lod": 1,
+      "triangles": 192,
+      "vertices": 128,
+      "nonmanifoldEdges": 0,
+      "degenerateTriangles": 0,
+      "materialSlots": [
+        "vrx_mat_mineral_a",
+        "vrx_mat_slate_a",
+        "vrx_mat_occupied_a",
+        "vrx_mat_titanium_a",
+        "vrx_mat_cyan_a"
+      ],
+      "boundsMinUnity": [
+        -12.0,
+        0.0,
+        -11.600000381469727
+      ],
+      "boundsMaxUnity": [
+        12.0,
+        10.399999618530273,
+        11.600000381469727
+      ]
+    }
+  ],
+  "vrx_track_guidance_a": [
+    {
+      "lod": 0,
+      "triangles": 216,
+      "vertices": 128,
+      "nonmanifoldEdges": 0,
+      "degenerateTriangles": 0,
+      "materialSlots": [
+        "vrx_mat_slate_a",
+        "vrx_mat_cyan_a",
+        "vrx_mat_titanium_a"
+      ],
+      "boundsMinUnity": [
+        -0.375,
+        0.0,
+        -1.399999976158142
+      ],
+      "boundsMaxUnity": [
+        0.375,
+        0.5649999976158142,
+        1.399999976158142
+      ]
+    },
+    {
+      "lod": 1,
+      "triangles": 120,
+      "vertices": 80,
+      "nonmanifoldEdges": 0,
+      "degenerateTriangles": 0,
+      "materialSlots": [
+        "vrx_mat_slate_a",
+        "vrx_mat_cyan_a",
+        "vrx_mat_titanium_a"
+      ],
+      "boundsMinUnity": [
+        -0.375,
+        0.0,
+        -1.399999976158142
+      ],
+      "boundsMaxUnity": [
+        0.375,
+        0.5649999976158142,
+        1.399999976158142
+      ]
+    }
+  ],
+  "vrx_city_exchange_b": [
+    {
+      "lod": 0,
+      "triangles": 1152,
+      "vertices": 720,
+      "nonmanifoldEdges": 0,
+      "degenerateTriangles": 0,
+      "materialSlots": [
+        "vrx_mat_mineral_a",
+        "vrx_mat_slate_a",
+        "vrx_mat_occupied_a",
+        "vrx_mat_titanium_a",
+        "vrx_mat_cyan_a",
+        "vrx_mat_officeglass_a",
+        "vrx_mat_magenta_a"
+      ],
+      "boundsMinUnity": [
+        -20.5,
+        0.0,
+        -17.100000381469727
+      ],
+      "boundsMaxUnity": [
+        20.5,
+        94.5,
+        17.5
+      ]
+    },
+    {
+      "lod": 1,
+      "triangles": 756,
+      "vertices": 504,
+      "nonmanifoldEdges": 0,
+      "degenerateTriangles": 0,
+      "materialSlots": [
+        "vrx_mat_mineral_a",
+        "vrx_mat_slate_a",
+        "vrx_mat_occupied_a",
+        "vrx_mat_titanium_a",
+        "vrx_mat_cyan_a",
+        "vrx_mat_officeglass_a",
+        "vrx_mat_magenta_a"
+      ],
+      "boundsMinUnity": [
+        -20.5,
+        0.0,
+        -17.100000381469727
+      ],
+      "boundsMaxUnity": [
+        20.5,
+        94.5,
+        17.5
+      ]
+    }
+  ],
+  "vrx_city_hotel_b": [
+    {
+      "lod": 0,
+      "triangles": 996,
+      "vertices": 616,
+      "nonmanifoldEdges": 0,
+      "degenerateTriangles": 0,
+      "materialSlots": [
+        "vrx_mat_mineral_a",
+        "vrx_mat_slate_a",
+        "vrx_mat_occupied_a",
+        "vrx_mat_titanium_a",
+        "vrx_mat_cyan_a",
+        "vrx_mat_hotelglass_a",
+        "vrx_mat_magenta_a"
+      ],
+      "boundsMinUnity": [
+        -12.0,
+        0.0,
+        -13.600000381469727
+      ],
+      "boundsMaxUnity": [
+        12.0,
+        106.5,
+        13.600000381469727
+      ]
+    },
+    {
+      "lod": 1,
+      "triangles": 552,
+      "vertices": 368,
+      "nonmanifoldEdges": 0,
+      "degenerateTriangles": 0,
+      "materialSlots": [
+        "vrx_mat_mineral_a",
+        "vrx_mat_slate_a",
+        "vrx_mat_occupied_a",
+        "vrx_mat_titanium_a",
+        "vrx_mat_cyan_a",
+        "vrx_mat_hotelglass_a",
+        "vrx_mat_magenta_a"
+      ],
+      "boundsMinUnity": [
+        -12.0,
+        0.0,
+        -13.600000381469727
+      ],
+      "boundsMaxUnity": [
+        12.0,
+        106.5,
+        13.600000381469727
+      ]
+    }
+  ],
+  "vrx_city_services_b": [
+    {
+      "lod": 0,
+      "triangles": 1752,
+      "vertices": 1056,
+      "nonmanifoldEdges": 0,
+      "degenerateTriangles": 0,
+      "materialSlots": [
+        "vrx_mat_mineral_a",
+        "vrx_mat_slate_a",
+        "vrx_mat_occupied_a",
+        "vrx_mat_titanium_a",
+        "vrx_mat_cyan_a",
+        "vrx_mat_serviceglass_a"
+      ],
+      "boundsMinUnity": [
+        -28.200000762939453,
+        0.0,
+        -18.100000381469727
+      ],
+      "boundsMaxUnity": [
+        19.5,
+        48.5,
+        18.5
+      ]
+    },
+    {
+      "lod": 1,
+      "triangles": 924,
+      "vertices": 616,
+      "nonmanifoldEdges": 0,
+      "degenerateTriangles": 0,
+      "materialSlots": [
+        "vrx_mat_mineral_a",
+        "vrx_mat_slate_a",
+        "vrx_mat_occupied_a",
+        "vrx_mat_titanium_a",
+        "vrx_mat_cyan_a",
+        "vrx_mat_serviceglass_a"
+      ],
+      "boundsMinUnity": [
+        -28.200000762939453,
+        0.0,
+        -18.100000381469727
+      ],
+      "boundsMaxUnity": [
+        19.5,
+        48.5,
+        18.5
+      ]
+    }
+  ],
+  "vrx_city_works_b": [
+    {
+      "lod": 0,
+      "triangles": 1084,
+      "vertices": 678,
+      "nonmanifoldEdges": 0,
+      "degenerateTriangles": 0,
+      "materialSlots": [
+        "vrx_mat_mineral_a",
+        "vrx_mat_slate_a",
+        "vrx_mat_occupied_a",
+        "vrx_mat_titanium_a",
+        "vrx_mat_cyan_a",
+        "vrx_mat_glass_a"
+      ],
+      "boundsMinUnity": [
+        -30.174999237060547,
+        0.0,
+        -18.600000381469727
+      ],
+      "boundsMaxUnity": [
+        25.0,
+        42.0,
+        18.600000381469727
+      ]
+    },
+    {
+      "lod": 1,
+      "triangles": 664,
+      "vertices": 446,
+      "nonmanifoldEdges": 0,
+      "degenerateTriangles": 0,
+      "materialSlots": [
+        "vrx_mat_mineral_a",
+        "vrx_mat_slate_a",
+        "vrx_mat_occupied_a",
+        "vrx_mat_titanium_a",
+        "vrx_mat_cyan_a",
+        "vrx_mat_glass_a"
+      ],
+      "boundsMinUnity": [
+        -30.174999237060547,
+        0.0,
+        -18.600000381469727
+      ],
+      "boundsMaxUnity": [
+        25.0,
+        42.0,
+        18.600000381469727
+      ]
+    }
+  ],
+  "vrx_city_landmark_a": [
+    {
+      "lod": 0,
+      "triangles": 1164,
+      "vertices": 696,
+      "nonmanifoldEdges": 0,
+      "degenerateTriangles": 0,
+      "materialSlots": [
+        "vrx_mat_mineral_a",
+        "vrx_mat_slate_a",
+        "vrx_mat_occupied_a",
+        "vrx_mat_titanium_a",
+        "vrx_mat_cyan_a"
+      ],
+      "boundsMinUnity": [
+        -19.0,
+        0.0,
+        -17.100000381469727
+      ],
+      "boundsMaxUnity": [
+        19.0,
+        165.0,
+        17.100000381469727
+      ]
+    },
+    {
+      "lod": 1,
+      "triangles": 648,
+      "vertices": 432,
+      "nonmanifoldEdges": 0,
+      "degenerateTriangles": 0,
+      "materialSlots": [
+        "vrx_mat_mineral_a",
+        "vrx_mat_slate_a",
+        "vrx_mat_occupied_a",
+        "vrx_mat_titanium_a",
+        "vrx_mat_cyan_a"
+      ],
+      "boundsMinUnity": [
+        -19.0,
+        0.0,
+        -17.100000381469727
+      ],
+      "boundsMaxUnity": [
+        19.0,
+        165.0,
+        17.100000381469727
+      ]
+    }
+  ],
+  "vrx_city_canopy_a": [
+    {
+      "lod": 0,
+      "triangles": 276,
+      "vertices": 168,
+      "nonmanifoldEdges": 0,
+      "degenerateTriangles": 0,
+      "materialSlots": [
+        "vrx_mat_mineral_a",
+        "vrx_mat_titanium_a",
+        "vrx_mat_cyan_a",
+        "vrx_mat_occupied_a"
+      ],
+      "boundsMinUnity": [
+        -6.699999809265137,
+        0.0,
+        -14.5
+      ],
+      "boundsMaxUnity": [
+        5.300000190734863,
+        10.625,
+        14.5
+      ]
+    },
+    {
+      "lod": 1,
+      "triangles": 180,
+      "vertices": 120,
+      "nonmanifoldEdges": 0,
+      "degenerateTriangles": 0,
+      "materialSlots": [
+        "vrx_mat_mineral_a",
+        "vrx_mat_titanium_a",
+        "vrx_mat_cyan_a",
+        "vrx_mat_occupied_a"
+      ],
+      "boundsMinUnity": [
+        -6.699999809265137,
+        0.0,
+        -14.5
+      ],
+      "boundsMaxUnity": [
+        5.300000190734863,
+        10.625,
+        14.5
+      ]
+    }
+  ],
+  "vrx_city_bridge_a": [
+    {
+      "lod": 0,
+      "triangles": 432,
+      "vertices": 272,
+      "nonmanifoldEdges": 0,
+      "degenerateTriangles": 0,
+      "materialSlots": [
+        "vrx_mat_mineral_a",
+        "vrx_mat_titanium_a",
+        "vrx_mat_slate_a",
+        "vrx_mat_occupied_a"
+      ],
+      "boundsMinUnity": [
+        -4.5,
+        0.0,
+        -14.5
+      ],
+      "boundsMaxUnity": [
+        4.5,
+        20.25,
+        14.5
+      ]
+    },
+    {
+      "lod": 1,
+      "triangles": 336,
+      "vertices": 224,
+      "nonmanifoldEdges": 0,
+      "degenerateTriangles": 0,
+      "materialSlots": [
+        "vrx_mat_mineral_a",
+        "vrx_mat_titanium_a",
+        "vrx_mat_slate_a",
+        "vrx_mat_occupied_a"
+      ],
+      "boundsMinUnity": [
+        -4.5,
+        0.0,
+        -14.5
+      ],
+      "boundsMaxUnity": [
+        4.5,
+        20.25,
+        14.5
+      ]
+    }
+  ],
+  "vrx_city_plant_a": [
+    {
+      "lod": 0,
+      "triangles": 372,
+      "vertices": 216,
+      "nonmanifoldEdges": 0,
+      "degenerateTriangles": 0,
+      "materialSlots": [
+        "vrx_mat_slate_a",
+        "vrx_mat_titanium_a",
+        "vrx_mat_mineral_a"
+      ],
+      "boundsMinUnity": [
+        -3.5,
+        0.0,
+        -5.0
+      ],
+      "boundsMaxUnity": [
+        3.5,
+        2.9000000953674316,
+        5.0
+      ]
+    },
+    {
+      "lod": 1,
+      "triangles": 60,
+      "vertices": 40,
+      "nonmanifoldEdges": 0,
+      "degenerateTriangles": 0,
+      "materialSlots": [
+        "vrx_mat_slate_a",
+        "vrx_mat_titanium_a",
+        "vrx_mat_mineral_a"
+      ],
+      "boundsMinUnity": [
+        -3.5,
+        0.0,
+        -5.0
+      ],
+      "boundsMaxUnity": [
+        3.5,
+        2.9000000953674316,
+        5.0
+      ]
+    }
+  ],
+  "vrx_city_advert_a": [
+    {
+      "lod": 0,
+      "triangles": 204,
+      "vertices": 120,
+      "nonmanifoldEdges": 0,
+      "degenerateTriangles": 0,
+      "materialSlots": [
+        "vrx_mat_titanium_a",
+        "vrx_mat_slate_a",
+        "vrx_mat_magenta_a",
+        "vrx_mat_white_a",
+        "vrx_mat_cyan_a"
+      ],
+      "boundsMinUnity": [
+        -5.0,
+        0.0,
+        -0.5249999761581421
+      ],
+      "boundsMaxUnity": [
+        5.0,
+        8.399999618530273,
+        0.42500001192092896
+      ]
+    },
+    {
+      "lod": 1,
+      "triangles": 108,
+      "vertices": 72,
+      "nonmanifoldEdges": 0,
+      "degenerateTriangles": 0,
+      "materialSlots": [
+        "vrx_mat_titanium_a",
+        "vrx_mat_slate_a",
+        "vrx_mat_magenta_a",
+        "vrx_mat_white_a",
+        "vrx_mat_cyan_a"
+      ],
+      "boundsMinUnity": [
+        -5.0,
+        0.0,
+        -0.5249999761581421
+      ],
+      "boundsMaxUnity": [
+        5.0,
+        8.399999618530273,
+        0.42500001192092896
+      ]
+    }
+  ]
+}
