@@ -53,7 +53,7 @@ Material:
     - _Campaign: 1
     - _CropStart: 0
     - _CropWidth: 1
-    - _Intensity: 1.05
+    - _Intensity: 0.9
     - _Phase: 2.34
     - _Style: 2
     m_Colors: []

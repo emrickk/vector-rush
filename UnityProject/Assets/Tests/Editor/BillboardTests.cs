@@ -10,9 +10,11 @@ namespace VectorRush.Tests
         [Test] public void AnimationClockLoopsAndSupportsIndependentPhases()
         {
             Assert.That(AnimatedBillboards.FrameAtTime(0,0),Is.Zero);
-            Assert.That(AnimatedBillboards.FrameAtTime(2.5f,0),Is.EqualTo(32).Within(.001));
-            Assert.That(AnimatedBillboards.FrameAtTime(5,0),Is.Zero);
+            Assert.That(AnimatedBillboards.FrameAtTime(3.75f,0),Is.EqualTo(32).Within(.001));
+            Assert.That(AnimatedBillboards.FrameAtTime(7.5f,0),Is.Zero);
             Assert.That(AnimatedBillboards.FrameAtTime(0,.83f),Is.Not.EqualTo(0));
+            Assert.That(AnimatedBillboards.FrameAtTime(6,0,2),Is.EqualTo(63));
+            for(int campaign=0;campaign<4;campaign++)Assert.That(AnimatedBillboards.FrameAtTime(AnimatedBillboards.PlaybackSeconds[campaign],0,campaign),Is.Zero);
         }
         [Test] public void CandidatePreservesEveryColliderAndWeatherProfile()
         {

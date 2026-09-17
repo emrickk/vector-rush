@@ -16,6 +16,7 @@ namespace VectorRush.Editor
         static Texture2D[] frames;
         static Texture2D ticker,titles;
         static Material frameMat;
+        static float Luminance(int theme)=>new[]{1.2f,.9f,1.1f,1.22f}[theme];
         static Material[] glow;
         static readonly Color[] colors={new Color(.67f,.28f,1),new Color(.65f,1,.03f),new Color(1,.12f,.055f),new Color(1,.40f,.07f)};
         struct Placement
@@ -52,7 +53,7 @@ namespace VectorRush.Editor
             Directory.CreateDirectory(Root);AssetDatabase.Refresh();serial=0;
             frames=Enumerable.Range(0,4).Select(i=>LoadTexture("Frames"+i,8192)).ToArray();ticker=LoadTexture("Ticker",2048);titles=LoadTexture("Titles",2048);
             frameMat=Lit("Display housings",new Color(.034f,.042f,.057f),.65f,.6f);
-            glow=colors.Select((c,i)=>Lit("Display accent "+i,c*.12f,.55f,.4f,c*.8f)).ToArray();
+            glow=colors.Select((c,i)=>Lit("Display accent "+i,c*.12f,.55f,.4f,c*.55f)).ToArray();
             var world=UnityEngine.Object.FindFirstObjectByType<ProductionWorld>();
             var poses=AssetDatabase.LoadAssetAtPath<Texture2D>("Assets/Art/Stage1/Generated/SignReflectionPoses.asset");
             var old=poses.GetPixels();var layout=Layout();int count=layout.Length;var data=new Color[count*8];
@@ -73,11 +74,11 @@ namespace VectorRush.Editor
                 Cube(mount.transform,"Lower accent",new Vector3(0,-height*.5f-.36f,-.04f),new Vector3(width+.65f,.055f,.08f),glow[theme]);
                 var screen=new GameObject("Animated surface "+i);screen.transform.SetParent(mount.transform,false);screen.transform.localPosition=Vector3.back*.18f;
                 screen.AddComponent<MeshFilter>().sharedMesh=Save(Panel(width,height,false),"Screen-"+i+".asset");
-                var material=new Material(Shader.Find("VectorRush/Animated Billboard")){name="Live campaign "+i};BindFrames(material);material.SetFloat("_Campaign",theme);material.SetFloat("_Phase",spec.group*1.17f);material.SetFloat("_Aspect",width/height);material.SetFloat("_Style",spec.style);material.SetFloat("_CropStart",spec.cropStart);material.SetFloat("_CropWidth",spec.cropWidth);material.SetFloat("_Intensity",theme==1?1.05f:1.3f);
+                var material=new Material(Shader.Find("VectorRush/Animated Billboard")){name="Live campaign "+i};BindFrames(material);material.SetFloat("_Campaign",theme);material.SetFloat("_Phase",spec.group*1.17f);material.SetFloat("_Aspect",width/height);material.SetFloat("_Style",spec.style);material.SetFloat("_CropStart",spec.cropStart);material.SetFloat("_CropWidth",spec.cropWidth);material.SetFloat("_Intensity",Luminance(theme));
                 screen.AddComponent<MeshRenderer>().sharedMaterial=Save(material,"Campaign-"+i+".mat");displays.Add(screen.transform);
                 Vector3 surface=screen.transform.position;
                 data[i*8]=new Color(surface.x,surface.y,surface.z,theme);data[i*8+1]=new Color(right.x,right.y,right.z,width);data[i*8+2]=new Color(up.x,up.y,up.z,height);
-                data[i*8+3]=new Color(normal.x,normal.y,normal.z,spec.group*1.17f);data[i*8+4]=new Color(spec.style,spec.cropStart,spec.cropWidth,theme==1?1.05f:1.3f);
+                data[i*8+3]=new Color(normal.x,normal.y,normal.z,spec.group*1.17f);data[i*8+4]=new Color(spec.style,spec.cropStart,spec.cropWidth,Luminance(theme));
                 // Small projecting kinetic landmarks are attached above selected signs, clear of the road.
                 if(spec.kinetic){
                     var holo=new GameObject("Kinetic orbital display "+i);holo.transform.SetParent(mount.transform,false);holo.transform.localPosition=new Vector3(0,height*.5f+5,-2.8f);
@@ -93,7 +94,7 @@ namespace VectorRush.Editor
             // Broad low-intensity facade wash belongs only to occupied clusters.
             foreach(int i in new[]{0,1,3,5,8}){
                 var face=displays[i];var lamp=new GameObject("Cluster facade wash "+layout[i].group);lamp.transform.SetParent(root.transform,false);
-                lamp.transform.SetPositionAndRotation(face.position-face.forward*5,face.rotation);var light=lamp.AddComponent<Light>();light.type=LightType.Spot;light.range=32;light.spotAngle=105;light.innerSpotAngle=55;light.intensity=260;light.color=colors[layout[i].campaign];light.shadows=LightShadows.None;
+                lamp.transform.SetPositionAndRotation(face.position-face.forward*5,face.rotation);var light=lamp.AddComponent<Light>();light.type=LightType.Spot;light.range=24;light.spotAngle=105;light.innerSpotAngle=55;light.intensity=layout[i].campaign==1?95:140;light.color=colors[layout[i].campaign];light.shadows=LightShadows.None;
             }
             var newPoses=new Texture2D(8,count,TextureFormat.RGBAFloat,false,true){name="Architectural display poses and composition",filterMode=FilterMode.Point,wrapMode=TextureWrapMode.Clamp};newPoses.SetPixels(data);newPoses.Apply();newPoses=Save(newPoses,"SignPoses.asset");
             // Clone only the reflection materials. Preserve the dry/wet palette and all road meshes.
@@ -109,14 +110,15 @@ namespace VectorRush.Editor
                 }
                 if(changed)renderer.sharedMaterials=materials;
             }
-            world.artRevision="animated-billboards-stage6-05";world.ValidateReady();EditorSceneManager.MarkSceneDirty(scene);EditorSceneManager.SaveScene(scene);AssetDatabase.SaveAssets();
+            BillboardMounts.Build(world,playback.displays,Root,output,frameMat);
+            world.artRevision="animated-billboards-stage6-06";world.ValidateReady();EditorSceneManager.MarkSceneDirty(scene);EditorSceneManager.SaveScene(scene);AssetDatabase.SaveAssets();
             if(before!=ProductionSceneSetup.Hash(File.ReadAllBytes(AtmosphereSceneSetup.Candidate)))throw new InvalidDataException("Atmosphere source scene changed");
-            File.WriteAllText(Path.Combine(output,"billboards.json"),"{\"signs\":"+count+",\"clusters\":5,\"campaigns\":4,\"videoFramesPerCampaign\":64,\"baseVideoSeconds\":5,\"echoPlaybackSeconds\":10,\"kineticDisplays\":"+kinetic.Count+",\"sourceSceneUnchanged\":true,\"courseHash\":\""+world.courseHash+"\"}");
+            File.WriteAllText(Path.Combine(output,"billboards.json"),"{\"signs\":"+count+",\"clusters\":5,\"campaigns\":4,\"videoFramesPerCampaign\":64,\"sourceVideoSeconds\":5,\"echoPlaybackSeconds\":12,\"kineticDisplays\":"+kinetic.Count+",\"sourceSceneUnchanged\":true,\"courseHash\":\""+world.courseHash+"\"}");
         }
         static Texture2D LoadTexture(string name,int size)
         {
             string path=Root+"/"+name+".png";var imp=AssetImporter.GetAtPath(path) as TextureImporter;if(!imp)throw new IOException("Missing animation asset "+path);
-            imp.mipmapEnabled=true;imp.mipmapFilter=TextureImporterMipFilter.KaiserFilter;imp.anisoLevel=4;imp.wrapMode=TextureWrapMode.Clamp;imp.filterMode=FilterMode.Bilinear;imp.maxTextureSize=size;imp.npotScale=TextureImporterNPOTScale.None;imp.textureCompression=TextureImporterCompression.CompressedHQ;imp.SaveAndReimport();return AssetDatabase.LoadAssetAtPath<Texture2D>(path);
+            imp.mipmapEnabled=true;imp.mipmapFilter=TextureImporterMipFilter.KaiserFilter;imp.anisoLevel=4;imp.wrapMode=TextureWrapMode.Clamp;imp.filterMode=FilterMode.Trilinear;imp.maxTextureSize=size;imp.npotScale=TextureImporterNPOTScale.None;imp.textureCompression=TextureImporterCompression.CompressedHQ;imp.SaveAndReimport();return AssetDatabase.LoadAssetAtPath<Texture2D>(path);
         }
         static void BindFrames(Material m){for(int i=0;i<4;i++)m.SetTexture("_Frames"+i,frames[i]);m.SetTexture("_Ticker",ticker);m.SetTexture("_Titles",titles);}
         static Material Lit(string name,Color c,float smooth,float metal,Color? emission=null){var m=new Material(Shader.Find("Universal Render Pipeline/Lit")){name=name};m.SetColor("_BaseColor",c);m.SetFloat("_Smoothness",smooth);m.SetFloat("_Metallic",metal);if(emission.HasValue){m.EnableKeyword("_EMISSION");m.SetColor("_EmissionColor",emission.Value);}return Save(m,name+".mat");}

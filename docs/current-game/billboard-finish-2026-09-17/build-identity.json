@@ -1,0 +1,11 @@
+{
+    "status": "NATIVE_EXPERIENCE_BUILD_COMPLETE_NOT_QUALITY_ACCEPTED",
+    "unityVersion": "6000.6.0f1",
+    "buildGuid": "e2e0c129118247348e77af4c98d57deb",
+    "scene": "Assets/Scenes/AnimatedBillboardsStage6.unity",
+    "appPath": "/Users/anping.wang/output/vector-rush-billboards-2026-09-17/Billboards06.app",
+    "courseHash": "a43cff0540e9b86cc0d60810b1f19e6cd49ae52d69e41ea43f6fb5b590790abc",
+    "artRevision": "animated-billboards-stage6-06",
+    "renderers": 163,
+    "lights": 261
+}

@@ -1,6 +1,14 @@
 # Current Vector Rush game — new-agent handoff
 
-## Billboard driving readability — September 17, 2026 (current local candidate)
+## Billboard architectural finish — September 17, 2026 (current local candidate)
+
+Owner approved mounts/framing, brightness balance, animation pacing and hitch investigation. Current scene `Assets/Scenes/AnimatedBillboardsStage6.unity`, revision `animated-billboards-stage6-06`, build `e2e0c129118247348e77af4c98d57deb`. Candidate 05 placement/size/orientations are retained. Added cabinet lips, hoods and ledges, with braced supports reaching actual facades and two shared structural connections. Original buildings are not carved. Campaign-specific gains and periods, softer facade wash and slower tickers refine presentation. [Finish milestone and native comparison](current-game/billboard-finish-2026-09-17/README.md).
+
+286 tests passed. Native driving and detail captures complete; the 46.101-second driving recording has uneven intervals and is not a performance benchmark. Two separate uncaptured 1080p three-lap runs passed six-finisher/zero-recovery and result/pause/restart checks. Run A had one 41.47 ms hitch with no recorded GC delta or focus change; run B had none above 33.3 ms. The old 190.926 ms stalls did not recur; no repeatable cause was found. Per-hitch diagnostics are opt-in evidence instrumentation.
+
+Local review: `http://127.0.0.1:8773/review/`; app: `/Users/anping.wang/output/vector-rush-billboards-2026-09-17/Billboards06.app`. Course/collisions, handling, HUD, ship, fog/rain and dry tunnel remain preserved. Game P5 blur is separate. Owner visual acceptance remains open. Source remains local because automatic approval review blocked earlier GitHub publication; direct publication approval is pending. Next is owner review of the actual driving replay; no automatic wider rollout or agent dispatch.
+
+## Billboard driving readability — September 17, 2026 (previous local candidate)
 
 Owner rejected candidate 04's poor driving visibility and small signs. Current scene remains `Assets/Scenes/AnimatedBillboardsStage6.unity`, now revision `animated-billboards-stage6-05`, build `6b98ead89ba04809a6da20de39b5e546`. Main screens are larger/lower; the corner and wide landscape use approach-facing architectural planes; the triptych moved onto the visible outer bend. Five sparse clusters and actual animation remain. [Readability milestone and native comparison](current-game/billboard-readability-2026-09-17/README.md).
 

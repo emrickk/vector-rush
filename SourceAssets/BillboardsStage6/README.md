@@ -2,7 +2,7 @@
 
 Four original advertising campaigns generated through the owner-approved Scenario connection. Artwork model: `model_openai-gpt-image-2`. Video model: `model_kling-v3-i2v-pro`.
 
-Each campaign retains the original image, image request and job provenance, the selected video, and the exact video prompt/request plus job provenance. The ECHO clip is the second iteration, selected after the first was too restrained. Its Unity playback runs forward and backward over 10 seconds to avoid a hard loop reset; the others loop over five seconds with a short boundary blend.
+Each campaign retains the original image, image request and job provenance, the selected video, and the exact video prompt/request plus job provenance. The ECHO clip is the second iteration, selected after the first was too restrained. Its Unity playback runs forward and backward to avoid a hard loop reset; the others use a short boundary blend. Current finish-pass periods are AURORA 7.5 s, VOLT 4.5 s, ECHO 12 s and ORBIT 4.25 s, using the same packed source frames.
 
 `animation-manifest.json` records the selected video hashes, frame dimensions and decoded-frame variation. That variation is a source sanity check, not proof of native rendering. Actual native gameplay and fixed-camera motion evidence are documented in the current-game milestone.
 

@@ -14,18 +14,18 @@
     },
     {
       "path": "AGENTS.md",
-      "bytes": 12414,
-      "sha256": "19b52a4529603214fe6bc661d0f1a47aeac1f2beeff70515e25e204a7c231d85"
+      "bytes": 12510,
+      "sha256": "7d1ac0e2c175d19dd7c979d47754fb4a1423887729501e099c989145c62992bf"
     },
     {
       "path": "README.md",
-      "bytes": 15807,
-      "sha256": "f97e1051617cca55981ccf0081c51262b7eb4ca0183880718b4372ec47976789"
+      "bytes": 15814,
+      "sha256": "cdbde5338aa527e74feeb4558f0fa107747bdb4e22f867447e0fec91f9753f3d"
     },
     {
       "path": "SourceAssets/BillboardsStage6/README.md",
-      "bytes": 2542,
-      "sha256": "ab128dd62023242904d72a38a71c5ba6df1830ea797cd610672f7d2f1a367e6f"
+      "bytes": 2625,
+      "sha256": "cd9063cb0c5ee53a325d8ed84cfa8e68976f427c978b4f0019bce97dde6e341b"
     },
     {
       "path": "SourceAssets/BillboardsStage6/animation-manifest.json",
@@ -3708,9 +3708,19 @@
       "sha256": "c3371718710eb95784e02e971de105efbb34465e0b39a43bdd9a184c18d2fd7d"
     },
     {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Architectural-mounts.asset",
+      "bytes": 349073,
+      "sha256": "18b13aa3b58ac1d7ef4e947e4c3a9e3afdc695077fefa19283d4bd915bdefb2c"
+    },
+    {
+      "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Architectural-mounts.asset.meta",
+      "bytes": 188,
+      "sha256": "94581b7ef0ea676b6037bf1d74c556fe60dd7d6b31911301d54075f82d00acd6"
+    },
+    {
       "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Campaign-0.mat",
       "bytes": 1869,
-      "sha256": "d38b062876d118a676a04e5f027dbbc4d8203c359d964712a0a427246a144f8b"
+      "sha256": "074a5878c9f1c2f45415ea2b75f586d86c99a770bcd80c9fe5749525ed0501f8"
     },
     {
       "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Campaign-0.mat.meta",
@@ -3720,7 +3730,7 @@
     {
       "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Campaign-1.mat",
       "bytes": 1872,
-      "sha256": "3365528e79d37a1a6c7453ccfc7ee1ad1f91d391db4c741a99c71618698fb8b8"
+      "sha256": "5a3b60f17b0ebdf9f8b69e01e344be69060a90f4f4b1f857e3d3b37afdfb3eda"
     },
     {
       "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Campaign-1.mat.meta",
@@ -3800,7 +3810,7 @@
     {
       "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Campaign-2.mat",
       "bytes": 1866,
-      "sha256": "ab44a243f6e0cd7744130b3c783d571b4673e7d438bd6f00e2189f86becd39f3"
+      "sha256": "3358ae27f7baa12b188df0e506926e91aec85f21e778e7ec72222a740b565a13"
     },
     {
       "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Campaign-2.mat.meta",
@@ -3809,8 +3819,8 @@
     },
     {
       "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Campaign-3.mat",
-      "bytes": 1872,
-      "sha256": "ab7ba0c0dac3d62fbf9faa2cbb10dd2887bb821d4f235fa7b5f688fe5f7e2ae8"
+      "bytes": 1871,
+      "sha256": "4dcd8cf23668ce576fb84daeab3d6cfe207988b5bc46d4d2aad577da5f2ded03"
     },
     {
       "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Campaign-3.mat.meta",
@@ -3819,8 +3829,8 @@
     },
     {
       "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Campaign-4.mat",
-      "bytes": 1871,
-      "sha256": "d5b8af5ae1c22891beda8fea19e8f4fc4dae1020f1f6d7b507316df6acb04f76"
+      "bytes": 1872,
+      "sha256": "c16280097587261a0bedf5c6bfbf74348dd829ea49be5128026206e8ffbc7936"
     },
     {
       "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Campaign-4.mat.meta",
@@ -3830,7 +3840,7 @@
     {
       "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Campaign-5.mat",
       "bytes": 1886,
-      "sha256": "a57b94e5f8d70c41ca55c823730a2280a75b71bf33efc191c913e3723a8772f3"
+      "sha256": "1a6649d8ff3374bdb9e1385234d3d2fabd907443a0da4019f3c609c93ffe5ba2"
     },
     {
       "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Campaign-5.mat.meta",
@@ -3840,7 +3850,7 @@
     {
       "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Campaign-6.mat",
       "bytes": 1895,
-      "sha256": "3c818a0aad587ef663410ce3816fec041575f9f7549d928ba289d7bcb32f4800"
+      "sha256": "ccfc8e9cc9f173bcbd185bd20efd9f6e5f9010ea5e22e304fcad5219dc7b2a53"
     },
     {
       "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Campaign-6.mat.meta",
@@ -3850,7 +3860,7 @@
     {
       "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Campaign-7.mat",
       "bytes": 1894,
-      "sha256": "e5de633e930292fd13d4e759193814f940f1031e8270ef52c18965d9f1e5bf5a"
+      "sha256": "5a0238c3d004cae628be8f450ca8da995245959e6f0f6d9c3b5c26a325baac27"
     },
     {
       "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Campaign-7.mat.meta",
@@ -3859,8 +3869,8 @@
     },
     {
       "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Campaign-8.mat",
-      "bytes": 1871,
-      "sha256": "68a78e6105e0edd2b6d8a6a906bb131e7e242aca0af5bb4453103b14c5f62a74"
+      "bytes": 1872,
+      "sha256": "4dc44449eef6c1592f6a32dbd2e4190806a9df08d11fa89ee7f4a77df48f936b"
     },
     {
       "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Campaign-8.mat.meta",
@@ -3869,8 +3879,8 @@
     },
     {
       "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Campaign-9.mat",
-      "bytes": 1872,
-      "sha256": "6f56f7dc047bb9f5578a046d1b5e2a39b17dbcbdcbd422978a083aba362b0e14"
+      "bytes": 1871,
+      "sha256": "c9fbfd54236d177919558eac89ac4fa515183cc7b900d46a383551162f11a84a"
     },
     {
       "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Campaign-9.mat.meta",
@@ -3879,8 +3889,8 @@
     },
     {
       "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Display accent 0.mat",
-      "bytes": 3903,
-      "sha256": "b8b38d4bc461fe2af14ff21efc447005660f14f9abd957a2288d0618cde49177"
+      "bytes": 3910,
+      "sha256": "5443f1a36f94f4d38da3577109dbde1ecff2a54902116e622d752d094461b83d"
     },
     {
       "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Display accent 0.mat.meta",
@@ -3889,8 +3899,8 @@
     },
     {
       "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Display accent 1.mat",
-      "bytes": 3907,
-      "sha256": "f4f5c51382951e8321ade51827af165e00fe125dfdabb8495222a46b7d3c2f39"
+      "bytes": 3912,
+      "sha256": "d23a2c679315cb386b463377a20759d9e89de7725e5067a4106ed0c07555fc9f"
     },
     {
       "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Display accent 1.mat.meta",
@@ -3899,8 +3909,8 @@
     },
     {
       "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Display accent 2.mat",
-      "bytes": 3904,
-      "sha256": "1211f2fc4ed30dd74accab969e228c12f39460d1772eb2fa951e48146d0a8214"
+      "bytes": 3908,
+      "sha256": "91c6273ec977d9e2632ef365ad2a2e8a5521c7514383be6398cd05fa674d1f2d"
     },
     {
       "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Display accent 2.mat.meta",
@@ -3909,8 +3919,8 @@
     },
     {
       "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Display accent 3.mat",
-      "bytes": 3907,
-      "sha256": "6ac1c9ab044aeea9845bc6ccdc11812eda30eece7a8c3b3ab3ea5e2ae5afdb82"
+      "bytes": 3910,
+      "sha256": "e0fa5dec391b4966de7a22f64b509a1326f2295b639e98c9583b5d6be7af45b1"
     },
     {
       "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Display accent 3.mat.meta",
@@ -3945,7 +3955,7 @@
     {
       "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Frames0.png.meta",
       "bytes": 3069,
-      "sha256": "1adf6f63716ec8b74dfab3af2f8a3a040d35b86e9d989265d87cdc540bb2ae14"
+      "sha256": "d77fa4e4d4c1ffaf2dcf2c87f5d5150d9b8dca03fa1d6d39bc0bf55338399e38"
     },
     {
       "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Frames1.png",
@@ -3955,7 +3965,7 @@
     {
       "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Frames1.png.meta",
       "bytes": 3069,
-      "sha256": "fa05057dbd9ebf6ca702dbb60d2cdad5e3ff4103a3c230ed84dc27bc0d6af6f7"
+      "sha256": "476bbf88c9a5a9d031e3f5fc8ff4f72993c721e9abdf3f05a0e434a27e876fa0"
     },
     {
       "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Frames2.png",
@@ -3965,7 +3975,7 @@
     {
       "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Frames2.png.meta",
       "bytes": 3069,
-      "sha256": "cadebc649c244d67e454133224efc7fdee803e1f6da8642990f0021dd8ab1b2e"
+      "sha256": "da9754396dcf24edcd4c521483317c1b24f447084ac900e0b9a46611e88f3df4"
     },
     {
       "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Frames3.png",
@@ -3975,7 +3985,7 @@
     {
       "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Frames3.png.meta",
       "bytes": 3069,
-      "sha256": "6f0a866eb111f527fa1b56a0c04818c129474ece754dd6ff61c26eda26d024c4"
+      "sha256": "c6fba302da00774581b7d8183cf7f2edebd09eb929036b74fbb9d1788a676924"
     },
     {
       "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Kinetic-1.asset",
@@ -4380,7 +4390,7 @@
     {
       "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/SignPoses.asset",
       "bytes": 3618,
-      "sha256": "663d1a98c1568e39ca207253f2a764759a3835c74011595047377ddf859b72ab"
+      "sha256": "5188fa92779b017857e4187c44e75b02cd0b7cd3eea61058ba7f67292bde2d30"
     },
     {
       "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/SignPoses.asset.meta",
@@ -4395,7 +4405,7 @@
     {
       "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Ticker.png.meta",
       "bytes": 3069,
-      "sha256": "d4dffafe257014d56e6076b2ebf15be1b479e4e1d974175f2bff82f9cc8bca31"
+      "sha256": "b909cd640e39a4946c222e8c13a6623230a6d2996972290a81606a1393e6ed8e"
     },
     {
       "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Titles.png",
@@ -4405,7 +4415,7 @@
     {
       "path": "UnityProject/Assets/Art/AnimatedBillboardsStage6/Titles.png.meta",
       "bytes": 3069,
-      "sha256": "d8fcc63dbebac252bd52a92b3cec21db03165d6ef527d2553f6610497ca456f6"
+      "sha256": "1fec8371272f66175e638c4a786e2f4c0a5ebc3a20dbffc33bd106eb7eba27ed"
     },
     {
       "path": "UnityProject/Assets/Art/EnvironmentStructureStage1.meta",
@@ -8763,9 +8773,19 @@
       "sha256": "34cb690e4d818b5d70e58e2cb3df405d9097f10fc5bd7647f50a400ca53e4670"
     },
     {
+      "path": "UnityProject/Assets/Editor/Production/BillboardMounts.cs",
+      "bytes": 6790,
+      "sha256": "62bb047e171cecbaea517d849cec408c73635c99a92a7561c18d3ab2e7012958"
+    },
+    {
+      "path": "UnityProject/Assets/Editor/Production/BillboardMounts.cs.meta",
+      "bytes": 59,
+      "sha256": "dcd5b553e2b7c934d84622b1939f99bf3e34bf82f15fa5f668b98c187f89ca42"
+    },
+    {
       "path": "UnityProject/Assets/Editor/Production/BillboardSceneSetup.cs",
-      "bytes": 15685,
-      "sha256": "94278d81b23e0502cb0dee8e07fd21221139ca6aa33cf1d26f02ef684c0b7287"
+      "bytes": 15867,
+      "sha256": "accd40b91b204b20793c649f89a2cf207f84f9a83ead9ae6aaa1c99cf69bf213"
     },
     {
       "path": "UnityProject/Assets/Editor/Production/BillboardSceneSetup.cs.meta",
@@ -11519,8 +11539,8 @@
     },
     {
       "path": "UnityProject/Assets/Scenes/AnimatedBillboardsStage6.unity",
-      "bytes": 1225829,
-      "sha256": "91f26dfaeecafd4ae317423b38a4d8ae298b10870db406ec7cc43f2de0b835a6"
+      "bytes": 1228423,
+      "sha256": "acc4cbf7cc2d3e31d397437e5c2beee3bca0eb9480e844cf5b891754201b29fb"
     },
     {
       "path": "UnityProject/Assets/Scenes/AnimatedBillboardsStage6.unity.meta",
@@ -11764,8 +11784,8 @@
     },
     {
       "path": "UnityProject/Assets/Scripts/Presentation/AnimatedBillboards.cs",
-      "bytes": 1212,
-      "sha256": "b7d11ca21e8b7ebda8211d948b3c27f34804beb5e3e597960c4e0ba640cd782b"
+      "bytes": 1532,
+      "sha256": "a8eeaaf0a0885119698c36970e21a5967194b21306c163aeb4c542f91f2273a1"
     },
     {
       "path": "UnityProject/Assets/Scripts/Presentation/AnimatedBillboards.cs.meta",
@@ -12024,8 +12044,8 @@
     },
     {
       "path": "UnityProject/Assets/Scripts/ProductionEvidence.cs",
-      "bytes": 11747,
-      "sha256": "c6f24566a5170e000e6f07a4b63b16e895f55c4adaa10ca43387acdcea88ee55"
+      "bytes": 12784,
+      "sha256": "ce122a92ad2aaa9a05ae78e614fa2982d5c5441731f776a198e960885ed5184b"
     },
     {
       "path": "UnityProject/Assets/Scripts/ProductionEvidence.cs.meta",
@@ -12519,8 +12539,8 @@
     },
     {
       "path": "UnityProject/Assets/Shaders/BillboardPlayback.hlsl",
-      "bytes": 2489,
-      "sha256": "e2f28a8f3e653a744429fd8aff2860c1bc8ca9c8683a4737b477ba7f229598b6"
+      "bytes": 2575,
+      "sha256": "d5dc28d4e0338795a7df0e8b0930eec9bf9da750f82309c1714df709ad408ec6"
     },
     {
       "path": "UnityProject/Assets/Shaders/BillboardPlayback.hlsl.meta",
@@ -12669,8 +12689,8 @@
     },
     {
       "path": "UnityProject/Assets/Tests/Editor/BillboardTests.cs",
-      "bytes": 4385,
-      "sha256": "4dc1ba6dc244acd563604cc77259ba2af1217a543453cf0dc35ed99fe7a61ba2"
+      "bytes": 4631,
+      "sha256": "73de5234dd90fce8df4120a7b33b3ae586bd279630f33f46b43fab71fe178975"
     },
     {
       "path": "UnityProject/Assets/Tests/Editor/BillboardTests.cs.meta",
@@ -14604,8 +14624,8 @@
     },
     {
       "path": "docs/CURRENT-GAME-HANDOFF.md",
-      "bytes": 21276,
-      "sha256": "63bb9d0d9a7a6cc6042dd6cb53c3641a8d0c4978003a3ebc8b084dd208a5d068"
+      "bytes": 23012,
+      "sha256": "95d24c7c66d22a08ec69240ba495fc4905ea57180d20399194a87fb06094b2ee"
     },
     {
       "path": "docs/GPT6-BUILD-PROMPT.md",
@@ -14866,6 +14886,61 @@
       "path": "docs/current-game/atmosphere-2026-09-17/weather.csv",
       "bytes": 13669,
       "sha256": "da5e5dc7df291c8977fe482e7661b8ca3600c20c29d0b3ae361495bbdfeb644d"
+    },
+    {
+      "path": "docs/current-game/billboard-finish-2026-09-17/README.md",
+      "bytes": 5074,
+      "sha256": "34b7ac064e491f48d112d2cf81aa45cf4d14225bcf01aa698b240066d36d280f"
+    },
+    {
+      "path": "docs/current-game/billboard-finish-2026-09-17/authoring.json",
+      "bytes": 243,
+      "sha256": "cabe77b8769a653cca12d98575ad0d4c1e31baad8d1032c45846c6199ede2db6"
+    },
+    {
+      "path": "docs/current-game/billboard-finish-2026-09-17/build-identity.json",
+      "bytes": 495,
+      "sha256": "8ae16db8303ac47919795cbe51bb1324a99721ad41be9ea1fbdd75bb3fd5c9a8"
+    },
+    {
+      "path": "docs/current-game/billboard-finish-2026-09-17/comparison.jpg",
+      "bytes": 425782,
+      "sha256": "f26557e853059ec0c01c2bd08c5427c81767bb51ba57cb450bc756cf96b84764"
+    },
+    {
+      "path": "docs/current-game/billboard-finish-2026-09-17/details.jpg",
+      "bytes": 279602,
+      "sha256": "9430781293b983e268e89af16ee150e442b2e6530d8fa12c9c3e6ab763aee046"
+    },
+    {
+      "path": "docs/current-game/billboard-finish-2026-09-17/motion-summary.json",
+      "bytes": 238,
+      "sha256": "d0e4ebd1cce560d144ba8dfb1f37ead4ae8627c13b1e95bb61a3ce402820f5a8"
+    },
+    {
+      "path": "docs/current-game/billboard-finish-2026-09-17/mounts.json",
+      "bytes": 2347,
+      "sha256": "8102083579876cfe0102d3bbb54183c630bc636f12043de6766dcd18487e19e0"
+    },
+    {
+      "path": "docs/current-game/billboard-finish-2026-09-17/performance-06a.json",
+      "bytes": 2375,
+      "sha256": "ab6636638970777afb73e66dbb86ed48176ae4727959b330f8d5d31e9f918acb"
+    },
+    {
+      "path": "docs/current-game/billboard-finish-2026-09-17/performance-06b.json",
+      "bytes": 2057,
+      "sha256": "8fd17ae40c84bbf0723501f2326692e9d88a2f3215ef7684b829ea06bd9e293a"
+    },
+    {
+      "path": "docs/current-game/billboard-finish-2026-09-17/preview-validation.json",
+      "bytes": 656,
+      "sha256": "43137732d66ce1ea6d1af7ef307f88ee19192e074548e12696a8bbaf52b982fd"
+    },
+    {
+      "path": "docs/current-game/billboard-finish-2026-09-17/tests.xml",
+      "bytes": 232268,
+      "sha256": "f38bdedf92875cb2b9b1864c648d1540e0d0ce332dbba07bcb17ed49df2b6570"
     },
     {
       "path": "docs/current-game/billboard-readability-2026-09-17/README.md",
@@ -15239,8 +15314,8 @@
     },
     {
       "path": "docs/development-history.md",
-      "bytes": 139891,
-      "sha256": "5ddd7e2ab6c39fddfb914b77f52c8b6b53d071e609e75e463afe139803626dd5"
+      "bytes": 141063,
+      "sha256": "e00b504f5e2717ea0539853c451c2a4ca29d20dcd92c7e945b4092fcab0ec6e8"
     },
     {
       "path": "docs/development-work-record.html",
@@ -15419,8 +15494,8 @@
     },
     {
       "path": "docs/implementation-plan.md",
-      "bytes": 83747,
-      "sha256": "9fdb75fdcbbf11b1cc9d515fc76264be2cd90643aba2d7df99b691322bd01a98"
+      "bytes": 84925,
+      "sha256": "7dcc35557755d79f8e04cf3e81a30333fd1267130f9090136704b90bcc5c8521"
     },
     {
       "path": "docs/lighting-reviews/001-lighting-source-audit.md",

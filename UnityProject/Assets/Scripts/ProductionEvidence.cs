@@ -11,11 +11,13 @@ namespace VectorRush
     {
         [Serializable] sealed class RaceResult {public int race;public float playerTime;public int position;public bool frozenResult,pauseFrozen,restartClean;public int[] recoveries;public Finish[] finishers;}
         [Serializable] sealed class Finish {public string racer;public int position;public float time;public bool dnf;}
-        [Serializable] sealed class Report {public string buildGuid,unityVersion,scope,status="RUNNING";public List<RaceResult> races=new List<RaceResult>();public float meanMs,p95Ms,p99Ms,maxMs;public int spikesAbove33Ms;}
+        [Serializable] struct Hitch {public float frameMs,realtime,raceTime,progress;public int lap,gc0,gc1,gc2;public bool focused;}
+        [Serializable] sealed class Report {public List<Hitch> hitches=new List<Hitch>(32);public int focusChanges;public string buildGuid,unityVersion,scope,status="RUNNING";public List<RaceResult> races=new List<RaceResult>();public float meanMs,p95Ms,p99Ms,maxMs;public int spikesAbove33Ms;}
         [Serializable] sealed class Shot {public string file;public double seconds;public float progress;public Vector3 cameraPosition;public Quaternion cameraRotation;public float fov;}
         [Serializable] sealed class Preview {public string buildGuid,scope;public double startDsp,endDsp;public int sampleRate;public List<Shot> frames=new List<Shot>();public bool complete;}
         int previewHz=10;
-        string folder,mode;VectorBootstrap owner;readonly List<float> timing=new List<float>();bool measuring;
+        string folder,mode;VectorBootstrap owner;readonly List<float> timing=new List<float>(32768);bool measuring;
+        Report activeReport;int gc0,gc1,gc2;bool lastFocus;
         public static bool TryStart(VectorBootstrap bootstrap)
         {
             var args=Environment.GetCommandLineArgs();int i=Array.IndexOf(args,"-productionValidation");if(i<0)return false;
@@ -28,7 +30,16 @@ namespace VectorRush
             if(rateFlag>=0 && rateFlag+1<args.Length && int.TryParse(args[rateFlag+1],out int rate))evidence.previewHz=Mathf.Clamp(rate,10,60);
             evidence.StartCoroutine(mode=="preview"?evidence.RecordPreview():evidence.RunRaces());return true;
         }
-        void Update(){if(measuring)timing.Add(Time.unscaledDeltaTime*1000);}
+        void Update()
+        {
+            if(!measuring)return;
+            float ms=Time.unscaledDeltaTime*1000;timing.Add(ms);
+            int a=GC.CollectionCount(0),b=GC.CollectionCount(1),c=GC.CollectionCount(2);
+            bool focused=Application.isFocused;
+            if(focused!=lastFocus)activeReport.focusChanges++;
+            if(ms>33.3f&&activeReport.hitches.Count<32){var d=owner.Director;activeReport.hitches.Add(new Hitch{frameMs=ms,realtime=Time.realtimeSinceStartup,raceTime=d.RaceTime,progress=d.Player.TrackProgress,lap=d.Player.ProgressTracker.CompletedLaps,gc0=a-gc0,gc1=b-gc1,gc2=c-gc2,focused=focused});}
+            gc0=a;gc1=b;gc2=c;lastFocus=focused;
+        }
         IEnumerator RunRaces()
         {
             var report=new Report{buildGuid=Application.buildGUID,unityVersion=Application.unityVersion,scope=mode=="performance"?"Warmed real-time automated physics race; no screenshot/audio/encoder overlap. Frame delivery uses Time.unscaledDeltaTime, not GPU timings.":"Three complete automated native races, post-player finish simulation, pause and restart. No human input or controller hardware tested."};
@@ -42,11 +53,11 @@ namespace VectorRush
                     d.StartRace();bool clean=d.FinishRecords.Count==0&&d.Player.ProgressTracker.CompletedLaps==0;
                     float deadline=Time.realtimeSinceStartup+220;
                     while(d.Phase!=RacePhase.Racing&&Time.realtimeSinceStartup<deadline)yield return null;
-                    if(mode=="performance"){yield return new WaitForSecondsRealtime(8);measuring=true;}
+                    if(mode=="performance"){yield return new WaitForSecondsRealtime(8);activeReport=report;gc0=GC.CollectionCount(0);gc1=GC.CollectionCount(1);gc2=GC.CollectionCount(2);lastFocus=Application.isFocused;measuring=true;}
                     float nextDiagnostic=0;
                     while(d.Phase!=RacePhase.Finished&&Time.realtimeSinceStartup<deadline)
                     {
-                        if(Time.realtimeSinceStartup>=nextDiagnostic)
+                        if(mode!="performance"&&Time.realtimeSinceStartup>=nextDiagnostic)
                         {
                             var player=d.Player;
                             Debug.Log($"PRODUCTION_RACE race={race+1} phase={d.Phase} raceTime={d.RaceTime:F2} scale={Time.timeScale:F2} progress={player.TrackProgress:F5} laps={player.ProgressTracker.CompletedLaps} nextGate={player.ProgressTracker.NextCheckpoint} started={player.ProgressTracker.HasStarted} speed={player.SpeedKph:F1} kinematic={player.Body.isKinematic} autopilot={player.AutopilotForTesting}");
