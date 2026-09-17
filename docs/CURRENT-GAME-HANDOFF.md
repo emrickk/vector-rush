@@ -1,3 +1,13 @@
+# Full-lap advertisement continuation — September 17, 2026
+
+Current local playable candidate is **Stage 8 revision 02**, scene `Assets/Scenes/FullLapAdsStage8.unity`, build `83fe81ff96284df4a3182cfa5cb1587d`, based on Stage 7 `46e73a6`. All three named artworks are in gameplay; the five animated clusters extend through the lap. Late signs mount inside the cutting/tunnel. The wrapper now builds Stage 8; `stage7-build` and `p4-build` preserve comparisons.
+
+**292 tests pass.** Native 43.093-second replay verifies driving-camera visibility; separate three-lap race passes with six finishers and zero recoveries. Actual logged surface is 1920×1080; P95/P99/max delivered frames are 9.066/9.233/16.663 ms, with one recorded focus change. See [the milestone](current-game/full-lap-ads-2026-09-17/README.md) for evidence, limitations and rebuild commands. [Open the native replay](http://127.0.0.1:8776/review/). Local app: `/Users/anping.wang/output/vector-rush-full-lap-ads-2026-09-17/FullLapAds02.app`.
+
+No gameplay/weather/runtime source change or speed-blur integration. Automated steering is not human play; owner artistic review remains open. Save locally; no external publication requested. Next: owner review of the displayed native replay. Earlier current/default statements below are historical.
+
+---
+
 # Current integration status — September 17, 2026
 
 The local playable candidate is now **Stage 7 revision 02**, built from P4 `b787b5f` and NightCityKit `250d221` on `integration/p4-night-city-20260917`. Scene: `Assets/Scenes/NightCityStage7.unity`. Build GUID: `f86cee2c911749a783c67594a6e48fd1`. The portable wrapper builds this scene; `p4-build` builds preserved Stage 6. [Current milestone and evidence](current-game/night-city-2026-09-17/README.md).

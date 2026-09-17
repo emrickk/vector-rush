@@ -1,0 +1,11 @@
+{
+    "status": "NATIVE_EXPERIENCE_BUILD_COMPLETE_NOT_QUALITY_ACCEPTED",
+    "unityVersion": "6000.6.0f1",
+    "buildGuid": "83fe81ff96284df4a3182cfa5cb1587d",
+    "scene": "Assets/Scenes/FullLapAdsStage8.unity",
+    "appPath": "/Users/anping.wang/output/vector-rush-full-lap-ads-2026-09-17/FullLapAds02.app",
+    "courseHash": "a43cff0540e9b86cc0d60810b1f19e6cd49ae52d69e41ea43f6fb5b590790abc",
+    "artRevision": "full-lap-ads-stage8-02",
+    "renderers": 347,
+    "lights": 266
+}

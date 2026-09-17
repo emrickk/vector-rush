@@ -3,7 +3,7 @@
 set -euo pipefail
 task_root="$(cd "$(dirname "$0")/.." && pwd)"
 task_editor="${VECTOR_UNITY_EDITOR:-/Applications/Unity/Hub/Editor/6000.6.0f1/Unity.app/Contents/MacOS/Unity}"
-task_scene="Assets/Scenes/NightCityStage7.unity"
+task_scene="Assets/Scenes/FullLapAdsStage8.unity"
 if [[ ! -x "$task_editor" ]]; then
   echo 'Install Unity 6000.6.0f1 and set VECTOR_UNITY_EDITOR to its executable.' >&2
   exit 2
@@ -13,9 +13,10 @@ case "${1:-help}" in
     echo "Open $task_scene in the Editor; the historical default scene is not authoritative."
     exec "$task_editor" -projectPath "$task_root/UnityProject"
     ;;
-  build|baseline-build|p4-build)
+  build|baseline-build|p4-build|stage7-build)
     if [[ "${1}" == baseline-build ]]; then task_scene="Assets/Scenes/EnvironmentStructureStage1.unity"; fi
     if [[ "${1}" == p4-build ]]; then task_scene="Assets/Scenes/AnimatedBillboardsStage6.unity"; fi
+    if [[ "${1}" == stage7-build ]]; then task_scene="Assets/Scenes/NightCityStage7.unity"; fi
     if [[ $# != 3 || "$2" != /*.app || "$3" != /* ]]; then
       echo 'Usage: bash tools/current-game.sh build /absolute/fresh/Game.app /absolute/fresh/evidence' >&2; exit 2
     fi
@@ -33,5 +34,5 @@ case "${1:-help}" in
     exec "$task_editor" -batchmode -projectPath "$task_root/UnityProject" -runTests -testPlatform EditMode \
       -testResults "$task_evidence/results.xml" -logFile "$task_evidence/editor.log"
     ;;
-  *) echo 'Usage: bash tools/current-game.sh open | build <fresh absolute .app> <fresh absolute evidence> | p4-build <app> <evidence> | baseline-build <app> <evidence> | test [fresh absolute directory]' ;;
+  *) echo 'Usage: bash tools/current-game.sh open | build <fresh absolute .app> <fresh absolute evidence> | stage7-build <app> <evidence> | p4-build <app> <evidence> | baseline-build <app> <evidence> | test [fresh absolute directory]' ;;
 esac

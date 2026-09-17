@@ -1,3 +1,7 @@
+## 2026-09-17 — Place three missing artworks and distribute ads across the lap
+
+Delivered Stage 8 revision 02 on Stage 7. Installed After Hours, Night Market and Last Train; moved four animated groups into middle/late sections, corrected hidden late placements and corridor mounts, and updated reflection poses. 292 tests pass; native 759-frame lap inspected; separate six-finisher/zero-recovery three-lap check passes. Browser replay chapter seeking verified with a byte-range server. Wrapper selects Stage 8 with preserved Stage 7/P4 comparison commands. [Milestone and compact evidence](current-game/full-lap-ads-2026-09-17/README.md). Local source milestone only; no artistic acceptance, human driving or speed-blur integration claim.
+
 ## 2026-09-17: Stage 7 native city integration completed locally
 
 Resumed the requested integration branch after manually approved cleanup of the verified stale Unity startup. Survey-selected five facade-connected terraces and integrated 30 kit instances. Corrected unsupported roof props, then raised the two right-side terraces after native driving review. Stage 7 revision 02 builds as `f86cee2c911749a783c67594a6e48fd1`; all 290 tests pass and all 2,169 original P4 Unity files are preserved.

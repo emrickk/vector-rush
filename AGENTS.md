@@ -1,3 +1,7 @@
+## Owner-approved full-lap ad placement — September 17, 2026
+
+The owner found After Hours, Night Market and Last Train absent from gameplay and the displays concentrated at the start, then explicitly requested fixing it and showing native gameplay. Build on committed Stage 7 46e73a6. Create a separate FullLapAdsStage8 candidate: retain animated campaign content and varied compositions, distribute the five clusters across the lap, install all three named art-kit advertisements, use supported mount geometry, preserve road/collisions/ship/HUD/weather/handling, and verify actual native visibility and motion. This supersedes the earlier opening-district-only boundary for billboard placement. No unrelated city rebuild or delegation. Stage 8 revision 02 now builds and has been inspected in native gameplay. The wrapper selects Stage 8, retaining Stage 7/P4 comparison commands. All 292 tests and the separate three-lap race pass. Read the current handoff and full-lap milestone; owner artistic acceptance remains open. Keep this milestone local.
+
 ## Owner-directed Game P4 integration — September 17, 2026
 
 The owner now requests building on Game P4 and finishing the work here. Base: P4 `b787b5f`, billboard revision 06. Integrate NightCityKit into a separate playable Stage 7 candidate, preserving P4 animated displays, weather/shelter, course/collisions, ship, HUD and handling. This supersedes the prior asset-viewer-only hold. Inspect real driving footage and validate native runtime. Keep publication local; do not dispatch agents.

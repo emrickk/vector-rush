@@ -1,0 +1,61 @@
+{
+  "buildGuid": "83fe81ff96284df4a3182cfa5cb1587d",
+  "chapters": [
+    {
+      "name": "Opening landmark",
+      "seconds": 1.6000000000000014,
+      "progress": 0.03922153264284134,
+      "source": "frames/frame-00028.png",
+      "image": "ad-01.jpg"
+    },
+    {
+      "name": "Animated portrait and ticker",
+      "seconds": 9.258666666666667,
+      "progress": 0.23482680320739746,
+      "source": "frames/frame-00157.png",
+      "image": "ad-02.jpg"
+    },
+    {
+      "name": "After Hours",
+      "seconds": 11.328,
+      "progress": 0.2901493012905121,
+      "source": "frames/frame-00193.png",
+      "image": "ad-03.jpg"
+    },
+    {
+      "name": "Animated corner pair",
+      "seconds": 25.429333333333336,
+      "progress": 0.5905054807662964,
+      "source": "frames/frame-00454.png",
+      "image": "ad-04.jpg"
+    },
+    {
+      "name": "Night Market",
+      "seconds": 28.39466666666667,
+      "progress": 0.6659723520278931,
+      "source": "frames/frame-00512.png",
+      "image": "ad-05.jpg"
+    },
+    {
+      "name": "Interior triptych",
+      "seconds": 33.51466666666667,
+      "progress": 0.753546416759491,
+      "source": "frames/frame-00598.png",
+      "image": "ad-06.jpg"
+    },
+    {
+      "name": "Tunnel display and ticker",
+      "seconds": 38.464,
+      "progress": 0.8682634830474854,
+      "source": "frames/frame-00681.png",
+      "image": "ad-07.jpg"
+    },
+    {
+      "name": "Last Train",
+      "seconds": 40.896,
+      "progress": 0.9336082339286804,
+      "source": "frames/frame-00720.png",
+      "image": "ad-08.jpg"
+    }
+  ]
+}
