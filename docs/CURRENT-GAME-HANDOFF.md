@@ -1,5 +1,11 @@
 # Current Vector Rush game — new-agent handoff
 
+## Underground finish candidate, September 17, 2026 (current)
+
+The owner approved the underground finish pass and moved continuation from Game P2 to its follow-up task. The saved candidate now includes inhabited terraces, planting, podium fronts, wall recesses and continuous tunnel services. Build GUID `b0c358a8850b446da15227ead1951e33`, revision `underground-gallery-finish-03`. **273 tests passed; 405-frame lap and recorded camera check passed; three consecutive races passed with six finishers and zero recoveries each.** See [the finish milestone](current-game/underground-finish-2026-09-17/README.md) for source, measured performance, actual comparisons, local playable build and limitations. Course, five driving meshes and finished HUD baseline remain preserved.
+
+This is ready for owner review, not artistic acceptance. Foliage silhouettes, facade repetition and concrete detail still trail the supplied reference. Manual/controller validation and wider-city work remain open. Do not redo the HUD or expand the full circuit automatically. Historical sections below retain the earlier publication/verification states; use this milestone for current evidence.
+
 ## Latest relay — 2026-09-17 (supersedes the publication pause below)
 
 The owner supplied this GitHub branch after requesting alternating-agent continuation. Game work is resumed. Relay 01 verified a fresh checkout and rebuilt the existing underground candidate without game changes: **271/271 current tests**, complete **43.2 s / 405-frame native lap**, recorded camera-clearance check, and one separate **three-lap six-finisher race with zero recoveries**. Build GUID `98d13df67244414c923b8e1b64f3c643`; baseline scene and course identities are preserved. See [the relay results and next baton](current-game/relay-2026-09-17/README.md) and its machine-readable evidence.

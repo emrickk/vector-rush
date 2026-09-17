@@ -1,0 +1,67 @@
+{
+    "buildGuid": "b0c358a8850b446da15227ead1951e33",
+    "unityVersion": "6000.6.0f1",
+    "scope": "Warmed real-time automated physics race; no screenshot/audio/encoder overlap. Frame delivery uses Time.unscaledDeltaTime, not GPU timings.",
+    "status": "COMPLETE",
+    "races": [
+        {
+            "race": 1,
+            "playerTime": 130.0150909423828,
+            "position": 2,
+            "frozenResult": true,
+            "pauseFrozen": true,
+            "restartClean": true,
+            "recoveries": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "finishers": [
+                {
+                    "racer": "racer-2",
+                    "position": 1,
+                    "time": 113.17033386230469,
+                    "dnf": false
+                },
+                {
+                    "racer": "racer-0",
+                    "position": 2,
+                    "time": 130.0150909423828,
+                    "dnf": false
+                },
+                {
+                    "racer": "racer-4",
+                    "position": 3,
+                    "time": 131.06277465820313,
+                    "dnf": false
+                },
+                {
+                    "racer": "racer-1",
+                    "position": 4,
+                    "time": 131.4690704345703,
+                    "dnf": false
+                },
+                {
+                    "racer": "racer-5",
+                    "position": 5,
+                    "time": 137.29273986816406,
+                    "dnf": false
+                },
+                {
+                    "racer": "racer-3",
+                    "position": 6,
+                    "time": 139.9582061767578,
+                    "dnf": false
+                }
+            ]
+        }
+    ],
+    "meanMs": 8.333913803100586,
+    "p95Ms": 9.259998321533203,
+    "p99Ms": 9.317623138427734,
+    "maxMs": 16.078372955322266,
+    "spikesAbove33Ms": 0
+}

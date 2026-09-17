@@ -1,0 +1,11 @@
+{
+    "status": "NATIVE_EXPERIENCE_BUILD_COMPLETE_NOT_QUALITY_ACCEPTED",
+    "unityVersion": "6000.6.0f1",
+    "buildGuid": "b0c358a8850b446da15227ead1951e33",
+    "scene": "Assets/Scenes/UndergroundGalleryStage2.unity",
+    "appPath": "/Users/anping.wang/output/vector-rush-underground-finish-2026-09-17/UndergroundFinish03.app",
+    "courseHash": "e5b995eaedbda504165e40147acfbd697321b38a249fd1f08f770642b0a2dc4f",
+    "artRevision": "underground-gallery-finish-03",
+    "renderers": 119,
+    "lights": 256
+}

@@ -739,3 +739,10 @@ Build `a42a55aa30f74b808167201dc3136303`: 267 tests pass; 21 state/aspect views;
 ## 2026-09-17 — GitHub relay 01, clean-checkout verification
 
 Received `game/current` at `a7b8d70`, verified all 2,757 payload hashes, completed a fresh Unity import and 271/271 current tests, and built native GUID `98d13df67244414c923b8e1b64f3c643`. Complete automated lap: 43.2 s / 405 frames with game audio; recorded camera-clearance check passed. Separate three-lap race: six finishers, zero recoveries, 130.015 s player time; mean 8.334 ms, P99 9.312 ms, maximum 16.676 ms. No game code/assets changed. Updated active handoff to distinguish resumed work from the old publication pause and identify the next visual step. Repeated-race/manual/artistic review remains pending. [Results and evidence](current-game/relay-2026-09-17/README.md).
+
+
+## 2026-09-17: underground terrace finish candidate
+
+Completed the owner-approved local environment pass from `e3d3ff6`: additive planted terraces, podium fronts, wall recesses, material relief and curved tunnel services. The candidate retains the completed HUD/baseline, five driving meshes, ship and course. Current suite: 273 passed; native build and 405-frame lap/camera check passed; three consecutive races each had six finishers and zero recoveries with pause/result/restart invariants intact. Separate uncaptured run: mean 8.334 ms, P99 9.318 ms, zero frames above 33.3 ms. This is similar local frame delivery to the prior build, not a GPU cost claim.
+
+See [milestone and matched native comparisons](current-game/underground-finish-2026-09-17/README.md). Continuous clip and playable app are in the local output folder. Foliage/facade/concrete quality still trails the reference; owner artistic acceptance and manual/controller testing remain open. Whole-circuit rollout was not performed. Source/document whitespace checks pass; Unity-generated empty YAML fields retain the Editor's trailing spaces.

@@ -1,0 +1,5 @@
+Actual native camera samples=405
+Swept camera distance=1831.07m
+New-enclosure crossings=0
+Six-axis proximity hits within 0.35m=0
+Not a proof of every manual camera or driving path.
