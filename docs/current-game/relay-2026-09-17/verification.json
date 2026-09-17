@@ -1,0 +1,105 @@
+{
+  "sourceCommit": "a7b8d70013703f17b65125e8a8b1ad90c9a53d4f",
+  "publicationFilesVerified": 2757,
+  "build": {
+    "status": "NATIVE_EXPERIENCE_BUILD_COMPLETE_NOT_QUALITY_ACCEPTED",
+    "unityVersion": "6000.6.0f1",
+    "buildGuid": "98d13df67244414c923b8e1b64f3c643",
+    "scene": "Assets/Scenes/UndergroundGalleryStage2.unity",
+    "courseHash": "e5b995eaedbda504165e40147acfbd697321b38a249fd1f08f770642b0a2dc4f",
+    "artRevision": "underground-gallery-stage2-02",
+    "renderers": 110,
+    "lights": 244
+  },
+  "tests": {
+    "result": "Passed",
+    "total": "271",
+    "passed": "271",
+    "failed": "0",
+    "skipped": "0",
+    "duration": "4.6670813"
+  },
+  "preview": {
+    "buildGuid": "98d13df67244414c923b8e1b64f3c643",
+    "frames": 405,
+    "durationSeconds": 43.2,
+    "audioSeconds": 43.2,
+    "peak": 0.1333622932434082,
+    "rms": 0.03157689661823889,
+    "scope": "Actual native game, automated steering through ordinary physics, real-time clock (no Time.captureFramerate). PNG captures at approximately 10 Hz with actual DSP timestamps; listener output recorded as stereo float samples. Encoding uses recorded frame times. No performance claim."
+  },
+  "cameraClearance": "Actual native camera samples=405\nSwept camera distance=1831.03m\nNew-enclosure crossings=0\nSix-axis proximity hits within 0.35m=0\nNot a proof of every manual camera or driving path.\n",
+  "performance": {
+    "buildGuid": "98d13df67244414c923b8e1b64f3c643",
+    "unityVersion": "6000.6.0f1",
+    "scope": "Warmed real-time automated physics race; no screenshot/audio/encoder overlap. Frame delivery uses Time.unscaledDeltaTime, not GPU timings.",
+    "status": "COMPLETE",
+    "races": [
+      {
+        "race": 1,
+        "playerTime": 130.0150909423828,
+        "position": 2,
+        "frozenResult": true,
+        "pauseFrozen": true,
+        "restartClean": true,
+        "recoveries": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "finishers": [
+          {
+            "racer": "racer-2",
+            "position": 1,
+            "time": 113.17033386230469,
+            "dnf": false
+          },
+          {
+            "racer": "racer-0",
+            "position": 2,
+            "time": 130.0150909423828,
+            "dnf": false
+          },
+          {
+            "racer": "racer-4",
+            "position": 3,
+            "time": 131.06277465820312,
+            "dnf": false
+          },
+          {
+            "racer": "racer-1",
+            "position": 4,
+            "time": 131.4690704345703,
+            "dnf": false
+          },
+          {
+            "racer": "racer-5",
+            "position": 5,
+            "time": 137.27291870117188,
+            "dnf": false
+          },
+          {
+            "racer": "racer-3",
+            "position": 6,
+            "time": 139.96214294433594,
+            "dnf": false
+          }
+        ]
+      }
+    ],
+    "meanMs": 8.333937644958496,
+    "p95Ms": 9.15333080291748,
+    "p99Ms": 9.31233024597168,
+    "maxMs": 16.675622940063477,
+    "spikesAbove33Ms": 0
+  },
+  "limitations": [
+    "Automated steering, not manual driving or controller validation.",
+    "One three-lap race, not the three-race restart lifecycle.",
+    "Sampled stills inspected; continuous motion/artistic acceptance remains pending.",
+    "One local frame-time sample; not GPU timings or a comparative performance claim."
+  ]
+}

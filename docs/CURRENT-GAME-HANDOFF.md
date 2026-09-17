@@ -1,6 +1,12 @@
 # Current Vector Rush game — new-agent handoff
 
-## Start here, not in the historical plans
+## Latest relay — 2026-09-17 (supersedes the publication pause below)
+
+The owner supplied this GitHub branch after requesting alternating-agent continuation. Game work is resumed. Relay 01 verified a fresh checkout and rebuilt the existing underground candidate without game changes: **271/271 current tests**, complete **43.2 s / 405-frame native lap**, recorded camera-clearance check, and one separate **three-lap six-finisher race with zero recoveries**. Build GUID `98d13df67244414c923b8e1b64f3c643`; baseline scene and course identities are preserved. See [the relay results and next baton](current-game/relay-2026-09-17/README.md) and its machine-readable evidence.
+
+Next: improve the sparse upper foundations and terrace/city connection in the existing underground candidate, then inspect actual continuous native motion and present a reference comparison. Completed HUD stays intact. Three consecutive races, human/controller validation and artistic acceptance remain open. The older unrun-check statements below describe the publication moment; use this relay's precise results for current validation coverage.
+
+## Publication state, retained as history
 
 Owner paused implementation on 2026-09-17 to publish this complete working-source checkpoint to the explicitly approved **public** repository `emrickk/vector-rush`. Publication branch: **`game/current`**. Existing GitHub branches remain untouched and are older. Clone this branch explicitly:
 

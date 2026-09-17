@@ -1,5 +1,9 @@
 # Vector Rush development workflow
 
+## GitHub relay continuation — 2026-09-17
+
+The owner supplied the published `game/current` URL after explicitly requesting alternating agent continuation through GitHub. This resumes the underground candidate work; the publication pause below is historical. Read `docs/CURRENT-GAME-HANDOFF.md` for the latest relay results and next bounded step. Preserve the finished HUD, baseline scene, ship and horizontal course. Work in an isolated checkout; synchronize the remote before publishing a milestone, leave a precise handoff and never force-push over another agent. Native verification is not artistic acceptance. No automatic agent dispatch or full-circuit rollout is authorized by this relay arrangement.
+
 ## Current portable checkpoint — 2026-09-17 (takes precedence over historical stages below)
 
 Read `docs/CURRENT-GAME-HANDOFF.md` before acting. The owner paused game implementation to publish the current project to the explicitly approved public repository `emrickk/vector-rush`. Resume game work only on the owner's next instruction. The current scene is `Assets/Scenes/UndergroundGalleryStage2.unity`, not Solstice or the older production handoff scenes. Finished HUD baseline is `EnvironmentStructureStage1.unity`. HUD work is complete; underground environment is an unapproved, partially verified candidate. The latest whole-environment direction supersedes older fixed-elevation/protected-opening-only plans. Do not auto-dispatch agents, regenerate old assets, promote a scene or describe tests/captures as artistic approval. Preserve `.meta` identities and the baseline scene. Use `tools/current-game.sh` for portable open/build/test commands; old recipes remain historical.

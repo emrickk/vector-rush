@@ -14,8 +14,8 @@
     },
     {
       "path": "AGENTS.md",
-      "bytes": 9373,
-      "sha256": "bacf0d88316bffa65b99ff99c361055138b9707b762d2b98ae6b3b0a38a938a9"
+      "bytes": 10083,
+      "sha256": "f090e999d1fdcc814373c231f0e0297794a80aeacf2c78a30ba0a01796e0c041"
     },
     {
       "path": "README.md",
@@ -12334,8 +12334,8 @@
     },
     {
       "path": "docs/CURRENT-GAME-HANDOFF.md",
-      "bytes": 12462,
-      "sha256": "f2b51769b88f1ba72e4293ef280e589c42eaa912075228f70c2f4e34071fbd2e"
+      "bytes": 13585,
+      "sha256": "f2f2f0ec962ee98b9078f7c54ab07c198d9935bac7d5cd2bed4ef24dfcd869fa"
     },
     {
       "path": "docs/GPT6-BUILD-PROMPT.md",
@@ -12563,14 +12563,24 @@
       "sha256": "a918a4c748c154cede8ed261bbbbcd90862e7ea22a04f44f826bf3b549acf6ba"
     },
     {
+      "path": "docs/current-game/relay-2026-09-17/README.md",
+      "bytes": 3474,
+      "sha256": "3a9b7b95aa2b92fec3fdad484afa6a6bc0a3da66a6179534028c4d6fe8444f31"
+    },
+    {
+      "path": "docs/current-game/relay-2026-09-17/verification.json",
+      "bytes": 3411,
+      "sha256": "47c212dbe326371c67a66454f5eefeab7364c43adf308b2da6a097adf62d1e73"
+    },
+    {
       "path": "docs/design.md",
       "bytes": 2903,
       "sha256": "4d17ef4c1768540ac6e2a3f9bf376bcc20c143dce34fe95ad4662b97c001cebd"
     },
     {
       "path": "docs/development-history.md",
-      "bytes": 131921,
-      "sha256": "75f3ef602831e8d675438f75d92be949fb1c7eafc136bb015fdd51e9723b3545"
+      "bytes": 132669,
+      "sha256": "74913c075470bb5090ac1172e35e7fe51c88c94099b7e40e0ee19bbbf0a525e4"
     },
     {
       "path": "docs/development-work-record.html",
@@ -12749,8 +12759,8 @@
     },
     {
       "path": "docs/implementation-plan.md",
-      "bytes": 75495,
-      "sha256": "b8e46ebacf5665703cbb9e9990003dd7915b5b72186952c892d00813ad4d4b68"
+      "bytes": 76624,
+      "sha256": "6385f8eb408b6aabb7323b82917cac425fb79108b670d2b7bd3ebe5e08421565"
     },
     {
       "path": "docs/lighting-reviews/001-lighting-source-audit.md",
