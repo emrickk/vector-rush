@@ -1,5 +1,9 @@
 # Current Vector Rush game — new-agent handoff
 
+## Packaged application icon — September 17, 2026
+
+Owner selected Apex (option 2). Its master and PNG/ICO/ICNS exports are in `SourceAssets/Branding/Apex`; Unity’s default Player Settings icon references `Assets/Branding/ApexIcon.png`. No current scene or gameplay change. Existing native bundles need a rebuild; Unity import/build verification remains pending after an isolated compiler-service startup failure. See the icon entry in `development-history.md`.
+
 ## Smooth road candidate, September 17, 2026 (current)
 
 The owner approved correcting rough curves and abrupt banking. Current scene: `Assets/Scenes/SmoothRoadStage3.unity`, revision `smooth-road-stage3-01`, build `1dd288cb14fb4fb998f4f165a89a864a`. Use the portable wrapper for this candidate. [Road correction milestone and evidence](current-game/smooth-road-2026-09-17/README.md).

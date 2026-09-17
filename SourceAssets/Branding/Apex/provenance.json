@@ -1,0 +1,12 @@
+{
+  "jobId": "job_e4RWbx5oW3vU9b5qxXziQGGF",
+  "model": "model_openai-gpt-image-2",
+  "provider": "Scenario",
+  "selectedOption": "2 - Apex",
+  "selectionDate": "2026-09-17",
+  "dimensions": [
+    1024,
+    1024
+  ],
+  "sha256": "c270f802630a9b287d52aecd9cbc81fed598888e8fa31024f7a9c244cad60c97"
+}

@@ -1,5 +1,11 @@
 # Development history
 
+## 2026-09-17 — Owner-selected Apex application icon
+
+Packaged approved option 2, Apex, generated with GPT Image 2 through Scenario. Includes the exact master, PNG sizes 16–1024, Windows ICO, macOS ICNS and prompt/provenance under `SourceAssets/Branding/Apex`. Added the identical image at `UnityProject/Assets/Branding/ApexIcon.png` with a stable texture GUID and configured the default Player Settings icon. Scene and gameplay files are unchanged.
+
+Validation: exported images decode, master and Unity image hashes match, serialized icon GUID resolves to the included texture, and the portable manifest passes. An isolated Unity validation was attempted but its IL post-processing service failed during compiler startup; no Unity import/build success is claimed. Existing native apps were not rebuilt. Verify the icon in the next native package build.
+
 ## 2026-09-17 — Road curvature and banking correction
 
 Completed the approved road correction in SmoothRoadStage3 with periodic filtered curve geometry, gradual banking and matching denser surfaces. Previous underground and HUD baseline scenes remain byte-identical. 276 tests, 14,400 lane probes, 1,544 camera samples and three six-finisher races passed with zero recoveries. Uncaptured performance: 8.337 ms mean, 9.303 ms P99, no frames above 33.3 ms. Native before/after captures average about 36 fps with occasional recording gaps. [Source milestone, evidence and limitations](current-game/smooth-road-2026-09-17/README.md). Owner manual/controller feel and visual acceptance remain open.

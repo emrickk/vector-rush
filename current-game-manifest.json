@@ -23,6 +23,66 @@
       "sha256": "0b45be838d3b3903541fa5f08c56b352384046bb723ca6fd64673ee9c54250b0"
     },
     {
+      "path": "SourceAssets/Branding/Apex/README.md",
+      "bytes": 616,
+      "sha256": "da74babc1b368203257757f225c427a9d0723825ee497834e0a9f87aa96fe62d"
+    },
+    {
+      "path": "SourceAssets/Branding/Apex/prompt.txt",
+      "bytes": 1588,
+      "sha256": "cb0345c6ddfe47df725d748ff94106b2bd30d2b0cd9f101145eb0fdf348658b8"
+    },
+    {
+      "path": "SourceAssets/Branding/Apex/provenance.json",
+      "bytes": 298,
+      "sha256": "7cefc043dfb3a09fbfd639302ffa308d8ea6c770c6510f39864e2517090439c3"
+    },
+    {
+      "path": "SourceAssets/Branding/Apex/vector-rush-icon-1024.png",
+      "bytes": 692619,
+      "sha256": "c270f802630a9b287d52aecd9cbc81fed598888e8fa31024f7a9c244cad60c97"
+    },
+    {
+      "path": "SourceAssets/Branding/Apex/vector-rush-icon-128.png",
+      "bytes": 17602,
+      "sha256": "d4c6dbf9b7bb97636619f77faa056b8678a6185d085b01dcb31f3017dbd78e7e"
+    },
+    {
+      "path": "SourceAssets/Branding/Apex/vector-rush-icon-16.png",
+      "bytes": 567,
+      "sha256": "5cee22c64c0a8bdf4de5e950fd5c7b342d172637c6553c95729b8c4b31d5ff74"
+    },
+    {
+      "path": "SourceAssets/Branding/Apex/vector-rush-icon-256.png",
+      "bytes": 62489,
+      "sha256": "e5a1cd3a652529f18f4b40903bbc65f3046c4ba1b320789d499647114cb3799e"
+    },
+    {
+      "path": "SourceAssets/Branding/Apex/vector-rush-icon-32.png",
+      "bytes": 1577,
+      "sha256": "c97c7924e91bb280268fce1d21c12fd838d3f2abd4c2fa62b5cee41a45fe41af"
+    },
+    {
+      "path": "SourceAssets/Branding/Apex/vector-rush-icon-512.png",
+      "bytes": 225811,
+      "sha256": "092311cf70d10d4642dbbe1e82c39b2f35d2c257bd7c5442f541f66d6610428b"
+    },
+    {
+      "path": "SourceAssets/Branding/Apex/vector-rush-icon-64.png",
+      "bytes": 5146,
+      "sha256": "c59fc48d59f4452e31de3d72d1865a80b9e43a50fd8171c46d9c91fef08c9e1c"
+    },
+    {
+      "path": "SourceAssets/Branding/Apex/vector-rush.icns",
+      "bytes": 1259531,
+      "sha256": "fd8461267e860e748f737bddc83a42249535acbe1d2ac29eab9309ce28b64976"
+    },
+    {
+      "path": "SourceAssets/Branding/Apex/vector-rush.ico",
+      "bytes": 90565,
+      "sha256": "46b483e4ac80e91d00d4a86a78c9264bb0c89aef34ac4b14b6fd76335600cb84"
+    },
+    {
       "path": "SourceAssets/Experience/.gitignore",
       "bytes": 28,
       "sha256": "e1b943257d252c73670b740940bc312d8b928c68a91fddcb0ea3fb6fc350a5e0"
@@ -6968,6 +7028,21 @@
       "sha256": "4ce8d08fa8ce6a6d0130c6754374c9a510b20fd65c2e4bf62f97924c1e251a79"
     },
     {
+      "path": "UnityProject/Assets/Branding.meta",
+      "bytes": 169,
+      "sha256": "2ca3fb94e257bb87f605994306b62bb0c29eb8f36dfabfa0f4a4d5bb6e340511"
+    },
+    {
+      "path": "UnityProject/Assets/Branding/ApexIcon.png",
+      "bytes": 692619,
+      "sha256": "c270f802630a9b287d52aecd9cbc81fed598888e8fa31024f7a9c244cad60c97"
+    },
+    {
+      "path": "UnityProject/Assets/Branding/ApexIcon.png.meta",
+      "bytes": 3062,
+      "sha256": "52c9e6fcfaf96d2e6d0f40fc18a43d3a560c39b76544c75e4931aa4e26bf1b33"
+    },
+    {
       "path": "UnityProject/Assets/DefaultVolumeProfile.asset",
       "bytes": 22289,
       "sha256": "fabf8902361d9fd5edeae1fcd1597760b191337e2edb726a677bbabe65c8f256"
@@ -12589,8 +12664,8 @@
     },
     {
       "path": "UnityProject/ProjectSettings/ProjectSettings.asset",
-      "bytes": 20743,
-      "sha256": "00dc2b5c4b6e9fa6fb58e7183eb93e961c3df42da9816fc46dac43487fdba9ce"
+      "bytes": 20935,
+      "sha256": "cd9d4e0017e88c013a59e6200facb29dd30949a4b58ac96474aeb6f0c5880119"
     },
     {
       "path": "UnityProject/ProjectSettings/ProjectVersion.txt",
@@ -12724,8 +12799,8 @@
     },
     {
       "path": "docs/CURRENT-GAME-HANDOFF.md",
-      "bytes": 15781,
-      "sha256": "c639bd45645fc14884a32b3d62bfcfc14add82eed28aea67bb2f7a5c6543f1de"
+      "bytes": 16247,
+      "sha256": "c475a52f9ca1217725f7f1eec1dd94060342fb92f6c8a662b656349856c44ce7"
     },
     {
       "path": "docs/GPT6-BUILD-PROMPT.md",
@@ -13124,8 +13199,8 @@
     },
     {
       "path": "docs/development-history.md",
-      "bytes": 134478,
-      "sha256": "807386e753e39b2a0110121a134dbf48e861cbfa2a2ed0eda4a05bad4398aa67"
+      "bytes": 135337,
+      "sha256": "02bce666f652b82c72f4db589bd8e2a27943976724c3e803053a3c2803abd78a"
     },
     {
       "path": "docs/development-work-record.html",
@@ -13304,8 +13379,8 @@
     },
     {
       "path": "docs/implementation-plan.md",
-      "bytes": 79149,
-      "sha256": "41427c7bcda5b0892f77859627a041f65de06d02f19fd5751b693bbe5a34c610"
+      "bytes": 79511,
+      "sha256": "9e25ea09818b05ade7dafda9b2c33e7381ffee99176de400e378642b193641b2"
     },
     {
       "path": "docs/lighting-reviews/001-lighting-source-audit.md",

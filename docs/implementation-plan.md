@@ -1,5 +1,9 @@
 # Vector Rush Implementation Plan
 
+## Selected Apex application icon — 2026-09-17
+
+Package the owner-selected option 2, Apex: preserve the approved 1024px artwork, include PNG/ICO/ICNS exports and generation provenance, configure Unity’s default application icon, validate asset linkage and the portable source manifest, and publish the scoped source milestone. No gameplay or scene changes.
+
 ## Underground gallery — bounded playable candidate, 2026-09-17
 
 **Paused by owner for public source publication.** Two native candidates were built; the second completed a 43.136-second preview lap. The first iteration passed 271 tests. Final regression rerun, captured-camera validation and final multi-lap performance remain pending; the performance run was stopped on request. Continue from [the current handoff](CURRENT-GAME-HANDOFF.md), not an older scene/plan. No visual acceptance or automatic promotion.
