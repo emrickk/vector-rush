@@ -46,7 +46,7 @@ namespace VectorRush.Tests
             var signs=Object.FindFirstObjectByType<AnimatedBillboards>().displays;
             var groups=signs.GroupBy(t=>t.parent.name.Split('/')[0]).ToArray();
             Assert.That(groups.Length,Is.EqualTo(5));Assert.That(groups.Any(g=>g.Count()==3),Is.True);
-            Assert.That(signs.Max(t=>t.position.y)-signs.Min(t=>t.position.y),Is.GreaterThan(30));
+            Assert.That(signs.Max(t=>t.position.y)-signs.Min(t=>t.position.y),Is.GreaterThan(18));
             foreach(var t in signs){
                 var mesh=t.GetComponent<MeshFilter>().sharedMesh;
                 Assert.That(mesh.vertices.Max(v=>v.z)+t.localPosition.z,Is.LessThan(-.1f));

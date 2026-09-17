@@ -1,3 +1,11 @@
+## 2026-09-17 — Make animated billboards readable from the driving camera
+
+Owner found candidate 04 mostly invisible and too small. Candidate 05 enlarges/lowers the primary displays, changes the corner and landscape to road-approach facade planes, and relocates the triptych onto the visible outer bend. Five sparse groups and animation remain; no gameplay, weather or collision changes. Native chase-camera comparisons replace close-ups as the primary layout evidence.
+
+286 tests passed; complete 43.029-second native lap with 1,009 timestamped frames and audio. Isolated 1920×1080 three-lap run: six finishers, zero recoveries; results, pause and restart checks passed. Frame delivery: 8.391 ms mean, 8.995 ms P95, 9.301 ms P99, 190.926 ms maximum, 2 frames above 33.3 ms. These are warmed frame-delivery measurements, not GPU timings.
+
+[Readability milestone](current-game/billboard-readability-2026-09-17/README.md). Owner artistic acceptance remains open. Local source only: GitHub publication is still blocked pending direct approval. Prior 04 layout and its results remain historical.
+
 ## 2026-09-17 — Animated billboard clusters and flicker correction
 
 Owner requested actual animated ads, then rejected the first layout for opening density, repeated heights/headings, harsh flicker and one sign per building. Current review candidate: `Assets/Scenes/AnimatedBillboardsStage6.unity`, revision `animated-billboards-stage6-04`, build `668888fd7612468c8a867cc8e3cb65ee`. The wrapper builds this scene. [Billboard milestone, native comparisons and measured evidence](current-game/billboards-2026-09-17/README.md).

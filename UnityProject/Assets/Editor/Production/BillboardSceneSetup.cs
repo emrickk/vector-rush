@@ -25,21 +25,21 @@ namespace VectorRush.Editor
             {anchor=a;group=g;campaign=c;style=mode;offset=off;yaw=heading;width=w;height=h;cropStart=start;cropWidth=span;kinetic=holo;}
         }
         static Placement[] Layout()=>new[]{
-            // A quiet high portrait, then an open run of unadvertised buildings.
-            new Placement(8,0,0,2,new Vector3(0,24,5),180,7,12),
-            // One facade composition: hero portrait over a separate shallow message strip.
-            new Placement(12,1,2,2,new Vector3(-5,29,0),90,13,20),
-            new Placement(12,1,2,1,new Vector3(-5,15,0),90,17,3),
-            // Adjacent orthogonal building faces form a corner pair, rather than aiming at the car.
-            new Placement(4,2,1,2,new Vector3(6,13,0),-90,12,16),
-            new Placement(4,2,3,2,new Vector3(0,13,6),180,12,16),
-            // A single coordinated video split across three high facade panels.
-            new Placement(15,3,0,2,new Vector3(-5,34,6),90,4.8f,22,0,1f/3),
-            new Placement(15,3,0,2,new Vector3(-5,34,0),90,4.8f,22,1f/3,1f/3),
-            new Placement(15,3,0,2,new Vector3(-5,34,-6),90,4.8f,22,2f/3,1f/3),
-            // A low horizontal display and small projecting blade share the final building.
-            new Placement(16,4,3,0,new Vector3(-4,-2,4),180,22,9,0,1,true),
-            new Placement(16,4,1,1,new Vector3(-16,10,4),90,10,2.5f)
+            // One readable approach landmark, with clear buildings before and after it.
+            new Placement(9,0,0,2,new Vector3(0,10,5),180,16,26),
+            // Hero and ticker sit within the chase-camera approach view.
+            new Placement(12,1,2,2,new Vector3(-5,9,0),90,18,28),
+            new Placement(12,1,2,1,new Vector3(-5,-8,0),90,23,4),
+            // South and east building faces read in sequence as the road rounds the corner.
+            new Placement(4,2,1,2,new Vector3(8,3,0),-90,16,24),
+            new Placement(4,2,3,2,new Vector3(0,3,-8),0,16,24),
+            // A broad triptych on the outer bend, low enough to stay in the driving frame.
+            new Placement(14,3,0,2,new Vector3(-6,4,9),90,7.8f,30,0,1f/3),
+            new Placement(14,3,0,2,new Vector3(-6,4,0),90,7.8f,30,1f/3,1f/3),
+            new Placement(14,3,0,2,new Vector3(-6,4,-9),90,7.8f,30,2f/3,1f/3),
+            // South-facing landscape display is visible on approach to the district exit.
+            new Placement(16,4,3,0,new Vector3(-4,0,-5),0,30,13,0,1,true),
+            new Placement(16,4,1,1,new Vector3(-19,9,-5),90,12,3.5f)
         };
         public static void PrepareAndBuild(){Prepare();ProductionSceneSetup.BuildExperienceCandidate();}
         public static void Prepare()
@@ -109,7 +109,7 @@ namespace VectorRush.Editor
                 }
                 if(changed)renderer.sharedMaterials=materials;
             }
-            world.artRevision="animated-billboards-stage6-04";world.ValidateReady();EditorSceneManager.MarkSceneDirty(scene);EditorSceneManager.SaveScene(scene);AssetDatabase.SaveAssets();
+            world.artRevision="animated-billboards-stage6-05";world.ValidateReady();EditorSceneManager.MarkSceneDirty(scene);EditorSceneManager.SaveScene(scene);AssetDatabase.SaveAssets();
             if(before!=ProductionSceneSetup.Hash(File.ReadAllBytes(AtmosphereSceneSetup.Candidate)))throw new InvalidDataException("Atmosphere source scene changed");
             File.WriteAllText(Path.Combine(output,"billboards.json"),"{\"signs\":"+count+",\"clusters\":5,\"campaigns\":4,\"videoFramesPerCampaign\":64,\"baseVideoSeconds\":5,\"echoPlaybackSeconds\":10,\"kineticDisplays\":"+kinetic.Count+",\"sourceSceneUnchanged\":true,\"courseHash\":\""+world.courseHash+"\"}");
         }

@@ -545,3 +545,10 @@ Owner approved the shown Cyberpunk-inspired reference direction and explicitly r
 Owner correction during native review: the first candidate is too dense in its opening eight seconds, signs sit at similar heights, face the racer uniformly, flicker harshly and use one display per building. Replace that repeated placement with sparse architectural clusters, height hierarchy, fixed facade/corner orientations and composed stacks/strips/segmented displays. Leave intervening buildings clear. Correct screen/housing depth overlap and distant texture aliasing, then inspect the opening and animation before publication. Previous Stage 6 captures are rejected layout evidence, not an accepted milestone.
 
 Corrected Stage 6 candidate delivered for owner review: 10 screens/five clusters, four actual video campaigns, final native driving and fixed-camera playback, 286 tests, and isolated six-finisher/zero-recovery three-lap lifecycle verification. See [the billboard milestone](current-game/billboards-2026-09-17/README.md). Artistic acceptance remains open.
+
+
+## Billboard driving-readability correction — September 17, 2026
+
+Owner finds most corrected displays invisible from the driving camera and too small. Lower and enlarge hero displays, move the triptych onto the visible outer bend, and correct the corner/landscape approach faces. Retain five sparse groups, independent facade orientations, animation and the z-fighting fix. Verify projected visibility using the recorded chase camera, then inspect a new complete native driving capture. Close-up shots are supplementary and cannot establish driving readability. Preserve all gameplay/weather/collision behavior. GitHub publication remains blocked pending the owner's explicit approval in this task; continue local implementation and native delivery.
+
+Candidate 05 completed with native chase-camera comparison, 286 passing tests, full lap capture, and separate six-finisher/zero-recovery three-lap lifecycle/performance verification. The new build is ready for owner review; see the driving-readability milestone.

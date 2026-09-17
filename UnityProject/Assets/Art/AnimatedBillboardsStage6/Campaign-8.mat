@@ -49,7 +49,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Aspect: 2.4444444
+    - _Aspect: 2.3076923
     - _Campaign: 3
     - _CropStart: 0
     - _CropWidth: 1

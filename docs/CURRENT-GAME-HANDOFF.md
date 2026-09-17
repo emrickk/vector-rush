@@ -1,6 +1,12 @@
 # Current Vector Rush game — new-agent handoff
 
-## Animated city displays — September 17, 2026 (current)
+## Billboard driving readability — September 17, 2026 (current local candidate)
+
+Owner rejected candidate 04's poor driving visibility and small signs. Current scene remains `Assets/Scenes/AnimatedBillboardsStage6.unity`, now revision `animated-billboards-stage6-05`, build `6b98ead89ba04809a6da20de39b5e546`. Main screens are larger/lower; the corner and wide landscape use approach-facing architectural planes; the triptych moved onto the visible outer bend. Five sparse clusters and actual animation remain. [Readability milestone and native comparison](current-game/billboard-readability-2026-09-17/README.md).
+
+286 tests passed and the final native 43.029-second / 1,009-frame lap completed. Isolated three-lap run passed with six finishers, zero recoveries, and results/pause/restart checks; exact timing is in the milestone. Owner visual acceptance remains open. Stage 5 weather/dry tunnel, course/collisions, handling, ship and HUD remain preserved. The current local source includes unpublished billboard work: automatic approval review blocked the GitHub push; await direct publication approval in this task. Game P5 blur remains separate. Next is owner review from the actual driving camera, not acceptance based on close-ups.
+
+## Animated city displays — September 17, 2026 (previous candidate)
 
 Owner requested actual animated ads, then rejected the first layout for opening density, repeated heights/headings, harsh flicker and one sign per building. Current review candidate: `Assets/Scenes/AnimatedBillboardsStage6.unity`, revision `animated-billboards-stage6-04`, build `668888fd7612468c8a867cc8e3cb65ee`. The wrapper builds this scene. [Billboard milestone, native comparisons and measured evidence](current-game/billboards-2026-09-17/README.md).
 

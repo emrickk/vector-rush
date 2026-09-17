@@ -2,7 +2,7 @@
 
 ## Owner-approved animated billboard correction — 2026-09-17 (current)
 
-Owner approved real Unity animation and requested sparse opening placement, varied heights, architectural orientations, composed display clusters and flicker correction. Current candidate is `Assets/Scenes/AnimatedBillboardsStage6.unity`; read the current handoff and billboard milestone. Prior Stage 5 weather and dry tunnel, course/collisions, handling, ship and HUD are preserved. Owner visual acceptance remains open; no automatic broader rollout or delegation. Game P5 blur work is separate and not integrated here.
+Owner approved real Unity animation and requested sparse opening placement, varied heights, architectural orientations, composed display clusters and flicker correction. Current candidate is `Assets/Scenes/AnimatedBillboardsStage6.unity`, revision `animated-billboards-stage6-05`: enlarged/lowered signs and corrected facade directions after the owner found candidate 04 mostly invisible while driving. Read the current handoff and driving-readability milestone. GitHub publication remains blocked pending direct owner approval; keep work local. Prior Stage 5 weather and dry tunnel, course/collisions, handling, ship and HUD are preserved. Owner visual acceptance remains open; no automatic broader rollout or delegation. Game P5 blur work is separate and not integrated here.
 
 ## Owner-approved atmosphere correction — 2026-09-17 (current)
 
