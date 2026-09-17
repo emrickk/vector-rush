@@ -1,0 +1,11 @@
+{
+    "status": "NATIVE_EXPERIENCE_BUILD_COMPLETE_NOT_QUALITY_ACCEPTED",
+    "unityVersion": "6000.6.0f1",
+    "buildGuid": "79586df76e61472b8a858042da9574b5",
+    "scene": "Assets/Scenes/RainRoadStage4.unity",
+    "appPath": "/Users/anping.wang/output/vector-rush-rain-2026-09-17/RainRoad03.app",
+    "courseHash": "a43cff0540e9b86cc0d60810b1f19e6cd49ae52d69e41ea43f6fb5b590790abc",
+    "artRevision": "rain-road-stage4-02",
+    "renderers": 119,
+    "lights": 256
+}

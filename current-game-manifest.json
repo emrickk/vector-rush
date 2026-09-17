@@ -14,13 +14,13 @@
     },
     {
       "path": "AGENTS.md",
-      "bytes": 10653,
-      "sha256": "e03bd91745d228848189fa871bdfbfdfeb4148fff8d780f68e925d3409ff579f"
+      "bytes": 11030,
+      "sha256": "771216d26e3ade9def62b00e19bbb5007ca1ef6c198c8409392df00cc24205f2"
     },
     {
       "path": "README.md",
-      "bytes": 15609,
-      "sha256": "0b45be838d3b3903541fa5f08c56b352384046bb723ca6fd64673ee9c54250b0"
+      "bytes": 15618,
+      "sha256": "8f91c0d4b3c640cd089946c307788fbbffa2c38e83b6136f2905b274fc82d2f4"
     },
     {
       "path": "SourceAssets/Experience/.gitignore",
@@ -3583,6 +3583,51 @@
       "sha256": "dfd94fe4cbecaffd7f2269985bdb959682e782eeb02003a5bca1dc4bce4bde1c"
     },
     {
+      "path": "UnityProject/Assets/Art/RainRoadStage4.meta",
+      "bytes": 172,
+      "sha256": "5743d5588407aeeb260fed309a4dfb9557be57d8d60c4ccc8a81695ac221663d"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainRoadStage4/Wet-0.mat",
+      "bytes": 4267,
+      "sha256": "a46d684eebf810a27b30280cfc16beb200065a1a39dcc5ef8c13adfa97f7f716"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainRoadStage4/Wet-0.mat.meta",
+      "bytes": 188,
+      "sha256": "7c63adeee7a87ba0e2cdda69669a4e21a23d954fa5b24f7ee64b1a81976071a1"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainRoadStage4/Wet-1.mat",
+      "bytes": 1964,
+      "sha256": "c31161e31e883eba1809edc470c529f61bbd5b17487cfec0c91e2ddfcfa0068d"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainRoadStage4/Wet-1.mat.meta",
+      "bytes": 188,
+      "sha256": "a5d835915ffe01f3244f2bff79a78133893b5e8efd810406abd38836280c81af"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainRoadStage4/Wet-2.mat",
+      "bytes": 838,
+      "sha256": "ac9bfaf0082141d451c76a34ca67e1175c07d0574d39659b78b2303d3f91fae0"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainRoadStage4/Wet-2.mat.meta",
+      "bytes": 188,
+      "sha256": "539d2b197500bf310b54782194d87adb045030455946a2174d3028ae627d9fcf"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainRoadStage4/Wet-3.mat",
+      "bytes": 844,
+      "sha256": "001527f01411335b427f25c7948ce7f9355ab8ef59cc1ffd3b22bedda554fc07"
+    },
+    {
+      "path": "UnityProject/Assets/Art/RainRoadStage4/Wet-3.mat.meta",
+      "bytes": 188,
+      "sha256": "2ff2c39304f7b3a19998ee27640f6f5508a55fcdb96c24f631fc209a0c276f05"
+    },
+    {
       "path": "UnityProject/Assets/Art/SmoothRoadStage3.meta",
       "bytes": 172,
       "sha256": "aa102e94b5cc6323bb85726ed644072ec8a25437ea9c00722ec02c5c663efdd0"
@@ -6968,6 +7013,26 @@
       "sha256": "4ce8d08fa8ce6a6d0130c6754374c9a510b20fd65c2e4bf62f97924c1e251a79"
     },
     {
+      "path": "UnityProject/Assets/Audio.meta",
+      "bytes": 172,
+      "sha256": "6a3d190d7f8c9c9176956aeb15aecb74a40156bd3cb0c9d636778edac6caa968"
+    },
+    {
+      "path": "UnityProject/Assets/Audio/Rain.meta",
+      "bytes": 172,
+      "sha256": "61c05039f623a076282f178ac9f2dd02254dd0127182ff7aaa2d72c0bacf10f0"
+    },
+    {
+      "path": "UnityProject/Assets/Audio/Rain/CityRain.wav",
+      "bytes": 758444,
+      "sha256": "473d66e9f186a879b8cc8a8cf0c5112d105548ed09bff8467a02c1b08a4d9036"
+    },
+    {
+      "path": "UnityProject/Assets/Audio/Rain/CityRain.wav.meta",
+      "bytes": 60,
+      "sha256": "c25823b24039bb0d0616a296db99910da8142d4a8cc5f06451e1004a86d70256"
+    },
+    {
       "path": "UnityProject/Assets/DefaultVolumeProfile.asset",
       "bytes": 22289,
       "sha256": "fabf8902361d9fd5edeae1fcd1597760b191337e2edb726a677bbabe65c8f256"
@@ -7121,6 +7186,16 @@
       "path": "UnityProject/Assets/Editor/Production/ProductionSceneSetup.cs.meta",
       "bytes": 243,
       "sha256": "979ecf3cb5e3b844b9fcbea672cda2fff641184dae3df004e01a1ecc45fb1649"
+    },
+    {
+      "path": "UnityProject/Assets/Editor/Production/RainSceneSetup.cs",
+      "bytes": 3476,
+      "sha256": "2f3b6da4b2551aa5eab707a54f4ee72c4abfdaef9c12c813dfe2edc80c9e9b54"
+    },
+    {
+      "path": "UnityProject/Assets/Editor/Production/RainSceneSetup.cs.meta",
+      "bytes": 60,
+      "sha256": "7ab5ba05581734d084ac0295fa7505c7e5401d8be164cb64169eb64ced962700"
     },
     {
       "path": "UnityProject/Assets/Editor/Production/SmoothRoadSetup.cs",
@@ -9703,6 +9778,16 @@
       "sha256": "972997257f4219484e3447e36b801ca931d230e64ecd433632836a61024c7cf6"
     },
     {
+      "path": "UnityProject/Assets/Resources/Shaders/RainParticle.shader",
+      "bytes": 1003,
+      "sha256": "6a681a05f152daf65e57ce1d476c1db67ed7556bdda4b2542527233dcf83c918"
+    },
+    {
+      "path": "UnityProject/Assets/Resources/Shaders/RainParticle.shader.meta",
+      "bytes": 60,
+      "sha256": "733a7db131df95b038fcfca492dd3cef0cde3d458e228c1a62a6e5400e58b57a"
+    },
+    {
       "path": "UnityProject/Assets/Resources/Stage1.meta",
       "bytes": 172,
       "sha256": "7e37f533397d081ac7fd55f911399ffc62488bd0d3b3fa1761714dac238ac78b"
@@ -9796,6 +9881,16 @@
       "path": "UnityProject/Assets/Scenes/NocturneProduction.unity.meta",
       "bytes": 155,
       "sha256": "30f67ba1a12a4558f29a4aee78ad8254c5e19395cd91068e6c310418c5dadc4a"
+    },
+    {
+      "path": "UnityProject/Assets/Scenes/RainRoadStage4.unity",
+      "bytes": 1087683,
+      "sha256": "b448333d105d23bde5b336b8d3db33a11d82e8c622aa08b8ef4f2edc81100f8f"
+    },
+    {
+      "path": "UnityProject/Assets/Scenes/RainRoadStage4.unity.meta",
+      "bytes": 155,
+      "sha256": "acff4226cab9db52a8b9396ce3fa7fd3b71afe519dbe90d06c359ac28712491f"
     },
     {
       "path": "UnityProject/Assets/Scenes/SmoothRoadStage3.unity",
@@ -10101,6 +10196,16 @@
       "path": "UnityProject/Assets/Scripts/Presentation/RacePresentationMotion.cs.meta",
       "bytes": 240,
       "sha256": "b9e92c8f0839a58f61d904a97477452d55f999ec84b9b0977584f1965317269d"
+    },
+    {
+      "path": "UnityProject/Assets/Scripts/Presentation/RainPresentation.cs",
+      "bytes": 7925,
+      "sha256": "6fba898970c49ed41b218e7a4b43221bd1eccc64c552dac7a22678028d66c51c"
+    },
+    {
+      "path": "UnityProject/Assets/Scripts/Presentation/RainPresentation.cs.meta",
+      "bytes": 60,
+      "sha256": "1a0648884dc01ab73d18def0b28e5691eab55a30557dd8903becea57c994fc0d"
     },
     {
       "path": "UnityProject/Assets/Scripts/Presentation/RoadReflectionPreview.cs",
@@ -11016,6 +11121,16 @@
       "path": "UnityProject/Assets/Tests/Editor/RacingPolishContractTests.cs.meta",
       "bytes": 60,
       "sha256": "449f2a79cc4e48c50ce2a5e50095ab40a7d6834c846a41430b94cb0b7bdc05e8"
+    },
+    {
+      "path": "UnityProject/Assets/Tests/Editor/RainPresentationTests.cs",
+      "bytes": 1865,
+      "sha256": "f32192b7603f29f8feaced97dfd576ba054649618b4c3e06194aa04086585937"
+    },
+    {
+      "path": "UnityProject/Assets/Tests/Editor/RainPresentationTests.cs.meta",
+      "bytes": 60,
+      "sha256": "c403a6af29be7cb0467a536c3c9a198e7487ecd605a89d7c692cc1128b989772"
     },
     {
       "path": "UnityProject/Assets/Tests/Editor/ReplayPolishGhostTests.cs",
@@ -12724,8 +12839,8 @@
     },
     {
       "path": "docs/CURRENT-GAME-HANDOFF.md",
-      "bytes": 15781,
-      "sha256": "c639bd45645fc14884a32b3d62bfcfc14add82eed28aea67bb2f7a5c6543f1de"
+      "bytes": 16622,
+      "sha256": "491cbd5bc2bcd509f639bca39a3bf324be8a9d081042e06cabceef108af208f3"
     },
     {
       "path": "docs/GPT6-BUILD-PROMPT.md",
@@ -12953,6 +13068,81 @@
       "sha256": "a918a4c748c154cede8ed261bbbbcd90862e7ea22a04f44f826bf3b549acf6ba"
     },
     {
+      "path": "docs/current-game/rain-2026-09-17/README.md",
+      "bytes": 4148,
+      "sha256": "0e0d302a11b6cacf60b37f65789b4ee36a7efd486dd88c5ba5e7c7da916eb748"
+    },
+    {
+      "path": "docs/current-game/rain-2026-09-17/authoring.txt",
+      "bytes": 174,
+      "sha256": "744469fcd72270bab08381b370e6fa02508869ceb8baf21a33b0f1b5588a4051"
+    },
+    {
+      "path": "docs/current-game/rain-2026-09-17/build.json",
+      "bytes": 467,
+      "sha256": "16d010ff36a19fa45b61ecefc838f90f9b0088838e316614a3e5d80520170772"
+    },
+    {
+      "path": "docs/current-game/rain-2026-09-17/capture.json",
+      "bytes": 646,
+      "sha256": "1946f9ca85abd72f5990865d835f7db7fb77711c3044f469425dbcc86d463a7d"
+    },
+    {
+      "path": "docs/current-game/rain-2026-09-17/city-rain.jpg",
+      "bytes": 270810,
+      "sha256": "d95f79632342fd9fa11baa149aa5cef3694eda624624ac3c0119878f09d1caad"
+    },
+    {
+      "path": "docs/current-game/rain-2026-09-17/comparison-bend.jpg",
+      "bytes": 214315,
+      "sha256": "0ca04604d6bdae8ba3f9f91a187c90743ec89ecfb409b4bacb831023c8e8d04f"
+    },
+    {
+      "path": "docs/current-game/rain-2026-09-17/comparison-city.jpg",
+      "bytes": 247444,
+      "sha256": "59d4c0fbfc9ac0bf7608837cf41fc680961d970e85f4a36b2a3cc0c5293c0844"
+    },
+    {
+      "path": "docs/current-game/rain-2026-09-17/comparison-descent.jpg",
+      "bytes": 183804,
+      "sha256": "26cbcdb87204643ee0eec5d6634a5b763ceca8059d0aa22a9bacc15df7ea3540"
+    },
+    {
+      "path": "docs/current-game/rain-2026-09-17/comparison-tunnel.jpg",
+      "bytes": 205630,
+      "sha256": "b6d0ce153b2bc703992f92eaa33944107d48e6e30dbe096250318dba4c36ebd8"
+    },
+    {
+      "path": "docs/current-game/rain-2026-09-17/performance-dry.json",
+      "bytes": 2012,
+      "sha256": "06bffa9bf1b132f8afd1158c79c29479aeed4f7c973cb2faa0e9f77435bd22b2"
+    },
+    {
+      "path": "docs/current-game/rain-2026-09-17/performance.json",
+      "bytes": 2019,
+      "sha256": "b047201b48ef79ea2f488b3499f6d644d9df98f3fe58b606df89ecc4dd97aca5"
+    },
+    {
+      "path": "docs/current-game/rain-2026-09-17/tests.xml",
+      "bytes": 227369,
+      "sha256": "f3268de0a86d9f3e4d821ca48b1229a783599f9aa12f307e664dc39a754f9716"
+    },
+    {
+      "path": "docs/current-game/rain-2026-09-17/tunnel-rain.jpg",
+      "bytes": 216722,
+      "sha256": "49bf0c09fe8bdc2993b0e3a578eb75b14cf5579e679022c1e6e27705f9545a0c"
+    },
+    {
+      "path": "docs/current-game/rain-2026-09-17/weather-summary.json",
+      "bytes": 322,
+      "sha256": "247ce5f8af3ebd8a996304fbd043b8454fa303fbed7c63e9ea1b946f30bd24d7"
+    },
+    {
+      "path": "docs/current-game/rain-2026-09-17/weather.csv",
+      "bytes": 8416,
+      "sha256": "ce8229a39a2f5068c1d9b5fd6157b7a8f6f6b1d028cfe198e3f299ac6e463f88"
+    },
+    {
       "path": "docs/current-game/relay-2026-09-17/README.md",
       "bytes": 3474,
       "sha256": "3a9b7b95aa2b92fec3fdad484afa6a6bc0a3da66a6179534028c4d6fe8444f31"
@@ -13124,8 +13314,8 @@
     },
     {
       "path": "docs/development-history.md",
-      "bytes": 134478,
-      "sha256": "807386e753e39b2a0110121a134dbf48e861cbfa2a2ed0eda4a05bad4398aa67"
+      "bytes": 135160,
+      "sha256": "55988f50d92a76e4a59361938d1072c433bda15971ae1b0d978db2089b08e564"
     },
     {
       "path": "docs/development-work-record.html",
@@ -13304,8 +13494,8 @@
     },
     {
       "path": "docs/implementation-plan.md",
-      "bytes": 79149,
-      "sha256": "41427c7bcda5b0892f77859627a041f65de06d02f19fd5751b693bbe5a34c610"
+      "bytes": 79785,
+      "sha256": "c25aa6f6a2af902dc68a407974f3a2785586e43b819756c9e0e4572644fcf899"
     },
     {
       "path": "docs/lighting-reviews/001-lighting-source-audit.md",
@@ -14164,8 +14354,8 @@
     },
     {
       "path": "tools/current-game.sh",
-      "bytes": 2078,
-      "sha256": "6147be20d8e443ed9d3abb4475093eeb12ae8a7e7fe6e2bffb81031fb625b80b"
+      "bytes": 2076,
+      "sha256": "28ce684df10b3182aa36973049909bdf69ebc2a42eb001bbc1c7585585a6e3df"
     },
     {
       "path": "tools/encode-stage2.py",
@@ -14186,6 +14376,11 @@
       "path": "tools/generate-blue-flame.py",
       "bytes": 888,
       "sha256": "7c318e7e5e0c1b4cc0eb57f30acec7828425c0aff3d0354d7b31d2527e9c4dfc"
+    },
+    {
+      "path": "tools/generate-city-rain.py",
+      "bytes": 1003,
+      "sha256": "d44bb479d42cd2e94978f7d1bf85222c4fdab646be32c4e9635d3cbcc9c3c109"
     },
     {
       "path": "tools/opening-city-run.py",

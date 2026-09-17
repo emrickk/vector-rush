@@ -1,5 +1,9 @@
 # Vector Rush development workflow
 
+## Owner-approved rain pass — 2026-09-17 (current)
+
+The owner approved restrained rain, wet reflections, low ship spray and sheltered rain audio with handling unchanged. Current candidate is `Assets/Scenes/RainRoadStage4.unity`. `SmoothRoadStage3.unity` is the preserved dry comparison. Read the current rain handoff before continuing; owner visual acceptance remains open.
+
 ## Road correction continuation — 2026-09-17 (current)
 
 The owner explicitly approved correcting curve geometry and banking after finding the road rough, then moved continuation from Game P3 here. The current playable candidate is `Assets/Scenes/SmoothRoadStage3.unity`; the portable wrapper builds this scene. Horizontal centerline adjustments up to 1.49 m are intentional for this correction. Preserve the previous underground scene, HUD, ship and architecture. Read the current handoff and milestone evidence. Owner driving feel and visual acceptance remain open.

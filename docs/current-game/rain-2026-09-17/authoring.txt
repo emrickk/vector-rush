@@ -1,0 +1,5 @@
+scene=Assets/Scenes/RainRoadStage4.unity
+course=a43cff0540e9b86cc0d60810b1f19e6cd49ae52d69e41ea43f6fb5b590790abc
+drySceneUnchanged=true
+wetMaterials=4
+handlingUnchanged=true

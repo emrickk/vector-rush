@@ -1,0 +1,16 @@
+{
+  "outdoor": {
+    "samples": 25,
+    "exposure": 1.0,
+    "rainParticles": 964.6,
+    "sprayParticles": 54.0,
+    "rainVolume": 0.19
+  },
+  "tunnel": {
+    "samples": 7,
+    "exposure": 0.0,
+    "rainParticles": 26.142857142857142,
+    "sprayParticles": 42.714285714285715,
+    "rainVolume": 0.025042857142857144
+  }
+}

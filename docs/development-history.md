@@ -1,5 +1,9 @@
 # Development history
 
+## 2026-09-17 — Rain presentation on the corrected road
+
+Added the owner-approved rain scene, sheltered streaks/audio, wet road materials and low ship spray. Preserved handling, prior scenes, all road/collision meshes, ship and HUD. Final candidate: 279 passing tests, a 43.029-second native lap with 1,009 frames, and a separate three-lap race with all six finishers and zero recoveries. Frame times: 8.335 ms mean, 9.324 ms P99; no frames above 33.3 ms. [Rain evidence and limitations](current-game/rain-2026-09-17/README.md). Embedded video playback crashed; a verified native-frame replay provides browser review without video decoding. Owner visual acceptance remains open.
+
 ## 2026-09-17 — Road curvature and banking correction
 
 Completed the approved road correction in SmoothRoadStage3 with periodic filtered curve geometry, gradual banking and matching denser surfaces. Previous underground and HUD baseline scenes remain byte-identical. 276 tests, 14,400 lane probes, 1,544 camera samples and three six-finisher races passed with zero recoveries. Uncaptured performance: 8.337 ms mean, 9.303 ms P99, no frames above 33.3 ms. Native before/after captures average about 36 fps with occasional recording gaps. [Source milestone, evidence and limitations](current-game/smooth-road-2026-09-17/README.md). Owner manual/controller feel and visual acceptance remain open.
