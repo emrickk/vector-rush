@@ -600,3 +600,8 @@ Stage 9 is visually rejected. Rebuild the anatomy, flowing fins/tail and luminou
 Rework the new koi into a giant translucent animated fish above the bend. Add whole-body roaming and visibly sweeping tail/fin deformation; validate the swept overhead clearance, inspect actual chase-camera approach and underpass, then deliver native motion. The previous fixed-scale beside-road placement is rejected.
 
 Stage 10 revision 04 complete for owner review: native approach/underpass and tail sweep inspected, browser replay playback verified, 296 tests pass, isolated three-lap race completes with six finishers and zero recoveries. Saved as a local candidate; Stage 8 default and older content preserved.
+
+### Koi polish and lower pass
+Replace ridged body interpolation, jagged fin contours and dominant scale rings with continuous anatomical surfaces, coherent ribbon fins and softer luminous detail. Slow and smooth tail/fin movement, lower the encounter about 10 m, and validate the updated animation envelope against the banked road. Capture smooth native motion and compare against revision 04.
+
+Revision 05 complete for owner review: 10 m lower, native stills/motion inspected, 296 tests pass, isolated three-lap race passes with six finishers and zero recoveries, browser replay verified. Prior versions and Stage 8 default retained.

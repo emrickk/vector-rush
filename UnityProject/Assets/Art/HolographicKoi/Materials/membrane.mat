@@ -26,8 +26,8 @@ Material:
     m_Ints: []
     m_Floats:
     - _Kind: 1
-    - _Opacity: 0.1
-    - _Power: 3
+    - _Opacity: 0.17
+    - _Power: 3.5
     m_Colors:
     - _Color: {r: 1, g: 0.025, b: 0.004, a: 1}
   m_BuildTextureStacks: []

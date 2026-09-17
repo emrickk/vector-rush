@@ -1,3 +1,11 @@
+## Current koi candidate — Stage 10 revision 05
+
+Smoother/lower correction implemented; read `docs/current-game/koi-polish-2026-09-17/README.md`. Anchor is 10 m lower, with smoother geometry/shading and gentler motion. Use `holo-koi-build`; Stage 8 stays default. Earlier revision 04 is rejected comparison. Owner review remains open.
+
+## Owner correction — smoother and lower koi
+
+Owner rejected Stage 10 revision 04 as insufficiently polished and smooth, and requested a lower pass. Refine body/anatomy, fin contours, surface light and motion; lower the fish with a sampled animated-envelope clearance check. Preserve giant scale, whole-body swimming, other scenes and all gameplay. Inspect the new native motion before delivery. No delegation or publication.
+
 ## Current koi candidate — Stage 10 revision 04
 
 Implemented the owner correction below as a separate scene and native build. Read `docs/current-game/holographic-koi-2026-09-17/README.md` for actual approach/underpass evidence and limits. 296 tests pass; use `holo-koi-build`. Stage 9 is rejected comparison only, Stage 8 remains default pending owner review. No external push or delegation.

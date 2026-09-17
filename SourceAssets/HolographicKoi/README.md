@@ -11,3 +11,5 @@ The wet-road effect captures the moving fish into a dedicated HDR texture and pr
 Rebuild geometry with `/Applications/Blender.app/Contents/MacOS/Blender -b --python SourceAssets/HolographicKoi/build_model.py`. Then use the pinned Unity 6000.6.0f1 Editor with `-batchmode -quit -projectPath <project>/UnityProject -executeMethod VectorRush.Editor.HolographicKoiSetup.Prepare -productionEvidence <fresh output> -logFile <log>`. Prepare overwrites this candidate and its generated assets. Ordinary builds should use the serialized scene through `tools/current-game.sh holo-koi-build <fresh app> <fresh evidence>`.
 
 Builds, raw native captures, audio and logs remain outside source control. The native review package contains actual automated driving footage, not an artistic acceptance claim.
+
+Revision 05 uses monotone cubic body interpolation, smoother 48-segment fin rays and continuous web edges. The shader corrects normals for the traveling deformation, reduces scale contrast with distance, and uses softer warm emission. The tail beat is 1.9 radians per second; lower-amplitude height/bank motion preserves an overhead envelope with the anchor 10 m below revision 04.

@@ -1,3 +1,11 @@
+# Lower, smoother koi — Stage 10 revision 05
+
+The owner rejected revision 04 as unpolished and insufficiently smooth and requested a lower pass. Current koi candidate is **revision 05**, with continuous body contours, smoother fin membranes/rays, subdued scale detail, deformation-correct shading, slower tail motion, gentler body bob/bank and a **10 m lower anchor**. [Native replay and revision 04 comparison](http://127.0.0.1:8778/review-05/) · [Milestone and verification](current-game/koi-polish-2026-09-17/README.md).
+
+296 tests pass. Build `234594114df74da6a0e3c1d21cfefca8`; `holo-koi-build` selects it. Stage 8 remains the default. Owner artistic acceptance remains open; preserve prior versions and do not publish or delegate.
+
+---
+
 # Giant swimming koi overhead — September 17, 2026
 
 Current koi review candidate: **Stage 10 revision 04**, `Assets/Scenes/HolographicKoiStage10.unity`, build `78beb07b1d4e4bec9b7e3f6dae64c6c3`. The owner rejected the solid-looking fixed koi and asked for a giant swimmer close overhead. This candidate adds approximately 130 m scale, translucent red-orange light, whole-body roaming and correctly weighted tail/fin deformation. The native approach passes beneath the fish; the moving road reflection follows it.

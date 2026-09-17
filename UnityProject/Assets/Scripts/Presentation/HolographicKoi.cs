@@ -18,8 +18,8 @@ namespace VectorRush
         public void ApplySwimPose(float seconds)
         {
             float phase=seconds*Mathf.PI*2/period;
-            fish.position=anchor+swimAcross*(22*Mathf.Sin(phase))+swimAlong*(14*Mathf.Sin(phase*2))+Vector3.up*(3*Mathf.Sin(phase+.7f));
-            fish.rotation=heading*Quaternion.Euler(3*Mathf.Sin(phase*2),18*Mathf.Cos(phase),4*Mathf.Sin(phase));
+            fish.position=anchor+swimAcross*(22*Mathf.Sin(phase))+swimAlong*(14*Mathf.Sin(phase*2))+Vector3.up*(1.5f*Mathf.Sin(phase+.7f));
+            fish.rotation=heading*Quaternion.Euler(1.1f*Mathf.Sin(phase*2),14*Mathf.Cos(phase),1.6f*Mathf.Sin(phase));
             if(movingLights!=null)for(int i=0;i<movingLights.Length;i++)if(movingLights[i])movingLights[i].transform.position=fish.position+Vector3.down*(i==0?15:22);
         }
         void Start()

@@ -821,3 +821,8 @@ Retained candidate 05 display placement and sizes. Added inset cabinet framing, 
 ## September 17, 2026 — Giant translucent swimming koi (Stage 10 revision 04)
 
 Owner rejected the ceramic koi, then clarified that the replacement must swim around at giant scale close overhead. Added a separate Stage 8-derived scene, authored Blender/FBX anatomy and 202 fin rays, translucent luminous shaders, 18-second whole-body movement and a strong tail wave. Corrected a discovered FBX axis reversal that had left the tail nearly still. Added a moving HDR fish reflection approximation and candidate-only subdued competing screens. Actual native approach/underpass frames and replay inspected; 296 EditMode tests pass. See the holographic-koi milestone for native race results, evidence and limits. Preserve Stage 8 default; Stage 9 is rejected comparison only. No external push or artistic acceptance claim.
+
+
+## September 17, 2026 — Koi contour, motion and lower-pass correction
+
+Owner rejected revision 04's polish/smoothness and requested a lower pass. Revision 05 replaces ridged body interpolation, irregular fin tips and dominant scale rings; corrects deformation normals; softens and slows swimming; lowers the fish 10 m. The native comparison is against revision 04. Separate higher-frame-rate 720p video and matched 1080p stills are recorded, preserving timestamps. 296 tests pass; see the koi-polish milestone for final isolated native race results and review limits. Saved locally; no visual acceptance or publication implied.

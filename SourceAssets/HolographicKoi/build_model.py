@@ -18,7 +18,7 @@ def mesh(name,verts,faces,mat,uvs=None):
    co=me.vertices[me.loops[i].vertex_index].co;uv.data[i].uv=uvs[me.loops[i].vertex_index] if uvs else (co.x*.07,co.z*.1)
  return ob
 def tube(name,points,radius,mat='filament'):
- vv=[];ff=[];sides=6
+ vv=[];ff=[];sides=8
  for i,p in enumerate(points):
   p=Vector(p);t=(Vector(points[min(i+1,len(points)-1)])-Vector(points[max(0,i-1)])).normalized();axis=t.cross(Vector((0,0,1)))
   if axis.length<.01:axis=t.cross(Vector((0,1,0)))
@@ -32,12 +32,23 @@ def sphere(name,pos,scale,mat):
  for p in ob.data.polygons:p.use_smooth=True
 # Broad head/shoulders taper smoothly to the caudal peduncle.
 profile=[(0,.8),(.07,2.9),(.17,4.1),(.31,4.6),(.46,4.35),(.61,3.55),(.77,2.4),(.9,1.35),(1,.82)]
+# Monotone cubic Hermite slopes: continuous curvature flow instead of a flat
+# derivative at every body ring (which made the old body visibly corrugated).
+slopes=[]
+for i,(x,y) in enumerate(profile):
+ if i==0:m=(profile[1][1]-y)/(profile[1][0]-x)
+ elif i==len(profile)-1:m=(y-profile[i-1][1])/(x-profile[i-1][0])
+ else:
+  d0=(y-profile[i-1][1])/(x-profile[i-1][0]);d1=(profile[i+1][1]-y)/(profile[i+1][0]-x)
+  m=0 if d0*d1<=0 else 2*d0*d1/(d0+d1)
+ slopes.append(m)
 def radius(t):
- for (a,ra),(b,rb) in zip(profile,profile[1:]):
-  if t<=b:u=(t-a)/(b-a);u=u*u*(3-2*u);return ra+(rb-ra)*u
+ for i,((a,ra),(b,rb)) in enumerate(zip(profile,profile[1:])):
+  if t<=b:
+   u=(t-a)/(b-a);return (2*u**3-3*u**2+1)*ra+(u**3-2*u**2+u)*(b-a)*slopes[i]+(-2*u**3+3*u**2)*rb+(u**3-u**2)*(b-a)*slopes[i+1]
  return .82
 def center(t):return Vector((-14+26*t,.7*math.sin(t*math.pi*1.4),.6*math.sin(t*math.pi)))
-vv=[];uvs=[];ff=[];N=112;K=72
+vv=[];uvs=[];ff=[];N=160;K=96
 for i in range(N+1):
  t=i/N;c=center(t);r=radius(t)
  for j in range(K+1):
@@ -53,7 +64,7 @@ for side in [-1,1]:
  sphere('Dark optical pupil',(-10.8,side*2.69,1.25),(.26,.12,.28),'eye')
  tube('Luminous iris',[(-10.8+.34*math.cos(a),side*2.80,1.25+.36*math.sin(a)) for a in [j*math.tau/48 for j in range(49)]],.045)
  # Fine curved gill boundary, with three short internal marks.
- for off in [0,.24]:tube('Gill contour',[(-7.2+off,side*(3.1+.3*math.sin(t*math.pi)),2.6-5*t) for t in [j/24 for j in range(25)]],.06,'gill')
+ for off in [0]:tube('Gill contour',[(-7.2+off,side*(3.1+.3*math.sin(t*math.pi)),2.6-5*t) for t in [j/24 for j in range(25)]],.035,'gill')
  for j in range(2):tube('Whisker',[(-13.55,side*(.6+t*2.0),-.55-j*.45-1.1*math.sin(t*math.pi*.8)) for t in [k/28 for k in range(29)]],.065)
 # Small mouth opening and fleshy luminous lips.
 sphere('Mouth opening',(-14.03,0,-.2),(.12,.7,.38),'gill')
@@ -63,13 +74,13 @@ def fin(name,origins,tips,web=.78):
  rays=[]
  for j,(a,b) in enumerate(zip(origins,tips)):
   a,b=Vector(a),Vector(b);pts=[]
-  for k in range(25):
-   t=k/24;p=a.lerp(b,t);p.y+=math.sin(math.pi*t)*(.8+math.sin(j*.43)*.7);p.z+=(1.8 if name=='Tail' else .9)*math.sin(t*math.pi*1.25+j*.055)*t*t; p.x+=1.6*math.sin(t*math.pi)*t if name=='Tail' else 0;pts.append(p)
-  rays.append(pts);tube(name+' luminous ray',pts,.10 if name=='Tail' else .07)
- vv=[];ff=[];rows=18
+  for k in range(49):
+   t=k/48;u=j/max(1,len(origins)-1);p=a.lerp(b,t);p.y+=math.sin(math.pi*t)*(.7+.4*math.sin(u*math.pi));p.z+=(1.4 if name=='Tail' else .6)*math.sin(t*math.pi)*t; p.x+=1.4*math.sin(t*math.pi)*t if name=='Tail' else 0;pts.append(p)
+  rays.append(pts);tube(name+' luminous ray',pts,.065 if name=='Tail' else .05)
+ vv=[];ff=[];rows=32
  for j,pts in enumerate(rays):
   for k in range(rows):
-   t=k/(rows-1)*web*(.96+.04*math.sin(j*1.9));q=t*24;lo=min(int(q),23);vv.append(pts[lo].lerp(pts[lo+1],q-lo))
+   t=k/(rows-1)*web;q=t*48;lo=min(int(q),47);vv.append(pts[lo].lerp(pts[lo+1],q-lo))
  for j in range(len(rays)-1):
   for k in range(rows-1):
    a=j*rows+k;ff.append((a,a+1,a+rows+1,a+rows))
@@ -77,21 +88,21 @@ def fin(name,origins,tips,web=.78):
 # Long twin caudal lobes and a deep central cleft: a continuous graceful tail silhouette.
 orig=[];tips=[]
 for j in range(59):
- u=j/58;z=2*u-1;orig.append((11.7,.68,z*.72));length=8+12*abs(z)**.55+2.4*math.sin(j*1.6)+1.5*math.sin(j*.43);tips.append((12+length,1.1+2*math.sin(u*math.pi*1.7),z*(7+2.5*math.sin(u*math.pi))+1.2))
-fin('Tail',orig,tips,.55)
+ u=j/58;z=2*u-1;orig.append((11.7,.68,z*.72));length=9+12*(.5-.5*math.cos(abs(z)*math.pi))**.5;tips.append((12+length,1.1+2*math.sin(u*math.pi*1.7),z*(7+2.5*math.sin(u*math.pi))+1.2))
+fin('Tail',orig,tips,.80)
 orig=[];tips=[]
 for j in range(43):
- u=j/42;t=.24+.56*u;c=center(t);orig.append(c+Vector((0,0,radius(t)*.96)));tips.append((c.x+3+5*u,c.y+.3,c.z+radius(t)+2+7*math.sin(u*math.pi)**.65))
-fin('Dorsal',orig,tips,.58)
+ u=j/42;t=.24+.56*u;c=center(t);orig.append(c+Vector((0,0,radius(t)*.96)));tips.append((c.x+4+8*u,c.y+.3,c.z+radius(t)+1+3.8*math.sin(u*math.pi)))
+fin('Dorsal',orig,tips,.85)
 for side in [-1,1]:
  orig=[];tips=[]
  for j in range(31):
   u=j/30;orig.append((-6+2*u,side*3.3,-1+u*.5));tips.append((-4+10*u,side*(6+5*math.sin(u*math.pi)), -2-4*math.sin(u*math.pi)+2*u))
- fin('Pectoral',orig,tips,.62)
+ fin('Pectoral',orig,tips,.82)
  orig=[];tips=[]
  for j in range(19):
   u=j/18;orig.append((4+2*u,side*1.8,-1.5));tips.append((7+6*u,side*(3+3*math.sin(u*math.pi)),-3-2*math.sin(u*math.pi)))
- fin('Pelvic',orig,tips,.58)
+ fin('Pelvic',orig,tips,.82)
 # Join material groups with the same origin, so a single traveling-wave shader deforms all parts coherently.
 final=[]
 for mat,objects in parts.items():
