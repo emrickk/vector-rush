@@ -1,0 +1,2665 @@
+{
+  "scope": "NightCityKit source and engine assets",
+  "files": [
+    {
+      "path": "SourceAssets/NightCityKit/NightCityKit.blend",
+      "bytes": 1217114,
+      "sha256": "a9fef22e71d5aea70b257e0be86ac47307bb0d2ec24296abe66556fc1c309bae"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/apply_scans.py",
+      "bytes": 1140,
+      "sha256": "a0894cc80dd783ae5b2e19ee881feeee5d4015ce9428142b8cd47e518d6c9c40"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/assembly-layout.json",
+      "bytes": 3280,
+      "sha256": "b45ff989c44afbf5029134378d8b5aca390a5eccbcae1bd5a31592102b6c72be"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/build_models.py",
+      "bytes": 19742,
+      "sha256": "124d13f2e63eeb8bd75e565b39e18868918f540107db69fff518b6b55c0e4b48"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/build_signs.py",
+      "bytes": 3420,
+      "sha256": "0dd64bc8b88293827526f63c86fa14f138b3613c3a6830820a4c838a63c33a35"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/build_surfaces.py",
+      "bytes": 8502,
+      "sha256": "fcd0f0b1ff5223c46fcb35595f706cf5d425fd3bf679f5e9b96a5912ed5f6f90"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/fetch_scans.py",
+      "bytes": 1695,
+      "sha256": "09c09206e226e5bb9d685e09ce7b0d79387c66ff3bf562da1e2991dfd558d0de"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/fonts/Barlow-Medium.ttf",
+      "bytes": 103536,
+      "sha256": "f8906f762cb73dca441da034bc363b2d8e2e68bc10d5c05e58717646c20cc4b4"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/fonts/OFL-Barlow.txt",
+      "bytes": 4377,
+      "sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/fonts/OFL.txt",
+      "bytes": 4373,
+      "sha256": "f62ef357d3a1c3d27edd35a6e1ba350e8a8d13499797964eeadefbf0b3b15d1f"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/fonts/Rajdhani-SemiBold.ttf",
+      "bytes": 390340,
+      "sha256": "94bbd25a18ca665999feb05a537de9fd2b860dcfb78bbe9ca00270825bf235da"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/materials.json",
+      "bytes": 10456,
+      "sha256": "7f651dc8be21c6160809848907da4c414dff9b76ffac1845d7b3572249c9ae1f"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/mesh-manifest.json",
+      "bytes": 15326,
+      "sha256": "2c623bfc8bbac779111a176016e5b15bfd43277f7259fa97e629728b03e68f5f"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/meshes/NC_Building_office_LOD0.fbx",
+      "bytes": 112860,
+      "sha256": "5b13aad0fccde7a299cc6ce2eb08b7d8dae5c8a9c90bfcda344a00a21c6203b1"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/meshes/NC_Building_office_LOD1.fbx",
+      "bytes": 41788,
+      "sha256": "151ef521c84020eb53f77ca5c602d8c2c1e3875537545551f5a57128bed78de4"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/meshes/NC_Building_service_LOD0.fbx",
+      "bytes": 166844,
+      "sha256": "2a34402444e7b788e4acb70d3ecef57497f5915ebfe447f148e96545e23de8ef"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/meshes/NC_Building_service_LOD1.fbx",
+      "bytes": 43916,
+      "sha256": "41e58afc66f7ca7ac8f360886eaac6efe8751f72c9d8dbe2e92cc23a5da16398"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/meshes/NC_Building_tenement_LOD0.fbx",
+      "bytes": 519020,
+      "sha256": "d5acf7250da0356c23489ed889de40e637ccaa1556304cd320c5ecd976b18229"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/meshes/NC_Building_tenement_LOD1.fbx",
+      "bytes": 98076,
+      "sha256": "29cb06564aca427aee657d534a576db3a377b839497dbde201dd78ae7d3348d4"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/meshes/NC_CableSpan_LOD0.fbx",
+      "bytes": 131164,
+      "sha256": "41dd8fa17ccbbe2f2dde0300cebca2bf57bee530a12da83eb373b9f027289ba7"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/meshes/NC_CableSpan_LOD1.fbx",
+      "bytes": 57740,
+      "sha256": "026c4fe6cf525b73da6dd217b5ed3903d0918deff36324a5199c06970f9d34ec"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/meshes/NC_CoolingUnit_LOD0.fbx",
+      "bytes": 161372,
+      "sha256": "f378ba3b16c928b1ca7368ab92788e3c7cfb804b1ec44e38152a61753ff91902"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/meshes/NC_CoolingUnit_LOD1.fbx",
+      "bytes": 37948,
+      "sha256": "93b07cd28f3bcd132b39b02d9c1d52c3a6b949c3b3a466e7e60ccca056bb5f59"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/meshes/NC_DuctBank_LOD0.fbx",
+      "bytes": 74332,
+      "sha256": "26d9d197a92ebcd00b45d8e43a667357316c54e4e675f06fbf55462efb7674c1"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/meshes/NC_DuctBank_LOD1.fbx",
+      "bytes": 29804,
+      "sha256": "107b7d6ec9ea8e387fa69aa777a6fd1c14783dcb749b66fe9fa62e07c756d216"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/meshes/NC_MaintenanceBridge_LOD0.fbx",
+      "bytes": 68540,
+      "sha256": "48c20e63adda34ae10f16eeb0265ca1b9066238a3f706db7e041431d04890a01"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/meshes/NC_MaintenanceBridge_LOD1.fbx",
+      "bytes": 33068,
+      "sha256": "3470c90e28847569024b3e0de4ff550d9d16de0656c04a540edb049578431618"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/meshes/NC_NeonRoofSign_LOD0.fbx",
+      "bytes": 231852,
+      "sha256": "51224e2dd46b6ecba6b87e209e592434b0c01164f84c0277479c65e090356c1f"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/meshes/NC_NeonRoofSign_LOD1.fbx",
+      "bytes": 206156,
+      "sha256": "04a59a5ef7da5dd305f2c15565c0ea286d2a04134e0a296a377d98e8c5408cf8"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/meshes/NC_PowerCabinet_LOD0.fbx",
+      "bytes": 95852,
+      "sha256": "6297629ec8e32d6c1f39173733548355791c4034df315bfb05ef62b70b905545"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/meshes/NC_PowerCabinet_LOD1.fbx",
+      "bytes": 41052,
+      "sha256": "dac864a08822ccbc5ad176650551ea06978f1a12f56f39474cc3ed1984765083"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/meshes/NC_RoofExtractor_LOD0.fbx",
+      "bytes": 109532,
+      "sha256": "678c424ad9ae6daf797395987da16aa0b48967152d98d8ab1742ddd73c981aac"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/meshes/NC_RoofExtractor_LOD1.fbx",
+      "bytes": 42316,
+      "sha256": "fc164adfa8b2cd2bbadbcd961a53ce2d8d267aa80348bd9a6cf7eab7394f3030"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/meshes/NC_Shopfront_LOD0.fbx",
+      "bytes": 69756,
+      "sha256": "07b82e144590417c0bce3c302b96c0546bbda442acf01c966728cc652b53d7be"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/meshes/NC_Shopfront_LOD1.fbx",
+      "bytes": 41516,
+      "sha256": "0911cc96e61169af87385ff0a4f185cb538f404178790f74d40e8ea0477e108f"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/meshes/NC_Sign_blade_LOD0.fbx",
+      "bytes": 68796,
+      "sha256": "725f3e0d98d2fc92b197bb24235a426024ca0dffba68dad203997391cc7ffb45"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/meshes/NC_Sign_blade_LOD1.fbx",
+      "bytes": 31676,
+      "sha256": "e64970975d81d114d83d7c351b1aa53ef33ded8570e1fc29a40ffc7d90ac1a92"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/meshes/NC_Sign_koi_LOD0.fbx",
+      "bytes": 67676,
+      "sha256": "469445d2dfd5412ead0c5ad9e143ba11df86a7e542c29345729d980e1a59b54d"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/meshes/NC_Sign_koi_LOD1.fbx",
+      "bytes": 30972,
+      "sha256": "795da69900f7f149a248a6758e52493ec868a4e0955e9479e0c8b89795bb9d92"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/meshes/NC_Sign_market_LOD0.fbx",
+      "bytes": 68332,
+      "sha256": "9daa13b183c35537e521816b854e1f3eb1d2de96fe85ff808790af651650d639"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/meshes/NC_Sign_market_LOD1.fbx",
+      "bytes": 31596,
+      "sha256": "57a219db1589ea127f02219b01af65307ba77fdcdb827562e025b154d1cc807d"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/meshes/NC_Sign_portrait_LOD0.fbx",
+      "bytes": 67420,
+      "sha256": "dbea428235a1181466716eeec77c2dc78b796f0314fdbbe19b8fb26e32a6b71d"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/meshes/NC_Sign_portrait_LOD1.fbx",
+      "bytes": 30988,
+      "sha256": "5f75345007063d06cd35cd6478dbdc2f3c58d296ae5c2bdd9db291e46c5814fe"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/meshes/NC_Sign_square_LOD0.fbx",
+      "bytes": 39532,
+      "sha256": "7d979dc43b24f5673846360f414f8b59135c65b8605ee4a481a82e2f5c75de8c"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/meshes/NC_Sign_square_LOD1.fbx",
+      "bytes": 31772,
+      "sha256": "64d959f088cdc7fb98e88389cd88469636e017a30bc74dc2a9d3533a01669fae"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/meshes/NC_Sign_transit_LOD0.fbx",
+      "bytes": 67100,
+      "sha256": "ffc99b8ad15d878c4bd5bfd982cc615a1d3f7e9ae17c62a47d1641ab04996a4c"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/meshes/NC_Sign_transit_LOD1.fbx",
+      "bytes": 31084,
+      "sha256": "c2af7baa714983589e9ae9565ce7b8471070da95f9db2fde21a197d5039be193"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/meshes/NC_TransitGantry_LOD0.fbx",
+      "bytes": 89468,
+      "sha256": "e3262acd27a29b4a51ea9770438fd93900081a9b48f0ec532eb1293544f61824"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/meshes/NC_TransitGantry_LOD1.fbx",
+      "bytes": 37868,
+      "sha256": "11aa27b2e595aec96ccee6d6384cb5779dbc3594304c557d9d206def964563ba"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/meshes/NC_WaterTank_LOD0.fbx",
+      "bytes": 80524,
+      "sha256": "ccbfd8510bc68fe7fe97577ae7c3561107dc6b0d4b507f69881b3fa76f34ac89"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/meshes/NC_WaterTank_LOD1.fbx",
+      "bytes": 34348,
+      "sha256": "0c8a621a265c426c604e12e7f216e1503c848b8670f9a6afa3ee0b289f7f5bc5"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/package_review.py",
+      "bytes": 11353,
+      "sha256": "e0852df9a09ff8b02c2003de62a5a3abfdc6f01ae268666444d1984a119c79db"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/render_assembly.py",
+      "bytes": 833,
+      "sha256": "5bf099b726f4572dafe5138ac6485b43858018861dd925b04419c29360400578"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/render_catalog.py",
+      "bytes": 1742,
+      "sha256": "9de8128afbcb9968310addb26d6f9f08df62823c3aaa9cda1e012b8c084e64e7"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/render_materials.py",
+      "bytes": 4386,
+      "sha256": "62fda261ba59786acf6de8548e23089b0657455c6fa256c3e1e2926aacf2cdb9"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/renders/catalog/Building_office.png",
+      "bytes": 500457,
+      "sha256": "2495820e35bb1d09efecbba2494795d289940b72930d62deff786426701cede2"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/renders/catalog/Building_service.png",
+      "bytes": 485906,
+      "sha256": "c7e8a81fd1ce2fa3ac0e86cbe863ebdaf999e80a34e348b5306fb7779f590de5"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/renders/catalog/Building_tenement.png",
+      "bytes": 513954,
+      "sha256": "802f24d5f0527d37db3bb2e87b37205b39c3ecc37b3bf0ec2b6250a32ea85db6"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/renders/catalog/CableSpan.png",
+      "bytes": 426135,
+      "sha256": "3e79c978cfae6e352d872b34b32f5d084a3997b1af5de785ef74568da5d5e05d"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/renders/catalog/CoolingUnit.png",
+      "bytes": 521742,
+      "sha256": "f4a47649b03016f59e5433574166a0afe8bd63e6f58a83da820697a25f49f83a"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/renders/catalog/DuctBank.png",
+      "bytes": 495598,
+      "sha256": "00aae4c38daff948c7dcb84931c5967c80b9105157e406a1ef63c9eedccd99d1"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/renders/catalog/MaintenanceBridge.png",
+      "bytes": 461351,
+      "sha256": "ada0e06445718b555eee1dc1fd4beba86de5c13b96628137754b10408112a173"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/renders/catalog/NeonRoofSign.png",
+      "bytes": 447241,
+      "sha256": "f133760784f548adecf10d25011b6a219bfe77da513bbbc1ef46e80e1e0f9277"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/renders/catalog/PowerCabinet.png",
+      "bytes": 478974,
+      "sha256": "6140f34635783164041b77e7cb4771aa10be0ff9ff5c1a170c16963fa34de30d"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/renders/catalog/RoofExtractor.png",
+      "bytes": 488175,
+      "sha256": "59b42c352088429000392d920c891491013192cae0b69ac4b5f876061f37badd"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/renders/catalog/Shopfront.png",
+      "bytes": 480005,
+      "sha256": "0efd43a28b8a9b2543d1915f6ec6be2b318dbae982c6dec87e3b3430a762a821"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/renders/catalog/Sign_blade.png",
+      "bytes": 443918,
+      "sha256": "5f79fc1286825c072e7bdc608faafa7e45707d6acc27fa4daba0752ac633356c"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/renders/catalog/Sign_koi.png",
+      "bytes": 603070,
+      "sha256": "412bb34c08b3008d5a90efe0b656e21ca3adfe99839acab51a1ce56a29dd23ac"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/renders/catalog/Sign_market.png",
+      "bytes": 465211,
+      "sha256": "89ba46e867cea904a94dbb9137b95b7a57c283b6b597fb56580c2e1c6212593a"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/renders/catalog/Sign_portrait.png",
+      "bytes": 527085,
+      "sha256": "68342d777f45f3e87bb06d7f826775b030392ddc96993aaad63b9bf1643af02a"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/renders/catalog/Sign_square.png",
+      "bytes": 481243,
+      "sha256": "611ddc3dbbb9309e22f8a9d9b41cdcfdfcbf3ffe16a9bd754f16646e9987f8e5"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/renders/catalog/Sign_transit.png",
+      "bytes": 527234,
+      "sha256": "3a59c550474320a27cb0c03f3808d331c2bdd143c67d7417da274d611f103e70"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/renders/catalog/TransitGantry.png",
+      "bytes": 443058,
+      "sha256": "cb8710c9a9c8efb313044f39e9f8b809b186686e9693ce257c19f86106e63e1e"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/renders/catalog/WaterTank.png",
+      "bytes": 500122,
+      "sha256": "1fab04ffdf4d60d66d6968c490b4084e264e21ab550628c612931075c974e52a"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/renders/catalog.jpg",
+      "bytes": 326193,
+      "sha256": "00a19651ff2df0889bc8d7498dbb631bcb272b23f0b8e4c0c8230bdf77fcb1f1"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/renders/materials/asphalt.png",
+      "bytes": 816892,
+      "sha256": "16282ca95b026650e347efb86dfc1461b1b64955967bb73273a0a554c4f4491a"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/renders/materials/brushed_alloy.png",
+      "bytes": 682382,
+      "sha256": "f4269dad8fc1444623813e1d81fc020732fc5e41141a4685a1a21e1a0a93d5ac"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/renders/materials/cast_concrete.png",
+      "bytes": 816921,
+      "sha256": "fc2ef0d9df19d6ab94a59a41d67f10cb912d7464a9a1114f8320622813cbe2ca"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/renders/materials/ceramic_tiles.png",
+      "bytes": 714952,
+      "sha256": "41ab79e2b42064eb7d98900ea22521b688b8afc36e61b824508060a887ae8209"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/renders/materials/corrugated_steel.png",
+      "bytes": 760204,
+      "sha256": "c49acb93faec71a1a8f0ae65a5675e4bbeb0b8e2a452bafacedd7c34709e1bf0"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/renders/materials/oxidized_copper.png",
+      "bytes": 627869,
+      "sha256": "cae9f8df62be517651e34318b9e20d415c0ab258403cfa2e6fddbda63ad09521"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/renders/materials/painted_graphite.png",
+      "bytes": 619090,
+      "sha256": "1174faea843ffaf2134ac5e35920787226496e4fa3d85cef84fc391c39f75c45"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/renders/materials/rubber.png",
+      "bytes": 609902,
+      "sha256": "435666996acc6b1499533e5adcf40fdcaf2e87c0a8ce7c0cbc10c5a56ff48e38"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/renders/night-assembly.png",
+      "bytes": 3817673,
+      "sha256": "2c5e49173fb2d67ff8315e21c255184e12807b0f13e1ada2a37487f69854bbe6"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/renders/rooftop-detail.png",
+      "bytes": 4234639,
+      "sha256": "0cb78fffa7e911d80735ac7a5cf812f4a7bc6c2fc5bcb0d4f24c9271416d72e9"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/scans/asphalt_02/AO.jpg",
+      "bytes": 2039487,
+      "sha256": "5fe1737cbbcd55f2fec3632d6170762e5733f24bbc7a7816afb22a23c710b11f"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/scans/asphalt_02/Diffuse.jpg",
+      "bytes": 3075676,
+      "sha256": "28f5ba8690553f192c0e5e1a5ff40f34765b4b93f4cc7059b1a3e9c795b6c28c"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/scans/asphalt_02/Displacement.jpg",
+      "bytes": 1131595,
+      "sha256": "943f254ed5e1504131547b35afe3798771cdda33842b7fdc6c0288b8312a44b0"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/scans/asphalt_02/Rough.jpg",
+      "bytes": 2230457,
+      "sha256": "b9a516b61b7040a9245ac206642d5f767ad9589a0169c4a1668221429e8a998c"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/scans/asphalt_02/download-manifest.json",
+      "bytes": 36022,
+      "sha256": "8ac9a704ed8dd193c874c1dab0414b6d6158fde13b7acdd831b51e23bf7b54b5"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/scans/asphalt_02/nor_gl.jpg",
+      "bytes": 4943950,
+      "sha256": "ffe49db71a0fd34c1e259625df66a302a237597d6ef655307987ec4e45bc6f21"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/scans/concrete_panels/AO.jpg",
+      "bytes": 1734038,
+      "sha256": "98fd1fe3136f215674f641cb1b79363c493499e4249d4bb57e0c9d16c6173fa9"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/scans/concrete_panels/Diffuse.jpg",
+      "bytes": 2715372,
+      "sha256": "ea71c22070e72e36c4ac46ce327abd8c8f43ca45d72a29eca0dfe999cbf26943"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/scans/concrete_panels/Displacement.jpg",
+      "bytes": 1238234,
+      "sha256": "b7716a9738fbc0ddedfac5837f54aac6c5debe5750e609dd1adc0f23ac52b2bc"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/scans/concrete_panels/Rough.jpg",
+      "bytes": 896502,
+      "sha256": "c33141454cbdbedc22b128a8385a76bdb2d03351edb86e0ec140a92b78e53f86"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/scans/concrete_panels/download-manifest.json",
+      "bytes": 35038,
+      "sha256": "14e78823521c5ca3e8620b561952e794430569cae9d7e59dc87acff4b9e073ad"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/scans/concrete_panels/nor_gl.jpg",
+      "bytes": 3651729,
+      "sha256": "de0375d34766c5018606697d2dee5a0418815c594f899e36b7d5d6fa3124d3ed"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/scans/corrugated_iron/AO.jpg",
+      "bytes": 884922,
+      "sha256": "5e9e3faff9db8d649da7782a86ca79ad5d3bf20c01d4c6c091601b495da9d5f7"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/scans/corrugated_iron/Diffuse.jpg",
+      "bytes": 2605861,
+      "sha256": "d904c2f294c0c8f0f198e115517fcdd6fc3a314d28c10e69881eac2890f028df"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/scans/corrugated_iron/Displacement.jpg",
+      "bytes": 781870,
+      "sha256": "de66994f5c93e4c58f6904b318157a58edfc15488b5903d41dfc8aad853cfaca"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/scans/corrugated_iron/Rough.jpg",
+      "bytes": 1680186,
+      "sha256": "5da4c3d958657b404e1d5ab1284662fe2000fabc8025030c805a5e1906f2f2b2"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/scans/corrugated_iron/download-manifest.json",
+      "bytes": 50006,
+      "sha256": "057529ae6dd39bba62196b321c6be4f53e6f3e2bd0df25039af26a11aa609a5c"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/scans/corrugated_iron/nor_gl.jpg",
+      "bytes": 3453777,
+      "sha256": "86a2c9e5111ef0354961c355f863868e9705f4ff2f5e3e46220ac1e1425fd892"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/scans/license-page.html",
+      "bytes": 72336,
+      "sha256": "f530abb18e6317a9b0f2a128b94150e372c8456d7491a14e4860c4ed5f5fe69a"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/scans/provenance.json",
+      "bytes": 5652,
+      "sha256": "4d510c8bac445f922469eb279a5798dcf44c28cc0f0387c1743aebc44da12d6e"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/scenario/afterhours/art.png",
+      "bytes": 2865901,
+      "sha256": "462d9a4b279f9281979873dd950e95f12177965eafeb37704f94425e9f1e3549"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/scenario/afterhours/asset.json",
+      "bytes": 49,
+      "sha256": "0f3302ba8335a3633aee6dfdffb39b249bf6264de3c54200d48ad95d6ee1a0d6"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/scenario/afterhours/job.json",
+      "bytes": 110,
+      "sha256": "185570eed24a73037f09201b1f3a7b5c2529e75291359e39e4e74948641967f9"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/scenario/afterhours/request.json",
+      "bytes": 1026,
+      "sha256": "a15b06f885962084046d07d7177fad246731cfc8f0594f9d79112d3a84001b59"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/scenario/koi_market/art.png",
+      "bytes": 3633685,
+      "sha256": "d12191e8c41316282138e3a273e717cf1e67a6010c8f469a18003b507346e104"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/scenario/koi_market/asset.json",
+      "bytes": 49,
+      "sha256": "c7392ac97cdb47b9226e2ffed2632506fc4b83e91c4d79ca9f3f30f805f47b87"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/scenario/koi_market/job.json",
+      "bytes": 110,
+      "sha256": "418699f617670463c078ebb11206af527e833f9d6a68f5e87341700a9b88811e"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/scenario/koi_market/request.json",
+      "bytes": 928,
+      "sha256": "8d7c6655b1ee3cbe4fda4ad0565d2ad9fde6d0b1f3d797744759fd00aea2aab9"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/scenario/transit/art.png",
+      "bytes": 2551260,
+      "sha256": "55ad0daa9bcef25cef4a92b0c1a5431ad6bc0b924efb7dd73f1d51ee5ce9942f"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/scenario/transit/asset.json",
+      "bytes": 49,
+      "sha256": "a6020650f6ddd129b83f2de035542caa299fa6b18b8c61f1b4da94965ccbadf7"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/scenario/transit/job.json",
+      "bytes": 110,
+      "sha256": "27ab3f0f4bf8c46a050173fb3ce03e427a901d9bcf0f7ba474095bd986d427e5"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/scenario/transit/request.json",
+      "bytes": 925,
+      "sha256": "ec8b5812abf46d84f519abaf8561419f63a6f9843a3f824977ce1c7e6beac20a"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/scenario_art.py",
+      "bytes": 4184,
+      "sha256": "4b1367c1dbdaf4efa91d72a06d12dfcea4f2d3080110ab62640f7749f00c2617"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/sign-source/hotel.svg",
+      "bytes": 1370,
+      "sha256": "4b1f717ba6f64380aead033e94bb06d05c303e1ce2f6684a02f90972b35b2bb0"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/sign-source/market.svg",
+      "bytes": 697,
+      "sha256": "85530ced72cfd4a3a9feff28c70b20a9ccd4496cde80160a71ecbeb0a954ddea"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/sign-source/metro.svg",
+      "bytes": 848,
+      "sha256": "d93372a8ef954288f3b98c827f9f2ca6d321f3675f8927ff11301dfd13be128d"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/sign-source/ramen.svg",
+      "bytes": 1220,
+      "sha256": "7519aacceb83e8c269c205a1d8c45ab793c8aae90f26d3e118f4472c97a23cac"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/sign-source/repair.svg",
+      "bytes": 2350,
+      "sha256": "a1ab4c712b36a97c7b71c31972f10b30ca6869c0b1e29099b4c52208cad8ae3a"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/sign-source/tower.svg",
+      "bytes": 861,
+      "sha256": "698ce0ea61fd083aaad5ace2763a8f1398467440a912253a694498590fb20823"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/surface-proof.jpg",
+      "bytes": 366620,
+      "sha256": "b9dc6e247047971f965160536d346fcf12d23811db9ef0684e455d6efedb958e"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/textures/ad_afterhours_base.png",
+      "bytes": 2698078,
+      "sha256": "93db8996ad2e554ae98448ff5d90a160afe649d98c569a3ee1cd7e37764345dd"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/textures/ad_koi_market_base.png",
+      "bytes": 3304289,
+      "sha256": "f9751ba46a2701db9fe89a56b59445b08b84177acfc5698e2e85f3b6b28fedc9"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/textures/ad_transit_base.png",
+      "bytes": 2454117,
+      "sha256": "87a41a8bdc7e0179d04c247ead71248fab8a3845c18d5f26a2583a024ed0947e"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/textures/asphalt_ao.png",
+      "bytes": 2930421,
+      "sha256": "f7b5bfe66f5d230b135c848ab7770d86dc255860ca106985dc175c40c301e406"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/textures/asphalt_base.png",
+      "bytes": 8656516,
+      "sha256": "30476bd35a486d1c342797eab5657541e55ad3c59ffee315b0827c4caf2d5e86"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/textures/asphalt_height.png",
+      "bytes": 2143347,
+      "sha256": "99732cbb38a7b4091d41d244ae3b4dd385b9838667ebb958ffa1a0b42c6a501d"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/textures/asphalt_ms.png",
+      "bytes": 4304399,
+      "sha256": "e6a4618f3ffdb43365c166d33ac56e4ad0d2eae108a8e87ed2218ca7c5f3efe9"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/textures/asphalt_normal.png",
+      "bytes": 9579787,
+      "sha256": "197e325624243d2556f5fc512a9b801dd1390f5b7b218ac824bc8234644509dd"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/textures/asphalt_wet_ms.png",
+      "bytes": 2636651,
+      "sha256": "7d23eddfd4daadf4ed98ca44b1f61d6f8a23a85fe4a1a1378c0d9e3846a92847"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/textures/brushed_alloy_ao.png",
+      "bytes": 8570,
+      "sha256": "c46098396165335292d5072924f8bd03f735590564e806f2ca19b857b54149b2"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/textures/brushed_alloy_base.png",
+      "bytes": 142662,
+      "sha256": "af3be8463ba34936af43bbe3f40327b19bf900b7447315adf091bc4fbcaa255d"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/textures/brushed_alloy_height.png",
+      "bytes": 12540,
+      "sha256": "1686cff1ec396f1c58c92b42cb007f1c815c5af63438148912cf0641f7ebce70"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/textures/brushed_alloy_ms.png",
+      "bytes": 132111,
+      "sha256": "0891e4c5a2f40bd64ac8ebae4bccdb846e1dbd19c520a8f2cddbbf4c911e8e8e"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/textures/brushed_alloy_normal.png",
+      "bytes": 270567,
+      "sha256": "d93288f840da8583c4ced04f2afc69ce843831ee7d2c30a39e8e6f9e7b50a001"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/textures/brushed_alloy_wet_ms.png",
+      "bytes": 78427,
+      "sha256": "4450bcc19d4031418c4597c707059e5c0ed764c0a335ae153afe73fbba29928c"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/textures/cast_concrete_ao.png",
+      "bytes": 1814069,
+      "sha256": "295f876b13feaef7b4c92cf5a3c63c17ca8129a0ffe4ddfa0f283ba2d3a48b41"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/textures/cast_concrete_base.png",
+      "bytes": 5760703,
+      "sha256": "8939378f571f98ac79206196b82865be92195407ab91501bcb16539846399463"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/textures/cast_concrete_height.png",
+      "bytes": 1175374,
+      "sha256": "ce9a0735039d4a2cac472e1f39ade4ed19686ca7e44c4318d5947d98ff3626aa"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/textures/cast_concrete_ms.png",
+      "bytes": 1525334,
+      "sha256": "a88b50e6df1e617e972b05276ae2e80cf8caffffd2083a0a83642748d0d7a13a"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/textures/cast_concrete_normal.png",
+      "bytes": 7396001,
+      "sha256": "f797f703571fff690eefe5cc4eea829fdb67db23e3a3a9f230cadc38514fff39"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/textures/cast_concrete_wet_ms.png",
+      "bytes": 527907,
+      "sha256": "fa569b252f7ec7fc7b7e43af950e7e6575933ef06f0ccf0bc7fa5a3f8d509c52"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/textures/ceramic_tiles_ao.png",
+      "bytes": 3439,
+      "sha256": "8ec12babd5897a24062537532606497075ca90ec41f8787897aad0711f1ff570"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/textures/ceramic_tiles_base.png",
+      "bytes": 109588,
+      "sha256": "edbf2f22d9e4bbc6a86493a782ef0a3e9947a1440c5906e692e1caff1e0e1a41"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/textures/ceramic_tiles_height.png",
+      "bytes": 11808,
+      "sha256": "4de80a06a142fca800b4afbea210e5037833a6ca492fd1742d0dc1db19f620f2"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/textures/ceramic_tiles_ms.png",
+      "bytes": 124354,
+      "sha256": "bb2014aec1ce7107c2a1b26aafd5b1b1248d3c56630ba3cb5760cb3023d7be58"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/textures/ceramic_tiles_normal.png",
+      "bytes": 336341,
+      "sha256": "6beefabaafd17bba77afd945d7dfc7b98b4e281c1ed4216a6f9eee81a6ae356c"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/textures/ceramic_tiles_wet_ms.png",
+      "bytes": 74312,
+      "sha256": "53b389c3927837fcd13873d1a7a3154a46452819bede6bf06164745d05e02d11"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/textures/corrugated_steel_ao.png",
+      "bytes": 1108141,
+      "sha256": "48face477b9b29e6b92d6e3ec614e359f947b921398990bad37a6df6fc1c9d47"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/textures/corrugated_steel_base.png",
+      "bytes": 5717071,
+      "sha256": "83e9199cbcd0b8fdf3c90f417d447442ba23acc634c756a16daf0b6a3542a751"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/textures/corrugated_steel_height.png",
+      "bytes": 584546,
+      "sha256": "91f9ddbdd72c91bd6cc36bcef5ae9f8c7bb19805a68ad00430a9dc416267bf3e"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/textures/corrugated_steel_ms.png",
+      "bytes": 2652355,
+      "sha256": "8b4c23c091a3e578ce1d30ee955e5266ebf25cd8849856d4bb500d514ebc5a62"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/textures/corrugated_steel_normal.png",
+      "bytes": 7483011,
+      "sha256": "87adaeacac2f71991233a354de850cb73a577e4c289f600a5c6da92a14f666df"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/textures/corrugated_steel_wet_ms.png",
+      "bytes": 1098536,
+      "sha256": "a41a857beae5fff068f52b760e30658b7eec26e0980b1d61a727a288405b0ebd"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/textures/facade_office_base.png",
+      "bytes": 12412,
+      "sha256": "0c050a9bc37929eced725f9246f7f98a9134dd1a48dc78780b00055a7a87438e"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/textures/facade_office_emission.png",
+      "bytes": 13919,
+      "sha256": "a85d01a33b86b4cc724450755b2af4c8047252bf55adcc8edfc1b3d7ab7293a2"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/textures/facade_service_base.png",
+      "bytes": 11293,
+      "sha256": "6780f0741e2178499da70bb47a9692f5bbbf79bf53ee52570058df07b8c5ea38"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/textures/facade_service_emission.png",
+      "bytes": 12544,
+      "sha256": "2dfef2e9e9e66e7dfbb967cbce0676e234130b5d20b6d4dd7f1d7ccc71eba666"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/textures/facade_tenement_base.png",
+      "bytes": 12493,
+      "sha256": "17a9c269b1f1964ba8a653e5f3300e04eb499ae2bd9312c40e76ea0958b5c72c"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/textures/facade_tenement_emission.png",
+      "bytes": 13292,
+      "sha256": "e7ddca7b1dfc323ca133a4e4f5f7ca8035a062b20fb28c9ceb14423612911ea2"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/textures/oxidized_copper_ao.png",
+      "bytes": 5062,
+      "sha256": "69d6d50bd3dde1a7b6bf75211ea2ec1ad40a14efe4857891f419d4ae88c03083"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/textures/oxidized_copper_base.png",
+      "bytes": 160113,
+      "sha256": "3bc1c2a0e83cc8841ad9dad313390e070730fd93f41fc15eafdad751b2e00eb6"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/textures/oxidized_copper_height.png",
+      "bytes": 12045,
+      "sha256": "46ef48742e2e7a28b0bcc94b69759561a6f5893c5e3bd62590cca73a348a2b8c"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/textures/oxidized_copper_ms.png",
+      "bytes": 311029,
+      "sha256": "40aabffce738f302d2be227e2e93b1de45961d75f50869617f589c667407c937"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/textures/oxidized_copper_normal.png",
+      "bytes": 375735,
+      "sha256": "daee2f3d265660f56abb3b69e6896b24203cd49e9d43017103efd4e730cfddc9"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/textures/oxidized_copper_wet_ms.png",
+      "bytes": 274108,
+      "sha256": "b7acde4df26c1a4824df9616f8187d11c4ed5f5d87f739014a81cc1993ac2a74"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/textures/painted_graphite_ao.png",
+      "bytes": 7629,
+      "sha256": "edc1eedef7b9e8b5b97e1d3ebf723d79142856a84ee01be15ef54465c6ec4a38"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/textures/painted_graphite_base.png",
+      "bytes": 54379,
+      "sha256": "63e965d403694bec0374ec0bca412b3708fd22a132d6e5ca3583cd8df7f13d34"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/textures/painted_graphite_height.png",
+      "bytes": 21100,
+      "sha256": "e996286bf119c01fa10e90d6ba20f8c659231e30ea68446af9c0e5b2d83bf296"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/textures/painted_graphite_ms.png",
+      "bytes": 132110,
+      "sha256": "47980110f0581d72c6ce6b7b7a37d9870bb33ef7d849ebeb19305670eef4c94c"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/textures/painted_graphite_normal.png",
+      "bytes": 370742,
+      "sha256": "45e6a70c021e565db05f5560faa9dae864353e89f8fcd519cde83378cc5f751f"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/textures/painted_graphite_wet_ms.png",
+      "bytes": 77307,
+      "sha256": "8e05d23e73c6a19090324a53155d92ad45ad24516e4dd65992b2fb89b4ad470d"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/textures/rubber_ao.png",
+      "bytes": 7223,
+      "sha256": "de2be0fafd8f3a1a9a9c53690d7df6ffc01f61f0cc192193e72580c5af71da26"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/textures/rubber_base.png",
+      "bytes": 5337,
+      "sha256": "67c3a68defc90b1f9378ae19263a9080a0a56c746428a5d1ad21f9c45a4177d4"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/textures/rubber_height.png",
+      "bytes": 13649,
+      "sha256": "962307c9f2b522b173c835ebdb7bf529d94eec756433985fdfc65b37adf3b592"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/textures/rubber_ms.png",
+      "bytes": 131262,
+      "sha256": "7e99fb604747d43d7cc47aca8a74f91f0307ff5b9970e9d2302983c6a5fcb356"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/textures/rubber_normal.png",
+      "bytes": 429315,
+      "sha256": "d02a329af09c1bb8f9cfa3671b2ce60855ac7c6753f0095969638a330fa7073f"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/textures/rubber_wet_ms.png",
+      "bytes": 77307,
+      "sha256": "5dc08a9c851908cac27a82e80ed3359658153c346d1d9989cc781982b48c3a25"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/textures/sign_hotel_base.png",
+      "bytes": 17660,
+      "sha256": "522e6ecdad0b08a1722e41200c0ebd818dd48a1fc80f92989f2051605f741dd1"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/textures/sign_hotel_emission.png",
+      "bytes": 17660,
+      "sha256": "522e6ecdad0b08a1722e41200c0ebd818dd48a1fc80f92989f2051605f741dd1"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/textures/sign_market_base.png",
+      "bytes": 25501,
+      "sha256": "1f3bfb255ff695fe09de5f23595dfc4df18d0d544c55933fa95418f0056a5468"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/textures/sign_market_emission.png",
+      "bytes": 25501,
+      "sha256": "1f3bfb255ff695fe09de5f23595dfc4df18d0d544c55933fa95418f0056a5468"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/textures/sign_metro_base.png",
+      "bytes": 32140,
+      "sha256": "13adc57cff32d987d16399555960268072603623deb700238c2c7395d6fc8c87"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/textures/sign_metro_emission.png",
+      "bytes": 32140,
+      "sha256": "13adc57cff32d987d16399555960268072603623deb700238c2c7395d6fc8c87"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/textures/sign_ramen_base.png",
+      "bytes": 27798,
+      "sha256": "cbd442b39642dbb848f91c0cd622ad0adf79f5cfce2b6a176ce6ea9a50f2e269"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/textures/sign_ramen_emission.png",
+      "bytes": 27798,
+      "sha256": "cbd442b39642dbb848f91c0cd622ad0adf79f5cfce2b6a176ce6ea9a50f2e269"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/textures/sign_repair_base.png",
+      "bytes": 21931,
+      "sha256": "8361d1a0ddfaad880e48a61058722736109182af71628b27f9c0006bd1aa1370"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/textures/sign_repair_emission.png",
+      "bytes": 21931,
+      "sha256": "8361d1a0ddfaad880e48a61058722736109182af71628b27f9c0006bd1aa1370"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/textures/sign_tower_base.png",
+      "bytes": 21074,
+      "sha256": "77df20a80e3651680bb393bc854a17542c70b93a1cd953c021876dc518410161"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/textures/sign_tower_emission.png",
+      "bytes": 21074,
+      "sha256": "77df20a80e3651680bb393bc854a17542c70b93a1cd953c021876dc518410161"
+    },
+    {
+      "path": "SourceAssets/NightCityKit/verify_package.py",
+      "bytes": 3756,
+      "sha256": "814b8359169f1e07c63bab24f8d7c140f8106d83a5993c3417e8e91495dc5e19"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Materials/ad_afterhours.mat",
+      "bytes": 4080,
+      "sha256": "9e1c9033d4c21024fce6b45a36f42c7cbd8b5665f486c7dd84cb05ab3db5c5a5"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Materials/ad_afterhours.mat.meta",
+      "bytes": 188,
+      "sha256": "dad51ab699f7142083d40233a71c488e79445d3ef8441515e9da4c147cced882"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Materials/ad_koi_market.mat",
+      "bytes": 4080,
+      "sha256": "72aa2c3b98d80b8fe42e4c69dc1e7e774520e392893fe07b3d309a25b5d9b809"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Materials/ad_koi_market.mat.meta",
+      "bytes": 188,
+      "sha256": "7d6948e6289c4dd8dd99b8f39e8c2ea65880f96d1cb2297653e8670e8468ecf2"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Materials/ad_transit.mat",
+      "bytes": 4078,
+      "sha256": "da689f219811bb3dd630d52483c36a8d031831ef3868307742eedb9a01bdd2b2"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Materials/ad_transit.mat.meta",
+      "bytes": 188,
+      "sha256": "57fb42cb6a1def3a34277c70f5dca587ffb9b0dcb582f16a3d93cc0ad8bab18b"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Materials/asphalt.mat",
+      "bytes": 4223,
+      "sha256": "d837cfbe7ed8c9abbb06b82ad9bd8ab0688cff0373572ccec7979d4ffc2444cb"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Materials/asphalt.mat.meta",
+      "bytes": 188,
+      "sha256": "0cb6c15a845ec93f8680aebe6fb28188126bb5a6d0833baf79ece66bdc993b20"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Materials/asphalt_wet.mat",
+      "bytes": 4245,
+      "sha256": "4c0319cf47875106e29b96cb9b9420e58b7272bdf891f0dd50129c1f9665728a"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Materials/asphalt_wet.mat.meta",
+      "bytes": 188,
+      "sha256": "7e70d864daaa0e449469afe3db88d5cfe661f5e3fa9ab5fc19451731050b05f2"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Materials/black.mat",
+      "bytes": 3918,
+      "sha256": "60c15839e28cea8bc584c3f29dd2b1419e19dd15751f7d5c8c3e1c4acfb0ffd0"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Materials/black.mat.meta",
+      "bytes": 188,
+      "sha256": "4f38e236ee451a5c6e970c2177099312d03fa162c1077be62539429663db584b"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Materials/brushed_alloy.mat",
+      "bytes": 4228,
+      "sha256": "5eabfae7e8bdf1b05a75190bf309f513e6d949a1c1e7e174ffee99c159ac88ba"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Materials/brushed_alloy.mat.meta",
+      "bytes": 188,
+      "sha256": "2cd2ce9b212aa779335983aab9a9f87a0e11310b5427cd7198974da93a978559"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Materials/brushed_alloy_wet.mat",
+      "bytes": 4251,
+      "sha256": "d2d2a0470ec044d7610128ffa030ecc115a302a3aba6be8a12aa1b1132cc31c8"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Materials/brushed_alloy_wet.mat.meta",
+      "bytes": 188,
+      "sha256": "bf1331326a60ebcf21ffae0cb8d8bfc2f9c33815d305e5cccac33a8408060cd7"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Materials/cast_concrete.mat",
+      "bytes": 4225,
+      "sha256": "4771f19c6f3d891f9d59098cbbfc0ca2bba646bfa35cbd4f74ced5f7b5c5bba0"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Materials/cast_concrete.mat.meta",
+      "bytes": 188,
+      "sha256": "35be3b6f29cf3634300b163734a877afcb98b824c9cc865ac6059dfa9a618817"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Materials/cast_concrete_wet.mat",
+      "bytes": 4247,
+      "sha256": "08d19181193adc32eaf16cc4885915650b6ebb82a51489b3d8c430bc8a796301"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Materials/cast_concrete_wet.mat.meta",
+      "bytes": 188,
+      "sha256": "570e80e974b7b2bf1fa9ded9b7d0e0a606226eb573f3ff3a74d0061ded0c4ce7"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Materials/ceramic_tiles.mat",
+      "bytes": 4229,
+      "sha256": "a7827b4d3d84627f8890473ddacca542d45c97e0e6630a5af3d0c45c605a2169"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Materials/ceramic_tiles.mat.meta",
+      "bytes": 188,
+      "sha256": "42ace50199fb084b5c9d2a0ff637aff1bdebe4b6f807383080683e5f07839eff"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Materials/ceramic_tiles_wet.mat",
+      "bytes": 4250,
+      "sha256": "31df591581084ce1ddfbbc58de4e627b40d4bd33f3ae876a8a50c37593a80f11"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Materials/ceramic_tiles_wet.mat.meta",
+      "bytes": 188,
+      "sha256": "d0f020d3a31a4d24f1297bd58b7bf56671e12edf7b057893db6b980e1d381c50"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Materials/corrugated_steel.mat",
+      "bytes": 4231,
+      "sha256": "9b4b951816ada762090f7ec606778b4ad4c0c5cfa6d59054a7ecb57408af5f84"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Materials/corrugated_steel.mat.meta",
+      "bytes": 188,
+      "sha256": "bd8b4854f55cc84097d05e1ffec471ba350aa1e4445f9f8c4ef89e6637754dc8"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Materials/corrugated_steel_wet.mat",
+      "bytes": 4253,
+      "sha256": "1d32036c3a923548cff62a06b45ce856c22c418034fc7f17c29dc8c7b16d7a0a"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Materials/corrugated_steel_wet.mat.meta",
+      "bytes": 188,
+      "sha256": "e676d76d78dee08172210211ecfd785d26d635a5ad0137e48975e32d8afd8ef1"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Materials/cyan.mat",
+      "bytes": 3928,
+      "sha256": "2c5090f490049c4b1b4f28abc1399deb42297bfb3e5610cffba07f0e64cf9053"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Materials/cyan.mat.meta",
+      "bytes": 188,
+      "sha256": "fd68062f0817935c8577d0135f894404f96f67da49e907aa0770c660d679d0d0"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Materials/facade_office.mat",
+      "bytes": 4081,
+      "sha256": "b482e5a8f9ee4f225acd39b4ec051d8e83490b64bdf3e6b63e4dc3610c0ac758"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Materials/facade_office.mat.meta",
+      "bytes": 188,
+      "sha256": "448f7c85fe5b4b769224de0b120ffbdb6847b91d57cc65a022878b5c55db43ee"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Materials/facade_service.mat",
+      "bytes": 4082,
+      "sha256": "a48ef6de821c679e8aeb3b8007aa3844e42235e1956c8dbeb3d9a0cee58b3e56"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Materials/facade_service.mat.meta",
+      "bytes": 188,
+      "sha256": "b5cc9a2556f50a1a31940ba8c4bc81333224653e3908aa0660ee2cfd32734576"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Materials/facade_tenement.mat",
+      "bytes": 4083,
+      "sha256": "ca3cc36bbe98e3e4c08396787495ba969b2fd7dd2fd08d2a0b49bc7ed857b9a4"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Materials/facade_tenement.mat.meta",
+      "bytes": 188,
+      "sha256": "c45b680e6a2dc4267934593e1825a5e95ff4c5e8c03103982ff2bb3cf4c9a238"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Materials/glass.mat",
+      "bytes": 3923,
+      "sha256": "ff86d42a603b4ecb7373885c17fd1042bbb747ade8a4a726f136af2724c44a08"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Materials/glass.mat.meta",
+      "bytes": 188,
+      "sha256": "112e1fd42b88e4b93dca3a6a818a1ba30992b853b29eba80fa1ca6d088d7e6cd"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Materials/oxidized_copper.mat",
+      "bytes": 4231,
+      "sha256": "bd3bc650200f715c8dbf40677fa3b53b1a778477b4f23abb40fd510315b67ad3"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Materials/oxidized_copper.mat.meta",
+      "bytes": 188,
+      "sha256": "412be8255a7e35da608a32e395105f4693164c2d5d376e8db6cc94460351c6fb"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Materials/oxidized_copper_wet.mat",
+      "bytes": 4253,
+      "sha256": "4e7119c690cc5c5847ca2c389331dde591b1693ad74cbdc88c1eb9d85c97c647"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Materials/oxidized_copper_wet.mat.meta",
+      "bytes": 188,
+      "sha256": "aca0f5046af0a13ab3bb00ae2e72db6380e3d1b0e17e8906cb3da0513b759703"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Materials/painted_graphite.mat",
+      "bytes": 4232,
+      "sha256": "15a23a544335e84220d864250fe38ba326a07a382a16405637d3485c78d98ccf"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Materials/painted_graphite.mat.meta",
+      "bytes": 188,
+      "sha256": "32508ac340b98e9ff9e2fe793c1cbf1dd1ff636191b77f6be84d897269b4715d"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Materials/painted_graphite_wet.mat",
+      "bytes": 4254,
+      "sha256": "aa4dad26061631b0c6d715320941a8d01e2bb6c15f943ba0df728cfb9396bc05"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Materials/painted_graphite_wet.mat.meta",
+      "bytes": 188,
+      "sha256": "299807148b9693dae808a2c23f0af33af08468666d4e130869fdaef09cbed428"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Materials/red.mat",
+      "bytes": 3944,
+      "sha256": "e2ebdbfe90db8d5bca6e7a5f70574cf0ec9fad6bf5e7dee6c9bd5759c7a8c0f0"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Materials/red.mat.meta",
+      "bytes": 188,
+      "sha256": "c3d5a29a8aac7ef10baeec3c06878abadd39f04dcf80a05b55e9afd9b6416bd9"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Materials/rubber.mat",
+      "bytes": 4222,
+      "sha256": "01d07e52f5f37f1a1114edb0ec8e731869825d1ed6ccfff6526e594831328e0c"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Materials/rubber.mat.meta",
+      "bytes": 188,
+      "sha256": "76576e9f387fd1cd59d0e8a16ce6c084ebfcb4a83187421e7cc7a1071ca007af"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Materials/rubber_wet.mat",
+      "bytes": 4245,
+      "sha256": "fdc9a6601a5316a2e09c6d1f2358bd6c29223cf20942e838d281c40b616125d9"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Materials/rubber_wet.mat.meta",
+      "bytes": 188,
+      "sha256": "81c796fb4a1d4541ec2fcfe8047dffe72b8f4ae23635f86bbcf04d2319212afe"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Materials/sign_hotel.mat",
+      "bytes": 4068,
+      "sha256": "9a503f778fc8078df4a06b31e37012a3950b36303aa59bf0026a898978fd71ca"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Materials/sign_hotel.mat.meta",
+      "bytes": 188,
+      "sha256": "d459ef1e09759a7363e43c4afb586ab178454cb54d906da9a1198265f5f579f5"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Materials/sign_market.mat",
+      "bytes": 4070,
+      "sha256": "c635e823f5e083b99a9e1c4ef82b29c81e0590a1746e33fc100106b884d6085a"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Materials/sign_market.mat.meta",
+      "bytes": 188,
+      "sha256": "a03f88b592eb4311b7a3d329ee2027dc71713f9f07370bf53b577c5680fc5a4a"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Materials/sign_metro.mat",
+      "bytes": 4070,
+      "sha256": "009e7e0b4e0363a6266104b94d3bc130f3b9b38b867310899b5b9c1ccac7f043"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Materials/sign_metro.mat.meta",
+      "bytes": 188,
+      "sha256": "98ab7a6ae039e4b0ed93f8e21140a2a613d59cfb25e66d1417ac737943e7b33a"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Materials/sign_ramen.mat",
+      "bytes": 4070,
+      "sha256": "a10df8bd2616fbebf671202298db1958fc4df11a92cf57e774c636b622a3e7b4"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Materials/sign_ramen.mat.meta",
+      "bytes": 188,
+      "sha256": "2db16903ccaed7ee9ce26ae257e4a7d6fc73ebbaa2c06a56c8d52c20a8df7067"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Materials/sign_repair.mat",
+      "bytes": 4070,
+      "sha256": "ed3b90d2da7ffc808f8e48a6b88be05b68a3202da64e223bdf815b2b4719265d"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Materials/sign_repair.mat.meta",
+      "bytes": 188,
+      "sha256": "86e6f3ad94b751c6541a26ce869bb48dd252d482589ac79f1e49e8f3a17e9cf3"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Materials/sign_tower.mat",
+      "bytes": 4069,
+      "sha256": "824fe88b4f61524567588ac73d215b6a8fe661e53f23373f67db556a99f4e6fb"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Materials/sign_tower.mat.meta",
+      "bytes": 188,
+      "sha256": "9ae1e7ec008b050c901a70bc1f502ef116c7521239fb9f5b0515c6451746769b"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Materials/warm.mat",
+      "bytes": 3939,
+      "sha256": "dd636325eea37d78a8cca0948dc5cf6d44fe1f3b2fc60ab44240a83b602c4bbc"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Materials/warm.mat.meta",
+      "bytes": 188,
+      "sha256": "59aa0316baeefe9ae7d16e9e0184f57c3042ee5ceecec94e8b4022df344047a2"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Materials.meta",
+      "bytes": 172,
+      "sha256": "5996197276d6576a8571fad4c62d4da093f46127cc6e91d5cfbb20905671ae3e"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Models/NC_Building_office_LOD0.fbx",
+      "bytes": 112860,
+      "sha256": "5b13aad0fccde7a299cc6ce2eb08b7d8dae5c8a9c90bfcda344a00a21c6203b1"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Models/NC_Building_office_LOD0.fbx.meta",
+      "bytes": 4364,
+      "sha256": "19348a5040bfb82b46d87d0f8edbe1a048d6c195655c21d6f8176cb52a3c0cae"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Models/NC_Building_office_LOD1.fbx",
+      "bytes": 41788,
+      "sha256": "151ef521c84020eb53f77ca5c602d8c2c1e3875537545551f5a57128bed78de4"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Models/NC_Building_office_LOD1.fbx.meta",
+      "bytes": 4364,
+      "sha256": "8b0e59eec2b0d04d68108574ef470e8103a54ede4903162d4880fc1ab7753113"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Models/NC_Building_service_LOD0.fbx",
+      "bytes": 166844,
+      "sha256": "2a34402444e7b788e4acb70d3ecef57497f5915ebfe447f148e96545e23de8ef"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Models/NC_Building_service_LOD0.fbx.meta",
+      "bytes": 4364,
+      "sha256": "9f98fb8d644fd999dc11ccb9d0982673af9374e16bf07f2891cce30653b9a1c5"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Models/NC_Building_service_LOD1.fbx",
+      "bytes": 43916,
+      "sha256": "41e58afc66f7ca7ac8f360886eaac6efe8751f72c9d8dbe2e92cc23a5da16398"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Models/NC_Building_service_LOD1.fbx.meta",
+      "bytes": 4364,
+      "sha256": "6c4a8ef1300fb0d343dd657cd3104a9cb8578277043475945f71c1ced846ad27"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Models/NC_Building_tenement_LOD0.fbx",
+      "bytes": 519020,
+      "sha256": "d5acf7250da0356c23489ed889de40e637ccaa1556304cd320c5ecd976b18229"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Models/NC_Building_tenement_LOD0.fbx.meta",
+      "bytes": 4366,
+      "sha256": "c55f68ff9e36339c3baf758bced1fb44b988dba01ea0fa861400202a78dd22ea"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Models/NC_Building_tenement_LOD1.fbx",
+      "bytes": 98076,
+      "sha256": "29cb06564aca427aee657d534a576db3a377b839497dbde201dd78ae7d3348d4"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Models/NC_Building_tenement_LOD1.fbx.meta",
+      "bytes": 4366,
+      "sha256": "761f5fd98e06c1d3a07d05df5902d514fbd5c6b9d6b0c83ef18768d4312de0e3"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Models/NC_CableSpan_LOD0.fbx",
+      "bytes": 131164,
+      "sha256": "41dd8fa17ccbbe2f2dde0300cebca2bf57bee530a12da83eb373b9f027289ba7"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Models/NC_CableSpan_LOD0.fbx.meta",
+      "bytes": 3617,
+      "sha256": "f8b6d8b146ff10415e56ed5d16d7934c0b6eb347dd5cd45e9964b6a216739112"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Models/NC_CableSpan_LOD1.fbx",
+      "bytes": 57740,
+      "sha256": "026c4fe6cf525b73da6dd217b5ed3903d0918deff36324a5199c06970f9d34ec"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Models/NC_CableSpan_LOD1.fbx.meta",
+      "bytes": 3617,
+      "sha256": "0dd7c94a8a1c8035b207105a372a61cde47a7e3ce223fe3f732e4d9c86b5b920"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Models/NC_CoolingUnit_LOD0.fbx",
+      "bytes": 161372,
+      "sha256": "f378ba3b16c928b1ca7368ab92788e3c7cfb804b1ec44e38152a61753ff91902"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Models/NC_CoolingUnit_LOD0.fbx.meta",
+      "bytes": 3986,
+      "sha256": "f27302c136705aacccaeba1fff5199d39c1f20d72a65b2682b68a134d675d989"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Models/NC_CoolingUnit_LOD1.fbx",
+      "bytes": 37948,
+      "sha256": "93b07cd28f3bcd132b39b02d9c1d52c3a6b949c3b3a466e7e60ccca056bb5f59"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Models/NC_CoolingUnit_LOD1.fbx.meta",
+      "bytes": 3986,
+      "sha256": "27e37e608670dd755d1693aa6adf228cbf2e500f71424faf91f63f73858b8f64"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Models/NC_DuctBank_LOD0.fbx",
+      "bytes": 74332,
+      "sha256": "26d9d197a92ebcd00b45d8e43a667357316c54e4e675f06fbf55462efb7674c1"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Models/NC_DuctBank_LOD0.fbx.meta",
+      "bytes": 3810,
+      "sha256": "35845d67b8c35e4b9f5c648b851382c821c8809300769044bf592e9d3e27488c"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Models/NC_DuctBank_LOD1.fbx",
+      "bytes": 29804,
+      "sha256": "107b7d6ec9ea8e387fa69aa777a6fd1c14783dcb749b66fe9fa62e07c756d216"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Models/NC_DuctBank_LOD1.fbx.meta",
+      "bytes": 3810,
+      "sha256": "f3bdc2617b3558373e51f76392e0ab4d49cdd933e9a6870740ea537b3a561c81"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Models/NC_MaintenanceBridge_LOD0.fbx",
+      "bytes": 68540,
+      "sha256": "48c20e63adda34ae10f16eeb0265ca1b9066238a3f706db7e041431d04890a01"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Models/NC_MaintenanceBridge_LOD0.fbx.meta",
+      "bytes": 3439,
+      "sha256": "1e2d119928bf9b4ffd183916372ae0e5cfd13968815d1db3169ee9a50f4fcbd8"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Models/NC_MaintenanceBridge_LOD1.fbx",
+      "bytes": 33068,
+      "sha256": "3470c90e28847569024b3e0de4ff550d9d16de0656c04a540edb049578431618"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Models/NC_MaintenanceBridge_LOD1.fbx.meta",
+      "bytes": 3439,
+      "sha256": "2c0e98d7f45b03e02358f3e8a38441f5e21c4f2a1b321cfacfd065c2cc1a4d0d"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Models/NC_NeonRoofSign_LOD0.fbx",
+      "bytes": 231852,
+      "sha256": "51224e2dd46b6ecba6b87e209e592434b0c01164f84c0277479c65e090356c1f"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Models/NC_NeonRoofSign_LOD0.fbx.meta",
+      "bytes": 3797,
+      "sha256": "8f799dee30aa168a71433735be57a17be50caaea6da544be90cce055a307e5a9"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Models/NC_NeonRoofSign_LOD1.fbx",
+      "bytes": 206156,
+      "sha256": "04a59a5ef7da5dd305f2c15565c0ea286d2a04134e0a296a377d98e8c5408cf8"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Models/NC_NeonRoofSign_LOD1.fbx.meta",
+      "bytes": 3797,
+      "sha256": "a2de6555837963f0cce513ed63c952576e94583ddb4a8a37948adfce186896d4"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Models/NC_PowerCabinet_LOD0.fbx",
+      "bytes": 95852,
+      "sha256": "6297629ec8e32d6c1f39173733548355791c4034df315bfb05ef62b70b905545"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Models/NC_PowerCabinet_LOD0.fbx.meta",
+      "bytes": 4355,
+      "sha256": "1db7e618fd4a410df165715291985bc7b84d034ed275ae1af0827835b5519f78"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Models/NC_PowerCabinet_LOD1.fbx",
+      "bytes": 41052,
+      "sha256": "dac864a08822ccbc5ad176650551ea06978f1a12f56f39474cc3ed1984765083"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Models/NC_PowerCabinet_LOD1.fbx.meta",
+      "bytes": 4355,
+      "sha256": "7e76e6c736d076cba92d874caf340ecee4ec4b110b13e0f02e701854817a4d54"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Models/NC_RoofExtractor_LOD0.fbx",
+      "bytes": 109532,
+      "sha256": "678c424ad9ae6daf797395987da16aa0b48967152d98d8ab1742ddd73c981aac"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Models/NC_RoofExtractor_LOD0.fbx.meta",
+      "bytes": 3811,
+      "sha256": "f8b30276581697b8997d31547decd45963b1281b32b42152ca620c5c25483c08"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Models/NC_RoofExtractor_LOD1.fbx",
+      "bytes": 42316,
+      "sha256": "fc164adfa8b2cd2bbadbcd961a53ce2d8d267aa80348bd9a6cf7eab7394f3030"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Models/NC_RoofExtractor_LOD1.fbx.meta",
+      "bytes": 3811,
+      "sha256": "a6b0ee2506916be1c4ffe737e3e0e58170d7869722b2949992da2928f5b8fb6c"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Models/NC_Shopfront_LOD0.fbx",
+      "bytes": 69756,
+      "sha256": "07b82e144590417c0bce3c302b96c0546bbda442acf01c966728cc652b53d7be"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Models/NC_Shopfront_LOD0.fbx.meta",
+      "bytes": 4377,
+      "sha256": "38961873fb768084ea5423f0006d7857a6e49d9285592ee0480f418136d1cb9f"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Models/NC_Shopfront_LOD1.fbx",
+      "bytes": 41516,
+      "sha256": "0911cc96e61169af87385ff0a4f185cb538f404178790f74d40e8ea0477e108f"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Models/NC_Shopfront_LOD1.fbx.meta",
+      "bytes": 4377,
+      "sha256": "bc2bec56f790c20d25f1ada55a0a22d971799d221dd5852e9a9263812b4dfe47"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Models/NC_Sign_blade_LOD0.fbx",
+      "bytes": 68796,
+      "sha256": "725f3e0d98d2fc92b197bb24235a426024ca0dffba68dad203997391cc7ffb45"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Models/NC_Sign_blade_LOD0.fbx.meta",
+      "bytes": 3805,
+      "sha256": "82c6811e1153eac8b18739fa78b6f7f91f800a96a68cece9d97f9dfbd240489c"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Models/NC_Sign_blade_LOD1.fbx",
+      "bytes": 31676,
+      "sha256": "e64970975d81d114d83d7c351b1aa53ef33ded8570e1fc29a40ffc7d90ac1a92"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Models/NC_Sign_blade_LOD1.fbx.meta",
+      "bytes": 3624,
+      "sha256": "4fd564ff5ac0002486c58fab6e8fa737941083c78d9fb282100fe08833a2f4ca"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Models/NC_Sign_koi_LOD0.fbx",
+      "bytes": 67676,
+      "sha256": "469445d2dfd5412ead0c5ad9e143ba11df86a7e542c29345729d980e1a59b54d"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Models/NC_Sign_koi_LOD0.fbx.meta",
+      "bytes": 3808,
+      "sha256": "950a1eca224f43793f7e195ae309b4536e7b0dc35aff2007f0b80781876c28be"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Models/NC_Sign_koi_LOD1.fbx",
+      "bytes": 30972,
+      "sha256": "795da69900f7f149a248a6758e52493ec868a4e0955e9479e0c8b89795bb9d92"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Models/NC_Sign_koi_LOD1.fbx.meta",
+      "bytes": 3627,
+      "sha256": "8381d6d9def508479a7e11c666727bf7521e7cf0701ad9f0f3e667ef11ec2dbd"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Models/NC_Sign_market_LOD0.fbx",
+      "bytes": 68332,
+      "sha256": "9daa13b183c35537e521816b854e1f3eb1d2de96fe85ff808790af651650d639"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Models/NC_Sign_market_LOD0.fbx.meta",
+      "bytes": 3806,
+      "sha256": "f3ea63d68ac5bd49bf4408b22f3c8b0a21adae45a54c4e571a3329a56e07f1b1"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Models/NC_Sign_market_LOD1.fbx",
+      "bytes": 31596,
+      "sha256": "57a219db1589ea127f02219b01af65307ba77fdcdb827562e025b154d1cc807d"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Models/NC_Sign_market_LOD1.fbx.meta",
+      "bytes": 3625,
+      "sha256": "75d776941ba9f0b1aee4ad24ed297f44cf53c5cd0ccb833ef971993d3101b620"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Models/NC_Sign_portrait_LOD0.fbx",
+      "bytes": 67420,
+      "sha256": "dbea428235a1181466716eeec77c2dc78b796f0314fdbbe19b8fb26e32a6b71d"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Models/NC_Sign_portrait_LOD0.fbx.meta",
+      "bytes": 3808,
+      "sha256": "79e0c33cb174ead4eb6ca71eac12f27d1fb8570df496e5cf304330ef85502fb4"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Models/NC_Sign_portrait_LOD1.fbx",
+      "bytes": 30988,
+      "sha256": "5f75345007063d06cd35cd6478dbdc2f3c58d296ae5c2bdd9db291e46c5814fe"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Models/NC_Sign_portrait_LOD1.fbx.meta",
+      "bytes": 3627,
+      "sha256": "540ce2038694c77e976b3ebf662acecb698278a2388a5b7e23ff217232ce24fa"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Models/NC_Sign_square_LOD0.fbx",
+      "bytes": 39532,
+      "sha256": "7d979dc43b24f5673846360f414f8b59135c65b8605ee4a481a82e2f5c75de8c"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Models/NC_Sign_square_LOD0.fbx.meta",
+      "bytes": 3805,
+      "sha256": "8bfa42ac1f10a1aacd67f1b11d16bc59e6b244c95eeeac1ae8d4d04637be549e"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Models/NC_Sign_square_LOD1.fbx",
+      "bytes": 31772,
+      "sha256": "64d959f088cdc7fb98e88389cd88469636e017a30bc74dc2a9d3533a01669fae"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Models/NC_Sign_square_LOD1.fbx.meta",
+      "bytes": 3624,
+      "sha256": "3c0452e55bbf1821d67e39ffb22d38f5e96015056def66a3cb9f695ad9d3807d"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Models/NC_Sign_transit_LOD0.fbx",
+      "bytes": 67100,
+      "sha256": "ffc99b8ad15d878c4bd5bfd982cc615a1d3f7e9ae17c62a47d1641ab04996a4c"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Models/NC_Sign_transit_LOD0.fbx.meta",
+      "bytes": 3805,
+      "sha256": "e6dc6c23526fae3c68e3a539fa7918519d16048232e186f6120dd11809aeeed4"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Models/NC_Sign_transit_LOD1.fbx",
+      "bytes": 31084,
+      "sha256": "c2af7baa714983589e9ae9565ce7b8471070da95f9db2fde21a197d5039be193"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Models/NC_Sign_transit_LOD1.fbx.meta",
+      "bytes": 3624,
+      "sha256": "1982423eb5f4ba692699c4f22cac49241255e2b65e1b4919445883e9822422e5"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Models/NC_TransitGantry_LOD0.fbx",
+      "bytes": 89468,
+      "sha256": "e3262acd27a29b4a51ea9770438fd93900081a9b48f0ec532eb1293544f61824"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Models/NC_TransitGantry_LOD0.fbx.meta",
+      "bytes": 3802,
+      "sha256": "118808e34efa74a5cd4b8ab003ad9a1a3a1ccd0e8011bdff8b4b1c3beddc4c44"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Models/NC_TransitGantry_LOD1.fbx",
+      "bytes": 37868,
+      "sha256": "11aa27b2e595aec96ccee6d6384cb5779dbc3594304c557d9d206def964563ba"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Models/NC_TransitGantry_LOD1.fbx.meta",
+      "bytes": 3802,
+      "sha256": "f9a0e32e3eb755007d7b8e45f419fbf8d278f2169c73e5b4cacac99d2f2321a1"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Models/NC_WaterTank_LOD0.fbx",
+      "bytes": 80524,
+      "sha256": "ccbfd8510bc68fe7fe97577ae7c3561107dc6b0d4b507f69881b3fa76f34ac89"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Models/NC_WaterTank_LOD0.fbx.meta",
+      "bytes": 3630,
+      "sha256": "e543ff3f8b477fdce8af125eea5b59aa44c7db43170d395fd45f07f2633397a0"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Models/NC_WaterTank_LOD1.fbx",
+      "bytes": 34348,
+      "sha256": "0c8a621a265c426c604e12e7f216e1503c848b8670f9a6afa3ee0b289f7f5bc5"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Models/NC_WaterTank_LOD1.fbx.meta",
+      "bytes": 3630,
+      "sha256": "8d0cd1680c94083a566fe2ddc9bf10d260975555fd9da03c34b1bb7467bb6bea"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Models.meta",
+      "bytes": 172,
+      "sha256": "6c96fe01b10c63a077dc2d804f3740bde46e549355decd656aa46e679784684e"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/NightCityAssetReview.unity",
+      "bytes": 86109,
+      "sha256": "56a9feb7af826bc411facf0b6e2a5484ab52c36653e4f36f822d81f5ca84b4e8"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/NightCityAssetReview.unity.meta",
+      "bytes": 155,
+      "sha256": "4e25e9165b8ec76c06cf068e2011a62428fd7565ecd062b5be581554ee36ec85"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Prefabs/NC_Building_office.prefab",
+      "bytes": 7565,
+      "sha256": "b0f2d10bcd383494062ae65b81819a465368104f222e3d2ee688a96f511c1a7b"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Prefabs/NC_Building_office.prefab.meta",
+      "bytes": 154,
+      "sha256": "baf84dd72fa3e6ca2cbb23c6f535f104df2fc16d1fffc44850ab0ba1d0f17cda"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Prefabs/NC_Building_service.prefab",
+      "bytes": 7555,
+      "sha256": "be4af33317beb52f1afa787092c0b457572ccab7eb0024d4d98628bfbd78b0ef"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Prefabs/NC_Building_service.prefab.meta",
+      "bytes": 154,
+      "sha256": "7a86cdb8108aa25ab3b99f31a56e8991dbe5b7e484fc698b4289bb5317da0f6e"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Prefabs/NC_Building_tenement.prefab",
+      "bytes": 7560,
+      "sha256": "0e0b6ebf46b0ff17d765370b3c98004907863bdc691e9497f0c66d6072d90de5"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Prefabs/NC_Building_tenement.prefab.meta",
+      "bytes": 154,
+      "sha256": "2a8f27e86179c4f20f146f33eff93c76c627698617da26ddceabe2dd38414529"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Prefabs/NC_CableSpan.prefab",
+      "bytes": 7522,
+      "sha256": "a0af48fe17fa017bf6d22652db5ef6b51058a85a0a1210ec5b1148a41d39f938"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Prefabs/NC_CableSpan.prefab.meta",
+      "bytes": 154,
+      "sha256": "9492ce5f7c49b13ff2a18e41832a3a71a155ded3dbc06b4285111819486e017a"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Prefabs/NC_CoolingUnit.prefab",
+      "bytes": 7546,
+      "sha256": "8253cf6f45675732eb53e164ebc697d22f6ed69ec6a084a7f565096d0b3e32fc"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Prefabs/NC_CoolingUnit.prefab.meta",
+      "bytes": 154,
+      "sha256": "583b63c91dcd490668cd56c5e2ec13bfb111de50601c70c3cfe94fa29b2262c9"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Prefabs/NC_DuctBank.prefab",
+      "bytes": 7515,
+      "sha256": "ab682be5a23509613c8673e7e86d349be1c403dd2d73ef8c2f8f03d043129e6b"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Prefabs/NC_DuctBank.prefab.meta",
+      "bytes": 154,
+      "sha256": "824301916bb9aa53e0bc0cb7b31b6d19e9ebd75a051b34c38f77a71114713254"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Prefabs/NC_MaintenanceBridge.prefab",
+      "bytes": 7551,
+      "sha256": "3084e646a31118d45ac2615c462bd002fd825842248423c6873bfc4e09e7d1f3"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Prefabs/NC_MaintenanceBridge.prefab.meta",
+      "bytes": 154,
+      "sha256": "0e75268bdb7436a8717794af5c0901bf61b6fc8625c9fb57624d3612851646f0"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Prefabs/NC_NeonRoofSign.prefab",
+      "bytes": 7544,
+      "sha256": "e1c991d7d8f5532cd0985e3417af65bbc4df6910692d5324081f2c61e8dc6b95"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Prefabs/NC_NeonRoofSign.prefab.meta",
+      "bytes": 154,
+      "sha256": "9de0f90c7c154d58d1d3eccf90e292837690c79434b66e0dce11ee048146ead0"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Prefabs/NC_PowerCabinet.prefab",
+      "bytes": 7557,
+      "sha256": "29e37ae86c587f10092ea63422e99a434ae36aa5421f5d7eebba893b01d2234b"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Prefabs/NC_PowerCabinet.prefab.meta",
+      "bytes": 154,
+      "sha256": "c15c742764376f1e77d64746b65b2a04218c40e8190ed7e8d7d180940250cbce"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Prefabs/NC_RoofExtractor.prefab",
+      "bytes": 7542,
+      "sha256": "62831e95f5ea44e4c040d12e4812179017a683e090be98812fbcd761245164b1"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Prefabs/NC_RoofExtractor.prefab.meta",
+      "bytes": 154,
+      "sha256": "2244f3df480d1b00348a47eb58bf763c78900da316ae2d253bf8adb69a1e76d3"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Prefabs/NC_Shopfront.prefab",
+      "bytes": 7525,
+      "sha256": "9935033416958018d524dca7fe2222cadc674315deea9605cec58b08d1f99fe9"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Prefabs/NC_Shopfront.prefab.meta",
+      "bytes": 154,
+      "sha256": "cd3617c544ad2ed57b32d26fd0e526a8f8886d0bd01ef431663f8ab957dc08c6"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Prefabs/NC_Sign_blade.prefab",
+      "bytes": 7533,
+      "sha256": "3ffbc53ab7239b4168d469a9ef991b6629f69cd8ae4b401d8256526a651a28d9"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Prefabs/NC_Sign_blade.prefab.meta",
+      "bytes": 154,
+      "sha256": "7362561c77f215aa75577db8c349b94017172fa33ba59ecf7b02402a17141eeb"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Prefabs/NC_Sign_koi.prefab",
+      "bytes": 7529,
+      "sha256": "7fad632a945a7f5de72c4836f506806d314fd2053a3e5b73e39a98bffd923d4c"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Prefabs/NC_Sign_koi.prefab.meta",
+      "bytes": 154,
+      "sha256": "3fe9f01dd7d495bec8a02c1ca03412cac0160af7377f9c82f2cce09f4b6642b1"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Prefabs/NC_Sign_market.prefab",
+      "bytes": 7536,
+      "sha256": "bf03f6494278b189123aba50c7827141f18bc565ae6fdc35438de92e35dbb373"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Prefabs/NC_Sign_market.prefab.meta",
+      "bytes": 154,
+      "sha256": "52776f103c0fe6b9f0606a379ff5ab8b90d9ae9a3a5aca9f6da4a0d3be2b3818"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Prefabs/NC_Sign_portrait.prefab",
+      "bytes": 7545,
+      "sha256": "f73db9b3a3683eec5d9662b0eda5cbff49c5333263ecdafb7d2f85e404da2906"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Prefabs/NC_Sign_portrait.prefab.meta",
+      "bytes": 154,
+      "sha256": "75937a690198f6129a330522e1ecc8300dcd985ae2eed9a2f08586e0ead77f6b"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Prefabs/NC_Sign_square.prefab",
+      "bytes": 7550,
+      "sha256": "a3cf18c759c67ebd87faf6336dd74be48213d418964dabbee6c46168961156f5"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Prefabs/NC_Sign_square.prefab.meta",
+      "bytes": 154,
+      "sha256": "bfa5152d7815609fc1988d9f3844a28cc1a41ea273aa718ba21c987daecff85a"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Prefabs/NC_Sign_transit.prefab",
+      "bytes": 7548,
+      "sha256": "edcd31d1cc705b6a933349e58d78b9237a8d7d4606aa996bc4fc0a7f116712d5"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Prefabs/NC_Sign_transit.prefab.meta",
+      "bytes": 154,
+      "sha256": "a6b839dbd849813031a3b70103f12ef8b39b227c72992d7d3e5f1d317999a841"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Prefabs/NC_TransitGantry.prefab",
+      "bytes": 7535,
+      "sha256": "8ce10e7bbc046f6c6b643b509695eb2b2c676a7b956dc8441bde54db93f69fb4"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Prefabs/NC_TransitGantry.prefab.meta",
+      "bytes": 154,
+      "sha256": "ae5ceeb0e3d12f51c64802009988e2a9fde47f0d2862d639d1dc0c00e41dee09"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Prefabs/NC_WaterTank.prefab",
+      "bytes": 7541,
+      "sha256": "ef28ebfcc301e6475ab69d334d408abcb05b238e9921ee727dc94a533cb7715b"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Prefabs/NC_WaterTank.prefab.meta",
+      "bytes": 154,
+      "sha256": "97d5f364deba2293b439e5e5f0f1f0f37755d029d18a347bfe71671b8aecec13"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Prefabs.meta",
+      "bytes": 172,
+      "sha256": "351df4103caf1ba176da3777e0d224a9dbe22a449c06ca39bc308346733d4525"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Review/NightCityReviewCamera.cs",
+      "bytes": 1503,
+      "sha256": "1953ec77d39a878f646b8b87df8fa5599dfdba5045f2d6e32d52a298d3be535d"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Review/NightCityReviewCamera.cs.meta",
+      "bytes": 59,
+      "sha256": "a0a7fbf2ac2483b0955bb89ad060a916a07fb9a0a3f5c9da0c2caaa88412a8f3"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Review/Reviewfloor.asset",
+      "bytes": 6304,
+      "sha256": "4b9f5eed2cadc87300d4c86e055f3f31bccbcfa436798001581e6212fb956a6d"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Review/Reviewfloor.asset.meta",
+      "bytes": 188,
+      "sha256": "ffe2d67784368c7e14c238e1b17c60b15c060d1f080bd88758a58c957caf1d60"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Review/Roofsheet.asset",
+      "bytes": 6304,
+      "sha256": "a1fbae6304cc003d92a6f3000015c86594dd60ba2fd7e0d2c83aafe242219cfa"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Review/Roofsheet.asset.meta",
+      "bytes": 188,
+      "sha256": "4320c5b43506b5dea2663654bbc472d755ee8a99a7ee69503bc733cc5458b40f"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Review/Rooftopbase.asset",
+      "bytes": 6304,
+      "sha256": "6e3cde0d63deb9a004184db6be034c9eb451b421a0eb6bd0c9bfdf5103c0d2a2"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Review/Rooftopbase.asset.meta",
+      "bytes": 188,
+      "sha256": "3a3765ab8496289edb781f4dcf1f7bea2b8b588220fd818773ae2eeaad744033"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Review.meta",
+      "bytes": 172,
+      "sha256": "1feb752ba37589fea849f68cad28d6abefc9e2f530da7cd1c9e3383c0be7bafa"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/ReviewVolume.asset",
+      "bytes": 2654,
+      "sha256": "c5b4da483efa056ef0c200719ca447ee9feeb3fa166dbd0e8a8fd5862faca8ce"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/ReviewVolume.asset.meta",
+      "bytes": 189,
+      "sha256": "a53375783484dc4043638a204bfa4d2da7d8311459f934c161f72e2572c9d2b7"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/ad_afterhours_base.png",
+      "bytes": 2698078,
+      "sha256": "93db8996ad2e554ae98448ff5d90a160afe649d98c569a3ee1cd7e37764345dd"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/ad_afterhours_base.png.meta",
+      "bytes": 3069,
+      "sha256": "c16ea21b3f5b677ebdb91b25bfc441ffea99b721db59b9ae4323fc522d6a61a3"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/ad_koi_market_base.png",
+      "bytes": 3304289,
+      "sha256": "f9751ba46a2701db9fe89a56b59445b08b84177acfc5698e2e85f3b6b28fedc9"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/ad_koi_market_base.png.meta",
+      "bytes": 3069,
+      "sha256": "29274ce44e32e37d92b960403f1efbaa1058e181a00951f9205a6dc7fda385f2"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/ad_transit_base.png",
+      "bytes": 2454117,
+      "sha256": "87a41a8bdc7e0179d04c247ead71248fab8a3845c18d5f26a2583a024ed0947e"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/ad_transit_base.png.meta",
+      "bytes": 3069,
+      "sha256": "e37fd6a2a56b3970080ca9ac5dccb0d7cf5875ce1e6e8144b4b535fd43d72740"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/asphalt_ao.png",
+      "bytes": 2930421,
+      "sha256": "f7b5bfe66f5d230b135c848ab7770d86dc255860ca106985dc175c40c301e406"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/asphalt_ao.png.meta",
+      "bytes": 3069,
+      "sha256": "79207c386dac9c3110589d4fb00b5e9316f75c4e863206f452ac4a7d753bdf16"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/asphalt_base.png",
+      "bytes": 8656516,
+      "sha256": "30476bd35a486d1c342797eab5657541e55ad3c59ffee315b0827c4caf2d5e86"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/asphalt_base.png.meta",
+      "bytes": 3069,
+      "sha256": "67dd0666930b5946463a439673065b23daa0d83d61f11838404ce7e167cc5e7b"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/asphalt_height.png",
+      "bytes": 2143347,
+      "sha256": "99732cbb38a7b4091d41d244ae3b4dd385b9838667ebb958ffa1a0b42c6a501d"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/asphalt_height.png.meta",
+      "bytes": 3069,
+      "sha256": "cf35a4eaa893ee5c51f5f63c94fc461fb580534570867d9293d15d09fe0c20de"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/asphalt_ms.png",
+      "bytes": 4304399,
+      "sha256": "e6a4618f3ffdb43365c166d33ac56e4ad0d2eae108a8e87ed2218ca7c5f3efe9"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/asphalt_ms.png.meta",
+      "bytes": 3069,
+      "sha256": "cbf0a1483d5df3f4791c59085478cdb19a352fc7f2d52db22bc81c9d60edd55c"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/asphalt_normal.png",
+      "bytes": 9579787,
+      "sha256": "197e325624243d2556f5fc512a9b801dd1390f5b7b218ac824bc8234644509dd"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/asphalt_normal.png.meta",
+      "bytes": 3069,
+      "sha256": "0d0f9db06df7c1483542efcc87abf0fa0bc4fcfaf46035d4c6df1068c200a0ac"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/asphalt_wet_ms.png",
+      "bytes": 2636651,
+      "sha256": "7d23eddfd4daadf4ed98ca44b1f61d6f8a23a85fe4a1a1378c0d9e3846a92847"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/asphalt_wet_ms.png.meta",
+      "bytes": 3069,
+      "sha256": "d74e55a681821bf1b6d474b53a4e1442a4655d0ca6069d2fbc48e36e91dab1ad"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/brushed_alloy_ao.png",
+      "bytes": 8570,
+      "sha256": "c46098396165335292d5072924f8bd03f735590564e806f2ca19b857b54149b2"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/brushed_alloy_ao.png.meta",
+      "bytes": 3069,
+      "sha256": "4bceff8b7fbc4ca4dc719834a842e380dfd7b16b14e816abf3bbb6516ee15b41"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/brushed_alloy_base.png",
+      "bytes": 142662,
+      "sha256": "af3be8463ba34936af43bbe3f40327b19bf900b7447315adf091bc4fbcaa255d"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/brushed_alloy_base.png.meta",
+      "bytes": 3069,
+      "sha256": "2e48e9d9d671119d6329fc33e5b1100c1c18c1f1123a3c6a0a2127f611899ac8"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/brushed_alloy_height.png",
+      "bytes": 12540,
+      "sha256": "1686cff1ec396f1c58c92b42cb007f1c815c5af63438148912cf0641f7ebce70"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/brushed_alloy_height.png.meta",
+      "bytes": 3069,
+      "sha256": "0ea6795ac1a62286b99a2e4ddf18755d28b1c1c2d4943cd7d2a55107e2b10040"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/brushed_alloy_ms.png",
+      "bytes": 132111,
+      "sha256": "0891e4c5a2f40bd64ac8ebae4bccdb846e1dbd19c520a8f2cddbbf4c911e8e8e"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/brushed_alloy_ms.png.meta",
+      "bytes": 3069,
+      "sha256": "b3ffa8eb21f22a3be070a0e3b6794e59e47aa91f67df1f16b990d593b556c318"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/brushed_alloy_normal.png",
+      "bytes": 270567,
+      "sha256": "d93288f840da8583c4ced04f2afc69ce843831ee7d2c30a39e8e6f9e7b50a001"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/brushed_alloy_normal.png.meta",
+      "bytes": 3069,
+      "sha256": "0108c569f39740e36c53e96d41d89854e4b8c46e98409b53d41315f7b7e79f63"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/brushed_alloy_wet_ms.png",
+      "bytes": 78427,
+      "sha256": "4450bcc19d4031418c4597c707059e5c0ed764c0a335ae153afe73fbba29928c"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/brushed_alloy_wet_ms.png.meta",
+      "bytes": 3069,
+      "sha256": "4f5af6022b8abacce8b24113f28126c3d6d64b82a9b240e2920b7b4f93b0d17e"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/cast_concrete_ao.png",
+      "bytes": 1814069,
+      "sha256": "295f876b13feaef7b4c92cf5a3c63c17ca8129a0ffe4ddfa0f283ba2d3a48b41"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/cast_concrete_ao.png.meta",
+      "bytes": 3069,
+      "sha256": "fb914bb18708b473f2963caa82c35c103c2179a3c498534cad9db74dc85b1766"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/cast_concrete_base.png",
+      "bytes": 5760703,
+      "sha256": "8939378f571f98ac79206196b82865be92195407ab91501bcb16539846399463"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/cast_concrete_base.png.meta",
+      "bytes": 3069,
+      "sha256": "2bc6865195a06ba94a4ecdc1cd29863d855a741fd8be1b8b0a1f23fd4e2d8545"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/cast_concrete_height.png",
+      "bytes": 1175374,
+      "sha256": "ce9a0735039d4a2cac472e1f39ade4ed19686ca7e44c4318d5947d98ff3626aa"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/cast_concrete_height.png.meta",
+      "bytes": 3069,
+      "sha256": "653a2d362a1553330d8e22a39472e93dcb50c86e98f4b4e0825e941682e9d010"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/cast_concrete_ms.png",
+      "bytes": 1525334,
+      "sha256": "a88b50e6df1e617e972b05276ae2e80cf8caffffd2083a0a83642748d0d7a13a"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/cast_concrete_ms.png.meta",
+      "bytes": 3069,
+      "sha256": "ce8f2e07a065d8a1a40a42dc5ab8954311de199802bf5a807b8df5dfa71aa66d"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/cast_concrete_normal.png",
+      "bytes": 7396001,
+      "sha256": "f797f703571fff690eefe5cc4eea829fdb67db23e3a3a9f230cadc38514fff39"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/cast_concrete_normal.png.meta",
+      "bytes": 3069,
+      "sha256": "c9a9905c88ecd6f8c8520fab9d36124d3aa52d499858a73e42bd23d4dbc1a22c"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/cast_concrete_wet_ms.png",
+      "bytes": 527907,
+      "sha256": "fa569b252f7ec7fc7b7e43af950e7e6575933ef06f0ccf0bc7fa5a3f8d509c52"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/cast_concrete_wet_ms.png.meta",
+      "bytes": 3069,
+      "sha256": "5de948dd480073499624fcb3782c48b305eb8869b5f30533ed9a9886c14b71f3"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/ceramic_tiles_ao.png",
+      "bytes": 3439,
+      "sha256": "8ec12babd5897a24062537532606497075ca90ec41f8787897aad0711f1ff570"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/ceramic_tiles_ao.png.meta",
+      "bytes": 3069,
+      "sha256": "b611054b7b14ac449f0ad9ca670a59a2c717d412b148d68625f61ae23a4b2c54"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/ceramic_tiles_base.png",
+      "bytes": 109588,
+      "sha256": "edbf2f22d9e4bbc6a86493a782ef0a3e9947a1440c5906e692e1caff1e0e1a41"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/ceramic_tiles_base.png.meta",
+      "bytes": 3069,
+      "sha256": "717d5229b50de2db3875b2e28e41c370fbcc32bee1bab0c05dac48fa7b8463c3"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/ceramic_tiles_height.png",
+      "bytes": 11808,
+      "sha256": "4de80a06a142fca800b4afbea210e5037833a6ca492fd1742d0dc1db19f620f2"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/ceramic_tiles_height.png.meta",
+      "bytes": 3069,
+      "sha256": "6355b437c297e66844b0c4a4cb16c23c5b0248752fa9f3748770837d02099695"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/ceramic_tiles_ms.png",
+      "bytes": 124354,
+      "sha256": "bb2014aec1ce7107c2a1b26aafd5b1b1248d3c56630ba3cb5760cb3023d7be58"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/ceramic_tiles_ms.png.meta",
+      "bytes": 3069,
+      "sha256": "31c5a63357c1206c9b1e4046b02a3e0404f78bd2ae0df6e66a98dbd17d462ee6"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/ceramic_tiles_normal.png",
+      "bytes": 336341,
+      "sha256": "6beefabaafd17bba77afd945d7dfc7b98b4e281c1ed4216a6f9eee81a6ae356c"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/ceramic_tiles_normal.png.meta",
+      "bytes": 3069,
+      "sha256": "4b3074b3057681ca2c9a099d1cc27cdd8fae40bf5f730d09ebe15fed6c33ee07"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/ceramic_tiles_wet_ms.png",
+      "bytes": 74312,
+      "sha256": "53b389c3927837fcd13873d1a7a3154a46452819bede6bf06164745d05e02d11"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/ceramic_tiles_wet_ms.png.meta",
+      "bytes": 3069,
+      "sha256": "2617cde93ba30ab219acabfcb9706a1d26d05c8bbc25e0d2c67d0bceaaa5e3b9"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/corrugated_steel_ao.png",
+      "bytes": 1108141,
+      "sha256": "48face477b9b29e6b92d6e3ec614e359f947b921398990bad37a6df6fc1c9d47"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/corrugated_steel_ao.png.meta",
+      "bytes": 3069,
+      "sha256": "4d0e0634ca475d84e10a572937ce0dc42298150b58816a6429a9dd2922b55149"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/corrugated_steel_base.png",
+      "bytes": 5717071,
+      "sha256": "83e9199cbcd0b8fdf3c90f417d447442ba23acc634c756a16daf0b6a3542a751"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/corrugated_steel_base.png.meta",
+      "bytes": 3069,
+      "sha256": "3fcd52832ec5b874113ebab1788aba402b84f3d5fcc2912664b453d29d3db88d"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/corrugated_steel_height.png",
+      "bytes": 584546,
+      "sha256": "91f9ddbdd72c91bd6cc36bcef5ae9f8c7bb19805a68ad00430a9dc416267bf3e"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/corrugated_steel_height.png.meta",
+      "bytes": 3069,
+      "sha256": "2e38efd3715088ee09f5f64ad727da8ff371a45544b5047987a6bf22e0af5f83"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/corrugated_steel_ms.png",
+      "bytes": 2652355,
+      "sha256": "8b4c23c091a3e578ce1d30ee955e5266ebf25cd8849856d4bb500d514ebc5a62"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/corrugated_steel_ms.png.meta",
+      "bytes": 3069,
+      "sha256": "3285c45cae2ff421b8406cec56dcdb41e5e54e06202cf411845d332725cc9442"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/corrugated_steel_normal.png",
+      "bytes": 7483011,
+      "sha256": "87adaeacac2f71991233a354de850cb73a577e4c289f600a5c6da92a14f666df"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/corrugated_steel_normal.png.meta",
+      "bytes": 3069,
+      "sha256": "fb56c17a4637784bd48a4447bd5141f27a33b65e124a8fe2aa60d10f6632226a"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/corrugated_steel_wet_ms.png",
+      "bytes": 1098536,
+      "sha256": "a41a857beae5fff068f52b760e30658b7eec26e0980b1d61a727a288405b0ebd"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/corrugated_steel_wet_ms.png.meta",
+      "bytes": 3069,
+      "sha256": "4941eba588d2d074e9858c7f6a471c62ee9741f3746348c9df153dadffb9034c"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/facade_office_base.png",
+      "bytes": 12412,
+      "sha256": "0c050a9bc37929eced725f9246f7f98a9134dd1a48dc78780b00055a7a87438e"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/facade_office_base.png.meta",
+      "bytes": 3069,
+      "sha256": "a5f4da9098e9735d7ed03275a36c65105399fbf685647ccf6c909c8e2ca416b8"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/facade_office_emission.png",
+      "bytes": 13919,
+      "sha256": "a85d01a33b86b4cc724450755b2af4c8047252bf55adcc8edfc1b3d7ab7293a2"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/facade_office_emission.png.meta",
+      "bytes": 3069,
+      "sha256": "9358c0c6287328758da8e0887413e1f79767c6da8363eb1da9e1a5fa08ea1d05"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/facade_service_base.png",
+      "bytes": 11293,
+      "sha256": "6780f0741e2178499da70bb47a9692f5bbbf79bf53ee52570058df07b8c5ea38"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/facade_service_base.png.meta",
+      "bytes": 3069,
+      "sha256": "595857af20732bce37dc3e7d7284f53dc774fc37cd53f36992f26d5ab69a619a"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/facade_service_emission.png",
+      "bytes": 12544,
+      "sha256": "2dfef2e9e9e66e7dfbb967cbce0676e234130b5d20b6d4dd7f1d7ccc71eba666"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/facade_service_emission.png.meta",
+      "bytes": 3069,
+      "sha256": "6618272d4a529bf73cdc519111d84a2aa4bafe2b14171b7c3f01395bb9fe3fab"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/facade_tenement_base.png",
+      "bytes": 12493,
+      "sha256": "17a9c269b1f1964ba8a653e5f3300e04eb499ae2bd9312c40e76ea0958b5c72c"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/facade_tenement_base.png.meta",
+      "bytes": 3069,
+      "sha256": "207d2bc731767a409a8f88328fc30a756aafbd5ec5325cfaaddf850956a23d45"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/facade_tenement_emission.png",
+      "bytes": 13292,
+      "sha256": "e7ddca7b1dfc323ca133a4e4f5f7ca8035a062b20fb28c9ceb14423612911ea2"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/facade_tenement_emission.png.meta",
+      "bytes": 3069,
+      "sha256": "714a80ca86522ba33a1eb951320c9c60bbfa96e344a0f2eac54f46a9fe557c3f"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/oxidized_copper_ao.png",
+      "bytes": 5062,
+      "sha256": "69d6d50bd3dde1a7b6bf75211ea2ec1ad40a14efe4857891f419d4ae88c03083"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/oxidized_copper_ao.png.meta",
+      "bytes": 3069,
+      "sha256": "9264b6924c824b9f23d7804d8d4ff9c9dc3bbffa1ade470c3222fc9e796c78e4"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/oxidized_copper_base.png",
+      "bytes": 160113,
+      "sha256": "3bc1c2a0e83cc8841ad9dad313390e070730fd93f41fc15eafdad751b2e00eb6"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/oxidized_copper_base.png.meta",
+      "bytes": 3069,
+      "sha256": "386b6a484e1f1545ac1fb64717d55da5157e231f4aad0e16583772cc2f9cb62c"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/oxidized_copper_height.png",
+      "bytes": 12045,
+      "sha256": "46ef48742e2e7a28b0bcc94b69759561a6f5893c5e3bd62590cca73a348a2b8c"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/oxidized_copper_height.png.meta",
+      "bytes": 3069,
+      "sha256": "5e24619e2ed1aa2fe91ee75fbd88ce3307a6a50d46874598a11661780f3b2e65"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/oxidized_copper_ms.png",
+      "bytes": 311029,
+      "sha256": "40aabffce738f302d2be227e2e93b1de45961d75f50869617f589c667407c937"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/oxidized_copper_ms.png.meta",
+      "bytes": 3069,
+      "sha256": "fbb251fe9f4bb57eafffa15128913001db816b310a435704131b0723139d00d6"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/oxidized_copper_normal.png",
+      "bytes": 375735,
+      "sha256": "daee2f3d265660f56abb3b69e6896b24203cd49e9d43017103efd4e730cfddc9"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/oxidized_copper_normal.png.meta",
+      "bytes": 3069,
+      "sha256": "9914bed07c85e91739e24ac59791bdafc8f232502b9e0d22e94e163e9158ed57"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/oxidized_copper_wet_ms.png",
+      "bytes": 274108,
+      "sha256": "b7acde4df26c1a4824df9616f8187d11c4ed5f5d87f739014a81cc1993ac2a74"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/oxidized_copper_wet_ms.png.meta",
+      "bytes": 3069,
+      "sha256": "78daa7f85f5979fb4f2c39579d415c0255752bc6a5cf0401677fce80e9ef1623"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/painted_graphite_ao.png",
+      "bytes": 7629,
+      "sha256": "edc1eedef7b9e8b5b97e1d3ebf723d79142856a84ee01be15ef54465c6ec4a38"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/painted_graphite_ao.png.meta",
+      "bytes": 3069,
+      "sha256": "b04218be908c144c3832949947b5408a5f8f3a9ad9d446c2171e788d2fb62328"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/painted_graphite_base.png",
+      "bytes": 54379,
+      "sha256": "63e965d403694bec0374ec0bca412b3708fd22a132d6e5ca3583cd8df7f13d34"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/painted_graphite_base.png.meta",
+      "bytes": 3069,
+      "sha256": "4ba5b77025b1017a5bc28a2055f5d63fc43d153be912da82ef780d02629948b2"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/painted_graphite_height.png",
+      "bytes": 21100,
+      "sha256": "e996286bf119c01fa10e90d6ba20f8c659231e30ea68446af9c0e5b2d83bf296"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/painted_graphite_height.png.meta",
+      "bytes": 3069,
+      "sha256": "1d51b59a306016c8b266126dd9f647da1740040f8e5b03b953c83525ecadbed0"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/painted_graphite_ms.png",
+      "bytes": 132110,
+      "sha256": "47980110f0581d72c6ce6b7b7a37d9870bb33ef7d849ebeb19305670eef4c94c"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/painted_graphite_ms.png.meta",
+      "bytes": 3069,
+      "sha256": "e744f349d8adbd7d62185d0e766aae97e4daba786e0a12b4472e79afac60604a"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/painted_graphite_normal.png",
+      "bytes": 370742,
+      "sha256": "45e6a70c021e565db05f5560faa9dae864353e89f8fcd519cde83378cc5f751f"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/painted_graphite_normal.png.meta",
+      "bytes": 3069,
+      "sha256": "2b7d52029a0be6465c7dbc93f9cb619300ed90e66b0586d89aac72313a9a9e34"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/painted_graphite_wet_ms.png",
+      "bytes": 77307,
+      "sha256": "8e05d23e73c6a19090324a53155d92ad45ad24516e4dd65992b2fb89b4ad470d"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/painted_graphite_wet_ms.png.meta",
+      "bytes": 3069,
+      "sha256": "7b7827043dfba717449d9bfb32144213ed533092cc3cba96ab43e4a405abffe0"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/rubber_ao.png",
+      "bytes": 7223,
+      "sha256": "de2be0fafd8f3a1a9a9c53690d7df6ffc01f61f0cc192193e72580c5af71da26"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/rubber_ao.png.meta",
+      "bytes": 3069,
+      "sha256": "9f71a8dc2b403f1c714bc13ccd49472dcd8283624161e189e6b71ba65e58f3a1"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/rubber_base.png",
+      "bytes": 5337,
+      "sha256": "67c3a68defc90b1f9378ae19263a9080a0a56c746428a5d1ad21f9c45a4177d4"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/rubber_base.png.meta",
+      "bytes": 3069,
+      "sha256": "deeee64f1196e78d380d1b2fa0c02ca06778efde54931d9fe00157388fd1a3df"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/rubber_height.png",
+      "bytes": 13649,
+      "sha256": "962307c9f2b522b173c835ebdb7bf529d94eec756433985fdfc65b37adf3b592"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/rubber_height.png.meta",
+      "bytes": 3069,
+      "sha256": "d902daecc401e6a74aa178560d94d638cc7925161e49c7b5adece1daff3d5948"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/rubber_ms.png",
+      "bytes": 131262,
+      "sha256": "7e99fb604747d43d7cc47aca8a74f91f0307ff5b9970e9d2302983c6a5fcb356"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/rubber_ms.png.meta",
+      "bytes": 3069,
+      "sha256": "9165a8c31c644b6b153a77b9203d9e727a4d08b6c0e69ba754dc254c3bf89c80"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/rubber_normal.png",
+      "bytes": 429315,
+      "sha256": "d02a329af09c1bb8f9cfa3671b2ce60855ac7c6753f0095969638a330fa7073f"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/rubber_normal.png.meta",
+      "bytes": 3069,
+      "sha256": "b57d20dd256b15dbfbf6c3ccdb62fdd66aba027cb54b507d68240838d2e7764e"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/rubber_wet_ms.png",
+      "bytes": 77307,
+      "sha256": "5dc08a9c851908cac27a82e80ed3359658153c346d1d9989cc781982b48c3a25"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/rubber_wet_ms.png.meta",
+      "bytes": 3069,
+      "sha256": "d73cb4bbf5fae7bec53650c3c115560f9108c36d57b68d3ee40cf5f8b63bf8b1"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/sign_hotel_base.png",
+      "bytes": 17660,
+      "sha256": "522e6ecdad0b08a1722e41200c0ebd818dd48a1fc80f92989f2051605f741dd1"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/sign_hotel_base.png.meta",
+      "bytes": 3069,
+      "sha256": "f27b1f86ff3043d2ec3b9013b12b068ef5ddb4d1cb7721f656372a1da7b951c3"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/sign_hotel_emission.png",
+      "bytes": 17660,
+      "sha256": "522e6ecdad0b08a1722e41200c0ebd818dd48a1fc80f92989f2051605f741dd1"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/sign_hotel_emission.png.meta",
+      "bytes": 3069,
+      "sha256": "8fd487b43de50b87190106ddf59bfa674792d57c0c81c27905f7f8d5a79ff0fc"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/sign_market_base.png",
+      "bytes": 25501,
+      "sha256": "1f3bfb255ff695fe09de5f23595dfc4df18d0d544c55933fa95418f0056a5468"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/sign_market_base.png.meta",
+      "bytes": 3069,
+      "sha256": "db76f84a466cfd30c746621b375ad0580cd7d3653ea569d98b42a45ab7903b55"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/sign_market_emission.png",
+      "bytes": 25501,
+      "sha256": "1f3bfb255ff695fe09de5f23595dfc4df18d0d544c55933fa95418f0056a5468"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/sign_market_emission.png.meta",
+      "bytes": 3069,
+      "sha256": "d97858e680643925f65309f1096de41047efdeb1c13358cb5fc059c990d2b2e8"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/sign_metro_base.png",
+      "bytes": 32140,
+      "sha256": "13adc57cff32d987d16399555960268072603623deb700238c2c7395d6fc8c87"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/sign_metro_base.png.meta",
+      "bytes": 3069,
+      "sha256": "dffc1a720b0ed30247b28ee1c37e630dcdbfcf04d7f31074c82b8ca76cef52c6"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/sign_metro_emission.png",
+      "bytes": 32140,
+      "sha256": "13adc57cff32d987d16399555960268072603623deb700238c2c7395d6fc8c87"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/sign_metro_emission.png.meta",
+      "bytes": 3069,
+      "sha256": "c518f929b8854f835e962eae09e76eb39a9a320606e3620a56eaa050dba7d2f1"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/sign_ramen_base.png",
+      "bytes": 27798,
+      "sha256": "cbd442b39642dbb848f91c0cd622ad0adf79f5cfce2b6a176ce6ea9a50f2e269"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/sign_ramen_base.png.meta",
+      "bytes": 3069,
+      "sha256": "a587fe82b0a0c5eefc17a35fee73e848ed9dfcc16caf319459204afd81ae2252"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/sign_ramen_emission.png",
+      "bytes": 27798,
+      "sha256": "cbd442b39642dbb848f91c0cd622ad0adf79f5cfce2b6a176ce6ea9a50f2e269"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/sign_ramen_emission.png.meta",
+      "bytes": 3069,
+      "sha256": "bf635e30848a20830a473b68ed2c655323fb2d3616239a9414dec98b358bd1c2"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/sign_repair_base.png",
+      "bytes": 21931,
+      "sha256": "8361d1a0ddfaad880e48a61058722736109182af71628b27f9c0006bd1aa1370"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/sign_repair_base.png.meta",
+      "bytes": 3069,
+      "sha256": "f738f6081a7aeec86289b9fa18fcc47d982a915ce757297ecc9d82f84c63fc7a"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/sign_repair_emission.png",
+      "bytes": 21931,
+      "sha256": "8361d1a0ddfaad880e48a61058722736109182af71628b27f9c0006bd1aa1370"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/sign_repair_emission.png.meta",
+      "bytes": 3069,
+      "sha256": "7eeee186e05bce9427c98013eff6a3835df677c5693994e7b2cc177553be8b17"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/sign_tower_base.png",
+      "bytes": 21074,
+      "sha256": "77df20a80e3651680bb393bc854a17542c70b93a1cd953c021876dc518410161"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/sign_tower_base.png.meta",
+      "bytes": 3069,
+      "sha256": "527ed70c73ea57431bcbfcd81d24206b6cd69c1b06c31dd23883a5a58983d10c"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/sign_tower_emission.png",
+      "bytes": 21074,
+      "sha256": "77df20a80e3651680bb393bc854a17542c70b93a1cd953c021876dc518410161"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures/sign_tower_emission.png.meta",
+      "bytes": 3069,
+      "sha256": "73e136ac97250fa5a12dedece0a8a3ffa2670a55cccdcbe54728e6db7ec2438d"
+    },
+    {
+      "path": "UnityProject/Assets/Art/NightCityKit/Textures.meta",
+      "bytes": 172,
+      "sha256": "3c269799e30cb534a6d6d142546f92e24ad9b6188f1ab1692bb7f2a71009b57a"
+    },
+    {
+      "path": "UnityProject/Assets/Editor/NightCityKit/NightCityKitAuthoring.cs",
+      "bytes": 15052,
+      "sha256": "0b0eeb81aa07010faed08cbee935cd8762a47ff96a3371df6da7eb8029766d61"
+    },
+    {
+      "path": "UnityProject/Assets/Editor/NightCityKit/NightCityKitAuthoring.cs.meta",
+      "bytes": 59,
+      "sha256": "f8642e4ca383d704c0046a7a4a04add4ec12e942f0c2bb3f43f915102dd0274a"
+    }
+  ]
+}

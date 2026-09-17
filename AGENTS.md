@@ -1,3 +1,7 @@
+## Current art-first continuation — September 17, 2026
+
+The latest Game P5 owner instruction is to finish polished art materials/assets first. This branch is the isolated NightCityKit package, not the racing/blur branch. Read `docs/night-city-art-2026-09-17/README.md`; inspect the gallery and its labeled native Unity evidence. Preserve current racing scenes, ship, HUD, handling and weather. Keep this milestone local. Track placement, Game P4 animation integration, speed-blur integration and owner artistic acceptance remain open; do not silently promote the asset viewer to the current game or dispatch agents.
+
 # Vector Rush development workflow
 
 ## Owner-approved atmosphere correction — 2026-09-17 (current)

@@ -1,0 +1,234 @@
+{
+  "placements": [
+    {
+      "id": "NeonRoofSign",
+      "position": [
+        -3.3,
+        3.16,
+        1.8
+      ],
+      "yaw": 0.0,
+      "scale": 1
+    },
+    {
+      "id": "Shopfront",
+      "position": [
+        -9,
+        0,
+        5
+      ],
+      "yaw": 0.0,
+      "scale": 1
+    },
+    {
+      "id": "Sign_market",
+      "position": [
+        -12,
+        3.2,
+        5.4
+      ],
+      "yaw": 0.0,
+      "scale": 1
+    },
+    {
+      "id": "CoolingUnit",
+      "position": [
+        -13,
+        3.2,
+        0
+      ],
+      "yaw": 0.0,
+      "scale": 1
+    },
+    {
+      "id": "DuctBank",
+      "position": [
+        -10,
+        3.2,
+        -2
+      ],
+      "yaw": 0.0,
+      "scale": 1
+    },
+    {
+      "id": "RoofExtractor",
+      "position": [
+        -3,
+        3.2,
+        -3
+      ],
+      "yaw": 0.0,
+      "scale": 1
+    },
+    {
+      "id": "WaterTank",
+      "position": [
+        -13,
+        3.2,
+        -4
+      ],
+      "yaw": 0.0,
+      "scale": 1
+    },
+    {
+      "id": "PowerCabinet",
+      "position": [
+        -1,
+        0,
+        2
+      ],
+      "yaw": 0.0,
+      "scale": 1
+    },
+    {
+      "id": "CableSpan",
+      "position": [
+        -3,
+        3.16,
+        4
+      ],
+      "yaw": 0.0,
+      "scale": 1
+    },
+    {
+      "id": "Building_tenement",
+      "position": [
+        -15,
+        0,
+        -16
+      ],
+      "yaw": 0.0,
+      "scale": 1
+    },
+    {
+      "id": "Building_office",
+      "position": [
+        5,
+        0,
+        -22
+      ],
+      "yaw": 0.0,
+      "scale": 1
+    },
+    {
+      "id": "Building_service",
+      "position": [
+        20,
+        0,
+        -16
+      ],
+      "yaw": 0.0,
+      "scale": 1
+    },
+    {
+      "id": "Building_office",
+      "position": [
+        -30,
+        0,
+        -30
+      ],
+      "yaw": 0.0,
+      "scale": 1.3
+    },
+    {
+      "id": "Sign_blade",
+      "position": [
+        -7,
+        9,
+        -10
+      ],
+      "yaw": 0.0,
+      "scale": 1
+    },
+    {
+      "id": "Sign_portrait",
+      "position": [
+        7,
+        8,
+        -12
+      ],
+      "yaw": 0.0,
+      "scale": 1
+    },
+    {
+      "id": "Sign_koi",
+      "position": [
+        18,
+        3,
+        -9
+      ],
+      "yaw": 0.0,
+      "scale": 1
+    },
+    {
+      "id": "Sign_transit",
+      "position": [
+        -22,
+        12,
+        -9
+      ],
+      "yaw": 0.0,
+      "scale": 1
+    },
+    {
+      "id": "Sign_square",
+      "position": [
+        -15,
+        1.8,
+        6
+      ],
+      "yaw": 0.0,
+      "scale": 1
+    },
+    {
+      "id": "MaintenanceBridge",
+      "position": [
+        1,
+        8,
+        -8
+      ],
+      "yaw": 0.0,
+      "scale": 1
+    },
+    {
+      "id": "TransitGantry",
+      "position": [
+        2,
+        0,
+        -4
+      ],
+      "yaw": 0.0,
+      "scale": 1
+    },
+    {
+      "id": "CoolingUnit",
+      "position": [
+        15,
+        0,
+        -6
+      ],
+      "yaw": -17.188733853924695,
+      "scale": 1
+    },
+    {
+      "id": "DuctBank",
+      "position": [
+        17,
+        0,
+        -6
+      ],
+      "yaw": -17.188733853924695,
+      "scale": 1
+    },
+    {
+      "id": "PowerCabinet",
+      "position": [
+        13,
+        0,
+        -7
+      ],
+      "yaw": 0.0,
+      "scale": 1
+    }
+  ]
+}

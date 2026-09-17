@@ -1,0 +1,9 @@
+# Night city kit provenance
+
+- **Original geometry and recipes:** authored for Vector Rush. `NightCityKit.blend`, `build_models.py` and the FBX files are the editable source and engine export chain. Original procedural maps, facade occupancy and SVG signs are included alongside their raster exports.
+- **Scan-based surfaces:** Poly Haven `concrete_panels`, `corrugated_iron`, and `asphalt_02`, under CC0-1.0. Source URLs, provider MD5 checksums and the 15 downloaded channel maps are retained in `SourceAssets/NightCityKit/scans/provenance.json`; the provider license page is preserved in `scans/license-page.html`. Derived maps are repacked by `apply_scans.py` into URP metallic/smoothness, normal, AO and base maps. [Concrete](https://polyhaven.com/a/concrete_panels), [corrugated iron](https://polyhaven.com/a/corrugated_iron), [asphalt](https://polyhaven.com/a/asphalt_02), [license](https://polyhaven.com/license).
+- **Scenario artwork:** After Hours, Night Market and Last Train generated using `model_openai-gpt-image-2` through Scenario. Exact requests and returned job/asset identifiers are included in each `scenario/<name>/` directory. These are advertisement textures mounted on the provided geometry, not screenshots of the game or CC0 scan assets. No claim about exclusive rights is made.
+- **Fonts:** Rajdhani SemiBold and Barlow Medium, with the corresponding SIL Open Font License text included in `fonts/`. SVG sign masters use the included Rajdhani font; the recipes do not require a system font install.
+- **Owner reference:** the supplied September 17 screenshot is shown solely as the owner's visual target. It is not used as a game texture, a generated asset or an authored original.
+
+No credentials are included. Generation scripts reference the Scenario environment token; existing source and engine assets work without it.

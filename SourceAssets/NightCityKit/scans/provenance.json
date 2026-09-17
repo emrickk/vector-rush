@@ -1,0 +1,152 @@
+[
+  {
+    "asset": "concrete_panels",
+    "material": "cast_concrete",
+    "channel": "Diffuse",
+    "file": "concrete_panels/Diffuse.jpg",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/concrete_panels/concrete_panels_diff_2k.jpg",
+    "md5": "339b495f2f22fd1347986bd97e0da7ae",
+    "license": "CC0-1.0",
+    "page": "https://polyhaven.com/a/concrete_panels"
+  },
+  {
+    "asset": "concrete_panels",
+    "material": "cast_concrete",
+    "channel": "nor_gl",
+    "file": "concrete_panels/nor_gl.jpg",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/concrete_panels/concrete_panels_nor_gl_2k.jpg",
+    "md5": "b5d91fcca6e85042539b21c05957b5e4",
+    "license": "CC0-1.0",
+    "page": "https://polyhaven.com/a/concrete_panels"
+  },
+  {
+    "asset": "concrete_panels",
+    "material": "cast_concrete",
+    "channel": "Rough",
+    "file": "concrete_panels/Rough.jpg",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/concrete_panels/concrete_panels_rough_2k.jpg",
+    "md5": "f0ee36434548ef509389f4fc300f249b",
+    "license": "CC0-1.0",
+    "page": "https://polyhaven.com/a/concrete_panels"
+  },
+  {
+    "asset": "concrete_panels",
+    "material": "cast_concrete",
+    "channel": "AO",
+    "file": "concrete_panels/AO.jpg",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/concrete_panels/concrete_panels_ao_2k.jpg",
+    "md5": "98e8b83bc1190ff9f7b033a19fa1b5a1",
+    "license": "CC0-1.0",
+    "page": "https://polyhaven.com/a/concrete_panels"
+  },
+  {
+    "asset": "concrete_panels",
+    "material": "cast_concrete",
+    "channel": "Displacement",
+    "file": "concrete_panels/Displacement.jpg",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/concrete_panels/concrete_panels_disp_2k.jpg",
+    "md5": "be2ab5d0b73f731bd199c751acfbc910",
+    "license": "CC0-1.0",
+    "page": "https://polyhaven.com/a/concrete_panels"
+  },
+  {
+    "asset": "corrugated_iron",
+    "material": "corrugated_steel",
+    "channel": "Diffuse",
+    "file": "corrugated_iron/Diffuse.jpg",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/corrugated_iron/corrugated_iron_diff_2k.jpg",
+    "md5": "fb7cfe9f978589b8e3d1155a859fed46",
+    "license": "CC0-1.0",
+    "page": "https://polyhaven.com/a/corrugated_iron"
+  },
+  {
+    "asset": "corrugated_iron",
+    "material": "corrugated_steel",
+    "channel": "nor_gl",
+    "file": "corrugated_iron/nor_gl.jpg",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/corrugated_iron/corrugated_iron_nor_gl_2k.jpg",
+    "md5": "ba7b8088897242f5df20ab6fb1fe4124",
+    "license": "CC0-1.0",
+    "page": "https://polyhaven.com/a/corrugated_iron"
+  },
+  {
+    "asset": "corrugated_iron",
+    "material": "corrugated_steel",
+    "channel": "Rough",
+    "file": "corrugated_iron/Rough.jpg",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/corrugated_iron/corrugated_iron_rough_2k.jpg",
+    "md5": "6fcc1bf5e31dc809bdcfc0b933c11ade",
+    "license": "CC0-1.0",
+    "page": "https://polyhaven.com/a/corrugated_iron"
+  },
+  {
+    "asset": "corrugated_iron",
+    "material": "corrugated_steel",
+    "channel": "AO",
+    "file": "corrugated_iron/AO.jpg",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/corrugated_iron/corrugated_iron_ao_2k.jpg",
+    "md5": "27d515efec91d936c2c8a81483d00d2e",
+    "license": "CC0-1.0",
+    "page": "https://polyhaven.com/a/corrugated_iron"
+  },
+  {
+    "asset": "corrugated_iron",
+    "material": "corrugated_steel",
+    "channel": "Displacement",
+    "file": "corrugated_iron/Displacement.jpg",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/corrugated_iron/corrugated_iron_disp_2k.jpg",
+    "md5": "6e7383c2a3512cc12fce8e98cfc197d4",
+    "license": "CC0-1.0",
+    "page": "https://polyhaven.com/a/corrugated_iron"
+  },
+  {
+    "asset": "asphalt_02",
+    "material": "asphalt",
+    "channel": "Diffuse",
+    "file": "asphalt_02/Diffuse.jpg",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/asphalt_02/asphalt_02_diff_2k.jpg",
+    "md5": "336af399fd98a39ab986d8b3bf73b4ff",
+    "license": "CC0-1.0",
+    "page": "https://polyhaven.com/a/asphalt_02"
+  },
+  {
+    "asset": "asphalt_02",
+    "material": "asphalt",
+    "channel": "nor_gl",
+    "file": "asphalt_02/nor_gl.jpg",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/asphalt_02/asphalt_02_nor_gl_2k.jpg",
+    "md5": "77ebd1cc0b020ccaa1c6b58f103d1f75",
+    "license": "CC0-1.0",
+    "page": "https://polyhaven.com/a/asphalt_02"
+  },
+  {
+    "asset": "asphalt_02",
+    "material": "asphalt",
+    "channel": "Rough",
+    "file": "asphalt_02/Rough.jpg",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/asphalt_02/asphalt_02_rough_2k.jpg",
+    "md5": "6fe669ab38640ef2009d6a28d1ad5ee9",
+    "license": "CC0-1.0",
+    "page": "https://polyhaven.com/a/asphalt_02"
+  },
+  {
+    "asset": "asphalt_02",
+    "material": "asphalt",
+    "channel": "AO",
+    "file": "asphalt_02/AO.jpg",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/asphalt_02/asphalt_02_ao_2k.jpg",
+    "md5": "2bf61d77e68da004eea168b88c4c31b5",
+    "license": "CC0-1.0",
+    "page": "https://polyhaven.com/a/asphalt_02"
+  },
+  {
+    "asset": "asphalt_02",
+    "material": "asphalt",
+    "channel": "Displacement",
+    "file": "asphalt_02/Displacement.jpg",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/asphalt_02/asphalt_02_disp_2k.jpg",
+    "md5": "d5f850f6c2d283be7482db3b0458a2af",
+    "license": "CC0-1.0",
+    "page": "https://polyhaven.com/a/asphalt_02"
+  }
+]

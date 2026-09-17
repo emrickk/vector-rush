@@ -1,0 +1,210 @@
+[
+  {
+    "name": "Rooftop neon frame",
+    "group": "Signs",
+    "image": "images/NeonRoofSign.jpg",
+    "detail": "9,296 / 8,144 triangles \u00b7 LOD0 / LOD1",
+    "dimensions": "7.20 \u00d7 3.21 \u00d7 1.54 m \u00b7 W/H/D",
+    "prefab": "../../UnityProject/Assets/Art/NightCityKit/Prefabs/NC_NeonRoofSign.prefab"
+  },
+  {
+    "name": "Twin-fan cooling unit",
+    "group": "Equipment",
+    "image": "images/CoolingUnit.jpg",
+    "detail": "5,090 / 470 triangles \u00b7 LOD0 / LOD1",
+    "dimensions": "2.90 \u00d7 2.04 \u00d7 2.17 m \u00b7 W/H/D",
+    "prefab": "../../UnityProject/Assets/Art/NightCityKit/Prefabs/NC_CoolingUnit.prefab"
+  },
+  {
+    "name": "Insulated duct bank",
+    "group": "Equipment",
+    "image": "images/DuctBank.jpg",
+    "detail": "2,064 / 132 triangles \u00b7 LOD0 / LOD1",
+    "dimensions": "3.80 \u00d7 1.24 \u00d7 1.70 m \u00b7 W/H/D",
+    "prefab": "../../UnityProject/Assets/Art/NightCityKit/Prefabs/NC_DuctBank.prefab"
+  },
+  {
+    "name": "Roof extractor",
+    "group": "Equipment",
+    "image": "images/RoofExtractor.jpg",
+    "detail": "4,112 / 720 triangles \u00b7 LOD0 / LOD1",
+    "dimensions": "1.40 \u00d7 2.21 \u00d7 1.40 m \u00b7 W/H/D",
+    "prefab": "../../UnityProject/Assets/Art/NightCityKit/Prefabs/NC_RoofExtractor.prefab"
+  },
+  {
+    "name": "Power cabinet",
+    "group": "Equipment",
+    "image": "images/PowerCabinet.jpg",
+    "detail": "2,818 / 374 triangles \u00b7 LOD0 / LOD1",
+    "dimensions": "1.50 \u00d7 2.50 \u00d7 0.91 m \u00b7 W/H/D",
+    "prefab": "../../UnityProject/Assets/Art/NightCityKit/Prefabs/NC_PowerCabinet.prefab"
+  },
+  {
+    "name": "Rooftop water tank",
+    "group": "Equipment",
+    "image": "images/WaterTank.jpg",
+    "detail": "4,700 / 660 triangles \u00b7 LOD0 / LOD1",
+    "dimensions": "2.44 \u00d7 3.62 \u00d7 2.32 m \u00b7 W/H/D",
+    "prefab": "../../UnityProject/Assets/Art/NightCityKit/Prefabs/NC_WaterTank.prefab"
+  },
+  {
+    "name": "Cable hangers",
+    "group": "Equipment",
+    "image": "images/CableSpan.jpg",
+    "detail": "6,342 / 1,958 triangles \u00b7 LOD0 / LOD1",
+    "dimensions": "4.01 \u00d7 2.60 \u00d7 0.50 m \u00b7 W/H/D",
+    "prefab": "../../UnityProject/Assets/Art/NightCityKit/Prefabs/NC_CableSpan.prefab"
+  },
+  {
+    "name": "Maintenance bridge",
+    "group": "Architecture",
+    "image": "images/MaintenanceBridge.jpg",
+    "detail": "3,628 / 876 triangles \u00b7 LOD0 / LOD1",
+    "dimensions": "8.00 \u00d7 1.54 \u00d7 2.25 m \u00b7 W/H/D",
+    "prefab": "../../UnityProject/Assets/Art/NightCityKit/Prefabs/NC_MaintenanceBridge.prefab"
+  },
+  {
+    "name": "Transit gantry",
+    "group": "Architecture",
+    "image": "images/TransitGantry.jpg",
+    "detail": "3,070 / 734 triangles \u00b7 LOD0 / LOD1",
+    "dimensions": "11.00 \u00d7 5.93 \u00d7 0.90 m \u00b7 W/H/D",
+    "prefab": "../../UnityProject/Assets/Art/NightCityKit/Prefabs/NC_TransitGantry.prefab"
+  },
+  {
+    "name": "Service shopfront",
+    "group": "Architecture",
+    "image": "images/Shopfront.jpg",
+    "detail": "1,402 / 314 triangles \u00b7 LOD0 / LOD1",
+    "dimensions": "7.00 \u00d7 3.80 \u00d7 3.16 m \u00b7 W/H/D",
+    "prefab": "../../UnityProject/Assets/Art/NightCityKit/Prefabs/NC_Shopfront.prefab"
+  },
+  {
+    "name": "Vertical hotel sign",
+    "group": "Signs",
+    "image": "images/Sign_blade.jpg",
+    "detail": "2,234 / 302 triangles \u00b7 LOD0 / LOD1",
+    "dimensions": "1.70 \u00d7 6.64 \u00d7 0.95 m \u00b7 W/H/D",
+    "prefab": "../../UnityProject/Assets/Art/NightCityKit/Prefabs/NC_Sign_blade.prefab"
+  },
+  {
+    "name": "Market fascia",
+    "group": "Signs",
+    "image": "images/Sign_market.jpg",
+    "detail": "2,234 / 302 triangles \u00b7 LOD0 / LOD1",
+    "dimensions": "7.20 \u00d7 3.04 \u00d7 0.95 m \u00b7 W/H/D",
+    "prefab": "../../UnityProject/Assets/Art/NightCityKit/Prefabs/NC_Sign_market.prefab"
+  },
+  {
+    "name": "After Hours display",
+    "group": "Signs",
+    "image": "images/Sign_portrait.jpg",
+    "detail": "2,234 / 302 triangles \u00b7 LOD0 / LOD1",
+    "dimensions": "3.50 \u00d7 5.64 \u00d7 0.95 m \u00b7 W/H/D",
+    "prefab": "../../UnityProject/Assets/Art/NightCityKit/Prefabs/NC_Sign_portrait.prefab"
+  },
+  {
+    "name": "Night Market display",
+    "group": "Signs",
+    "image": "images/Sign_koi.jpg",
+    "detail": "2,234 / 302 triangles \u00b7 LOD0 / LOD1",
+    "dimensions": "6.20 \u00d7 4.64 \u00d7 0.95 m \u00b7 W/H/D",
+    "prefab": "../../UnityProject/Assets/Art/NightCityKit/Prefabs/NC_Sign_koi.prefab"
+  },
+  {
+    "name": "Last Train display",
+    "group": "Signs",
+    "image": "images/Sign_transit.jpg",
+    "detail": "2,234 / 302 triangles \u00b7 LOD0 / LOD1",
+    "dimensions": "3.00 \u00d7 4.84 \u00d7 0.95 m \u00b7 W/H/D",
+    "prefab": "../../UnityProject/Assets/Art/NightCityKit/Prefabs/NC_Sign_transit.prefab"
+  },
+  {
+    "name": "Circular noodle sign",
+    "group": "Signs",
+    "image": "images/Sign_square.jpg",
+    "detail": "626 / 210 triangles \u00b7 LOD0 / LOD1",
+    "dimensions": "2.34 \u00d7 2.92 \u00d7 0.92 m \u00b7 W/H/D",
+    "prefab": "../../UnityProject/Assets/Art/NightCityKit/Prefabs/NC_Sign_square.prefab"
+  },
+  {
+    "name": "Apartment block",
+    "group": "Architecture",
+    "image": "images/Building_tenement.jpg",
+    "detail": "35,552 / 5,200 triangles \u00b7 LOD0 / LOD1",
+    "dimensions": "15.60 \u00d7 35.70 \u00d7 12.00 m \u00b7 W/H/D",
+    "prefab": "../../UnityProject/Assets/Art/NightCityKit/Prefabs/NC_Building_tenement.prefab"
+  },
+  {
+    "name": "Office tower",
+    "group": "Architecture",
+    "image": "images/Building_office.jpg",
+    "detail": "3,216 / 400 triangles \u00b7 LOD0 / LOD1",
+    "dimensions": "16.10 \u00d7 54.70 \u00d7 14.50 m \u00b7 W/H/D",
+    "prefab": "../../UnityProject/Assets/Art/NightCityKit/Prefabs/NC_Building_office.prefab"
+  },
+  {
+    "name": "Service tower",
+    "group": "Architecture",
+    "image": "images/Building_service.jpg",
+    "detail": "7,744 / 592 triangles \u00b7 LOD0 / LOD1",
+    "dimensions": "11.00 \u00d7 43.70 \u00d7 13.00 m \u00b7 W/H/D",
+    "prefab": "../../UnityProject/Assets/Art/NightCityKit/Prefabs/NC_Building_service.prefab"
+  },
+  {
+    "name": "Cast Concrete",
+    "group": "Materials",
+    "image": "images/material-cast_concrete.jpg",
+    "detail": "Dry left \u00b7 wet right \u00b7 identical studio lighting",
+    "dimensions": "Blender material render \u00b7 shared base map, different surface response"
+  },
+  {
+    "name": "Painted Graphite",
+    "group": "Materials",
+    "image": "images/material-painted_graphite.jpg",
+    "detail": "Dry left \u00b7 wet right \u00b7 identical studio lighting",
+    "dimensions": "Blender material render \u00b7 shared base map, different surface response"
+  },
+  {
+    "name": "Corrugated Steel",
+    "group": "Materials",
+    "image": "images/material-corrugated_steel.jpg",
+    "detail": "Dry left \u00b7 wet right \u00b7 identical studio lighting",
+    "dimensions": "Blender material render \u00b7 shared base map, different surface response"
+  },
+  {
+    "name": "Brushed Alloy",
+    "group": "Materials",
+    "image": "images/material-brushed_alloy.jpg",
+    "detail": "Dry left \u00b7 wet right \u00b7 identical studio lighting",
+    "dimensions": "Blender material render \u00b7 shared base map, different surface response"
+  },
+  {
+    "name": "Oxidized Copper",
+    "group": "Materials",
+    "image": "images/material-oxidized_copper.jpg",
+    "detail": "Dry left \u00b7 wet right \u00b7 identical studio lighting",
+    "dimensions": "Blender material render \u00b7 shared base map, different surface response"
+  },
+  {
+    "name": "Ceramic Tiles",
+    "group": "Materials",
+    "image": "images/material-ceramic_tiles.jpg",
+    "detail": "Dry left \u00b7 wet right \u00b7 identical studio lighting",
+    "dimensions": "Blender material render \u00b7 shared base map, different surface response"
+  },
+  {
+    "name": "Rubber",
+    "group": "Materials",
+    "image": "images/material-rubber.jpg",
+    "detail": "Dry left \u00b7 wet right \u00b7 identical studio lighting",
+    "dimensions": "Blender material render \u00b7 shared base map, different surface response"
+  },
+  {
+    "name": "Asphalt",
+    "group": "Materials",
+    "image": "images/material-asphalt.jpg",
+    "detail": "Dry left \u00b7 wet right \u00b7 identical studio lighting",
+    "dimensions": "Blender material render \u00b7 shared base map, different surface response"
+  }
+]

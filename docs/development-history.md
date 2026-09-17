@@ -1,3 +1,7 @@
+## 2026-09-17 — Game P5 art-first kit resumed and packaged
+
+Recovered the later Game P5 instruction that prioritizes polished art assets before racing presentation. Continued its existing isolated worktree and source assets. Delivered 19 prefabs / 38 LOD meshes, 33 Unity materials, 69 maps, six drawn sign designs and three Scenario ads. Fixed volume persistence, material/source retention, rail supports, review sign placement and texture directionality. All 282 existing tests pass; the final review-lighting/layout adjustment compiled and rebuilt. Native review build `b154fc6beded40999e21c9d816c53aba` completed both warmed captures. Package checks verify source/engine parity and unchanged racing scenes. [Asset gallery and rebuild guide](night-city-art-2026-09-17/README.md). Owner artistic review and racing integration remain open; no external publication.
+
 # Development history
 
 ## 2026-09-17 — Rain presentation on the corrected road

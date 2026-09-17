@@ -1,0 +1,745 @@
+{
+  "units": "meters",
+  "up": "Y in FBX; Z in Blender",
+  "assets": [
+    {
+      "id": "NeonRoofSign",
+      "lod": 0,
+      "file": "NC_NeonRoofSign_LOD0.fbx",
+      "triangles": 9296,
+      "vertices": 5640,
+      "dimensions": [
+        7.199999809265137,
+        1.5373997688293457,
+        3.214185953140259
+      ],
+      "materials": [
+        "brushed_alloy",
+        "painted_graphite",
+        "red",
+        "black"
+      ],
+      "uv": true
+    },
+    {
+      "id": "NeonRoofSign",
+      "lod": 1,
+      "file": "NC_NeonRoofSign_LOD1.fbx",
+      "triangles": 8144,
+      "vertices": 5064,
+      "dimensions": [
+        7.199999809265137,
+        1.5373997688293457,
+        3.214185953140259
+      ],
+      "materials": [
+        "brushed_alloy",
+        "painted_graphite",
+        "red",
+        "black"
+      ],
+      "uv": true
+    },
+    {
+      "id": "CoolingUnit",
+      "lod": 0,
+      "file": "NC_CoolingUnit_LOD0.fbx",
+      "triangles": 5090,
+      "vertices": 2660,
+      "dimensions": [
+        2.9000000953674316,
+        2.169999837875366,
+        2.0379998683929443
+      ],
+      "materials": [
+        "rubber",
+        "painted_graphite",
+        "brushed_alloy",
+        "black",
+        "sign_repair"
+      ],
+      "uv": true
+    },
+    {
+      "id": "CoolingUnit",
+      "lod": 1,
+      "file": "NC_CoolingUnit_LOD1.fbx",
+      "triangles": 470,
+      "vertices": 284,
+      "dimensions": [
+        2.9000000953674316,
+        2.169999837875366,
+        2.0349998474121094
+      ],
+      "materials": [
+        "rubber",
+        "painted_graphite",
+        "brushed_alloy",
+        "black",
+        "sign_repair"
+      ],
+      "uv": true
+    },
+    {
+      "id": "DuctBank",
+      "lod": 0,
+      "file": "NC_DuctBank_LOD0.fbx",
+      "triangles": 2064,
+      "vertices": 1072,
+      "dimensions": [
+        3.799999952316284,
+        1.7000000476837158,
+        1.2400000095367432
+      ],
+      "materials": [
+        "corrugated_steel",
+        "brushed_alloy",
+        "painted_graphite",
+        "black"
+      ],
+      "uv": true
+    },
+    {
+      "id": "DuctBank",
+      "lod": 1,
+      "file": "NC_DuctBank_LOD1.fbx",
+      "triangles": 132,
+      "vertices": 88,
+      "dimensions": [
+        3.799999952316284,
+        1.7000000476837158,
+        1.2400000095367432
+      ],
+      "materials": [
+        "corrugated_steel",
+        "brushed_alloy",
+        "painted_graphite",
+        "black"
+      ],
+      "uv": true
+    },
+    {
+      "id": "RoofExtractor",
+      "lod": 0,
+      "file": "NC_RoofExtractor_LOD0.fbx",
+      "triangles": 4112,
+      "vertices": 2104,
+      "dimensions": [
+        1.3999998569488525,
+        1.3999998569488525,
+        2.2149996757507324
+      ],
+      "materials": [
+        "rubber",
+        "brushed_alloy",
+        "corrugated_steel",
+        "painted_graphite"
+      ],
+      "uv": true
+    },
+    {
+      "id": "RoofExtractor",
+      "lod": 1,
+      "file": "NC_RoofExtractor_LOD1.fbx",
+      "triangles": 720,
+      "vertices": 392,
+      "dimensions": [
+        1.3999998569488525,
+        1.3999998569488525,
+        2.2149996757507324
+      ],
+      "materials": [
+        "rubber",
+        "brushed_alloy",
+        "corrugated_steel",
+        "painted_graphite"
+      ],
+      "uv": true
+    },
+    {
+      "id": "PowerCabinet",
+      "lod": 0,
+      "file": "NC_PowerCabinet_LOD0.fbx",
+      "triangles": 2818,
+      "vertices": 1460,
+      "dimensions": [
+        1.5,
+        0.9100000262260437,
+        2.5
+      ],
+      "materials": [
+        "rubber",
+        "painted_graphite",
+        "brushed_alloy",
+        "black",
+        "sign_repair",
+        "warm",
+        "oxidized_copper"
+      ],
+      "uv": true
+    },
+    {
+      "id": "PowerCabinet",
+      "lod": 1,
+      "file": "NC_PowerCabinet_LOD1.fbx",
+      "triangles": 374,
+      "vertices": 220,
+      "dimensions": [
+        1.5,
+        0.9100000262260437,
+        2.5
+      ],
+      "materials": [
+        "rubber",
+        "painted_graphite",
+        "brushed_alloy",
+        "black",
+        "sign_repair",
+        "warm",
+        "oxidized_copper"
+      ],
+      "uv": true
+    },
+    {
+      "id": "WaterTank",
+      "lod": 0,
+      "file": "NC_WaterTank_LOD0.fbx",
+      "triangles": 4700,
+      "vertices": 2400,
+      "dimensions": [
+        2.440000057220459,
+        2.3199996948242188,
+        3.625
+      ],
+      "materials": [
+        "painted_graphite",
+        "corrugated_steel",
+        "brushed_alloy"
+      ],
+      "uv": true
+    },
+    {
+      "id": "WaterTank",
+      "lod": 1,
+      "file": "NC_WaterTank_LOD1.fbx",
+      "triangles": 660,
+      "vertices": 352,
+      "dimensions": [
+        2.440000057220459,
+        2.3199996948242188,
+        3.5999999046325684
+      ],
+      "materials": [
+        "painted_graphite",
+        "corrugated_steel",
+        "brushed_alloy"
+      ],
+      "uv": true
+    },
+    {
+      "id": "CableSpan",
+      "lod": 0,
+      "file": "NC_CableSpan_LOD0.fbx",
+      "triangles": 6342,
+      "vertices": 3244,
+      "dimensions": [
+        4.00827693939209,
+        0.5,
+        2.5999999046325684
+      ],
+      "materials": [
+        "painted_graphite",
+        "rubber",
+        "sign_tower"
+      ],
+      "uv": true
+    },
+    {
+      "id": "CableSpan",
+      "lod": 1,
+      "file": "NC_CableSpan_LOD1.fbx",
+      "triangles": 1958,
+      "vertices": 1052,
+      "dimensions": [
+        4.00827693939209,
+        0.5,
+        2.5999999046325684
+      ],
+      "materials": [
+        "painted_graphite",
+        "rubber",
+        "sign_tower"
+      ],
+      "uv": true
+    },
+    {
+      "id": "MaintenanceBridge",
+      "lod": 0,
+      "file": "NC_MaintenanceBridge_LOD0.fbx",
+      "triangles": 3628,
+      "vertices": 1960,
+      "dimensions": [
+        8.0,
+        2.25,
+        1.5350003242492676
+      ],
+      "materials": [
+        "painted_graphite",
+        "brushed_alloy"
+      ],
+      "uv": true
+    },
+    {
+      "id": "MaintenanceBridge",
+      "lod": 1,
+      "file": "NC_MaintenanceBridge_LOD1.fbx",
+      "triangles": 876,
+      "vertices": 472,
+      "dimensions": [
+        8.0,
+        2.25,
+        1.5350003242492676
+      ],
+      "materials": [
+        "painted_graphite",
+        "brushed_alloy"
+      ],
+      "uv": true
+    },
+    {
+      "id": "TransitGantry",
+      "lod": 0,
+      "file": "NC_TransitGantry_LOD0.fbx",
+      "triangles": 3070,
+      "vertices": 1580,
+      "dimensions": [
+        11.0,
+        0.8999999761581421,
+        5.930000305175781
+      ],
+      "materials": [
+        "painted_graphite",
+        "brushed_alloy",
+        "red",
+        "sign_metro"
+      ],
+      "uv": true
+    },
+    {
+      "id": "TransitGantry",
+      "lod": 1,
+      "file": "NC_TransitGantry_LOD1.fbx",
+      "triangles": 734,
+      "vertices": 412,
+      "dimensions": [
+        11.0,
+        0.8999999761581421,
+        5.930000305175781
+      ],
+      "materials": [
+        "painted_graphite",
+        "brushed_alloy",
+        "red",
+        "sign_metro"
+      ],
+      "uv": true
+    },
+    {
+      "id": "Shopfront",
+      "lod": 0,
+      "file": "NC_Shopfront_LOD0.fbx",
+      "triangles": 1402,
+      "vertices": 724,
+      "dimensions": [
+        7.0,
+        3.1569995880126953,
+        3.799999952316284
+      ],
+      "materials": [
+        "ceramic_tiles",
+        "corrugated_steel",
+        "cast_concrete",
+        "corrugated_steel_wet",
+        "oxidized_copper",
+        "sign_repair",
+        "warm"
+      ],
+      "uv": true
+    },
+    {
+      "id": "Shopfront",
+      "lod": 1,
+      "file": "NC_Shopfront_LOD1.fbx",
+      "triangles": 314,
+      "vertices": 180,
+      "dimensions": [
+        7.0,
+        3.1594958305358887,
+        3.799999952316284
+      ],
+      "materials": [
+        "ceramic_tiles",
+        "corrugated_steel",
+        "cast_concrete",
+        "corrugated_steel_wet",
+        "oxidized_copper",
+        "sign_repair",
+        "warm"
+      ],
+      "uv": true
+    },
+    {
+      "id": "Sign_blade",
+      "lod": 0,
+      "file": "NC_Sign_blade_LOD0.fbx",
+      "triangles": 2234,
+      "vertices": 1148,
+      "dimensions": [
+        1.7000000476837158,
+        0.9487417936325073,
+        6.639999866485596
+      ],
+      "materials": [
+        "painted_graphite",
+        "sign_hotel",
+        "brushed_alloy",
+        "rubber"
+      ],
+      "uv": true
+    },
+    {
+      "id": "Sign_blade",
+      "lod": 1,
+      "file": "NC_Sign_blade_LOD1.fbx",
+      "triangles": 302,
+      "vertices": 172,
+      "dimensions": [
+        1.7000000476837158,
+        0.9487417936325073,
+        6.639999866485596
+      ],
+      "materials": [
+        "painted_graphite",
+        "sign_hotel",
+        "brushed_alloy"
+      ],
+      "uv": true
+    },
+    {
+      "id": "Sign_market",
+      "lod": 0,
+      "file": "NC_Sign_market_LOD0.fbx",
+      "triangles": 2234,
+      "vertices": 1148,
+      "dimensions": [
+        7.199999809265137,
+        0.9487417936325073,
+        3.0399999618530273
+      ],
+      "materials": [
+        "painted_graphite",
+        "sign_market",
+        "brushed_alloy",
+        "rubber"
+      ],
+      "uv": true
+    },
+    {
+      "id": "Sign_market",
+      "lod": 1,
+      "file": "NC_Sign_market_LOD1.fbx",
+      "triangles": 302,
+      "vertices": 172,
+      "dimensions": [
+        7.199999809265137,
+        0.9487417936325073,
+        3.0399999618530273
+      ],
+      "materials": [
+        "painted_graphite",
+        "sign_market",
+        "brushed_alloy"
+      ],
+      "uv": true
+    },
+    {
+      "id": "Sign_portrait",
+      "lod": 0,
+      "file": "NC_Sign_portrait_LOD0.fbx",
+      "triangles": 2234,
+      "vertices": 1148,
+      "dimensions": [
+        3.5,
+        0.9487417936325073,
+        5.639999866485596
+      ],
+      "materials": [
+        "painted_graphite",
+        "ad_afterhours",
+        "brushed_alloy",
+        "rubber"
+      ],
+      "uv": true
+    },
+    {
+      "id": "Sign_portrait",
+      "lod": 1,
+      "file": "NC_Sign_portrait_LOD1.fbx",
+      "triangles": 302,
+      "vertices": 172,
+      "dimensions": [
+        3.5,
+        0.9487417936325073,
+        5.639999866485596
+      ],
+      "materials": [
+        "painted_graphite",
+        "ad_afterhours",
+        "brushed_alloy"
+      ],
+      "uv": true
+    },
+    {
+      "id": "Sign_koi",
+      "lod": 0,
+      "file": "NC_Sign_koi_LOD0.fbx",
+      "triangles": 2234,
+      "vertices": 1148,
+      "dimensions": [
+        6.199999809265137,
+        0.9487417936325073,
+        4.639999866485596
+      ],
+      "materials": [
+        "painted_graphite",
+        "ad_koi_market",
+        "brushed_alloy",
+        "rubber"
+      ],
+      "uv": true
+    },
+    {
+      "id": "Sign_koi",
+      "lod": 1,
+      "file": "NC_Sign_koi_LOD1.fbx",
+      "triangles": 302,
+      "vertices": 172,
+      "dimensions": [
+        6.199999809265137,
+        0.9487417936325073,
+        4.639999866485596
+      ],
+      "materials": [
+        "painted_graphite",
+        "ad_koi_market",
+        "brushed_alloy"
+      ],
+      "uv": true
+    },
+    {
+      "id": "Sign_transit",
+      "lod": 0,
+      "file": "NC_Sign_transit_LOD0.fbx",
+      "triangles": 2234,
+      "vertices": 1148,
+      "dimensions": [
+        3.0,
+        0.9487417936325073,
+        4.840000152587891
+      ],
+      "materials": [
+        "painted_graphite",
+        "ad_transit",
+        "brushed_alloy",
+        "rubber"
+      ],
+      "uv": true
+    },
+    {
+      "id": "Sign_transit",
+      "lod": 1,
+      "file": "NC_Sign_transit_LOD1.fbx",
+      "triangles": 302,
+      "vertices": 172,
+      "dimensions": [
+        3.0,
+        0.9487417936325073,
+        4.840000152587891
+      ],
+      "materials": [
+        "painted_graphite",
+        "ad_transit",
+        "brushed_alloy"
+      ],
+      "uv": true
+    },
+    {
+      "id": "Sign_square",
+      "lod": 0,
+      "file": "NC_Sign_square_LOD0.fbx",
+      "triangles": 626,
+      "vertices": 352,
+      "dimensions": [
+        2.3399999141693115,
+        0.9176787734031677,
+        2.9200000762939453
+      ],
+      "materials": [
+        "painted_graphite",
+        "sign_ramen",
+        "brushed_alloy"
+      ],
+      "uv": true
+    },
+    {
+      "id": "Sign_square",
+      "lod": 1,
+      "file": "NC_Sign_square_LOD1.fbx",
+      "triangles": 210,
+      "vertices": 128,
+      "dimensions": [
+        2.3399999141693115,
+        0.9176787734031677,
+        2.9200000762939453
+      ],
+      "materials": [
+        "painted_graphite",
+        "sign_ramen",
+        "brushed_alloy"
+      ],
+      "uv": true
+    },
+    {
+      "id": "Building_tenement",
+      "lod": 0,
+      "file": "NC_Building_tenement_LOD0.fbx",
+      "triangles": 35552,
+      "vertices": 18360,
+      "dimensions": [
+        15.600000381469727,
+        12.0,
+        35.69999694824219
+      ],
+      "materials": [
+        "cast_concrete",
+        "facade_tenement",
+        "brushed_alloy",
+        "corrugated_steel",
+        "painted_graphite",
+        "black",
+        "red"
+      ],
+      "uv": true
+    },
+    {
+      "id": "Building_tenement",
+      "lod": 1,
+      "file": "NC_Building_tenement_LOD1.fbx",
+      "triangles": 5200,
+      "vertices": 2904,
+      "dimensions": [
+        15.600000381469727,
+        12.0,
+        35.69999694824219
+      ],
+      "materials": [
+        "cast_concrete",
+        "facade_tenement",
+        "brushed_alloy",
+        "corrugated_steel",
+        "painted_graphite",
+        "black",
+        "red"
+      ],
+      "uv": true
+    },
+    {
+      "id": "Building_office",
+      "lod": 0,
+      "file": "NC_Building_office_LOD0.fbx",
+      "triangles": 3216,
+      "vertices": 1672,
+      "dimensions": [
+        16.100000381469727,
+        14.5,
+        54.69999694824219
+      ],
+      "materials": [
+        "cast_concrete",
+        "painted_graphite",
+        "facade_office",
+        "brushed_alloy",
+        "corrugated_steel",
+        "glass",
+        "red"
+      ],
+      "uv": true
+    },
+    {
+      "id": "Building_office",
+      "lod": 1,
+      "file": "NC_Building_office_LOD1.fbx",
+      "triangles": 400,
+      "vertices": 264,
+      "dimensions": [
+        16.100000381469727,
+        14.5,
+        54.69999694824219
+      ],
+      "materials": [
+        "cast_concrete",
+        "painted_graphite",
+        "facade_office",
+        "brushed_alloy",
+        "corrugated_steel",
+        "glass",
+        "red"
+      ],
+      "uv": true
+    },
+    {
+      "id": "Building_service",
+      "lod": 0,
+      "file": "NC_Building_service_LOD0.fbx",
+      "triangles": 7744,
+      "vertices": 4024,
+      "dimensions": [
+        11.0,
+        13.0,
+        43.69999694824219
+      ],
+      "materials": [
+        "cast_concrete",
+        "facade_service",
+        "brushed_alloy",
+        "corrugated_steel",
+        "oxidized_copper",
+        "black",
+        "red"
+      ],
+      "uv": true
+    },
+    {
+      "id": "Building_service",
+      "lod": 1,
+      "file": "NC_Building_service_LOD1.fbx",
+      "triangles": 592,
+      "vertices": 376,
+      "dimensions": [
+        11.0,
+        13.0,
+        43.69999694824219
+      ],
+      "materials": [
+        "cast_concrete",
+        "facade_service",
+        "brushed_alloy",
+        "corrugated_steel",
+        "oxidized_copper",
+        "black",
+        "red"
+      ],
+      "uv": true
+    }
+  ]
+}

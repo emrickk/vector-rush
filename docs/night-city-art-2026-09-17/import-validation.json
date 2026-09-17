@@ -1,0 +1,15 @@
+{
+    "status": "ASSET_IMPORT_VERIFIED_NOT_ARTISTIC_ACCEPTANCE",
+    "prefabs": 19,
+    "meshes": 38,
+    "materials": 33,
+    "checks": [
+        "FBX triangle counts match Blender manifest",
+        "Metric bounds and axis conversion verified",
+        "All material slots explicitly remapped",
+        "UV channels present",
+        "Data textures linear; base/emission sRGB",
+        "LOD0/LOD1 prefabs serialized",
+        "Current racing scenes unchanged by authoring"
+    ]
+}

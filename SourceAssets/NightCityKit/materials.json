@@ -1,0 +1,492 @@
+{
+  "materials": [
+    {
+      "id": "cast_concrete",
+      "base": "cast_concrete_base.png",
+      "normal": "cast_concrete_normal.png",
+      "ao": "cast_concrete_ao.png",
+      "ms": "cast_concrete_ms.png",
+      "emission": "",
+      "tileMeters": 4,
+      "baseTint": [
+        1,
+        1,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.83,
+      "kind": "surface"
+    },
+    {
+      "id": "cast_concrete_wet",
+      "base": "cast_concrete_base.png",
+      "normal": "cast_concrete_normal.png",
+      "ao": "cast_concrete_ao.png",
+      "ms": "cast_concrete_wet_ms.png",
+      "emission": "",
+      "tileMeters": 4,
+      "baseTint": [
+        0.68,
+        0.73,
+        0.76
+      ],
+      "metallic": 0,
+      "roughness": 0.83,
+      "kind": "surface"
+    },
+    {
+      "id": "painted_graphite",
+      "base": "painted_graphite_base.png",
+      "normal": "painted_graphite_normal.png",
+      "ao": "painted_graphite_ao.png",
+      "ms": "painted_graphite_ms.png",
+      "emission": "",
+      "tileMeters": 2,
+      "baseTint": [
+        1,
+        1,
+        1
+      ],
+      "metallic": 0.45,
+      "roughness": 0.5,
+      "kind": "surface"
+    },
+    {
+      "id": "painted_graphite_wet",
+      "base": "painted_graphite_base.png",
+      "normal": "painted_graphite_normal.png",
+      "ao": "painted_graphite_ao.png",
+      "ms": "painted_graphite_wet_ms.png",
+      "emission": "",
+      "tileMeters": 2,
+      "baseTint": [
+        0.68,
+        0.73,
+        0.76
+      ],
+      "metallic": 0.45,
+      "roughness": 0.5,
+      "kind": "surface"
+    },
+    {
+      "id": "corrugated_steel",
+      "base": "corrugated_steel_base.png",
+      "normal": "corrugated_steel_normal.png",
+      "ao": "corrugated_steel_ao.png",
+      "ms": "corrugated_steel_ms.png",
+      "emission": "",
+      "tileMeters": 2,
+      "baseTint": [
+        1,
+        1,
+        1
+      ],
+      "metallic": 0.8,
+      "roughness": 0.42,
+      "kind": "surface"
+    },
+    {
+      "id": "corrugated_steel_wet",
+      "base": "corrugated_steel_base.png",
+      "normal": "corrugated_steel_normal.png",
+      "ao": "corrugated_steel_ao.png",
+      "ms": "corrugated_steel_wet_ms.png",
+      "emission": "",
+      "tileMeters": 2,
+      "baseTint": [
+        0.68,
+        0.73,
+        0.76
+      ],
+      "metallic": 0.8,
+      "roughness": 0.42,
+      "kind": "surface"
+    },
+    {
+      "id": "brushed_alloy",
+      "base": "brushed_alloy_base.png",
+      "normal": "brushed_alloy_normal.png",
+      "ao": "brushed_alloy_ao.png",
+      "ms": "brushed_alloy_ms.png",
+      "emission": "",
+      "tileMeters": 2,
+      "baseTint": [
+        1,
+        1,
+        1
+      ],
+      "metallic": 0.92,
+      "roughness": 0.3,
+      "kind": "surface"
+    },
+    {
+      "id": "brushed_alloy_wet",
+      "base": "brushed_alloy_base.png",
+      "normal": "brushed_alloy_normal.png",
+      "ao": "brushed_alloy_ao.png",
+      "ms": "brushed_alloy_wet_ms.png",
+      "emission": "",
+      "tileMeters": 2,
+      "baseTint": [
+        0.68,
+        0.73,
+        0.76
+      ],
+      "metallic": 0.92,
+      "roughness": 0.3,
+      "kind": "surface"
+    },
+    {
+      "id": "oxidized_copper",
+      "base": "oxidized_copper_base.png",
+      "normal": "oxidized_copper_normal.png",
+      "ao": "oxidized_copper_ao.png",
+      "ms": "oxidized_copper_ms.png",
+      "emission": "",
+      "tileMeters": 2,
+      "baseTint": [
+        1,
+        1,
+        1
+      ],
+      "metallic": 0.8,
+      "roughness": 0.53,
+      "kind": "surface"
+    },
+    {
+      "id": "oxidized_copper_wet",
+      "base": "oxidized_copper_base.png",
+      "normal": "oxidized_copper_normal.png",
+      "ao": "oxidized_copper_ao.png",
+      "ms": "oxidized_copper_wet_ms.png",
+      "emission": "",
+      "tileMeters": 2,
+      "baseTint": [
+        0.68,
+        0.73,
+        0.76
+      ],
+      "metallic": 0.8,
+      "roughness": 0.53,
+      "kind": "surface"
+    },
+    {
+      "id": "ceramic_tiles",
+      "base": "ceramic_tiles_base.png",
+      "normal": "ceramic_tiles_normal.png",
+      "ao": "ceramic_tiles_ao.png",
+      "ms": "ceramic_tiles_ms.png",
+      "emission": "",
+      "tileMeters": 2,
+      "baseTint": [
+        1,
+        1,
+        1
+      ],
+      "metallic": 0.05,
+      "roughness": 0.38,
+      "kind": "surface"
+    },
+    {
+      "id": "ceramic_tiles_wet",
+      "base": "ceramic_tiles_base.png",
+      "normal": "ceramic_tiles_normal.png",
+      "ao": "ceramic_tiles_ao.png",
+      "ms": "ceramic_tiles_wet_ms.png",
+      "emission": "",
+      "tileMeters": 2,
+      "baseTint": [
+        0.68,
+        0.73,
+        0.76
+      ],
+      "metallic": 0.05,
+      "roughness": 0.38,
+      "kind": "surface"
+    },
+    {
+      "id": "rubber",
+      "base": "rubber_base.png",
+      "normal": "rubber_normal.png",
+      "ao": "rubber_ao.png",
+      "ms": "rubber_ms.png",
+      "emission": "",
+      "tileMeters": 2,
+      "baseTint": [
+        1,
+        1,
+        1
+      ],
+      "metallic": 0.02,
+      "roughness": 0.86,
+      "kind": "surface"
+    },
+    {
+      "id": "rubber_wet",
+      "base": "rubber_base.png",
+      "normal": "rubber_normal.png",
+      "ao": "rubber_ao.png",
+      "ms": "rubber_wet_ms.png",
+      "emission": "",
+      "tileMeters": 2,
+      "baseTint": [
+        0.68,
+        0.73,
+        0.76
+      ],
+      "metallic": 0.02,
+      "roughness": 0.86,
+      "kind": "surface"
+    },
+    {
+      "id": "asphalt",
+      "base": "asphalt_base.png",
+      "normal": "asphalt_normal.png",
+      "ao": "asphalt_ao.png",
+      "ms": "asphalt_ms.png",
+      "emission": "",
+      "tileMeters": 4,
+      "baseTint": [
+        1,
+        1,
+        1
+      ],
+      "metallic": 0.05,
+      "roughness": 0.82,
+      "kind": "surface"
+    },
+    {
+      "id": "asphalt_wet",
+      "base": "asphalt_base.png",
+      "normal": "asphalt_normal.png",
+      "ao": "asphalt_ao.png",
+      "ms": "asphalt_wet_ms.png",
+      "emission": "",
+      "tileMeters": 4,
+      "baseTint": [
+        0.68,
+        0.73,
+        0.76
+      ],
+      "metallic": 0.05,
+      "roughness": 0.82,
+      "kind": "surface"
+    },
+    {
+      "id": "facade_tenement",
+      "base": "facade_tenement_base.png",
+      "normal": "",
+      "ao": "",
+      "ms": "",
+      "emission": "facade_tenement_emission.png",
+      "tileMeters": 12,
+      "baseTint": [
+        1,
+        1,
+        1
+      ],
+      "metallic": 0.28,
+      "roughness": 0.4,
+      "emissionStrength": 1.4,
+      "kind": "facade"
+    },
+    {
+      "id": "facade_office",
+      "base": "facade_office_base.png",
+      "normal": "",
+      "ao": "",
+      "ms": "",
+      "emission": "facade_office_emission.png",
+      "tileMeters": 12,
+      "baseTint": [
+        1,
+        1,
+        1
+      ],
+      "metallic": 0.28,
+      "roughness": 0.4,
+      "emissionStrength": 1.4,
+      "kind": "facade"
+    },
+    {
+      "id": "facade_service",
+      "base": "facade_service_base.png",
+      "normal": "",
+      "ao": "",
+      "ms": "",
+      "emission": "facade_service_emission.png",
+      "tileMeters": 12,
+      "baseTint": [
+        1,
+        1,
+        1
+      ],
+      "metallic": 0.28,
+      "roughness": 0.4,
+      "emissionStrength": 1.4,
+      "kind": "facade"
+    },
+    {
+      "id": "sign_market",
+      "base": "sign_market_base.png",
+      "normal": "",
+      "ao": "",
+      "ms": "",
+      "emission": "sign_market_emission.png",
+      "tileMeters": 1,
+      "baseTint": [
+        1,
+        1,
+        1
+      ],
+      "metallic": 0.1,
+      "roughness": 0.36,
+      "emissionStrength": 2,
+      "kind": "sign"
+    },
+    {
+      "id": "sign_repair",
+      "base": "sign_repair_base.png",
+      "normal": "",
+      "ao": "",
+      "ms": "",
+      "emission": "sign_repair_emission.png",
+      "tileMeters": 1,
+      "baseTint": [
+        1,
+        1,
+        1
+      ],
+      "metallic": 0.1,
+      "roughness": 0.36,
+      "emissionStrength": 2,
+      "kind": "sign"
+    },
+    {
+      "id": "sign_hotel",
+      "base": "sign_hotel_base.png",
+      "normal": "",
+      "ao": "",
+      "ms": "",
+      "emission": "sign_hotel_emission.png",
+      "tileMeters": 1,
+      "baseTint": [
+        1,
+        1,
+        1
+      ],
+      "metallic": 0.1,
+      "roughness": 0.36,
+      "emissionStrength": 2,
+      "kind": "sign"
+    },
+    {
+      "id": "sign_metro",
+      "base": "sign_metro_base.png",
+      "normal": "",
+      "ao": "",
+      "ms": "",
+      "emission": "sign_metro_emission.png",
+      "tileMeters": 1,
+      "baseTint": [
+        1,
+        1,
+        1
+      ],
+      "metallic": 0.1,
+      "roughness": 0.36,
+      "emissionStrength": 2,
+      "kind": "sign"
+    },
+    {
+      "id": "sign_ramen",
+      "base": "sign_ramen_base.png",
+      "normal": "",
+      "ao": "",
+      "ms": "",
+      "emission": "sign_ramen_emission.png",
+      "tileMeters": 1,
+      "baseTint": [
+        1,
+        1,
+        1
+      ],
+      "metallic": 0.1,
+      "roughness": 0.36,
+      "emissionStrength": 2,
+      "kind": "sign"
+    },
+    {
+      "id": "sign_tower",
+      "base": "sign_tower_base.png",
+      "normal": "",
+      "ao": "",
+      "ms": "",
+      "emission": "sign_tower_emission.png",
+      "tileMeters": 1,
+      "baseTint": [
+        1,
+        1,
+        1
+      ],
+      "metallic": 0.1,
+      "roughness": 0.36,
+      "emissionStrength": 2,
+      "kind": "sign"
+    },
+    {
+      "id": "ad_afterhours",
+      "base": "ad_afterhours_base.png",
+      "normal": "",
+      "ao": "",
+      "ms": "",
+      "emission": "ad_afterhours_base.png",
+      "tileMeters": 1,
+      "baseTint": [
+        1,
+        1,
+        1
+      ],
+      "metallic": 0.05,
+      "roughness": 0.4,
+      "emissionStrength": 0.9,
+      "kind": "sign"
+    },
+    {
+      "id": "ad_koi_market",
+      "base": "ad_koi_market_base.png",
+      "normal": "",
+      "ao": "",
+      "ms": "",
+      "emission": "ad_koi_market_base.png",
+      "tileMeters": 1,
+      "baseTint": [
+        1,
+        1,
+        1
+      ],
+      "metallic": 0.05,
+      "roughness": 0.4,
+      "emissionStrength": 0.9,
+      "kind": "sign"
+    },
+    {
+      "id": "ad_transit",
+      "base": "ad_transit_base.png",
+      "normal": "",
+      "ao": "",
+      "ms": "",
+      "emission": "ad_transit_base.png",
+      "tileMeters": 1,
+      "baseTint": [
+        1,
+        1,
+        1
+      ],
+      "metallic": 0.05,
+      "roughness": 0.4,
+      "emissionStrength": 0.9,
+      "kind": "sign"
+    }
+  ]
+}

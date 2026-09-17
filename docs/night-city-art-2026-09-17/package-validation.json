@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "prefabs": 19,
+  "meshes": 38,
+  "materialDefinitions": 28,
+  "unityMaterials": 33,
+  "checks": [
+    "38 FBX exports and every bound source texture byte-match engine assets",
+    "Every bound PNG decodes; normal and data maps have linear import settings",
+    "19 prefabs each have LOD0/LOD1 source and exports",
+    "Review tonemapping and bloom serialize as non-null subassets",
+    "All tracked racing scenes and their metadata remain byte-identical to branch baseline",
+    "15 scan-source maps match recorded provider checksums",
+    "All engine kit files and directories retain Unity metadata"
+  ]
+}
