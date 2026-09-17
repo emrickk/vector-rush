@@ -1,3 +1,7 @@
+## 2026-09-17 — Owner approved Unity launch; execution review still failing
+
+The owner explicitly approved local Unity integration/validation. Retried the read-only startup-process check and exact installed Editor invocation through the normal escalation path, with the authorization and command scope supplied. Both were rejected before execution because automatic review returned an incomplete stream with content_filter. No new Unity result, Stage 7 scene, build or test result exists. The earlier sandbox startup ended with a licensing IPC failure and its Unity lockfile is absent. User authorization is established; the review failure must clear before native work can continue. No alternate execution route or security-setting change was attempted.
+
 ## 2026-09-17 — Latest P4 merged; playable city integration pending Unity access
 
 Owner requested using Game P4 as the base. Combined b787b5f with the local NightCityKit milestone in isolated integration branch; 327 P4 scene/billboard/runtime/settings files match exactly. Prepared Stage 7 authoring and preservation tests. Unity licensing IPC failed in the sandbox; automatic approval review then rejected the normal launch and process inspection with a review-stream content_filter error. Authoring and tests remain uncompiled/unrun, no Stage 7 scene or app exists, and no completion or quality claim follows. The current handoff records exact continuation steps and the pending access question.
