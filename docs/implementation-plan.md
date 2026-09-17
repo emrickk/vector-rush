@@ -512,3 +512,12 @@ Relay 01 verification milestone completed: clean 271-test suite, native build, 4
 Owner approved the next pass with “lets do it”. Starting from `e3d3ff6`, apply a deterministic additive finish layer to the serialized underground candidate, preserving all existing route meshes/colliders, HUD and baseline scene. Hypothesis: inhabited terraces, dimensional wall panel/recess rhythm, planted pockets, podium fronts and localized warm light will connect the large retaining masses to the city in the native descent/portal sequence. Add only candidate-owned assets and an idempotent editor authoring entry point, without rerunning the earlier route generator. Review real native captures against the included reference, correct inadequate results, then run current tests, recorded camera/lane checks, three consecutive races and isolated frame-time comparison. Deliver native app, matched views, continuous footage and updated GitHub handoff. Whole-circuit rollout remains later work.
 
 The underground finish candidate is implemented and ready for owner review. 273 tests, native build, recorded camera path, three consecutive races and separate performance run passed. Matched comparisons and continuous footage are delivered; see `docs/current-game/underground-finish-2026-09-17/README.md`. Reference-fidelity gaps and manual/controller testing remain explicit; no wider-city rollout was performed.
+
+
+## Authorized road smoothness correction, September 17, 2026
+
+Owner approved correcting the curve and banking after identifying rough road/curve motion. Starting from `854be8a`, preserve the finish candidate for comparison and author a separate smooth-road scene. Use a periodic curvature-continuous centerline with bounded displacement, smooth distance-based banking and denser shared road/barrier geometry. Adapt the existing trackside assets to the corrected path, retain the HUD/ship/material direction, and validate lane/camera clearance, curvature/bank transitions, repeated races and actual higher-rate native footage. This authorization supersedes the previous exact-course preservation constraint for this correction only; the old scene stays unchanged.
+
+## Road correction verification, September 17, 2026
+
+Implemented the owner-approved curve/banking correction in an isolated candidate. 276 tests, three races and recorded camera clearance passed. See [the road milestone](current-game/smooth-road-2026-09-17/README.md) for performance evidence and review limitations. Next is owner driving review; wider visual rollout remains pending.

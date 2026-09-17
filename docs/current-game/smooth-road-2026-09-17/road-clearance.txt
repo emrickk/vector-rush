@@ -1,0 +1,3 @@
+laneRays=14400
+maxRoadAlignmentError=0.001118
+otherColliderIntrusions=0

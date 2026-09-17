@@ -1,6 +1,14 @@
 # Current Vector Rush game — new-agent handoff
 
-## Underground finish candidate, September 17, 2026 (current)
+## Smooth road candidate, September 17, 2026 (current)
+
+The owner approved correcting rough curves and abrupt banking. Current scene: `Assets/Scenes/SmoothRoadStage3.unity`, revision `smooth-road-stage3-01`, build `1dd288cb14fb4fb998f4f165a89a864a`. Use the portable wrapper for this candidate. [Road correction milestone and evidence](current-game/smooth-road-2026-09-17/README.md).
+
+276 tests passed, three complete automated races passed with six finishers and zero recoveries each, and the 1,544-sample recorded underground camera check passed. The previous underground scene, HUD, ship and architecture remain preserved. Course identity changed to `a43cff0540e9b86cc0d60810b1f19e6cd49ae52d69e41ea43f6fb5b590790abc`; do not reuse prior records as equivalent-course data.
+
+Next: owner review of corrected road motion and manual/controller driving feel. Wider environment polish remains subsequent work. No artistic acceptance or automatic expansion is claimed. Sections below retain previous milestone history.
+
+## Underground finish candidate, September 17, 2026 (previous milestone)
 
 The owner approved the underground finish pass and moved continuation from Game P2 to its follow-up task. The saved candidate now includes inhabited terraces, planting, podium fronts, wall recesses and continuous tunnel services. Build GUID `b0c358a8850b446da15227ead1951e33`, revision `underground-gallery-finish-03`. **273 tests passed; 405-frame lap and recorded camera check passed; three consecutive races passed with six finishers and zero recoveries each.** See [the finish milestone](current-game/underground-finish-2026-09-17/README.md) for source, measured performance, actual comparisons, local playable build and limitations. Course, five driving meshes and finished HUD baseline remain preserved.
 

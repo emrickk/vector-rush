@@ -1,5 +1,9 @@
 # Development history
 
+## 2026-09-17 — Road curvature and banking correction
+
+Completed the approved road correction in SmoothRoadStage3 with periodic filtered curve geometry, gradual banking and matching denser surfaces. Previous underground and HUD baseline scenes remain byte-identical. 276 tests, 14,400 lane probes, 1,544 camera samples and three six-finisher races passed with zero recoveries. Uncaptured performance: 8.337 ms mean, 9.303 ms P99, no frames above 33.3 ms. Native before/after captures average about 36 fps with occasional recording gaps. [Source milestone, evidence and limitations](current-game/smooth-road-2026-09-17/README.md). Owner manual/controller feel and visual acceptance remain open.
+
 ## 2026-09-17 — Underground candidate paused; portable public checkpoint
 
 Implemented opt-in 22 m additional descent in `TrackPath` and isolated `UndergroundGalleryStage2` scene/assets. Cloned affected road/shoulder/barrier/rail meshes, replaced the second gallery canopy with solid foundations/retaining walls/roof, added connected approach/exit and a second lighting/material/terrace iteration after inspecting native captures. Baseline scene remains unchanged. First iteration: 271 passing tests. Second native build `2ef7de7505b34a03804ebf27bc4df955`: complete 43.136 s preview lap, 377 timestamped frames; 7,200 driving-clearance samples, 0.1188 m max road alignment error, 33.16% maximum grade. No owner artistic approval.

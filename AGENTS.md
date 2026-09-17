@@ -1,5 +1,9 @@
 # Vector Rush development workflow
 
+## Road correction continuation — 2026-09-17 (current)
+
+The owner explicitly approved correcting curve geometry and banking after finding the road rough, then moved continuation from Game P3 here. The current playable candidate is `Assets/Scenes/SmoothRoadStage3.unity`; the portable wrapper builds this scene. Horizontal centerline adjustments up to 1.49 m are intentional for this correction. Preserve the previous underground scene, HUD, ship and architecture. Read the current handoff and milestone evidence. Owner driving feel and visual acceptance remain open.
+
 ## GitHub relay continuation — 2026-09-17
 
 The owner supplied the published `game/current` URL after explicitly requesting alternating agent continuation through GitHub. This resumes the underground candidate work; the publication pause below is historical. Read `docs/CURRENT-GAME-HANDOFF.md` for the latest relay results and next bounded step. Preserve the finished HUD, baseline scene, ship and horizontal course. Work in an isolated checkout; synchronize the remote before publishing a milestone, leave a precise handoff and never force-push over another agent. Native verification is not artistic acceptance. No automatic agent dispatch or full-circuit rollout is authorized by this relay arrangement.

@@ -14,13 +14,13 @@
     },
     {
       "path": "AGENTS.md",
-      "bytes": 10083,
-      "sha256": "f090e999d1fdcc814373c231f0e0297794a80aeacf2c78a30ba0a01796e0c041"
+      "bytes": 10653,
+      "sha256": "e03bd91745d228848189fa871bdfbfdfeb4148fff8d780f68e925d3409ff579f"
     },
     {
       "path": "README.md",
-      "bytes": 15596,
-      "sha256": "e8c8cbcb92e0b8cbb064bc7b6ae237e1aab3558b2c58edd7b07eb24bfd38fe2d"
+      "bytes": 15609,
+      "sha256": "0b45be838d3b3903541fa5f08c56b352384046bb723ca6fd64673ee9c54250b0"
     },
     {
       "path": "SourceAssets/Experience/.gitignore",
@@ -3583,6 +3583,141 @@
       "sha256": "dfd94fe4cbecaffd7f2269985bdb959682e782eeb02003a5bca1dc4bce4bde1c"
     },
     {
+      "path": "UnityProject/Assets/Art/SmoothRoadStage3.meta",
+      "bytes": 172,
+      "sha256": "aa102e94b5cc6323bb85726ed644072ec8a25437ea9c00722ec02c5c663efdd0"
+    },
+    {
+      "path": "UnityProject/Assets/Art/SmoothRoadStage3/Road-0.asset",
+      "bytes": 5903042,
+      "sha256": "1b48fc97a9e724db4878ec710ed01a26aa0c182e83732b548cc65f8ec1d8bcf8"
+    },
+    {
+      "path": "UnityProject/Assets/Art/SmoothRoadStage3/Road-0.asset.meta",
+      "bytes": 188,
+      "sha256": "429654664008d4efe7d417d5241f3ad3a8cefa9aa7ca52568d13ceaea3043b49"
+    },
+    {
+      "path": "UnityProject/Assets/Art/SmoothRoadStage3/Road-1.asset",
+      "bytes": 833182,
+      "sha256": "d8b85741d568370ee3af75509ad3f8f54cae2d33f7c6b1c486c838a3ff9dfca6"
+    },
+    {
+      "path": "UnityProject/Assets/Art/SmoothRoadStage3/Road-1.asset.meta",
+      "bytes": 188,
+      "sha256": "a9953de79c29c52b10eb606f25458a43d275af8d8bf7a6927bc1a3729c0df526"
+    },
+    {
+      "path": "UnityProject/Assets/Art/SmoothRoadStage3/Road-10.asset",
+      "bytes": 7202504,
+      "sha256": "3cd14518d6c510107ddd27ffe7888aabdb88c4ebd7bd071addec8e9562784224"
+    },
+    {
+      "path": "UnityProject/Assets/Art/SmoothRoadStage3/Road-10.asset.meta",
+      "bytes": 188,
+      "sha256": "7291724525e6b86a2727b966583ba41aa6ea88deb9d2c8813748af149a6cfb29"
+    },
+    {
+      "path": "UnityProject/Assets/Art/SmoothRoadStage3/Road-11.asset",
+      "bytes": 833183,
+      "sha256": "40abfbff3c6c972aab4fc22e18b8d3e12f55eb3fef4008607db02c1ed772c3d4"
+    },
+    {
+      "path": "UnityProject/Assets/Art/SmoothRoadStage3/Road-11.asset.meta",
+      "bytes": 188,
+      "sha256": "ce898b291809c67b58d0e87b2c10b759738297dd30ee53134a8d0a65ea1440f5"
+    },
+    {
+      "path": "UnityProject/Assets/Art/SmoothRoadStage3/Road-12.asset",
+      "bytes": 833183,
+      "sha256": "fe1018a1c2cba4aeab4f7994cec59c66a436b7d5f8ef071e746e4664c5ab3c41"
+    },
+    {
+      "path": "UnityProject/Assets/Art/SmoothRoadStage3/Road-12.asset.meta",
+      "bytes": 188,
+      "sha256": "fe0db12d59e1410db3d63aeb3a1647248ec497b0f2d1e92b24383faf58417fe5"
+    },
+    {
+      "path": "UnityProject/Assets/Art/SmoothRoadStage3/Road-2.asset",
+      "bytes": 833180,
+      "sha256": "4285359d46e13956f42cda89a246b6229db310de05e4f17ecdab602c6c377609"
+    },
+    {
+      "path": "UnityProject/Assets/Art/SmoothRoadStage3/Road-2.asset.meta",
+      "bytes": 188,
+      "sha256": "2da845cec68e2c8b43acf2dbc25be7636812c3ce13fcfbb5d633db980977d2e3"
+    },
+    {
+      "path": "UnityProject/Assets/Art/SmoothRoadStage3/Road-3.asset",
+      "bytes": 1847130,
+      "sha256": "45208bcaf2dec07e98d6a4e4965b700660efc414e339267e81084fd60f1a781c"
+    },
+    {
+      "path": "UnityProject/Assets/Art/SmoothRoadStage3/Road-3.asset.meta",
+      "bytes": 188,
+      "sha256": "fd4a704af2c9720273f5340b26cf3d7eadd6c513d9c7d8d1d1a55f1f41a37049"
+    },
+    {
+      "path": "UnityProject/Assets/Art/SmoothRoadStage3/Road-4.asset",
+      "bytes": 1847134,
+      "sha256": "3801f9900e6fda4da60a82f01506512b69790f54cf4eacdd0e3e0431cdc59105"
+    },
+    {
+      "path": "UnityProject/Assets/Art/SmoothRoadStage3/Road-4.asset.meta",
+      "bytes": 188,
+      "sha256": "0d2dafbecdcb714f7d23ad281e91f6715a335acbeedc273c7b9d3de54a961dea"
+    },
+    {
+      "path": "UnityProject/Assets/Art/SmoothRoadStage3/Road-5.asset",
+      "bytes": 8485162,
+      "sha256": "aea374b7fb436f2c730a800685cc9b08cc04b14e137c471c1799ffeafb154a67"
+    },
+    {
+      "path": "UnityProject/Assets/Art/SmoothRoadStage3/Road-5.asset.meta",
+      "bytes": 188,
+      "sha256": "edeb2a52488c66b9b15cee6dd3a969ae8edeeeec3c0664f33f5e6458075be174"
+    },
+    {
+      "path": "UnityProject/Assets/Art/SmoothRoadStage3/Road-6.asset",
+      "bytes": 2795051,
+      "sha256": "440842140a73c3649909a77a2d245790a1e2f13ec64f5fe6c89d4f8b515b44e0"
+    },
+    {
+      "path": "UnityProject/Assets/Art/SmoothRoadStage3/Road-6.asset.meta",
+      "bytes": 188,
+      "sha256": "8580b09ae6d2551c3bfd4e36b41820371c0003cbd25b34dfa2651ba347f1fd52"
+    },
+    {
+      "path": "UnityProject/Assets/Art/SmoothRoadStage3/Road-7.asset",
+      "bytes": 1443938,
+      "sha256": "5fc375045259c8aa4a5a4a67d07846c1b804159d751696a1a9e38f5296e398df"
+    },
+    {
+      "path": "UnityProject/Assets/Art/SmoothRoadStage3/Road-7.asset.meta",
+      "bytes": 188,
+      "sha256": "8c35a29afa466d91fd7cbd87ca9c0bb0cb59740306522666f42cd4c174cc8bb1"
+    },
+    {
+      "path": "UnityProject/Assets/Art/SmoothRoadStage3/Road-8.asset",
+      "bytes": 5903038,
+      "sha256": "9ee84c21bb426a329a7e40cf08158754a7dc8481741d5725f7f05c5aad6a7ba4"
+    },
+    {
+      "path": "UnityProject/Assets/Art/SmoothRoadStage3/Road-8.asset.meta",
+      "bytes": 188,
+      "sha256": "6b47cea2ee402d874b215f7bedda2bacddefb5b3cfe4751bdc52660f552757aa"
+    },
+    {
+      "path": "UnityProject/Assets/Art/SmoothRoadStage3/Road-9.asset",
+      "bytes": 5556771,
+      "sha256": "78688a3a10fd407f5b020e3a4f8a6f19bc031ccb85c64d82e8144816718307e0"
+    },
+    {
+      "path": "UnityProject/Assets/Art/SmoothRoadStage3/Road-9.asset.meta",
+      "bytes": 188,
+      "sha256": "ffbe289cd6325736e8dcbfe2ed8282aca31498c78ba1ca827e00e9201c710b91"
+    },
+    {
       "path": "UnityProject/Assets/Art/Stage1.meta",
       "bytes": 172,
       "sha256": "1da3775ad1a37be69e1da00e790461f5236246f04af853f53d8c9536cb8b8824"
@@ -6959,8 +7094,8 @@
     },
     {
       "path": "UnityProject/Assets/Editor/Production/ProductionGeometry.cs",
-      "bytes": 5231,
-      "sha256": "fefda910eac07a1d1901e7bcf83656c43d3ccda065cb0b331e5b44ced5655556"
+      "bytes": 5272,
+      "sha256": "615e613d9a234e48cd585aab85a7cc6c6db1e64dc3981d615c82c5d41a7bfaba"
     },
     {
       "path": "UnityProject/Assets/Editor/Production/ProductionGeometry.cs.meta",
@@ -6988,6 +7123,16 @@
       "sha256": "979ecf3cb5e3b844b9fcbea672cda2fff641184dae3df004e01a1ecc45fb1649"
     },
     {
+      "path": "UnityProject/Assets/Editor/Production/SmoothRoadSetup.cs",
+      "bytes": 9946,
+      "sha256": "7f5ddb314a5ce284c1f64dbabe693200cd079a87f955e72fe3f4b08ea125610c"
+    },
+    {
+      "path": "UnityProject/Assets/Editor/Production/SmoothRoadSetup.cs.meta",
+      "bytes": 59,
+      "sha256": "24dec9c46cc860d55dad30fce83c1043eb7b2c5b66da1c21eb5ed0d540080a1b"
+    },
+    {
       "path": "UnityProject/Assets/Editor/Production/Stage1CitySetup.cs",
       "bytes": 39921,
       "sha256": "8ac1b01041ede9d53bfd8300d174c9cd89b014e15930887c5b739c2482de91f9"
@@ -7009,8 +7154,8 @@
     },
     {
       "path": "UnityProject/Assets/Editor/Production/UndergroundGallerySetup.cs",
-      "bytes": 24098,
-      "sha256": "bd1425df426d6c5ad4ff91a0bf5e1cedfd744cc7ee2eab73f5f118cdb5db8778"
+      "bytes": 24276,
+      "sha256": "7b3d2f5751afc49b084b629413f9145a57e5255e8b743d3e058d93a8d3cebd38"
     },
     {
       "path": "UnityProject/Assets/Editor/Production/UndergroundGallerySetup.cs.meta",
@@ -9653,6 +9798,16 @@
       "sha256": "30f67ba1a12a4558f29a4aee78ad8254c5e19395cd91068e6c310418c5dadc4a"
     },
     {
+      "path": "UnityProject/Assets/Scenes/SmoothRoadStage3.unity",
+      "bytes": 1086256,
+      "sha256": "cce7cc60b6a88e0327343f0a336de3413e533ed302745479d65c0d5b6bad7324"
+    },
+    {
+      "path": "UnityProject/Assets/Scenes/SmoothRoadStage3.unity.meta",
+      "bytes": 155,
+      "sha256": "d7e1d4f34b3251f2abdd140eb34d4abf048a49acc5406ecb84a966aecb33865f"
+    },
+    {
       "path": "UnityProject/Assets/Scenes/Solstice.unity",
       "bytes": 4847,
       "sha256": "000f2e96ed9c9aefca82513644abf6104d2025e193d4bb2af9d27b8cbd6c91a9"
@@ -10049,8 +10204,8 @@
     },
     {
       "path": "UnityProject/Assets/Scripts/ProductionEvidence.cs",
-      "bytes": 11505,
-      "sha256": "5146bdc6e580419b5c2ff49568a963af7190725156eb239a9b24e1faf153637f"
+      "bytes": 11747,
+      "sha256": "c6f24566a5170e000e6f07a4b63b16e895f55c4adaa10ca43387acdcea88ee55"
     },
     {
       "path": "UnityProject/Assets/Scripts/ProductionEvidence.cs.meta",
@@ -10313,9 +10468,19 @@
       "sha256": "02f7d0992517d93b7254f95fb3dce188239e6c1ddbed8161a13c1b9b47248c14"
     },
     {
+      "path": "UnityProject/Assets/Scripts/World/SmoothCourseProfile.cs",
+      "bytes": 2710,
+      "sha256": "fe932ebac9793750acb258bfeddfb408fca40861885fe6292a66f7d45d22fcbf"
+    },
+    {
+      "path": "UnityProject/Assets/Scripts/World/SmoothCourseProfile.cs.meta",
+      "bytes": 59,
+      "sha256": "0ee1f1861275ff15e4e15062a047a89237ca9755f1bb91566c7c5e6209ee81de"
+    },
+    {
       "path": "UnityProject/Assets/Scripts/World/TrackPath.cs",
-      "bytes": 6324,
-      "sha256": "a33ad3a518156c185cd24afd8e037a800593f8f8ac20d20091325945bf9bbe69"
+      "bytes": 7424,
+      "sha256": "8cf068a42b7362e0cf2fd363dea8ce8702f9d70d1adf5bdb580f39fa424852cb"
     },
     {
       "path": "UnityProject/Assets/Scripts/World/TrackPath.cs.meta",
@@ -10871,6 +11036,16 @@
       "path": "UnityProject/Assets/Tests/Editor/RivalCorridorGuardTests.cs.meta",
       "bytes": 60,
       "sha256": "c3c0277bda52d87c3b58252b979f5795311602e9633eac690452a4fa4c10f2b4"
+    },
+    {
+      "path": "UnityProject/Assets/Tests/Editor/SmoothRoadTests.cs",
+      "bytes": 3190,
+      "sha256": "440f4dbdb120cb3e12bdb192deabc673a0f7f1c7dcee4bce9eda733fc2f2a7a5"
+    },
+    {
+      "path": "UnityProject/Assets/Tests/Editor/SmoothRoadTests.cs.meta",
+      "bytes": 59,
+      "sha256": "7a7f1ad75585ca5121430b1d0abefb102c36245e7089369c79ddd1946f59f546"
     },
     {
       "path": "UnityProject/Assets/Tests/Editor/Stage1AppearanceTests.cs",
@@ -12549,8 +12724,8 @@
     },
     {
       "path": "docs/CURRENT-GAME-HANDOFF.md",
-      "bytes": 14755,
-      "sha256": "78e89d7c5124e22ee6e2ef1ae54e4832fb8138b26da04949b9daac0593ceba4f"
+      "bytes": 15781,
+      "sha256": "c639bd45645fc14884a32b3d62bfcfc14add82eed28aea67bb2f7a5c6543f1de"
     },
     {
       "path": "docs/GPT6-BUILD-PROMPT.md",
@@ -12788,6 +12963,91 @@
       "sha256": "47c212dbe326371c67a66454f5eefeab7364c43adf308b2da6a097adf62d1e73"
     },
     {
+      "path": "docs/current-game/smooth-road-2026-09-17/README.md",
+      "bytes": 3579,
+      "sha256": "9792272a674f582962c286bada084012459175f652ec520d6a5fcb4cd2ed4884"
+    },
+    {
+      "path": "docs/current-game/smooth-road-2026-09-17/build.json",
+      "bytes": 480,
+      "sha256": "101550355351b062fa7313c4bf137474e56f3bc09e1aeae4d133416b281b0877"
+    },
+    {
+      "path": "docs/current-game/smooth-road-2026-09-17/camera-clearance.txt",
+      "bytes": 182,
+      "sha256": "ed20da04ecc8bb33b6a2c515230854970c3a689284c930dde60079bcb66f45d4"
+    },
+    {
+      "path": "docs/current-game/smooth-road-2026-09-17/comparison-descent.jpg",
+      "bytes": 174737,
+      "sha256": "b6404dfd9cfca0af446098bddf6c1c983ce54a38a07cca3d5116cf6a1d58ecd7"
+    },
+    {
+      "path": "docs/current-game/smooth-road-2026-09-17/comparison-first-bend.jpg",
+      "bytes": 212261,
+      "sha256": "1a03b9e2c7e91605844e1d3c121accee9d3d37f993630b52c94c0b4d646a653f"
+    },
+    {
+      "path": "docs/current-game/smooth-road-2026-09-17/comparison-frames.json",
+      "bytes": 4486,
+      "sha256": "fc7e04dbbc61c8c9118dc4a43f48c1abdc7b63de162966aece73ce40e1b3a756"
+    },
+    {
+      "path": "docs/current-game/smooth-road-2026-09-17/comparison-s-bend.jpg",
+      "bytes": 236059,
+      "sha256": "dd0d82b00d19af30e3d02c0497b07fb0dc84f0341762270c37ed1710347d1c6f"
+    },
+    {
+      "path": "docs/current-game/smooth-road-2026-09-17/comparison-tunnel.jpg",
+      "bytes": 190740,
+      "sha256": "8fc413073268f4da5c039a0eabba86d0463de0f3f0912f220c3e09604c2a5a96"
+    },
+    {
+      "path": "docs/current-game/smooth-road-2026-09-17/performance-before.json",
+      "bytes": 2015,
+      "sha256": "fd483f68a06a29f65764ca570b58b2e6da0415caa423a22725e8332054d40b15"
+    },
+    {
+      "path": "docs/current-game/smooth-road-2026-09-17/performance.json",
+      "bytes": 2012,
+      "sha256": "06bffa9bf1b132f8afd1158c79c29479aeed4f7c973cb2faa0e9f77435bd22b2"
+    },
+    {
+      "path": "docs/current-game/smooth-road-2026-09-17/preview-before-validation.json",
+      "bytes": 658,
+      "sha256": "7b01e01ab6745079245a18b992fa869222c56244f53885015ffdba31ae924084"
+    },
+    {
+      "path": "docs/current-game/smooth-road-2026-09-17/preview-validation.json",
+      "bytes": 660,
+      "sha256": "9e66e702a49f7e861ab03361c045c68e8c040bf9ad78baaeddae3b328607da60"
+    },
+    {
+      "path": "docs/current-game/smooth-road-2026-09-17/races.json",
+      "bytes": 5100,
+      "sha256": "ae2798175f57c44929c91fd48e8d5b21fad701601c7fa6f52926927f6c0bdafc"
+    },
+    {
+      "path": "docs/current-game/smooth-road-2026-09-17/road-clearance.txt",
+      "bytes": 72,
+      "sha256": "b8f0a325577d48bfaf0e6e2bc81d88e846330f0b8bfcd95d77095b8b898d4636"
+    },
+    {
+      "path": "docs/current-game/smooth-road-2026-09-17/smoothness.json",
+      "bytes": 305,
+      "sha256": "b5ebec483f8481744123e62ebea56479418e976257db930addb414182c783d1c"
+    },
+    {
+      "path": "docs/current-game/smooth-road-2026-09-17/source-preservation.txt",
+      "bytes": 206,
+      "sha256": "c43ba1eff0a7dd5c775f4928d541cfbf716ca5296f15bec7a3da699f8eda2301"
+    },
+    {
+      "path": "docs/current-game/smooth-road-2026-09-17/tests.xml",
+      "bytes": 224590,
+      "sha256": "60942de1ad9bc74dffc7c4e67914a9604f4d3cf748d53207e6e09698e6574761"
+    },
+    {
       "path": "docs/current-game/underground-finish-2026-09-17/README.md",
       "bytes": 5273,
       "sha256": "be2034848ab9822f64188391760bf9817c55ff402251cb0d1296ff5bb73b70a6"
@@ -12864,8 +13124,8 @@
     },
     {
       "path": "docs/development-history.md",
-      "bytes": 133781,
-      "sha256": "2c7356718a7fd323eb98329e9f3e6fe429d5d41636fe7cd2bce367000adf57ca"
+      "bytes": 134478,
+      "sha256": "807386e753e39b2a0110121a134dbf48e861cbfa2a2ed0eda4a05bad4398aa67"
     },
     {
       "path": "docs/development-work-record.html",
@@ -13044,8 +13304,8 @@
     },
     {
       "path": "docs/implementation-plan.md",
-      "bytes": 77998,
-      "sha256": "64430f2bfd0d89b9b049d83de626625890c4c3e9c78de9ea2cb7846e3e122bb7"
+      "bytes": 79149,
+      "sha256": "41427c7bcda5b0892f77859627a041f65de06d02f19fd5751b693bbe5a34c610"
     },
     {
       "path": "docs/lighting-reviews/001-lighting-source-audit.md",
@@ -13904,8 +14164,8 @@
     },
     {
       "path": "tools/current-game.sh",
-      "bytes": 2086,
-      "sha256": "6ca06d81e3687f6c9cc6fcd0b520d42f60a7b37900cb7f3ec68e275f644322a5"
+      "bytes": 2078,
+      "sha256": "6147be20d8e443ed9d3abb4475093eeb12ae8a7e7fe6e2bffb81031fb625b80b"
     },
     {
       "path": "tools/encode-stage2.py",
@@ -13939,8 +14199,8 @@
     },
     {
       "path": "tools/production-preview.py",
-      "bytes": 1878,
-      "sha256": "d4616b1358f72593b6e646b581b74f4a7d3c9b14f606792c12506d8bbabc16e8"
+      "bytes": 2486,
+      "sha256": "d50d287ed866706768b83b25083c66d232b3e5a01568d9154e8e10abc85b629d"
     },
     {
       "path": "tools/production/README.md",

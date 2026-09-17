@@ -17,6 +17,9 @@ namespace VectorRush
     {
         public float Width = 22f;
         [SerializeField] bool undergroundGallery;
+        [SerializeField] bool smoothRoad;
+        public bool SmoothRoad => smoothRoad;
+        SmoothCourseProfile smoothProfile;
         public bool UndergroundGallery => undergroundGallery;
         public float Length { get; private set; }
         const int Samples = 1200;
@@ -32,7 +35,9 @@ namespace VectorRush
         };
 
         void Awake() { Ensure(); }
-        void OnValidate() { points=null; distances=null; }
+        void OnValidate() { points=null; distances=null; smoothProfile=null; }
+        public void SetSmoothRoad(bool enabled)
+        {smoothRoad=enabled;points=null;distances=null;smoothProfile=null;Ensure();}
         public void SetUndergroundGallery(bool enabled)
         {
             undergroundGallery=enabled; points=null; distances=null;
@@ -56,6 +61,21 @@ namespace VectorRush
                 if(i>0) distances[i]=distances[i-1]+Vector3.Distance(points[i-1],points[i]);
             }
             Length=distances[Samples];
+            if(smoothRoad)
+            {
+                var source=new Vector3[Samples];
+                for(int i=0;i<Samples;i++)
+                {
+                    float d=i/(float)Samples*Length;int segment=Segment(d);
+                    float fraction=Mathf.InverseLerp(distances[segment],distances[segment+1],d);
+                    source[i]=Spline((segment+fraction)/Samples);
+                }
+                smoothProfile=new SmoothCourseProfile(source,Length);
+                distances[0]=0;
+                for(int i=0;i<=Samples;i++)
+                {points[i]=smoothProfile.Position(i/(float)Samples);if(i>0)distances[i]=distances[i-1]+Vector3.Distance(points[i-1],points[i]);}
+                Length=distances[Samples];
+            }
         }
         Vector3 Spline(float t)
         {
@@ -89,6 +109,7 @@ namespace VectorRush
         public TrackFrame EvaluateParameter(float t)
         {
             Ensure();
+            if(smoothRoad)return smoothProfile.Evaluate(t);
             Vector3 p=Spline(t), f=SplineTangent(t);
             const float span=5f/Samples;
             // Grade must not contribute to lateral banking. Evaluate the frame continuously.

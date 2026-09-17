@@ -1,0 +1,11 @@
+{
+    "status": "NATIVE_EXPERIENCE_BUILD_COMPLETE_NOT_QUALITY_ACCEPTED",
+    "unityVersion": "6000.6.0f1",
+    "buildGuid": "1dd288cb14fb4fb998f4f165a89a864a",
+    "scene": "Assets/Scenes/SmoothRoadStage3.unity",
+    "appPath": "/Users/anping.wang/output/vector-rush-smooth-road-2026-09-17/SmoothRoad01.app",
+    "courseHash": "a43cff0540e9b86cc0d60810b1f19e6cd49ae52d69e41ea43f6fb5b590790abc",
+    "artRevision": "smooth-road-stage3-01",
+    "renderers": 119,
+    "lights": 256
+}

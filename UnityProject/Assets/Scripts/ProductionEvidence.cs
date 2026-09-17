@@ -14,6 +14,7 @@ namespace VectorRush
         [Serializable] sealed class Report {public string buildGuid,unityVersion,scope,status="RUNNING";public List<RaceResult> races=new List<RaceResult>();public float meanMs,p95Ms,p99Ms,maxMs;public int spikesAbove33Ms;}
         [Serializable] sealed class Shot {public string file;public double seconds;public float progress;public Vector3 cameraPosition;public Quaternion cameraRotation;public float fov;}
         [Serializable] sealed class Preview {public string buildGuid,scope;public double startDsp,endDsp;public int sampleRate;public List<Shot> frames=new List<Shot>();public bool complete;}
+        int previewHz=10;
         string folder,mode;VectorBootstrap owner;readonly List<float> timing=new List<float>();bool measuring;
         public static bool TryStart(VectorBootstrap bootstrap)
         {
@@ -23,6 +24,8 @@ namespace VectorRush
             if(Directory.Exists(folder)&&Directory.GetFileSystemEntries(folder).Length>0)throw new IOException("Validation folder must be fresh");Directory.CreateDirectory(folder);
             foreach(var old in bootstrap.GetComponents<RaceEvidence>()){old.StopAllCoroutines();old.enabled=false;}
             var evidence=bootstrap.gameObject.AddComponent<ProductionEvidence>();evidence.owner=bootstrap;evidence.folder=folder;evidence.mode=mode;
+            int rateFlag=Array.IndexOf(args,"-previewHz");
+            if(rateFlag>=0 && rateFlag+1<args.Length && int.TryParse(args[rateFlag+1],out int rate))evidence.previewHz=Mathf.Clamp(rate,10,60);
             evidence.StartCoroutine(mode=="preview"?evidence.RecordPreview():evidence.RunRaces());return true;
         }
         void Update(){if(measuring)timing.Add(Time.unscaledDeltaTime*1000);}
@@ -73,7 +76,7 @@ namespace VectorRush
         }
         IEnumerator RecordPreview()
         {
-            var preview=new Preview{buildGuid=Application.buildGUID,sampleRate=AudioSettings.outputSampleRate,scope="Actual native game, automated steering through ordinary physics, real-time clock (no Time.captureFramerate). PNG captures at approximately 10 Hz with actual DSP timestamps; listener output recorded as stereo float samples. Encoding uses recorded frame times. No performance claim."};
+            var preview=new Preview{buildGuid=Application.buildGUID,sampleRate=AudioSettings.outputSampleRate,scope=$"Actual native game, automated steering through ordinary physics, real-time clock (no Time.captureFramerate). PNG captures at up to {previewHz} Hz with actual DSP timestamps; listener output recorded as stereo float samples. Encoding uses recorded frame times. No performance claim."};
             Directory.CreateDirectory(Path.Combine(folder,"frames"));var d=owner.Director;d.Player.AutopilotForTesting=true;
             var audio=owner.Camera.gameObject.AddComponent<ProductionAudioCapture>();
             var deferredZones=new List<KeyValuePair<string,string>>();
@@ -93,7 +96,7 @@ namespace VectorRush
                         string file="frames/frame-"+(index++).ToString("D5")+".png";
                         ScreenCapture.CaptureScreenshot(Path.Combine(folder,file));
                         capturedFile=file;
-                        preview.frames.Add(new Shot{file=file,seconds=now-preview.startDsp,progress=d.Player.TrackProgress,cameraPosition=owner.Camera.transform.position,cameraRotation=owner.Camera.transform.rotation,fov=owner.Camera.fieldOfView});nextShot=now+.1;
+                        preview.frames.Add(new Shot{file=file,seconds=now-preview.startDsp,progress=d.Player.TrackProgress,cameraPosition=owner.Camera.transform.position,cameraRotation=owner.Camera.transform.rotation,fov=owner.Camera.fieldOfView});nextShot=now+1.0/previewHz;
                     }
                     if(next<anchors.Length&&d.Player.TrackProgress>=anchors[next]&&d.Player.TrackProgress<.99f)
                     {

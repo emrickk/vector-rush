@@ -313,7 +313,9 @@ namespace VectorRush.Editor
         {
             string evidence=ProductionSceneSetup.RequiredFlag("-productionEvidence");
             var capture=JsonUtility.FromJson<Capture>(File.ReadAllText(Path.Combine(evidence,"preview.json")));
-            EditorSceneManager.OpenScene(Candidate,OpenSceneMode.Single);
+            var args=Environment.GetCommandLineArgs();int flag=Array.IndexOf(args,"-experienceScene");
+            string scene=flag>=0 && flag+1<args.Length?args[flag+1]:Candidate;
+            EditorSceneManager.OpenScene(scene,OpenSceneMode.Single);
             var world=UnityEngine.Object.FindFirstObjectByType<ProductionWorld>();
             var enclosure=world.transform.Cast<Transform>().Single(t=>t.name.StartsWith("Underground gallery /"));
             var colliders=enclosure.GetComponentsInChildren<MeshCollider>();Physics.SyncTransforms();

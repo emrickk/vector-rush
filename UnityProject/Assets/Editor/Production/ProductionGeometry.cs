@@ -62,7 +62,7 @@ namespace VectorRush.Editor
         public static Mesh Ribbon(TrackPath track,float left,float right,float height,bool faceDown=false)
         {
             if(left>right){float swap=left;left=right;right=swap;}
-            const int n=960;int columns=right-left>5?12:1,stride=columns+1;
+            int n=track.SmoothRoad?3840:960;int columns=right-left>5?12:1,stride=columns+1;
             var vertices=new Vector3[(n+1)*stride];var uv=new Vector2[vertices.Length];var triangles=new int[n*columns*6];
             for(int i=0;i<=n;i++)
             {
@@ -71,7 +71,7 @@ namespace VectorRush.Editor
                 {
                     float across=j/(float)columns;int a=i*stride+j;
                     vertices[a]=f.Position+f.Right*Mathf.Lerp(left,right,across)+f.Up*height;
-                    uv[a]=new Vector2(across,i*.25f);
+                    uv[a]=new Vector2(across,i/(float)n*240f);
                     if(i==n||j==columns)continue;
                     int k=(i*columns+j)*6;
                     triangles[k]=a;triangles[k+1]=a+stride;triangles[k+2]=a+1;
@@ -85,7 +85,7 @@ namespace VectorRush.Editor
 
         public static Mesh Barrier(TrackPath track,int side)
         {
-            const int n=960;var v=new Vector3[(n+1)*4];var uv=new Vector2[v.Length];var t=new List<int>();
+            int n=track.SmoothRoad?3840:960;var v=new Vector3[(n+1)*4];var uv=new Vector2[v.Length];var t=new List<int>();
             for(int i=0;i<=n;i++)
             {
                 var f=track.Evaluate(i/(float)n);

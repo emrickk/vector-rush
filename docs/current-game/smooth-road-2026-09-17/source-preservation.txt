@@ -1,0 +1,4 @@
+Previous finish scene SHA256=60e1c9d8f80ff92dbbfd02e0890da8969f9dc8a7986be68a6b139ec50acd3398
+Unchanged=true
+Cloned/rebuilt meshes=13
+Course=a43cff0540e9b86cc0d60810b1f19e6cd49ae52d69e41ea43f6fb5b590790abc

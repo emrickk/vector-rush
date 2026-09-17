@@ -2,9 +2,9 @@
 
 ## Current game checkpoint — start here (2026-09-17)
 
-**New agents: read [CURRENT-GAME-HANDOFF.md](docs/CURRENT-GAME-HANDOFF.md) first.** It supersedes the historical instructions and scene choices below. The owner paused implementation and requested this public, portable source checkpoint; do not treat the unfinished environment candidate as an approved final game.
+**New agents: read [CURRENT-GAME-HANDOFF.md](docs/CURRENT-GAME-HANDOFF.md) first.** It supersedes the historical instructions and scene choices below. The owner resumed implementation and approved the road-smoothing correction. This is a playable review candidate; owner acceptance remains open.
 
-- **Current candidate:** `UnityProject/Assets/Scenes/UndergroundGalleryStage2.unity` — real underground descent and connected gallery, second native iteration.
+- **Current candidate:** `UnityProject/Assets/Scenes/SmoothRoadStage3.unity` — continuous curves, gradual banking and matching dense driving surfaces. The prior underground scene is retained.
 - **Preserved HUD-finished baseline:** `UnityProject/Assets/Scenes/EnvironmentStructureStage1.unity` — finished Saira HUD, earlier environment.
 - **Unity:** 6000.6.0f1 / URP 17.6.0; open `UnityProject` in Unity Hub, then open the candidate scene explicitly. Do **not** run old `prepare` recipes or start from `Solstice.unity`.
 - **Included:** game code, serialized scenes/meshes/materials, Unity `.meta` files, editable source assets, pinned packages, tests, authoring scripts, plans, approved reference and selected native evidence.
