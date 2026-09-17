@@ -1,0 +1,11 @@
+{
+    "status": "NATIVE_EXPERIENCE_BUILD_COMPLETE_NOT_QUALITY_ACCEPTED",
+    "unityVersion": "6000.6.0f1",
+    "buildGuid": "4140d7c362e242ad82952bc854aa91fb",
+    "scene": "Assets/Scenes/KoiLanternStage9.unity",
+    "appPath": "/Users/anping.wang/output/vector-rush-koi-landmark-2026-09-17/KoiLantern02.app",
+    "courseHash": "a43cff0540e9b86cc0d60810b1f19e6cd49ae52d69e41ea43f6fb5b590790abc",
+    "artRevision": "koi-lantern-stage9-02",
+    "renderers": 360,
+    "lights": 268
+}

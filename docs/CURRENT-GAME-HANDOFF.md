@@ -1,3 +1,13 @@
+# Koi Lantern turn trial — September 17, 2026
+
+The owner approved trying one new focal landmark at a turn exit. **Stage 9 revision 02** is implemented and natively verified: `Assets/Scenes/KoiLanternStage9.unity`, build `4140d7c362e242ad82952bc854aa91fb`. New 3D koi/amber ring/market tower with restrained fin animation, Scenario concept and enamel material. Native inspection prompted curved fins and a 20% larger sculpture for approach readability.
+
+**294 tests pass**; separate 1080p three-lap race has six finishers, zero recoveries and passing state checks. [Milestone, evidence and limits](current-game/koi-landmark-2026-09-17/README.md). [Native turn replay and before/after](http://127.0.0.1:8777/review/). App: `/Users/anping.wang/output/vector-rush-koi-landmark-2026-09-17/KoiLantern02.app`.
+
+Stage 8 remains the default; use `tools/current-game.sh koi-build` for this separate trial. Original Unity assets and gameplay are preserved. Source is local; owner visual review is next. No wider landmark rollout, default promotion, publication or delegation is authorized by this trial. Earlier current-candidate statements below remain historical context.
+
+---
+
 # Full-lap advertisement continuation — September 17, 2026
 
 Current local playable candidate is **Stage 8 revision 02**, scene `Assets/Scenes/FullLapAdsStage8.unity`, build `83fe81ff96284df4a3182cfa5cb1587d`, based on Stage 7 `46e73a6`. All three named artworks are in gameplay; the five animated clusters extend through the lap. Late signs mount inside the cutting/tunnel. The wrapper now builds Stage 8; `stage7-build` and `p4-build` preserve comparisons.

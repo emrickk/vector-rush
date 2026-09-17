@@ -1,0 +1,24 @@
+{
+  "materials": [
+    "graphite",
+    "bronze",
+    "ivory",
+    "red",
+    "enamel",
+    "fin",
+    "amber",
+    "window",
+    "glass",
+    "eye"
+  ],
+  "triangles": 85352,
+  "objects": 13,
+  "finPivots": [
+    "Fin_near",
+    "Fin_far",
+    "Fin_dorsal",
+    "Fin_tail"
+  ],
+  "units": "metres",
+  "front": "Blender -Y / Unity +Z"
+}

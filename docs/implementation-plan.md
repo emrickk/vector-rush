@@ -585,3 +585,9 @@ The gallery's After Hours, Night Market and Last Train assets are missing from t
 
 
 Full-lap placement completed as Stage 8 revision 02: all three artworks visible in native gameplay, five animated groups across the course, interior display fitting corrected after first capture, 292 passing tests and separate three-lap race pass. Replay and evidence: [full-lap milestone](current-game/full-lap-ads-2026-09-17/README.md). Wrapper promotes Stage 8 while preserving Stage 7/P4 comparisons. Await owner artistic review; keep this milestone local.
+
+## Koi Lantern Tower focal-point trial — September 17, 2026
+
+Owner approved the first of three proposed focal landmarks. Produce Scenario concept and surface artwork, author an editable 3D koi/amber ring/market tower, survey a bend using the recorded driving camera, integrate a separate Stage 9 scene and inspect native approach footage. Preserve existing driving/gameplay/weather. Adjust only landmark composition as needed for clear sightlines. Deliver one verified turn and a local milestone; no automatic repetition across the course.
+
+Koi trial completed locally as Stage 9 revision 02: new authored 3D landmark, Scenario concept/enamel assets, corrected curved fins and larger sculpture, 294 passing tests, native approach replay and separate three-lap race pass. [Evidence and remaining owner review](current-game/koi-landmark-2026-09-17/README.md). Stage 8 remains default; no additional landmarks implemented.

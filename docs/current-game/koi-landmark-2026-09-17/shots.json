@@ -1,0 +1,26 @@
+{
+  "buildGuid": "4140d7c362e242ad82952bc854aa91fb",
+  "shots": [
+    {
+      "label": "reveal",
+      "progress": 0.5101709961891174,
+      "seconds": 22.442666666666668,
+      "source": "frames/frame-00397.png",
+      "image": "reveal-new.jpg"
+    },
+    {
+      "label": "approach",
+      "progress": 0.5604608058929443,
+      "seconds": 24.29866666666667,
+      "source": "frames/frame-00432.png",
+      "image": "approach-new.jpg"
+    },
+    {
+      "label": "passing",
+      "progress": 0.6254088878631592,
+      "seconds": 26.730666666666664,
+      "source": "frames/frame-00479.png",
+      "image": "passing-new.jpg"
+    }
+  ]
+}

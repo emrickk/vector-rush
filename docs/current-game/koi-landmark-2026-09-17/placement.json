@@ -1,0 +1,21 @@
+{
+    "revision": "koi-lantern-stage9-02",
+    "courseHash": "a43cff0540e9b86cc0d60810b1f19e6cd49ae52d69e41ea43f6fb5b590790abc",
+    "baselineUnchanged": true,
+    "collidersUnchanged": true,
+    "position": {
+        "x": -275.0,
+        "y": 2.0,
+        "z": 156.0
+    },
+    "sculptureCenter": {
+        "x": -275.0,
+        "y": 75.0,
+        "z": 156.0
+    },
+    "yaw": 60.0,
+    "nearestCourseProgress": 0.6513119339942932,
+    "minimumTrackDistance": 54.50548553466797,
+    "renderers": 13,
+    "triangles": 84932
+}

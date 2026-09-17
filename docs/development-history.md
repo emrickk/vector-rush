@@ -1,3 +1,7 @@
+## 2026-09-17 — Trial a new Koi Lantern landmark at the bend exit
+
+Created Scenario concept/enamel sources, editable Blender sculpture and tower, explicit Unity material/prefab import, and Stage 9 on preserved Stage 8. Curved the initially angular fins and enlarged the rooftop sculpture after native visibility review. Delivered a 9.5-second actual turn replay with matched-progress before/after frames. 294 tests and the separate six-finisher/zero-recovery three-lap race pass. [Milestone](current-game/koi-landmark-2026-09-17/README.md). Local trial only; Stage 8 remains default, `koi-build` selects Stage 9, owner focal-placement/artistic judgment remains open.
+
 ## 2026-09-17 — Place three missing artworks and distribute ads across the lap
 
 Delivered Stage 8 revision 02 on Stage 7. Installed After Hours, Night Market and Last Train; moved four animated groups into middle/late sections, corrected hidden late placements and corridor mounts, and updated reflection poses. 292 tests pass; native 759-frame lap inspected; separate six-finisher/zero-recovery three-lap check passes. Browser replay chapter seeking verified with a byte-range server. Wrapper selects Stage 8 with preserved Stage 7/P4 comparison commands. [Milestone and compact evidence](current-game/full-lap-ads-2026-09-17/README.md). Local source milestone only; no artistic acceptance, human driving or speed-blur integration claim.
