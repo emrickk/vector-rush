@@ -1,3 +1,15 @@
+# Current integration status — September 17, 2026
+
+The owner requested continuing here on the latest Game P4 version. Branch `integration/p4-night-city-20260917` combines P4 `b787b5f` and NightCityKit `250d221`, recorded by merge `bc91b58`. Verified 327 P4 scene, billboard, runtime-script and project-setting files are byte-identical to P4. The latest verified playable app remains **Billboards06.app** below.
+
+`NightCityIntegrationSetup.cs` prepares a separate `NightCityStage7.unity` candidate with five facade-connected service terraces, kit prefabs and local doorway lights. It includes facade-end support checks, sampled road clearance, billboard overlap checks, and unchanged collider/display signatures. New integration tests are prepared. **These authoring changes are uncompiled and unrun; Stage 7 has not been generated.** Do not describe the merge or source preparation as playable integration completion.
+
+Unity's sandboxed startup failed to connect to licensing IPC. Automatic approval review rejected the normal installed Editor launch and a read-only check of the task's process IDs; both rejections reported a review-stream `content_filter` failure. No policy/security setting was changed. A user approval question is pending. Startup session 95510 reported Unity PID 4569 and licensing PID 4646; inspect their current identity before terminating any stale process. Sandbox termination was not permitted.
+
+Next, after launch authorization is resolved: run `NightCityIntegrationSetup.Inspect` to write `sites.json` into `/Users/anping.wang/output/vector-rush-p4-city-integration-2026-09-17`; inspect actual facade sites and adjust the explicit layout as needed, then run `Prepare` with a fresh evidence directory. Build the new scene using `ProductionSceneSetup.BuildExperienceCandidate` and `-experienceScene Assets/Scenes/NightCityStage7.unity`. Native driving inspection and correction, current tests, a separate race/performance run and moving review remain required. Keep the portable wrapper selecting the verified Stage 6 scene until Stage 7 works. Speed blur remains a separate subsequent integration decision. No publication or delegation.
+
+---
+
 # Current Vector Rush game — new-agent handoff
 
 ## Billboard architectural finish — September 17, 2026 (current local candidate)

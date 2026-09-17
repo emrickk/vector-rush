@@ -1,3 +1,7 @@
+## 2026-09-17 — Latest P4 merged; playable city integration pending Unity access
+
+Owner requested using Game P4 as the base. Combined b787b5f with the local NightCityKit milestone in isolated integration branch; 327 P4 scene/billboard/runtime/settings files match exactly. Prepared Stage 7 authoring and preservation tests. Unity licensing IPC failed in the sandbox; automatic approval review then rejected the normal launch and process inspection with a review-stream content_filter error. Authoring and tests remain uncompiled/unrun, no Stage 7 scene or app exists, and no completion or quality claim follows. The current handoff records exact continuation steps and the pending access question.
+
 ## 2026-09-17 — Game P5 art-first kit resumed and packaged
 
 Recovered the later Game P5 instruction that prioritizes polished art assets before racing presentation. Continued its existing isolated worktree and source assets. Delivered 19 prefabs / 38 LOD meshes, 33 Unity materials, 69 maps, six drawn sign designs and three Scenario ads. Fixed volume persistence, material/source retention, rail supports, review sign placement and texture directionality. All 282 existing tests pass; the final review-lighting/layout adjustment compiled and rebuilt. Native review build `b154fc6beded40999e21c9d816c53aba` completed both warmed captures. Package checks verify source/engine parity and unchanged racing scenes. [Asset gallery and rebuild guide](night-city-art-2026-09-17/README.md). Owner artistic review and racing integration remain open; no external publication.
