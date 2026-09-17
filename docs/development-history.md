@@ -826,3 +826,8 @@ Owner rejected the ceramic koi, then clarified that the replacement must swim ar
 ## September 17, 2026 — Koi contour, motion and lower-pass correction
 
 Owner rejected revision 04's polish/smoothness and requested a lower pass. Revision 05 replaces ridged body interpolation, irregular fin tips and dominant scale rings; corrects deformation normals; softens and slows swimming; lowers the fish 10 m. The native comparison is against revision 04. Separate higher-frame-rate 720p video and matched 1080p stills are recorded, preserving timestamps. 296 tests pass; see the koi-polish milestone for final isolated native race results and review limits. Saved locally; no visual acceptance or publication implied.
+
+
+## September 17, 2026 — Generated overhead koi art target
+
+Generated and inspected one Scenario polish reference (`model_openai-gpt-image-2`, 2048×1152), following the owner request. Saved the image, exact request, safe provider/job/asset metadata and concrete anatomy/material/fin observations in `SourceAssets/HolographicKoi/Reference/2026-09-17`. Reference only; no Unity or gameplay changes. Native revision 05 remains current.

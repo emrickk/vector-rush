@@ -605,3 +605,6 @@ Stage 10 revision 04 complete for owner review: native approach/underpass and ta
 Replace ridged body interpolation, jagged fin contours and dominant scale rings with continuous anatomical surfaces, coherent ribbon fins and softer luminous detail. Slow and smooth tail/fin movement, lower the encounter about 10 m, and validate the updated animation envelope against the banked road. Capture smooth native motion and compare against revision 04.
 
 Revision 05 complete for owner review: 10 m lower, native stills/motion inspected, 296 tests pass, isolated three-lap race passes with six finishers and zero recoveries, browser replay verified. Prior versions and Stage 8 default retained.
+
+### Generated koi polish reference
+Owner requested a reference before further polish. Added the Scenario-generated 2048×1152 overhead koi target under `SourceAssets/HolographicKoi/Reference/2026-09-17`, with exact prompt and provenance. Visually inspected the anatomy, layered fins, luminous material and intimate road relationship. Native game remains revision 05; future polish should use the reference README as its bounded art target.
