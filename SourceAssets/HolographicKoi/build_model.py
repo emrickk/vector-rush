@@ -32,51 +32,66 @@ def tube(name,points,radius,mat='filament',phase=0,flex=False):
 def sphere(name,pos,scale,mat):
  bpy.ops.mesh.primitive_uv_sphere_add(segments=32,ring_count=20,location=pos);ob=bpy.context.object;ob.name=name;ob.scale=scale;bpy.ops.object.transform_apply(location=False,rotation=False,scale=True);ob.data.materials.append(M[mat]);parts[mat].append(ob)
  for p in ob.data.polygons:p.use_smooth=True
-# Broad head/shoulders taper smoothly to the caudal peduncle.
-profile=[(0,.48),(.055,1.8),(.15,3.75),(.29,4.9),(.43,4.7),(.59,3.8),(.75,2.55),(.9,1.4),(1,.70)]
-# Monotone cubic Hermite slopes: continuous curvature flow instead of a flat
-# derivative at every body ring (which made the old body visibly corrugated).
-slopes=[]
-for i,(x,y) in enumerate(profile):
- if i==0:m=(profile[1][1]-y)/(profile[1][0]-x)
- elif i==len(profile)-1:m=(y-profile[i-1][1])/(x-profile[i-1][0])
- else:
-  d0=(y-profile[i-1][1])/(x-profile[i-1][0]);d1=(profile[i+1][1]-y)/(profile[i+1][0]-x)
-  m=0 if d0*d1<=0 else 2*d0*d1/(d0+d1)
- slopes.append(m)
-def radius(t):
+# Independently loft the back, belly and lateral width. The head has a
+# defined forehead/cheek/jaw; the flank tapers continuously into a narrow tail.
+sections=[
+ (0, -.25,-1.55,.86),(.04,1.55,-2.70,1.9),(.12,3.65,-3.85,3.05),
+ (.23,4.95,-4.40,3.88),(.36,4.80,-4.30,3.70),(.52,4.20,-3.45,3.16),
+ (.70,2.90,-2.10,2.15),(.87,1.40,-.95,1.06),(1,.72,-.48,.57)]
+def section(t,channel):
+ profile=[(row[0],row[channel]) for row in sections];slopes=[]
+ for i,(x,y) in enumerate(profile):
+  if i==0:m=(profile[1][1]-y)/(profile[1][0]-x)
+  elif i==len(profile)-1:m=(y-profile[i-1][1])/(x-profile[i-1][0])
+  else:
+   d0=(y-profile[i-1][1])/(x-profile[i-1][0]);d1=(profile[i+1][1]-y)/(profile[i+1][0]-x)
+   m=0 if d0*d1<=0 else 2*d0*d1/(d0+d1)
+  slopes.append(m)
  for i,((a,ra),(b,rb)) in enumerate(zip(profile,profile[1:])):
   if t<=b:
    u=(t-a)/(b-a);return (2*u**3-3*u**2+1)*ra+(u**3-2*u**2+u)*(b-a)*slopes[i]+(-2*u**3+3*u**2)*rb+(u**3-u**2)*(b-a)*slopes[i+1]
- return .82
-def center(t):
- u=min(t/.22,1);u=u*u*(3-2*u)
- return Vector((-20+36*t,.30*math.sin(t*math.pi*1.4),-1.0*(1-u)+.25*math.sin(t*math.pi)))
+ return profile[-1][1]
+def radius(t):return (section(t,1)-section(t,2))*.5
+def width(t):return section(t,3)
+def center(t):return Vector((-20+36*t,.30*math.sin(t*math.pi*1.4),(section(t,1)+section(t,2))*.5))
+def cheek(x,z,side,outset=0):
+ t=max(0,min(1,(x+20)/36));c=center(t);y=width(t)*math.sqrt(max(.001,1-((z-c.z)/radius(t))**2))
+ return Vector((x,c.y+side*(y+outset),z))
 vv=[];uvs=[];ff=[];N=160;K=96
 for i in range(N+1):
  t=i/N;c=center(t);r=radius(t)
  for j in range(K+1):
-  a=j/K*math.tau;vv.append(c+Vector((0,math.sin(a)*r*.80,math.cos(a)*r)));uvs.append((t,j/K))
+  a=j/K*math.tau;vv.append(c+Vector((0,math.sin(a)*width(t),math.cos(a)*r)));uvs.append((t,j/K))
 for i in range(N):
  for j in range(K):
   a=i*(K+1)+j;ff.append((a+K+1,a+K+2,a+1,a))
 ff+=[tuple(range(K)),tuple(reversed([N*(K+1)+j for j in range(K)]))]
 mesh('Continuous koi anatomy',vv,ff,'body',uvs)
-# Integrated eyes and curved opercula follow the actual new body surface.
+# Conformal eye patches follow the cheek instead of protruding like beads.
 for side in [-1,1]:
- t=.14;c=center(t);rad=radius(t);z=1.0;depth=rad*.80*math.sqrt(max(0,1-((z-c.z)/rad)**2))
- eye=(c.x,side*(depth+.10),z)
- sphere('Inset eye socket',eye,(.45,.16,.43),'gill')
- sphere('Small glass pupil',(eye[0]-.06,eye[1]+side*.15,eye[2]),(.24,.10,.26),'eye')
- tube('Fine iris',[(eye[0]-.06+.29*math.cos(a),eye[1]+side*.235,eye[2]+.30*math.sin(a)) for a in [j*math.tau/48 for j in range(49)]],.022)
+ eyeX=-14.1;eyeZ=.30
+ def eye_disc(name,rx,rz,mat,outset):
+  vv=[cheek(eyeX,eyeZ,side,outset)]
+  vv += [cheek(eyeX+rx*math.cos(j*math.tau/64),eyeZ+rz*math.sin(j*math.tau/64),side,outset) for j in range(64)]
+  mesh(name,vv,[(0,1+j,1+(j+1)%64) for j in range(64)],mat)
+ eye_disc('Flush orbital lens',.55,.51,'gill',.012)
+ eye_disc('Flush dark pupil',.30,.34,'eye',.025)
+ tube('Integrated iris edge',[cheek(eyeX+.43*math.cos(a),eyeZ+.43*math.sin(a),side,.025) for a in [j*math.tau/64 for j in range(65)]],.013)
  gill=[]
- for j in range(49):
-  q=j/48;z=3.5-6.5*q;x=-12.3+1.25*math.sin(q*math.pi);t=(x+20)/36;c=center(t);rad=radius(t);y=rad*.8*math.sqrt(max(.01,1-((z-c.z)/rad)**2));gill.append((x,side*(y+.035),z))
- tube('Curved gill edge',gill,.022,'gill');tube('Gill light catch',gill[:35],.014)
+ for j in range(65):
+  q=j/64;z=3.75-7.25*q;x=-12.0+1.65*math.sin(q*math.pi);gill.append(cheek(x,z,side,.024))
+ tube('Curved operculum crease',gill,.042,'gill');tube('Operculum light edge',gill[5:58],.018)
  for j in range(2):
-  tube('Fine trailing barbel',[(-19.75+2.5*t,side*(.36+2.1*t),-1.2-j*.22-1.1*math.sin(t*math.pi*.7)) for t in [k/40 for k in range(41)]],.034)
-sphere('Mouth recess',(-20.03,0,-1.0),(.10,.45,.25),'gill')
-tube('Subtle upper lip',[(-20.08,.48*math.cos(a),-1+.28*math.sin(a)) for a in [j*math.tau/64 for j in range(65)]],.025)
+  tube('Barbel from lip corner',[(-19.85+(2.6-j*.8)*t,side*(.76+(1.5-j*.45)*t),-1.10-.18*j-.6*math.sin(t*math.pi*.8)) for t in [k/40 for k in range(41)]],.029)
+# A shallow horizontal mouth, with separate upper and lower lips, removes the
+# bright circular opening that made the old snout look pursed.
+sphere('Shallow mouth opening',(-20.016,0,-.95),(.025,.70,.105),'gill')
+for lower in [False,True]:
+ pts=[]
+ for j in range(49):
+  u=j/48;y=-.72+1.44*u;z=(-1.10 if lower else -.81)+(.05 if lower else .08)*math.sin(u*math.pi)
+  pts.append((-20.035,y,z))
+ tube('Lower jaw lip' if lower else 'Upper mouth lip',pts,.018)
 
 # Each fin is a curved sheet with its own broad folds, not a fan of rods.
 # Vertex colour stores a root-to-tip flexibility and a phase shared by its veins.

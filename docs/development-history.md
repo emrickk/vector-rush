@@ -1,3 +1,7 @@
+## 2026-09-17 — Correct koi head and full-body proportions
+
+Revision 08 replaces the oval-only body profile with independent back/belly/width lofts, conformal cheek eyes and a shallow mouth. Existing fins, lower position and motion remain. 296 tests pass; complete native lap and 1080p comparison frames inspected. Delivered replay plus head/body comparisons. No fresh uncaptured performance measurement. [Evidence and limits](current-game/koi-head-body-2026-09-17/README.md). Local milestone; owner artistic acceptance remains open.
+
 ## 2026-09-17 — Trial a new Koi Lantern landmark at the bend exit
 
 Created Scenario concept/enamel sources, editable Blender sculpture and tower, explicit Unity material/prefab import, and Stage 9 on preserved Stage 8. Curved the initially angular fins and enlarged the rooftop sculpture after native visibility review. Delivered a 9.5-second actual turn replay with matched-progress before/after frames. 294 tests and the separate six-finisher/zero-recovery three-lap race pass. [Milestone](current-game/koi-landmark-2026-09-17/README.md). Local trial only; Stage 8 remains default, `koi-build` selects Stage 9, owner focal-placement/artistic judgment remains open.

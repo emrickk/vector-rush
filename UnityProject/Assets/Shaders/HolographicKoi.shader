@@ -52,7 +52,7 @@ Shader "VectorRush/Holographic Koi"
    float2 cell=frac(q);float arc=.72-1.25*(cell.y-.5)*(cell.y-.5);
    float edge=abs(cell.x-arc);float aa=max(fwidth(edge),.012);
    float scale=1-smoothstep(.018,.018+aa,edge);
-   float head=smoothstep(.17,.30,i.uv.x)*(1-smoothstep(.93,1,i.uv.x));
+   float head=smoothstep(.23,.35,i.uv.x)*(1-smoothstep(.93,1,i.uv.x));
    float distanceFade=1-smoothstep(150,340,distance(GetCameraPositionWS(),i.world));
    float glint=.35+.65*pow(.5+.5*sin(floor(q.x)*2.17+floor(q.y)*3.71),4);
    float density=.34+.20*saturate((arc-cell.x)*2);

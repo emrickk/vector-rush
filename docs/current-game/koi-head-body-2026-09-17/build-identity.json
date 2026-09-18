@@ -1,0 +1,11 @@
+{
+    "status": "NATIVE_EXPERIENCE_BUILD_COMPLETE_NOT_QUALITY_ACCEPTED",
+    "unityVersion": "6000.6.0f1",
+    "buildGuid": "d3b49b97df5744bdb91b614601d49e6d",
+    "scene": "Assets/Scenes/HolographicKoiStage10.unity",
+    "appPath": "/Users/anping.wang/output/vector-rush-holographic-koi-2026-09-17/HolographicKoi08.app",
+    "courseHash": "a43cff0540e9b86cc0d60810b1f19e6cd49ae52d69e41ea43f6fb5b590790abc",
+    "artRevision": "holographic-koi-stage10-08",
+    "renderers": 505,
+    "lights": 269
+}

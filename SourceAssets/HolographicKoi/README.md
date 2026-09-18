@@ -1,6 +1,8 @@
 # Reference-led giant aerial koi
 
-The owner approved rebuilding the giant koi against `Reference/2026-09-17/koi-overhead-target-01.png`: natural anatomy, a longer body taper, layered flowing fins, translucent crimson volume and a bright crest. Stage 10 revision 07 keeps the lower overhead anchor from revision 05. The reference image is generated concept art; the game uses native geometry and shaders.
+The owner approved rebuilding the giant koi against `Reference/2026-09-17/koi-overhead-target-01.png`: natural anatomy, a longer body taper, layered flowing fins, translucent crimson volume and a bright crest. Stage 10 revision 08 keeps the lower overhead anchor from revision 05. The reference image is generated concept art; the game uses native geometry and shaders.
+
+Revision 08 uses independent monotone profiles for back, belly and width, with conformal cheek eyes, a shallow mouth and curved opercula. It addresses the owner-rejected revision 07 head/body proportions while preserving fin design and motion.
 
 `build_model.py` authors the editable `HolographicKoi.blend` and exported `HolographicKoi.fbx`. The current fish has 13 folded Bezier fin membranes and 39 sparse veins/edge filaments, rather than the earlier radial fin fans. Dorsal roots span the back. The forehead, mouth, integrated eye and curved gill contours follow the body surface. Five combined material groups remain.
 
@@ -14,4 +16,4 @@ Rebuild geometry with `/Applications/Blender.app/Contents/MacOS/Blender -b --pyt
 
 The authoring validation preserves the original collision transforms/mesh references and samples the padded fish bounds over a full whole-body loop. Bounds include the maximum body/fin deformation allowance. The first trial needed less whole-body bank to retain the same lower anchor. This is sampled clearance evidence, not an exhaustive manual-camera guarantee.
 
-Native builds, raw captures and logs stay outside source control. See `docs/current-game/koi-reference-rebuild-2026-09-17/README.md` for the final native comparison and current validation. The owner judges artistic acceptance.
+Native builds, raw captures and logs stay outside source control. See `docs/current-game/koi-head-body-2026-09-17/README.md` for the final native comparison and current validation. The owner judges artistic acceptance.

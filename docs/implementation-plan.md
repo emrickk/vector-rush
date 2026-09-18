@@ -1,3 +1,7 @@
+## Koi head/body correction — implemented revision 08
+
+Independent silhouette profiles, flush eyes and shallow mouth are implemented. Native lap and matched-progress full-resolution frames inspected; 296 tests pass. See `current-game/koi-head-body-2026-09-17/README.md`. Await owner visual judgment; do not infer acceptance or expand scope.
+
 # Vector Rush Implementation Plan
 
 ## Selected Apex application icon — 2026-09-17
@@ -613,3 +617,6 @@ Owner requested a reference before further polish. Added the Scenario-generated 
 Re-author the koi head and longer body taper, replace radial fans with layered Bezier membranes and sparse curved filaments, add selective luminous scales and brighter crest over a darker translucent body, and animate trailing fin lag coherently with the body wave. Retain the lower overhead anchor. Validate native appearance/motion and corridor clearance, then deliver reference/previous/current comparison and save a scoped local milestone.
 
 Reference-led revision 07 completed for owner review: two native visual iterations, final 720p motion/1080p still comparison, imported fin-flexibility contract checked, 296 tests pass, isolated three-lap race completes with six finishers and zero recoveries. Review playback and images verified. Lower anchor and prior game content remain preserved.
+
+### Head and body proportion correction
+Replace the rotational oval with an asymmetric carp loft with independently shaped back, belly and width; add a defined cheek/jaw, flush eyes, a subtle mouth slit and gill cover. Preserve fin design, lower placement and gameplay. Compare native head/body views with revision 07 and the reference.

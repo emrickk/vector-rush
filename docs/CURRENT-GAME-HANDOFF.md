@@ -1,3 +1,11 @@
+# Koi head and body correction — Stage 10 revision 08
+
+Owner rejected revision 07's head and silhouette. The current candidate reshapes back/belly/width independently, integrates the eyes into the cheek and replaces the circular mouth with a shallow opening. Fins, lower anchor and swim behavior are preserved. [Native replay and comparisons](http://127.0.0.1:8778/review-08/) · [Milestone and evidence](current-game/koi-head-body-2026-09-17/README.md).
+
+296 tests pass; native full lap and 1080p head/body frames inspected. Build `d3b49b97df5744bdb91b614601d49e6d`. No new uncaptured performance measurement; revision 07 results remain historical. Use `holo-koi-build`; Stage 8 stays default. Owner artistic acceptance remains open. Keep work local; preserve gameplay and other scenes. No delegation.
+
+---
+
 # Reference-led koi — Stage 10 revision 07
 
 Owner approved the reference-led rebuild. Current koi candidate has a longer natural taper, curved gills/integrated eyes, 13 layered membranes with delayed fin motion, selective luminous scales and a bright crest over a crimson interior. The lower anchor is preserved. [Native replay, previous version and reference](http://127.0.0.1:8778/review-07/) · [Milestone and evidence](current-game/koi-reference-rebuild-2026-09-17/README.md).

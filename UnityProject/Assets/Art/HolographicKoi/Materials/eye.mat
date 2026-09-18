@@ -26,7 +26,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _Kind: 3
-    - _Opacity: 0.45
+    - _Opacity: 0.8
     - _Power: 1
     m_Colors:
     - _Color: {r: 0.009, g: 0.012, b: 0.015, a: 1}

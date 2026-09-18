@@ -1,3 +1,11 @@
+## Current koi candidate — Stage 10 revision 08
+
+Head/body correction implemented and natively inspected. Read `docs/current-game/koi-head-body-2026-09-17/README.md`. All 296 tests pass; no fresh uncaptured performance run. Use `holo-koi-build`; Stage 8 stays default. Owner visual acceptance remains open; no publication or delegation.
+
+## Owner correction — koi head and body proportions
+
+Owner says the head looks funny and also rejects the fish shape. Correct the complete body silhouette, forehead/jaw, integrated eyes, mouth and gill cover against the existing reference. Keep fin design, luminous treatment, lower placement and swim behavior. Preserve all other game content; inspect native head/body views before delivery. No publication or delegation.
+
 ## Current koi candidate — Stage 10 revision 07
 
 Reference-led rebuild implemented in the existing separate koi scene. Read `docs/current-game/koi-reference-rebuild-2026-09-17/README.md` for native evidence and limits. Use `holo-koi-build`; Stage 8 remains default. The lower anchor is retained. Owner visual acceptance remains open; no publication, wider rollout or delegation.

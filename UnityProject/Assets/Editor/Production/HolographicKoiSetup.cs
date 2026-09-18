@@ -12,7 +12,7 @@ namespace VectorRush.Editor
   public const string Candidate="Assets/Scenes/HolographicKoiStage10.unity";
   public const string Root="Assets/Art/HolographicKoi";
   static string Source=>Path.GetFullPath(Application.dataPath+"/../../SourceAssets/HolographicKoi");
-  [Serializable] public class Report{public string revision="holographic-koi-stage10-07",courseHash;public bool baselineUnchanged,collisionsUnchanged;public Vector3 site,fishCenter;public int triangles,fishRenderers;public float minimumRoadDistance,minimumSwimClearance;}
+  [Serializable] public class Report{public string revision="holographic-koi-stage10-08",courseHash;public bool baselineUnchanged,collisionsUnchanged;public Vector3 site,fishCenter;public int triangles,fishRenderers;public float minimumRoadDistance,minimumSwimClearance;}
   public static void Prepare()
   {
    string evidence=ProductionSceneSetup.RequiredFlag("-productionEvidence");Directory.CreateDirectory(evidence);
@@ -25,7 +25,7 @@ namespace VectorRush.Editor
    materials["membrane"]=Holo("membrane",new Color(1,.03f,.006f),5.2f,.48f,1);
    materials["filament"]=Holo("filament",new Color(1,.07f,.016f),5.5f,.7f,2);
    materials["gill"]=Holo("gill",new Color(.09f,.004f,.002f),1,.45f,3);
-   materials["eye"]=Holo("eye",new Color(.009f,.012f,.015f),1,.45f,3);
+   materials["eye"]=Holo("eye",new Color(.009f,.012f,.015f),1,.80f,3);
    materials["gill"].renderQueue=3060;materials["eye"].renderQueue=3061;
    var asset=new GameObject("Luminous koi projection");var model=(GameObject)PrefabUtility.InstantiatePrefab(AssetDatabase.LoadAssetAtPath<GameObject>(Root+"/Models/HolographicKoi.fbx"));
    foreach(var f in model.GetComponentsInChildren<MeshFilter>()){
