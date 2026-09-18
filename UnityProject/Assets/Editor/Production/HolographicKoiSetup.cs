@@ -12,7 +12,7 @@ namespace VectorRush.Editor
   public const string Candidate="Assets/Scenes/HolographicKoiStage10.unity";
   public const string Root="Assets/Art/HolographicKoi";
   static string Source=>Path.GetFullPath(Application.dataPath+"/../../SourceAssets/HolographicKoi");
-  [Serializable] public class Report{public string revision="holographic-koi-stage10-08",courseHash;public bool baselineUnchanged,collisionsUnchanged;public Vector3 site,fishCenter;public int triangles,fishRenderers;public float minimumRoadDistance,minimumSwimClearance;}
+  [Serializable] public class Report{public string revision="holographic-koi-stage10-13",courseHash;public bool baselineUnchanged,collisionsUnchanged;public Vector3 site,fishCenter;public int triangles,fishRenderers;public float minimumRoadDistance,minimumSwimClearance;}
   public static void Prepare()
   {
    string evidence=ProductionSceneSetup.RequiredFlag("-productionEvidence");Directory.CreateDirectory(evidence);
@@ -30,16 +30,16 @@ namespace VectorRush.Editor
    var asset=new GameObject("Luminous koi projection");var model=(GameObject)PrefabUtility.InstantiatePrefab(AssetDatabase.LoadAssetAtPath<GameObject>(Root+"/Models/HolographicKoi.fbx"));
    foreach(var f in model.GetComponentsInChildren<MeshFilter>()){
     string key=f.GetComponent<Renderer>().sharedMaterial.name;var combined=new Mesh{name="Koi "+key};combined.indexFormat=UnityEngine.Rendering.IndexFormat.UInt32;
-    combined.CombineMeshes(new[]{new CombineInstance{mesh=f.sharedMesh,transform=model.transform.worldToLocalMatrix*f.transform.localToWorldMatrix}},true,true);combined.RecalculateBounds();var bounds=combined.bounds;bounds.Expand(new Vector3(0,2.8f,11));combined.bounds=bounds;
+    combined.CombineMeshes(new[]{new CombineInstance{mesh=f.sharedMesh,transform=model.transform.worldToLocalMatrix*f.transform.localToWorldMatrix}},true,true);combined.RecalculateBounds();combined.bounds=AnimatedBounds(combined);
     combined=Save(combined,"Meshes/"+key+".asset");var g=new GameObject("Projected koi / "+key);g.layer=29;g.transform.SetParent(asset.transform,false);g.AddComponent<MeshFilter>().sharedMesh=combined;g.AddComponent<MeshRenderer>().sharedMaterial=materials[key];
    }
    UnityEngine.Object.DestroyImmediate(model);var prefab=PrefabUtility.SaveAsPrefabAsset(asset,Root+"/Prefabs/LuminousKoi.prefab");UnityEngine.Object.DestroyImmediate(asset);
    var world=UnityEngine.Object.FindFirstObjectByType<ProductionWorld>();var root=new GameObject("Luminous koi / turn installation").transform;root.SetParent(world.transform,false);
    var fish=(GameObject)PrefabUtility.InstantiatePrefab(prefab);fish.transform.SetParent(root,false);var encounter=world.track.Evaluate(.615f);
    Vector3 travel=Vector3.ProjectOnPlane(encounter.Forward,Vector3.up).normalized;Vector3 across=Vector3.Cross(Vector3.up,travel);
-   Vector3 heading=(travel*.65f-across*.76f).normalized;
+   Vector3 heading=(travel*.98f-across*.20f).normalized;
    fish.transform.localScale=Vector3.one*2.2f;
-   fish.transform.SetPositionAndRotation(encounter.Position+Vector3.up*39,Quaternion.LookRotation(Vector3.Cross(heading,Vector3.up),Vector3.up));
+   fish.transform.SetPositionAndRotation(world.track.Evaluate(.64f).Position+Vector3.up*37,Quaternion.LookRotation(Vector3.Cross(heading,Vector3.up),Vector3.up)*Quaternion.Euler(0,0,16));
    var site=new GameObject("Projection podium").transform;site.SetParent(root,false);site.SetPositionAndRotation(new Vector3(-275,0,156),Quaternion.Euler(0,60,0));
    var dark=Lit("Projector graphite",new Color(.018f,.027f,.036f),.7f,.5f);
    var metal=Lit("Projector titanium",new Color(.11f,.14f,.16f),.8f,.35f);
@@ -67,7 +67,9 @@ namespace VectorRush.Editor
    var playback=root.gameObject.AddComponent<HolographicKoi>();playback.fish=fish.transform;playback.reflectionMaterial=reflection;playback.anchor=fish.transform.position;playback.heading=fish.transform.rotation;playback.swimAcross=across;playback.swimAlong=travel;playback.movingLights=root.GetComponentsInChildren<Light>().Where(l=>l.name.StartsWith("Koi ")).ToArray();
    SubdueCompetingAds(world);
    var report=new Report{courseHash=world.courseHash,site=site.position,fishCenter=fish.transform.position,fishRenderers=fish.GetComponentsInChildren<Renderer>().Length,triangles=fish.GetComponentsInChildren<MeshFilter>().Sum(f=>f.sharedMesh.triangles.Length/3)};
-   report.minimumSwimClearance=ValidateSwimClearance(world,playback);report.minimumRoadDistance=ValidateClearance(world,fish.transform,site);report.collisionsUnchanged=physics==Physics();if(!report.collisionsUnchanged)throw new InvalidDataException("Driving collision state changed");
+   float initialClearance=ValidateSwimClearance(world,playback,false);
+   if(initialClearance<8){playback.anchor+=Vector3.up*(8-initialClearance);fish.transform.position=playback.anchor;}
+   report.fishCenter=fish.transform.position;report.minimumSwimClearance=ValidateSwimClearance(world,playback);report.minimumRoadDistance=ValidateClearance(world,fish.transform,site);report.collisionsUnchanged=physics==Physics();if(!report.collisionsUnchanged)throw new InvalidDataException("Driving collision state changed");
    world.artRevision=report.revision;world.ValidateReady();EditorSceneManager.MarkSceneDirty(scene);EditorSceneManager.SaveScene(scene);AssetDatabase.SaveAssets();report.baselineUnchanged=hash==ProductionSceneSetup.Hash(File.ReadAllBytes(FullLapAdsSetup.Candidate));if(!report.baselineUnchanged)throw new InvalidDataException("Stage 8 modified");
    File.WriteAllText(evidence+"/holographic-koi.json",JsonUtility.ToJson(report,true));
   }
@@ -81,17 +83,38 @@ namespace VectorRush.Editor
   static void RoadReflection(Transform root,TrackPath track,Material material){int count=240;var vertices=new Vector3[(count+1)*2];var normals=new Vector3[vertices.Length];var uv=new Vector2[vertices.Length];var triangles=new int[count*6];for(int i=0;i<=count;i++){float p=Mathf.Lerp(.535f,.705f,i/(float)count);var f=track.Evaluate(p);for(int side=0;side<2;side++){int n=i*2+side;vertices[n]=f.Position+f.Right*((side*2-1)*(track.Width*.5f-.2f))+f.Up*.018f;normals[n]=f.Up;uv[n]=new Vector2(side,i/(float)count);}if(i<count){int a=i*2,j=i*6;triangles[j]=a;triangles[j+1]=a+2;triangles[j+2]=a+1;triangles[j+3]=a+1;triangles[j+4]=a+2;triangles[j+5]=a+3;}}var mesh=new Mesh{name="Banked wet reflection surface"};mesh.vertices=vertices;mesh.normals=normals;mesh.uv=uv;mesh.triangles=triangles;mesh.RecalculateBounds();mesh=Save(mesh,"Meshes/WetReflection.asset");var g=new GameObject("Koi reflection / wet road only");g.transform.SetParent(root,false);g.AddComponent<MeshFilter>().sharedMesh=mesh;g.AddComponent<MeshRenderer>().sharedMaterial=material;}
   static void SubdueCompetingAds(ProductionWorld world){var ads=UnityEngine.Object.FindFirstObjectByType<AnimatedBillboards>();var changed=new List<int>();for(int i=0;i<ads.displays.Length;i++){var t=ads.displays[i];if(!t.parent.name.StartsWith("Cluster 2 /"))continue;var r=t.GetComponent<Renderer>();var clone=new Material(r.sharedMaterial);clone.SetFloat("_Intensity",clone.GetFloat("_Intensity")*.32f);r.sharedMaterial=Save(clone,"Materials/Subdued-sign-"+i+".mat");changed.Add(i);}if(changed.Count!=2)throw new InvalidDataException("Expected two competing screens");var map=new Dictionary<Material,Material>();foreach(var r in world.GetComponentsInChildren<MeshRenderer>(true)){var slots=r.sharedMaterials;for(int i=0;i<slots.Length;i++){var old=slots[i];if(!old||old.shader.name!="VectorRush/Animated City Reflection")continue;if(!map.TryGetValue(old,out var clone)){clone=new Material(old);var texture=UnityEngine.Object.Instantiate((Texture2D)old.GetTexture("_SignData"));var pixels=texture.GetPixels();foreach(int k in changed)pixels[k*8+4].a*=.32f;texture.SetPixels(pixels);texture.Apply();texture=Save(texture,"Meshes/ReflectionPoses-"+map.Count+".asset");clone.SetTexture("_SignData",texture);clone=Save(clone,"Materials/Reflection-"+map.Count+".mat");map[old]=clone;}slots[i]=clone;}r.sharedMaterials=slots;}}
   public static float ValidateClearance(ProductionWorld world,Transform fish,Transform site){float min=float.MaxValue;for(int i=0;i<2400;i++){var f=world.track.Evaluate(i/2400f);float d=Vector3.ProjectOnPlane(site.position-f.Position,Vector3.up).magnitude;min=Mathf.Min(min,d);if(d<world.track.Width*.5f+20)throw new InvalidDataException("Solid projection podium too near road");}if(fish.GetComponentsInChildren<Collider>(true).Length>0||site.GetComponentsInChildren<Collider>(true).Length>0)throw new InvalidDataException("Visual-only installation adds collider");return min;}
-  public static float ValidateSwimClearance(ProductionWorld world,HolographicKoi swimmer)
+  static Bounds AnimatedBounds(Mesh mesh)
+  {
+   var vertices=mesh.vertices;var colors=mesh.colors;var bounds=new Bounds();bool first=true;
+   // Sample the source vertices through the actual curved-spine function,
+   // then pad between samples and for numerical CPU/GPU differences.
+   for(int step=0;step<90;step++)for(int i=0;i<vertices.Length;i++){
+    var fin=colors.Length==vertices.Length?new Vector2(colors[i].r,colors[i].g):Vector2.zero;
+    var p=HolographicKoi.DeformPosition(vertices[i],fin,step*18f/90);
+    if(first){bounds=new Bounds(p,Vector3.zero);first=false;}else bounds.Encapsulate(p);
+   }
+   bounds.Expand(new Vector3(2,1,2));return bounds;
+  }
+  public static float ValidateSwimClearance(ProductionWorld world,HolographicKoi swimmer,bool requireClearance=true)
   {
    Vector3 position=swimmer.fish.position;Quaternion rotation=swimmer.fish.rotation;float minimum=float.MaxValue;
    var filters=swimmer.fish.GetComponentsInChildren<MeshFilter>();
+   var vertices=filters.Select(f=>f.sharedMesh.vertices).ToArray();var colors=filters.Select(f=>f.sharedMesh.colors).ToArray();
    for(int step=0;step<120;step++){
     swimmer.ApplySwimPose(step*swimmer.period/120f);bool first=true;Bounds swept=new Bounds();
-    foreach(var filter in filters){var b=filter.sharedMesh.bounds;for(int c=0;c<8;c++){var v=filter.transform.TransformPoint(b.center+Vector3.Scale(b.extents,new Vector3((c&1)==0?-1:1,(c&2)==0?-1:1,(c&4)==0?-1:1)));if(first){swept=new Bounds(v,Vector3.zero);first=false;}else swept.Encapsulate(v);}}
+    // Test the posed vertices, rather than corners of a loose all-cycle box:
+    // turning the fish nose-up makes those nonexistent corners very misleading.
+    for(int k=0;k<filters.Length;k++){var matrix=filters[k].transform.localToWorldMatrix;
+     for(int j=0;j<vertices[k].Length;j++){var c=colors[k].Length==vertices[k].Length?colors[k][j]:Color.clear;
+      var v=matrix.MultiplyPoint3x4(HolographicKoi.DeformPosition(vertices[k][j],new Vector2(c.r,c.g),step*swimmer.period/120f));
+      if(first){swept=new Bounds(v,Vector3.zero);first=false;}else swept.Encapsulate(v);
+     }
+    }
+    swept.Expand(1f);
     for(int i=0;i<1600;i++){var f=world.track.Evaluate(i/1600f);float half=world.track.Width*.5f;if(f.Position.x<swept.min.x-half||f.Position.x>swept.max.x+half||f.Position.z<swept.min.z-half||f.Position.z>swept.max.z+half)continue;minimum=Mathf.Min(minimum,swept.min.y-f.Position.y);}
    }
    swimmer.fish.SetPositionAndRotation(position,rotation);
-   if(minimum<7)throw new InvalidDataException("Swimming koi envelope has insufficient overhead clearance: "+minimum);
+   if(requireClearance&&minimum<7)throw new InvalidDataException("Swimming koi envelope has insufficient overhead clearance: "+minimum);
    return minimum;
   }
   static string Physics()=>string.Join("\n",UnityEngine.Object.FindFirstObjectByType<ProductionWorld>().GetComponentsInChildren<Collider>(true).Select(c=>c.name+"|"+c.GetType().Name+"|"+c.transform.localToWorldMatrix+"|"+(c is MeshCollider m?AssetDatabase.GetAssetPath(m.sharedMesh):"")).OrderBy(s=>s));

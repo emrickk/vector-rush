@@ -1,0 +1,28 @@
+{
+  "buildGuid": "0dd58ea419884e2fb54ca240b4318b5f",
+  "shots": [
+    {
+      "label": "reveal",
+      "progress": 0.5212633609771729,
+      "seconds": 22.848,
+      "image": "reveal-new.jpg",
+      "source": "frames/frame-00214.png"
+    },
+    {
+      "label": "hero",
+      "progress": 0.5701169967651367,
+      "seconds": 24.66133333333333,
+      "image": "hero-new.jpg",
+      "source": "frames/frame-00231.png"
+    },
+    {
+      "label": "underneath",
+      "progress": 0.6103710532188416,
+      "seconds": 26.154666666666664,
+      "image": "underneath-new.jpg",
+      "source": "frames/frame-00245.png"
+    }
+  ],
+  "excerptStart": 20.244,
+  "excerptDuration": 9.666666666666668
+}

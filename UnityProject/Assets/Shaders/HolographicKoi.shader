@@ -22,21 +22,31 @@ Shader "VectorRush/Holographic Koi"
  // attachment and increases along the authored membrane, shared by its veins.
  float3 Swim(float3 p,float2 fin)
  {
-  float lengthAxis=-p.x;
-  float w=saturate((lengthAxis+18)/59);w=w*w*(3-2*w);
-  float beat=_Time.y*1.75-lengthAxis*.105;
-  p.z+=sin(beat)*(.06+w*w*4.0);
-  p.y+=sin(beat*.55)*w*.55;
-  float lag=fin.x*fin.x;
-  p.z+=sin(beat-fin.x*1.35+fin.y*3)*lag*1.0;
-  p.y+=sin(beat-fin.x*1.1+fin.y*3)*lag*.65;
+  // A curved spine carries the whole cross section, instead of sliding
+  // vertices sideways on a rigid longitudinal axis. Traveling contraction
+  // changes flank width while preserving cross-sectional area.
+  float s=20-p.x, phase=_Time.y*TWO_PI/18;
+  float curvature=.036+.006*sin(phase);
+  float a=s*curvature, w=saturate(s/55), beat=phase*5-s*.13;
+  float wave=(.12+2.2*w*w)*sin(beat);
+  float slope=4.4*w/55*sin(beat)-(.12+2.2*w*w)*.13*cos(beat);
+  float angle=a+atan(slope);
+  float squeeze=1-.065*sin(beat)*sin(saturate(s/36)*PI);
+  float side=p.z*squeeze, lag=fin.x*fin.x;
+  p=float3(20-sin(a)/curvature+side*sin(angle),
+   p.y/squeeze+sin(beat*.6)*w*.32+sin(beat-fin.x*1.5+fin.y*3)*lag*.55,
+   (1-cos(a))/curvature+wave+side*cos(angle)+sin(beat-fin.x*1.8+fin.y*3)*lag*1.5);
   return p;
  }
  V Vert(A i)
  {
   V o;float3 p=Swim(i.positionOS.xyz,i.color.rg);
-  float3 slope=(Swim(i.positionOS.xyz+float3(.02,0,0),i.color.rg)-Swim(i.positionOS.xyz-float3(.02,0,0),i.color.rg))/.04;
-  float3 n=i.normalOS;n.x-=slope.y*n.y+slope.z*n.z;
+  // Cofactor Jacobian transforms normals through the curved spine and
+  // flank contraction. The fin-flexibility gradient remains approximate.
+  float3 dx=(Swim(i.positionOS.xyz+float3(.02,0,0),i.color.rg)-Swim(i.positionOS.xyz-float3(.02,0,0),i.color.rg))/.04;
+  float3 dy=(Swim(i.positionOS.xyz+float3(0,.02,0),i.color.rg)-p)/.02;
+  float3 dz=(Swim(i.positionOS.xyz+float3(0,0,.02),i.color.rg)-p)/.02;
+  float3 n=i.normalOS.x*cross(dy,dz)+i.normalOS.y*cross(dz,dx)+i.normalOS.z*cross(dx,dy);
   VertexPositionInputs v=GetVertexPositionInputs(p);o.positionCS=v.positionCS;o.world=v.positionWS;
   o.normal=TransformObjectToWorldNormal(normalize(n));o.local=i.positionOS.xyz;o.uv=i.uv;o.color=i.color;o.fog=ComputeFogFactor(v.positionCS.z);return o;
  }

@@ -1,3 +1,11 @@
+# Oblique swimming turn — Stage 10 revision 13
+
+Owner approved a half-turn with the rear flank and long tail emphasized, then specified an angled view. Current koi candidate uses an oblique heading, modest 16-degree nose-up pose, curved spine, traveling flank contraction and delayed fins. [Native replay and revision 08 comparison](http://127.0.0.1:8778/review-13/) · [Evidence and limits](current-game/koi-turn-away-2026-09-17/README.md).
+
+296 tests pass; native full lap and 1080p views inspected. The independent 1080p three-lap run has six finishers, zero recoveries and no frames over 33.3 ms. Build `0dd58ea419884e2fb54ca240b4318b5f`. Use `holo-koi-build`; Stage 8 stays default. Owner artistic acceptance remains open. Preserve other game content; no publication or delegation. Performance result is recorded in the milestone.
+
+---
+
 # Koi head and body correction — Stage 10 revision 08
 
 Owner rejected revision 07's head and silhouette. The current candidate reshapes back/belly/width independently, integrates the eyes into the cheek and replaces the circular mouth with a shallow opening. Fins, lower anchor and swim behavior are preserved. [Native replay and comparisons](http://127.0.0.1:8778/review-08/) · [Milestone and evidence](current-game/koi-head-body-2026-09-17/README.md).

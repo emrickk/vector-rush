@@ -19,8 +19,24 @@ namespace VectorRush
         {
             float phase=seconds*Mathf.PI*2/period;
             fish.position=anchor+swimAcross*(22*Mathf.Sin(phase))+swimAlong*(14*Mathf.Sin(phase*2))+Vector3.up*(1.5f*Mathf.Sin(phase+.7f));
-            fish.rotation=heading*Quaternion.Euler(.8f*Mathf.Sin(phase*2),14*Mathf.Cos(phase),.8f*Mathf.Sin(phase));
+            fish.rotation=heading*Quaternion.Euler(.8f*Mathf.Sin(phase*2),9*Mathf.Cos(phase),.8f*Mathf.Sin(phase));
             if(movingLights!=null)for(int i=0;i<movingLights.Length;i++)if(movingLights[i])movingLights[i].transform.position=fish.position+Vector3.down*(i==0?15:22);
+        }
+        // Same deformation as HolographicKoi.shader; authoring uses it to bound
+        // the animated silhouette. Cross sections turn with the curved spine.
+        public static Vector3 DeformPosition(Vector3 p, Vector2 fin, float seconds)
+        {
+            float s=20-p.x, phase=seconds*Mathf.PI*2/18;
+            float curvature=.036f+.006f*Mathf.Sin(phase);
+            float a=s*curvature, w=Mathf.Clamp01(s/55), beat=phase*5-s*.13f;
+            float wave=(.12f+2.2f*w*w)*Mathf.Sin(beat);
+            float slope=(4.4f*w/55*Mathf.Sin(beat)-(.12f+2.2f*w*w)*.13f*Mathf.Cos(beat));
+            float angle=a+Mathf.Atan(slope);
+            float squeeze=1-.065f*Mathf.Sin(beat)*Mathf.Sin(Mathf.Clamp01(s/36)*Mathf.PI);
+            float side=p.z*squeeze, lag=fin.x*fin.x;
+            return new Vector3(20-Mathf.Sin(a)/curvature+side*Mathf.Sin(angle),
+                p.y/squeeze+Mathf.Sin(beat*.6f)*w*.32f+Mathf.Sin(beat-fin.x*1.5f+fin.y*3)*lag*.55f,
+                (1-Mathf.Cos(a))/curvature+wave+side*Mathf.Cos(angle)+Mathf.Sin(beat-fin.x*1.8f+fin.y*3)*lag*1.5f);
         }
         void Start()
         {

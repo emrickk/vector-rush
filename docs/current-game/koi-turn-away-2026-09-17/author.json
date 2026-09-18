@@ -1,0 +1,20 @@
+{
+    "revision": "holographic-koi-stage10-13",
+    "courseHash": "a43cff0540e9b86cc0d60810b1f19e6cd49ae52d69e41ea43f6fb5b590790abc",
+    "baselineUnchanged": true,
+    "collisionsUnchanged": true,
+    "site": {
+        "x": -275.0,
+        "y": 0.0,
+        "z": 156.0
+    },
+    "fishCenter": {
+        "x": -214.2353973388672,
+        "y": 95.02035522460938,
+        "z": 153.11373901367188
+    },
+    "triangles": 120662,
+    "fishRenderers": 5,
+    "minimumRoadDistance": 54.50548553466797,
+    "minimumSwimClearance": 8.0
+}

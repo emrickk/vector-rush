@@ -1,3 +1,11 @@
+## Oblique koi swimming turn — revision 13 implemented
+
+Owner's angled rear-quarter correction is implemented with a curved spine, traveling flank contraction and delayed fins. Native lap and full-resolution views inspected; 296 tests pass. See `current-game/koi-turn-away-2026-09-17/README.md` for evidence and performance. Await owner visual judgment; preserve other game content and local-only scope.
+
+## Rear-view swimming turn — owner approved
+
+Build revision 09 with an away-facing rear three-quarter composition, curved spine, traveling flank contraction and delayed tail/fins. Inspect native approach and close overhead pass, test preservation and measure the heavier shader in a separate performance run. Retain other game content, prior candidate and local-only scope.
+
 ## Koi head/body correction — implemented revision 08
 
 Independent silhouette profiles, flush eyes and shallow mouth are implemented. Native lap and matched-progress full-resolution frames inspected; 296 tests pass. See `current-game/koi-head-body-2026-09-17/README.md`. Await owner visual judgment; do not infer acceptance or expand scope.

@@ -1,3 +1,7 @@
+## 2026-09-17 — Oblique koi turn and flexible body
+
+Implemented revision 13 after native alignment trials and owner steering to keep an angle. Curved-spine deformation, traveling flank contraction, delayed fins and a modest nose-up pose emphasize the rear flank/tail. Placement moved along the bend; deformed-vertex envelope retains an 8 m sampled margin. 296 tests pass; native lap and 1080p frames inspected. [Milestone, replay and validation](current-game/koi-turn-away-2026-09-17/README.md). Local candidate; owner artistic acceptance remains open.
+
 ## 2026-09-17 — Correct koi head and full-body proportions
 
 Revision 08 replaces the oval-only body profile with independent back/belly/width lofts, conformal cheek eyes and a shallow mouth. Existing fins, lower position and motion remain. 296 tests pass; complete native lap and 1080p comparison frames inspected. Delivered replay plus head/body comparisons. No fresh uncaptured performance measurement. [Evidence and limits](current-game/koi-head-body-2026-09-17/README.md). Local milestone; owner artistic acceptance remains open.

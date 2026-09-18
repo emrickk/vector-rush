@@ -1,3 +1,15 @@
+## Current koi candidate — Stage 10 revision 13
+
+Owner-approved oblique swimming-turn work is implemented; native approach and underpass inspected. Read `docs/current-game/koi-turn-away-2026-09-17/README.md`. The rear flank/tail are emphasized with a curved spine and delayed fins; keep the owner's angled-view constraint below. All 296 tests pass. Use `holo-koi-build`; Stage 8 stays default. Owner visual acceptance remains open; no publication or delegation.
+
+## Owner steering — retain an oblique composition
+
+Owner says not perpendicular to the player; retain an angle. Keep a clear rear three-quarter silhouette with visible bent flank and long tail, not a flat side-on or directly tail-on view. Use only a modest nose-up inclination; do not make the fish appear vertical.
+
+## Owner-approved rear three-quarter swimming turn
+
+Owner approved revision 09: face the koi away through the bend so the player mainly sees its rear body and long tail. Replace the stiff body with a curved, muscular traveling bend and delayed fins, retaining giant scale and close overhead encounter. This supersedes earlier preservation of swim behavior. Preserve other game content. Verify actual native driving composition and motion; no delegation or publication.
+
 ## Current koi candidate — Stage 10 revision 08
 
 Head/body correction implemented and natively inspected. Read `docs/current-game/koi-head-body-2026-09-17/README.md`. All 296 tests pass; no fresh uncaptured performance run. Use `holo-koi-build`; Stage 8 stays default. Owner visual acceptance remains open; no publication or delegation.
