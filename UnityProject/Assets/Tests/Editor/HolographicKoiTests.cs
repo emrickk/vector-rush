@@ -19,6 +19,9 @@ namespace VectorRush.Tests
   {
    var world=Open(Editor.HolographicKoiSetup.Candidate);var holo=Object.FindFirstObjectByType<HolographicKoi>();Assert.That(holo,Is.Not.Null);Assert.That(holo.fish.GetComponentsInChildren<MeshRenderer>().Length,Is.EqualTo(5));
    foreach(var r in holo.fish.GetComponentsInChildren<MeshRenderer>()){Assert.That(r.gameObject.layer,Is.EqualTo(29));Assert.That(r.sharedMaterial.shader.name,Is.EqualTo("VectorRush/Holographic Koi"));Assert.That(ShaderUtil.ShaderHasError(r.sharedMaterial.shader),Is.False);}
+   var membrane=holo.fish.GetComponentsInChildren<MeshFilter>().Single(f=>f.sharedMesh.name=="Koi membrane");
+   Assert.That(membrane.sharedMesh.colors.Length,Is.EqualTo(membrane.sharedMesh.vertexCount),"Fin flexibility must survive FBX import and mesh combining");
+   Assert.That(membrane.sharedMesh.colors.Min(c=>c.r),Is.LessThan(.01f));Assert.That(membrane.sharedMesh.colors.Max(c=>c.r),Is.GreaterThan(.99f));
    var eye=holo.fish.GetComponentsInChildren<MeshFilter>().Single(f=>f.sharedMesh.name=="Koi eye");Assert.That(eye.sharedMesh.bounds.center.x,Is.GreaterThan(0),"Imported head is positive X; tail-wave distance must use negative X");
    Assert.That(holo.reflectionMaterial.shader.name,Is.EqualTo("VectorRush/Koi Road Reflection"));Assert.That(ShaderUtil.ShaderHasError(holo.reflectionMaterial.shader),Is.False);Assert.That(holo.GetComponentsInChildren<Collider>().Length,Is.Zero);
    Assert.That(Editor.HolographicKoiSetup.ValidateClearance(world,holo.fish,holo.transform.Find("Projection podium")),Is.GreaterThan(49));

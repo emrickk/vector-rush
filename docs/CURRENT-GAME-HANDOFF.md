@@ -1,3 +1,11 @@
+# Reference-led koi — Stage 10 revision 07
+
+Owner approved the reference-led rebuild. Current koi candidate has a longer natural taper, curved gills/integrated eyes, 13 layered membranes with delayed fin motion, selective luminous scales and a bright crest over a crimson interior. The lower anchor is preserved. [Native replay, previous version and reference](http://127.0.0.1:8778/review-07/) · [Milestone and evidence](current-game/koi-reference-rebuild-2026-09-17/README.md).
+
+296 tests pass; the isolated native three-lap race has six finishers, zero recoveries and no frames above 33.3 ms. Replay playback and images were verified. Build `2fc211bf931f495b920430df657dc952`; scene `Assets/Scenes/HolographicKoiStage10.unity`. Use `holo-koi-build`. Stage 8 remains the ordinary build default; owner visual acceptance remains open. Preserve previous versions, ship/HUD/course/weather and keep publication local. No delegation.
+
+---
+
 # Lower, smoother koi — Stage 10 revision 05
 
 The owner rejected revision 04 as unpolished and insufficiently smooth and requested a lower pass. Current koi candidate is **revision 05**, with continuous body contours, smoother fin membranes/rays, subdued scale detail, deformation-correct shading, slower tail motion, gentler body bob/bank and a **10 m lower anchor**. [Native replay and revision 04 comparison](http://127.0.0.1:8778/review-05/) · [Milestone and verification](current-game/koi-polish-2026-09-17/README.md).

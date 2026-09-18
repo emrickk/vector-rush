@@ -608,3 +608,8 @@ Revision 05 complete for owner review: 10 m lower, native stills/motion inspecte
 
 ### Generated koi polish reference
 Owner requested a reference before further polish. Added the Scenario-generated 2048×1152 overhead koi target under `SourceAssets/HolographicKoi/Reference/2026-09-17`, with exact prompt and provenance. Visually inspected the anatomy, layered fins, luminous material and intimate road relationship. Native game remains revision 05; future polish should use the reference README as its bounded art target.
+
+### Approved reference-led rebuild
+Re-author the koi head and longer body taper, replace radial fans with layered Bezier membranes and sparse curved filaments, add selective luminous scales and brighter crest over a darker translucent body, and animate trailing fin lag coherently with the body wave. Retain the lower overhead anchor. Validate native appearance/motion and corridor clearance, then deliver reference/previous/current comparison and save a scoped local milestone.
+
+Reference-led revision 07 completed for owner review: two native visual iterations, final 720p motion/1080p still comparison, imported fin-flexibility contract checked, 296 tests pass, isolated three-lap race completes with six finishers and zero recoveries. Review playback and images verified. Lower anchor and prior game content remain preserved.

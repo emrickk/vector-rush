@@ -831,3 +831,8 @@ Owner rejected revision 04's polish/smoothness and requested a lower pass. Revis
 ## September 17, 2026 — Generated overhead koi art target
 
 Generated and inspected one Scenario polish reference (`model_openai-gpt-image-2`, 2048×1152), following the owner request. Saved the image, exact request, safe provider/job/asset metadata and concrete anatomy/material/fin observations in `SourceAssets/HolographicKoi/Reference/2026-09-17`. Reference only; no Unity or gameplay changes. Native revision 05 remains current.
+
+
+## September 17, 2026 — Reference-led native koi rebuild
+
+Owner approved the saved Scenario art target. Re-authored anatomy and body taper, replaced radial fans with 13 curved membranes/39 veins, added per-fin flexibility and delayed swimming deformation, and refined luminous scales/crest/crimson volume. Native revision 06 inspection prompted a narrower crest, stronger membranes and broader dorsal roots for revision 07. Lower anchor and all prior gameplay content are preserved. The koi-reference-rebuild milestone records final native images, replay, tests and race evidence, including remaining differences from the generated target. No external publication or owner artistic acceptance claimed.

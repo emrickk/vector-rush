@@ -1,3 +1,11 @@
+## Current koi candidate — Stage 10 revision 07
+
+Reference-led rebuild implemented in the existing separate koi scene. Read `docs/current-game/koi-reference-rebuild-2026-09-17/README.md` for native evidence and limits. Use `holo-koi-build`; Stage 8 remains default. The lower anchor is retained. Owner visual acceptance remains open; no publication, wider rollout or delegation.
+
+## Owner-approved reference-led koi rebuild
+
+Owner approved rebuilding the koi against the Scenario reference under `SourceAssets/HolographicKoi/Reference/2026-09-17`: natural anatomy/taper, layered curved fin membranes, translucent crimson light with a bright crest and selective scales, and body-wave motion with trailing fins. Keep the current lower encounter and giant scale. Compare native gameplay against revision 05 and the reference; iterate visually. Preserve other scenes, ship/HUD/gameplay/weather. No delegation or publication.
+
 ## Current koi candidate — Stage 10 revision 05
 
 Smoother/lower correction implemented; read `docs/current-game/koi-polish-2026-09-17/README.md`. Anchor is 10 m lower, with smoother geometry/shading and gentler motion. Use `holo-koi-build`; Stage 8 stays default. Earlier revision 04 is rejected comparison. Owner review remains open.

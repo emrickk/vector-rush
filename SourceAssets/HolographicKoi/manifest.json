@@ -6,8 +6,9 @@
     "eye",
     "gill"
   ],
-  "triangles": 209140,
+  "triangles": 123356,
   "renderers": 5,
-  "finRays": 202,
-  "source": "Authored geometry guided by the two owner-supplied luminous koi references; no generated bitmap used."
+  "finMembranes": 13,
+  "finVeins": 39,
+  "source": "Authored geometry guided by the approved Scenario koi-overhead-target-01.png reference. Geometry, fin flexibility and shader are native assets, not a pasted concept image."
 }

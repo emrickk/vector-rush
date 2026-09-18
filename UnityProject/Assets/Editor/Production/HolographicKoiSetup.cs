@@ -12,7 +12,7 @@ namespace VectorRush.Editor
   public const string Candidate="Assets/Scenes/HolographicKoiStage10.unity";
   public const string Root="Assets/Art/HolographicKoi";
   static string Source=>Path.GetFullPath(Application.dataPath+"/../../SourceAssets/HolographicKoi");
-  [Serializable] public class Report{public string revision="holographic-koi-stage10-05",courseHash;public bool baselineUnchanged,collisionsUnchanged;public Vector3 site,fishCenter;public int triangles,fishRenderers;public float minimumRoadDistance,minimumSwimClearance;}
+  [Serializable] public class Report{public string revision="holographic-koi-stage10-07",courseHash;public bool baselineUnchanged,collisionsUnchanged;public Vector3 site,fishCenter;public int triangles,fishRenderers;public float minimumRoadDistance,minimumSwimClearance;}
   public static void Prepare()
   {
    string evidence=ProductionSceneSetup.RequiredFlag("-productionEvidence");Directory.CreateDirectory(evidence);
@@ -21,16 +21,16 @@ namespace VectorRush.Editor
    File.Copy(Source+"/HolographicKoi.fbx",Root+"/Models/HolographicKoi.fbx",true);AssetDatabase.Refresh(ImportAssetOptions.ForceSynchronousImport);
    var importer=(ModelImporter)AssetImporter.GetAtPath(Root+"/Models/HolographicKoi.fbx");importer.importCameras=false;importer.importLights=false;importer.importAnimation=false;importer.isReadable=true;importer.globalScale=1;importer.useFileScale=true;importer.SaveAndReimport();
    var materials=new Dictionary<string,Material>();
-   materials["body"]=Holo("body",new Color(1,.04f,.008f),3.3f,.48f,0);
-   materials["membrane"]=Holo("membrane",new Color(1,.025f,.004f),3.5f,.17f,1);
-   materials["filament"]=Holo("filament",new Color(1,.04f,.008f),6,.75f,2);
+   materials["body"]=Holo("body",new Color(1,.018f,.005f),3.4f,.65f,0);
+   materials["membrane"]=Holo("membrane",new Color(1,.03f,.006f),5.2f,.48f,1);
+   materials["filament"]=Holo("filament",new Color(1,.07f,.016f),5.5f,.7f,2);
    materials["gill"]=Holo("gill",new Color(.09f,.004f,.002f),1,.45f,3);
    materials["eye"]=Holo("eye",new Color(.009f,.012f,.015f),1,.45f,3);
    materials["gill"].renderQueue=3060;materials["eye"].renderQueue=3061;
    var asset=new GameObject("Luminous koi projection");var model=(GameObject)PrefabUtility.InstantiatePrefab(AssetDatabase.LoadAssetAtPath<GameObject>(Root+"/Models/HolographicKoi.fbx"));
    foreach(var f in model.GetComponentsInChildren<MeshFilter>()){
     string key=f.GetComponent<Renderer>().sharedMaterial.name;var combined=new Mesh{name="Koi "+key};combined.indexFormat=UnityEngine.Rendering.IndexFormat.UInt32;
-    combined.CombineMeshes(new[]{new CombineInstance{mesh=f.sharedMesh,transform=model.transform.worldToLocalMatrix*f.transform.localToWorldMatrix}},true,true);combined.RecalculateBounds();var bounds=combined.bounds;bounds.Expand(new Vector3(0,2.2f,10));combined.bounds=bounds;
+    combined.CombineMeshes(new[]{new CombineInstance{mesh=f.sharedMesh,transform=model.transform.worldToLocalMatrix*f.transform.localToWorldMatrix}},true,true);combined.RecalculateBounds();var bounds=combined.bounds;bounds.Expand(new Vector3(0,2.8f,11));combined.bounds=bounds;
     combined=Save(combined,"Meshes/"+key+".asset");var g=new GameObject("Projected koi / "+key);g.layer=29;g.transform.SetParent(asset.transform,false);g.AddComponent<MeshFilter>().sharedMesh=combined;g.AddComponent<MeshRenderer>().sharedMaterial=materials[key];
    }
    UnityEngine.Object.DestroyImmediate(model);var prefab=PrefabUtility.SaveAsPrefabAsset(asset,Root+"/Prefabs/LuminousKoi.prefab");UnityEngine.Object.DestroyImmediate(asset);
@@ -38,7 +38,7 @@ namespace VectorRush.Editor
    var fish=(GameObject)PrefabUtility.InstantiatePrefab(prefab);fish.transform.SetParent(root,false);var encounter=world.track.Evaluate(.615f);
    Vector3 travel=Vector3.ProjectOnPlane(encounter.Forward,Vector3.up).normalized;Vector3 across=Vector3.Cross(Vector3.up,travel);
    Vector3 heading=(travel*.65f-across*.76f).normalized;
-   fish.transform.localScale=Vector3.one*2.6f;
+   fish.transform.localScale=Vector3.one*2.2f;
    fish.transform.SetPositionAndRotation(encounter.Position+Vector3.up*39,Quaternion.LookRotation(Vector3.Cross(heading,Vector3.up),Vector3.up));
    var site=new GameObject("Projection podium").transform;site.SetParent(root,false);site.SetPositionAndRotation(new Vector3(-275,0,156),Quaternion.Euler(0,60,0));
    var dark=Lit("Projector graphite",new Color(.018f,.027f,.036f),.7f,.5f);
@@ -62,7 +62,7 @@ namespace VectorRush.Editor
    Lamp(root,"Koi red facade spill",fish.transform.position+new Vector3(0,-7,0),new Color(1,.05f,.015f),26,92);
    Lamp(root,"Koi warm lower spill",fish.transform.position+new Vector3(15,-12,12),new Color(1,.19f,.04f),18,70);
    Lamp(root,"Projector blue bounce",site.TransformPoint(new Vector3(0,60,8)),new Color(.06f,.4f,1),6,25);
-   var reflection=NewMaterial("Wet koi reflection","VectorRush/Koi Road Reflection");reflection.SetFloat("_Strength",.105f);
+   var reflection=NewMaterial("Wet koi reflection","VectorRush/Koi Road Reflection");reflection.SetFloat("_Strength",.16f);
    RoadReflection(root,world.track,reflection);
    var playback=root.gameObject.AddComponent<HolographicKoi>();playback.fish=fish.transform;playback.reflectionMaterial=reflection;playback.anchor=fish.transform.position;playback.heading=fish.transform.rotation;playback.swimAcross=across;playback.swimAlong=travel;playback.movingLights=root.GetComponentsInChildren<Light>().Where(l=>l.name.StartsWith("Koi ")).ToArray();
    SubdueCompetingAds(world);

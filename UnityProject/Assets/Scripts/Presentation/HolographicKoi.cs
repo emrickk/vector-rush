@@ -19,7 +19,7 @@ namespace VectorRush
         {
             float phase=seconds*Mathf.PI*2/period;
             fish.position=anchor+swimAcross*(22*Mathf.Sin(phase))+swimAlong*(14*Mathf.Sin(phase*2))+Vector3.up*(1.5f*Mathf.Sin(phase+.7f));
-            fish.rotation=heading*Quaternion.Euler(1.1f*Mathf.Sin(phase*2),14*Mathf.Cos(phase),1.6f*Mathf.Sin(phase));
+            fish.rotation=heading*Quaternion.Euler(.8f*Mathf.Sin(phase*2),14*Mathf.Cos(phase),.8f*Mathf.Sin(phase));
             if(movingLights!=null)for(int i=0;i<movingLights.Length;i++)if(movingLights[i])movingLights[i].transform.position=fish.position+Vector3.down*(i==0?15:22);
         }
         void Start()
@@ -33,7 +33,7 @@ namespace VectorRush
         void LateUpdate(){ApplySwimPose(Time.time);if(capture)UpdateCapture();}
         void UpdateCapture()
         {
-            var center=fish.TransformPoint(new Vector3(-7,0,0));capture.transform.SetPositionAndRotation(center+fish.forward*240,Quaternion.LookRotation(-fish.forward,fish.up));
+            var center=fish.TransformPoint(new Vector3(-9,0,0));capture.transform.SetPositionAndRotation(center+fish.forward*240,Quaternion.LookRotation(-fish.forward,fish.up));
             instance.SetVector("_Center",center);instance.SetVector("_Right",-fish.right);instance.SetVector("_Up",fish.up);instance.SetVector("_Normal",fish.forward);instance.SetVector("_Size",new Vector4(120*fish.localScale.x,60*fish.localScale.x,0,0));
         }
         void OnDestroy(){if(texture){texture.Release();Destroy(texture);}if(instance)Destroy(instance);}
